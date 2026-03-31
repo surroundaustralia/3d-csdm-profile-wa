@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://icsm-au.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
+    "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
     {
       "wa-doc": "https://linked.data.gov.au/wa-documents/#",
       "sensordesc": "https://linked.data.gov.au/sensor-descriptions/SN#",

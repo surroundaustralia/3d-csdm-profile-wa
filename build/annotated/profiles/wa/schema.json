@@ -3,7 +3,7 @@
   "description": "WA profile of Cadastral Survey Data Model",
   "allOf": [
     {
-      "$ref": "https://icsm-au.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.json"
+      "$ref": "https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.json"
     }
   ],
   "x-jsonld-extra-terms": {

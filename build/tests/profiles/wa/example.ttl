@@ -11,7 +11,6 @@
 @prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -27,13 +26,12 @@
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
+@prefix wa-vector-purpose: <https://linked.data.gov.au/def/csdm/wa-vector-purpose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://www.wa-example.com/features/Western-Australia-Example-1> a container:CSD,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/Western-Australia-Example-1> a geojson:FeatureCollection ;
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    prov:wasGeneratedBy <https://www.wa-example.com/features/DP-1-S2> ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:karlkurla ],
@@ -46,17 +44,18 @@
     container:points <https://www.wa-example.com/features/WAMarks> ;
     container:purpose wa-survey-purpose:subdivision ;
     container:surveyType wa-survey-type:deposited-plan ;
-    container:vectorObservations <https://www.wa-example.com/features/vectorObservations> .
+    container:vectorObservations <https://www.wa-example.com/features/vectorObservations> ;
+    geojson:collectionFeatureType "CSD" .
 
 <https://www.wa-example.com/features/15432571> a surv:CadastralMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "EFB157243/9540" ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
+    commonpatterns:name [ rdfs:label "EFB157243/9540" ;
             dcterms:hasPart [ rdfs:label "9540" ;
                     commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType "Source" ] ] ;
-    dcterms:spatial [ a geojson:Point ;
-            geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -65,13 +64,12 @@
             geojson:coordinates ( 1.190965e+02 -3.470982e+01 ) ] .
 
 <https://www.wa-example.com/features/17251503> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/14005400> <https://www.wa-example.com/features/14005401> ) ] .
 
-<https://www.wa-example.com/features/DP-1-S2> prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
-
-<https://www.wa-example.com/features/WAMarks> a geojson:FeatureCollection,
-        <https://www.wa-example.com/features/SurveyPoint> ;
+<https://www.wa-example.com/features/WAMarks> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "SurveyPoint" ;
     geojson:features <https://www.wa-example.com/features/14005391>,
         <https://www.wa-example.com/features/14005400>,
         <https://www.wa-example.com/features/14005401>,
@@ -86,8 +84,7 @@
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/17251502> ;
-            sosa:hasResult [ surv:distance 1.2784e+01 ] ;
-            sosa:resultTime "2023-03-31T11:56:03" ] ;
+            sosa:hasResult [ surv:distance 1.2784e+01 ] ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
@@ -97,9 +94,9 @@
 
 <https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "" ] ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
+    commonpatterns:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -109,9 +106,9 @@
 
 <https://www.wa-example.com/features/14005401> a surv:BoundaryMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "" ] ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
+    commonpatterns:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -120,14 +117,15 @@
             geojson:coordinates ( 1.190934e+02 -3.471154e+01 ) ] .
 
 <https://www.wa-example.com/features/17251502> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/14005391> <https://www.wa-example.com/features/14005400> ) ] .
 
 <https://www.wa-example.com/features/14005400> a surv:BoundaryMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "" ] ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
+    commonpatterns:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;

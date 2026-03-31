@@ -1,5 +1,5 @@
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
   "id": "Western-Australia-Example-1",
   "name": "TBD",
   "type": "FeatureCollection",
@@ -236,7 +236,6 @@
           "place": null,
           "properties": {
             "hasFeatureOfInterest": "17251502",
-            "resultTime": "2023-03-31T11:56:03",
             "referenceVector": "17251503",
             "hasResult": {
               "angle": 138.033055556,
