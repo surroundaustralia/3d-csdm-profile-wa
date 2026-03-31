@@ -2,9 +2,10 @@ identifier-prefix: icsm.profiles.
 
 name: WA Implementation Profile for 3D CSDM
 abstract: |
-  This repository contains the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), 
+  This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), 
   extending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).
    
+  This version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre
 
 description: |
 
@@ -15,5 +16,6 @@ description: |
 
 imports:
   - default
-  - https://icsm-au.github.io/3d-csdm-common/build/register.json
-  - https://icsm-au.github.io/3d-csdm-profile-icsm/build/register.json
+  - https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/register.json
+#  - https://icsm-au.github.io/3d-csdm-common/build/register.json
+#  - https://icsm-au.github.io/3d-csdm-profile-icsm/build/register.json
