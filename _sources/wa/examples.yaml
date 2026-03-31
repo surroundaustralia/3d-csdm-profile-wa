@@ -6,7 +6,7 @@
   base-output-filename: example
   snippets:
     - language: json
-      ref: example.json
+      ref: examples/example.json
       base-uri: https://www.wa-example.com/features/
 
 - title: Survey Marks Example

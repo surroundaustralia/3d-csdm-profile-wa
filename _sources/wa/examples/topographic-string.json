@@ -8,7 +8,9 @@
   "planType": "wa-survey-type:deposited-plan",
   "purpose": "wa-survey-purpose:subdivision",
   "surveyType": "wa-survey-type:conventional",
-  "time": { "date": "2014-12-12" },
+  "time": {
+    "date": "2014-12-12"
+  },
   "horizontalCRS": "epsg:10464",
   "bearingRotation": 0.0,
   "surveyTitle": "Lot 508 & Road Widening (Lot 502)",
@@ -51,7 +53,7 @@
           },
           "properties": {
             "purpose": "wa-surveypoint-purpose:internal-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "placed 0.4d",
             "monumentedBy": {
               "form": "wa-monument-form:spike",
@@ -69,13 +71,13 @@
           "place": {
             "type": "Point",
             "coordinates": [
-              40612.750,
+              40612.75,
               198771.365
             ]
           },
           "properties": {
             "purpose": "wa-surveypoint-purpose:internal-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": null,
             "monumentedBy": {
               "form": "wa-monument-form:peg",
@@ -100,7 +102,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:internal-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": null,
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -123,7 +125,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:internal-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "Deck Spike in Bitument path",
             "monumentedBy": {
               "form": "wa-monument-form:deck-spike",
@@ -148,7 +150,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:internal-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": null,
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -178,7 +180,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -201,7 +203,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -218,13 +220,13 @@
             "type": "Point",
             "coordinates": [
               40606.589,
-              198812.130
+              198812.13
             ]
           },
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -247,7 +249,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -270,7 +272,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -293,7 +295,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -316,7 +318,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -333,13 +335,13 @@
             "type": "Point",
             "coordinates": [
               40610.254,
-              198799.350
+              198799.35
             ]
           },
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -362,7 +364,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -379,13 +381,13 @@
             "type": "Point",
             "coordinates": [
               40610.881,
-              198798.950
+              198798.95
             ]
           },
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -401,14 +403,14 @@
           "place": {
             "type": "Point",
             "coordinates": [
-              40613.360,
+              40613.36,
               198798.275
             ]
           },
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -431,7 +433,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -454,7 +456,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -477,7 +479,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -500,7 +502,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -523,7 +525,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -546,7 +548,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -569,7 +571,7 @@
           "properties": {
             "name": null,
             "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.100,
+            "ptQualityMeasure": 0.1,
             "comment": "MHW extracted & adopted from SCDB 2014-09",
             "monumentedBy": {
               "state": "wa-monument-state:unmarked"
@@ -600,7 +602,7 @@
             "hasFeatureOfInterest": "v10",
             "resultTime": "2014-12-12T00:00:00Z",
             "hasResult": {
-              "distance": 8.670
+              "distance": 8.67
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 15000
@@ -613,7 +615,7 @@
             "hasFeatureOfInterest": "v11",
             "resultTime": "2014-12-12T00:00:00Z",
             "hasResult": {
-              "distance": 17.740
+              "distance": 17.74
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 15000
@@ -626,7 +628,7 @@
             "hasFeatureOfInterest": "v12",
             "resultTime": "2014-12-12T00:00:00Z",
             "hasResult": {
-              "distance": 44.550
+              "distance": 44.55
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 15000
@@ -637,7 +639,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v13",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "distance": 12.01
             },
@@ -650,7 +651,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "21",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 123.489444444444
             },
@@ -664,7 +664,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "22",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 92.2166666666667
             },
@@ -678,7 +677,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "23",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 109.429722222222
             },

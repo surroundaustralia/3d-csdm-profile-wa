@@ -3,16 +3,18 @@
   "name": "TBD",
   "type": "FeatureCollection",
   "featureType": "CSD",
-    "wasGeneratedBy": {
+  "wasGeneratedBy": {
     "id": "DP-1-S2",
     "endedAtTime": "2029-01-01T01:02:03Z"
   },
   "purpose": "wa-survey-purpose:subdivision",
-  "time": { "date": "2022-05-22" },
+  "time": {
+    "date": "2022-05-22"
+  },
   "horizontalCRS": "epsg:8031",
   "bearingRotation": 0.0,
   "surveyType": "wa-survey-type:deposited-plan",
-   "adminUnit": [
+  "adminUnit": [
     {
       "href": "wa-local-government:city-of-kalgoorlie-boulder",
       "rel": "related",
@@ -25,8 +27,7 @@
     }
   ],
   "features": [],
-  "referencedCSDs": [
-  ],
+  "referencedCSDs": [],
   "points": [
     {
       "id": "WAMarks",
@@ -87,7 +88,7 @@
           "place": {
             "type": "Point",
             "coordinates": [
-              52534.560,
+              52534.56,
               350239.395
             ]
           },
@@ -234,7 +235,6 @@
           "place": null,
           "properties": {
             "hasFeatureOfInterest": "17251502",
-            "resultTime": "2023-03-31T11:56:03",
             "referenceVector": "17251503",
             "hasResult": {
               "angle": 138.033055556,
