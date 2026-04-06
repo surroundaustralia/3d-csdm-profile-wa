@@ -1,0 +1,12 @@
+{
+    "id": "CompoundNameExample",
+    "type": "CompoundName",
+    "label": "IS II - DP 3333",
+    "comment": "the label of the part is optional - but can be cross checked",
+    "hasPart": [
+        {
+            "type":  "wa:placeName",
+            "ref": "wa-gazetter:mammang-koort-king-george-sound",
+        }
+    ]
+}

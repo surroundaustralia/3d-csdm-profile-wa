@@ -1,0 +1,8 @@
+- title: Example CompoundName
+  content: |-
+   A name with a label, but also a set of parts with roles that can be validated against content rules.
+
+  snippets:
+    - language: json
+      ref: examples/strings.json
+      base-uri: http://www.example.com/namedobjects/
