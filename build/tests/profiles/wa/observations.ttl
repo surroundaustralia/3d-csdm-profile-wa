@@ -31,11 +31,11 @@
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
@@ -75,14 +75,14 @@
 <vectorobservation:theodolite+edm> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805296> ;
-            sosa:hasResult [ surv:distance 2.4923e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805060> ;
+            sosa:hasResult [ surv:distance 1.00856e+02 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns2:angleType icsm-distance-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805060> ;
-            sosa:hasResult [ surv:distance 1.00856e+02 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805296> ;
+            sosa:hasResult [ surv:distance 2.4923e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns2:angleType icsm-distance-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ] ;
@@ -134,10 +134,10 @@
             geojson:coordinates ( 5.467663e+04 3.984343e+05 ) ] ;
     rdfs:comment "In Bitumen" ;
     commonpatterns:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "9533" ;
-                    commonpatterns:namePartType "Stamp" ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType "Source" ] ] ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType "Source" ],
+                [ rdfs:label "9533" ;
+                    commonpatterns:namePartType "Stamp" ] ] ;
     commonpatterns:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;

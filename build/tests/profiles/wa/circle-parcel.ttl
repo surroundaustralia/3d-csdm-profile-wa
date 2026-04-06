@@ -33,11 +33,11 @@
     rdfs:label "DP 423693" ;
     dcterms:time [ time:hasTime "2023-05-30"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:hyden ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:shire-of-kondinin ] ;
+            oa:hasTarget wa-local-government:shire-of-kondinin ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
@@ -52,14 +52,14 @@
 
 <https://www.wa-example.com/features/11636634> a geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 3 DP 214866" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "Lot" ;
                     commonpatterns:namePartType "ParcelType" ],
                 [ rdfs:label "3" ;
                     commonpatterns:namePartType "ParcelIdentifier" ],
                 [ rdfs:label "214866" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ] ] ;
+                    commonpatterns:namePartType "planIdentifier" ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/LR-3150-715> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:reserve ;
@@ -72,10 +72,10 @@
 <https://www.wa-example.com/features/12595541> a geojson:Feature ;
     rdfs:label "H" ;
     parcel:appellation [ rdfs:label "Area H DP 95092" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "H" ;
+            dcterms:hasPart [ rdfs:label "H" ;
                     commonpatterns:namePartType "ParcelIdentifier" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "95092" ;
                     commonpatterns:namePartType "planIdentifier" ],
                 [ rdfs:label "Area" ;
