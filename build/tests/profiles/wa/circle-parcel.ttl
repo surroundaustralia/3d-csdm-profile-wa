@@ -8,7 +8,6 @@
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://linked.data.gov.au/def/csdm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
@@ -27,13 +26,12 @@
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
+@prefix wa-vector-purpose: <https://linked.data.gov.au/def/csdm/wa-vector-purpose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://www.wa-example.com/features/DP_423693> a container:CSD,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/DP_423693> a geojson:FeatureCollection ;
     rdfs:label "DP 423693" ;
     dcterms:time [ time:hasTime "2023-05-30"^^xsd:date ] ;
-    prov:wasGeneratedBy <https://www.wa-example.com/features/DP-1-S2> ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ],
@@ -49,7 +47,8 @@
         <https://www.wa-example.com/features/CadastralMark> ;
     container:purpose wa-survey-purpose:interest ;
     container:referencedCSD <https://www.wa-example.com/features/DP_214866> ;
-    container:surveyType wa-survey-type:compiled .
+    container:surveyType wa-survey-type:compiled ;
+    geojson:collectionFeatureType "CSD" .
 
 <https://www.wa-example.com/features/11636634> a geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 3 DP 214866" ;
@@ -73,14 +72,14 @@
 <https://www.wa-example.com/features/12595541> a geojson:Feature ;
     rdfs:label "H" ;
     parcel:appellation [ rdfs:label "Area H DP 95092" ;
-            dcterms:hasPart [ rdfs:label "Area" ;
-                    commonpatterns:namePartType "ParcelType" ],
-                [ rdfs:label "95092" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
                 [ rdfs:label "H" ;
-                    commonpatterns:namePartType "ParcelIdentifier" ] ] ;
+                    commonpatterns:namePartType "ParcelIdentifier" ],
+                [ rdfs:label "95092" ;
+                    commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "Area" ;
+                    commonpatterns:namePartType "ParcelType" ] ] ;
     parcel:interest [ parcel:burdened "11636634" ;
             parcel:interestLink <https://www.wa-example.com/features/345-098-456> ;
             parcel:interestType wa-interest-type:res-cov-cta-38-reg-54-conserv ] ;
@@ -90,8 +89,8 @@
     geojson:topology [ a geojson:Polygon ;
             geojson:relatedFeatures ( ( <https://www.wa-example.com/features/17842481> ) ) ] .
 
-<https://www.wa-example.com/features/BoundaryMark> a surv:BoundaryMark,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "BoundaryMark" ;
     geojson:features <https://www.wa-example.com/features/10001>,
         <https://www.wa-example.com/features/100010>,
         <https://www.wa-example.com/features/100011>,
@@ -107,11 +106,9 @@
         <https://www.wa-example.com/features/10008>,
         <https://www.wa-example.com/features/10009> .
 
-<https://www.wa-example.com/features/CadastralMark> a surv:CadastralMark,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/CadastralMark> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "CadastralMark" ;
     geojson:features <https://www.wa-example.com/features/16040422> .
-
-<https://www.wa-example.com/features/DP-1-S2> prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
 
 <https://www.wa-example.com/features/DP_214866> rdfs:label "DP 214866" ;
     dcterms:time [ time:hasTime "2023-05-30"^^xsd:date ] ;
@@ -156,63 +153,78 @@
     surv:purpose wa-surveypoint-purpose:interest-construct .
 
 <https://www.wa-example.com/features/17842481> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:interest-boundary ;
     geojson:topology [ a geojson:CircleByCenter ;
             geojson:radius 4e+02 ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/16040422> ) ] .
 
 <https://www.wa-example.com/features/2001> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10001> <https://www.wa-example.com/features/10002> ) ] .
 
 <https://www.wa-example.com/features/20010> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/100010> <https://www.wa-example.com/features/100011> ) ] .
 
 <https://www.wa-example.com/features/20011> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/100011> <https://www.wa-example.com/features/100012> ) ] .
 
 <https://www.wa-example.com/features/20013> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/100012> <https://www.wa-example.com/features/100014> ) ] .
 
 <https://www.wa-example.com/features/20014> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/100014> <https://www.wa-example.com/features/100015> ) ] .
 
 <https://www.wa-example.com/features/20015> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/100015> <https://www.wa-example.com/features/10001> ) ] .
 
 <https://www.wa-example.com/features/2002> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10002> <https://www.wa-example.com/features/10003> ) ] .
 
 <https://www.wa-example.com/features/2003> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10003> <https://www.wa-example.com/features/10004> ) ] .
 
 <https://www.wa-example.com/features/2004> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10004> <https://www.wa-example.com/features/10005> ) ] .
 
 <https://www.wa-example.com/features/2005> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10005> <https://www.wa-example.com/features/10006> ) ] .
 
 <https://www.wa-example.com/features/2006> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10006> <https://www.wa-example.com/features/10007> ) ] .
 
 <https://www.wa-example.com/features/2007> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10007> <https://www.wa-example.com/features/10008> ) ] .
 
 <https://www.wa-example.com/features/2008> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10008> <https://www.wa-example.com/features/10009> ) ] .
 
 <https://www.wa-example.com/features/2009> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <https://www.wa-example.com/features/10009> <https://www.wa-example.com/features/100010> ) ] .
 

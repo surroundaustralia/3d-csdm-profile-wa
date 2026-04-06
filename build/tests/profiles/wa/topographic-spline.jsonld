@@ -1,5 +1,5 @@
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
   "id": "DP_404354",
   "name": "DP 404354",
   "description": "MHW Boundary (Topographic Spline) Example",
@@ -661,7 +661,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v11",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "distance": 17.74
             },
@@ -674,7 +673,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v12",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "distance": 44.55
             },
@@ -687,7 +685,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v13",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "distance": 12.01
             },
@@ -700,7 +697,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "21",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 123.489444444444
             },
@@ -714,7 +710,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "22",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 92.2166666666667
             },
@@ -728,7 +723,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "23",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 109.429722222222
             },

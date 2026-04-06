@@ -658,7 +658,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220170",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 35.0,
               "angle": 269.31417325099216
@@ -674,7 +673,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220171",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -690,7 +688,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220172",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 33.5,
               "angle": 269.31417325099216
@@ -706,7 +703,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220173",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -722,7 +718,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220174",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -738,7 +733,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220175",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 33.5,
               "angle": 269.31417325099216
@@ -754,7 +748,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220176",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -770,7 +763,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220177",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -786,7 +778,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220178",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -802,7 +793,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220189",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -818,7 +808,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220190",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -834,7 +823,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220191",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 1.5,
               "angle": 269.31417325099216
@@ -850,7 +838,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220192",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 1.5,
               "angle": 269.31417325099216
@@ -866,7 +853,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220207",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -882,7 +868,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220208",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 33.5,
               "angle": 269.31417325099216
@@ -898,7 +883,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220209",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -914,7 +898,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220210",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 179.31417325099216
@@ -930,7 +913,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220211",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 33.5,
               "angle": 269.31417325099216
@@ -946,7 +928,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220212",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 179.31417325099216
@@ -962,7 +943,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220213",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 15.084,
               "angle": 157.82945102877
@@ -978,7 +958,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220214",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 7.26,
               "angle": 337.82945102877
@@ -994,7 +973,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220215",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 22.832,
               "angle": 359.31445102877
@@ -1010,7 +988,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220219",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 20.935,
               "angle": 246.573617695437
@@ -1026,7 +1003,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220222",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 20.005,
               "angle": 246.573617695437
@@ -1042,7 +1018,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220243",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 1.5,
               "angle": 157.82945102877
@@ -1058,7 +1033,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220244",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 1.5,
               "angle": 269.31417325099216
@@ -1074,7 +1048,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220245",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 22.548,
               "angle": 179.31417325099216
@@ -1090,7 +1063,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220246",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 5.508,
               "angle": 337.82945102877
@@ -1106,7 +1078,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220247",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 39.44,
               "angle": 246.573617695437
@@ -1122,7 +1093,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220248",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 1.5,
               "angle": 269.31417325099216
@@ -1138,7 +1108,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220249",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 179.31417325099216
@@ -1154,7 +1123,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220250",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 24.4,
               "angle": 359.31417325099216
@@ -1170,7 +1138,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220299",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 1.5,
               "angle": 269.31417325099216
@@ -1186,7 +1153,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "20220300",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "distance": 33.5,
               "angle": 269.31417325099216

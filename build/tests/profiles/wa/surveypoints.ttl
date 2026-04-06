@@ -7,7 +7,6 @@
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
@@ -22,17 +21,15 @@
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://www.wa-example.com/features/DP_422532> a container:CSD,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    prov:wasGeneratedBy <https://www.wa-example.com/features/DP-1-S2> ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -40,21 +37,22 @@
         <https://www.wa-example.com/features/GeodeticReferenceMarks> ;
     container:purpose wa-survey-purpose:subdivision ;
     container:referencedCSD <https://www.wa-example.com/features/DP_422526> ;
-    container:surveyType wa-survey-type:SSA .
+    container:surveyType wa-survey-type:SSA ;
+    geojson:collectionFeatureType "CSD" .
 
 <https://www.wa-example.com/features/17876586> a surv:BoundaryMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "Peg 1 DP 422532" ;
-            dcterms:hasPart [ rdfs:label "422532" ;
-                    commonpatterns:namePartType "planIdentifier" ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "Peg" ;
-                    commonpatterns:namePartType "MarkType" ],
-                [ rdfs:label "1" ;
-                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470028e+04 3.984264e+05 ) ] ;
+    commonpatterns:name [ rdfs:label "Peg 1 DP 422532" ;
+            dcterms:hasPart [ rdfs:label "Peg" ;
+                    commonpatterns:namePartType "MarkType" ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType "PlanType" ],
+                [ rdfs:label "422532" ;
+                    commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType "MarkIdentifier" ] ] ;
     commonpatterns:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
@@ -63,14 +61,14 @@
 
 <https://www.wa-example.com/features/18430386> a surv:CadastralMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "EFB157243/9533" ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.467663e+04 3.984343e+05 ) ] ;
+    rdfs:comment "In Bitumen" ;
+    commonpatterns:name [ rdfs:label "EFB157243/9533" ;
             dcterms:hasPart [ rdfs:label "9533" ;
                     commonpatterns:namePartType "Stamp" ],
                 [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType "Source" ] ] ;
-    dcterms:spatial [ a geojson:Point ;
-            geojson:coordinates ( 5.467663e+04 3.984343e+05 ) ] ;
-    rdfs:comment "In Bitumen" ;
     commonpatterns:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
@@ -79,14 +77,14 @@
 
 <https://www.wa-example.com/features/18430396> a surv:GeodeticReferenceMark,
         geojson:Feature ;
-    rdfs:label [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType "Source" ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.47613e+04 3.984891e+05 ) ] ;
     rdfs:comment "In Concrete" ;
+    commonpatterns:name [ rdfs:label "EFB157243/9802" ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType "Stamp" ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType "Source" ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
@@ -94,15 +92,13 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:permanent-survey-mark .
 
-<https://www.wa-example.com/features/BoundaryMark> a surv:BoundaryMark,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "BoundaryMark" ;
     geojson:features <https://www.wa-example.com/features/17876586> .
 
-<https://www.wa-example.com/features/CadastralMark> a surv:CadastralMark,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/CadastralMark> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "CadastralMark" ;
     geojson:features <https://www.wa-example.com/features/18430386> .
-
-<https://www.wa-example.com/features/DP-1-S2> prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;

@@ -1,7 +1,7 @@
 {
   "id": "DP_404354",
   "name": "DP 404354",
-  "description": "MHW Boundary (Topographic Spline) Example",
+  "description": "MHW Boundary (Topographic String) Example",
   "type": "FeatureCollection",
   "featureType": "CSD",
   "tenureType": "wa-parcel-type:crown",
@@ -76,7 +76,6 @@
             ]
           },
           "properties": {
-            "name": null,
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -165,29 +164,6 @@
       "type": "FeatureCollection",
       "featureType": "CadastralMark",
       "features": [
-        {
-          "id": "101",
-          "type": "Feature",
-          "featureType": "CadastralMark",
-          "time": null,
-          "geometry": null,
-          "place": {
-            "type": "Point",
-            "coordinates": [
-              40604.727,
-              198820.877
-            ]
-          },
-          "properties": {
-            "name": null,
-            "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.1,
-            "comment": "MHW extracted & adopted from SCDB 2014-09",
-            "monumentedBy": {
-              "state": "wa-monument-state:unmarked"
-            }
-          }
-        },
         {
           "id": "102",
           "type": "Feature",
@@ -601,29 +577,6 @@
               "state": "wa-monument-state:unmarked"
             }
           }
-        },
-        {
-          "id": "120",
-          "type": "Feature",
-          "featureType": "CadastralMark",
-          "time": null,
-          "geometry": null,
-          "place": {
-            "type": "Point",
-            "coordinates": [
-              40622.933,
-              198786.383
-            ]
-          },
-          "properties": {
-            "name": null,
-            "purpose": "wa-surveypoint-purpose:hwm-boundary",
-            "ptQualityMeasure": 0.1,
-            "comment": "MHW extracted & adopted from SCDB 2014-09",
-            "monumentedBy": {
-              "state": "wa-monument-state:unmarked"
-            }
-          }
         }
       ]
     }
@@ -660,7 +613,7 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v11",
-            "resultTime": "2014-12-12T00:00:00",
+            "resultTime": "2014-12-12T00:00:00Z",
             "hasResult": {
               "distance": 17.74
             },
@@ -673,7 +626,7 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v12",
-            "resultTime": "2014-12-12T00:00:00",
+            "resultTime": "2014-12-12T00:00:00Z",
             "hasResult": {
               "distance": 44.55
             },
@@ -686,7 +639,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "v13",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "distance": 12.01
             },
@@ -699,7 +651,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "21",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 123.489444444444
             },
@@ -713,7 +664,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "22",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 92.2166666666667
             },
@@ -727,7 +677,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "23",
-            "resultTime": "2014-12-12T00:00:00",
             "hasResult": {
               "angle": 109.429722222222
             },
@@ -745,6 +694,43 @@
       "type": "FeatureCollection",
       "featureType": "ObservedVector",
       "features": [
+        {
+          "id": "s1",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "14",
+              "102",
+              "103",
+              "104",
+              "105",
+              "106",
+              "107",
+              "108",
+              "109",
+              "110",
+              "111",
+              "112",
+              "113",
+              "114",
+              "115",
+              "116",
+              "117",
+              "118",
+              "119",
+              "12"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:3",
+            "comment": [
+              "M.H.W.",
+              "Waterlines on this plan do not necessarily depict an exact cadastral boundary and have been adopted from SCDB data obtained September 2014."
+            ]
+          }
+        },
         {
           "id": "v10",
           "type": "Feature",
@@ -808,58 +794,6 @@
             "vectorPurpose": "wa-vector-purpose:R",
             "comment": null
           }
-        }
-      ]
-    },
-    {
-      "id": "Spline",
-      "type": "FeatureCollection",
-      "featureType": "ObservedVector",
-      "features": [
-        {
-          "id": "26538",
-          "type": "Feature",
-          "featureType": "ObservedVector",
-          "x-comment": "The first 2 and last 2 points defining MHW have been specified as the start and end tangent vectors",
-          "geometry": null,
-          "topology": {
-            "type": "CubicSpline",
-            "startTangentVector": {
-              "references": [
-                "101",
-                "14"
-              ]
-            },
-            "endTangentVector": {
-              "references": [
-                "12",
-                "120"
-              ]
-            },
-            "references": [
-              "14",
-              "102",
-              "103",
-              "104",
-              "105",
-              "106",
-              "107",
-              "108",
-              "109",
-              "110",
-              "111",
-              "112",
-              "113",
-              "114",
-              "115",
-              "116",
-              "117",
-              "118",
-              "119",
-              "12"
-            ]
-          },
-          "properties": {}
         }
       ]
     },
@@ -940,7 +874,7 @@
             "type": "Polygon",
             "references": [
               [
-                "26538",
+                "s1",
                 "v11",
                 "v10",
                 "v12",
@@ -974,11 +908,12 @@
             "parcelType": "wa-parcel-type:crown",
             "parcelPurpose": "wa-parcel-purpose:road-widening",
             "parcelState": "wa-parcel-state:created",
+            "interestRef": null,
             "interests": [
               {
-                "interestLink": "147-852-369",
-                "interestType": "wa-interest-type:native-title",
+                "interestLink": "456-987-123",
                 "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
+                "interestType": "wa-interest-type:native-title",
                 "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
                 "burdenedParcels": [
                   "1"

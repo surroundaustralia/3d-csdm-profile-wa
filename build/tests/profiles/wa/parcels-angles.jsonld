@@ -1,5 +1,5 @@
 {
-  "@context": "https://icsm-au.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
   "id": "DP_42253",
   "name": "DP 42253",
   "description": "Western-Australia-Subtended-Angle-Parcel-Example",
@@ -372,7 +372,6 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "842",
-            "resultTime": "2022-05-22T00:00:00",
             "hasResult": {
               "angle": 157.168888888889
             },

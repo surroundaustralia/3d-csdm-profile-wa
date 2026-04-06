@@ -6,13 +6,12 @@
 @prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://linked.data.gov.au/def/csdm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -30,19 +29,18 @@
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
+@prefix wa-vector-purpose: <https://linked.data.gov.au/def/csdm/wa-vector-purpose/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///github/workspace/DP_422532> a container:CSD,
-        geojson:FeatureCollection ;
+<file:///github/workspace/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dct:time [ owlTime:hasTime "2022-05-22"^^xsd:date ] ;
-    prov:wasGeneratedBy <file:///github/workspace/DP-1-S2> ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:observedVectors <file:///github/workspace/SubtendedAngle>,
@@ -52,17 +50,18 @@
     container:purpose wa-survey-purpose:subdivision ;
     container:referencedCSD <file:///github/workspace/DP_422526> ;
     container:surveyType wa-survey-type:SSA ;
-    container:vectorObservations <vectorobservation:computed> .
+    container:vectorObservations <vectorobservation:computed> ;
+    geojson:collectionFeatureType "CSD" .
 
 <file:///github/workspace/138> a parcel:PrimaryParcel,
         geojson:Feature ;
     parcel:appellation [ rdfs:label "Lot 213 DP 572532" ;
             dct:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType "PlanType" ],
-                [ rdfs:label "213" ;
-                    commonpatterns:namePartType "ParcelIdentifier" ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType "planIdentifier" ],
+                [ rdfs:label "213" ;
+                    commonpatterns:namePartType "ParcelIdentifier" ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType "ParcelType" ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -72,8 +71,8 @@
     geojson:topology [ a geojson:Polygon ;
             geojson:relatedFeatures ( <file:///github/workspace/312> <file:///github/workspace/313> <file:///github/workspace/314> <file:///github/workspace/309> <file:///github/workspace/311> <file:///github/workspace/298> ) ] .
 
-<file:///github/workspace/BoundaryMark> a <file:///github/workspace/BoundaryMarks>,
-        geojson:FeatureCollection ;
+<file:///github/workspace/BoundaryMark> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "BoundaryMarks" ;
     geojson:features <file:///github/workspace/184>,
         <file:///github/workspace/189>,
         <file:///github/workspace/190>,
@@ -81,11 +80,9 @@
         <file:///github/workspace/197>,
         <file:///github/workspace/198> .
 
-<file:///github/workspace/DP-1-S2> prov:endedAtTime "2029-01-01T01:02:03+00:00"^^xsd:dateTime .
-
 <file:///github/workspace/DP_422526> rdfs:label "DP 422526" ;
     dct:time [ owlTime:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -106,77 +103,65 @@
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/312> ;
-            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/314> ;
-            sosa:hasResult [ surv:distance 1.4e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/298> ;
             sosa:hasResult [ surv:distance 1e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/843> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.3e-03 ;
-            ns1:angleType icsm-distance-type:angle ],
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/845> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.3e-03 ;
-            ns1:angleType icsm-distance-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/313> ;
-            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/844> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.3e-03 ;
-            ns1:angleType icsm-distance-type:angle ],
+            ns2:angleType icsm-distance-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/841> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.3e-03 ;
-            ns1:angleType icsm-distance-type:angle ],
+            ns2:angleType icsm-distance-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/309> ;
-            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/312> ;
+            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/844> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2011-05-22T00:00:00" ;
+            ns2:angleType icsm-distance-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/842> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.3e-03 ;
-            ns1:angleType icsm-distance-type:angle ],
+            ns2:angleType icsm-distance-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/311> ;
-            sosa:hasResult [ surv:distance 8.832e+00 ] ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/843> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2011-05-22T00:00:00" ;
+            ns2:angleType icsm-distance-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/313> ;
+            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceAccuracyMeasure 4000 ;
-            ns1:distanceType icsm-distance-type:ground ],
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/309> ;
+            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/840> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleAccuracyMeasure 8.3e-03 ;
-            ns1:angleType icsm-distance-type:angle ] ;
+            ns2:angleType icsm-distance-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/314> ;
+            sosa:hasResult [ surv:distance 1.4e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/311> ;
+            sosa:hasResult [ surv:distance 8.832e+00 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns2:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2011-05-22T00:00:00Z" ;
@@ -184,31 +169,37 @@
 
 <file:///github/workspace/840> a surv:SubtendedAngle,
         geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/196> <file:///github/workspace/311> <file:///github/workspace/309> ) ] .
 
 <file:///github/workspace/841> a surv:SubtendedAngle,
         geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/190> <file:///github/workspace/298> <file:///github/workspace/311> ) ] .
 
 <file:///github/workspace/842> a surv:SubtendedAngle,
         geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
             geojson:relatedFeatures ( <file:///github/workspace/189> <file:///github/workspace/312> <file:///github/workspace/298> ) ] .
 
 <file:///github/workspace/843> a surv:SubtendedAngle,
         geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/184> <file:///github/workspace/313> <file:///github/workspace/312> ) ] .
 
 <file:///github/workspace/844> a surv:SubtendedAngle,
         geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/198> <file:///github/workspace/314> <file:///github/workspace/313> ) ] .
 
 <file:///github/workspace/845> a surv:SubtendedAngle,
         geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/197> <file:///github/workspace/309> <file:///github/workspace/314> ) ] .
 
@@ -282,26 +273,32 @@
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <file:///github/workspace/298> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:R ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/190> <file:///github/workspace/189> ) ] .
 
 <file:///github/workspace/309> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/197> <file:///github/workspace/196> ) ] .
 
 <file:///github/workspace/311> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:R ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/196> <file:///github/workspace/190> ) ] .
 
 <file:///github/workspace/312> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:R ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/189> <file:///github/workspace/184> ) ] .
 
 <file:///github/workspace/313> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/184> <file:///github/workspace/198> ) ] .
 
 <file:///github/workspace/314> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
             geojson:relatedFeatures ( <file:///github/workspace/198> <file:///github/workspace/197> ) ] .
 
