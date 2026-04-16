@@ -1,15 +1,22 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Parcel Appellation Options",
-  "anyOf": [
+  "allOf": [
     {
-      "$ref": "bblocks://icsm.profiles.wa.datatypes.lotOnPlan"
+      "anyOf": [
+        {
+          "$ref": "bblocks://icsm.profiles.wa.datatypes.lotOnPlan"
+        },
+        {
+          "$ref": "bblocks://icsm.profiles.wa.datatypes.crownAllotment"
+        },
+        {
+          "$ref": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure"
+        }
+      ]
     },
     {
-      "$ref": "bblocks://icsm.profiles.wa.datatypes.crownAllotment"
-    },
-    {
-      "$ref": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure"
+      "required": ["type"]
     }
-  ]
+    ]
 }
