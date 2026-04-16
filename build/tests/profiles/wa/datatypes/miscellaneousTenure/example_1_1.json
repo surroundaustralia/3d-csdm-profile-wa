@@ -1,0 +1,18 @@
+{
+  "type": "wa:MiscellaneousTenureAppellation",
+  "label": "L-3114-12345",
+  "hasPart": [
+    {
+      "type": "tenureClass",
+      "ref": "wa-parcel-type:l"
+    },
+    {
+      "type": "documentOrGrantReference",
+      "label": "3114"
+    },
+    {
+      "type": "legalDescriptor",
+      "label": "12345"
+    }
+  ]
+}

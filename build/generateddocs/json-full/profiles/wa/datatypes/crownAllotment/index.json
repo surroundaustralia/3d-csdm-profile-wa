@@ -1,0 +1,105 @@
+
+
+{
+  "itemIdentifier": "icsm.profiles.wa.datatypes.crownAllotment",
+  "name": "Crown Allotment Appellation",
+  "highlighted": true,
+  "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2026-04-16",
+  "link": "https://github.com/icsm-au/3d-csdm-schema",
+  "sources": [
+    {
+      "title": "CSDM model",
+      "link": "https://github.com/icsm-au/3d-csdm"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "utils"
+  ],
+  "shaclShapes": {
+    "icsm.csdm.datatypes.compoundName": [
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+    ]
+  },
+  "dependsOn": [
+    "ogc.ogc-utils.iri-or-curie",
+    "icsm.csdm.datatypes.compoundName"
+  ],
+  "schema": {
+    "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml",
+    "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.json"
+  },
+  "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/schema.json",
+  "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/context.jsonld",
+  "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/resolvedProperties.json",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/datatypes/crownAllotment/",
+  "transforms": [
+    {
+      "id": "Dual-name-label",
+      "description": "Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present",
+      "type": "python",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/json",
+            "label": "JSON",
+            "defaultExtension": "json"
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "text/plain"
+          }
+        ],
+        "defaultExtension": "txt"
+      },
+      "code": "import json\ndata = json.loads(input_data)\ncatype = \"\"\nlnumber = \"\"\nareaCode = \"Plan\"\nfor p in data['hasPart']:\n    if p['type'] == 'crownAreaCode':\n      if 'ref' in p:\n        areaCode = p['ref'].split(\":\")[1].title()\n      else:\n        areaCode = \"Not Defined\"\n    elif  p['type'] == 'crownAllocationType':\n      catype = \"Town Lot\"\n    elif  p['type'] == 'number':\n      lnumber = p['label']\noutput_data=f\"{areaCode} {catype} {lnumber}\"\n"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Example CompoundName",
+      "content": "Example appellation.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/examples/strings.json",
+          "base-uri": "http://www.example.com/namedobjects/",
+          "code": "{\n  \"type\": \"wa:CrownAllotmentAppellation\",\n  \"label\": \"Albany Town Lot 57\",\n  \"hasPart\": [\n    {\n      \"type\": \"crownAreaCode\",\n      \"ref\": \"wa-locality:albany\"\n    },\n    {\n      \"type\": \"crownAllocationType\",\n      \"label\": \"wa-parcel-purpose:townlot\"\n    },\n    {\n      \"type\": \"number\",\n      \"label\": \"57\"\n    }\n  ]\n}",
+          "transformResults": {
+            "Dual-name-label": {
+              "success": true,
+              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/transforms/example_1_1.Dual-name-label"
+            }
+          },
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/context.jsonld\",\n  \"type\": \"wa:CrownAllotmentAppellation\",\n  \"label\": \"Albany Town Lot 57\",\n  \"hasPart\": [\n    {\n      \"type\": \"crownAreaCode\",\n      \"ref\": \"wa-locality:albany\"\n    },\n    {\n      \"type\": \"crownAllocationType\",\n      \"label\": \"wa-parcel-purpose:townlot\"\n    },\n    {\n      \"type\": \"number\",\n      \"label\": \"57\"\n    }\n  ]\n}",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Albany Town Lot 57\" ;\n    dcterms:hasPart [ rdfs:label \"57\" ;\n            commonpatterns:namePartType \"number\" ],\n        [ rdfs:label \"wa-parcel-purpose:townlot\" ;\n            commonpatterns:namePartType \"crownAllocationType\" ],\n        [ commonpatterns:namePartRef <wa-locality:albany> ;\n            commonpatterns:namePartType \"crownAreaCode\" ] .\n\n",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Compound Name\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml\n- properties:\n    type:\n      allOf:\n      - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n      - const: wa:CrownAllotmentAppellation\n",
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
+  "gitPath": "_sources/datatypes/crownAllotment"
+}

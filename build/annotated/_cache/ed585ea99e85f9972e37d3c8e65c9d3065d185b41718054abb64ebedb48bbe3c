@@ -2,12 +2,12 @@
   "name": "3D Cadastre Survey Data Exchange Specification",
   "abstract": "This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. \n\nThe specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. \n\n  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**\n\nThe core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** \n\nThe schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  \n\nThe [set of modules comprising the specification](bblock) is implemented as a \"register\" of \"Building Blocks\" managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). \n\nThe [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) \n\n_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_\n",
   "description": "This specification defines a [JSON schema](https://json-schema.org/) compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange model.\n\nThis schema is linked to the underlying [3D Cadastre Model](https://icsm-au.github.io/3d-csdm/) using JSON-LD, which allows additional constraint rules to be specified using the [SHACL (Shapes Constraint Language) standard](https://www.w3.org/TR/shacl/).\n\n_The **[REVIEW GUIDE](https://github.com/icsm-au/3d-csdm-profiles/blob/main/REVIEW_GUIDE.md)** provides a detailed overview of all aspects of the design and testing process, and related materials._\n\nThis implementation pattern:\n\n- is supported by the OGC with a set of [open source tools](https://github.com/opengeospatial/bblock-template) and a library of building blocks based on OGC specifications.\n- simplifies development, testing and documentation of each component\n- allows for transparent, machine-readable, identification of the underlying standards each component is based on\n- allows richer machine readable specifications of implementation constraints and controlled vocabulary requirements.\n- supports explicit machine readable profile specifications to support discovery of all the different components required.\n\nThe \"semantic annotation\" capabilities of the OGC Building Block design links the schema to the conceptual and logical models.\n_NB Publication of these models as Linked Data would allow access to documentation of each element by online systems_.\n",
-  "modified": "2026-03-31T04:19:08.834947",
+  "modified": "2026-04-06T22:39:11.213244",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"526c3a47ca93635fb1572ac841a65271d1667aaa",
-      "shortCommitId": "\"526c3a",
-      "date": "2026-03-27T14:14:05+00:00\""
+      "commitId": "\"c49dec4450ce9b1dcfd39c2cf124dbb7a493c19e",
+      "shortCommitId": "\"c49dec",
+      "date": "2026-04-06T13:40:08+00:00\""
     }
   },
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-common",
@@ -24,60 +24,6 @@
   ],
   "bblocks": [
     {
-      "itemIdentifier": "icsm.csdm.datatypes.compoundName",
-      "name": "Compound Name",
-      "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
-      "status": "under-development",
-      "dateTimeAddition": "2023-04-05T00:00:00Z",
-      "itemClass": "schema",
-      "register": "icsm-csdm",
-      "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
-      "link": "https://github.com/icsm-au/3d-csdm-schema",
-      "sources": [
-        {
-          "title": "CSDM model",
-          "link": "https://github.com/icsm-au/3d-csdm"
-        }
-      ],
-      "maturity": "development",
-      "scope": "unstable",
-      "tags": [
-        "utils"
-      ],
-      "shaclShapes": {
-        "icsm.csdm.datatypes.compoundName": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
-        ]
-      },
-      "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld",
-      "schema": {
-        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml",
-        "application/json": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.json"
-      },
-      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/schema.json",
-      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/context.jsonld",
-      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/resolvedProperties.json",
-      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/",
-      "rdfData": [],
-      "validationPassed": true,
-      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/datatypes/compoundName/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/bblock/icsm.csdm.datatypes.compoundName"
-        }
-      }
-    },
-    {
       "itemIdentifier": "icsm.csdm.datatypes.quality",
       "name": "SurveyQuality",
       "abstract": "A extensible quality descriptor object with standard properties for survey point and vector observations.",
@@ -86,7 +32,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-04-06",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -128,6 +74,63 @@
       }
     },
     {
+      "itemIdentifier": "icsm.csdm.datatypes.compoundName",
+      "name": "Compound Name",
+      "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-06",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "utils"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie"
+      ],
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/context.jsonld",
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/schema.json",
+      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/datatypes/compoundName/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/bblock/icsm.csdm.datatypes.compoundName"
+        }
+      }
+    },
+    {
       "itemIdentifier": "icsm.csdm.datatypes.annotation",
       "name": "Generalised annotation",
       "abstract": "An annotation allowing multiple values, either links with descriptions or simple text.",
@@ -136,7 +139,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-04-06",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -190,7 +193,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-04-06",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -220,13 +223,13 @@
         ]
       },
       "dependsOn": [
-        "ogc.ogc-utils.prov",
         "ogc.geo.topo.features.topo-line",
-        "ogc.geo.common.data_types.geojson",
+        "icsm.csdm.datatypes.compoundName",
+        "ogc.ogc-utils.prov",
         "ogc.geo.json-fg.feature",
-        "ogc.geo.json-fg.feature-lenient",
+        "ogc.geo.common.data_types.geojson",
         "ogc.ogc-utils.iri-or-curie",
-        "icsm.csdm.datatypes.compoundName"
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
       "schema": {
@@ -264,7 +267,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-04-06",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -292,10 +295,10 @@
       },
       "dependsOn": [
         "icsm.csdm.datatypes.quality",
-        "ogc.sosa.features.observation",
-        "ogc.sosa.properties.observationCollection",
         "ogc.sosa.properties.observation",
-        "ogc.ogc-utils.iri-or-curie"
+        "ogc.sosa.properties.observationCollection",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.sosa.features.observation"
       ],
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld",
       "schema": {
@@ -334,7 +337,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-04-06",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -353,20 +356,23 @@
       "superBBlock": false,
       "shaclShapes": {
         "icsm.csdm.features.CSD": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
-        ],
-        "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
           "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
           "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
         ],
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+        ],
         "icsm.csdm.datatypes.compoundName": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ],
         "ogc.geo.topo.features.topo-arc": [
           "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
@@ -374,26 +380,23 @@
         ],
         "icsm.csdm.features.SurveyObservations": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
-        ],
-        "ogc.sosa.properties.observation": [
-          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ]
       },
       "dependsOn": [
-        "ogc.geo.topo.features.topo-feature-collection",
-        "ogc.ogc-utils.prov",
-        "ogc.ogc-utils.iri-or-curie",
+        "icsm.csdm.features.SurveyFeatures",
         "ogc.geo.json-fg.link-role",
-        "ogc.geo.topo.datatypes.topology",
-        "icsm.csdm.datatypes.compoundName",
-        "ogc.geo.topo.features.topo-line",
-        "ogc.geo.topo.features.topo-arc",
-        "ogc.geo.topo.features.topo-feature",
-        "ogc.geo.json-fg.feature-lenient",
-        "ogc.geo.json-fg.time",
-        "icsm.csdm.features.SurveyObservations",
         "ogc.sosa.properties.observationCollection",
-        "icsm.csdm.features.SurveyFeatures"
+        "ogc.geo.topo.datatypes.topology",
+        "ogc.geo.topo.features.topo-line",
+        "icsm.csdm.datatypes.compoundName",
+        "ogc.ogc-utils.prov",
+        "ogc.geo.topo.features.topo-feature",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.geo.topo.features.topo-arc",
+        "ogc.geo.topo.features.topo-feature-collection",
+        "icsm.csdm.features.SurveyObservations",
+        "ogc.geo.json-fg.time",
+        "ogc.geo.json-fg.feature-lenient"
       ],
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/context.jsonld",
       "schema": {

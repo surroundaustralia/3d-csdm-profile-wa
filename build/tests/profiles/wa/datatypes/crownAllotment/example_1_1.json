@@ -1,0 +1,18 @@
+{
+  "type": "wa:CrownAllotmentAppellation",
+  "label": "Albany Town Lot 57",
+  "hasPart": [
+    {
+      "type": "crownAreaCode",
+      "ref": "wa-locality:albany"
+    },
+    {
+      "type": "crownAllocationType",
+      "label": "wa-parcel-purpose:townlot"
+    },
+    {
+      "type": "number",
+      "label": "57"
+    }
+  ]
+}

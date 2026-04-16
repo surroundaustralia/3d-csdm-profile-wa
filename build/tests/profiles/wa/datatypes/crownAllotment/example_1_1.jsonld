@@ -1,0 +1,19 @@
+{
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/context.jsonld",
+  "type": "wa:CrownAllotmentAppellation",
+  "label": "Albany Town Lot 57",
+  "hasPart": [
+    {
+      "type": "crownAreaCode",
+      "ref": "wa-locality:albany"
+    },
+    {
+      "type": "crownAllocationType",
+      "label": "wa-parcel-purpose:townlot"
+    },
+    {
+      "type": "number",
+      "label": "57"
+    }
+  ]
+}

@@ -2,12 +2,12 @@
   "name": "WA Implementation Profile for 3D CSDM",
   "abstract": "This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), \nextending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).\n \nThis version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre\n",
   "description": "\nThe encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.\n\nProfiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).\n",
-  "modified": "2026-04-06T10:18:56.486405",
+  "modified": "2026-04-16T07:42:18.580047",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"81d27f62c6a4bd0188f4fe99d459e237ccd8c94f",
-      "shortCommitId": "\"81d27f",
-      "date": "2026-03-31T12:06:00+00:00\""
+      "commitId": "\"dea8319f02d5634521314c41e265e2a52e7b436b",
+      "shortCommitId": "\"dea831",
+      "date": "2026-04-14T07:10:58+00:00\""
     }
   },
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
@@ -22,15 +22,99 @@
   ],
   "bblocks": [
     {
-      "itemIdentifier": "icsm.profiles.datatypes.dual",
+      "itemIdentifier": "icsm.profiles.wa.datatypes.crownAllotment",
+      "name": "Crown Allotment Appellation",
+      "highlighted": true,
+      "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-16",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "utils"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
+        "icsm.csdm.datatypes.compoundName"
+      ],
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/schema.json",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/datatypes/crownAllotment/",
+      "transforms": [
+        {
+          "id": "Dual-name-label",
+          "description": "Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present",
+          "type": "python",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "text/plain"
+              }
+            ],
+            "defaultExtension": "txt"
+          },
+          "code": "import json\ndata = json.loads(input_data)\ncatype = \"\"\nlnumber = \"\"\nareaCode = \"Plan\"\nfor p in data['hasPart']:\n    if p['type'] == 'crownAreaCode':\n      if 'ref' in p:\n        areaCode = p['ref'].split(\":\")[1].title()\n      else:\n        areaCode = \"Not Defined\"\n    elif  p['type'] == 'crownAllocationType':\n      catype = \"Town Lot\"\n    elif  p['type'] == 'number':\n      lnumber = p['label']\noutput_data=f\"{areaCode} {catype} {lnumber}\"\n"
+        }
+      ],
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/datatypes/crownAllotment/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/datatypes/crownAllotment/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.crownAllotment"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "icsm.profiles.wa.datatypes.dualName",
       "name": "Dual Name (Compound)",
+      "highlighted": true,
       "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
       "status": "under-development",
       "dateTimeAddition": "2023-04-05T00:00:00Z",
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-04-16",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -52,16 +136,16 @@
         "icsm.csdm.datatypes.compoundName"
       ],
       "schema": {
-        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/schema.yaml",
-        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/schema.json"
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/dualName/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/dualName/schema.json"
       },
-      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dual/schema.json",
-      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/context.jsonld",
-      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/resolvedProperties.json",
-      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dual/",
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dualName/schema.json",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/dualName/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/dualName/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dualName/",
       "rdfData": [],
       "validationPassed": true,
-      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/datatypes/dual/",
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/datatypes/dualName/",
       "transforms": [
         {
           "id": "Dual-name-label",
@@ -79,32 +163,255 @@
           "outputs": {
             "mediaTypes": [
               {
+                "mimeType": "text/plain"
+              }
+            ],
+            "defaultExtension": "txt"
+          },
+          "code": "import json\ndata = json.loads(input_data)\nen_label=\"\"\nin_label=\"\"\nslash=\"\"\nfor p in data['hasPart']:\n    if p['type'] == 'wa:indigenousName':\n        in_label = p['label']\n    elif  p['type'] == 'wa:placeName':\n        en_label = p['label']\nif in_label and en_label:\n    slash = \" / \"\noutput_data=f\"{in_label}{slash}{en_label}\"\n"
+        }
+      ],
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/datatypes/dualName/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/datatypes/dualName/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.dualName"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "icsm.profiles.wa.datatypes.lotOnPlan",
+      "name": "Lot On Plan Appelation",
+      "highlighted": true,
+      "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-16",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "utils"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
+        "icsm.csdm.datatypes.compoundName"
+      ],
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/lotOnPlan/schema.json",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/lotOnPlan/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/datatypes/lotOnPlan/",
+      "transforms": [
+        {
+          "id": "Dual-name-label",
+          "description": "Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present",
+          "type": "python",
+          "inputs": {
+            "mediaTypes": [
+              {
                 "mimeType": "application/json",
                 "label": "JSON",
                 "defaultExtension": "json"
               }
             ]
           },
-          "code": "import json\ndata = json.loads(input_data)\nimport json\nen_label=\"\"\nin_label=\"\"\nslash=\"\"\nfor p in data['hasPart']:\n    if p['type'] == 'wa:indigenousName':\n        in_label = p['label']\n    elif  p['type'] == 'wa:placeName':\n        en_label = p['label']\nif in_label and en_label:\n    slash = \" / \"\noutput_data=f\"{in_label}{slash}{en_label}\"\n"
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "text/plain"
+              }
+            ],
+            "defaultExtension": "txt"
+          },
+          "code": "import json\ndata = json.loads(input_data)\ncatype = \"\"\nlnumber = \"\"\nareaCode = \"Plan\"\nfor p in data['hasPart']:\n    if p['type'] == 'surveyType':\n        areaCode = \"Plan\"\n    elif  p['type'] == 'surveyNumber':\n        catype = p['label']\n    elif  p['type'] == 'lotNumber':\n        lnumber = p['label']\noutput_data=f\"Lot {lnumber} {areaCode} {catype}\"\n"
         }
       ],
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/datatypes/dual/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/datatypes/dual/index.json"
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/datatypes/lotOnPlan/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/datatypes/lotOnPlan/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.datatypes.dual"
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.lotOnPlan"
         }
       }
     },
     {
-      "itemIdentifier": "icsm.profiles.wa",
+      "itemIdentifier": "icsm.profiles.wa.datatypes.miscellaneousTenure",
+      "name": "Miscellaneous Tenure Appellation",
+      "highlighted": true,
+      "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-16",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "utils"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.ogc-utils.iri-or-curie",
+        "icsm.csdm.datatypes.compoundName"
+      ],
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/schema.json",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/datatypes/miscellaneousTenure/",
+      "transforms": [
+        {
+          "id": "Dual-name-label",
+          "description": "Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present",
+          "type": "python",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "text/plain"
+              }
+            ],
+            "defaultExtension": "txt"
+          },
+          "code": "import json\ndata = json.loads(input_data)\ndocumentOrGrantReference = \"\"\nlegalDescriptor = \"\"\ntenureClass = \"Plan\"\nfor p in data['hasPart']:\n    if p['type'] == 'crowntenureClass':\n      if 'ref' in p:\n        tenureClass = p['ref'].split(\":\")[1].title()\n      else:\n        tenureClass = \"Not Defined\"\n    elif  p['type'] == 'documentOrGrantReference':\n      documentOrGrantReference = \"Town Lot\"\n    elif  p['type'] == 'legalDescriptor':\n      legalDescriptor = p['label']\noutput_data=f\"{tenureClass}-{documentOrGrantReference}-{legalDescriptor}\"\n"
+        }
+      ],
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/datatypes/miscellaneousTenure/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/datatypes/miscellaneousTenure/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.miscellaneousTenure"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "icsm.profiles.wa.datatypes.parcelAppellation",
+      "name": "Parcel Appelation Options",
+      "highlighted": true,
+      "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-16",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "appellation"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "icsm.profiles.wa.datatypes.miscellaneousTenure",
+        "icsm.profiles.wa.datatypes.lotOnPlan",
+        "icsm.profiles.wa.datatypes.crownAllotment"
+      ],
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelAppellation/schema.json",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelAppellation/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/datatypes/parcelAppellation/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/datatypes/parcelAppellation/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.parcelAppellation"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "icsm.profiles.wa.wa-core",
       "name": "Western Australia Cadastral Survey Data Exchange Profile",
       "highlighted": true,
       "abstract": "Implementation Profile of the ICSM Cadastral Survey Data Exchange Model for use in Western Australia",
@@ -113,7 +420,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-04-16",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -158,70 +465,254 @@
         "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl"
       ],
       "shaclShapes": {
-        "icsm.profiles.wa": [
+        "icsm.profiles.wa.wa-core": [
           "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
         ],
         "icsm.profiles.common": [
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
         ],
         "icsm.csdm.features.CSD": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
-        ],
-        "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
         ],
         "icsm.csdm.datatypes.compoundName": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
         ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
         "ogc.geo.topo.features.topo-arc": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
         "icsm.csdm.features.SurveyObservations": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
-        ],
-        "ogc.sosa.properties.observation": [
-          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ]
       },
       "dependsOn": [
-        "icsm.profiles.common"
+        "icsm.profiles.common",
+        "icsm.profiles.wa.datatypes.parcelAppellation"
       ],
-      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/context.jsonld",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
       "schema": {
-        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/schema.yaml",
-        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/schema.json"
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.json"
       },
-      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa/schema.json",
-      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa/context.jsonld",
-      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/resolvedProperties.json",
-      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa/",
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-core/schema.json",
+      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-core/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-core/",
       "rdfData": [],
       "validationPassed": true,
-      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/",
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/wa-core/",
+      "transforms": [
+        {
+          "id": "csdm-to-jsonfg",
+          "description": "Convert a CSDM JSON cadastral survey document to JSON-FG, with curve\ninterpolation. Equivalent to running:\n\n    pancadastre.py -C <input> --interpolate \\\n        -j <out>.json \\\n        -k <out>-parcels.json \\\n        -s <out>-summary.txt \\\n        -e <out>-errors.log\n\nThe primary output is the full JSON-FG feature collection (-j).\nWarnings and summary text are written to the postprocessor run log\n(equivalent to the -e and -s output files respectively).\n",
+          "type": "csdm-to-jsonfg",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/geo+json",
+                "defaultExtension": "json",
+                "label": "GeoJSON"
+              }
+            ]
+          },
+          "code": "interpolate: 1"
+        }
+      ],
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/index.json"
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/wa-core/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/wa-core/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa"
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.wa-core"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "icsm.profiles.wa.wa-mining",
+      "name": "WA Next Gen Cadastre Mining Profile",
+      "highlighted": true,
+      "abstract": "Sub-profile of the WA profile for CSDM, for use in the mining industry domain,",
+      "status": "under-development",
+      "dateTimeAddition": "2023-07-31T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-16",
+      "sources": [
+        {
+          "title": "3D Cadastre Survey Data Model",
+          "link": "https://icsm-au.github.io/3d-csdm-common"
+        }
+      ],
+      "link": "https://github.com/icsm-au/3d-csdm-profile-wa",
+      "maturity": "development",
+      "scope": "profiles",
+      "tags": [
+        "wa",
+        "csdm",
+        "profile"
+      ],
+      "superBBlock": false,
+      "shaclRules": [],
+      "shaclClosures": [
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl",
+        "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl"
+      ],
+      "shaclShapes": {
+        "icsm.profiles.wa.wa-core": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
+        ],
+        "icsm.profiles.common": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
+        ],
+        "icsm.csdm.features.CSD": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ],
+        "ogc.sosa.properties.observation": [
+          "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "ogc.geo.topo.features.topo-arc": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "icsm.csdm.features.SurveyObservations": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "icsm.profiles.wa.wa-core"
+      ],
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-mining/context.jsonld",
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-mining/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-mining/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-mining/schema.json",
+      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-mining/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-mining/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-mining/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/wa-mining/",
+      "transforms": [
+        {
+          "id": "csdm-to-jsonfg",
+          "description": "Convert a CSDM JSON cadastral survey document to JSON-FG, with curve\ninterpolation. Equivalent to running:\n\n    pancadastre.py -C <input> --interpolate \\\n        -j <out>.json \\\n        -k <out>-parcels.json \\\n        -s <out>-summary.txt \\\n        -e <out>-errors.log\n\nThe primary output is the full JSON-FG feature collection (-j).\nWarnings and summary text are written to the postprocessor run log\n(equivalent to the -e and -s output files respectively).\n",
+          "type": "csdm-to-jsonfg",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/geo+json",
+                "defaultExtension": "json",
+                "label": "GeoJSON"
+              }
+            ]
+          },
+          "code": "interpolate: 1"
+        }
+      ],
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/wa/wa-mining/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/wa/wa-mining/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.wa-mining"
         }
       }
     }

@@ -1,0 +1,10 @@
+path	@id	schema
+/_anyOf/0/label	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/_anyOf/0/template		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/_anyOf/0/hasPart	http://purl.org/dc/terms/hasPart	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/_anyOf/0/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/_anyOf/0/hasPart/ref	https://linked.data.gov.au/def/csdm/commonpatterns/namePartRef	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/_anyOf/0/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/_anyOf/0/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml
+/_anyOf/1/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml
+/_anyOf/2/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml

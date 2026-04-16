@@ -1,0 +1,23 @@
+Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)
+Generated 2026-04-16T07:42:26.878077+00:00
+=== Files ===
+Using examples/strings.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:ncdaba7a03d5d4b88afdf70aa0ef3b3bab1: *none*
+
+=== End SHACL ===
+

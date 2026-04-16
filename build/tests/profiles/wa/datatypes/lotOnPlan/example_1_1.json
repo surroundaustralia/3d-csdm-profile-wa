@@ -1,0 +1,22 @@
+{
+  "type": "wa:LotOnPlanAppellation",
+  "label": "Lot 4 on Plan 1234",
+  "hasPart": [
+    {
+      "type": "surveyType",
+      "ref": "wa-survey-type:p"
+    },
+    {
+      "type": "surveyNumber",
+      "label": "1234"
+    },
+    {
+      "type": "lotPrefix",
+      "ref": "wa-parcel-purpose:lot"
+    },
+    {
+      "type": "lotNumber",
+      "label": "4"
+    }
+  ]
+}
