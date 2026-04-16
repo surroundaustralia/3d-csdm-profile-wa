@@ -4,7 +4,7 @@
   "x-jsonld-context": "context.jsonld",
   "allOf": [
     {
-      "$ref": "bblocks://icsm.profiles.common"
+      "$ref": "bblocks://icsm.profiles.wa.wa-core"
     }
   ]
 }

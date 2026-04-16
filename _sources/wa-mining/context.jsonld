@@ -1,0 +1,6 @@
+{
+  "@context": {
+    "vocabs": "https://linked.data.gov.au/def/csdm/",
+    "wa-mines": "https://linked.data.gov.au/def/csdm/wa-mines/"
+  }
+}

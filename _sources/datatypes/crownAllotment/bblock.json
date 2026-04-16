@@ -1,0 +1,23 @@
+{
+  "name": "Crown Allotment Appellation",
+  "highlighted": true,
+  "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2023-05-24",
+  "link": "https://github.com/icsm-au/3d-csdm-schema",
+  "sources": [
+    {
+      "title": "CSDM model",
+      "link": "https://github.com/icsm-au/3d-csdm"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "utils"
+  ]
+}

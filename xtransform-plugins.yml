@@ -1,0 +1,4 @@
+plugins:
+  - pip: git+https://github.com/surroundaustralia/pancadastre.git
+    modules:
+      - pancadastre-bblocks-plugin

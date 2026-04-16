@@ -7,12 +7,11 @@ transforms:
         - application/json
     outputs:
       mediaTypes:
-        # - text/plain
-      - application/json
+        - text/plain
+      defaultExtension: txt
     code: |
       import json
       data = json.loads(input_data)
-      import json
       en_label=""
       in_label=""
       slash=""
@@ -24,4 +23,5 @@ transforms:
       if in_label and en_label:
           slash = " / "
       output_data=f"{in_label}{slash}{en_label}"
+
 

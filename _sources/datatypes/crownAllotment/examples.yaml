@@ -1,0 +1,8 @@
+- title: Example CompoundName
+  content: |-
+   Example appellation.
+
+  snippets:
+    - language: json
+      ref: examples/strings.json
+      base-uri: http://www.example.com/namedobjects/

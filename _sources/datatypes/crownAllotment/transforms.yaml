@@ -1,0 +1,29 @@
+transforms:
+  - id: Dual-name-label
+    description: Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present
+    type: python
+    inputs:
+      mediaTypes:
+        - application/json
+    outputs:
+      mediaTypes:
+        - text/plain
+      defaultExtension: txt
+    code: |
+      import json
+      data = json.loads(input_data)
+      catype = ""
+      lnumber = ""
+      areaCode = "Plan"
+      for p in data['hasPart']:
+          if p['type'] == 'crownAreaCode':
+            if 'ref' in p:
+              areaCode = p['ref'].split(":")[1].title()
+            else:
+              areaCode = "Not Defined"
+          elif  p['type'] == 'crownAllocationType':
+            catype = "Town Lot"
+          elif  p['type'] == 'number':
+            lnumber = p['label']
+      output_data=f"{areaCode} {catype} {lnumber}"
+      

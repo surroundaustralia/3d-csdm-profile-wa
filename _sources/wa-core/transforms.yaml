@@ -1,0 +1,28 @@
+transforms:
+
+  - id: csdm-to-jsonfg
+    description: |
+      Convert a CSDM JSON cadastral survey document to JSON-FG, with curve
+      interpolation. Equivalent to running:
+
+          pancadastre.py -C <input> --interpolate \
+              -j <out>.json \
+              -k <out>-parcels.json \
+              -s <out>-summary.txt \
+              -e <out>-errors.log
+
+      The primary output is the full JSON-FG feature collection (-j).
+      Warnings and summary text are written to the postprocessor run log
+      (equivalent to the -e and -s output files respectively).
+    type: csdm-to-jsonfg
+    inputs:
+      mediaTypes:
+        - application/json
+    outputs:
+      mediaTypes:
+        - mimeType: application/geo+json
+          defaultExtension: json
+    # Optional config parsed by the plugin:
+    #   interpolate: <int>   curve segment length in metres (default: 1)
+    code: |
+      interpolate: 1
