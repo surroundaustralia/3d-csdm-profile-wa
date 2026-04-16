@@ -2,12 +2,12 @@
   "name": "WA Implementation Profile for 3D CSDM",
   "abstract": "This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), \nextending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).\n \nThis version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre\n",
   "description": "\nThe encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.\n\nProfiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).\n",
-  "modified": "2026-03-31T04:54:35.808030",
+  "modified": "2026-04-06T10:18:56.486405",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"526c3a47ca93635fb1572ac841a65271d1667aaa",
-      "shortCommitId": "\"526c3a",
-      "date": "2026-03-27T14:14:05+00:00\""
+      "commitId": "\"81d27f62c6a4bd0188f4fe99d459e237ccd8c94f",
+      "shortCommitId": "\"81d27f",
+      "date": "2026-03-31T12:06:00+00:00\""
     }
   },
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
@@ -22,6 +22,88 @@
   ],
   "bblocks": [
     {
+      "itemIdentifier": "icsm.profiles.datatypes.dual",
+      "name": "Dual Name (Compound)",
+      "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-04-06",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "utils"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "icsm.csdm.datatypes.compoundName"
+      ],
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dual/schema.json",
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dual/",
+      "rdfData": [],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/datatypes/dual/",
+      "transforms": [
+        {
+          "id": "Dual-name-label",
+          "description": "Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present",
+          "type": "python",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "code": "import json\ndata = json.loads(input_data)\nimport json\nen_label=\"\"\nin_label=\"\"\nslash=\"\"\nfor p in data['hasPart']:\n    if p['type'] == 'wa:indigenousName':\n        in_label = p['label']\n    elif  p['type'] == 'wa:placeName':\n        en_label = p['label']\nif in_label and en_label:\n    slash = \" / \"\noutput_data=f\"{in_label}{slash}{en_label}\"\n"
+        }
+      ],
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/markdown/profiles/datatypes/dual/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/generateddocs/json-full/profiles/datatypes/dual/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.datatypes.dual"
+        }
+      }
+    },
+    {
       "itemIdentifier": "icsm.profiles.wa",
       "name": "Western Australia Cadastral Survey Data Exchange Profile",
       "highlighted": true,
@@ -31,7 +113,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-03-31",
+      "dateOfLastChange": "2026-04-06",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -80,11 +162,11 @@
           "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
         ],
         "icsm.profiles.common": [
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl"
         ],
         "icsm.csdm.features.CSD": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",

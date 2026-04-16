@@ -26,7 +26,7 @@ Monuments:	23
 	None	118	CadastralMark	40618.171,198788.827	wa-monument-state:unmarked	None	None
 	None	119	CadastralMark	40618.991,198788.048	wa-monument-state:unmarked	None	None
 Parcels:	1
-	140373068065680	None	wa-parcel-type:crown	635	None	None	
+	140684662925136	None	wa-parcel-type:crown	635	None	None	
 Observations:	26
 		observedVectors
 	s1	undated	wa-surveypoint-purpose:internal-boundary	14	102	None	None

@@ -1,0 +1,16 @@
+{
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/context.jsonld",
+  "id": "wa:place-name:mammang-koort-king-george-sound",
+  "type": "place:placeName",
+  "label": "Mammang Koort / King George Sound",
+  "hasPart": [
+    {
+      "type": "wa:indigenousName",
+      "label": "Mammang Koort"
+    },
+    {
+      "type": "wa:placeName",
+      "label": "King George Sound"
+    }
+  ]
+}

@@ -18,8 +18,8 @@ Monuments:	15
 	None	100014	BoundaryMark	683316.594,6421770.137	wa-monument-state:did-not-search	wa-monument-condition:ok	None
 	None	100015	BoundaryMark	683288.362,6421847.775	wa-monument-state:did-not-search	wa-monument-condition:ok	None
 Parcels:	2
-	140626297083024	None	wa-parcel-type:crown	365750	None	None	
-	140626297083280	None	wa-secondary-parcel-type:crown	None	None	None	
+	139725312051920	None	wa-parcel-type:crown	365750	None	None	
+	139725312052176	None	wa-secondary-parcel-type:crown	None	None	None	
 Observations:	15
 		observedVectors
 	17842481	undated	None	16040422	400.0

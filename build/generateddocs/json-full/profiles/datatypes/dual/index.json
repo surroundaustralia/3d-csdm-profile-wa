@@ -1,0 +1,104 @@
+
+
+{
+  "itemIdentifier": "icsm.profiles.datatypes.dual",
+  "name": "Dual Name (Compound)",
+  "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2026-04-06",
+  "link": "https://github.com/icsm-au/3d-csdm-schema",
+  "sources": [
+    {
+      "title": "CSDM model",
+      "link": "https://github.com/icsm-au/3d-csdm"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "utils"
+  ],
+  "shaclShapes": {
+    "icsm.csdm.datatypes.compoundName": [
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+    ]
+  },
+  "dependsOn": [
+    "icsm.csdm.datatypes.compoundName"
+  ],
+  "schema": {
+    "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/schema.yaml",
+    "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/schema.json"
+  },
+  "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dual/schema.json",
+  "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/context.jsonld",
+  "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/resolvedProperties.json",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/dual/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/datatypes/dual/",
+  "transforms": [
+    {
+      "id": "Dual-name-label",
+      "description": "Python snippet (no dependencies) that creates a multilingual label using indigenous label first if present",
+      "type": "python",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/json",
+            "label": "JSON",
+            "defaultExtension": "json"
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/json",
+            "label": "JSON",
+            "defaultExtension": "json"
+          }
+        ]
+      },
+      "code": "import json\ndata = json.loads(input_data)\nimport json\nen_label=\"\"\nin_label=\"\"\nslash=\"\"\nfor p in data['hasPart']:\n    if p['type'] == 'wa:indigenousName':\n        in_label = p['label']\n    elif  p['type'] == 'wa:placeName':\n        en_label = p['label']\nif in_label and en_label:\n    slash = \" / \"\noutput_data=f\"{in_label}{slash}{en_label}\"\n"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Example CompoundName",
+      "content": "A name with a label, but also a set of parts with roles that can be validated against content rules.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/strings.json",
+          "base-uri": "http://www.example.com/namedobjects/",
+          "code": "{\n  \"id\": \"wa:place-name:mammang-koort-king-george-sound\",\n  \"type\": \"place:placeName\",\n  \"label\": \"Mammang Koort / King George Sound\",\n  \"hasPart\": [\n    {\n      \"type\":  \"wa:indigenousName\",\n      \"label\": \"Mammang Koort\"\n    },\n    {\n      \"type\": \"wa:placeName\",\n      \"label\": \"King George Sound\"\n    }\n  ]\n}",
+          "transformResults": {
+            "Dual-name-label": {
+              "success": true,
+              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/datatypes/dual/transforms/example_1_1.Dual-name-label.json"
+            }
+          },
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/datatypes/dual/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/datatypes/dual/context.jsonld\",\n  \"id\": \"wa:place-name:mammang-koort-king-george-sound\",\n  \"type\": \"place:placeName\",\n  \"label\": \"Mammang Koort / King George Sound\",\n  \"hasPart\": [\n    {\n      \"type\": \"wa:indigenousName\",\n      \"label\": \"Mammang Koort\"\n    },\n    {\n      \"type\": \"wa:placeName\",\n      \"label\": \"King George Sound\"\n    }\n  ]\n}",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/datatypes/dual/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Mammang Koort / King George Sound\" ;\n    dcterms:hasPart [ rdfs:label \"King George Sound\" ;\n            commonpatterns:namePartType \"wa:placeName\" ],\n        [ rdfs:label \"Mammang Koort\" ;\n            commonpatterns:namePartType \"wa:indigenousName\" ] .\n\n",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/datatypes/dual/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Compound Name\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml\n",
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
+  "gitPath": "_sources/datatypes/dual"
+}

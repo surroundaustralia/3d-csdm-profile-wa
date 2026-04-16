@@ -1,0 +1,10 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+[] rdfs:label "Mammang Koort / King George Sound" ;
+    dcterms:hasPart [ rdfs:label "King George Sound" ;
+            commonpatterns:namePartType "wa:placeName" ],
+        [ rdfs:label "Mammang Koort" ;
+            commonpatterns:namePartType "wa:indigenousName" ] .
+
