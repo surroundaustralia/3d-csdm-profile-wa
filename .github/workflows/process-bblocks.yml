@@ -1,10 +1,10 @@
 name: Validate and process Building Block
 on:
   workflow_dispatch:
-  #push:
-  #  branches:
-  #    - master
-  #    - main
+  push:
+    branches:
+      - master
+      - main
 
 permissions:
   contents: write
