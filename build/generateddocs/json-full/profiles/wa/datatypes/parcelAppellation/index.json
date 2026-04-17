@@ -33,8 +33,8 @@
   },
   "dependsOn": [
     "icsm.profiles.wa.datatypes.miscellaneousTenure",
-    "icsm.profiles.wa.datatypes.lotOnPlan",
-    "icsm.profiles.wa.datatypes.crownAllotment"
+    "icsm.profiles.wa.datatypes.crownAllotment",
+    "icsm.profiles.wa.datatypes.lotOnPlan"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.yaml",

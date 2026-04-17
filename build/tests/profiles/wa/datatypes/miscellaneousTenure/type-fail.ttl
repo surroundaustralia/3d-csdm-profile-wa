@@ -6,8 +6,8 @@
 [] rdfs:label "L-3114-12345" ;
     dct:hasPart [ rdfs:label "3114" ;
             commonpatterns:namePartType "documentOrGrantReference" ],
-        [ rdfs:label "12345" ;
-            commonpatterns:namePartType "legalDescriptor" ],
         [ commonpatterns:namePartRef wa-parcel-type:l ;
-            commonpatterns:namePartType "tenureClass" ] .
+            commonpatterns:namePartType "tenureClass" ],
+        [ rdfs:label "12345" ;
+            commonpatterns:namePartType "legalDescriptor" ] .
 
