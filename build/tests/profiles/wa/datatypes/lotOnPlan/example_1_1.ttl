@@ -1,14 +1,16 @@
 @prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
+@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
     dcterms:hasPart [ rdfs:label "1234" ;
             commonpatterns:namePartType "surveyNumber" ],
-        [ commonpatterns:namePartRef <wa-parcel-purpose:lot> ;
-            commonpatterns:namePartType "lotPrefix" ],
-        [ commonpatterns:namePartRef <wa-survey-type:p> ;
-            commonpatterns:namePartType "surveyType" ],
         [ rdfs:label "4" ;
-            commonpatterns:namePartType "lotNumber" ] .
+            commonpatterns:namePartType "lotNumber" ],
+        [ commonpatterns:namePartRef wa-survey-type:p ;
+            commonpatterns:namePartType "surveyType" ],
+        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            commonpatterns:namePartType "lotPrefix" ] .
 

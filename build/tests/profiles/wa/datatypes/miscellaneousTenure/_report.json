@@ -2,9 +2,121 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation",
   "bblockName": "Miscellaneous Tenure Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.miscellaneousTenure",
-  "generated": "2026-04-17T00:28:24.038814+00:00",
+  "generated": "2026-04-17T04:52:49.777485+00:00",
   "result": true,
   "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/datatypes/miscellaneousTenure/tests/parts-fail.json",
+        "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/tests/parts-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using parts-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "parts-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD parts-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "parts-fail.ttl",
+              "size": 7,
+              "isError": false,
+              "message": "Output Turtle parts-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'wa:MiscellaneousTenureAppellation' was expected",
+              "isError": true,
+              "message": "ValidationError: 'wa:MiscellaneousTenureAppellation' was expected\n\nFailed validating 'const' in schema['allOf'][1]['properties']['type']['allOf'][1]:\n    {'const': 'wa:MiscellaneousTenureAppellation'}\n\nOn instance['type']:\n    'wa:notAMiscellaneousTenureAppellation'"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
+              "focusNodes": {
+                "ex:NamedObjectShape": {
+                  "nodes": []
+                },
+                "ex:NamePartShape": {
+                  "nodes": [
+                    "_:N39893a222a944f77a966e75ce9afbd0c",
+                    "_:Nc6b263ac70c144c0930159335dabf288"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N39893a222a944f77a966e75ce9afbd0c,_:Nc6b263ac70c144c0930159335dabf288\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
+              "focusNodes": {
+                "_:ne5613c465cf54e2f965c7ee90c73f052b1": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:ne5613c465cf54e2f965c7ee90c73f052b1: *none*\n"
+            }
+          ]
+        }
+      ]
+    },
     {
       "source": {
         "type": "TEST_RESOURCE",
@@ -75,6 +187,30 @@
           "entries": [
             {
               "op": "shacl-report",
+              "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
+              "focusNodes": {
+                "ex:NamedObjectShape": {
+                  "nodes": []
+                },
+                "ex:NamePartShape": {
+                  "nodes": [
+                    "_:N4d8026c9ed694ba1864c6d37bd432561",
+                    "_:Naeb5971d34d1456890b3a10f90b732a2",
+                    "_:Nae4b498f405e496bb915d47167912f13"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N4d8026c9ed694ba1864c6d37bd432561,_:Naeb5971d34d1456890b3a10f90b732a2,_:Nae4b498f405e496bb915d47167912f13\n"
+            },
+            {
+              "op": "shacl-report",
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
@@ -83,12 +219,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n276621d174f04688bb3331f95820404db1": {
+                "_:ne5613c465cf54e2f965c7ee90c73f052b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n276621d174f04688bb3331f95820404db1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:ne5613c465cf54e2f965c7ee90c73f052b1: *none*\n"
             }
           ]
         }
@@ -153,6 +289,30 @@
           "entries": [
             {
               "op": "shacl-report",
+              "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
+              "focusNodes": {
+                "ex:NamedObjectShape": {
+                  "nodes": []
+                },
+                "ex:NamePartShape": {
+                  "nodes": [
+                    "_:N0874a0421e364a88a8dccd2eb29ca310",
+                    "_:Naa64c80031bd430898b9218af3a2d9f7",
+                    "_:N6f0ace157f1a41db8d5984c273a82972"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N0874a0421e364a88a8dccd2eb29ca310,_:Naa64c80031bd430898b9218af3a2d9f7,_:N6f0ace157f1a41db8d5984c273a82972\n"
+            },
+            {
+              "op": "shacl-report",
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
@@ -161,12 +321,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n276621d174f04688bb3331f95820404db1": {
+                "_:ne5613c465cf54e2f965c7ee90c73f052b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n276621d174f04688bb3331f95820404db1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:ne5613c465cf54e2f965c7ee90c73f052b1: *none*\n"
             }
           ]
         }
@@ -175,8 +335,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 2,
-    "passed": 2,
+    "total": 3,
+    "passed": 3,
     "failed": 0
   }
 }

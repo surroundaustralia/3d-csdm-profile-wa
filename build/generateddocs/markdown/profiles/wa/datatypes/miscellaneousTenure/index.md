@@ -61,13 +61,14 @@ Example appellation.
 @prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 
 [] rdfs:label "L-3114-12345" ;
-    dcterms:hasPart [ rdfs:label "12345" ;
-            commonpatterns:namePartType "legalDescriptor" ],
-        [ rdfs:label "3114" ;
+    dcterms:hasPart [ rdfs:label "3114" ;
             commonpatterns:namePartType "documentOrGrantReference" ],
-        [ commonpatterns:namePartRef <wa-parcel-type:l> ;
+        [ rdfs:label "12345" ;
+            commonpatterns:namePartType "legalDescriptor" ],
+        [ commonpatterns:namePartRef wa-parcel-type:l ;
             commonpatterns:namePartType "tenureClass" ] .
 
 
@@ -79,7 +80,7 @@ Example appellation.
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Compound Name
 allOf:
-- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/waAppellationNamespaces/schema.yaml
 - properties:
     type:
       allOf:
@@ -118,6 +119,27 @@ Links to the schema:
     "commonpatterns": "csdm:commonpatterns/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "csdm": "https://linked.data.gov.au/def/csdm/",
+    "vocabs": "https://linked.data.gov.au/def/csdm/",
+    "wa-surveypoint-purpose": "csdm:wa-surveypoint-purpose/",
+    "wa-survey-purpose": "csdm:wa-survey-purpose/",
+    "wa-survey-type": "csdm:wa-survey-type/",
+    "wa-procedure-used": "csdm:wa-procedure-used/",
+    "wa-survey-documentation-type": "csdm:wa-survey-documentation-type/",
+    "wa-annotation-role": "csdm:wa-annotation/",
+    "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
+    "wa-parcel-type": "csdm:wa-parcel-type/",
+    "wa-parcel-state": "csdm:wa-parcel-state/",
+    "wa-nonprimary-parcel-type": "csdm:wa-secondary-parcel-type/",
+    "wa-monument-form": "csdm:wa-monument-form/",
+    "wa-vector-purpose": "csdm:wa-vector-purpose/",
+    "wa-vector-type": "csdm:wa-vector-type/",
+    "wa-secondary-parcel-purpose": "csdm:wa-secondary-parcel-purpose/",
+    "wa-secondary-parcel-type": "csdm:wa-secondary-parcel-type/",
+    "wa-secondary-purpose": "csdm:wa-secondary-purpose/",
+    "wa-interest-type": "csdm:wa-interest-type/",
+    "wa-interest": "csdm:wa-interest/",
+    "wa-locality": "csdm:wa-locality/",
+    "wa-local-government": "csdm:wa-local-government/",
     "@version": 1.1
   }
 }

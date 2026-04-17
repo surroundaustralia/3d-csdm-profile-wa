@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for icsm.profiles.wa.datatypes.waAppellationNamespaces - WA Ref Namespaces",
+  "bblockName": "WA Ref Namespaces",
+  "bblockId": "icsm.profiles.wa.datatypes.waAppellationNamespaces",
+  "generated": "2026-04-17T04:52:48.906250+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

@@ -1,0 +1,43 @@
+Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
+Generated 2026-04-17T04:52:49.760998+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using parts-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD parts-fail.jsonld created
+Output Turtle parts-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'wa:MiscellaneousTenureAppellation' was expected
+
+Failed validating 'const' in schema['allOf'][1]['properties']['type']['allOf'][1]:
+    {'const': 'wa:MiscellaneousTenureAppellation'}
+
+On instance['type']:
+    'wa:notAMiscellaneousTenureAppellation'
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
+ - Shape ex:NamedObjectShape: *none*
+ - Shape ex:NamePartShape: _:N39893a222a944f77a966e75ce9afbd0c,_:Nc6b263ac70c144c0930159335dabf288
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:ne5613c465cf54e2f965c7ee90c73f052b1: *none*
+
+=== End SHACL ===
+

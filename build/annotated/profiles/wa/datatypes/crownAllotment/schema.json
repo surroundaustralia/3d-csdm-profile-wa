@@ -3,7 +3,7 @@
   "description": "Compound Name",
   "allOf": [
     {
-      "$ref": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.json"
+      "$ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/waAppellationNamespaces/schema.json"
     },
     {
       "properties": {

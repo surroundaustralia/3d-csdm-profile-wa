@@ -1,0 +1,11 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
+
+[] rdfs:label "L-3114-12345" ;
+    dct:hasPart [ rdfs:label "12345" ;
+            commonpatterns:namePartType "legalDescriptor" ],
+        [ commonpatterns:namePartRef wa-parcel-type:l ;
+            commonpatterns:namePartType "tenureClass" ] .
+
