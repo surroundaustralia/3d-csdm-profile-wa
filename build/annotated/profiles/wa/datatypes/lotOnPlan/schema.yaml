@@ -7,3 +7,5 @@ allOf:
       allOf:
       - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
       - const: wa:LotOnPlanAppellation
+  required:
+  - type

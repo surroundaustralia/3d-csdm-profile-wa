@@ -64,7 +64,7 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2026-04-16T07:43:17.155999+00:00</small>
+            <small class="datetime">Generated at 2026-04-17T00:29:20.508217+00:00</small>
                 <p class="summary fw-semibold text-success">
                     Number of passing building blocks: 7 / 7 (100%)
                 </p>
@@ -127,7 +127,7 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n0e2016565b684229bf903316b58c33eeb1: *none*
+ - Shape _:n1660e7dc949e435c95883315eef69099b1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -190,7 +190,7 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:ncdaba7a03d5d4b88afdf70aa0ef3b3bab1: *none*
+ - Shape _:ne343ed639c534700b8066c8b79d2841db1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -253,7 +253,7 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n85b2553d2e7d4fb2b1c570dd0591bebbb1: *none*
+ - Shape _:n2016ff4d0296431c9f513585724ee9ecb1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -282,9 +282,9 @@
                             <div class="accordion-collapse collapse " id="bblock-collapse-icsm.profiles.wa.datatypes.miscellaneousTenure">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-success">
-                                            Test passed: 1 / 1
+                                            Test passed: 2 / 2
                                         </p>
-                                        <div class="card mb-2 validation-item " id="item-icsm.profiles.wa.datatypes.miscellaneousTenure-1">
+                                        <div class="card mb-2 validation-item require-fail" id="item-icsm.profiles.wa.datatypes.miscellaneousTenure-1">
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
@@ -294,14 +294,61 @@
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
                                                     </button>
-                                                    <a href="profiles/wa/datatypes/miscellaneousTenure/example_1_1.json" target="_blank">example_1_1.json</a>
-                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a href="../../_sources/datatypes/miscellaneousTenure/tests/type-fail.json" target="_blank">type-fail.json</a>
+                                                    <span class="badge bg-secondary test_resource">Test resource</span>
+                                                        <span class="badge text-bg-info">Requires fail</span>
                                                     <a class="anchor" href="#item-icsm.profiles.wa.datatypes.miscellaneousTenure-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-4">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">General</div>
+                                                                    <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using type-fail.json from test resources</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD type-fail.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle type-fail.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;wa:MiscellaneousTenureAppellation&#x27; was expected
+
+Failed validating &#x27;const&#x27; in schema[&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;type&#x27;][&#x27;allOf&#x27;][1]:
+    {&#x27;const&#x27;: &#x27;wa:MiscellaneousTenureAppellation&#x27;}
+
+On instance[&#x27;type&#x27;]:
+    &#x27;wa:notAMiscellaneousTenureAppellation&#x27;</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:n276621d174f04688bb3331f95820404db1: *none*
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-icsm.profiles.wa.datatypes.miscellaneousTenure-2">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-5"
+                                                            aria-expanded="false" aria-controls="uid-5"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="profiles/wa/datatypes/miscellaneousTenure/example_1_1.json" target="_blank">example_1_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-icsm.profiles.wa.datatypes.miscellaneousTenure-2">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-5">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using examples/strings.json from examples</div>
@@ -316,7 +363,7 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n28276a9b5db44df08ab8c170a49bd595b1: *none*
+ - Shape _:n276621d174f04688bb3331f95820404db1: *none*
 </div>
                                                     </div>
                                                 </div>
@@ -374,8 +421,8 @@
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-5"
-                                                            aria-expanded="false" aria-controls="uid-5"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-6"
+                                                            aria-expanded="false" aria-controls="uid-6"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -388,7 +435,7 @@
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-5">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-6">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">General</div>
                                                                     <div class="font-monospace entry-message section-general ">Test was expected to fail and it did.</div>
@@ -398,7 +445,17 @@
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD parcels-refs-fail.jsonld created</div>
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle parcels-refs-fail.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
-                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;type&#x27; is a required property
+
+Failed validating &#x27;required&#x27; in schema[&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;parcels&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;features&#x27;][&#x27;items&#x27;][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;properties&#x27;][&#x27;appellation&#x27;][&#x27;allOf&#x27;][1]:
+    {&#x27;required&#x27;: [&#x27;type&#x27;]}
+
+On instance[&#x27;parcels&#x27;][0][&#x27;features&#x27;][0][&#x27;properties&#x27;][&#x27;appellation&#x27;]:
+    {&#x27;hasPart&#x27;: [{&#x27;label&#x27;: &#x27;Lot&#x27;, &#x27;type&#x27;: &#x27;ParcelType&#x27;},
+                 {&#x27;label&#x27;: &#x27;213&#x27;, &#x27;type&#x27;: &#x27;ParcelIdentifier&#x27;},
+                 {&#x27;label&#x27;: &#x27;DP&#x27;, &#x27;type&#x27;: &#x27;PlanType&#x27;},
+                 {&#x27;label&#x27;: &#x27;572532&#x27;, &#x27;type&#x27;: &#x27;planIdentifier&#x27;}],
+     &#x27;label&#x27;: &#x27;Lot 213 DP 572532&#x27;}</div>
                                                                     <div class="font-monospace subsection-title mt-2">SHACL</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Using building block SHACL closures:
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
@@ -430,47 +487,17 @@
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for profiles/wa-pointnames-shacl.ttl:
  - Shape wap:testLabelPartsPresent: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
- - Shape :bindSurveyObservation-angle-and-distance-types: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
- - Shape :annotate-madeBySensor: &lt;vectorobservation:computed&gt;
- - Shape :testInCollectionOrMember-procedure: &lt;vectorobservation:computed&gt;
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
- - Shape :referencedCSDs-present: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-form: &lt;file:///github/workspace/198&gt;/surv:monumentedBy,&lt;file:///github/workspace/189&gt;/surv:monumentedBy,&lt;file:///github/workspace/190&gt;/surv:monumentedBy,&lt;file:///github/workspace/197&gt;/surv:monumentedBy,&lt;file:///github/workspace/184&gt;/surv:monumentedBy,&lt;file:///github/workspace/196&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-vector-purpose: &lt;file:///github/workspace/observedVectors&gt;,&lt;file:///github/workspace/SubtendedAngle&gt;
- - Shape jcl:testBoundVocab-condition: &lt;file:///github/workspace/198&gt;/surv:monumentedBy,&lt;file:///github/workspace/189&gt;/surv:monumentedBy,&lt;file:///github/workspace/190&gt;/surv:monumentedBy,&lt;file:///github/workspace/197&gt;/surv:monumentedBy,&lt;file:///github/workspace/184&gt;/surv:monumentedBy,&lt;file:///github/workspace/196&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-surveypoint-purpose: &lt;file:///github/workspace/184&gt;,&lt;file:///github/workspace/197&gt;,&lt;file:///github/workspace/196&gt;,&lt;file:///github/workspace/198&gt;,&lt;file:///github/workspace/189&gt;,&lt;file:///github/workspace/190&gt;
- - Shape jcl:testBoundVocab-state: &lt;file:///github/workspace/198&gt;/surv:monumentedBy,&lt;file:///github/workspace/189&gt;/surv:monumentedBy,&lt;file:///github/workspace/190&gt;/surv:monumentedBy,&lt;file:///github/workspace/197&gt;/surv:monumentedBy,&lt;file:///github/workspace/184&gt;/surv:monumentedBy,&lt;file:///github/workspace/196&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-pt-quality-class: &lt;file:///github/workspace/184&gt;,&lt;file:///github/workspace/197&gt;,&lt;file:///github/workspace/196&gt;,&lt;file:///github/workspace/198&gt;,&lt;file:///github/workspace/189&gt;,&lt;file:///github/workspace/190&gt;
-</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testAngleType: *none*
- - Shape :testVHD: *none*
  - Shape :testCRS: &lt;file:///github/workspace/DP_422532&gt;
  - Shape :testDistanceType: *none*
+ - Shape :testAngleType: *none*
  - Shape :testSurveyMetadata: &lt;file:///github/workspace/DP_422532&gt;
  - Shape :testCompoundCRS: *none*
+ - Shape :testVHD: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
@@ -480,32 +507,35 @@
  - Shape jcl:testBoundVocab-parcelType: &lt;file:///github/workspace/138&gt;
  - Shape jcl:testBoundVocab-parcelInterest: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
- - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
+ - Shape :testInCollectionOrMember-procedure: &lt;vectorobservation:computed&gt;
+ - Shape :annotate-madeBySensor: &lt;vectorobservation:computed&gt;
+ - Shape :bindSurveyObservation-angle-and-distance-types: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :ParcelQualityClass: *none*
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :ParcelState: *none*
- - Shape :ParcelType: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :Parcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :Apellation: *none*
- - Shape :LandInterest: *none*
- - Shape :EstateParcel: *none*
- - Shape :PropertyUnit: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-form: &lt;file:///github/workspace/190&gt;/surv:monumentedBy,&lt;file:///github/workspace/197&gt;/surv:monumentedBy,&lt;file:///github/workspace/196&gt;/surv:monumentedBy,&lt;file:///github/workspace/184&gt;/surv:monumentedBy,&lt;file:///github/workspace/198&gt;/surv:monumentedBy,&lt;file:///github/workspace/189&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-state: &lt;file:///github/workspace/190&gt;/surv:monumentedBy,&lt;file:///github/workspace/197&gt;/surv:monumentedBy,&lt;file:///github/workspace/196&gt;/surv:monumentedBy,&lt;file:///github/workspace/184&gt;/surv:monumentedBy,&lt;file:///github/workspace/198&gt;/surv:monumentedBy,&lt;file:///github/workspace/189&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: &lt;file:///github/workspace/190&gt;/surv:monumentedBy,&lt;file:///github/workspace/197&gt;/surv:monumentedBy,&lt;file:///github/workspace/196&gt;/surv:monumentedBy,&lt;file:///github/workspace/184&gt;/surv:monumentedBy,&lt;file:///github/workspace/198&gt;/surv:monumentedBy,&lt;file:///github/workspace/189&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-vector-purpose: &lt;file:///github/workspace/SubtendedAngle&gt;,&lt;file:///github/workspace/observedVectors&gt;
+ - Shape jcl:testBoundVocab-pt-quality-class: &lt;file:///github/workspace/190&gt;,&lt;file:///github/workspace/196&gt;,&lt;file:///github/workspace/197&gt;,&lt;file:///github/workspace/198&gt;,&lt;file:///github/workspace/189&gt;,&lt;file:///github/workspace/184&gt;
+ - Shape jcl:testBoundVocab-surveypoint-purpose: &lt;file:///github/workspace/190&gt;,&lt;file:///github/workspace/196&gt;,&lt;file:///github/workspace/197&gt;,&lt;file:///github/workspace/198&gt;,&lt;file:///github/workspace/189&gt;,&lt;file:///github/workspace/184&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+ - Shape :referencedCSDs-present: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -514,6 +544,33 @@
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
  - Shape :testFOIexists: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
 </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :EstateParcel: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelType: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelState: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :ParcelQualityClass: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD-seeAlso: *none*
+ - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+ - Shape container:CSD: *none*
+</div>
                                                                     <div class="font-monospace entry-message section-shacl text-danger">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: False
@@ -521,8 +578,8 @@
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: topo:testTopoLinesReferencePoints
-  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/197&gt; &lt;file:///github/workspace/309&gt; &lt;file:///github/workspace/314&gt; ) ; rdf:type geojson:LineString ]
-  	Value Node: &lt;file:///github/workspace/309&gt;
+  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/190&gt; &lt;file:///github/workspace/298&gt; &lt;file:///github/workspace/311&gt; ) ; rdf:type geojson:LineString ]
+  	Value Node: &lt;file:///github/workspace/298&gt;
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
           prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
@@ -542,8 +599,8 @@
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: topo:testTopoLinesReferencePoints
-  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/197&gt; &lt;file:///github/workspace/309&gt; &lt;file:///github/workspace/314&gt; ) ; rdf:type geojson:LineString ]
-  	Value Node: &lt;file:///github/workspace/314&gt;
+  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/190&gt; &lt;file:///github/workspace/298&gt; &lt;file:///github/workspace/311&gt; ) ; rdf:type geojson:LineString ]
+  	Value Node: &lt;file:///github/workspace/311&gt;
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
           prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
@@ -605,6 +662,48 @@
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: topo:testTopoLinesReferencePoints
+  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/197&gt; &lt;file:///github/workspace/309&gt; &lt;file:///github/workspace/314&gt; ) ; rdf:type geojson:LineString ]
+  	Value Node: &lt;file:///github/workspace/309&gt;
+  	Result Path: geojson:topology
+  	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
+          prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+          PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+          prefix geojson: &lt;https://purl.org/geojson/vocab#&gt;
+          prefix dct:     &lt;http://purl.org/dc/terms/&gt;
+          PREFIX geosparql: &lt;http://www.opengis.net/ont/geosparql#&gt;
+  
+          SELECT $this (geojson:topology as ?path) (?ref as ?value)
+          WHERE {
+           $this geojson:relatedFeatures/rdf:rest*/rdf:first ?ref .
+           FILTER NOT EXISTS {
+               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
+          }
+  &quot;) ]
+  	Message: Lines topologies must reference points within current graph closure.
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: topo:testTopoLinesReferencePoints
+  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/197&gt; &lt;file:///github/workspace/309&gt; &lt;file:///github/workspace/314&gt; ) ; rdf:type geojson:LineString ]
+  	Value Node: &lt;file:///github/workspace/314&gt;
+  	Result Path: geojson:topology
+  	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
+          prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+          PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+          prefix geojson: &lt;https://purl.org/geojson/vocab#&gt;
+          prefix dct:     &lt;http://purl.org/dc/terms/&gt;
+          PREFIX geosparql: &lt;http://www.opengis.net/ont/geosparql#&gt;
+  
+          SELECT $this (geojson:topology as ?path) (?ref as ?value)
+          WHERE {
+           $this geojson:relatedFeatures/rdf:rest*/rdf:first ?ref .
+           FILTER NOT EXISTS {
+               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
+          }
+  &quot;) ]
+  	Message: Lines topologies must reference points within current graph closure.
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: topo:testTopoLinesReferencePoints
   	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/196&gt; &lt;file:///github/workspace/311&gt; &lt;file:///github/workspace/309&gt; ) ; rdf:type geojson:LineString ]
   	Value Node: &lt;file:///github/workspace/311&gt;
   	Result Path: geojson:topology
@@ -628,48 +727,6 @@
   	Source Shape: topo:testTopoLinesReferencePoints
   	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/196&gt; &lt;file:///github/workspace/311&gt; &lt;file:///github/workspace/309&gt; ) ; rdf:type geojson:LineString ]
   	Value Node: &lt;file:///github/workspace/309&gt;
-  	Result Path: geojson:topology
-  	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
-          prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-          PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-          prefix geojson: &lt;https://purl.org/geojson/vocab#&gt;
-          prefix dct:     &lt;http://purl.org/dc/terms/&gt;
-          PREFIX geosparql: &lt;http://www.opengis.net/ont/geosparql#&gt;
-  
-          SELECT $this (geojson:topology as ?path) (?ref as ?value)
-          WHERE {
-           $this geojson:relatedFeatures/rdf:rest*/rdf:first ?ref .
-           FILTER NOT EXISTS {
-               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
-          }
-  &quot;) ]
-  	Message: Lines topologies must reference points within current graph closure.
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: topo:testTopoLinesReferencePoints
-  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/190&gt; &lt;file:///github/workspace/298&gt; &lt;file:///github/workspace/311&gt; ) ; rdf:type geojson:LineString ]
-  	Value Node: &lt;file:///github/workspace/298&gt;
-  	Result Path: geojson:topology
-  	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
-          prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-          PREFIX rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
-          prefix geojson: &lt;https://purl.org/geojson/vocab#&gt;
-          prefix dct:     &lt;http://purl.org/dc/terms/&gt;
-          PREFIX geosparql: &lt;http://www.opengis.net/ont/geosparql#&gt;
-  
-          SELECT $this (geojson:topology as ?path) (?ref as ?value)
-          WHERE {
-           $this geojson:relatedFeatures/rdf:rest*/rdf:first ?ref .
-           FILTER NOT EXISTS {
-               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
-          }
-  &quot;) ]
-  	Message: Lines topologies must reference points within current graph closure.
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: topo:testTopoLinesReferencePoints
-  	Focus Node: [ geojson:relatedFeatures ( &lt;file:///github/workspace/190&gt; &lt;file:///github/workspace/298&gt; &lt;file:///github/workspace/311&gt; ) ; rdf:type geojson:LineString ]
-  	Value Node: &lt;file:///github/workspace/311&gt;
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal(&quot;Lines topologies must reference points within current graph closure.&quot;) ; sh:select Literal(&quot;
           prefix rdf:     &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
@@ -730,46 +787,46 @@
   	Message: Lines topologies must reference points within current graph closure.
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoLinesReferencePoints: &lt;file:///github/workspace/313&gt;/geojson:topology,&lt;file:///github/workspace/845&gt;/geojson:topology,&lt;file:///github/workspace/314&gt;/geojson:topology,&lt;file:///github/workspace/843&gt;/geojson:topology,&lt;file:///github/workspace/298&gt;/geojson:topology,&lt;file:///github/workspace/840&gt;/geojson:topology,&lt;file:///github/workspace/841&gt;/geojson:topology,&lt;file:///github/workspace/309&gt;/geojson:topology,&lt;file:///github/workspace/312&gt;/geojson:topology,&lt;file:///github/workspace/844&gt;/geojson:topology,&lt;file:///github/workspace/311&gt;/geojson:topology
- - Shape topo:testTopoReferencesExist: &lt;file:///github/workspace/842&gt;/geojson:topology,&lt;file:///github/workspace/313&gt;/geojson:topology,&lt;file:///github/workspace/845&gt;/geojson:topology,&lt;file:///github/workspace/314&gt;/geojson:topology,&lt;file:///github/workspace/843&gt;/geojson:topology,&lt;file:///github/workspace/298&gt;/geojson:topology,&lt;file:///github/workspace/840&gt;/geojson:topology,&lt;file:///github/workspace/841&gt;/geojson:topology,&lt;file:///github/workspace/138&gt;/geojson:topology,&lt;file:///github/workspace/309&gt;/geojson:topology,&lt;file:///github/workspace/312&gt;/geojson:topology,&lt;file:///github/workspace/844&gt;/geojson:topology,&lt;file:///github/workspace/311&gt;/geojson:topology
+ - Shape topo:testTopoLinesReferencePoints: &lt;file:///github/workspace/298&gt;/geojson:topology,&lt;file:///github/workspace/841&gt;/geojson:topology,&lt;file:///github/workspace/843&gt;/geojson:topology,&lt;file:///github/workspace/312&gt;/geojson:topology,&lt;file:///github/workspace/314&gt;/geojson:topology,&lt;file:///github/workspace/845&gt;/geojson:topology,&lt;file:///github/workspace/840&gt;/geojson:topology,&lt;file:///github/workspace/309&gt;/geojson:topology,&lt;file:///github/workspace/844&gt;/geojson:topology,&lt;file:///github/workspace/313&gt;/geojson:topology,&lt;file:///github/workspace/311&gt;/geojson:topology
+ - Shape topo:testTopoReferencesExist: &lt;file:///github/workspace/298&gt;/geojson:topology,&lt;file:///github/workspace/841&gt;/geojson:topology,&lt;file:///github/workspace/843&gt;/geojson:topology,&lt;file:///github/workspace/312&gt;/geojson:topology,&lt;file:///github/workspace/314&gt;/geojson:topology,&lt;file:///github/workspace/845&gt;/geojson:topology,&lt;file:///github/workspace/840&gt;/geojson:topology,&lt;file:///github/workspace/309&gt;/geojson:topology,&lt;file:///github/workspace/842&gt;/geojson:topology,&lt;file:///github/workspace/844&gt;/geojson:topology,&lt;file:///github/workspace/313&gt;/geojson:topology,&lt;file:///github/workspace/311&gt;/geojson:topology,&lt;file:///github/workspace/138&gt;/geojson:topology
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n7b934bb31fcd4a6696d1bc514a144e27b1: &lt;file:///github/workspace/184&gt;/dct:spatial,&lt;file:///github/workspace/198&gt;/dct:spatial,&lt;file:///github/workspace/196&gt;/dct:spatial,&lt;file:///github/workspace/190&gt;/dct:spatial,&lt;file:///github/workspace/189&gt;/dct:spatial,&lt;file:///github/workspace/197&gt;/dct:spatial
- - Shape _:n7b934bb31fcd4a6696d1bc514a144e27b3: *none*
+ - Shape _:n0012edf1c4264847b17c4ec24f06428bb3: *none*
+ - Shape _:n0012edf1c4264847b17c4ec24f06428bb1: &lt;file:///github/workspace/189&gt;/dct:spatial,&lt;file:///github/workspace/197&gt;/dct:spatial,&lt;file:///github/workspace/190&gt;/dct:spatial,&lt;file:///github/workspace/198&gt;/dct:spatial,&lt;file:///github/workspace/196&gt;/dct:spatial,&lt;file:///github/workspace/184&gt;/dct:spatial
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/312&gt;,&lt;file:///github/workspace/138&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/313&gt;,&lt;file:///github/workspace/196&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/845&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/840&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/311&gt;,&lt;file:///github/workspace/198&gt;,&lt;file:///github/workspace/841&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/842&gt;,&lt;file:///github/workspace/309&gt;,&lt;file:///github/workspace/197&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/189&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/844&gt;,&lt;file:///github/workspace/843&gt;,&lt;file:///github/workspace/184&gt;,&lt;file:///github/workspace/314&gt;,&lt;file:///github/workspace/298&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/190&gt;
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/845&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/196&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/844&gt;,&lt;file:///github/workspace/842&gt;,&lt;file:///github/workspace/197&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/198&gt;,&lt;file:///github/workspace/189&gt;,&lt;file:///github/workspace/840&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/843&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/298&gt;,&lt;file:///github/workspace/841&gt;,&lt;file:///github/workspace/138&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/184&gt;,&lt;file:///github/workspace/312&gt;,&lt;file:///github/workspace/190&gt;,&lt;file:///github/workspace/314&gt;,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;file:///github/workspace/309&gt;,&lt;file:///github/workspace/313&gt;,&lt;file:///github/workspace/311&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureCollectionShape: &lt;file:///github/workspace/BoundaryMark&gt;,&lt;file:///github/workspace/PrimaryParcels&gt;,&lt;file:///github/workspace/observedVectors&gt;,&lt;file:///github/workspace/SubtendedAngle&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: &lt;file:///github/workspace/BoundaryMark&gt;,&lt;file:///github/workspace/PrimaryParcels&gt;,&lt;file:///github/workspace/SubtendedAngle&gt;,&lt;file:///github/workspace/observedVectors&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:nccf6c3b377bd4765af266c2ab0a00e10b1: *none*
+ - Shape _:n1de6349401124835b15f7170b24edaabb1: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl text-danger">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
   Validation Report
@@ -801,88 +858,7 @@
               BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
           }
       &quot;) ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nfdd4a2735762459ba9d1dc895bddfbb5: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
-  	Focus Node: &lt;vectorobservation:computed&gt;
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest &lt;file:///github/workspace/843&gt; ; sosa:hasResult [ ] ; sosa:resultTime Literal(&quot;2011-05-22T00:00:00&quot;) ]
-  	Result Path: sosa:resultTime
-  	Source Constraint: [ sh:select Literal(&quot;
-          PREFIX sosa: &lt;http://www.w3.org/ns/sosa/&gt;
-          PREFIX geojson: &lt;https://purl.org/geojson/vocab#&gt;
-          PREFIX time: &lt;http://www.w3.org/2006/time#&gt;
-          SELECT $this ?path (?member AS ?value) ?failedValue WHERE {
-              $this (sosa:hasMember|^sosa:memberOf)+ ?member ;
-                  ?path ?collectionValue .
-              ?member ?path ?memberValue .
-              FILTER(?path in ( sosa:resultTime, sosa:phenomenonTime, sosa:hasResult, sosa:hasSimpleResult,
-                  sosa:hasFeatureOfInterest, sosa:hasUltimateFeatureOfInterest, sosa:observedProperty, sosa:madeBySystem,
-                  sosa:usedProcedure, sosa:madeBySensor, sosa:madeBySampler, sosa:isSampleOf, sosa:madeByActuator,
-                  sosa:actsOn, sosa:actsOnProperty, sosa:hasInputValue, sosa:observationRelatedTo,
-                  sosa:relatedObservation, sosa:resultQuality, sosa:isOriginalSampleOf, sosa:isResultOfMadeBySampler,
-                  sosa:isResultOfUsedProcedure ))
-              FILTER((isLiteral(?collectionValue) || isIRI(?collectionValue)) &amp;&amp; ?collectionValue != ?memberValue)
-              FILTER NOT EXISTS { $this ?path ?memberValue }
-              FILTER NOT EXISTS { ?collectionValue a time:Interval }
-              BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
-          }
-      &quot;) ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N964b9c241f9e4ad59882d50bf3732ec9: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
-  	Focus Node: &lt;vectorobservation:computed&gt;
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest &lt;file:///github/workspace/845&gt; ; sosa:hasResult [ ] ; sosa:resultTime Literal(&quot;2011-05-22T00:00:00&quot;) ]
-  	Result Path: sosa:resultTime
-  	Source Constraint: [ sh:select Literal(&quot;
-          PREFIX sosa: &lt;http://www.w3.org/ns/sosa/&gt;
-          PREFIX geojson: &lt;https://purl.org/geojson/vocab#&gt;
-          PREFIX time: &lt;http://www.w3.org/2006/time#&gt;
-          SELECT $this ?path (?member AS ?value) ?failedValue WHERE {
-              $this (sosa:hasMember|^sosa:memberOf)+ ?member ;
-                  ?path ?collectionValue .
-              ?member ?path ?memberValue .
-              FILTER(?path in ( sosa:resultTime, sosa:phenomenonTime, sosa:hasResult, sosa:hasSimpleResult,
-                  sosa:hasFeatureOfInterest, sosa:hasUltimateFeatureOfInterest, sosa:observedProperty, sosa:madeBySystem,
-                  sosa:usedProcedure, sosa:madeBySensor, sosa:madeBySampler, sosa:isSampleOf, sosa:madeByActuator,
-                  sosa:actsOn, sosa:actsOnProperty, sosa:hasInputValue, sosa:observationRelatedTo,
-                  sosa:relatedObservation, sosa:resultQuality, sosa:isOriginalSampleOf, sosa:isResultOfMadeBySampler,
-                  sosa:isResultOfUsedProcedure ))
-              FILTER((isLiteral(?collectionValue) || isIRI(?collectionValue)) &amp;&amp; ?collectionValue != ?memberValue)
-              FILTER NOT EXISTS { $this ?path ?memberValue }
-              FILTER NOT EXISTS { ?collectionValue a time:Interval }
-              BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
-          }
-      &quot;) ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N1e8c1fcde3d443d9bc230462da56d99f: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
-  	Focus Node: &lt;vectorobservation:computed&gt;
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest &lt;file:///github/workspace/840&gt; ; sosa:hasResult [ ] ; sosa:resultTime Literal(&quot;2011-05-22T00:00:00&quot;) ]
-  	Result Path: sosa:resultTime
-  	Source Constraint: [ sh:select Literal(&quot;
-          PREFIX sosa: &lt;http://www.w3.org/ns/sosa/&gt;
-          PREFIX geojson: &lt;https://purl.org/geojson/vocab#&gt;
-          PREFIX time: &lt;http://www.w3.org/2006/time#&gt;
-          SELECT $this ?path (?member AS ?value) ?failedValue WHERE {
-              $this (sosa:hasMember|^sosa:memberOf)+ ?member ;
-                  ?path ?collectionValue .
-              ?member ?path ?memberValue .
-              FILTER(?path in ( sosa:resultTime, sosa:phenomenonTime, sosa:hasResult, sosa:hasSimpleResult,
-                  sosa:hasFeatureOfInterest, sosa:hasUltimateFeatureOfInterest, sosa:observedProperty, sosa:madeBySystem,
-                  sosa:usedProcedure, sosa:madeBySensor, sosa:madeBySampler, sosa:isSampleOf, sosa:madeByActuator,
-                  sosa:actsOn, sosa:actsOnProperty, sosa:hasInputValue, sosa:observationRelatedTo,
-                  sosa:relatedObservation, sosa:resultQuality, sosa:isOriginalSampleOf, sosa:isResultOfMadeBySampler,
-                  sosa:isResultOfUsedProcedure ))
-              FILTER((isLiteral(?collectionValue) || isIRI(?collectionValue)) &amp;&amp; ?collectionValue != ?memberValue)
-              FILTER NOT EXISTS { $this ?path ?memberValue }
-              FILTER NOT EXISTS { ?collectionValue a time:Interval }
-              BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
-          }
-      &quot;) ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N6fbcb21249b04820ae3e947d5895c287: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N3d39a532236d472f9599c93dc5afed00: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
@@ -909,7 +885,34 @@
               BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
           }
       &quot;) ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Ndf70ee157ab6415b9952e4b1cffb1381: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Ne83523e2e6b44e4aa707674fcde99cd2: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
+  	Focus Node: &lt;vectorobservation:computed&gt;
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest &lt;file:///github/workspace/845&gt; ; sosa:hasResult [ ] ; sosa:resultTime Literal(&quot;2011-05-22T00:00:00&quot;) ]
+  	Result Path: sosa:resultTime
+  	Source Constraint: [ sh:select Literal(&quot;
+          PREFIX sosa: &lt;http://www.w3.org/ns/sosa/&gt;
+          PREFIX geojson: &lt;https://purl.org/geojson/vocab#&gt;
+          PREFIX time: &lt;http://www.w3.org/2006/time#&gt;
+          SELECT $this ?path (?member AS ?value) ?failedValue WHERE {
+              $this (sosa:hasMember|^sosa:memberOf)+ ?member ;
+                  ?path ?collectionValue .
+              ?member ?path ?memberValue .
+              FILTER(?path in ( sosa:resultTime, sosa:phenomenonTime, sosa:hasResult, sosa:hasSimpleResult,
+                  sosa:hasFeatureOfInterest, sosa:hasUltimateFeatureOfInterest, sosa:observedProperty, sosa:madeBySystem,
+                  sosa:usedProcedure, sosa:madeBySensor, sosa:madeBySampler, sosa:isSampleOf, sosa:madeByActuator,
+                  sosa:actsOn, sosa:actsOnProperty, sosa:hasInputValue, sosa:observationRelatedTo,
+                  sosa:relatedObservation, sosa:resultQuality, sosa:isOriginalSampleOf, sosa:isResultOfMadeBySampler,
+                  sosa:isResultOfUsedProcedure ))
+              FILTER((isLiteral(?collectionValue) || isIRI(?collectionValue)) &amp;&amp; ?collectionValue != ?memberValue)
+              FILTER NOT EXISTS { $this ?path ?memberValue }
+              FILTER NOT EXISTS { ?collectionValue a time:Interval }
+              BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
+          }
+      &quot;) ]
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N59c453a69c0a4050856179e12fdc6eeb: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
@@ -936,18 +939,72 @@
               BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
           }
       &quot;) ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N77306bab272a4e5eb1735f1a8adcb6da: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N5f061e129d8c430fa66e7986bf67522e: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
+  	Focus Node: &lt;vectorobservation:computed&gt;
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest &lt;file:///github/workspace/840&gt; ; sosa:hasResult [ ] ; sosa:resultTime Literal(&quot;2011-05-22T00:00:00&quot;) ]
+  	Result Path: sosa:resultTime
+  	Source Constraint: [ sh:select Literal(&quot;
+          PREFIX sosa: &lt;http://www.w3.org/ns/sosa/&gt;
+          PREFIX geojson: &lt;https://purl.org/geojson/vocab#&gt;
+          PREFIX time: &lt;http://www.w3.org/2006/time#&gt;
+          SELECT $this ?path (?member AS ?value) ?failedValue WHERE {
+              $this (sosa:hasMember|^sosa:memberOf)+ ?member ;
+                  ?path ?collectionValue .
+              ?member ?path ?memberValue .
+              FILTER(?path in ( sosa:resultTime, sosa:phenomenonTime, sosa:hasResult, sosa:hasSimpleResult,
+                  sosa:hasFeatureOfInterest, sosa:hasUltimateFeatureOfInterest, sosa:observedProperty, sosa:madeBySystem,
+                  sosa:usedProcedure, sosa:madeBySensor, sosa:madeBySampler, sosa:isSampleOf, sosa:madeByActuator,
+                  sosa:actsOn, sosa:actsOnProperty, sosa:hasInputValue, sosa:observationRelatedTo,
+                  sosa:relatedObservation, sosa:resultQuality, sosa:isOriginalSampleOf, sosa:isResultOfMadeBySampler,
+                  sosa:isResultOfUsedProcedure ))
+              FILTER((isLiteral(?collectionValue) || isIRI(?collectionValue)) &amp;&amp; ?collectionValue != ?memberValue)
+              FILTER NOT EXISTS { $this ?path ?memberValue }
+              FILTER NOT EXISTS { ?collectionValue a time:Interval }
+              BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
+          }
+      &quot;) ]
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nacecca851be347f59c6ddb1ccc23b0a1: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;
+  	Focus Node: &lt;vectorobservation:computed&gt;
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest &lt;file:///github/workspace/843&gt; ; sosa:hasResult [ ] ; sosa:resultTime Literal(&quot;2011-05-22T00:00:00&quot;) ]
+  	Result Path: sosa:resultTime
+  	Source Constraint: [ sh:select Literal(&quot;
+          PREFIX sosa: &lt;http://www.w3.org/ns/sosa/&gt;
+          PREFIX geojson: &lt;https://purl.org/geojson/vocab#&gt;
+          PREFIX time: &lt;http://www.w3.org/2006/time#&gt;
+          SELECT $this ?path (?member AS ?value) ?failedValue WHERE {
+              $this (sosa:hasMember|^sosa:memberOf)+ ?member ;
+                  ?path ?collectionValue .
+              ?member ?path ?memberValue .
+              FILTER(?path in ( sosa:resultTime, sosa:phenomenonTime, sosa:hasResult, sosa:hasSimpleResult,
+                  sosa:hasFeatureOfInterest, sosa:hasUltimateFeatureOfInterest, sosa:observedProperty, sosa:madeBySystem,
+                  sosa:usedProcedure, sosa:madeBySensor, sosa:madeBySampler, sosa:isSampleOf, sosa:madeByActuator,
+                  sosa:actsOn, sosa:actsOnProperty, sosa:hasInputValue, sosa:observationRelatedTo,
+                  sosa:relatedObservation, sosa:resultQuality, sosa:isOriginalSampleOf, sosa:isResultOfMadeBySampler,
+                  sosa:isResultOfUsedProcedure ))
+              FILTER((isLiteral(?collectionValue) || isIRI(?collectionValue)) &amp;&amp; ?collectionValue != ?memberValue)
+              FILTER NOT EXISTS { $this ?path ?memberValue }
+              FILTER NOT EXISTS { ?collectionValue a time:Interval }
+              BIND(CONCAT(STR(?memberValue), &quot; != &quot;, STR(?collectionValue)) as ?failedValue)
+          }
+      &quot;) ]
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nc2c968b745ed4eeb883f4a331d52e73e: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: &lt;vectorobservation:computed&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: &lt;vectorobservation:computed&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: &lt;vectorobservation:computed&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: &lt;vectorobservation:computed&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember,&lt;vectorobservation:computed&gt;/sosa:hasMember
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: &lt;vectorobservation:computed&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -964,8 +1021,8 @@
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-6"
-                                                            aria-expanded="false" aria-controls="uid-6"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-7"
+                                                            aria-expanded="false" aria-controls="uid-7"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -977,7 +1034,7 @@
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
                                                 </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-6">
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-7">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
                                                                     <div class="font-monospace entry-message section-files ">Using prov.json from test resources</div>
@@ -1017,47 +1074,17 @@
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for profiles/wa-pointnames-shacl.ttl:
  - Shape wap:testLabelPartsPresent: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor: *none*
- - Shape :bindSurveyObservation-angle-and-distance-types: *none*
- - Shape :annotate-madeBySensor: *none*
- - Shape :testInCollectionOrMember-procedure: *none*
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
- - Shape :referencedCSDs-present: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-form: *none*
- - Shape jcl:testBoundVocab-vector-purpose: *none*
- - Shape jcl:testBoundVocab-condition: *none*
- - Shape jcl:testBoundVocab-surveypoint-purpose: *none*
- - Shape jcl:testBoundVocab-state: *none*
- - Shape jcl:testBoundVocab-pt-quality-class: *none*
-</div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testAngleType: *none*
- - Shape :testVHD: *none*
  - Shape :testCRS: &lt;file:///github/workspace/DP_422532&gt;
  - Shape :testDistanceType: *none*
+ - Shape :testAngleType: *none*
  - Shape :testSurveyMetadata: &lt;file:///github/workspace/DP_422532&gt;
  - Shape :testCompoundCRS: *none*
+ - Shape :testVHD: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
@@ -1067,32 +1094,35 @@
  - Shape jcl:testBoundVocab-parcelType: *none*
  - Shape jcl:testBoundVocab-parcelInterest: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
- - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: *none*
+ - Shape :testInCollectionOrMember-procedure: *none*
+ - Shape :annotate-madeBySensor: *none*
+ - Shape :bindSurveyObservation-angle-and-distance-types: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :ParcelQualityClass: *none*
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :ParcelState: *none*
- - Shape :ParcelType: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :Parcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :Apellation: *none*
- - Shape :LandInterest: *none*
- - Shape :EstateParcel: *none*
- - Shape :PropertyUnit: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-form: *none*
+ - Shape jcl:testBoundVocab-state: *none*
+ - Shape jcl:testBoundVocab-condition: *none*
+ - Shape jcl:testBoundVocab-vector-purpose: *none*
+ - Shape jcl:testBoundVocab-pt-quality-class: *none*
+ - Shape jcl:testBoundVocab-surveypoint-purpose: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+ - Shape :referencedCSDs-present: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -1100,6 +1130,33 @@
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
  - Shape :testFOIexists: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :EstateParcel: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelType: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelState: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :ParcelQualityClass: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD-seeAlso: *none*
+ - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+ - Shape container:CSD: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
@@ -1114,53 +1171,53 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n7b934bb31fcd4a6696d1bc514a144e27b1: *none*
- - Shape _:n7b934bb31fcd4a6696d1bc514a144e27b3: *none*
+ - Shape _:n0012edf1c4264847b17c4ec24f06428bb3: *none*
+ - Shape _:n0012edf1c4264847b17c4ec24f06428bb1: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape: *none*
  - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:FeatureShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:FeatureCollectionShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:nccf6c3b377bd4765af266c2ab0a00e10b1: *none*
+ - Shape _:n1de6349401124835b15f7170b24edaabb1: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -1177,8 +1234,8 @@
                                             <div class="card-body">
                                                 <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-7"
-                                                            aria-expanded="false" aria-controls="uid-7"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-8"
+                                                            aria-expanded="false" aria-controls="uid-8"
                                                             style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                                                         <i class="bi bi-caret-right-fill caret"></i>
                                                         Details
@@ -1186,244 +1243,6 @@
                                                     <a href="profiles/wa/wa-core/example.json" target="_blank">example.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
                                                     <a class="anchor" href="#item-icsm.profiles.wa.wa-core-3">¶</a>
-                                                    <div class="float-end">
-                                                            <span class="badge text-bg-success me-2">Passed</span>
-                                                    </div>
-                                                </div>
-                                                <div class="card-text mt-2 validation-text collapse" id="uid-7">
-                                                    <div class="validation-text-inner">
-                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using examples/example.json from examples</div>
-                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example.jsonld created</div>
-                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example.ttl created</div>
-                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
-                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
-                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Using building block SHACL closures:
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for profiles/wa-pointnames-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for profiles/wa-pointnames-shacl.ttl:
- - Shape wap:testLabelPartsPresent: &lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
- - Shape :bindSurveyObservation-angle-and-distance-types: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape :annotate-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape :testInCollectionOrMember-procedure: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
- - Shape :referencedCSDs-present: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-form: &lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-vector-purpose: &lt;https://www.wa-example.com/features/observedVectors&gt;
- - Shape jcl:testBoundVocab-condition: &lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-surveypoint-purpose: &lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/15432571&gt;
- - Shape jcl:testBoundVocab-state: &lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-pt-quality-class: &lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/15432571&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testAngleType: *none*
- - Shape :testVHD: *none*
- - Shape :testCRS: &lt;https://www.wa-example.com/features/Western-Australia-Example-1&gt;
- - Shape :testDistanceType: *none*
- - Shape :testSurveyMetadata: &lt;https://www.wa-example.com/features/Western-Australia-Example-1&gt;
- - Shape :testCompoundCRS: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-parcelType: *none*
- - Shape jcl:testBoundVocab-parcelInterest: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
- - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :ParcelQualityClass: *none*
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :ParcelState: *none*
- - Shape :ParcelType: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :Parcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :Apellation: *none*
- - Shape :LandInterest: *none*
- - Shape :EstateParcel: *none*
- - Shape :PropertyUnit: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
- - Shape :testFOIexists: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape topo:testTopoLinesReferencePoints: &lt;https://www.wa-example.com/features/17251502&gt;/geojson:topology,&lt;https://www.wa-example.com/features/17251503&gt;/geojson:topology
- - Shape topo:testTopoReferencesExist: &lt;https://www.wa-example.com/features/17251502&gt;/geojson:topology,&lt;https://www.wa-example.com/features/17251503&gt;/geojson:topology
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n7b934bb31fcd4a6696d1bc514a144e27b1: &lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/15432571&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/dcterms:spatial
- - Shape _:n7b934bb31fcd4a6696d1bc514a144e27b3: &lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: &lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/17251503&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/17251502&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureCollectionShape: &lt;https://www.wa-example.com/features/WAMarks&gt;,&lt;https://www.wa-example.com/features/observedVectors&gt;
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:nccf6c3b377bd4765af266c2ab0a00e10b1: &lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
- - Shape :testRequiredProperties: &lt;https://www.wa-example.com/features/vectorObservations&gt;
-</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item bblock-report" data-bblock-id="icsm.profiles.wa.wa-mining" id="bblock-icsm.profiles.wa.wa-mining">
-                            <h2 class="accordion-header bblock-title anchor-container">
-                                <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#bblock-collapse-icsm\.profiles\.wa\.wa-mining">
-                                    <div class="flex-fill">
-                                        WA Next Gen Cadastre Mining Profile
-                                        <small class="ms-2 bblock-id">icsm.profiles.wa.wa-mining</small>
-                                        <a class="anchor" href="#bblock-icsm.profiles.wa.wa-mining">¶</a>
-                                    </div>
-
-                                    <span class="badge text-bg-success me-2">
-                                            Passed
-                                            (100% passed)
-                                    </span>
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-icsm.profiles.wa.wa-mining">
-                                <div class="accordion-body">
-                                        <p class="summary fw-semibold text-success">
-                                            Test passed: 1 / 1
-                                        </p>
-                                        <div class="card mb-2 validation-item " id="item-icsm.profiles.wa.wa-mining-1">
-                                            <div class="card-body">
-                                                <div class="card-title mb-0 anchor-container">
-                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
-                                                            data-bs-toggle="collapse" data-bs-target="#uid-8"
-                                                            aria-expanded="false" aria-controls="uid-8"
-                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                                        <i class="bi bi-caret-right-fill caret"></i>
-                                                        Details
-                                                    </button>
-                                                    <a href="profiles/wa/wa-mining/example.json" target="_blank">example.json</a>
-                                                    <span class="badge bg-secondary example">Example</span>
-                                                    <a class="anchor" href="#item-icsm.profiles.wa.wa-mining-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -1466,49 +1285,19 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for profiles/wa-pointnames-shacl.ttl:
- - Shape wap:testLabelPartsPresent: &lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
- - Shape :bindSurveyObservation-angle-and-distance-types: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape :annotate-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape :testInCollectionOrMember-procedure: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
- - Shape :referencedCSDs-present: *none*
-</div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: True
-  </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-form: &lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-vector-purpose: &lt;https://www.wa-example.com/features/observedVectors&gt;
- - Shape jcl:testBoundVocab-condition: &lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-surveypoint-purpose: &lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/15432571&gt;
- - Shape jcl:testBoundVocab-state: &lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy
- - Shape jcl:testBoundVocab-pt-quality-class: &lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/15432571&gt;
+ - Shape wap:testLabelPartsPresent: &lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testAngleType: *none*
- - Shape :testVHD: *none*
  - Shape :testCRS: &lt;https://www.wa-example.com/features/Western-Australia-Example-1&gt;
  - Shape :testDistanceType: *none*
+ - Shape :testAngleType: *none*
  - Shape :testSurveyMetadata: &lt;https://www.wa-example.com/features/Western-Australia-Example-1&gt;
  - Shape :testCompoundCRS: *none*
+ - Shape :testVHD: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
@@ -1518,32 +1307,35 @@
  - Shape jcl:testBoundVocab-parcelType: *none*
  - Shape jcl:testBoundVocab-parcelInterest: *none*
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
- - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
+ - Shape :testInCollectionOrMember-procedure: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape :annotate-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape :bindSurveyObservation-angle-and-distance-types: &lt;https://www.wa-example.com/features/vectorObservations&gt;
 </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   </div>
-                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :ParcelQualityClass: *none*
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :ParcelState: *none*
- - Shape :ParcelType: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :Parcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :Apellation: *none*
- - Shape :LandInterest: *none*
- - Shape :EstateParcel: *none*
- - Shape :PropertyUnit: *none*
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-form: &lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-state: &lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: &lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-vector-purpose: &lt;https://www.wa-example.com/features/observedVectors&gt;
+ - Shape jcl:testBoundVocab-pt-quality-class: &lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/14005400&gt;
+ - Shape jcl:testBoundVocab-surveypoint-purpose: &lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/14005400&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+ - Shape :referencedCSDs-present: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -1551,6 +1343,271 @@
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
  - Shape :testFOIexists: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :EstateParcel: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelType: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelState: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :ParcelQualityClass: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD-seeAlso: *none*
+ - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+ - Shape container:CSD: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+ - Shape topo:testTopoLinesReferencePoints: &lt;https://www.wa-example.com/features/17251502&gt;/geojson:topology,&lt;https://www.wa-example.com/features/17251503&gt;/geojson:topology
+ - Shape topo:testTopoReferencesExist: &lt;https://www.wa-example.com/features/17251502&gt;/geojson:topology,&lt;https://www.wa-example.com/features/17251503&gt;/geojson:topology
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n0012edf1c4264847b17c4ec24f06428bb3: &lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry
+ - Shape _:n0012edf1c4264847b17c4ec24f06428bb1: &lt;https://www.wa-example.com/features/14005400&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/15432571&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/dcterms:spatial
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/17251503&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/17251502&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: &lt;https://www.wa-example.com/features/observedVectors&gt;,&lt;https://www.wa-example.com/features/WAMarks&gt;
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:n1de6349401124835b15f7170b24edaabb1: &lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
+ - Shape :testRequiredProperties: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bblock-report" data-bblock-id="icsm.profiles.wa.wa-mining" id="bblock-icsm.profiles.wa.wa-mining">
+                            <h2 class="accordion-header bblock-title anchor-container">
+                                <button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#bblock-collapse-icsm\.profiles\.wa\.wa-mining">
+                                    <div class="flex-fill">
+                                        WA Next Gen Cadastre Mining Profile
+                                        <small class="ms-2 bblock-id">icsm.profiles.wa.wa-mining</small>
+                                        <a class="anchor" href="#bblock-icsm.profiles.wa.wa-mining">¶</a>
+                                    </div>
+
+                                    <span class="badge text-bg-success me-2">
+                                            Passed
+                                            (100% passed)
+                                    </span>
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse " id="bblock-collapse-icsm.profiles.wa.wa-mining">
+                                <div class="accordion-body">
+                                        <p class="summary fw-semibold text-success">
+                                            Test passed: 1 / 1
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-icsm.profiles.wa.wa-mining-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-9"
+                                                            aria-expanded="false" aria-controls="uid-9"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="profiles/wa/wa-mining/example.json" target="_blank">example.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-icsm.profiles.wa.wa-mining-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-success me-2">Passed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-9">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/example.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
+                                                                    <div class="font-monospace subsection-title mt-2">SHACL</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Using building block SHACL closures:
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for profiles/wa-pointnames-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for profiles/wa-pointnames-shacl.ttl:
+ - Shape wap:testLabelPartsPresent: &lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+ - Shape :testCRS: &lt;https://www.wa-example.com/features/Western-Australia-Example-1&gt;
+ - Shape :testDistanceType: *none*
+ - Shape :testAngleType: *none*
+ - Shape :testSurveyMetadata: &lt;https://www.wa-example.com/features/Western-Australia-Example-1&gt;
+ - Shape :testCompoundCRS: *none*
+ - Shape :testVHD: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-parcelType: *none*
+ - Shape jcl:testBoundVocab-parcelInterest: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
+ - Shape :testInCollectionOrMember-procedure: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape :annotate-madeBySensor: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape :bindSurveyObservation-angle-and-distance-types: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-form: &lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-state: &lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: &lt;https://www.wa-example.com/features/14005401&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005400&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/15432571&gt;/surv:monumentedBy,&lt;https://www.wa-example.com/features/14005391&gt;/surv:monumentedBy
+ - Shape jcl:testBoundVocab-vector-purpose: &lt;https://www.wa-example.com/features/observedVectors&gt;
+ - Shape jcl:testBoundVocab-pt-quality-class: &lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/14005400&gt;
+ - Shape jcl:testBoundVocab-surveypoint-purpose: &lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/14005400&gt;
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
+ - Shape :referencedCSDs-present: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+ - Shape :testFOIexists: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :EstateParcel: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :ParcelType: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelState: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :ParcelQualityClass: *none*
+</div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  </div>
+                                                                    <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD-seeAlso: *none*
+ - Shape &lt;https://linked.data.gov.au/def/csdm/surveyprov/SurveyType&gt;: *none*
+ - Shape container:CSD: *none*
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
@@ -1565,53 +1622,53 @@
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n226686e6eb4e463ba7892d5289cc7c07b3: &lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry
- - Shape _:n226686e6eb4e463ba7892d5289cc7c07b1: &lt;https://www.wa-example.com/features/15432571&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005391&gt;/dcterms:spatial
+ - Shape _:nc68c53cf28144e9b8ad16274f5947e6cb3: &lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry
+ - Shape _:nc68c53cf28144e9b8ad16274f5947e6cb1: &lt;https://www.wa-example.com/features/14005400&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/15432571&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005400&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/15432571&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005401&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005391&gt;/geojson:geometry,&lt;https://www.wa-example.com/features/14005401&gt;/dcterms:spatial,&lt;https://www.wa-example.com/features/14005391&gt;/dcterms:spatial
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureShape: &lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/17251503&gt;,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember,&lt;https://www.wa-example.com/features/17251502&gt;,&lt;https://www.wa-example.com/features/14005400&gt;
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureShape: &lt;https://www.wa-example.com/features/14005391&gt;,&lt;https://www.wa-example.com/features/17251503&gt;,&lt;https://www.wa-example.com/features/14005400&gt;,&lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember,&lt;https://www.wa-example.com/features/14005401&gt;,&lt;https://www.wa-example.com/features/15432571&gt;,&lt;https://www.wa-example.com/features/17251502&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:GeometryShape: *none*
  - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: &lt;https://www.wa-example.com/features/observedVectors&gt;,&lt;https://www.wa-example.com/features/WAMarks&gt;
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureCollectionShape: &lt;https://www.wa-example.com/features/WAMarks&gt;,&lt;https://www.wa-example.com/features/observedVectors&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:ndb082aed4a314cdd9f079e96c1495c1ab1: &lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name
+ - Shape _:n49f8b5adf45e4ee9b44131da08e405b6b1: &lt;https://www.wa-example.com/features/14005401&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005391&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/15432571&gt;/commonpatterns:name,&lt;https://www.wa-example.com/features/14005400&gt;/commonpatterns:name
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
   Validation Report
   Conforms: True
   </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
  - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
- - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
- - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
- - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
  - Shape &lt;https://www.ogc.org/rules/sosa/#testRequiredTime&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResultNotEmptyNode&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testResult&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testObservedPropertyPresent&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;/sosa:hasMember
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testFeatureOfInterest&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testSimpleResultLiteral&gt;: *none*
+ - Shape &lt;https://www.ogc.org/rules/sosa/#testCollectionPropertyValues&gt;: &lt;https://www.wa-example.com/features/vectorObservations&gt;
 </div>
                                                                     <div class="font-monospace entry-message section-shacl ">Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report

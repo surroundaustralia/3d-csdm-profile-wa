@@ -63,12 +63,12 @@ Example appellation.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "Albany Town Lot 57" ;
-    dcterms:hasPart [ rdfs:label "57" ;
-            commonpatterns:namePartType "number" ],
+    dcterms:hasPart [ commonpatterns:namePartRef <wa-locality:albany> ;
+            commonpatterns:namePartType "crownAreaCode" ],
         [ rdfs:label "wa-parcel-purpose:townlot" ;
             commonpatterns:namePartType "crownAllocationType" ],
-        [ commonpatterns:namePartRef <wa-locality:albany> ;
-            commonpatterns:namePartType "crownAreaCode" ] .
+        [ rdfs:label "57" ;
+            commonpatterns:namePartType "number" ] .
 
 
 ```
@@ -85,6 +85,8 @@ allOf:
       allOf:
       - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
       - const: wa:CrownAllotmentAppellation
+  required:
+  - type
 
 ```
 

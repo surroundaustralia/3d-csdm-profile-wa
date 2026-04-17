@@ -1,14 +1,26 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-04-17T00:28:24.038748+00:00
+Generated 2026-04-17T00:28:24.033907+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
 === Files ===
-Using examples/strings.json from examples
+Using type-fail.json from test resources
 JSON-LD context is present - uplifting
-Output JSON-LD example_1_1.jsonld created
-Output Turtle example_1_1.ttl created
+Output JSON-LD type-fail.jsonld created
+Output Turtle type-fail.ttl created
 === End Files ===
 
 === JSON Schema ===
-Validation passed
+
+** Validation error **
+ValidationError: 'wa:MiscellaneousTenureAppellation' was expected
+
+Failed validating 'const' in schema['allOf'][1]['properties']['type']['allOf'][1]:
+    {'const': 'wa:MiscellaneousTenureAppellation'}
+
+On instance['type']:
+    'wa:notAMiscellaneousTenureAppellation'
 === End JSON Schema ===
 
 === SHACL ===

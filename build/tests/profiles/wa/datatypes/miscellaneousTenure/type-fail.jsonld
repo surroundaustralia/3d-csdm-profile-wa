@@ -1,0 +1,19 @@
+{
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/context.jsonld",
+  "type": "wa:notAMiscellaneousTenureAppellation",
+  "label": "L-3114-12345",
+  "hasPart": [
+    {
+      "type": "tenureClass",
+      "ref": "wa-parcel-type:l"
+    },
+    {
+      "type": "documentOrGrantReference",
+      "label": "3114"
+    },
+    {
+      "type": "legalDescriptor",
+      "label": "12345"
+    }
+  ]
+}

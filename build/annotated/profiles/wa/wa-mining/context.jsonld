@@ -166,18 +166,18 @@
     "CSD": "container:CSD",
     "locality": "csd:locality",
     "PrimaryParcel": {
-      "@id": "csdm:parcels/PrimaryParcel",
+      "@id": "parcel:PrimaryParcel",
       "@type": "@id"
     },
     "SecondaryParcel": {
-      "@id": "csdm:parcels/SecondaryParcel",
+      "@id": "parcel:SecondaryParcel",
       "@type": "@id"
     },
     "parcelQualityClass": {
-      "@id": "csdm:parcels/qualityClass",
+      "@id": "parcel:qualityClass",
       "@type": "@id"
     },
-    "terrainIntersectionCurve": "csdm:parcels/terrainIntersectionCurve",
+    "terrainIntersectionCurve": "parcel:terrainIntersectionCurve",
     "horizontalCRS": {
       "@id": "container:horizontalCRS",
       "@type": "@id"
@@ -459,69 +459,69 @@
                   "@id": "dct:hasPart"
                 }
               },
-              "@id": "csdm:parcels/appellation"
+              "@id": "parcel:appellation"
             },
             "parcelType": {
-              "@id": "csdm:parcels/type",
+              "@id": "parcel:type",
               "@type": "@id"
             },
             "parcelState": {
-              "@id": "csdm:parcels/state",
+              "@id": "parcel:state",
               "@type": "@id"
             },
             "address": "sdo:address",
             "parcelPurpose": {
-              "@id": "csdm:parcels/purpose",
+              "@id": "parcel:purpose",
               "@type": "@id"
             },
-            "area": "csdm:parcels/surfaceArea",
-            "floor": "csdm:parcels/floor",
-            "zmin": "csdm:parcels/zmin",
-            "zmax": "csdm:parcels/zmax",
+            "area": "parcel:surfaceArea",
+            "floor": "parcel:floor",
+            "zmin": "parcel:zmin",
+            "zmax": "parcel:zmax",
             "interests": {
               "@context": {
                 "interestLink": {
                   "@type": "@id",
-                  "@id": "csdm:parcels/interestLink"
+                  "@id": "parcel:interestLink"
                 },
-                "interestName": "csdm:parcels/interestName",
+                "interestName": "parcel:interestName",
                 "interestType": {
                   "@type": "@id",
-                  "@id": "csdm:parcels/interestType"
+                  "@id": "parcel:interestType"
                 },
-                "dateInForce": "csdm:parcels/interestDateInForce",
-                "dateExpires": "csdm:parcels/interestDateExpires",
+                "dateInForce": "parcel:interestDateInForce",
+                "dateExpires": "parcel:interestDateExpires",
                 "statuteLink": {
                   "@type": "@id",
-                  "@id": "csdm:parcels/statuteLink"
+                  "@id": "parcel:statuteLink"
                 },
-                "statuteName": "csdm:parcels/statuteName",
-                "benefitedPartyName": "csdm:parcels/benefitedPartyName",
+                "statuteName": "parcel:statuteName",
+                "benefitedPartyName": "parcel:benefitedPartyName",
                 "benefitedPartyLink": {
                   "@type": "@id",
-                  "@id": "csdm:parcels/benefitedPartyLink"
+                  "@id": "parcel:benefitedPartyLink"
                 },
                 "originalSurveyLink": {
                   "@type": "@id",
-                  "@id": "csdm:parcels/originalSurveyLink"
+                  "@id": "parcel:originalSurveyLink"
                 },
                 "referencedParcel": {
                   "@type": "@id",
-                  "@id": "csdm:parcels/referencedParcel"
+                  "@id": "parcel:referencedParcel"
                 },
                 "burdenedParcels": {
-                  "@id": "csdm:parcels/burdened",
+                  "@id": "parcel:burdened",
                   "@container": "@set"
                 },
                 "benefitedParcels": {
-                  "@id": "csdm:parcels/benefited",
+                  "@id": "parcel:benefited",
                   "@container": "@set"
                 },
-                "description": "csdm:parcels/interestDescription",
-                "entitlementPortion": "csdm:parcels/entitlementPortion",
-                "liabilityPortion": "csdm:parcels/liabilityPortion"
+                "description": "parcel:interestDescription",
+                "entitlementPortion": "parcel:entitlementPortion",
+                "liabilityPortion": "parcel:liabilityPortion"
               },
-              "@id": "csdm:parcels/interest",
+              "@id": "parcel:interest",
               "@container": "@set"
             }
           },
@@ -1435,6 +1435,7 @@
     "container": "csdm:container/",
     "sdo": "https://schema.org/",
     "csd": "csdm:csd/",
+    "parcel": "csdm:parcels/",
     "surv": "csdm:surveyfeatures/",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",

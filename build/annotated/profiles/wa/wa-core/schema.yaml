@@ -3,7 +3,7 @@ description: WA profile of Cadastral Survey Data Model
 allOf:
 - $ref: https://surroundaustralia.github.io/3d-csdm-profile-icsm/build/annotated/profiles/common/schema.yaml
 - properties:
-    parcel:
+    parcels:
       type: array
       items:
         properties:
