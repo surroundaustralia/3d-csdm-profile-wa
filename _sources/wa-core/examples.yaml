@@ -1,10 +1,13 @@
-- title: WA Observations
+- title: WA Parcel Example defined by Bearing & Distance
   content: |-
-    Minimal example - with combined elements from each test case
+    Contains a **single parcel**, Lot 213, plus **six SurveyMarks** that define the extent of the parcel, 
+    **6 vectorObservations** defining the six boundaries (Bearing & Distance), and **6 observedVectors** describing the 
+    six boundary line geometries.
 
+    ![WA Parcel Example defined by Bearing & Distance](https://icsm-au.github.io/3d-csdm-profiles/assets/wa-polygon-2-ex.png)
 
-  base-output-filename: example
+  base-output-filename: parcels
   snippets:
     - language: json
-      ref: examples/example.json
+      ref: examples/parcels.json
       base-uri: https://www.wa-example.com/features/

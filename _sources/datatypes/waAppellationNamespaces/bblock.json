@@ -1,7 +1,7 @@
 {
-  "name": "Parcel Appellation Options",
+  "name": "WA Ref Namespaces",
     "highlighted": true,
-  "abstract": "Parcel appellation shall be based on the Landgate parcel identifier model. Each parcel appellation shall be classified as Lot on Survey/Plan, Crown Allotment, or Miscellaneous. New parcels should normally use the Lot-on-Plan form, while legacy Crown Allotment and Miscellaneous identifiers shall remain supported where they are the authoritative legal description.",
+  "abstract": "Defines the namespaces for use in WA Compound Names",
   "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
   "itemClass": "schema",

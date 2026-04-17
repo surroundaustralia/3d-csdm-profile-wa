@@ -1,0 +1,14 @@
+{
+  "type": "wa:notAMiscellaneousTenureAppellation",
+  "label": "L-3114-12345",
+  "hasPart": [
+    {
+      "type": "tenureClass",
+      "ref": "wa-parcel-type:l"
+    },
+    {
+      "type": "legalDescriptor",
+      "label": "12345"
+    }
+  ]
+}

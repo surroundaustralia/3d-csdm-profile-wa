@@ -3,7 +3,7 @@
   "description": "Compound Name",
   "allOf": [
     {
-      "$ref": "bblocks://icsm.csdm.datatypes.compoundName"
+      "$ref": "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
     },
     {
       "properties": {

@@ -1,0 +1,106 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix ex: <http://example.com/> .
+@base <http://example.com/rules> .
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ex:      <https://example.org/shapes/> .
+
+
+# ---------------------------------------------------------------------------
+# Shape 1 – NamedObject
+#   Validates the top-level (compound-name) node.
+#   Requires at least one dcterms:hasPart blank-node for each of the three
+#   expected namePartType values.
+# ---------------------------------------------------------------------------
+
+ex:NamedObjectShape
+    a sh:NodeShape ;
+    sh:name "NamedObjectShape" ;
+    sh:description
+        "Every named object must carry hasPart nodes covering each required namePartType." ;
+
+    # --- legalDescriptor part must exist ---
+    sh:property [
+        sh:path [
+            sh:alternativePath (
+                [ sh:sequence ( dcterms:hasPart commonpatterns:namePartType ) ]
+            )
+        ] ;
+        sh:hasValue "legalDescriptor" ;
+        sh:minCount 1 ;
+        sh:message "Missing a dcterms:hasPart with namePartType 'legalDescriptor'." ;
+        sh:name "legalDescriptor part"
+    ] ;
+
+    # --- tenureClass part must exist ---
+    sh:property [
+        sh:path [
+            sh:alternativePath (
+                [ sh:sequence ( dcterms:hasPart commonpatterns:namePartType ) ]
+            )
+        ] ;
+        sh:hasValue "tenureClass" ;
+        sh:minCount 1 ;
+        sh:message "Missing a dcterms:hasPart with namePartType 'tenureClass'." ;
+        sh:name "tenureClass part"
+    ] ;
+
+    # --- documentOrGrantReference part must exist ---
+    sh:property [
+        sh:path [
+            sh:alternativePath (
+                [ sh:sequence ( dcterms:hasPart commonpatterns:namePartType ) ]
+            )
+        ] ;
+        sh:hasValue "documentOrGrantReference" ;
+        sh:minCount 1 ;
+        sh:message "Missing a dcterms:hasPart with namePartType 'documentOrGrantReference'." ;
+        sh:name "documentOrGrantReference part"
+    ] .
+
+
+# ---------------------------------------------------------------------------
+# Shape 2 – NamePartShape
+#   Validates every blank node that appears as a dcterms:hasPart value.
+#   Rules:
+#     • namePartType  – required (exactly 1), must be a plain string literal.
+#     • namePartRef   – optional, but if present MUST be an IRI (not a literal
+#                       or blank node).
+# ---------------------------------------------------------------------------
+
+ex:NamePartShape
+    a sh:NodeShape ;
+    sh:name "NamePartShape" ;
+    sh:description "Validates individual name-part nodes." ;
+
+    # Target every node that is the object of dcterms:hasPart
+    sh:targetObjectsOf dcterms:hasPart ;
+
+    # namePartType: required, exactly one, plain string literal
+    sh:property [
+        sh:path commonpatterns:namePartType ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Each name part must have exactly one namePartType, which must be a plain string literal." ;
+        sh:name "namePartType"
+    ] ;
+
+    # namePartRef: optional, but must be an IRI when present
+    sh:property [
+        sh:path commonpatterns:namePartRef ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "namePartRef must be an IRI (not a literal or blank node)." ;
+        sh:name "namePartRef"
+    ] .
+
