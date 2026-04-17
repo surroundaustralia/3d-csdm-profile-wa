@@ -29,8 +29,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.ogc-utils.iri-or-curie",
-    "icsm.csdm.datatypes.compoundName"
+    "icsm.csdm.datatypes.compoundName",
+    "ogc.ogc-utils.iri-or-curie"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml",
@@ -93,13 +93,13 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Lot 4 on Plan 1234\" ;\n    dcterms:hasPart [ rdfs:label \"1234\" ;\n            commonpatterns:namePartType \"surveyNumber\" ],\n        [ rdfs:label \"4\" ;\n            commonpatterns:namePartType \"lotNumber\" ],\n        [ commonpatterns:namePartRef <wa-survey-type:p> ;\n            commonpatterns:namePartType \"surveyType\" ],\n        [ commonpatterns:namePartRef <wa-parcel-purpose:lot> ;\n            commonpatterns:namePartType \"lotPrefix\" ] .\n\n",
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Lot 4 on Plan 1234\" ;\n    dcterms:hasPart [ rdfs:label \"1234\" ;\n            commonpatterns:namePartType \"surveyNumber\" ],\n        [ commonpatterns:namePartRef <wa-parcel-purpose:lot> ;\n            commonpatterns:namePartType \"lotPrefix\" ],\n        [ commonpatterns:namePartRef <wa-survey-type:p> ;\n            commonpatterns:namePartType \"surveyType\" ],\n        [ rdfs:label \"4\" ;\n            commonpatterns:namePartType \"lotNumber\" ] .\n\n",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/lotOnPlan/build/tests/profiles/wa/datatypes/lotOnPlan/example_1_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Compound Name\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml\n- properties:\n    type:\n      allOf:\n      - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n      - const: wa:LotOnPlanAppellation\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Compound Name\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml\n- properties:\n    type:\n      allOf:\n      - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n      - const: wa:LotOnPlanAppellation\n  required:\n  - type\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
   "gitPath": "_sources/datatypes/lotOnPlan"
 }

@@ -1,9 +1,9 @@
 @prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "L-3114-12345" ;
-    dcterms:hasPart [ rdfs:label "12345" ;
+    dct:hasPart [ rdfs:label "12345" ;
             commonpatterns:namePartType "legalDescriptor" ],
         [ rdfs:label "3114" ;
             commonpatterns:namePartType "documentOrGrantReference" ],

@@ -62,12 +62,12 @@ Example appellation.
 [] rdfs:label "Lot 4 on Plan 1234" ;
     dcterms:hasPart [ rdfs:label "1234" ;
             commonpatterns:namePartType "surveyNumber" ],
-        [ rdfs:label "4" ;
-            commonpatterns:namePartType "lotNumber" ],
+        [ commonpatterns:namePartRef <wa-parcel-purpose:lot> ;
+            commonpatterns:namePartType "lotPrefix" ],
         [ commonpatterns:namePartRef <wa-survey-type:p> ;
             commonpatterns:namePartType "surveyType" ],
-        [ commonpatterns:namePartRef <wa-parcel-purpose:lot> ;
-            commonpatterns:namePartType "lotPrefix" ] .
+        [ rdfs:label "4" ;
+            commonpatterns:namePartType "lotNumber" ] .
 
 
 ```
@@ -84,6 +84,8 @@ allOf:
       allOf:
       - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
       - const: wa:LotOnPlanAppellation
+  required:
+  - type
 
 ```
 

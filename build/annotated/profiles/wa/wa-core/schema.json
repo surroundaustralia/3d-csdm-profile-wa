@@ -7,7 +7,7 @@
     },
     {
       "properties": {
-        "parcel": {
+        "parcels": {
           "type": "array",
           "items": {
             "properties": {

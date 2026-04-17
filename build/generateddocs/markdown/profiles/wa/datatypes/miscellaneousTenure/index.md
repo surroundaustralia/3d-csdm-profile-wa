@@ -63,12 +63,12 @@ Example appellation.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "L-3114-12345" ;
-    dcterms:hasPart [ commonpatterns:namePartRef <wa-parcel-type:l> ;
-            commonpatterns:namePartType "tenureClass" ],
-        [ rdfs:label "12345" ;
+    dcterms:hasPart [ rdfs:label "12345" ;
             commonpatterns:namePartType "legalDescriptor" ],
         [ rdfs:label "3114" ;
-            commonpatterns:namePartType "documentOrGrantReference" ] .
+            commonpatterns:namePartType "documentOrGrantReference" ],
+        [ commonpatterns:namePartRef <wa-parcel-type:l> ;
+            commonpatterns:namePartType "tenureClass" ] .
 
 
 ```
@@ -85,6 +85,8 @@ allOf:
       allOf:
       - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
       - const: wa:MiscellaneousTenureAppellation
+  required:
+  - type
 
 ```
 

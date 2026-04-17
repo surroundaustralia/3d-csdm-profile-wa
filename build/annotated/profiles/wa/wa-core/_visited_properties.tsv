@@ -521,10 +521,6 @@ path	@id	schema
 /adoptedObservations		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /occupationObservations	https://linked.data.gov.au/def/csdm/container/occupationObservations	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /occupationFeatures	https://linked.data.gov.au/def/csdm/container/occupationFeatures	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcel		/github/workspace/build/annotated/profiles/wa/wa-core/schema.yaml
-/parcel/features		/github/workspace/build/annotated/profiles/wa/wa-core/schema.yaml
-/parcel/features/properties		/github/workspace/build/annotated/profiles/wa/wa-core/schema.yaml
-/parcel/features/properties/appellation		/github/workspace/build/annotated/profiles/wa/wa-core/schema.yaml
-/parcel/features/properties/appellation/_anyOf/0/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml
-/parcel/features/properties/appellation/_anyOf/1/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml
-/parcel/features/properties/appellation/_anyOf/2/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml
+/parcels/features/properties/appellation/_anyOf/0/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml
+/parcels/features/properties/appellation/_anyOf/1/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml
+/parcels/features/properties/appellation/_anyOf/2/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml

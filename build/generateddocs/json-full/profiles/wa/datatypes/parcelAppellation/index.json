@@ -30,8 +30,8 @@
   },
   "dependsOn": [
     "icsm.profiles.wa.datatypes.miscellaneousTenure",
-    "icsm.profiles.wa.datatypes.lotOnPlan",
-    "icsm.profiles.wa.datatypes.crownAllotment"
+    "icsm.profiles.wa.datatypes.crownAllotment",
+    "icsm.profiles.wa.datatypes.lotOnPlan"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.yaml",
@@ -43,7 +43,7 @@
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelAppellation/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Parcel Appellation Options\nanyOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml\n- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml\n- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Parcel Appellation Options\nallOf:\n- anyOf:\n  - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml\n  - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml\n  - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml\n- required:\n  - type\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
   "gitPath": "_sources/datatypes/parcelAppellation"
 }
