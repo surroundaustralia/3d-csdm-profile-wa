@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-04-17",
+  "dateOfLastChange": "2026-05-06",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -40,7 +40,6 @@
   "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/waAppellationNamespaces/context.jsonld",
   "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/waAppellationNamespaces/resolvedProperties.json",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/waAppellationNamespaces/",
-  "rdfData": [],
   "validationPassed": true,
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Parcel Appellation Options\n$ref: https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml\nx-jsonld-prefixes:\n  vocabs: https://linked.data.gov.au/def/csdm/\n  wa-surveypoint-purpose: https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/\n  wa-survey-purpose: https://linked.data.gov.au/def/csdm/wa-survey-purpose/\n  wa-survey-type: https://linked.data.gov.au/def/csdm/wa-survey-type/\n  wa-procedure-used: https://linked.data.gov.au/def/csdm/wa-procedure-used/\n  wa-survey-documentation-type: https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/\n  wa-annotation-role: https://linked.data.gov.au/def/csdm/wa-annotation/\n  wa-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-parcel-purpose/\n  wa-parcel-type: https://linked.data.gov.au/def/csdm/wa-parcel-type/\n  wa-parcel-state: https://linked.data.gov.au/def/csdm/wa-parcel-state/\n  wa-nonprimary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/\n  wa-monument-form: https://linked.data.gov.au/def/csdm/wa-monument-form/\n  wa-vector-purpose: https://linked.data.gov.au/def/csdm/wa-vector-purpose/\n  wa-vector-type: https://linked.data.gov.au/def/csdm/wa-vector-type/\n  wa-secondary-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose/\n  wa-secondary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/\n  wa-secondary-purpose: https://linked.data.gov.au/def/csdm/wa-secondary-purpose/\n  wa-interest-type: https://linked.data.gov.au/def/csdm/wa-interest-type/\n  wa-interest: https://linked.data.gov.au/def/csdm/wa-interest/\n  wa-locality: https://linked.data.gov.au/def/csdm/wa-locality/\n  wa-local-government: https://linked.data.gov.au/def/csdm/wa-local-government/\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
