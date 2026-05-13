@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation",
   "bblockName": "Miscellaneous Tenure Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.miscellaneousTenure",
-  "generated": "2026-05-06T09:09:28.829785+00:00",
+  "generated": "2026-05-13T23:38:22.034264+00:00",
   "result": true,
   "items": [
     {
@@ -83,18 +83,18 @@
             {
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "focusNodes": {
-                "ex:NamedObjectShape": {
-                  "nodes": []
-                },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:Na37287aff33848b583d7aace43a8be69",
-                    "_:Nca2ef4abf90546aba6b53ca4569fb4b0"
+                    "_:N5c05251ff5b544a79632f83fbcb86363",
+                    "_:N6be39e2118814dd9b9c966ce77e787f0"
                   ]
+                },
+                "ex:NamedObjectShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:Na37287aff33848b583d7aace43a8be69,_:Nca2ef4abf90546aba6b53ca4569fb4b0\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N5c05251ff5b544a79632f83fbcb86363,_:N6be39e2118814dd9b9c966ce77e787f0\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -106,12 +106,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n863f6b7bf3874339a63d6a0ea768c29eb1": {
+                "_:nb050f5c9238c4d0f8158b07abf7b4ccbb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n863f6b7bf3874339a63d6a0ea768c29eb1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:nb050f5c9238c4d0f8158b07abf7b4ccbb1: *none*\n"
             }
           ]
         }
@@ -195,19 +195,19 @@
             {
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "focusNodes": {
-                "ex:NamedObjectShape": {
-                  "nodes": []
-                },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:Nb8728f8598814e46ae7fe3db2d80efff",
-                    "_:N6b1ec24202a94d3491ee26294226d232",
-                    "_:N589c858569274e82ad669652e2469363"
+                    "_:Nab4ab897e2ce4180baac5143d93ca921",
+                    "_:N8ba59de40b614f9696ef0d9a196a37da",
+                    "_:N7a1307571ceb4989ba488a6fb5683a16"
                   ]
+                },
+                "ex:NamedObjectShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:Nb8728f8598814e46ae7fe3db2d80efff,_:N6b1ec24202a94d3491ee26294226d232,_:N589c858569274e82ad669652e2469363\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:Nab4ab897e2ce4180baac5143d93ca921,_:N8ba59de40b614f9696ef0d9a196a37da,_:N7a1307571ceb4989ba488a6fb5683a16\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -219,12 +219,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n863f6b7bf3874339a63d6a0ea768c29eb1": {
+                "_:nb050f5c9238c4d0f8158b07abf7b4ccbb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n863f6b7bf3874339a63d6a0ea768c29eb1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:nb050f5c9238c4d0f8158b07abf7b4ccbb1: *none*\n"
             }
           ]
         }
@@ -297,19 +297,19 @@
             {
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "focusNodes": {
-                "ex:NamedObjectShape": {
-                  "nodes": []
-                },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N3095b06aef8c45128bdc48b4166390bb",
-                    "_:N8c6a1268b0bf4d0f811f8a8cc92ad4dd",
-                    "_:N4bd30dc1a86247b4add6a8e2aa17e308"
+                    "_:Ne76ace7dcc9e40daa563ba7d51675406",
+                    "_:N8a0609fe2b1b4f60b25e0670840d8ac4",
+                    "_:Ndac58286e2e24f35a9bc5350862185ea"
                   ]
+                },
+                "ex:NamedObjectShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N3095b06aef8c45128bdc48b4166390bb,_:N8c6a1268b0bf4d0f811f8a8cc92ad4dd,_:N4bd30dc1a86247b4add6a8e2aa17e308\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:Ne76ace7dcc9e40daa563ba7d51675406,_:N8a0609fe2b1b4f60b25e0670840d8ac4,_:Ndac58286e2e24f35a9bc5350862185ea\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -321,12 +321,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n863f6b7bf3874339a63d6a0ea768c29eb1": {
+                "_:nb050f5c9238c4d0f8158b07abf7b4ccbb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n863f6b7bf3874339a63d6a0ea768c29eb1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:nb050f5c9238c4d0f8158b07abf7b4ccbb1: *none*\n"
             }
           ]
         }

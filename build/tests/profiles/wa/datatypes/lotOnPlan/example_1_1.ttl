@@ -5,12 +5,12 @@
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "4" ;
-            commonpatterns:namePartType "lotNumber" ],
+    dcterms:hasPart [ rdfs:label "1234" ;
+            commonpatterns:namePartType "surveyNumber" ],
         [ commonpatterns:namePartRef wa-survey-type:p ;
             commonpatterns:namePartType "surveyType" ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
             commonpatterns:namePartType "lotPrefix" ],
-        [ rdfs:label "1234" ;
-            commonpatterns:namePartType "surveyNumber" ] .
+        [ rdfs:label "4" ;
+            commonpatterns:namePartType "lotNumber" ] .
 
