@@ -4,7 +4,7 @@
 
 [] rdfs:label "Mammang Koort / King George Sound" ;
     dcterms:hasPart [ rdfs:label "Mammang Koort" ;
-            commonpatterns:namePartType "wa:indigenousName" ],
+            commonpatterns:namePartType <wa:indigenousName> ],
         [ rdfs:label "King George Sound" ;
-            commonpatterns:namePartType "wa:placeName" ] .
+            commonpatterns:namePartType <wa:placeName> ] .
 

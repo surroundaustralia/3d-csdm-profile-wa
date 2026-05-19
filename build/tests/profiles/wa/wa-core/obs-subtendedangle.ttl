@@ -17,6 +17,7 @@
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix topo: <https://purl.org/geojson/topo#> .
 @prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
@@ -70,11 +71,6 @@
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/843> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
             sosa:hasResult [ surv:distance 2.6401e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
@@ -83,7 +79,12 @@
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
             sosa:hasResult [ surv:distance 1.6526e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns1:distanceType icsm-distance-type:ground ] ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/843> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2022-05-22T00:00:00Z" ;
+            ns1:angleType icsm-angle-type:angle ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
@@ -113,17 +114,17 @@
         <https://www.wa-example.com/features/SubtendedAngle> ;
     surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ] .
+            topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ] .
 
 <https://www.wa-example.com/features/312> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:R ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
+            topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
 
 <https://www.wa-example.com/features/313> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:I ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
+            topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
 
 <https://www.wa-example.com/features/184> a surv:BoundaryMark,
         geojson:Feature ;

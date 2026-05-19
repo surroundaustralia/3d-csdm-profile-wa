@@ -62,14 +62,14 @@ Example appellation.
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "1234" ;
-            commonpatterns:namePartType "surveyNumber" ],
-        [ commonpatterns:namePartRef wa-survey-type:p ;
-            commonpatterns:namePartType "surveyType" ],
-        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-            commonpatterns:namePartType "lotPrefix" ],
+    dcterms:hasPart [ commonpatterns:namePartRef wa-survey-type:p ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyType> ],
         [ rdfs:label "4" ;
-            commonpatterns:namePartType "lotNumber" ] .
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotNumber> ],
+        [ rdfs:label "1234" ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyNumber> ],
+        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotPrefix> ] .
 
 
 ```
@@ -111,7 +111,13 @@ Links to the schema:
           "@type": "@id",
           "@id": "commonpatterns:namePartRef"
         },
-        "type": "commonpatterns:namePartType"
+        "type": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+          },
+          "@type": "@id",
+          "@id": "commonpatterns:namePartType"
+        }
       },
       "@id": "dct:hasPart"
     },

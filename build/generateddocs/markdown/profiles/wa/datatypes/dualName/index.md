@@ -58,9 +58,9 @@ A name with a label, but also a set of parts with roles that can be validated ag
 
 [] rdfs:label "Mammang Koort / King George Sound" ;
     dcterms:hasPart [ rdfs:label "Mammang Koort" ;
-            commonpatterns:namePartType "wa:indigenousName" ],
+            commonpatterns:namePartType <wa:indigenousName> ],
         [ rdfs:label "King George Sound" ;
-            commonpatterns:namePartType "wa:placeName" ] .
+            commonpatterns:namePartType <wa:placeName> ] .
 
 
 ```
@@ -95,7 +95,13 @@ Links to the schema:
           "@type": "@id",
           "@id": "commonpatterns:namePartRef"
         },
-        "type": "commonpatterns:namePartType"
+        "type": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+          },
+          "@type": "@id",
+          "@id": "commonpatterns:namePartType"
+        }
       },
       "@id": "dct:hasPart"
     },

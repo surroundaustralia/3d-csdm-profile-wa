@@ -65,11 +65,11 @@ Example appellation.
 
 [] rdfs:label "Albany Town Lot 57" ;
     dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType "crownAreaCode" ],
-        [ rdfs:label "57" ;
-            commonpatterns:namePartType "number" ],
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAreaCode> ],
         [ rdfs:label "wa-parcel-purpose:townlot" ;
-            commonpatterns:namePartType "crownAllocationType" ] .
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAllocationType> ],
+        [ rdfs:label "57" ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/number> ] .
 
 
 ```
@@ -111,7 +111,13 @@ Links to the schema:
           "@type": "@id",
           "@id": "commonpatterns:namePartRef"
         },
-        "type": "commonpatterns:namePartType"
+        "type": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+          },
+          "@type": "@id",
+          "@id": "commonpatterns:namePartType"
+        }
       },
       "@id": "dct:hasPart"
     },

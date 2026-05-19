@@ -560,6 +560,7 @@ Minimal example - with combined elements from each test case
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix topo: <https://purl.org/geojson/topo#> .
 @prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
@@ -576,11 +577,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
@@ -596,9 +597,9 @@ Minimal example - with combined elements from each test case
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
     commonpatterns:name [ rdfs:label "EFB157243/9540" ;
             dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType "Source" ],
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ],
                 [ rdfs:label "9540" ;
-                    commonpatterns:namePartType "Stamp" ] ] ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ] ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -609,7 +610,7 @@ Minimal example - with combined elements from each test case
 <https://www.wa-example.com/features/17251503> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:boundary ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/14005400> <https://www.wa-example.com/features/14005401> ) ] .
+            topo:relatedFeatures ( <https://www.wa-example.com/features/14005400> <https://www.wa-example.com/features/14005401> ) ] .
 
 <https://www.wa-example.com/features/WAMarks> a geojson:FeatureCollection ;
     geojson:collectionFeatureType "SurveyPoint" ;
@@ -662,7 +663,7 @@ Minimal example - with combined elements from each test case
 <https://www.wa-example.com/features/17251502> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:boundary ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/14005391> <https://www.wa-example.com/features/14005400> ) ] .
+            topo:relatedFeatures ( <https://www.wa-example.com/features/14005391> <https://www.wa-example.com/features/14005400> ) ] .
 
 <https://www.wa-example.com/features/14005400> a surv:BoundaryMark,
         geojson:Feature ;
@@ -746,7 +747,43 @@ Links to the schema:
         "topology": {
           "@context": {
             "references": {
-              "@id": "geojson:relatedFeatures",
+              "@context": {
+                "ref": {
+                  "@type": "@id",
+                  "@id": "topo:ref"
+                }
+              },
+              "@id": "topo:relatedFeatures",
+              "@type": "@id",
+              "@container": "@list"
+            },
+            "relationships": {
+              "@context": {
+                "href": {
+                  "@type": "@id",
+                  "@id": "oa:hasTarget"
+                },
+                "rel": {
+                  "@context": {
+                    "@base": "http://www.iana.org/assignments/relation/"
+                  },
+                  "@id": "http://www.iana.org/assignments/relation",
+                  "@type": "@id"
+                },
+                "type": "dct:type",
+                "hreflang": "dct:language",
+                "title": "rdfs:label",
+                "length": "dct:extent",
+                "role": {
+                  "@id": "prof:hasRole",
+                  "@type": "@id"
+                },
+                "conformsTo": {
+                  "@id": "dct:conformsTo",
+                  "@type": "@id"
+                }
+              },
+              "@id": "topo:relatedFeatures",
               "@type": "@id",
               "@container": "@list"
             }
@@ -868,6 +905,7 @@ Links to the schema:
     },
     "CSD": "container:CSD",
     "locality": "csd:locality",
+    "edges": "topo:edges",
     "PrimaryParcel": {
       "@id": "parcel:PrimaryParcel",
       "@type": "@id"
@@ -896,14 +934,20 @@ Links to the schema:
     "surveyDescription": "container:surveyDescription",
     "surveyDescriptors": {
       "@context": {
-        "name": "csdm:commonpatterns/name",
+        "name": "commonpatterns:name",
         "hasPart": {
           "@context": {
             "ref": {
               "@type": "@id",
-              "@id": "csdm:commonpatterns/namePartRef"
+              "@id": "commonpatterns:namePartRef"
             },
-            "type": "csdm:commonpatterns/namePartType"
+            "type": {
+              "@context": {
+                "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+              },
+              "@type": "@id",
+              "@id": "commonpatterns:namePartType"
+            }
           },
           "@id": "dct:hasPart"
         }
@@ -1020,7 +1064,43 @@ Links to the schema:
             "topology": {
               "@context": {
                 "references": {
-                  "@id": "geojson:relatedFeatures",
+                  "@context": {
+                    "ref": {
+                      "@type": "@id",
+                      "@id": "topo:ref"
+                    }
+                  },
+                  "@id": "topo:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                },
+                "relationships": {
+                  "@context": {
+                    "href": {
+                      "@type": "@id",
+                      "@id": "oa:hasTarget"
+                    },
+                    "rel": {
+                      "@context": {
+                        "@base": "http://www.iana.org/assignments/relation/"
+                      },
+                      "@id": "http://www.iana.org/assignments/relation",
+                      "@type": "@id"
+                    },
+                    "type": "dct:type",
+                    "hreflang": "dct:language",
+                    "title": "rdfs:label",
+                    "length": "dct:extent",
+                    "role": {
+                      "@id": "prof:hasRole",
+                      "@type": "@id"
+                    },
+                    "conformsTo": {
+                      "@id": "dct:conformsTo",
+                      "@type": "@id"
+                    }
+                  },
+                  "@id": "topo:relatedFeatures",
                   "@type": "@id",
                   "@container": "@list"
                 }
@@ -1055,25 +1135,37 @@ Links to the schema:
                   "@context": {
                     "ref": {
                       "@type": "@id",
-                      "@id": "csdm:commonpatterns/namePartRef"
+                      "@id": "commonpatterns:namePartRef"
                     },
-                    "type": "csdm:commonpatterns/namePartType"
+                    "type": {
+                      "@context": {
+                        "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+                      },
+                      "@type": "@id",
+                      "@id": "commonpatterns:namePartType"
+                    }
                   },
                   "@id": "dct:hasPart"
                 }
               }
             },
             "name": {
-              "@id": "csdm:commonpatterns/name",
+              "@id": "commonpatterns:name",
               "@type": "@id",
               "@context": {
                 "hasPart": {
                   "@context": {
                     "ref": {
                       "@type": "@id",
-                      "@id": "csdm:commonpatterns/namePartRef"
+                      "@id": "commonpatterns:namePartRef"
                     },
-                    "type": "csdm:commonpatterns/namePartType"
+                    "type": {
+                      "@context": {
+                        "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+                      },
+                      "@type": "@id",
+                      "@id": "commonpatterns:namePartType"
+                    }
                   },
                   "@id": "dct:hasPart"
                 }
@@ -1140,7 +1232,43 @@ Links to the schema:
             "topology": {
               "@context": {
                 "references": {
-                  "@id": "geojson:relatedFeatures",
+                  "@context": {
+                    "ref": {
+                      "@type": "@id",
+                      "@id": "topo:ref"
+                    }
+                  },
+                  "@id": "topo:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                },
+                "relationships": {
+                  "@context": {
+                    "href": {
+                      "@type": "@id",
+                      "@id": "oa:hasTarget"
+                    },
+                    "rel": {
+                      "@context": {
+                        "@base": "http://www.iana.org/assignments/relation/"
+                      },
+                      "@id": "http://www.iana.org/assignments/relation",
+                      "@type": "@id"
+                    },
+                    "type": "dct:type",
+                    "hreflang": "dct:language",
+                    "title": "rdfs:label",
+                    "length": "dct:extent",
+                    "role": {
+                      "@id": "prof:hasRole",
+                      "@type": "@id"
+                    },
+                    "conformsTo": {
+                      "@id": "dct:conformsTo",
+                      "@type": "@id"
+                    }
+                  },
+                  "@id": "topo:relatedFeatures",
                   "@type": "@id",
                   "@container": "@list"
                 }
@@ -1150,14 +1278,20 @@ Links to the schema:
             },
             "appellation": {
               "@context": {
-                "name": "csdm:commonpatterns/name",
+                "name": "commonpatterns:name",
                 "hasPart": {
                   "@context": {
                     "ref": {
                       "@type": "@id",
-                      "@id": "csdm:commonpatterns/namePartRef"
+                      "@id": "commonpatterns:namePartRef"
                     },
-                    "type": "csdm:commonpatterns/namePartType"
+                    "type": {
+                      "@context": {
+                        "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+                      },
+                      "@type": "@id",
+                      "@id": "commonpatterns:namePartType"
+                    }
                   },
                   "@id": "dct:hasPart"
                 }
@@ -1399,6 +1533,29 @@ Links to the schema:
     "arcLength": "geojson:arcLength",
     "startTangentVector": "geojson:startTangentVector",
     "endTangentVector": "geojson:endTangentVector",
+    "directed_references": {
+      "@id": "topo:directedReferences",
+      "@container": "@list"
+    },
+    "ref": "topo:ref",
+    "orientation": "topo:orientation",
+    "Edge": "topo:Edge",
+    "Face": "topo:Face",
+    "Ring": "topo:Ring",
+    "Shell": "topo:Shell",
+    "Solid": "topo:Solid",
+    "rings": {
+      "@id": "topo:rings",
+      "@container": "@list"
+    },
+    "shells": {
+      "@id": "topo:shells",
+      "@container": "@list"
+    },
+    "faces": {
+      "@id": "topo:faces",
+      "@container": "@list"
+    },
     "agentType": "@type",
     "entityType": "@type",
     "provType": "@type",
@@ -1710,7 +1867,7 @@ Links to the schema:
       "@id": "prov:mentionOf",
       "@type": "@id"
     },
-    "CompoundName": "csdm:commonpatterns/CompoundName",
+    "CompoundName": "commonpatterns:CompoundName",
     "vectorPurpose": {
       "@type": "@id",
       "@id": "surv:vectorPurpose"
@@ -1736,11 +1893,11 @@ Links to the schema:
       "@type": "@id"
     },
     "ptQuality": {
-      "@id": "csdm:commonpatterns/qualityClass",
+      "@id": "commonpatterns:qualityClass",
       "@type": "@id"
     },
     "ptQualityMeasure": {
-      "@id": "csdm:commonpatterns/qualityMeasure",
+      "@id": "commonpatterns:qualityMeasure",
       "@type": "@id"
     },
     "GeodeticReferenceMark": {
@@ -2146,11 +2303,12 @@ Links to the schema:
     "dct": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "topo": "https://purl.org/geojson/topo#",
     "prof": "http://www.w3.org/ns/dx/prof/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "commonpatterns": "csdm:commonpatterns/",
+    "csdm": "https://linked.data.gov.au/def/csdm/",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",

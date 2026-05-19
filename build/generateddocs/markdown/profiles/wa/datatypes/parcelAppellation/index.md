@@ -42,7 +42,13 @@ Links to the schema:
           "@type": "@id",
           "@id": "commonpatterns:namePartRef"
         },
-        "type": "commonpatterns:namePartType"
+        "type": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
+          },
+          "@type": "@id",
+          "@id": "commonpatterns:namePartType"
+        }
       },
       "@id": "dct:hasPart"
     },

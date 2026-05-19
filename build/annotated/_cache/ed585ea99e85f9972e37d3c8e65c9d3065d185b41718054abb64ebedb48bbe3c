@@ -2,12 +2,12 @@
   "name": "3D Cadastre Survey Data Exchange Specification",
   "abstract": "This resource is a view of the specification for the 3D Cadastral Survey Data (CSD) Exchange Schema. \n\nThe specification is a machine-readable, modular data exchange model using the JSON language, using JSON Schema for structure and a semantic model (JSON-LD and SHACL rules) for more complex constraints. \n\n  **[Implementation profiles](https://icsm-au.github.io/3d-csdm-profiles/)**  with extensive examples are available for Australian and New Zealand jurisdictions.**\n\nThe core (top level container) schema can be viewed using the in-built documentation system **[here](bblock/icsm.csdm.features.CSD)** \n\nThe schema re-uses, flexible, standards based components using the [OGC Building Blocks methodology](https://github.com/opengeospatial/bblock-template/blob/master/USAGE.md).  \n\nThe [set of modules comprising the specification](bblock) is implemented as a \"register\" of \"Building Blocks\" managed within a [Git repository](https://icsm-au.github.io/3d-csdm-schema/). \n\nThe [documentation for the underlying 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/) data model collates the elements from all the inherited components into a single comprehensive document (directly from the machine-readable sources) \n\n_Implementation Profiles (e.g. for each Jurisdiction) use the same documentation form extended with specific constraints and vocabulary usages_\n",
   "description": "This specification defines a [JSON schema](https://json-schema.org/) compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange model.\n\nThis schema is linked to the underlying [3D Cadastre Model](https://icsm-au.github.io/3d-csdm/) using JSON-LD, which allows additional constraint rules to be specified using the [SHACL (Shapes Constraint Language) standard](https://www.w3.org/TR/shacl/).\n\n_The **[REVIEW GUIDE](https://github.com/icsm-au/3d-csdm-profiles/blob/main/REVIEW_GUIDE.md)** provides a detailed overview of all aspects of the design and testing process, and related materials._\n\nThis implementation pattern:\n\n- is supported by the OGC with a set of [open source tools](https://github.com/opengeospatial/bblock-template) and a library of building blocks based on OGC specifications.\n- simplifies development, testing and documentation of each component\n- allows for transparent, machine-readable, identification of the underlying standards each component is based on\n- allows richer machine readable specifications of implementation constraints and controlled vocabulary requirements.\n- supports explicit machine readable profile specifications to support discovery of all the different components required.\n\nThe \"semantic annotation\" capabilities of the OGC Building Block design links the schema to the conceptual and logical models.\n_NB Publication of these models as Linked Data would allow access to documentation of each element by online systems_.\n",
-  "modified": "2026-04-06T22:39:11.213244",
+  "modified": "2026-05-14T09:01:37.749861",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"c49dec4450ce9b1dcfd39c2cf124dbb7a493c19e",
-      "shortCommitId": "\"c49dec",
-      "date": "2026-04-06T13:40:08+00:00\""
+      "commitId": "\"6b01f188cc614cc2e65f4bf86a2623f98f101dfd",
+      "shortCommitId": "\"6b01f1",
+      "date": "2026-05-12T22:31:51+00:00\""
     }
   },
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-common",
@@ -19,7 +19,7 @@
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://opengeospatial.github.io/ogcapi-sosa/build/register.json",
-    "https://ogcincubator.github.io/topo-feature/build/register.json",
+    "https://surroundaustralia.github.io/topo-feature/build/register.json",
     "https://ogcincubator.github.io/bblock-prov-schema/build/register.json"
   ],
   "bblocks": [
@@ -32,7 +32,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-05-14",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -55,17 +55,16 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/quality/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/quality/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/datatypes/quality/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/quality/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/quality/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/quality/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -82,7 +81,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-05-14",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -112,17 +111,16 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/datatypes/compoundName/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/compoundName/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/compoundName/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -139,7 +137,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-05-14",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -166,95 +164,20 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/annotation/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/annotation/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/annotation/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/datatypes/annotation/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/annotation/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/datatypes/annotation/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/datatypes/annotation/index.md"
+        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/bblock/icsm.csdm.datatypes.annotation"
-        }
-      }
-    },
-    {
-      "itemIdentifier": "icsm.csdm.features.SurveyFeatures",
-      "name": "Survey Features",
-      "abstract": "The set of geographic features present on a survey - these include the FeatureOfInterest for observations",
-      "status": "under-development",
-      "dateTimeAddition": "2023-04-05T00:00:00Z",
-      "itemClass": "schema",
-      "register": "icsm-csdm",
-      "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
-      "link": "https://github.com/icsm-au/3d-csdm-schema",
-      "sources": [
-        {
-          "title": "3D Cadastre Survey Data Model",
-          "link": "https://github.com/icsm-au/3d-csdm"
-        }
-      ],
-      "maturity": "development",
-      "scope": "icsm",
-      "tags": [
-        "icsm",
-        "survey",
-        "cadastre",
-        "features"
-      ],
-      "shaclShapes": {
-        "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
-        ],
-        "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
-        ],
-        "icsm.csdm.datatypes.compoundName": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
-        ]
-      },
-      "dependsOn": [
-        "ogc.geo.topo.features.topo-line",
-        "icsm.csdm.datatypes.compoundName",
-        "ogc.ogc-utils.prov",
-        "ogc.geo.json-fg.feature",
-        "ogc.geo.common.data_types.geojson",
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.geo.json-fg.feature-lenient"
-      ],
-      "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
-      "schema": {
-        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml",
-        "application/json": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.json"
-      },
-      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/schema.json",
-      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/context.jsonld",
-      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/resolvedProperties.json",
-      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/",
-      "rdfData": [],
-      "validationPassed": true,
-      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyFeatures/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/bblock/icsm.csdm.features.SurveyFeatures"
         }
       }
     },
@@ -267,7 +190,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-05-14",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -291,14 +214,17 @@
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
         ]
       },
       "dependsOn": [
-        "icsm.csdm.datatypes.quality",
         "ogc.sosa.properties.observation",
-        "ogc.sosa.properties.observationCollection",
+        "icsm.csdm.datatypes.quality",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.sosa.features.observation"
+        "ogc.sosa.features.observation",
+        "ogc.sosa.properties.observationCollection"
       ],
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/context.jsonld",
       "schema": {
@@ -309,21 +235,99 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyObservations/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/SurveyObservations/index.json"
         },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/SurveyObservations/index.md"
+        },
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/bblock/icsm.csdm.features.SurveyObservations"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "icsm.csdm.features.SurveyFeatures",
+      "name": "Survey Features",
+      "abstract": "The set of geographic features present on a survey - these include the FeatureOfInterest for observations",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-05-14",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "3D Cadastre Survey Data Model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "icsm",
+      "tags": [
+        "icsm",
+        "survey",
+        "cadastre",
+        "features"
+      ],
+      "shaclShapes": {
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature-collection": [
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature": [
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ]
+      },
+      "dependsOn": [
+        "icsm.csdm.datatypes.compoundName",
+        "ogc.geo.json-fg.feature-lenient",
+        "ogc.geo.common.data_types.geojson",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.ogc-utils.prov",
+        "ogc.geo.topo.features.topo-line",
+        "ogc.geo.json-fg.feature"
+      ],
+      "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/context.jsonld",
+      "schema": {
+        "application/yaml": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml",
+        "application/json": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.json"
+      },
+      "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/schema.json",
+      "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/context.jsonld",
+      "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/resolvedProperties.json",
+      "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyFeatures/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/features/SurveyFeatures/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/SurveyFeatures/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/SurveyFeatures/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/bblock/icsm.csdm.features.SurveyFeatures"
         }
       }
     },
@@ -337,7 +341,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-04-06",
+      "dateOfLastChange": "2026-05-14",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -356,47 +360,53 @@
       "superBBlock": false,
       "shaclShapes": {
         "icsm.csdm.features.CSD": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
-        ],
-        "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
         ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
-        "icsm.csdm.datatypes.compoundName": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+        "ogc.geo.features.featureCollection": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+        ],
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ],
+        "ogc.geo.topo.features.topo-feature": [
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+        ],
+        "icsm.csdm.features.SurveyObservations": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
         ],
         "ogc.geo.topo.features.topo-arc": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+          "https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
         ],
-        "icsm.csdm.features.SurveyObservations": [
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
+        "icsm.csdm.datatypes.compoundName": [
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
         ]
       },
       "dependsOn": [
+        "ogc.geo.topo.features.topo-feature-collection",
+        "ogc.geo.json-fg.time",
+        "icsm.csdm.features.SurveyObservations",
+        "ogc.geo.topo.features.topo-arc",
+        "ogc.geo.topo.datatypes.topology",
+        "icsm.csdm.datatypes.compoundName",
+        "ogc.sosa.properties.observationCollection",
+        "ogc.geo.json-fg.feature-lenient",
         "icsm.csdm.features.SurveyFeatures",
         "ogc.geo.json-fg.link-role",
-        "ogc.sosa.properties.observationCollection",
-        "ogc.geo.topo.datatypes.topology",
-        "ogc.geo.topo.features.topo-line",
-        "icsm.csdm.datatypes.compoundName",
-        "ogc.ogc-utils.prov",
-        "ogc.geo.topo.features.topo-feature",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.geo.topo.features.topo-arc",
-        "ogc.geo.topo.features.topo-feature-collection",
-        "icsm.csdm.features.SurveyObservations",
-        "ogc.geo.json-fg.time",
-        "ogc.geo.json-fg.feature-lenient"
+        "ogc.ogc-utils.prov",
+        "ogc.geo.topo.features.topo-line",
+        "ogc.geo.topo.features.topo-feature"
       ],
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/context.jsonld",
       "schema": {
@@ -407,17 +417,82 @@
       "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/context.jsonld",
       "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/resolvedProperties.json",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-common/blob/main/build/tests/csdm/features/CSD/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/CSD/index.md"
+      "transforms": [
+        {
+          "id": "Points-n-Edges",
+          "description": "GeoJSON points and Edges",
+          "type": "python",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/geo+json",
+                "label": "GeoJSON",
+                "defaultExtension": "geojson"
+              }
+            ]
+          },
+          "metadata": {
+            "dependencies": {
+              "pip": "geopandas>=1.1.3",
+              "python": ">=3.10"
+            },
+            "mode": "edges,points"
+          },
+          "ref": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/transforms/topo2geojson.py",
+          "code": "import json, geopandas as gpd\nimport sys\nimport glob as glob_module\n\nfrom typing import Generator\n\n\ndef walk_features(data: list) -> Generator[dict, None, None]:\n    \"\"\"\n    Walk features from a list of GeoJSON Features or FeatureCollections.\n\n    Args:\n        data: A list containing GeoJSON Feature or FeatureCollection objects\n\n    Yields:\n        Individual GeoJSON Feature dictionaries\n    \"\"\"\n    for item in data:\n        match item.get(\"type\"):\n            case \"Feature\":\n                yield item\n            case \"FeatureCollection\":\n                yield from walk_features(item.get(\"features\", []))\n            case _:\n                raise ValueError(f\"Unexpected GeoJSON type: {item.get('type')!r}\")\n\ndef extract_feature_coordinates(data: list) -> dict[str, object]:\n    \"\"\"\n    Extract a mapping of feature IDs to their coordinates as JSON strings.\n\n    Args:\n        data: A list containing GeoJSON Feature or FeatureCollection objects\n\n    Returns:\n        A dictionary mapping feature ID -> JSON-encoded coordinates\n    \"\"\"\n    return {\n        feature[\"id\"]: feature[\"geometry\"][\"coordinates\"]\n        for feature in walk_features(data)\n    }\n\ndef process(input_data,mode,number):\n    if type(input_data) == str:\n        data = json.loads(input_data)\n    else:\n        data = json.load(input_data)\n\n    count = 0 # compare to number\n    # Normalize: wrap a single Feature into a FeatureCollection\n    is_feature = data.get(\"type\") == \"Feature\"\n    if is_feature:\n        data = {\"type\": \"FeatureCollection\", \"features\": [data], \"crs\": data.get(\"crs\")}\n\n    # Extract CRS\n    crs_name = data.get(\"crs\", {}).get(\"properties\", {}).get(\"name\")\n    epsg_code = crs_name.split(\":\")[-1] if crs_name else \"4326\"\n    data[\"features\"] = []\n    # transfer coordinates to features\n    if \"points\" in mode:\n        for pc in data[\"points\"]:\n            data[\"features\"].extend(pc[\"features\"])\n    geomsmap = extract_feature_coordinates(data[\"points\"])\n    geomtype = {\"edges\": \"LineString\", \"solids\": \"Solid\", \"rings\": \"MultiLineString\", \"parcels\": \"Polygon\",\"faces\": \"MultiPolygon\" , \"shells\": \"Solid\"}\n    for feat_type in [ \"edges\",  \"rings\" , \"faces\" , \"parcels\"] :\n        if not feat_type in data :\n            continue\n        for feat in walk_features ( data[feat_type] ):\n            if \"topology\" in feat:\n                # check type matches expected\n                if feat[\"topology\"][\"type\"].lower()+'s' not in [ feat_type, geomtype[feat_type].lower()+'s']:\n                    print(\"Warning expected type{} does not match {}\".format(feat[\"topology\"][\"type\"].lower(),feat_type))\n                if \"references\" in feat[\"topology\"] :\n                    try:\n                        n=0\n                        coords=[[]]\n                        for ring in feat[\"topology\"][\"references\"]:\n                            test = ring[0]\n                            coords[n]=[ geomsmap[node][0] for node in ring ]\n                            n += 1\n                    except Exception as e:\n                        print(e)\n                        coords =  [ geomsmap[node] for node in feat[\"topology\"][\"references\"] ]\n\n                elif \"directed_references\" in feat[\"topology\"] :\n                    drs = feat[\"topology\"][\"directed_references\"]\n                    coords = [[]]\n                    startindex = 0\n                    for node in drs:\n                        coordSet = geomsmap[node[\"ref\"]][:]\n                        if node[\"orientation\"] == '-':\n                            coordSet.reverse()\n                        coords[0] += coordSet[startindex:]\n                        startindex = 1\n                else:\n                    print(\"No references found\")\n                    continue\n\n                feat[\"geometry\"] = {\"type\": geomtype[feat_type], \"coordinates\": coords, \"properties\": feat[\"properties\"]}\n                geomsmap[feat[\"id\"]] = coords\n                if feat_type in mode :\n                    if number:\n                        if count >= int(number):\n                            continue\n                    count +=1\n                    data[\"features\"].append(feat)\n\n\n\n    # Create GeoDataFrame from GeoJSON-like dict\n    if data[\"features\"] == []:\n        print(\"No feature geometries generated\")\n        return \"{}\"\n    else:\n        gdf = gpd.GeoDataFrame.from_features(data[\"features\"])\n\n    # Set CRS dynamically\n    if epsg_code:\n        gdf.set_crs(epsg=int(epsg_code), inplace=True)\n\n    # Print current CRS\n    print(\"Transform from CRS\" + str(gdf.crs))\n\n    # Transform to another CRS (example: ETRS89)\n    if epsg_code != \"4326\":\n        gdf = gdf.to_crs(epsg=4326)\n        # Print current CRS\n        print(\"            to CRS\" + str(gdf.crs))\n\n    # Convert back to GeoJSON \u2014 unwrap back to a single Feature if input was one\n    result = json.loads(gdf.to_json())\n    if is_feature == 1:\n        output_data = json.dumps(result[\"features\"][0], indent=2)\n    else:\n        output_data = gdf.to_json(indent=2)\n    return output_data\n\ntestmode = True\ntry:\n    if 'mode' in transform_metadata.metadata:\n        mode = transform_metadata.metadata[\"mode\"]\n    else:\n        mode = \"points,edges,faces\"\n    testmode = False\n    if input_data:\n        print(\"running in transformer mode\")\n    output_data = process(input_data,mode,None)\nexcept Exception as e:\n    print(\"not running in transformer mode or error {e}\".format(e=e))\n    pass\n\nif __name__ == \"__main__\" and testmode:\n    import argparse\n\n    argparser = argparse.ArgumentParser()\n    argparser.add_argument('-i', '--input_data', help=\"input file\")\n    argparser.add_argument('-o', '--output_file', help=\"output file\")\n    argparser.add_argument('-p', '--print', help=\"Print output of each file\")\n    argparser.add_argument('-n', '--number', default=None, help=\"Count of features to process\")\n    argparser.add_argument('-m', '--mode', default=\"points,edges,faces\", help=\"points,edges,faces (comma separated list)\")\n    args = argparser.parse_args()\n    if args.input_data:\n        for f in sorted(glob_module.glob(args.input_data)):\n            print(\"Processing {}\".format(f))\n            input_data = open(f, \"r\").read()\n            output_data = process(input_data, args.mode, args.number)\n            if args.print:\n                print(output_data)\n    else:\n        print(\"No input file\")\n\n\n\n"
         },
+        {
+          "id": "Faces-as-Polygons",
+          "description": "GeoJSON Polygons for faces",
+          "type": "python",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/geo+json",
+                "label": "GeoJSON",
+                "defaultExtension": "geojson"
+              }
+            ]
+          },
+          "metadata": {
+            "dependencies": {
+              "pip": "geopandas>=1.1.3",
+              "python": ">=3.10"
+            },
+            "mode": "faces,parcels"
+          },
+          "ref": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/transforms/topo2geojson.py",
+          "code": "import json, geopandas as gpd\nimport sys\nimport glob as glob_module\n\nfrom typing import Generator\n\n\ndef walk_features(data: list) -> Generator[dict, None, None]:\n    \"\"\"\n    Walk features from a list of GeoJSON Features or FeatureCollections.\n\n    Args:\n        data: A list containing GeoJSON Feature or FeatureCollection objects\n\n    Yields:\n        Individual GeoJSON Feature dictionaries\n    \"\"\"\n    for item in data:\n        match item.get(\"type\"):\n            case \"Feature\":\n                yield item\n            case \"FeatureCollection\":\n                yield from walk_features(item.get(\"features\", []))\n            case _:\n                raise ValueError(f\"Unexpected GeoJSON type: {item.get('type')!r}\")\n\ndef extract_feature_coordinates(data: list) -> dict[str, object]:\n    \"\"\"\n    Extract a mapping of feature IDs to their coordinates as JSON strings.\n\n    Args:\n        data: A list containing GeoJSON Feature or FeatureCollection objects\n\n    Returns:\n        A dictionary mapping feature ID -> JSON-encoded coordinates\n    \"\"\"\n    return {\n        feature[\"id\"]: feature[\"geometry\"][\"coordinates\"]\n        for feature in walk_features(data)\n    }\n\ndef process(input_data,mode,number):\n    if type(input_data) == str:\n        data = json.loads(input_data)\n    else:\n        data = json.load(input_data)\n\n    count = 0 # compare to number\n    # Normalize: wrap a single Feature into a FeatureCollection\n    is_feature = data.get(\"type\") == \"Feature\"\n    if is_feature:\n        data = {\"type\": \"FeatureCollection\", \"features\": [data], \"crs\": data.get(\"crs\")}\n\n    # Extract CRS\n    crs_name = data.get(\"crs\", {}).get(\"properties\", {}).get(\"name\")\n    epsg_code = crs_name.split(\":\")[-1] if crs_name else \"4326\"\n    data[\"features\"] = []\n    # transfer coordinates to features\n    if \"points\" in mode:\n        for pc in data[\"points\"]:\n            data[\"features\"].extend(pc[\"features\"])\n    geomsmap = extract_feature_coordinates(data[\"points\"])\n    geomtype = {\"edges\": \"LineString\", \"solids\": \"Solid\", \"rings\": \"MultiLineString\", \"parcels\": \"Polygon\",\"faces\": \"MultiPolygon\" , \"shells\": \"Solid\"}\n    for feat_type in [ \"edges\",  \"rings\" , \"faces\" , \"parcels\"] :\n        if not feat_type in data :\n            continue\n        for feat in walk_features ( data[feat_type] ):\n            if \"topology\" in feat:\n                # check type matches expected\n                if feat[\"topology\"][\"type\"].lower()+'s' not in [ feat_type, geomtype[feat_type].lower()+'s']:\n                    print(\"Warning expected type{} does not match {}\".format(feat[\"topology\"][\"type\"].lower(),feat_type))\n                if \"references\" in feat[\"topology\"] :\n                    try:\n                        n=0\n                        coords=[[]]\n                        for ring in feat[\"topology\"][\"references\"]:\n                            test = ring[0]\n                            coords[n]=[ geomsmap[node][0] for node in ring ]\n                            n += 1\n                    except Exception as e:\n                        print(e)\n                        coords =  [ geomsmap[node] for node in feat[\"topology\"][\"references\"] ]\n\n                elif \"directed_references\" in feat[\"topology\"] :\n                    drs = feat[\"topology\"][\"directed_references\"]\n                    coords = [[]]\n                    startindex = 0\n                    for node in drs:\n                        coordSet = geomsmap[node[\"ref\"]][:]\n                        if node[\"orientation\"] == '-':\n                            coordSet.reverse()\n                        coords[0] += coordSet[startindex:]\n                        startindex = 1\n                else:\n                    print(\"No references found\")\n                    continue\n\n                feat[\"geometry\"] = {\"type\": geomtype[feat_type], \"coordinates\": coords, \"properties\": feat[\"properties\"]}\n                geomsmap[feat[\"id\"]] = coords\n                if feat_type in mode :\n                    if number:\n                        if count >= int(number):\n                            continue\n                    count +=1\n                    data[\"features\"].append(feat)\n\n\n\n    # Create GeoDataFrame from GeoJSON-like dict\n    if data[\"features\"] == []:\n        print(\"No feature geometries generated\")\n        return \"{}\"\n    else:\n        gdf = gpd.GeoDataFrame.from_features(data[\"features\"])\n\n    # Set CRS dynamically\n    if epsg_code:\n        gdf.set_crs(epsg=int(epsg_code), inplace=True)\n\n    # Print current CRS\n    print(\"Transform from CRS\" + str(gdf.crs))\n\n    # Transform to another CRS (example: ETRS89)\n    if epsg_code != \"4326\":\n        gdf = gdf.to_crs(epsg=4326)\n        # Print current CRS\n        print(\"            to CRS\" + str(gdf.crs))\n\n    # Convert back to GeoJSON \u2014 unwrap back to a single Feature if input was one\n    result = json.loads(gdf.to_json())\n    if is_feature == 1:\n        output_data = json.dumps(result[\"features\"][0], indent=2)\n    else:\n        output_data = gdf.to_json(indent=2)\n    return output_data\n\ntestmode = True\ntry:\n    if 'mode' in transform_metadata.metadata:\n        mode = transform_metadata.metadata[\"mode\"]\n    else:\n        mode = \"points,edges,faces\"\n    testmode = False\n    if input_data:\n        print(\"running in transformer mode\")\n    output_data = process(input_data,mode,None)\nexcept Exception as e:\n    print(\"not running in transformer mode or error {e}\".format(e=e))\n    pass\n\nif __name__ == \"__main__\" and testmode:\n    import argparse\n\n    argparser = argparse.ArgumentParser()\n    argparser.add_argument('-i', '--input_data', help=\"input file\")\n    argparser.add_argument('-o', '--output_file', help=\"output file\")\n    argparser.add_argument('-p', '--print', help=\"Print output of each file\")\n    argparser.add_argument('-n', '--number', default=None, help=\"Count of features to process\")\n    argparser.add_argument('-m', '--mode', default=\"points,edges,faces\", help=\"points,edges,faces (comma separated list)\")\n    args = argparser.parse_args()\n    if args.input_data:\n        for f in sorted(glob_module.glob(args.input_data)):\n            print(\"Processing {}\".format(f))\n            input_data = open(f, \"r\").read()\n            output_data = process(input_data, args.mode, args.number)\n            if args.print:\n                print(output_data)\n    else:\n        print(\"No input file\")\n\n\n\n"
+        }
+      ],
+      "documentation": {
         "json-full": {
           "mediatype": "application/json",
           "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/json-full/csdm/features/CSD/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://surroundaustralia.github.io/3d-csdm-common/build/generateddocs/markdown/csdm/features/CSD/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",

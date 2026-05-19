@@ -17,6 +17,7 @@
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix topo: <https://purl.org/geojson/topo#> .
 @prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
@@ -33,11 +34,11 @@
     rdfs:label "Plan 9674" ;
     dcterms:time [ time:hasTime "1970-04-10"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:thornlie ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-perth ] ;
+            oa:hasTarget wa-local-government:city-of-perth ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:thornlie ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
@@ -58,7 +59,8 @@
     geojson:arcLength 2.5615e+01 ;
     geojson:radius 1.05438e+02 ;
     geojson:topology [ a geojson:ArcWithCenter ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/1746055> <https://www.wa-example.com/features/1746030> <https://www.wa-example.com/features/p1853004> ) ] .
+            topo:orientation "cw" ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/1746055> <https://www.wa-example.com/features/1746030> <https://www.wa-example.com/features/p1853004> ) ] .
 
 <https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;
     geojson:collectionFeatureType "BoundaryMark" ;
@@ -120,7 +122,7 @@
     rdfs:comment "Chord" ;
     surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <https://www.wa-example.com/features/1746055> <https://www.wa-example.com/features/1746030> ) ] .
+            topo:relatedFeatures ( <https://www.wa-example.com/features/1746055> <https://www.wa-example.com/features/1746030> ) ] .
 
 <https://www.wa-example.com/features/p1853004> a surv:CadastralMark,
         geojson:Feature ;
