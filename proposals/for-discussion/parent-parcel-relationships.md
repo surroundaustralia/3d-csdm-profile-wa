@@ -23,7 +23,7 @@ The proposed rule is:
 > A Primary Cadastral Parcel may contain zero, one, or many 3D solid parcels.
 >
 > 
-In the following JSON we have described `within` as a relationship rather than a constraint.
+In the following JSON we have described `within` as a `topological` `containing` relationship rather than a constraint.
 
 ```json
 {
@@ -37,10 +37,10 @@ In the following JSON we have described `within` as a relationship rather than a
     ],
     "relationships": [
       {
-        "type": "within",
-        "target": "uuid:458ba315-9601-4e0c-9385-f54c1e2372f6",
-        "targetRole": "containingPrimaryParcel",
-        "targetFeatureType": "PrimaryParcel"
+        "href": "uuid:458ba315-9601-4e0c-9385-f54c1e2372f6",
+        "rel": "topology",
+        "role": "containingPrimaryParcel",
+        "targetFeatureType": "surv:PrimaryParcel"
       }
     ]
   }
@@ -58,18 +58,18 @@ Validation rules can then be applied as a constraint resulting from the relation
   "geometryCheck": "withinOrCoveredByDeclaredParentParcel"
 }
 ```
-Using `within` is consistent with common spatial and topological terminology. 
-ISO 19107 supports interpreting `within` as a spatial/topological relationship, and other standards such as GeoSPARQL also recognise relationship types such as `within`, `contains`, `overlaps`, `inside`, and `coveredBy`.
+Using `within`/`containing` is consistent with common spatial and topological terminology. 
+ISO 19107 supports interpreting `within`/`containing` as a spatial/topological relationship, and other standards such as GeoSPARQL also recognise relationship types such as `within`, `contains`, `overlaps`, `inside`, and `coveredBy`.
 
-The `within` relationship should be distinguished from the references used to construct the solid. 
+The `within`/`containing` relationship should be distinguished from the references used to construct the solid. 
 The `shell` references define the solid’s geometric/topological construction. 
-The `within` relationship links the completed solid to another cadastral feature in the dataset.
+The `within`/`containing` relationship links the completed solid to another cadastral feature in the dataset.
 
 Validation rules can then be applied to the declared relationship. 
 These rules can test that the solid has exactly one declared parent parcel, that the referenced parcel exists, and that the referenced feature is a Primary Parcel. 
 They can also test that the solid geometry is spatially within the declared parent parcel, according to agreed tolerances and geometric interpretation.
 
-For this use case, `within` means that the 3D solid is contained by the referenced Primary Parcel. 
+For this use case, `within`/`containing` means that the 3D solid is contained by the referenced Primary Parcel. 
 Where the Primary Parcel is represented as a 2D parcel, the containment test must define whether the 2D parcel is interpreted as an unlimited vertical prism, a constrained height volume, or a footprint-only reference. 
 The declared relationship remains the authoritative cadastral association, while the geometric test is used to validate consistency.
 
