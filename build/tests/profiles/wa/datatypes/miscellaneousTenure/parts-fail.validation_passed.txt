@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-05-19T10:13:50.689617+00:00
+Generated 2026-05-21T03:15:28.816682+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -33,28 +33,28 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/legalDescriptor> ; rdfs:label Literal("12345") ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/legalDescriptor>
+  	Focus Node: [ commonpatterns:namePartRef wa-parcel-type:l ; commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/tenureClass> ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/tenureClass>
   	Result Path: commonpatterns:namePartType
   	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartRef wa-parcel-type:l ; commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/tenureClass> ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/tenureClass>
+  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/legalDescriptor> ; rdfs:label Literal("12345") ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/legalDescriptor>
   	Result Path: commonpatterns:namePartType
   	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
+ - Shape ex:NamePartShape: _:N66e7ce3212fc4dd794178c2422be46ac,_:N6f233662594547a7ae1c7177981e2613
  - Shape ex:NamedObjectShape: *none*
- - Shape ex:NamePartShape: _:Ncf9fe078c12f4fa7bd70d9979f99918c,_:N5f883b5cf6f646c08100aeb76ac6d058
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n05069fd34f0149a99028d8d1a84d58bbb1: *none*
+ - Shape _:n83004ea34dc545efb0ba956e0774559bb1: *none*
 
 === End SHACL ===
 

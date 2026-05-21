@@ -59,12 +59,12 @@
     parcel:appellation [ rdfs:label "Lot 213 DP 572532" ;
             dct:hasPart [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ],
+                [ rdfs:label "213" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType> ],
                 [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ],
-                [ rdfs:label "213" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 798 ;
@@ -104,20 +104,15 @@
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/313> ;
+            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/309> ;
             sosa:hasResult [ surv:distance 3.7e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/843> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleType icsm-distance-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/840> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleType icsm-distance-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/842> ;
             sosa:hasResult [ ] ;
@@ -129,17 +124,12 @@
             sosa:resultTime "2011-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/312> ;
-            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/313> ;
-            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/845> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2011-05-22T00:00:00" ;
+            ns1:angleType icsm-distance-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/840> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2011-05-22T00:00:00" ;
             ns1:angleType icsm-distance-type:angle ],
@@ -149,18 +139,28 @@
             sosa:resultTime "2011-05-22T00:00:00" ;
             ns1:angleType icsm-distance-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <file:///github/workspace/844> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2011-05-22T00:00:00" ;
-            ns1:angleType icsm-distance-type:angle ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/298> ;
             sosa:hasResult [ surv:distance 1e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/843> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2011-05-22T00:00:00" ;
+            ns1:angleType icsm-distance-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/844> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2011-05-22T00:00:00" ;
+            ns1:angleType icsm-distance-type:angle ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <file:///github/workspace/314> ;
             sosa:hasResult [ surv:distance 1.4e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <file:///github/workspace/312> ;
+            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
