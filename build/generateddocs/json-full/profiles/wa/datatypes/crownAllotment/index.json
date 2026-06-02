@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-05-21",
+  "dateOfLastChange": "2026-06-02",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -76,24 +76,24 @@
           "language": "json",
           "ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/crownAllotment/examples/strings.json",
           "base-uri": "http://www.example.com/namedobjects/",
-          "code": "{\n  \"type\": \"wa:CrownAllotmentAppellation\",\n  \"label\": \"Albany Town Lot 57\",\n  \"hasPart\": [\n    {\n      \"type\": \"crownAreaCode\",\n      \"ref\": \"wa-locality:albany\"\n    },\n    {\n      \"type\": \"crownAllocationType\",\n      \"label\": \"wa-parcel-purpose:townlot\"\n    },\n    {\n      \"type\": \"number\",\n      \"label\": \"57\"\n    }\n  ]\n}",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.json",
           "transformResults": {
             "Dual-name-label": {
               "success": true,
               "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/transforms/example_1_1.Dual-name-label"
             }
-          }
+          },
+          "code": "{\n  \"type\": \"wa:CrownAllotmentAppellation\",\n  \"label\": \"Albany Town Lot 57\",\n  \"hasPart\": [\n    {\n      \"type\": \"crownAreaCode\",\n      \"ref\": \"wa-locality:albany\"\n    },\n    {\n      \"type\": \"crownAllocationType\",\n      \"label\": \"wa-parcel-purpose:townlot\"\n    },\n    {\n      \"type\": \"number\",\n      \"label\": \"57\"\n    }\n  ]\n}"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/context.jsonld\",\n  \"type\": \"wa:CrownAllotmentAppellation\",\n  \"label\": \"Albany Town Lot 57\",\n  \"hasPart\": [\n    {\n      \"type\": \"crownAreaCode\",\n      \"ref\": \"wa-locality:albany\"\n    },\n    {\n      \"type\": \"crownAllocationType\",\n      \"label\": \"wa-parcel-purpose:townlot\"\n    },\n    {\n      \"type\": \"number\",\n      \"label\": \"57\"\n    }\n  ]\n}",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.jsonld"
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.jsonld",
+          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/context.jsonld\",\n  \"type\": \"wa:CrownAllotmentAppellation\",\n  \"label\": \"Albany Town Lot 57\",\n  \"hasPart\": [\n    {\n      \"type\": \"crownAreaCode\",\n      \"ref\": \"wa-locality:albany\"\n    },\n    {\n      \"type\": \"crownAllocationType\",\n      \"label\": \"wa-parcel-purpose:townlot\"\n    },\n    {\n      \"type\": \"number\",\n      \"label\": \"57\"\n    }\n  ]\n}"
         },
         {
           "language": "ttl",
-          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n\n[] rdfs:label \"Albany Town Lot 57\" ;\n    dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAreaCode> ],\n        [ rdfs:label \"wa-parcel-purpose:townlot\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAllocationType> ],\n        [ rdfs:label \"57\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/number> ] .\n\n",
-          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.ttl"
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.ttl",
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n\n[] rdfs:label \"Albany Town Lot 57\" ;\n    dcterms:hasPart [ rdfs:label \"57\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/number> ],\n        [ commonpatterns:namePartRef wa-locality:albany ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAreaCode> ],\n        [ rdfs:label \"wa-parcel-purpose:townlot\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAllocationType> ] .\n\n"
         }
       ]
     }

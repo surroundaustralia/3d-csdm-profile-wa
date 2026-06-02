@@ -577,11 +577,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
@@ -747,14 +747,18 @@ Links to the schema:
         "topology": {
           "@context": {
             "references": {
+              "@id": "topo:relatedFeatures",
+              "@type": "@id",
+              "@container": "@list"
+            },
+            "directed_references": {
               "@context": {
                 "ref": {
                   "@type": "@id",
                   "@id": "topo:ref"
                 }
               },
-              "@id": "topo:relatedFeatures",
-              "@type": "@id",
+              "@id": "topo:directedReferences",
               "@container": "@list"
             },
             "relationships": {
@@ -1064,14 +1068,18 @@ Links to the schema:
             "topology": {
               "@context": {
                 "references": {
+                  "@id": "topo:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                },
+                "directed_references": {
                   "@context": {
                     "ref": {
                       "@type": "@id",
                       "@id": "topo:ref"
                     }
                   },
-                  "@id": "topo:relatedFeatures",
-                  "@type": "@id",
+                  "@id": "topo:directedReferences",
                   "@container": "@list"
                 },
                 "relationships": {
@@ -1232,14 +1240,18 @@ Links to the schema:
             "topology": {
               "@context": {
                 "references": {
+                  "@id": "topo:relatedFeatures",
+                  "@type": "@id",
+                  "@container": "@list"
+                },
+                "directed_references": {
                   "@context": {
                     "ref": {
                       "@type": "@id",
                       "@id": "topo:ref"
                     }
                   },
-                  "@id": "topo:relatedFeatures",
-                  "@type": "@id",
+                  "@id": "topo:directedReferences",
                   "@container": "@list"
                 },
                 "relationships": {
@@ -1533,10 +1545,6 @@ Links to the schema:
     "arcLength": "geojson:arcLength",
     "startTangentVector": "geojson:startTangentVector",
     "endTangentVector": "geojson:endTangentVector",
-    "directed_references": {
-      "@id": "topo:directedReferences",
-      "@container": "@list"
-    },
     "ref": "topo:ref",
     "orientation": "topo:orientation",
     "Edge": "topo:Edge",
