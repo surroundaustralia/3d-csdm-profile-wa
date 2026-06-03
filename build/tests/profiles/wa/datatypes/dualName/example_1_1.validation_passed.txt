@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)
-Generated 2026-06-02T23:24:59.373713+00:00
+Generated 2026-06-03T20:40:00.614598+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n6a87725b48864af58dd568b996382694b1: *none*
+ - Shape _:nfec4d7acbb834c678160e44ceab677afb1: *none*
 
 === End SHACL ===
 
