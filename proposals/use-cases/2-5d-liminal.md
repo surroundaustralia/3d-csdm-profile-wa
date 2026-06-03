@@ -2,10 +2,10 @@
 
 ## Revision history
 
-| Version | Date       | Author        | Summary of change                                                                                                                                                |
-|---------|------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0.1     | 2026-05-06 | Andrew Hunter | Initial draft prepared.                                                                                                                                          |
-| 0.2     | 2026-06-02 | Andrew Hunter | In response to Landgate feedback added height-description requirements and clarified the distinction between legal descriptions, z-values, and derived geometry. | 
+| Version | Date       | Author        | Summary of change                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|---------|------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0.1     | 2026-05-06 | Andrew Hunter | Initial draft prepared.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 0.2     | 2026-06-02 | Andrew Hunter | In response to Landgate feedback added separate treatment of geometry `z` values and legal height descriptions; `zMin` / `zMax` as computable geometry values; `zMinDescription` / `zMaxDescription` as legal or plan wording; relative height expressions such as `groundLevel - 8.0 m`; absolute height values such as `15.7 m AHD`; explicit handling of undefined, unconstrained, and not-supplied vertical extent; built geometry being legal only where the source says so. | 
 
 ## Description
 
@@ -46,7 +46,7 @@ The WA profile or implementation rules therefore need to state what those values
 
 ## Use Case statement
 
-As a cadastral data editor, I want to model a WA 2D parcel with optional height descriptions, vertical limits, 2.5D surfaces, and derived 3D geometry, so that the parcel can be used in a 3D cadastre without changing its legal identity or incorrectly implying a legal 3D volume.
+**As a cadastral data editor, I want to model a WA 2D parcel with optional height descriptions, vertical limits, 2.5D surfaces, and derived 3D geometry, so that the parcel can be used in a 3D cadastre without changing its legal identity or incorrectly implying a legal 3D volume.**
 
 ## Purpose
 
