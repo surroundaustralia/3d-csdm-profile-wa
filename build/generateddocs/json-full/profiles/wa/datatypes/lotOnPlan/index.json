@@ -29,8 +29,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.ogc-utils.iri-or-curie",
-    "icsm.profiles.wa.datatypes.waAppellationNamespaces"
+    "icsm.profiles.wa.datatypes.waAppellationNamespaces",
+    "ogc.ogc-utils.iri-or-curie"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml",
@@ -93,7 +93,7 @@
         {
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/lotOnPlan/example_1_1.ttl",
-          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n\n[] rdfs:label \"Lot 4 on Plan 1234\" ;\n    dcterms:hasPart [ commonpatterns:namePartRef wa-survey-type:p ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyType> ],\n        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotPrefix> ],\n        [ rdfs:label \"4\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotNumber> ],\n        [ rdfs:label \"1234\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyNumber> ] .\n\n"
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n\n[] rdfs:label \"Lot 4 on Plan 1234\" ;\n    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotPrefix> ],\n        [ rdfs:label \"1234\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyNumber> ],\n        [ rdfs:label \"4\" ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotNumber> ],\n        [ commonpatterns:namePartRef wa-survey-type:p ;\n            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyType> ] .\n\n"
         }
       ]
     }
