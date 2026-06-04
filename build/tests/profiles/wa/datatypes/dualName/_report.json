@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)",
   "bblockName": "Dual Name (Compound)",
   "bblockId": "icsm.profiles.wa.datatypes.dualName",
-  "generated": "2026-06-03T23:19:32.925540+00:00",
+  "generated": "2026-06-04T17:11:01.017766+00:00",
   "result": true,
   "items": [
     {
@@ -72,12 +72,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n56735759da4f47dabcce8c992c4685a7b1": {
+                "_:n9723de71b6c54154b0369f081e559123b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n56735759da4f47dabcce8c992c4685a7b1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n9723de71b6c54154b0369f081e559123b1: *none*\n"
             }
           ]
         }

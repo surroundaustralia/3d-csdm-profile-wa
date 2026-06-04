@@ -32,11 +32,11 @@
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
@@ -108,10 +108,10 @@
             geojson:coordinates ( 5.47613e+04 3.984891e+05 ) ] ;
     rdfs:comment "In Concrete" ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;

@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation",
   "bblockName": "Crown Allotment Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.crownAllotment",
-  "generated": "2026-06-03T23:19:32.670435+00:00",
+  "generated": "2026-06-04T17:11:00.783720+00:00",
   "result": true,
   "items": [
     {
@@ -72,12 +72,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:na5a1cd9fe82b445582d990f1b25e247bb1": {
+                "_:n83229e15a11148949b161b2a6feea540b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:na5a1cd9fe82b445582d990f1b25e247bb1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n83229e15a11148949b161b2a6feea540b1: *none*\n"
             }
           ]
         }
