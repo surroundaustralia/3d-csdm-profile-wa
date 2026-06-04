@@ -450,3 +450,9 @@ The central requirement is that the dataset must keep legal meaning, height desc
 
 A parcel should only become an authoritative 3D cadastral solid where the legal source supports that interpretation.
 Where the 3D geometry is generated from assumptions, defaults, terrain models, relative height expressions, or visualisation processes, the dataset must clearly record that it is derived and identify the source and method used.
+
+## References
+
+- [(ICSM (2023a) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)
+- [Landgate (2023) Types of Title to Land](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/land-titles/land-ownership-land-titles-and-landgate/typ-01-types-of-title-to-land)
+- [Landgate (2018) SPP-12 Three-dimensional plans](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/survey-and-plan/plan-preparation/spp-12-three-dimensional-plans/)

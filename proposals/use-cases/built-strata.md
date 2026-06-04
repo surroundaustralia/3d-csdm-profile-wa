@@ -316,3 +316,13 @@ Unit entitlement values can be recorded as integer values against the relevant p
 
 12. _Staged survey-strata conversion behaviour is supported_:  
 A later survey-strata conversion can be represented as a new lodged stage that replaces relevant built-strata elements on integration, while preserving required lineage such as vesting lots.
+
+## References
+
+- [ICSM (2023a) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)
+- [ICSM (2023b) WA Profile of the 3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/wa-profile/)
+- [Landgate (2023) Strata in WA](https://www.landgate.wa.gov.au/strata-and-community-titles/strata-titles/learn-about-strata/strata-in-wa/)
+- [Landgate (2022) STP-09 Scheme Plans](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/strata-titles/establishing-a-strata-scheme/stp-09-scheme-plans/)
+- [Landgate (2020a) STP-02 Lots](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/strata-titles/overview-of-strata-schemes/stp-02-lots/)
+- [Landgate (2020b) STP-14 Conversion of Strata Schemes to Survey Strata Schemes](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/strata-titles/amending-a-strata-scheme/stp-14-conversion-of-strata-schemes-to-survey-strata-schemes/)
+- [Western Australia (2026) Strata Titles Act 1985, Schedule 2A, section 3AB](https://www.legislation.wa.gov.au/legislation/statutes.nsf/RedirectURL?OpenAgent&query=mrdoc_48587.pdf)
