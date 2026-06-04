@@ -96,10 +96,6 @@ This ensures that a standard 2D parcel is not incorrectly treated as a legally d
 | Validation by representation level | Validation rules should depend on whether the parcel is 2D, 2.5D, height-described, jurisdictionally bounded, or 3D. A 2D parcel should not fail because it lacks 3D shell closure, while a derived 3D solid should be checked for closure and vertical-limit consistency. |
 | WA profile conformance             | The dataset should use WA profile values for CRS, vertical datum, parcel type, parcel purpose, survey type, survey purpose, provenance, height reference descriptions, and other jurisdiction-specific metadata where applicable.                                          |
 
-<!--
-The WA profile is relevant because it constrains WA CSDM datasets with WA-appropriate values, including horizontal CRS, vertical datum, parcel purpose, and potentially controlled vocabularies for height references and vertical extent status.
--->
-
 ## Primary actor
 
 Cadastral surveyor or cadastral data editor.
@@ -453,6 +449,6 @@ Where the 3D geometry is generated from assumptions, defaults, terrain models, r
 
 ## References
 
-- [(ICSM (2023a) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)
+- [ICSM (2023) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)
 - [Landgate (2023) Types of Title to Land](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/land-titles/land-ownership-land-titles-and-landgate/typ-01-types-of-title-to-land)
 - [Landgate (2018) SPP-12 Three-dimensional plans](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/survey-and-plan/plan-preparation/spp-12-three-dimensional-plans/)

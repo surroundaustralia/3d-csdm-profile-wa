@@ -25,7 +25,7 @@
     > The dataset may therefore represent common property either explicitly as common property geometry, or as an explicitly documented residual rule: scheme parcel/building extent minus lot extents. 
     > Where common property is not geometrically captured, the dataset should still record that the residual space is common property according to the scheme plan and statutory rule, rather than leaving it as an undocumented gap.
 
-    So from a cadastral information perspective common property is a thing that should be recognised.
+    So from a cadastral information perspective, common property is a thing that should be recognised.
     From this perspective, I think it is usually not sufficient to document only the explicit extent of individual rights and leave the extent of common rights undocumented.
     
     A better approach is to:
@@ -92,7 +92,7 @@ The 3D CSDM dataset may still carry simplified display features, survey points, 
 Landgate describes built-strata as schemes where lot boundaries, including height, are defined by reference to the building or buildings shown on the strata plan, while survey-strata lots are surveyed and shown on a survey-strata plan without buildings being shown [(Landgate, 2023)](https://www.landgate.wa.gov.au/strata-and-community-titles/strata-titles/learn-about-strata/strata-in-wa/).
 
 `PrimaryParcel` boundaries may be described in accordance with Strata legislation. 
-For example, following the Strata Titles Act 1985, [Schedlue 2A, section 3AB](https://www.legislation.wa.gov.au/legislation/statutes.nsf/RedirectURL?OpenAgent&query=mrdoc_48587.pdf) results in statements similar to the following for single tier strata schemes:
+For example, following the Strata Titles Act 1985, [Schedule 2A, section 3AB](https://www.legislation.wa.gov.au/legislation/statutes.nsf/RedirectURL?OpenAgent&query=mrdoc_48587.pdf) results in statements similar to the following for single tier strata schemes:
 
 > ...the boundaries of the lots or parts of the lots which are buildings on the strata plan are the external surfaces of those buildings.
 
@@ -147,8 +147,8 @@ These supporting elements should not automatically become cadastral database par
 
 <figure class="fig fig-wide">
   <img src="assets/strata-example.png" 
-       alt="Figure 1: Strata Elements Example">
-  <figcaption id="figure-1-strata-elements-example">Figure 1: Strata Elements Example</figcaption>
+       alt="Figure 1: Strata Elements Examples">
+  <figcaption id="figure-1-strata-elements-example">Figure 1: Strata Elements Examples</figcaption>
 </figure>
 
 ## Proposed 3D CSDM modelling pattern
@@ -173,7 +173,7 @@ These supporting elements should not automatically become cadastral database par
 | Survey points and annotations              | `SurveyPoint` features or equivalent annotation information for points of interest, comments, descriptors, service riser references and field-note information.                                                               |
 | Scheme plan metadata                       | CSD container metadata, survey purpose, survey type, CRS, vertical datum and provenance.                                                                                                                                      |
 
-A `BoundaryFace` will be useful because the 3D CSDM defines it as the orientable surface where two solids touch, and notes that a single orientable boundary face can be used to define the boundary faces of both touching features [(ICSM, 2023)](https://icsm-au.github.io/3d-csdm/docs/).
+A `BoundaryFace` will be useful because the 3D CSDM defines it as the orientable surface where two solids touch, and notes that a single orientable boundary face can be used to define the boundary faces of both touching features [(ICSM, 2023a)](https://icsm-au.github.io/3d-csdm/docs/).
 
 ## Strata element information to be tested
 
@@ -320,7 +320,7 @@ A later survey-strata conversion can be represented as a new lodged stage that r
 ## References
 
 - [ICSM (2023a) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)
-- [ICSM (2023b) WA Profile of the 3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/wa-profile/)
+- [ICSM (2023b) WA Profile of the 3D CSDM](https://icsm-au.github.io/3d-csdm/docs/wa-profile/)
 - [Landgate (2023) Strata in WA](https://www.landgate.wa.gov.au/strata-and-community-titles/strata-titles/learn-about-strata/strata-in-wa/)
 - [Landgate (2022) STP-09 Scheme Plans](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/strata-titles/establishing-a-strata-scheme/stp-09-scheme-plans/)
 - [Landgate (2020a) STP-02 Lots](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/strata-titles/overview-of-strata-schemes/stp-02-lots/)
