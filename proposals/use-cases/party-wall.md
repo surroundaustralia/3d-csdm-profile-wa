@@ -244,9 +244,50 @@ Client-supplied images can be included as figures or supporting documents. They 
 The following points need to be confirmed with Landgate before the use case is finalised:
 
 1. Whether the WA profile should use controlled vocabulary values for wall-boundary basis, or whether free text is sufficient for this test case.
-2. Whether `OccupationMark`, `OccupationFeature`, descriptor or annotation is the preferred class/pattern for each type of wall evidence.
-3. Whether common-property/shared-structure wall space should be represented explicitly in the 3D CSDM dataset, or only as display/interpretation information, when it is not loaded into the cadastral database.
-4. How old Form 5 wording should be referenced in modern digital submissions, especially where the same substantive certification facts are now represented through current scheme plan requirements, easement documentation, or Landgate procedures.
+2. Whether common-property/shared-structure wall space should be represented explicitly in the 3D CSDM dataset, or only as display/interpretation information, when it is not loaded into the cadastral database.
+3. How old Form 5 wording should be referenced in modern digital submissions, especially where the same substantive certification facts are now represented through current scheme plan requirements, easement documentation, or Landgate procedures.
+
+Illustrative example:
+```json
+{
+  "certificationAssertions": [
+    {
+      "type": "lotContainment",
+      "assertion": "allLotsWithinParentParcel",
+      "result": true,
+      "appliesTo": ["Lot 1", "Lot 2"],
+      "basis": "currentSchemePlanRequirement",
+      "legacyReference": "Former Form 5 certificate wording",
+      "evidence": ["schemePlan", "surveyObservations", "parentParcelBoundary"]
+    },
+    {
+      "type": "encroachmentDisclosure",
+      "assertion": "encroachmentIdentifiedAndDescribed",
+      "result": true,
+      "encroachmentFeature": "encroachment-001",
+      "nature": "wall encroachment",
+      "extentGeometry": "encroachment-001-geometry",
+      "basis": "currentSchemePlanRequirement",
+      "legacyReference": "Former Form 5 certificate wording"
+    },
+    {
+      "type": "encroachmentManagement",
+      "assertion": "encroachmentManagementTreatmentSpecified",
+      "result": true,
+      "managementTreatment": "controlledAndManagedAsCommonProperty",
+      "basis": "Strata Titles Act / scheme plan requirement"
+    },
+    {
+      "type": "easementRequirement",
+      "assertion": "appropriateEasementRequiredAndIdentified",
+      "result": true,
+      "easementReference": "Easement E-1",
+      "status": "lodged",
+      "appliesWhere": "encroachment is not onto a public road, street or way"
+    }
+  ]
+}
+```
 
 ## References
 

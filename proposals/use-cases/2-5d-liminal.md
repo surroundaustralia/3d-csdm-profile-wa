@@ -447,6 +447,16 @@ The central requirement is that the dataset must keep legal meaning, height desc
 A parcel should only become an authoritative 3D cadastral solid where the legal source supports that interpretation.
 Where the 3D geometry is generated from assumptions, defaults, terrain models, relative height expressions, or visualisation processes, the dataset must clearly record that it is derived and identify the source and method used.
 
+## Open confirmation points
+
+1.  Confirm that `zMin` / `zMax` are computable values, not legal descriptions, and that relative expressions should be represented separately.
+2.  Confirm formal support for `zMinDescription` / `zMaxDescription` or equivalent elements. We think this is important because legal text such as `8 metres below the upper surface level of the lowest ground floor` should not be collapsed into a simple numeric z-value.
+3.  Confirm the WA vocabulary for height references. Candidate values include `groundLevel`, `naturalSurface`, `finishedSurface`, `surfaceLevel`, `floorLevel`, `ceilingLevel`, `plateHeight`, `AHD`, `buildingSurface`, `wallSurface`, `floorSurface`, `ceilingSurface`, and `boundaryPlane`.
+4.  Confirm that null does not mean infinite. Want to confirm that omitted or `null` `zMin` / `zMax` values mean `not supplied` or `not applicable`, not `infinite`. Infinity or unconstrained extent should be explicit, for example `verticalExtentStatus = unconstrainedAbove` or `unconstrainedBelow`.
+5.  Confirm when a derived 3D solid is legally authoritative versus visualisation-only. Under what conditions can a derived solid be legally authoritative? Is it authoritative only when the source plan or legal instrument defines the parcel by surfaces, planes, AHD levels, or building elements? Or can a computed solid become authoritative once validated by Landgate?
+6.  Confirm how relative height descriptions are converted into computable geometry. For example, `15.7 m AHD` is directly computable, while `12 m above the upper surface level of the lowest ground floor` requires the floor level or surface to be available.
+7.  Confirm which WA default vertical limits, if any, should be applied automatically. For example, Crown Grant depth limits may be relevant in some cases, but the use case should not assume a default “infinite” parcel unless WA law or Landgate practice explicitly requires it.
+
 ## References
 
 - [ICSM (2023) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)

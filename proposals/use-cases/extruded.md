@@ -420,6 +420,10 @@ It must also have a computable height reference, vertical extent status, vertica
 A parcel should only become an authoritative 3D cadastral solid where the legal source supports that interpretation. 
 Where the 3D geometry is generated from assumptions, defaults, terrain models, relative height expressions, clipping rules, or visualisation processes, the dataset must clearly record that it is derived and identify the source and method used.
 
+## Open confirmation points
+
+1. Controlled vocabulary for height references: Confirm the final WA profile vocabulary: `groundLevel`, `naturalSurface`, `finishedSurface`, `surfaceLevel`, `floorLevel`, `ceilingLevel`, `plateHeight`, `AHD`, `buildingSurface`, etc.
+
 ## References
 
 - [ICSM (2023a) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)

@@ -317,6 +317,21 @@ Unit entitlement values can be recorded as integer values against the relevant p
 12. _Staged survey-strata conversion behaviour is supported_:  
 A later survey-strata conversion can be represented as a new lodged stage that replaces relevant built-strata elements on integration, while preserving required lineage such as vesting lots.
 
+## Open confirmation points
+
+1.  Should common property be captured only for 3D CSDM display and interpretation, or can it ever become a queryable cadastral volume in the database?
+2.  What is the minimum acceptable level of building detail needed to support built-strata boundary interpretation?
+3.  Should boundary definition wording be recorded at the scheme/header level, the individual boundary-face level, the individual parcel-part level, or a combination of these?
+    _Recommendation:_ Scheme/header wording where the rule applies generally; boundary-level wording where the rule varies by wall, floor, ceiling or lot part.
+4.  Confirm which fields should allow free text, and which should use controlled values.
+    _Recommendation:_ controlled values for broad classifications such as `innerFace`, `centreLine`, `upperSurface`, `underSurface`, `AHDHeight`; free text for plan wording, examiner comments, historical wording, unusual strata descriptions, and manual review notes.
+5.  We understand that the 3D CSDM should treat conversion to survey-strata as a new lodged stage, not as a direct transformation of the built-strata dataset.  
+    5.1. How should the new stage be linked to the existing built-strata scheme;
+    5.2. Should it use the same land name;
+    5.3. Which elements are replaced on integration;
+    5.4. Should superseded built-strata elements remain discoverable;
+    5.5. how should any vesting lots from the initial built-strata element are preserved.
+6. 
 ## References
 
 - [ICSM (2023a) 3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/docs/)
