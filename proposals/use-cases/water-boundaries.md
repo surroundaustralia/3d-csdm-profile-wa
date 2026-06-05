@@ -30,12 +30,14 @@ This use case tests whether the 3D CSDM and WA profile can represent a natural o
 - the distinction between tidal and non-tidal boundary definitions;
 - the distinction between surveyed, adopted, inferred, approximate, and annotated boundaries;
 - the distinction between fixed cadastral geometry and ambulatory natural boundary behaviour;
-- the relationship between the boundary and the affected parcel, waterbody, Crown land, adjoining parcels, or centreline of a watercourse; and
+- the relationship between the boundary and the affected parcel, water body, Crown land, adjoining parcels, or centreline of a watercourse; and
 - the lifecycle implications where the title or cadastral representation is amended because of gradual and imperceptible boundary movement.
 
 ## Relationship to existing use cases
 
-This use case should be a companion use case, not a replacement for the existing set. It focuses on natural and general water-boundary definition, evidence, annotation, uncertainty, and lifecycle behaviour. Other use cases may involve height, terrain, 3D parcels, strata, mining tenure, or infrastructure contexts that interact with water boundaries, but they should not replace the specific water-boundary evidence and legal-boundary pattern tested here.
+This use case should be a companion use case, not a replacement for the existing set. 
+It focuses on natural and general water-boundary definition, evidence, annotation, uncertainty, and lifecycle behaviour. 
+Other use cases may involve height, terrain, 3D parcels, strata, mining tenure, or infrastructure contexts that interact with water boundaries, but they should not replace the specific water-boundary evidence and legal-boundary pattern tested here.
 
 | Related use case                                                                                 | Relationship to this use case                                                                                                                                                                                                                                                                                                                                                                              |
 |--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -50,7 +52,7 @@ This use case should be a companion use case, not a replacement for the existing
 
 ## Use case statement
 
-**As a cadastral surveyor or cadastral data editor, I want to encode a WA natural or general water boundary, such as High Water Mark or ordinary high water line, in a 3D CSDM dataset, so that the legal boundary definition, survey evidence, AHD relationship, waterbody context, boundary annotations, uncertainty, ambulatory behaviour, and lifecycle history can be represented, validated, reviewed, displayed, and exchanged without confusing the observed physical water feature with the legal cadastral boundary.**
+**As a cadastral surveyor or cadastral data editor, I want to encode a WA natural or general water boundary, such as High Water Mark or ordinary high water line, in a 3D CSDM dataset, so that the legal boundary definition, survey evidence, AHD relationship, water body context, boundary annotations, uncertainty, ambulatory behaviour, and lifecycle history can be represented, validated, reviewed, displayed, and exchanged without confusing the observed physical water feature with the legal cadastral boundary.**
 
 ## Purpose
 
@@ -62,7 +64,7 @@ The use case should test that the dataset can:
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Natural boundary legal definition       | A water boundary may be defined by HWM, ordinary high water line, low water mark, centre thread, or another legal description. The dataset must preserve the legal boundary basis.                                                              |
 | Tidal versus non-tidal boundary type    | Tidal HWM and non-tidal ordinary high water line are determined differently and may rely on different evidence.                                                                                                                                 |
-| Waterbody context                       | The dataset must identify whether the boundary relates to ocean coast, tidal river, estuary, river, lake, swamp, watercourse, or other waterbody.                                                                                               |
+| Water body context                      | The dataset must identify whether the boundary relates to ocean coast, tidal river, estuary, river, lake, swamp, watercourse, or other water body.                                                                                              |
 | AHD relationship                        | Tidal HWM surveys may use levelling to an adopted HWM contour related to a recoverable datum, preferably AHD.                                                                                                                                   |
 | Ground evidence                         | Non-tidal ordinary high water line may rely on vegetation, soil, erosion, shelving, litter, geological evidence, or top of bank interpretation.                                                                                                 |
 | Survey method                           | The dataset should record whether the boundary was determined by levelling, traverse offsets, radiations, GNSS, terrestrial observations, tide observations, aerial photography, adopted values, historical survey evidence, or another method. |
@@ -86,7 +88,7 @@ This use case tests the following explicit WA water-boundary requirements and tr
 | Surveys of land bounded by water can involve complex legal situations and must adhere to legal principles and accuracy requirements.                                                                             | Record the legal boundary basis, source evidence, survey method, accuracy/quality information, and provenance.                                    |
 | For tidal waters, HWM is the ordinary high water at spring tides and is generally accepted as equivalent to Mean High Water Springs.                                                                             | Record `boundaryBasis = HWM`, `waterBoundaryType = tidal`, adopted tidal datum / HWM height, source, and method.                                  |
 | Tidal HWM surveys should use levelling techniques to set out an adopted HWM contour and relate the survey to a recoverable datum, preferably AHD.                                                                | Record AHD relationship, adopted HWM reduced level, levelling evidence, datum source, field records, and provenance.                              |
-| In tidal rivers or estuaries, tidal range and lag may differ from open sea and non-tidal effects may affect reliability.                                                                                         | Record waterbody context, tidal/non-tidal interpretation, observation period, reliability, and review notes.                                      |
+| In tidal rivers or estuaries, tidal range and lag may differ from open sea and non-tidal effects may affect reliability.                                                                                         | Record water body context, tidal/non-tidal interpretation, observation period, reliability, and review notes.                                     |
 | For non-tidal waters, ordinary high water line is an observable physical mark evidenced by vegetation, soil, surface markings, erosion, shelving, litter, and geological characteristics.                        | Record physical evidence features and the adopted boundary interpretation separately from the final legal boundary geometry.                      |
 | For non-tidal waters, top of bank is often adopted as the ordinary high water line, but historical high-bank interpretations may be erroneous.                                                                   | Record the adopted bank feature, evidence type, source, uncertainty, and whether review by Landgate / Inspector of Plans and Surveys is required. |
 | Where a parcel extends to the centre thread of an inland watercourse, both banks and the centreline of the watercourse should be defined.                                                                        | Support both-bank geometry, watercourse centreline, affected parcels, and relationships to the subject parcel.                                    |
@@ -94,7 +96,7 @@ This use case tests the following explicit WA water-boundary requirements and tr
 | The doctrine of accretion and erosion applies where boundary change is gradual and imperceptible.                                                                                                                | Record ambulatory-boundary status, change process, date/evidence, and lifecycle event for boundary update.                                        |
 | Where change is not gradual and imperceptible, the bank must be defined in the same position as immediately before the change.                                                                                   | Support fixed previous-boundary position and record evidence for non-gradual change or avulsion.                                                  |
 | Where large differences from original are encountered and the change occurred gradually and imperceptibly, a title may be amended under section 170 of the Transfer of Land Act 1893 based on a new survey plan. | Record title-amendment lifecycle event, source plan, affected parcels, original boundary, new boundary, and application basis.                    |
-| Water features that form part of a lot boundary should be shown by full black lines and suitably named where appropriate.                                                                                        | Encode the natural boundary as cadastral boundary geometry with name / waterbody context and boundary role.                                       |
+| Water features that form part of a lot boundary should be shown by full black lines and suitably named where appropriate.                                                                                        | Encode the natural boundary as cadastral boundary geometry with name / water body context and boundary role.                                      |
 | When HWM is the boundary, plan notation should refer to HWM as defined in the Land Administration Act 1997.                                                                                                      | Preserve statutory boundary wording as annotation or structured boundary-basis metadata.                                                          |
 | Showing a water boundary as an abuttal requires annotation as to the nature of the boundary definition.                                                                                                          | Record abuttal relationship and boundary-definition annotation such as HWM, low water mark, or not riparian.                                      |
 | If boundaries are determined from aerial photography, annotation should identify that source.                                                                                                                    | Record source imagery, date, method, uncertainty, and annotation text.                                                                            |
@@ -234,13 +236,13 @@ Where a water boundary has changed and a new survey plan supports a title amendm
 
 1. A WA 3D CSDM dataset container exists or can be created.
 2. The parcel has a legal appellation, parcel type, parcel purpose, CRS, and survey provenance.
-3. The source plan, title, survey instruction, Crown record, legal instrument, or plan notation identifies a water boundary or waterbody abuttal.
+3. The source plan, title, survey instruction, Crown record, legal instrument, or plan notation identifies a water boundary or water body abuttal.
 4. The boundary type is known or can be classified as tidal HWM, non-tidal ordinary high-water line, low watermark, centre thread, not riparian, adopted water boundary, or another controlled value.
 5. The water body context is known or can be recorded.
 6. The survey method and source evidence are available or can be recorded as not supplied / unresolved / adopted.
 7. Where a height or contour is used, the vertical datum, AHD value, observation method, source, and provenance are recorded.
 8. Where aerial photography, imagery, historical survey, or adopted values are used, source metadata, date, and uncertainty are recorded.
-9. The dataset can distinguish legal boundary geometry from observed physical evidence and contextual waterbody geometry.
+9. The dataset can distinguish legal boundary geometry from observed physical evidence and contextual waterboard geometry.
 
 ## Proposed 3D CSDM modelling pattern
 
@@ -250,7 +252,7 @@ Where a water boundary has changed and a new survey plan supports a title amendm
 | Parcel legal identity                  | `Appellation`, lot identifier, plan identifier, title reference, or other legal identifier.                                                                    |
 | Water boundary segment                 | Boundary edge, boundary curve, boundary feature, or geometry component of the cadastral parcel boundary.                                                       |
 | Boundary basis                         | Structured boundary-basis attribute or annotation, such as `highWaterMark`, `ordinaryHighWaterLine`, `lowWaterMark`, `centreThread`, or `notRiparianBoundary`. |
-| Waterbody                              | Contextual feature, related natural feature, waterbody polygon, watercourse centreline, or supporting feature.                                                 |
+| Water body                             | Contextual feature, related natural feature, water body polygon, watercourse centreline, or supporting feature.                                                |
 | Adopted HWM / ordinary high water line | Cadastral boundary geometry or adopted boundary curve linked to evidence and provenance.                                                                       |
 | Observed physical evidence             | Survey observations, evidence points, bank lines, vegetation marks, erosion marks, debris lines, aerial imagery linework, or supporting observations.          |
 | AHD contour evidence                   | Survey points, observations, vertical datum metadata, adopted HWM height, and plan annotation.                                                                 |
@@ -260,13 +262,13 @@ Where a water boundary has changed and a new survey plan supports a title amendm
 | Accretion / erosion evidence           | Provenance activity, change event, evidence bundle, or lifecycle history.                                                                                      |
 | Avulsion / sudden change evidence      | Evidence bundle and legal interpretation supporting fixed former boundary position.                                                                            |
 | Title amendment event                  | Lifecycle event linked to new survey plan, original boundary, amended boundary, affected parcels, and application basis.                                       |
-| Affected adjoining parcels             | Topological or cadastral relationship to adjoining lots, Crown land, waterbody, parcel across watercourse, or centre thread.                                   |
+| Affected adjoining parcels             | Topological or cadastral relationship to adjoining lots, Crown land, water body, parcel across watercourse, or centre thread.                                  |
 | WA metadata                            | Horizontal CRS, vertical datum where used, survey type, survey purpose, parcel type, parcel purpose, source plan, field record, and provenance.                |
 
 ## Main flow
 
 1. _Create the WA 3D CSDM dataset container_  
-   The dataset is created as a cadastral survey dataset containing parcels, boundary geometry, survey observations, waterbody context, supporting documents, annotations, and provenance.
+   The dataset is created as a cadastral survey dataset containing parcels, boundary geometry, survey observations, water body context, supporting documents, annotations, and provenance.
 
 2. _Identify the subject parcel and source material_  
    The surveyor or editor records the parcel, source title, plan, field record, Crown record, deposited plan, survey instruction, legal instrument, or other source that identifies the water boundary.
@@ -308,7 +310,7 @@ Where a water boundary has changed and a new survey plan supports a title amendm
     Where the boundary differs from the original and title amendment is required or has occurred, the dataset records the original boundary, new boundary, evidence of gradual and imperceptible change, affected parcels, application basis, and lifecycle event.
 
 15. _Validate the dataset_  
-    Validation checks confirm that the water boundary basis, annotations, evidence, survey method, AHD relationship, parcel geometry, waterbody context, abuttals, lifecycle history, and WA profile values are complete and consistent.
+    Validation checks confirm that the water boundary basis, annotations, evidence, survey method, AHD relationship, parcel geometry, water body context, abuttals, lifecycle history, and WA profile values are complete and consistent.
 
 16. _Prepare exchange, review, and display outputs_  
     The dataset supports 3D CSDM exchange, Landgate review, cadastral database integration, plan interpretation, 3D visualisation, and downstream use. Display styling remains the responsibility of the viewer.
@@ -329,7 +331,7 @@ Where a water boundary has changed and a new survey plan supports a title amendm
 | HWM height above AHD is adopted                                        | Record `High Water Mark (at ... m above AHD)` as both structured data and preserved annotation text.                                                 |
 | Boundary evidence is ambiguous                                         | Flag for manual review / Inspector of Plans and Surveys resolution before lodgement.                                                                 |
 | Water boundary crosses a 3D parcel or height-limited parcel            | Link to the height-description or 3D parcel use case as needed, but keep the water-boundary evidence and legal boundary basis explicit.              |
-| Waterbody geometry and cadastral boundary differ                       | Encode the waterbody as contextual geometry and the cadastral boundary as legal boundary geometry. Link them through evidence/provenance.            |
+| Water body geometry and cadastral boundary differ                      | Encode the water body as contextual geometry and the cadastral boundary as legal boundary geometry. Link them through evidence/provenance.           |
 | Boundary is only approximate or adopted                                | Classify as adopted, approximate, or derived, and record source and uncertainty.                                                                     |
 
 ## Validation requirements
@@ -381,7 +383,7 @@ The dataset should support validation of:
 ## Acceptance outcomes
 
 1. _The natural boundary is represented as a cadastral boundary_  
-   The dataset represents the water boundary as a legal cadastral boundary segment or boundary component where applicable, not merely as a contextual waterbody feature.
+   The dataset represents the water boundary as a legal cadastral boundary segment or boundary component where applicable, not merely as a contextual water body feature.
 
 2. _The legal boundary basis is explicit_  
    The dataset records whether the boundary is HWM, ordinary high water line, low water mark, centre thread, not riparian, or another controlled type.

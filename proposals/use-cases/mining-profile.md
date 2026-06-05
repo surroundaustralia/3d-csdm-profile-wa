@@ -58,7 +58,8 @@ A dataset should fail mining-profile validation if a feature with a mining tenem
 
 ## Relationship to existing use cases
 
-This use case should be a companion use case, not a replacement for the existing set. It focuses on the mining-profile requirement to represent mining tenements as `SecondaryCadastralParcel` features with mining-specific vocabulary, survey evidence, marking-out evidence, lodgement metadata, affected-land relationships, and lifecycle history.
+This use case should be a companion use case, not a replacement for the existing set. 
+It focuses on the mining-profile requirement to represent mining tenements as `SecondaryCadastralParcel` features with mining-specific vocabulary, survey evidence, marking-out evidence, lodgement metadata, affected-land relationships, and lifecycle history.
 
 | Related use case                                                                                 | Relationship to this use case                                                                                                                                                                                                                                                                                                                                              |
 |--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -38,7 +38,8 @@ The dataset must preserve the relationship between:
 
 ## Relationship to existing use cases
 
-This use case should be a companion use case, not a replacement for the existing set. It sits in the middle of the use-case set: it reuses the general height, extrusion, terrain, evidence, and parcel-classification patterns where they apply, but focuses on plan-defined 3D parcels and interests whose legal extent is the tunnel, subsurface volume, airspace volume, or related 3D interest itself.
+This use case should be a companion use case, not a replacement for the existing set. 
+It sits in the middle of the use-case set: it reuses the general height, extrusion, terrain, evidence, and parcel-classification patterns where they apply, but focuses on plan-defined 3D parcels and interests whose legal extent is the tunnel, subsurface volume, airspace volume, or related 3D interest itself.
 
 | Related use case                                                                                 | Relationship to this use case                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
