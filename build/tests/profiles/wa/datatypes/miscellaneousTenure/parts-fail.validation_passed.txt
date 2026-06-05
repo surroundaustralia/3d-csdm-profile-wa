@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-06-05T17:43:27.457278+00:00
+Generated 2026-06-05T22:44:44.727952+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -46,15 +46,15 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
+ - Shape ex:NamePartShape: _:N8747b1af955c4c42bb67d8b0a28a09d9,_:Ne9d3c11e709b483fb3bbe069a2ec8f46
  - Shape ex:NamedObjectShape: *none*
- - Shape ex:NamePartShape: _:Naf26fe4890dc4fa8998def2037897bd3,_:N203feb8afc024d25a460e65970f04046
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n62a3650a8bbe42c183b8db3ce2b37b1ab1: *none*
+ - Shape _:n50e91b1092d04c5f9f0529f3e631acb4b1: *none*
 
 === End SHACL ===
 

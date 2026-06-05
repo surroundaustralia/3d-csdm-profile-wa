@@ -47,12 +47,12 @@
     commonpatterns:name [ rdfs:label "Peg 1 DP 422532" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType> ],
+                [ rdfs:label "Peg" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/MarkType> ],
                 [ rdfs:label "422532" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/MarkIdentifier> ],
-                [ rdfs:label "Peg" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/MarkType> ] ] ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/MarkIdentifier> ] ] ;
     commonpatterns:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;

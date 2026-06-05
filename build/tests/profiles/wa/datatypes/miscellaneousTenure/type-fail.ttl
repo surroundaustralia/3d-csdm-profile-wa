@@ -6,8 +6,8 @@
 [] rdfs:label "L-3114-12345" ;
     dct:hasPart [ rdfs:label "12345" ;
             commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/legalDescriptor> ],
-        [ commonpatterns:namePartRef wa-parcel-type:l ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/tenureClass> ],
         [ rdfs:label "3114" ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/documentOrGrantReference> ] .
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/documentOrGrantReference> ],
+        [ commonpatterns:namePartRef wa-parcel-type:l ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/tenureClass> ] .
 
