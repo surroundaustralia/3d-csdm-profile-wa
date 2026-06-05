@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.wa-core - Western Australia Cadastral Survey Data Exchange Profile
-Generated 2026-06-04T19:07:17.952015+00:00
+Generated 2026-06-05T17:45:36.838274+00:00
 === Files ===
 Using examples/circle-parcel.json from examples
 JSON-LD context is present - uplifting
@@ -59,7 +59,7 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n929888ee940a45e7ab06f63a5039be6db1: *none*
+ - Shape _:nfdef5fea10e24d8a97385f2df8a699acb1: *none*
 
 
 ** Validation error **
@@ -70,8 +70,8 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ; rdfs:label Literal("Area") ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType>
+  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ; rdfs:label Literal("95092") ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier>
   	Result Path: commonpatterns:namePartType
   	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
@@ -84,8 +84,29 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
+  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ; rdfs:label Literal("214866") ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier>
+  	Result Path: commonpatterns:namePartType
+  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
+  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
+  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ; rdfs:label Literal("Lot") ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType>
+  	Result Path: commonpatterns:namePartType
+  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
+  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
   	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType> ; rdfs:label Literal("DP") ]
   	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType>
+  	Result Path: commonpatterns:namePartType
+  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
+  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
+  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ; rdfs:label Literal("Area") ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType>
   	Result Path: commonpatterns:namePartType
   	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
@@ -102,51 +123,18 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType>
   	Result Path: commonpatterns:namePartType
   	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
-  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ; rdfs:label Literal("Lot") ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType>
-  	Result Path: commonpatterns:namePartType
-  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
-  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ; rdfs:label Literal("95092") ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier>
-  	Result Path: commonpatterns:namePartType
-  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
-  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ; rdfs:label Literal("214866") ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier>
-  	Result Path: commonpatterns:namePartType
-  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
  - Shape ex:NamedObjectShape: *none*
- - Shape ex:NamePartShape: <https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart
+ - Shape ex:NamePartShape: <https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/11636634>/parcel:appellation/dcterms:hasPart,<https://www.wa-example.com/features/12595541>/parcel:appellation/dcterms:hasPart
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-parcelType: <https://www.wa-example.com/features/12595541>,<https://www.wa-example.com/features/11636634>
  - Shape jcl:testBoundVocab-parcelInterest: <https://www.wa-example.com/features/11636634>/parcel:interest,<https://www.wa-example.com/features/12595541>/parcel:interest
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testCRS: <https://www.wa-example.com/features/DP_423693>
- - Shape :testSurveyMetadata: <https://www.wa-example.com/features/DP_423693>
- - Shape :testDistanceType: *none*
- - Shape :testAngleType: *none*
- - Shape :testVHD: *none*
- - Shape :testCompoundCRS: *none*
+ - Shape jcl:testBoundVocab-parcelType: <https://www.wa-example.com/features/12595541>,<https://www.wa-example.com/features/11636634>
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
   Validation Report
@@ -160,32 +148,62 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor: *none*
- - Shape :bindSurveyObservation-angle-and-distance-types: *none*
  - Shape :annotate-madeBySensor: *none*
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: *none*
  - Shape :testInCollectionOrMember-procedure: *none*
+ - Shape :bindSurveyObservation-angle-and-distance-types: *none*
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+ - Shape :testSurveyMetadata: <https://www.wa-example.com/features/DP_423693>
+ - Shape :testCRS: <https://www.wa-example.com/features/DP_423693>
+ - Shape :testDistanceType: *none*
+ - Shape :testVHD: *none*
+ - Shape :testAngleType: *none*
+ - Shape :testCompoundCRS: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-condition: <https://www.wa-example.com/features/10008>/surv:monumentedBy,<https://www.wa-example.com/features/10003>/surv:monumentedBy,<https://www.wa-example.com/features/10007>/surv:monumentedBy,<https://www.wa-example.com/features/100012>/surv:monumentedBy,<https://www.wa-example.com/features/10001>/surv:monumentedBy,<https://www.wa-example.com/features/10009>/surv:monumentedBy,<https://www.wa-example.com/features/100014>/surv:monumentedBy,<https://www.wa-example.com/features/10004>/surv:monumentedBy,<https://www.wa-example.com/features/10006>/surv:monumentedBy,<https://www.wa-example.com/features/100015>/surv:monumentedBy,<https://www.wa-example.com/features/10005>/surv:monumentedBy,<https://www.wa-example.com/features/10002>/surv:monumentedBy,<https://www.wa-example.com/features/100010>/surv:monumentedBy,<https://www.wa-example.com/features/16040422>/surv:monumentedBy,<https://www.wa-example.com/features/100011>/surv:monumentedBy
- - Shape jcl:testBoundVocab-pt-quality-class: <https://www.wa-example.com/features/100011>,<https://www.wa-example.com/features/10007>,<https://www.wa-example.com/features/100015>,<https://www.wa-example.com/features/10009>,<https://www.wa-example.com/features/10005>,<https://www.wa-example.com/features/16040422>,<https://www.wa-example.com/features/10004>,<https://www.wa-example.com/features/10001>,<https://www.wa-example.com/features/10006>,<https://www.wa-example.com/features/100010>,<https://www.wa-example.com/features/100012>,<https://www.wa-example.com/features/100014>,<https://www.wa-example.com/features/10003>,<https://www.wa-example.com/features/10002>,<https://www.wa-example.com/features/10008>
- - Shape jcl:testBoundVocab-surveypoint-purpose: <https://www.wa-example.com/features/100011>,<https://www.wa-example.com/features/10007>,<https://www.wa-example.com/features/100015>,<https://www.wa-example.com/features/10009>,<https://www.wa-example.com/features/10005>,<https://www.wa-example.com/features/16040422>,<https://www.wa-example.com/features/10004>,<https://www.wa-example.com/features/10001>,<https://www.wa-example.com/features/10006>,<https://www.wa-example.com/features/100010>,<https://www.wa-example.com/features/100012>,<https://www.wa-example.com/features/100014>,<https://www.wa-example.com/features/10003>,<https://www.wa-example.com/features/10002>,<https://www.wa-example.com/features/10008>
+ - Shape jcl:testBoundVocab-condition: <https://www.wa-example.com/features/100010>/surv:monumentedBy,<https://www.wa-example.com/features/16040422>/surv:monumentedBy,<https://www.wa-example.com/features/10009>/surv:monumentedBy,<https://www.wa-example.com/features/10006>/surv:monumentedBy,<https://www.wa-example.com/features/100014>/surv:monumentedBy,<https://www.wa-example.com/features/10007>/surv:monumentedBy,<https://www.wa-example.com/features/10002>/surv:monumentedBy,<https://www.wa-example.com/features/100015>/surv:monumentedBy,<https://www.wa-example.com/features/10008>/surv:monumentedBy,<https://www.wa-example.com/features/100012>/surv:monumentedBy,<https://www.wa-example.com/features/10004>/surv:monumentedBy,<https://www.wa-example.com/features/10005>/surv:monumentedBy,<https://www.wa-example.com/features/10003>/surv:monumentedBy,<https://www.wa-example.com/features/10001>/surv:monumentedBy,<https://www.wa-example.com/features/100011>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-pt-quality-class: <https://www.wa-example.com/features/10001>,<https://www.wa-example.com/features/10007>,<https://www.wa-example.com/features/10009>,<https://www.wa-example.com/features/10003>,<https://www.wa-example.com/features/100011>,<https://www.wa-example.com/features/100012>,<https://www.wa-example.com/features/100014>,<https://www.wa-example.com/features/10005>,<https://www.wa-example.com/features/100015>,<https://www.wa-example.com/features/10008>,<https://www.wa-example.com/features/100010>,<https://www.wa-example.com/features/16040422>,<https://www.wa-example.com/features/10004>,<https://www.wa-example.com/features/10006>,<https://www.wa-example.com/features/10002>
+ - Shape jcl:testBoundVocab-surveypoint-purpose: <https://www.wa-example.com/features/10001>,<https://www.wa-example.com/features/10007>,<https://www.wa-example.com/features/10009>,<https://www.wa-example.com/features/10003>,<https://www.wa-example.com/features/100011>,<https://www.wa-example.com/features/100012>,<https://www.wa-example.com/features/100014>,<https://www.wa-example.com/features/10005>,<https://www.wa-example.com/features/100015>,<https://www.wa-example.com/features/10008>,<https://www.wa-example.com/features/100010>,<https://www.wa-example.com/features/16040422>,<https://www.wa-example.com/features/10004>,<https://www.wa-example.com/features/10006>,<https://www.wa-example.com/features/10002>
  - Shape jcl:testBoundVocab-vector-purpose: <https://www.wa-example.com/features/observedVectors>
- - Shape jcl:testBoundVocab-form: <https://www.wa-example.com/features/10008>/surv:monumentedBy,<https://www.wa-example.com/features/10003>/surv:monumentedBy,<https://www.wa-example.com/features/10007>/surv:monumentedBy,<https://www.wa-example.com/features/100012>/surv:monumentedBy,<https://www.wa-example.com/features/10001>/surv:monumentedBy,<https://www.wa-example.com/features/10009>/surv:monumentedBy,<https://www.wa-example.com/features/100014>/surv:monumentedBy,<https://www.wa-example.com/features/10004>/surv:monumentedBy,<https://www.wa-example.com/features/10006>/surv:monumentedBy,<https://www.wa-example.com/features/100015>/surv:monumentedBy,<https://www.wa-example.com/features/10005>/surv:monumentedBy,<https://www.wa-example.com/features/10002>/surv:monumentedBy,<https://www.wa-example.com/features/100010>/surv:monumentedBy,<https://www.wa-example.com/features/16040422>/surv:monumentedBy,<https://www.wa-example.com/features/100011>/surv:monumentedBy
- - Shape jcl:testBoundVocab-state: <https://www.wa-example.com/features/10008>/surv:monumentedBy,<https://www.wa-example.com/features/10003>/surv:monumentedBy,<https://www.wa-example.com/features/10007>/surv:monumentedBy,<https://www.wa-example.com/features/100012>/surv:monumentedBy,<https://www.wa-example.com/features/10001>/surv:monumentedBy,<https://www.wa-example.com/features/10009>/surv:monumentedBy,<https://www.wa-example.com/features/100014>/surv:monumentedBy,<https://www.wa-example.com/features/10004>/surv:monumentedBy,<https://www.wa-example.com/features/10006>/surv:monumentedBy,<https://www.wa-example.com/features/100015>/surv:monumentedBy,<https://www.wa-example.com/features/10005>/surv:monumentedBy,<https://www.wa-example.com/features/10002>/surv:monumentedBy,<https://www.wa-example.com/features/100010>/surv:monumentedBy,<https://www.wa-example.com/features/16040422>/surv:monumentedBy,<https://www.wa-example.com/features/100011>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-state: <https://www.wa-example.com/features/100010>/surv:monumentedBy,<https://www.wa-example.com/features/16040422>/surv:monumentedBy,<https://www.wa-example.com/features/10009>/surv:monumentedBy,<https://www.wa-example.com/features/10006>/surv:monumentedBy,<https://www.wa-example.com/features/100014>/surv:monumentedBy,<https://www.wa-example.com/features/10007>/surv:monumentedBy,<https://www.wa-example.com/features/10002>/surv:monumentedBy,<https://www.wa-example.com/features/100015>/surv:monumentedBy,<https://www.wa-example.com/features/10008>/surv:monumentedBy,<https://www.wa-example.com/features/100012>/surv:monumentedBy,<https://www.wa-example.com/features/10004>/surv:monumentedBy,<https://www.wa-example.com/features/10005>/surv:monumentedBy,<https://www.wa-example.com/features/10003>/surv:monumentedBy,<https://www.wa-example.com/features/10001>/surv:monumentedBy,<https://www.wa-example.com/features/100011>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-form: <https://www.wa-example.com/features/100010>/surv:monumentedBy,<https://www.wa-example.com/features/16040422>/surv:monumentedBy,<https://www.wa-example.com/features/10009>/surv:monumentedBy,<https://www.wa-example.com/features/10006>/surv:monumentedBy,<https://www.wa-example.com/features/100014>/surv:monumentedBy,<https://www.wa-example.com/features/10007>/surv:monumentedBy,<https://www.wa-example.com/features/10002>/surv:monumentedBy,<https://www.wa-example.com/features/100015>/surv:monumentedBy,<https://www.wa-example.com/features/10008>/surv:monumentedBy,<https://www.wa-example.com/features/100012>/surv:monumentedBy,<https://www.wa-example.com/features/10004>/surv:monumentedBy,<https://www.wa-example.com/features/10005>/surv:monumentedBy,<https://www.wa-example.com/features/10003>/surv:monumentedBy,<https://www.wa-example.com/features/10001>/surv:monumentedBy,<https://www.wa-example.com/features/100011>/surv:monumentedBy
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD: *none*
+ - Shape container:CSD-seeAlso: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :SecondaryParcel: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :Apellation: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :Parcel: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :ParcelQualityClass: *none*
+ - Shape :ParcelType: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :ParcelState: *none*
+ - Shape :EstateParcel: *none*
+ - Shape :LandInterest: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -194,41 +212,23 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
  - Shape :testFOIexists: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :LandInterest: *none*
- - Shape :ParcelState: *none*
- - Shape :ParcelQualityClass: *none*
- - Shape :ParcelType: *none*
- - Shape :PropertyUnit: *none*
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :EstateParcel: *none*
- - Shape :Apellation: *none*
- - Shape :Parcel: *none*
-
 Validation result for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n427e37b9b3b54db8b63ec7aa87b80584b3: *none*
- - Shape _:n427e37b9b3b54db8b63ec7aa87b80584b1: <https://www.wa-example.com/features/16040422>/dcterms:spatial,<https://www.wa-example.com/features/10001>/dcterms:spatial,<https://www.wa-example.com/features/10004>/dcterms:spatial,<https://www.wa-example.com/features/10005>/dcterms:spatial,<https://www.wa-example.com/features/10008>/dcterms:spatial,<https://www.wa-example.com/features/10002>/dcterms:spatial,<https://www.wa-example.com/features/10009>/dcterms:spatial,<https://www.wa-example.com/features/10007>/dcterms:spatial,<https://www.wa-example.com/features/100012>/dcterms:spatial,<https://www.wa-example.com/features/100014>/dcterms:spatial,<https://www.wa-example.com/features/100011>/dcterms:spatial,<https://www.wa-example.com/features/10006>/dcterms:spatial,<https://www.wa-example.com/features/100010>/dcterms:spatial,<https://www.wa-example.com/features/10003>/dcterms:spatial,<https://www.wa-example.com/features/100015>/dcterms:spatial
+ - Shape _:n2bf39251b6d7400b87f2f3c004e77099b1: <https://www.wa-example.com/features/100015>/dcterms:spatial,<https://www.wa-example.com/features/100012>/dcterms:spatial,<https://www.wa-example.com/features/16040422>/dcterms:spatial,<https://www.wa-example.com/features/10008>/dcterms:spatial,<https://www.wa-example.com/features/100014>/dcterms:spatial,<https://www.wa-example.com/features/10006>/dcterms:spatial,<https://www.wa-example.com/features/10004>/dcterms:spatial,<https://www.wa-example.com/features/10005>/dcterms:spatial,<https://www.wa-example.com/features/10009>/dcterms:spatial,<https://www.wa-example.com/features/100010>/dcterms:spatial,<https://www.wa-example.com/features/10007>/dcterms:spatial,<https://www.wa-example.com/features/100011>/dcterms:spatial,<https://www.wa-example.com/features/10002>/dcterms:spatial,<https://www.wa-example.com/features/10001>/dcterms:spatial,<https://www.wa-example.com/features/10003>/dcterms:spatial
+ - Shape _:n2bf39251b6d7400b87f2f3c004e77099b3: *none*
 
 Validation result for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape toporules:testTopoReferencesExist: <https://www.wa-example.com/features/2005>/geojson:topology,<https://www.wa-example.com/features/11636634>/geojson:topology,<https://www.wa-example.com/features/2007>/geojson:topology,<https://www.wa-example.com/features/20015>/geojson:topology,<https://www.wa-example.com/features/2003>/geojson:topology,<https://www.wa-example.com/features/20014>/geojson:topology,<https://www.wa-example.com/features/2004>/geojson:topology,<https://www.wa-example.com/features/20010>/geojson:topology,<https://www.wa-example.com/features/20013>/geojson:topology,<https://www.wa-example.com/features/12595541>/geojson:topology,<https://www.wa-example.com/features/17842481>/geojson:topology,<https://www.wa-example.com/features/2002>/geojson:topology,<https://www.wa-example.com/features/2008>/geojson:topology,<https://www.wa-example.com/features/2006>/geojson:topology,<https://www.wa-example.com/features/20011>/geojson:topology,<https://www.wa-example.com/features/2009>/geojson:topology,<https://www.wa-example.com/features/2001>/geojson:topology
+ - Shape toporules:testTopoReferencesExist: <https://www.wa-example.com/features/2003>/geojson:topology,<https://www.wa-example.com/features/2004>/geojson:topology,<https://www.wa-example.com/features/20014>/geojson:topology,<https://www.wa-example.com/features/20010>/geojson:topology,<https://www.wa-example.com/features/20011>/geojson:topology,<https://www.wa-example.com/features/20015>/geojson:topology,<https://www.wa-example.com/features/2009>/geojson:topology,<https://www.wa-example.com/features/2002>/geojson:topology,<https://www.wa-example.com/features/11636634>/geojson:topology,<https://www.wa-example.com/features/2001>/geojson:topology,<https://www.wa-example.com/features/2005>/geojson:topology,<https://www.wa-example.com/features/2007>/geojson:topology,<https://www.wa-example.com/features/2008>/geojson:topology,<https://www.wa-example.com/features/2006>/geojson:topology,<https://www.wa-example.com/features/17842481>/geojson:topology,<https://www.wa-example.com/features/12595541>/geojson:topology,<https://www.wa-example.com/features/20013>/geojson:topology
+ - Shape toporules:testTopoEdgesReferencePoints: <https://www.wa-example.com/features/2003>/geojson:topology,<https://www.wa-example.com/features/20013>/geojson:topology,<https://www.wa-example.com/features/2005>/geojson:topology,<https://www.wa-example.com/features/2001>/geojson:topology,<https://www.wa-example.com/features/2007>/geojson:topology,<https://www.wa-example.com/features/2008>/geojson:topology,<https://www.wa-example.com/features/2006>/geojson:topology,<https://www.wa-example.com/features/20010>/geojson:topology,<https://www.wa-example.com/features/20014>/geojson:topology,<https://www.wa-example.com/features/20015>/geojson:topology,<https://www.wa-example.com/features/20011>/geojson:topology,<https://www.wa-example.com/features/2004>/geojson:topology,<https://www.wa-example.com/features/2009>/geojson:topology,<https://www.wa-example.com/features/2002>/geojson:topology
  - Shape toporules:testTopoDirectedReferencesExist: *none*
- - Shape toporules:testTopoLinesReferencePoints: <https://www.wa-example.com/features/2002>/geojson:topology,<https://www.wa-example.com/features/2005>/geojson:topology,<https://www.wa-example.com/features/2009>/geojson:topology,<https://www.wa-example.com/features/2007>/geojson:topology,<https://www.wa-example.com/features/20015>/geojson:topology,<https://www.wa-example.com/features/2008>/geojson:topology,<https://www.wa-example.com/features/20014>/geojson:topology,<https://www.wa-example.com/features/2006>/geojson:topology,<https://www.wa-example.com/features/2004>/geojson:topology,<https://www.wa-example.com/features/20011>/geojson:topology,<https://www.wa-example.com/features/20010>/geojson:topology,<https://www.wa-example.com/features/20013>/geojson:topology,<https://www.wa-example.com/features/2003>/geojson:topology,<https://www.wa-example.com/features/2001>/geojson:topology
- - Shape toporules:testTopoEdgesReferencePoints: <https://www.wa-example.com/features/2002>/geojson:topology,<https://www.wa-example.com/features/2005>/geojson:topology,<https://www.wa-example.com/features/2009>/geojson:topology,<https://www.wa-example.com/features/2007>/geojson:topology,<https://www.wa-example.com/features/20015>/geojson:topology,<https://www.wa-example.com/features/2008>/geojson:topology,<https://www.wa-example.com/features/20014>/geojson:topology,<https://www.wa-example.com/features/2006>/geojson:topology,<https://www.wa-example.com/features/2004>/geojson:topology,<https://www.wa-example.com/features/20011>/geojson:topology,<https://www.wa-example.com/features/20010>/geojson:topology,<https://www.wa-example.com/features/20013>/geojson:topology,<https://www.wa-example.com/features/2003>/geojson:topology,<https://www.wa-example.com/features/2001>/geojson:topology
+ - Shape toporules:testTopoLinesReferencePoints: <https://www.wa-example.com/features/2003>/geojson:topology,<https://www.wa-example.com/features/20013>/geojson:topology,<https://www.wa-example.com/features/2005>/geojson:topology,<https://www.wa-example.com/features/2001>/geojson:topology,<https://www.wa-example.com/features/2007>/geojson:topology,<https://www.wa-example.com/features/2008>/geojson:topology,<https://www.wa-example.com/features/2006>/geojson:topology,<https://www.wa-example.com/features/20010>/geojson:topology,<https://www.wa-example.com/features/20014>/geojson:topology,<https://www.wa-example.com/features/20015>/geojson:topology,<https://www.wa-example.com/features/20011>/geojson:topology,<https://www.wa-example.com/features/2004>/geojson:topology,<https://www.wa-example.com/features/2009>/geojson:topology,<https://www.wa-example.com/features/2002>/geojson:topology
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
@@ -236,22 +236,22 @@ Validation result for https://opengeospatial.github.io/bblocks/registereditems/g
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
  - Shape geojson:GeometryShape: *none*
- - Shape geojson:FeatureShape: <https://www.wa-example.com/features/100015>,<https://www.wa-example.com/features/2005>,<https://www.wa-example.com/features/10009>,<https://www.wa-example.com/features/16040422>,<https://www.wa-example.com/features/10004>,<https://www.wa-example.com/features/2003>,<https://www.wa-example.com/features/20015>,<https://www.wa-example.com/features/10003>,<https://www.wa-example.com/features/20011>,<https://www.wa-example.com/features/100012>,<https://www.wa-example.com/features/100011>,<https://www.wa-example.com/features/17842481>,<https://www.wa-example.com/features/2001>,<https://www.wa-example.com/features/2002>,<https://www.wa-example.com/features/11636634>,<https://www.wa-example.com/features/2004>,<https://www.wa-example.com/features/100014>,<https://www.wa-example.com/features/2008>,<https://www.wa-example.com/features/10007>,<https://www.wa-example.com/features/100010>,<https://www.wa-example.com/features/20014>,<https://www.wa-example.com/features/20010>,<https://www.wa-example.com/features/10002>,<https://www.wa-example.com/features/2009>,<https://www.wa-example.com/features/10005>,<https://www.wa-example.com/features/10006>,<https://www.wa-example.com/features/10001>,<https://www.wa-example.com/features/2006>,<https://www.wa-example.com/features/2007>,<https://www.wa-example.com/features/12595541>,<https://www.wa-example.com/features/20013>,<https://www.wa-example.com/features/10008>
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: <https://www.wa-example.com/features/10001>,<https://www.wa-example.com/features/2004>,<https://www.wa-example.com/features/2003>,<https://www.wa-example.com/features/2005>,<https://www.wa-example.com/features/2007>,<https://www.wa-example.com/features/20010>,<https://www.wa-example.com/features/10004>,<https://www.wa-example.com/features/10009>,<https://www.wa-example.com/features/20015>,<https://www.wa-example.com/features/2008>,<https://www.wa-example.com/features/100011>,<https://www.wa-example.com/features/100015>,<https://www.wa-example.com/features/16040422>,<https://www.wa-example.com/features/10003>,<https://www.wa-example.com/features/20013>,<https://www.wa-example.com/features/12595541>,<https://www.wa-example.com/features/100012>,<https://www.wa-example.com/features/100014>,<https://www.wa-example.com/features/10008>,<https://www.wa-example.com/features/20014>,<https://www.wa-example.com/features/2002>,<https://www.wa-example.com/features/20011>,<https://www.wa-example.com/features/2006>,<https://www.wa-example.com/features/11636634>,<https://www.wa-example.com/features/10007>,<https://www.wa-example.com/features/17842481>,<https://www.wa-example.com/features/10005>,<https://www.wa-example.com/features/100010>,<https://www.wa-example.com/features/2001>,<https://www.wa-example.com/features/10006>,<https://www.wa-example.com/features/2009>,<https://www.wa-example.com/features/10002>
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
  - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: <https://www.wa-example.com/features/BoundaryMark>,<https://www.wa-example.com/features/observedVectors>,<https://www.wa-example.com/features/PrimaryParcels>,<https://www.wa-example.com/features/CadastralMark>,<https://www.wa-example.com/features/SecondaryParcels>
  - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureCollectionShape: <https://www.wa-example.com/features/BoundaryMark>,<https://www.wa-example.com/features/observedVectors>,<https://www.wa-example.com/features/CadastralMark>,<https://www.wa-example.com/features/SecondaryParcels>,<https://www.wa-example.com/features/PrimaryParcels>
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -265,15 +265,15 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
 
 === End SHACL ===
 
