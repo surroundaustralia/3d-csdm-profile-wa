@@ -64,12 +64,12 @@ Example appellation.
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 
 [] rdfs:label "Albany Town Lot 57" ;
-    dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAreaCode> ],
+    dcterms:hasPart [ rdfs:label "57" ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/number> ],
         [ rdfs:label "wa-parcel-purpose:townlot" ;
             commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAllocationType> ],
-        [ rdfs:label "57" ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/number> ] .
+        [ commonpatterns:namePartRef wa-locality:albany ;
+            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/crownAreaCode> ] .
 
 
 ```
