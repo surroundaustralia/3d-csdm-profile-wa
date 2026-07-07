@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.wa-core - Western Australia Cadastral Survey Data Exchange Profile
-Generated 2026-06-08T21:37:06.051447+00:00
+Generated 2026-07-07T22:20:36.885441+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -58,12 +58,26 @@ Validation result for profiles/wa-pointnames-shacl.ttl:
 Focus nodes for profiles/wa-pointnames-shacl.ttl:
  - Shape wap:testLabelPartsPresent: *none*
 
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
+ - Shape _:n66dbafa31e64439c9b7503763268dba7b1: *none*
+
 
 ** Validation error **
 Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Validation Report
   Conforms: False
   Results (4):
+  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
+  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ; rdfs:label Literal("572532") ]
+  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier>
+  	Result Path: commonpatterns:namePartType
+  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
@@ -81,13 +95,6 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
-  	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ; rdfs:label Literal("572532") ]
-  	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier>
-  	Result Path: commonpatterns:namePartType
-  	Message: Each name part must have exactly one namePartType, which must be a plain string literal.
-  Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: [ sh:datatype xsd:string ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:message Literal("Each name part must have exactly one namePartType, which must be a plain string literal.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:name Literal("namePartType") ; sh:path commonpatterns:namePartType ]
   	Focus Node: [ commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelIdentifier> ; rdfs:label Literal("213") ]
   	Value Node: <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelIdentifier>
   	Result Path: commonpatterns:namePartType
@@ -97,43 +104,29 @@ Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
  - Shape ex:NamedObjectShape: *none*
  - Shape ex:NamePartShape: <file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n47149043d1014d7d8a60ab58f8c586c2b1: *none*
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
- - Shape :annotate-madeBySensor: <vectorobservation:computed>
- - Shape :testInCollectionOrMember-procedure: <vectorobservation:computed>
- - Shape :testInCollectionOrMember-madeBySensor: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
- - Shape :bindSurveyObservation-angle-and-distance-types: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-parcelType: <file:///github/workspace/138>
- - Shape jcl:testBoundVocab-parcelInterest: *none*
-
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-vector-purpose: <file:///github/workspace/observedVectors>,<file:///github/workspace/SubtendedAngle>
- - Shape jcl:testBoundVocab-form: <file:///github/workspace/197>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy
- - Shape jcl:testBoundVocab-condition: <file:///github/workspace/197>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy
- - Shape jcl:testBoundVocab-state: <file:///github/workspace/197>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy
- - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/198>,<file:///github/workspace/184>,<file:///github/workspace/197>,<file:///github/workspace/190>,<file:///github/workspace/196>,<file:///github/workspace/189>
- - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/198>,<file:///github/workspace/184>,<file:///github/workspace/197>,<file:///github/workspace/190>,<file:///github/workspace/196>,<file:///github/workspace/189>
+ - Shape jcl:testBoundVocab-state: <file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: <file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/184>,<file:///github/workspace/198>,<file:///github/workspace/196>,<file:///github/workspace/197>,<file:///github/workspace/190>,<file:///github/workspace/189>
+ - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/184>,<file:///github/workspace/198>,<file:///github/workspace/196>,<file:///github/workspace/197>,<file:///github/workspace/190>,<file:///github/workspace/189>
+ - Shape jcl:testBoundVocab-vector-purpose: <file:///github/workspace/SubtendedAngle>,<file:///github/workspace/observedVectors>
+ - Shape jcl:testBoundVocab-form: <file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+ - Shape :testDistanceType: *none*
+ - Shape :testAngleType: *none*
+ - Shape :testCRS: <file:///github/workspace/DP_422532>
+ - Shape :testCompoundCRS: *none*
+ - Shape :testVHD: *none*
+ - Shape :testSurveyMetadata: <file:///github/workspace/DP_422532>
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
   Validation Report
@@ -142,17 +135,33 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
  - Shape :referencedCSDs-present: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testCompoundCRS: *none*
- - Shape :testCRS: <file:///github/workspace/DP_422532>
- - Shape :testVHD: *none*
- - Shape :testDistanceType: *none*
- - Shape :testSurveyMetadata: <file:///github/workspace/DP_422532>
- - Shape :testAngleType: *none*
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-madeBySensor: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
+ - Shape :annotate-madeBySensor: <vectorobservation:computed>
+ - Shape :testInCollectionOrMember-procedure: <vectorobservation:computed>
+ - Shape :bindSurveyObservation-angle-and-distance-types: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-parcelInterest: *none*
+ - Shape jcl:testBoundVocab-parcelType: <file:///github/workspace/138>
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD: *none*
+ - Shape container:CSD-seeAlso: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -166,27 +175,18 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :EstateParcel: *none*
  - Shape :ParcelAggregate: *none*
  - Shape :ParcelQualityClass: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :ParcelState: *none*
- - Shape :EstateParcel: *none*
- - Shape :Parcel: *none*
- - Shape :PurposeOfSpatialUnit: *none*
  - Shape :LandInterest: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :ParcelType: *none*
+ - Shape :Parcel: *none*
+ - Shape :ParcelState: *none*
  - Shape :PropertyUnit: *none*
  - Shape :Apellation: *none*
- - Shape :ParcelType: *none*
- - Shape :SecondaryParcel: *none*
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape :PrimaryParcel: *none*
 
 
 ** Validation error **
@@ -281,48 +281,6 @@ Validation result for https://surroundaustralia.github.io/topo-feature/_sources/
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: toporules:testTopoLinesReferencePoints
-  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/190> <file:///github/workspace/298> <file:///github/workspace/311> ) ]
-  	Value Node: <file:///github/workspace/298>
-  	Result Path: geojson:topology
-  	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
-          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-          prefix geojson: <https://purl.org/geojson/vocab#>
-          prefix dct:     <http://purl.org/dc/terms/>
-          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
-          prefix topo: <https://purl.org/geojson/topo#>
-          SELECT $this (geojson:topology as ?path) (?ref as ?value)
-          WHERE {
-           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .
-           FILTER NOT EXISTS {
-               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
-          }
-  ") ]
-  	Message: Lines topologies must reference points within current graph closure.
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: toporules:testTopoLinesReferencePoints
-  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/190> <file:///github/workspace/298> <file:///github/workspace/311> ) ]
-  	Value Node: <file:///github/workspace/311>
-  	Result Path: geojson:topology
-  	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
-          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
-          prefix geojson: <https://purl.org/geojson/vocab#>
-          prefix dct:     <http://purl.org/dc/terms/>
-          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
-          prefix topo: <https://purl.org/geojson/topo#>
-          SELECT $this (geojson:topology as ?path) (?ref as ?value)
-          WHERE {
-           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .
-           FILTER NOT EXISTS {
-               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
-          }
-  ") ]
-  	Message: Lines topologies must reference points within current graph closure.
-  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
-  	Severity: sh:Violation
-  	Source Shape: toporules:testTopoLinesReferencePoints
   	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/196> <file:///github/workspace/311> <file:///github/workspace/309> ) ]
   	Value Node: <file:///github/workspace/311>
   	Result Path: geojson:topology
@@ -346,6 +304,48 @@ Validation result for https://surroundaustralia.github.io/topo-feature/_sources/
   	Source Shape: toporules:testTopoLinesReferencePoints
   	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/196> <file:///github/workspace/311> <file:///github/workspace/309> ) ]
   	Value Node: <file:///github/workspace/309>
+  	Result Path: geojson:topology
+  	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
+          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+          prefix geojson: <https://purl.org/geojson/vocab#>
+          prefix dct:     <http://purl.org/dc/terms/>
+          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+          prefix topo: <https://purl.org/geojson/topo#>
+          SELECT $this (geojson:topology as ?path) (?ref as ?value)
+          WHERE {
+           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .
+           FILTER NOT EXISTS {
+               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
+          }
+  ") ]
+  	Message: Lines topologies must reference points within current graph closure.
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: toporules:testTopoLinesReferencePoints
+  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/190> <file:///github/workspace/298> <file:///github/workspace/311> ) ]
+  	Value Node: <file:///github/workspace/298>
+  	Result Path: geojson:topology
+  	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
+          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+          prefix geojson: <https://purl.org/geojson/vocab#>
+          prefix dct:     <http://purl.org/dc/terms/>
+          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+          prefix topo: <https://purl.org/geojson/topo#>
+          SELECT $this (geojson:topology as ?path) (?ref as ?value)
+          WHERE {
+           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .
+           FILTER NOT EXISTS {
+               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }
+          }
+  ") ]
+  	Message: Lines topologies must reference points within current graph closure.
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: toporules:testTopoLinesReferencePoints
+  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/190> <file:///github/workspace/298> <file:///github/workspace/311> ) ]
+  	Value Node: <file:///github/workspace/311>
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
           prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -406,41 +406,41 @@ Validation result for https://surroundaustralia.github.io/topo-feature/_sources/
   	Message: Lines topologies must reference points within current graph closure.
   
 Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/844>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/843>/geojson:topology
- - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/844>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/843>/geojson:topology
+ - Shape toporules:testTopoReferencesExist: <file:///github/workspace/842>/geojson:topology,<file:///github/workspace/844>/geojson:topology,<file:///github/workspace/138>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/311>/geojson:topology
  - Shape toporules:testTopoDirectedReferencesExist: *none*
- - Shape toporules:testTopoReferencesExist: <file:///github/workspace/844>/geojson:topology,<file:///github/workspace/138>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/842>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/843>/geojson:topology
+ - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/844>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/311>/geojson:topology
+ - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/844>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/311>/geojson:topology
 
 Validation result for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n72b0466cf7ea43e88cb180d34dcdd329b1: <file:///github/workspace/184>/dct:spatial,<file:///github/workspace/189>/dct:spatial,<file:///github/workspace/190>/dct:spatial,<file:///github/workspace/196>/dct:spatial,<file:///github/workspace/198>/dct:spatial,<file:///github/workspace/197>/dct:spatial
- - Shape _:n72b0466cf7ea43e88cb180d34dcdd329b3: *none*
-
-Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:FeatureCollectionShape: <file:///github/workspace/observedVectors>,<file:///github/workspace/SubtendedAngle>,<file:///github/workspace/BoundaryMark>,<file:///github/workspace/PrimaryParcels>
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape _:nd56209310f354923b0fb63d22b59924ab3: *none*
+ - Shape _:nd56209310f354923b0fb63d22b59924ab1: <file:///github/workspace/196>/dct:spatial,<file:///github/workspace/197>/dct:spatial,<file:///github/workspace/198>/dct:spatial,<file:///github/workspace/189>/dct:spatial,<file:///github/workspace/184>/dct:spatial,<file:///github/workspace/190>/dct:spatial
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureShape: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/313>,<file:///github/workspace/844>,<file:///github/workspace/197>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/842>,<file:///github/workspace/189>,<file:///github/workspace/311>,<file:///github/workspace/843>,<file:///github/workspace/845>,<file:///github/workspace/312>,<file:///github/workspace/196>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/298>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/841>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/198>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/184>,<file:///github/workspace/840>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/314>,<file:///github/workspace/190>,<file:///github/workspace/138>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/309>
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/841>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/138>,<file:///github/workspace/844>,<file:///github/workspace/843>,<file:///github/workspace/845>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/198>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/314>,<file:///github/workspace/311>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/298>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/312>,<file:///github/workspace/309>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/197>,<file:///github/workspace/842>,<file:///github/workspace/840>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/184>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/190>,<file:///github/workspace/196>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/189>,<file:///github/workspace/313>
+ - Shape geojson:GeometryShape: *none*
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:FeatureCollectionShape: <file:///github/workspace/SubtendedAngle>,<file:///github/workspace/PrimaryParcels>,<file:///github/workspace/BoundaryMark>,<file:///github/workspace/observedVectors>
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -459,7 +459,7 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/840> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/844> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -481,12 +481,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Na2ae5ba401eb4fc0b90891b7975a9fb3: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N1eb3aa05a893433b80f7abeca902382d: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/843> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/841> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -508,12 +508,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nbb722b05df144144b6c584f485896aa5: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N8f8d494b857744619e458e29cd99256b: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/844> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/840> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -535,12 +535,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nb22cf6b43ca240468e12517605de3ed5: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N2f510ef6b0a64940a41d652d98443391: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/842> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/843> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -562,12 +562,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Neeeed59ffc9a41149294b2082e0b6a6f: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nfe063be97105407ab4bb7247cc3b3fa7: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/845> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/845> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -589,12 +589,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nd372d89d009941818ec3f23ad80e611a: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N30e3d869171d4887b2b889f52a05e3bd: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/841> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/842> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -616,17 +616,17 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nbb5d0a22211c472d9c0aab13a47f328b: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N1a9f09ff2d5d47aaae452c52a8bb475b: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <vectorobservation:computed>
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <vectorobservation:computed>
- - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <vectorobservation:computed>
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <vectorobservation:computed>
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <vectorobservation:computed>
 
 === End SHACL ===

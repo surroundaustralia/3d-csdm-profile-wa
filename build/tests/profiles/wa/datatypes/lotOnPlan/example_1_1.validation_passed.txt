@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation
-Generated 2026-06-08T21:36:44.241997+00:00
+Generated 2026-07-07T22:20:14.956336+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:nbafd4caaf0c74e8b9c6924bc6ed5dfe4b1: *none*
+ - Shape _:n524b22cf7e7748aa93db0070800eb4bfb1: *none*
 
 === End SHACL ===
 

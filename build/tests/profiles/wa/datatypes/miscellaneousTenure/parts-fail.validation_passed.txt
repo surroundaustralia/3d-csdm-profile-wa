@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-06-08T21:36:44.685479+00:00
+Generated 2026-07-07T22:20:15.060047+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -47,14 +47,14 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
  - Shape ex:NamedObjectShape: *none*
- - Shape ex:NamePartShape: _:N9a018498796d4d22b4d349cdb79f3ab2,_:Nb0cf478817bc42198d233bae6ab9a142
+ - Shape ex:NamePartShape: _:N97fa7b769aba40f0aa4cc8f51fa5bcc3,_:N2f266839505a469bbffaa2188d804f0e
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:n7d3b548e88d743c1937e8f964d8d3ae8b1: *none*
+ - Shape _:ncc68ce4053fe46d5b1fd4e90d1e46cd7b1: *none*
 
 === End SHACL ===
 

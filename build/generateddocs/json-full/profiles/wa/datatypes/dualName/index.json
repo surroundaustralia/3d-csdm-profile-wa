@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-06-08",
+  "dateOfLastChange": "2026-07-07",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -79,20 +79,24 @@
           "transformResults": {
             "Dual-name-label": {
               "success": true,
+              "sizeBytes": 33,
               "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/dualName/transforms/example_1_1.Dual-name-label"
             }
           },
+          "sizeBytes": 313,
           "code": "{\n  \"id\": \"wa:place-name:mammang-koort-king-george-sound\",\n  \"type\": \"place:placeName\",\n  \"label\": \"Mammang Koort / King George Sound\",\n  \"hasPart\": [\n    {\n      \"type\":  \"wa:indigenousName\",\n      \"label\": \"Mammang Koort\"\n    },\n    {\n      \"type\": \"wa:placeName\",\n      \"label\": \"King George Sound\"\n    }\n  ]\n}"
         },
         {
           "language": "jsonld",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/dualName/example_1_1.jsonld",
+          "sizeBytes": 446,
           "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/dualName/context.jsonld\",\n  \"id\": \"wa:place-name:mammang-koort-king-george-sound\",\n  \"type\": \"place:placeName\",\n  \"label\": \"Mammang Koort / King George Sound\",\n  \"hasPart\": [\n    {\n      \"type\": \"wa:indigenousName\",\n      \"label\": \"Mammang Koort\"\n    },\n    {\n      \"type\": \"wa:placeName\",\n      \"label\": \"King George Sound\"\n    }\n  ]\n}"
         },
         {
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/dualName/example_1_1.ttl",
-          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Mammang Koort / King George Sound\" ;\n    dcterms:hasPart [ rdfs:label \"King George Sound\" ;\n            commonpatterns:namePartType <wa:placeName> ],\n        [ rdfs:label \"Mammang Koort\" ;\n            commonpatterns:namePartType <wa:indigenousName> ] .\n\n"
+          "sizeBytes": 453,
+          "code": "@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Mammang Koort / King George Sound\" ;\n    dcterms:hasPart [ rdfs:label \"Mammang Koort\" ;\n            commonpatterns:namePartType <wa:indigenousName> ],\n        [ rdfs:label \"King George Sound\" ;\n            commonpatterns:namePartType <wa:placeName> ] .\n\n"
         }
       ]
     }

@@ -27,17 +27,17 @@ Monuments:	24
 	None	17876624	BoundaryMark	54696.99,398519.427	wa-monument-state:unmarked	None	None
 	None	17876625	BoundaryMark	54699.068,398514.326	wa-monument-state:unmarked	None	None
 Parcels:	11
-	140415178684112	None	wa-parcel-type:freehold	854	None	None	
-	140415178684496	None	wa-parcel-type:freehold	854	None	None	
-	140415178684816	None	wa-parcel-type:freehold	854	None	None	
-	140415178685136	None	wa-parcel-type:freehold	854	None	None	
-	140415178685456	None	wa-parcel-type:freehold	854	None	None	
-	140415178685840	None	wa-parcel-type:freehold	888	None	None	
-	140415178686096	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
-	140415178686352	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
-	140415178703056	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
-	140415178703248	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
-	140415178703504	None	wa-secondary-parcel-type:easement-area	103.9	None	None	
+	140114195742224	None	wa-parcel-type:freehold	854	None	None	
+	140114195742544	None	wa-parcel-type:freehold	854	None	None	
+	140114195775696	None	wa-parcel-type:freehold	854	None	None	
+	140114195776016	None	wa-parcel-type:freehold	854	None	None	
+	140114195776336	None	wa-parcel-type:freehold	854	None	None	
+	140114195776720	None	wa-parcel-type:freehold	888	None	None	
+	140114195776976	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
+	140114195777232	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
+	140114195777488	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
+	140114195777680	None	wa-secondary-parcel-type:easement-area	36.6	None	None	
+	140114195777936	None	wa-secondary-parcel-type:easement-area	103.9	None	None	
 Observations:	34
 		observedVectors
 	20220170	undated	wa-surveypoint-purpose:road-boundary	17876563	17876564	269.31417325099216	35.0
