@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation",
   "bblockName": "Lot On Plan Appelation",
   "bblockId": "icsm.profiles.wa.datatypes.lotOnPlan",
-  "generated": "2026-07-07T22:20:14.956405+00:00",
+  "generated": "2026-07-07T22:26:35.357493+00:00",
   "result": true,
   "items": [
     {
@@ -72,12 +72,12 @@
             {
               "shaclFile": "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n524b22cf7e7748aa93db0070800eb4bfb1": {
+                "_:n998cac6fb91043c9ae9a5013c51138f2b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n524b22cf7e7748aa93db0070800eb4bfb1: *none*\n"
+              "message": "Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:\n - Shape _:n998cac6fb91043c9ae9a5013c51138f2b1: *none*\n"
             }
           ]
         }

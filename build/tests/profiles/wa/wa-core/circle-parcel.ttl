@@ -57,10 +57,10 @@
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType> ],
-                [ rdfs:label "214866" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ],
+                [ rdfs:label "214866" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/LR-3150-715> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:reserve ;
@@ -73,14 +73,14 @@
 <https://www.wa-example.com/features/12595541> a geojson:Feature ;
     rdfs:label "H" ;
     parcel:appellation [ rdfs:label "Area H DP 95092" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType> ],
-                [ rdfs:label "Area" ;
+            dcterms:hasPart [ rdfs:label "Area" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelType> ],
+                [ rdfs:label "95092" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ],
                 [ rdfs:label "H" ;
                     commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/ParcelIdentifier> ],
-                [ rdfs:label "95092" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/planIdentifier> ] ] ;
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/PlanType> ] ] ;
     parcel:interest [ parcel:burdened "11636634" ;
             parcel:interestLink <https://www.wa-example.com/features/345-098-456> ;
             parcel:interestType wa-interest-type:res-cov-cta-38-reg-54-conserv ] ;

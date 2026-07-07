@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation
-Generated 2026-07-07T22:20:14.783155+00:00
+Generated 2026-07-07T22:26:35.143644+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl:
- - Shape _:ne3d48777eb6140fcb82e2d94ec5fb676b1: *none*
+ - Shape _:nb2826d27dca64cff84496f72e1653113b1: *none*
 
 === End SHACL ===
 
