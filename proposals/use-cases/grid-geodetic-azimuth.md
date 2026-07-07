@@ -10,7 +10,7 @@ The meridians at the two endpoints are not parallel, and the geodesic between th
 The difference from a simple 180-degree reciprocal is a normal consequence of ellipsoidal geometry and meridian convergence.
 
 In Western Australia, the average of the forward and back geodetic azimuths, after allowing for the reciprocal direction, is commonly referred to as the mid-azimuth. 
-The mid-azimuth is generally the value submitted for geodetic observations that form part of a cadastral dataset.
+The mid-azimuth is generally the value submitted by Land Surveyors for geodetic observations that form part of a cadastral dataset.
 
 <figure class="fig fig-wide">
   <img src="assets/grid-geodetic-azimuth.png"
