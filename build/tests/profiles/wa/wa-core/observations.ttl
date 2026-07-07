@@ -76,14 +76,14 @@
 <vectorobservation:theodolite+edm> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805060> ;
-            sosa:hasResult [ surv:distance 1.00856e+02 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805296> ;
+            sosa:hasResult [ surv:distance 2.4923e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns2:angleType icsm-distance-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805296> ;
-            sosa:hasResult [ surv:distance 2.4923e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805060> ;
+            sosa:hasResult [ surv:distance 1.00856e+02 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns2:angleType icsm-distance-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ] ;
@@ -108,10 +108,10 @@
             geojson:coordinates ( 5.47613e+04 3.984891e+05 ) ] ;
     rdfs:comment "In Concrete" ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;

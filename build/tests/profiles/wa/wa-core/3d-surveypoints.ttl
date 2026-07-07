@@ -73,10 +73,10 @@
             geojson:coordinates ( 5.47613e+04 3.984891e+05 0e+00 ) ] ;
     rdfs:comment "In Concrete" ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "9802" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ] ] ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ],
+                [ rdfs:label "9802" ;
+                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;

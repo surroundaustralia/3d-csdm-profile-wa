@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-06-08",
+  "dateOfLastChange": "2026-07-07",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -24,17 +24,17 @@
     "appellation"
   ],
   "shaclShapes": {
-    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-    ],
     "icsm.csdm.datatypes.compoundName": [
       "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/datatypes/compoundName/rules.shacl"
+    ],
+    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
     ]
   },
   "dependsOn": [
-    "icsm.profiles.wa.datatypes.miscellaneousTenure",
     "icsm.profiles.wa.datatypes.lotOnPlan",
-    "icsm.profiles.wa.datatypes.crownAllotment"
+    "icsm.profiles.wa.datatypes.crownAllotment",
+    "icsm.profiles.wa.datatypes.miscellaneousTenure"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.yaml",
