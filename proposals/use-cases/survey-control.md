@@ -575,10 +575,7 @@ It identifies the requirements that the WA profile or implementation rules shoul
 18. What bearing reference should be required or allowed: grid bearing, true bearing, magnetic bearing, or locally defined bearing?
 19. Should vertical angle and zenith distance be separate declared forms, or should they be treated as alternative angle conventions for the same reduced 3D observation form?
 20. Should GNSS-derived forward azimuth, reverse azimuth, mean azimuth, calculated angle, and mean ground-level distance be encoded as structured observation results, computation results, or supporting network-summary values?
-21. What convention should be used for normalising reverse azimuths before calculating the mean azimuth?
-22. Should mean azimuths be calculated before or after network adjustment?
-23. Should mean ground-level distance be derived from ellipsoidal distance, grid distance, slope distance, or another defined distance form?
-24. What metadata is required to distinguish ground-level distance from grid distance, ellipsoidal distance, slope distance, and horizontal distance?
+21. Should mean ground-level distance be derived from ellipsoidal distance, grid distance, slope distance, or another defined distance form?
 
 ## Summary
 
