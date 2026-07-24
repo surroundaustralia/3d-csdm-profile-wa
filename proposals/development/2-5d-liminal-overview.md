@@ -1,5 +1,18 @@
 # Summary of Western Australian Parcel Representation Examples
 
+## Table of Contents
+
+1. [Purpose](#purpose)
+2. [Comparison of the examples](#comparison-of-the-examples)
+3. [Important distinctions](#important-distinctions)
+4. [Possible forms of derived 3D geometry](#possible-forms-of-derived-3d-geometry)
+5. [Overall message](#overall-message)
+6. [Main dataset pattern differences](#main-dataset-pattern-differences)
+7. [Examples](#examples)
+8. [Discussion points](#discussion-points)
+9. [Relationship between the footprint and the derived solid](#relationship-between-the-footprint-and-the-derived-solid)
+10. [Refactor of Types 1 to 7 into a single general pattern](#refactor-of-types-1-to-7-into-a-single-general-pattern)
+
 ## Purpose
 
 These examples demonstrate how vertical information can be added progressively to a Western Australian cadastral parcel without incorrectly implying that every parcel has a legally defined 3D extent.
@@ -7,13 +20,22 @@ They cover many existing practices used in WA today.
 
 They are a starting point for discussion. Some normalisation may be possible.
 
-The following vocabularies have been compiled to support the examples:
+The following vocabularies (and their responsibilities) have been compiled to support the examples:
 
-- [Computability Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/computability-status.csv)
-- [Geometry Legal Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/geometry-legal-status.csv)
-- [Height Reference](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/height-reference.csv)
-- [Representation Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/representation-status.csv)
-- [Vertical Extent Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-extent-status.csv)
+| Vocabulary                                                                                                                                                    | Question answered                                                          |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| [Representation Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/representation-status.csv)       | What representation is present?                                            |
+| [Geometry Legal Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/geometry-legal-status.csv)       | What is the legal or analytical status of the geometry?                    |
+| [Vertical Extent Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-extent-status.csv)     | What is the overall legal or source state of the parcel’s vertical extent? |
+| [Computability Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/computability-status.csv)         | Can the boundary or extent be computed from available inputs?              |
+| [Height Reference](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/height-reference.csv)                 | Relative to what surface, level, object, or plane is a boundary described? |
+| [Vertical Boundary State](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-boundary-state.csv)   | What is the state of the upper or lower boundary?                          |
+| [Vertical Definition Type](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-definition-type.csv) | What kind of source definition establishes the boundary?                   |
+| [Vertical Limit Role](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-limit-role.csv)           | Is the definition an upper or lower limit?                                 |
+| [Vertical Value Type](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-value-type.csv)           | How is the limit expressed?                                                |
+| [Vertical Direction](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-direction.csv)             | What direction is the limit expressed?                                     |
+| [Coordinate Z Role](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/coordinate-z-role.csv)               | What do coordinate `z` values mean?                                        |
+
 
 The key principle is:
 
@@ -145,7 +167,7 @@ It is assumed that these elements will follow the patterns outlined in the examp
 ### Authoritative 2D footprint **and** 2D footprint with `z` values
 
 <figure class="fig fig-wide">
-  <img src="../use-cases/assets/parcel-on-datum.png" 
+  <img src="../../img/parcel-on-datum.png" 
        alt="Figure 1: Parcel on Datum"
        style="width: 70%;">
   <figcaption id="figure-1-parcel-on-datum">Figure 1: Parcel on Datum</figcaption>
@@ -218,7 +240,7 @@ If `z` is unbounded, expand `verticalExtentStatus` to include `unconstrainedAbov
 ### 2.5D reference surface
 
 <figure class="fig fig-wide">
-  <img src="../use-cases/assets/parcel-with-surface.png" 
+  <img src="../../img/parcel-with-surface.png" 
        alt="Figure 2: Parcel on Datum with Ground Surface"
        style="width: 70%;">
   <figcaption id="figure-2-parcel-with-surface">Figure 2: Parcel on Datum with Ground Surface</figcaption>
@@ -410,12 +432,12 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
               "ruleType": "crownGrantDepthLimit",
               "sourceAuthorityType": "CrownGrant",
               "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
-              "limitRole": "lowerLimit",
+              "limitRole": "vertical-limit-role:ll",
               "heightReference": "groundLevel",
               "heightOffset": {
                 "value": 12.19,
                 "unit": "uom:m",
-                "direction": "below"
+                "direction": "vertical-direction:blw"
               },
               "sourceReference": "source-crown-grant-depth-limit-1",
               "provenanceRef": "crown-grant-depth-limit-extraction-1"
@@ -434,11 +456,10 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
 }
 ```
 
-
 ### Derived 3D solid
 
 <figure class="fig fig-wide">
-  <img src="../use-cases/assets/parcel-with-solid.png" 
+  <img src="../../img/parcel-with-solid.png" 
        alt="Figure 3: Parcel on Datum with derived 3D Solid"
        style="width: 70%;">
   <figcaption id="figure-3-parcel-with-solid">Figure 3: Parcel on Datum with derived 3D Solid</figcaption>
@@ -580,6 +601,7 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
 ```
 
 ### Sample `sourceDocument` declaration for a jurisdictional boundary rule
+
 ```json
 {
       "id": "source-crown-grant-depth-limit-1",
@@ -630,4 +652,653 @@ The dataset preserves:
 
 This allows the distinction between the **authoritative source information** and the **geometry generated from that information**.
 
+## Refactor of Types 1 to 7 into a single general pattern
 
+There is potential to refactor the seven patterns described above into a single general pattern. 
+However, the approach should be modular and not collapse the legal distinction between stages or types.
+
+The following offers a stable parcel structure with optional components fro `z` ordinate values, reference surfaces, vertical boundary definitions, and derived 3d geometry.
+
+### Suggested general pattern
+
+This pattern consolidates shared behaviours while retaining critical distinctions between the various types of vertical descriptions.
+
+It contains a `verticalBoundaryDefinitions` structure, a `definitionType` descriminator, a common `limits` array, and specilised `source` fields where required.
+
+```json
+{
+  "parcels": [
+    {
+      "features": [
+        {
+          "properties": {
+            "representationStatus": "representation-status:2d",
+            "geometryLegalStatus": "geometry-legal-status:a2d",
+
+            "coordinateRepresentation": {
+              "coordinateDimension": 2,
+              "zValueRole": "coordinate-z-role:absent"
+            },
+
+            "verticalExtent": {
+              "status": "vertical-extent-status:ud",
+              "lowerBoundary": {
+                "state": "vertical-boundary-state:und"
+              },
+              "upperBoundary": {
+                "state": "vertical-boundary-state:und"
+              }
+            },
+
+            "computabilityStatus": "computability-status:nc",
+
+            "verticalBoundaryDefinitions": [],
+
+            "referenceSurfaces": [],
+
+            "derivedGeometry": {
+              "status": "notGenerated"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+Each stage then populates different parts of this structure.
+
+The element `definitionType` contained in `verticalBoundaryDefinitions` distinguishes the vertical pattern.
+If `definitionType` is `None` then the parcel is an authoritative 2D footprint with or without `z` coordinates, or an authoritative footprint with a 2.5D surface.
+Otherwise, values must be `relativeHeightDescription`, `relativeHeightDescription`, or `jurisdictionalBoundaryRule`.
+
+This gives software a consistent place to find vertical-boundary information without losing the important difference between the sources.
+
+This refactoring makes explicit the semantic differences:
+
+| Definition type              | Meaning                                                                                         |
+| ---------------------------- | ----------------------------------------------------------------------------------------------- |
+| `relativeHeightDescription`  | A height or depth relative to a surface or object.                                              |
+| `absoluteHeightDescription`  | A directly interpretable height against AHD or another vertical datum.                          |
+| `jurisdictionalBoundaryRule` | A boundary established through a title, Crown Grant, statute or other jurisdictional authority. |
+
+In particular, the jurisdictional case must continue to preserve:
+
+- the rule type;
+- the source authority;
+- the original source statement; and
+- the legal object or parcel to which the rule applies.
+
+#### Status properties remain outside the common object
+The existing top-level classifications still serve useful and separate purposes:
+
+```json
+{
+  "representationStatus": "representation-status:hd",
+  "verticalExtentStatus": "vertical-extent-status:ld",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "computabilityStatus": "computability-status:c"
+}
+```
+They answer different questions:
+
+- `representationStatus`: How is the parcel currently represented?
+- `verticalExtentStatus`: Does the extent have a legal or defined basis?
+- `geometryLegalStatus`: Which geometry is legally authoritative?
+- `computabilityStatus`: Can coordinate boundaries or geometry be calculated?
+
+The common `verticalBoundaryDefinition` then explains why those statuses apply.
+
+### 1 Authoritative 2D footprint
+
+```json
+{
+  "representationStatus": "representation-status:2d",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:ud",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:und"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:und"
+    }
+  },
+
+  "computabilityStatus": "computability-status:nc",
+
+  "verticalBoundaryDefinitions": [],
+  "referenceSurfaces": [],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+### 2 Authoritative 2D footprint with geometry `z` values
+
+The legal and vertical-extent patterns remain unchanged. Only the coordinate representation changes.
+
+```json
+{
+  "representationStatus": "representation-status:2d",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 3,
+    "zValueRole": "coordinate-z-role:gc"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:ud",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:und"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:und"
+    }
+  },
+
+  "computabilityStatus": "computability-status:nc",
+
+  "verticalBoundaryDefinitions": [],
+  "referenceSurfaces": [],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+This distinguishes 3D coordinates from a 3D legal parcel. 
+
+### 3 Vertical unbounded 2D parcel
+
+Where unboundedness is positively established by an authoritative source, it should be recorded explicitly.
+
+```json
+{
+  "representationStatus": "representation-status:2d",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:uc",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:uc"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:uc"
+    },
+    "sourceReference": "source-unbounded-extent-rule-1"
+  },
+
+  "computabilityStatus": "computability-status:nc",
+
+  "verticalBoundaryDefinitions": [],
+  "referenceSurfaces": [],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+The separate lower and upper boundary objects make the direction and meaning explicit.
+
+It also supports mixed cases, such as:
+
+```json
+{
+  "lowerBoundary": {
+    "state": "vertical-boundary-state:def",
+    "definitionRef": "limit-lower-1"
+  },
+  "upperBoundary": {
+    "state": "vertical-boundary-state:uc"
+  }
+}
+```
+
+### 4 2.5D reference surface
+
+```json
+{
+  "representationStatus": "representation-status:2-5d",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 3,
+    "zValueRole": "coordinate-z-role:rs"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:na",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:na"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:na"
+    }
+  },
+
+  "computabilityStatus": "computability-status:nc",
+
+  "verticalBoundaryDefinitions": [],
+
+  "referenceSurfaces": [
+    {
+      "id": "surface-ground-1",
+      "surfaceType": "height-reference:gl",
+      "geometryLegalStatus": "geometry-legal-status:obs",
+      "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+      "boundedByFootprint": true
+    }
+  ],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+The surface is supporting geometry. 
+It is not automatically an upper or lower legal boundary.
+
+### 5 Relative height-described parcel
+
+```json
+{
+  "representationStatus": "representation-status:hd",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:rr",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:dur",
+      "definitionRef": "relative-limit-lower-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:dur",
+      "definitionRef": "relative-limit-upper-1"
+    }
+  },
+
+  "computabilityStatus": "computability-status:rrs",
+
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "relative-limit-lower-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:off",
+      "value": 2,
+      "unit": "uom:m",
+      "direction": "vertical-direction:blw",
+      "heightReference": "height-reference:gl",
+      "description": "2 metres below ground level",
+      "sourceReference": "source-height-description-1",
+      "resolutionStatus": "requiresReferenceSurface",
+      "provenanceRef": "height-description-extraction-1"
+    },
+    {
+      "id": "relative-limit-upper-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ul",
+      "valueType": "vertical-value-type:off",
+      "value": 12,
+      "unit": "uom:m",
+      "direction": "vertical-direction:abv",
+      "heightReference": "height-reference:gl",
+      "description": "12 metres above ground level",
+      "sourceReference": "source-height-description-2",
+      "resolutionStatus": "requiresReferenceSurface",
+      "provenanceRef": "height-description-extraction-1"
+    }
+  ],
+
+  "referenceSurfaces": [],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+### 6 Absolute AHD height-described parcel
+
+```json
+{
+  "representationStatus": "representation-status:hd",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:ld",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:def",
+      "definitionRef": "absolute-limit-lower-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:def",
+      "definitionRef": "absolute-limit-upper-1"
+    }
+  },
+
+  "computabilityStatus": "computability-status:c",
+
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "absolute-limit-lower-1",
+      "definitionType": "vertical-definition-type:ahd",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:ah",
+      "value": 16,
+      "unit": "uom:m",
+      "verticalCRS": "epsg:5711",
+      "comparisonOperator": "greaterThanOrEqual",
+      "description": "limited in height to more than and equal to 16.00 AHD",
+      "sourceReference": "source-height-description-2",
+      "resolutionStatus": "absoluteLimitAvailable",
+      "provenanceRef": "uuid:height-description-extraction-1"
+    },
+    {
+      "id": "absolute-limit-upper-1",
+      "definitionType": "vertical-definition-type:ahd",
+      "limitRole": "vertical-limit-role:ul",
+      "valueType": "vertical-value-type:ah",
+      "value": 35,
+      "unit": "uom:m",
+      "verticalCRS": "epsg:5711",
+      "comparisonOperator": "lessThanOrEqual",
+      "description": "limited in height to less than and equal to 35.00 AHD",
+      "sourceReference": "source-height-description-1",
+      "resolutionStatus": "absoluteLimitAvailable",
+      "provenanceRef": "uuid:height-description-extraction-1"
+    }
+  ],
+
+  "referenceSurfaces": [],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+### 7 Jurisdictionally bounded parcel
+
+```json
+{
+  "representationStatus": "representation-status:jb",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:ld",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:dur",
+      "definitionRef": "jurisdictional-limit-lower-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:und"
+    }
+  },
+
+  "computabilityStatus": "computability-status:rrs",
+
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "jurisdictional-limit-lower-1",
+      "definitionType": "vertical-definition-type:jur",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:off",
+      "value": 12.19,
+      "unit": "uom:m",
+      "direction": "vertical-direction:blw",
+      "heightReference": "height-reference:gl",
+      "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
+      "sourceReference": "source-crown-grant-depth-limit-1",
+      "resolutionStatus": "requiresReferenceSurface",
+      "provenanceRef": "crown-grant-depth-limit-extraction-1",
+
+      "sourceBasis": {
+        "ruleType": "crownGrantDepthLimit",
+        "sourceAuthorityType": "CrownGrant",
+        "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+      }
+    }
+  ],
+
+  "referenceSurfaces": [],
+
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
+```
+
+### 8. Derived 3D solid
+
+The derived solid uses the same vertical-boundary definitions and reference-surface patterns. 
+It adds a derived-geometry component.
+
+```json
+{
+  "representationStatus": "representation-status:d3d",
+  "geometryLegalStatus": "geometry-legal-status:dfld",
+
+  "coordinateRepresentation": {
+    "coordinateDimension": 3,
+    "zValueRole": "coordinate-z-role:dbg"
+  },
+
+  "verticalExtent": {
+    "status": "vertical-extent-status:dfld",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:drv",
+      "definitionRef": "relative-limit-lower-1",
+      "geometryRef": "derived-lower-surface-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:drv",
+      "definitionRef": "relative-limit-upper-1",
+      "geometryRef": "derived-upper-surface-1"
+    }
+  },
+
+  "computabilityStatus": "computability-status:cd",
+
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "relative-limit-lower-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:off",
+      "value": 2,
+      "unit": "uom:m",
+      "direction": "vertical-direction:blw",
+      "heightReference": "height-reference:gl",
+      "description": "2 metres below ground level",
+      "sourceReference": "source-height-description-1",
+      "resolutionStatus": "resolved",
+      "provenanceRef": "height-description-extraction-1"
+    },
+    {
+      "id": "relative-limit-upper-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ul",
+      "valueType": "vertical-value-type:off",
+      "value": 12,
+      "unit": "uom:m",
+      "direction": "vertical-direction:abv",
+      "heightReference": "height-reference:gl",
+      "description": "12 metres above ground level",
+      "sourceReference": "source-height-description-2",
+      "resolutionStatus": "resolved",
+      "provenanceRef": "height-description-extraction-1"
+    }
+  ],
+
+  "referenceSurfaces": [
+    {
+      "id": "surface-ground-1",
+      "surfaceType": "height-reference:gl",
+      "geometryLegalStatus": "geometry-legal-status:obs",
+      "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+      "boundedByFootprint": true
+    }
+  ],
+
+  "derivedGeometry": {
+    "status": "solidGenerated",
+    "geometryType": "Solid",
+    "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
+    "inputFootprintRef": "parcel-footprint-1",
+    "inputDefinitionRefs": [
+      "relative-limit-lower-1",
+      "relative-limit-upper-1"
+    ],
+    "inputSurfaceRefs": [
+      "surface-ground-1"
+    ],
+    "sourceReference": "source-surface-offset-1",
+    "provenanceRef": "surface-offset-extraction-1"
+  }
+}
+```
+
+### How the seven stages map to the common components
+
+| Stage                | Coordinates                      | Vertical boundaries                | Surface                              | Derived geometry |
+| -------------------- | -------------------------------- | ---------------------------------- | ------------------------------------ | ---------------- |
+| 2D footprint         | 2D                               | Undefined                          | None                                 | None             |
+| 2D with `z`          | 3D coordinates used contextually | Undefined                          | None                                 | None             |
+| 2.5D surface         | 3D surface coordinates           | Not applicable as parcel limits    | Present                              | None             |
+| Relative description | Usually 2D footprint             | Defined but unresolved             | Required but not necessarily present | None             |
+| Absolute AHD limits  | Usually 2D footprint             | Defined and computable             | Not required                         | None             |
+| Jurisdictional rule  | Usually 2D footprint             | Legally defined; may be unresolved | May be required                      | None             |
+| Derived 3D           | 3D derived coordinates           | Resolved into geometry             | Present where required               | Solid present    |
+
+### Design Rules
+
+**1. Keep summary classifications**
+
+```json
+{
+  "representationStatus": "...",
+  "geometryLegalStatus": "...",
+  "computabilityStatus": "..."
+}
+```
+
+They provide quick classification. 
+The detailed objects explain why those classifications apply.
+
+**2. Model upper and lower boundaries separately**
+
+This is clearer than using one scalar or array-valued `verticalExtentStatus`.
+
+Each direction may independently be:
+
+```text
+undefined
+notApplicable
+unconstrained
+definedButUnresolved
+defined
+derived
+```
+
+**3. Separate coordinate dims from legal dims**
+
+A parcel can have:
+
+```json
+{
+  "coordinateDimension": 3,
+  "geometryLegalStatus": "geometry-legal-status:a2d"
+}
+```
+
+This correctly represents a legally 2D parcel whose coordinates contain `z` values.
+
+**4. Use one common boundary-definition array**
+
+The shared `verticalBoundaryDefinitions` array can represent:
+
+- relative offsets;
+- absolute AHD values;
+- jurisdictional rules;
+- lower limits;
+- upper limits; and
+- combinations of these.
+
+The discriminator is:
+```json
+{
+  "definitionType": "vertical-definition-type:rel"
+}
+
+```
+
+or:
+
+```json
+{
+  "definitionType": "vertical-definition-type:ahd"
+}
+```
+
+or:
+
+```json
+{
+  "definitionType": "vertical-definition-type:jur"
+}
+```
+
+**5. Keep derivation separate from the source definition**
+
+A legal height description and a generated solid are different things.
+
+The source definitions belong in:
+
+```json
+{
+  "verticalBoundaryDefinitions": []
+}
+```
+
+The computational result belongs in:
+
+```json
+{
+  "derivedGeometry": {}
+}
+```

@@ -1,0 +1,9 @@
+preflabel,definition,notation,altlabel,related
+undefined,No vertical boundary has been defined in this direction.,und,,
+notSupplied,The source material did not supply a vertical boundary in this direction.,ns,not supplied|not-supplied,
+notApplicable,A vertical boundary is not applicable in this direction.,na,not applicable|not-applicable,
+unconstrained,The parcel is explicitly not constrained in this direction.,uc,unconstrained,
+definedButUnresolved,A legal or source-based boundary definition exists but cannot yet be converted into an absolute value or geometry.,dur,defined but unresolved|defined-but-unresolved,
+defined,The vertical boundary is directly defined as a usable value or geometry.,def,,
+derived,The vertical boundary value or geometry has been computed from source information.,drv,,
+authoritative,The vertical boundary geometry is legally authoritative.,auth,,

@@ -1,0 +1,5 @@
+preflabel,definition,notation,altlabel,related
+offset,The boundary is expressed as a distance above or below a reference.,off,,
+absoluteHeight,The boundary is expressed as an absolute height in a vertical CRS or datum.,ah,absolute height|absolute-height,
+geometryReference,The boundary is defined by reference to an identified surface, surface, or geometry.,gr,geometry reference|geometry-reference,
+ruleExpression,The boundary is retained as a legal or jurisdictional expression that has not been reduced to a numeric value or geometry.,re,rule expression|rule-expression,

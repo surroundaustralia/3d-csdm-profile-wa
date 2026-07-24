@@ -5,3 +5,6 @@ requiresVerticalCRS,A vertical CRS or datum is required before computation.,rvcr
 requiresSourceRule,A legal or jurisdictional rule is required before computation.,rsr,requires source rule|requires-source-rule,
 computable,The available information is sufficient to compute a value.,c,,
 computed,The value has been computed and should include derivation provenance.,cd,,
+notApplicable,Computation is not applicable to the declared representation.,na,not applicable|not-applicable,
+partiallyComputable,Some but not all required vertical boundaries can be computed.,pc,partially computable|partially-computable,
+requiresBoundaryDefinition,One or more required upper or lower boundary definitions are missing.,rbd,requires boundary definition|requires-boundary-definition,

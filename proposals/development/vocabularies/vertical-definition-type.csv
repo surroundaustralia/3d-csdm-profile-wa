@@ -1,0 +1,5 @@
+preflabel,definition,notation,altlabel,related
+relativeHeightDescription,A vertical boundary is described by an offset from a reference surface, rel, object, or plane.,rhd,relative height description|relative-height-description,
+absoluteHeightDescription,A vertical boundary is expressed as an absolute height in a declared vertical CRS or datum.,ahd,absolute height description|absolute-height-description,
+jurisdictionalBoundaryRule,A vertical boundary is defined by a title, jur, statute, Crown Grant, strata statement, or approved jurisdictional rule.,jbr,jurisdictional boundary rule|jurisdictional-boundary-rule,
+geometryBoundaryReference,A vertical boundary is defined directly by reference to a surface, plane, or other boundary geometry.,gbr,geometry boundary reference|geometry-boundary-reference,
