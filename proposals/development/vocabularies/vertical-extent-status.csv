@@ -1,0 +1,12 @@
+preflabel,definition,notation,altlabel,related
+undefined,The vertical extent has not been defined.,und,,
+notSupplied,The source material did not supply a vertical extent.,ns,not supplied|not-supplied,
+notApplicable,Vertical extent is not applicable to this representation.,na,not applicable|not-applicable|na,
+unconstrainedAbove,The parcel is explicitly not constrained above.,uca,unconstrained above|unconstrained-above,
+unconstrainedBelow,The parcel is explicitly not constrained below.,ucb,unconstrained below|unconstrained-below,
+jurisdictionalDefault,A jurisdictional default applies and the source rule is referenced.,jd,jurisdictional default|jurisdictional-default,
+legallyDefined,A legal source defines the vertical extent.,ld,legally defined|legally-defined,
+requiresResolution,A description exists but cannot yet be converted into computable geometry.,rr,requires resolution|requires-resolution,
+derivedForVisualisation,Geometry has been generated for visualisation or analysis only.,dfv,derived for visualisation|derived-for-visualisation,
+derivedFromLegalDescription,Geometry has been computed from a legal description.,dfld,derived from legal description|derived-from-legal-description,
+authoritative3D,The parcel has a legally authoritative 3D extent.,a3d,authoritative 3d|authoritative-3d,

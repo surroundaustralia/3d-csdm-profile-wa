@@ -1,0 +1,7 @@
+preflabel,definition,notation,altlabel,related
+2D,The parcel is represented by its surveyed horizontal footprint only.,2d,2D|representation-status:2d,
+2.5D,"The parcel footprint is associated with a terrain, ground, floor, or reference surface.",2-5d,2.5d|2.5D|representation-status:2.5d,
+heightDescribed,"The parcel has a height, depth, stratum, datum, or vertical relationship description.",hd,height-described|height described,
+jurisdictionallyBounded,The parcel has vertical limits derived from a legal or jurisdictional source.,jb,jurisdictionally-bounded|jurisdictionally bounded,
+derived3D,A 3D solid has been generated from computable inputs.,d3d,derived-3d|derived 3D,
+authoritative3D,The parcel has a legally authoritative 3D extent.,a3d,authoritative-3d|authoritative 3D,

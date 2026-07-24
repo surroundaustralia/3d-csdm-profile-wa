@@ -1,0 +1,7 @@
+preflabel,definition,notation,altlabel,related
+notComputable,The height or extent cannot be computed from the available information.,nc,not computable|not-computable,
+requiresReferenceSurface,A reference surface or level is required before computation.,rrs,requires reference surface|requires-reference-surface,
+requiresVerticalCRS,A vertical CRS or datum is required before computation.,rvcrs,requires vertical crs|requires-vertical-crs,
+requiresSourceRule,A legal or jurisdictional rule is required before computation.,rsr,requires source rule|requires-source-rule,
+computable,The available information is sufficient to compute a value.,c,,
+computed,The value has been computed and should include derivation provenance.,cd,,
