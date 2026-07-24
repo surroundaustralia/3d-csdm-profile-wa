@@ -5,6 +5,16 @@
 These examples demonstrate how vertical information can be added progressively to a Western Australian cadastral parcel without incorrectly implying that every parcel has a legally defined 3D extent.
 They cover many existing practices used in WA today.
 
+They are a starting point for discussion. Some normalisation may be possible.
+
+The following vocabularies have been compiled to support the examples:
+
+- [Computability Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/computability-status.csv)
+- [Geometry Legal Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/geometry-legal-status.csv)
+- [Height Reference](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/height-reference.csv)
+- [Representation Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/representation-status.csv)
+- [Vertical Extent Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-extent-status.csv)
+
 The key principle is:
 
 > A parcel remains an authoritative 2D parcel unless a legal vertical extent is explicitly described, supported by an authoritative source, and, where a 3D solid is created, capable of being computed and validated.
@@ -590,9 +600,6 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
       ]
     }
 ```
-
-### Derived 3D solid
-
 
 ## Discussion points
 
