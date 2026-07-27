@@ -7,6 +7,7 @@
   <figcaption id="figure-1-mining-profile">Figure 1: Mining Profile Context Diagram</figcaption>
 </figure>
 
+<br>
 The upper part shows profile inheritance:
 
 3D CSDM Common Model **to** ICSM Profile **to** WA Profile **to** WA Mining Profile
