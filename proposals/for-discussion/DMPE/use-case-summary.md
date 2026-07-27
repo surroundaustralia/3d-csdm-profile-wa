@@ -1,4 +1,4 @@
-## Executive Summary
+## Summary
 
 This use case examines how Western Australian mining tenement survey data could be represented and validated using the 3D CSDM common model, the WA profile and a proposed WA mining profile.
 
