@@ -1,7 +1,7 @@
 ## Mining Profile Context Diagram
 
 <figure class="fig fig-wide">
-  <img src="../assets/dmpe-context.png" 
+  <img src="../../use-cases/assets/dmpe-context.png" 
        alt="Figure 1: Mining Profile Context Diagram"
        style="width: 70%;">
   <figcaption id="figure-1-mining-profile">Figure 1: Mining Profile Context Diagram</figcaption>
