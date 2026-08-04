@@ -1,0 +1,988 @@
+{
+  "@context": {
+    "wa-profile": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
+    "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/"
+  },
+  "id": "03-2-5d-surface",
+  "name": "2D footprint bounds a terrain, ground, floor, or reference surface.",
+  "description": "Expected validation result for a standard WA cadastral parcel represented by its authoritative 2D footprint with an associated bounded 2.5D terrain, ground, floor, or reference surface. The surface provides vertical context but does not define legal vertical extent or a closed 3D parcel volume.",
+  "type": "FeatureCollection",
+  "featureType": "3D CSDM",
+  "tenureType": "wa-parcel-type:freehold",
+  "planType": "wa-survey-type:deposited-plan",
+  "purpose": "wa-survey-purpose:subdivision",
+  "surveyType": "wa-survey-type:deposited-plan",
+  "time": {
+    "date": "2026-01-02T00:00:00Z"
+  },
+  "horizontalCRS": "epsg:8031",
+  "verticalCRS": "epsg:5711",
+  "bearingRotation": 0.25954350,
+  "surveyTitle": "Lot 800 on DP 431276",
+  "adminUnit": [
+    {
+      "href": "wa-locality:innaloo",
+      "re": "related",
+      "role": "icsm-admin-unit-type:locality"
+    },
+    {
+      "href": "wa-locality:city-of-stirling",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    }
+  ],
+  "hasProvenance": [
+    {
+      "id": "uuid:f45dc6e9-e1e8-41a8-b8e6-470337ca4a3a",
+      "activityType": "certification-of-field-record",
+      "activityName": "Survey Certificate - Regulation 4 Compiled Plan",
+      "wasAssociatedWith": {
+        "agentType": "Person",
+        "name": {
+          "firstName": "Craig",
+          "lastName": "Miller",
+          "formattedName": "Craig Miller"
+        },
+        "surveyorReference": null,
+        "certified": "hereby certify that this plan is accurate and is a correct representation of the - (a) is a correct and accurate representation of the survey(s) of the subject land ; and (b) is in accordance with the relevant law in relation to which it is lodged.",
+        "actedOnBehalfOf": {
+          "agentType": "Organization",
+          "legalName": "Vision Surveys Consulting",
+          "address": {
+            "streetNumber": "59",
+            "street": "Scarborough Beach Road",
+            "city": "Scarborough",
+            "stateOrTerritory": "Western Australia",
+            "postcode": "6019",
+            "country": "Australia"
+          },
+          "phone": "61440000",
+          "email": "info@visionsc.com.au"
+        },
+        "surveyReference": "VS010368 - Kyarra St 4a and 4b, Innaloo",
+        "signedTimestamp": "20260102T11:09:49+08:00"
+      },
+      "generated": "DP-431276-1-1-0.00"
+    },
+    {
+      "id": "uuid:c329ad73-2ae1-4fda-a1c8-56a579f0a605",
+      "activityType": "planning-approval-obtained",
+      "wasAssociatedWith": {
+        "agentType": "Person",
+        "name": {
+          "firstName": null,
+          "lastName": null,
+          "formattedName": "Planning Authority Representative"
+        },
+        "actedOnBehalfOf": {
+          "agentType": "Organization",
+          "name": "WAPC"
+        },
+        "reference": "201505"
+      },
+      "generated": "DP-431276-1-1-0.00",
+      "signedTimestamp": null,
+      "delegatedUnder": {
+        "legislation": "Planning and Development Act 2005",
+        "section": "Sec. 16"
+      }
+    }
+  ],
+  "wasGeneratedBy": [
+    {
+      "id": "uuid:ede6b973-c085-430d-812c-1ce2f0bd9117",
+      "type": "prov:Activity",
+      "label": "Convert APX-05 CSD file and associated PDF to WA 3D CSDM JSON",
+      "startedAtTime": "2026-06-15T17:47:17Z",
+      "endedAtTime": "2026-06-15T17:47:17Z",
+      "generatedBy": "src/process_csd_pdf/build_wa_csd_pdf.py",
+      "used": [
+        {
+          "id": "file:CSD_DP431276.csd",
+          "type": "prov:Entity",
+          "role": "sourceCsdFile",
+          "format": "APX-05 CSD"
+        },
+        {
+          "id": "file:DP431276.pdf",
+          "type": "prov:Entity",
+          "role": "sourcePdfFile",
+          "format": "pdf"
+        }
+      ],
+      "generated": [
+        {
+          "id": "file:CSD_DP431276.csdm.json",
+          "type": "prov:Entity",
+          "role": "convertedCsdmJson",
+          "format": "application/json"
+        }
+      ],
+      "wasAssociatedWith": [
+        {
+          "id": "src/process_csd/process_wa_csd.py",
+          "type": [
+            "prov:SoftwareAgent",
+            "schema:SoftwareApplication"
+          ],
+          "role": "formatConverter",
+          "description": "Python module used to convert APX-05 CSD records into WA 3D CSDM JSON."
+        },
+        {
+          "id": "src/process_csd_pdf/build_wa_csd_pdf.py",
+          "type": [
+            "prov:SoftwareAgent",
+            "schema:SoftwareApplication"
+          ],
+          "role": "workflowOrchestrator",
+          "description": "Python module used to run the CSD converter, run the PDF metadata extractor, and merge the resulting JSON outputs."
+        }
+      ]
+    }
+  ],
+  "features": [],
+  "referencedCSDs": [
+    {
+      "id": "uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc",
+      "name": "SP 28750",
+      "adminUnit": {
+        "href": "wa-locality:innaloo",
+        "rel": "related",
+        "role": "icsm-admin-unit-type:locality"
+      },
+      "bearingRotation": 0.25954350,
+      "time": {
+        "date": null
+      }
+    },
+    {
+      "id": "uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806",
+      "name": "D36053",
+      "adminUnit": {
+        "href": "wa-locality:innaloo",
+        "rel": "related",
+        "role": "icsm-admin-unit-type:locality"
+      },
+      "bearingRotation": 0.25954350,
+      "time": {
+        "date": null
+      }
+    }
+  ],
+  "points": [
+    {
+      "id": "uuid:59ba70ef-374a-46b6-b3d1-8c827291e21a",
+      "type": "FeatureCollection",
+      "featureType": "CadastralMark",
+      "features": [
+        {
+          "id": "point-2",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              115.79697337440058,
+              -31.893652878797063,
+              19.50
+            ]
+          },
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              48136.976,
+              369943.109,
+              19.50
+            ]
+          },
+          "properties": {
+            "name": "",
+            "purpose": "wa-survey-point-purpose:monument",
+            "ptQualityMeasure": 0.05,
+            "comment": null,
+            "methodEstablished": "wa-pt-method:T",
+            "monumentedBy": {
+              "form": "wa-monument-form:other",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:mark-found"
+            }
+          }
+        },
+        {
+          "id": "point-3",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              115.79718601252313,
+              -31.893653732234803,
+              19.90
+            ]
+          },
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              48157.092,
+              369943.018,
+              19.90
+            ]
+          },
+          "properties": {
+            "name": "",
+            "purpose": "wa-survey-point-purpose:monument",
+            "ptQualityMeasure": 0.05,
+            "comment": null,
+            "methodEstablished": "wa-pt-method:T",
+            "monumentedBy": {
+              "form": "wa-monument-form:other",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:mark-found"
+            }
+          }
+        },
+        {
+          "id": "point-4",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              115.79697538604657,
+              -31.893290034215067,
+              20.60
+            ]
+          },
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              48137.159,
+              369983.343,
+              20.60
+            ]
+          },
+          "properties": {
+            "name": "",
+            "purpose": "wa-survey-point-purpose:monument",
+            "ptQualityMeasure": 0.05,
+            "comment": null,
+            "methodEstablished": "wa-pt-method:T",
+            "monumentedBy": {
+              "form": "wa-monument-form:other",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:mark-found"
+            }
+          }
+        },
+        {
+          "id": "point-5",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              115.79718801276466,
+              -31.893290887647535,
+              20.90
+            ]
+          },
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              48157.274,
+              369983.252,
+              20.90
+            ]
+          },
+          "properties": {
+            "name": "",
+            "purpose": "wa-survey-point-purpose:monument",
+            "ptQualityMeasure": 0.05,
+            "comment": null,
+            "methodEstablished": "wa-pt-method:T",
+            "monumentedBy": {
+              "form": "wa-monument-form:other",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:mark-found"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "vectorObservations": [
+    {
+      "id": "uuid:0e582a81-b517-4012-a3bb-7605853e0159",
+      "type": "FeatureCollection",
+      "featureType": "sosa:ObservationCollection",
+      "properties": {
+        "resultTime": "2026-01-02T00:00:00Z",
+        "observedProperty": "surveyable:VectorDetermination",
+        "madeBySensor": {
+          "id": "ts-16",
+          "sensorType": "icsm-equipment-type:ts",
+          "description": "Leica TS16 3",
+          "lastCalibrated": "2026-01-02T00:00:00Z",
+          "hasSubSystem": [
+            {
+              "sensorType": "icsm-equipment-type:ts",
+              "id": "sensordesc:123456"
+            },
+            {
+              "sensorType": "icsm-equipment-type:p",
+              "id": "sensordesc:789012"
+            }
+          ]
+        }
+      },
+      "usedProcedure": "icsm-procedure-used:measured",
+      "features": [
+        {
+          "id": "uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "line-geometry-1",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "distance": 20.116
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000
+          }
+        },
+        {
+          "id": "uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "line-geometry-2",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "distance": 40.234
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000
+          }
+        },
+        {
+          "id": "uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "line-geometry-3",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "distance": 40.234
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000
+          }
+        },
+        {
+          "id": "uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "line-geometry-4",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "distance": 20.116
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000
+          }
+        },
+        {
+          "id": "subtended-angle-1",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "angle-1",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "angle": 90.0
+            },
+            "angleAccuracy": 0.0056,
+            "angleType": "icsm-angle-type:angle",
+            "angleDerivation": "wa-angle-derivation:M"
+          }
+        },
+        {
+          "id": "subtended-angle-2",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "angle-2",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "angle": 90.0
+            },
+            "angleAccuracy": 0.0056,
+            "angleType": "icsm-angle-type:angle",
+            "angleDerivation": "wa-angle-derivation:M"
+          }
+        },
+        {
+          "id": "subtended-angle-3",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "angle-3",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "angle": 90.0
+            },
+            "angleAccuracy": 0.0056,
+            "angleType": "icsm-angle-type:angle",
+            "angleDerivation": "wa-angle-derivation:M"
+          }
+        },
+        {
+          "id": "subtended-angle-4",
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "angle-4",
+            "resultTime": "2026-01-02T00:00:00Z",
+            "hasResult": {
+              "angle": 90.0
+            },
+            "angleAccuracy": 0.0056,
+            "angleType": "icsm-angle-type:angle",
+            "angleDerivation": "wa-angle-derivation:M"
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "uuid:a358dcd1-5013-40a0-96b6-e04e70cd2f40",
+      "type": "FeatureCollection",
+      "featureType": "ObservedVector",
+      "features": [
+        {
+          "id": "line-geometry-1",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "point-2",
+              "point-3"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
+            "comment": null
+          }
+        },
+        {
+          "id": "line-geometry-2",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "point-2",
+              "point-4"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:boundary",
+            "comment": null
+          }
+        },
+        {
+          "id": "line-geometry-3",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "point-3",
+              "point-5"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:boundary",
+            "comment": null
+          }
+        },
+        {
+          "id": "line-geometry-4",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "LineString",
+            "references": [
+              "point-4",
+              "point-5"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:boundary",
+            "comment": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2",
+      "type": "FeatureCollection",
+      "featureType": "SubtendedAngle",
+      "features": [
+        {
+          "id": "angle-1",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "SubtendedAngle",
+            "references": [
+              "point-5",
+              "line-geometry-3",
+              "line-geometry-4"
+            ]
+          },
+          "properties": {
+            "angleType": "icsm-angle-type:subtended",
+            "comment": null
+          }
+        },
+        {
+          "id": "angle-2",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "SubtendedAngle",
+            "references": [
+              "point-3",
+              "line-geometry-1",
+              "line-geometry-3"
+            ]
+          },
+          "properties": {
+            "angleType": "icsm-angle-type:subtended",
+            "comment": null
+          }
+        },
+        {
+          "id": "angle-3",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "SubtendedAngle",
+            "references": [
+              "point-2",
+              "line-geometry-2",
+              "line-geometry-1"
+            ]
+          },
+          "properties": {
+            "angleType": "icsm-angle-type:subtended",
+            "comment": null
+          }
+        },
+        {
+          "id": "angle-4",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "SubtendedAngle",
+            "references": [
+              "point-4",
+              "line-geometry-4",
+              "line-geometry-2"
+            ]
+          },
+          "properties": {
+            "angleType": "icsm-angle-type:subtended",
+            "comment": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "uuid:ae2403ce-5a09-43fb-a89e-fe2832795aa6",
+      "type": "FeatureCollection",
+      "featureType": "Edge",
+      "features": [
+        {
+          "id": "uuid:412069d1-fbd1-4b81-b171-4411b850c3cc",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "point-5",
+              "point-2"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:3D-Construct",
+            "comment": null,
+            "length": 45.002
+          }
+        }
+      ]
+    }
+  ],
+  "rings": [
+    {
+      "id": "uuid:36e4faa8-719c-46b0-9062-0d246d98d270",
+      "type": "FeatureCollection",
+      "featureType": "Ring",
+      "features": [
+        {
+          "id": "uuid:42ca8a19-f8eb-4afc-8aa9-02a99fb6a40b",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Ring",
+            "directed_references": [
+              {
+                "ref": "uuid:412069d1-fbd1-4b81-b171-4411b850c3cc",
+                "orientation": "+"
+              },
+              {
+                "ref": "line-geometry-1",
+                "orientation": "+"
+              },
+              {
+                "ref": "line-geometry-3",
+                "orientation": "+"
+              }
+            ]
+          },
+          "properties": {
+            "circumference": 105.368
+          }
+        },
+        {
+          "id": "uuid:7a02c21b-89a1-48f3-85cb-fa499bda5095",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Ring",
+            "directed_references": [
+              {
+                "ref": "uuid:412069d1-fbd1-4b81-b171-4411b850c3cc",
+                "orientation": "-"
+              },
+              {
+                "ref": "line-geometry-4",
+                "orientation": "-"
+              },
+              {
+                "ref": "line-geometry-2",
+                "orientation": "-"
+              }
+            ]
+          },
+          "properties": {
+            "circumference": 105.369
+          }
+        }
+      ]
+    }
+  ],
+  "faces": [
+    {
+      "id": "uuid:a8700ede-3080-4304-929f-d459e193530b",
+      "type": "FeatureCollection",
+      "featureType": "Face",
+      "features": [
+        {
+          "id": "uuid:785fe569-93c7-4a5a-b8dc-1ed6a4964029",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Face",
+            "directed_references": [
+              {
+                "ref": "uuid:42ca8a19-f8eb-4afc-8aa9-02a99fb6a40b",
+                "orientation": "+"
+              }
+            ]
+          },
+          "properties": {
+            "normal": [
+              -0.01998299112273733,
+              -0.02475422339880669,
+              0.9994938261388664
+            ],
+            "area": 404.917,
+            "description": "Top boundary face, [Ground Surface]"
+          }
+        },
+        {
+          "id": "uuid:b631b943-8681-4ba7-baba-cbf90555d550",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Face",
+            "directed_references": [
+              {
+                "ref": "uuid:7a02c21b-89a1-48f3-85cb-fa499bda5095",
+                "orientation": "+"
+              }
+            ]
+          },
+          "properties": {
+            "normal": [
+              -0.015026957173614096,
+              -0.02726173756617929,
+              0.9995153766816073
+            ],
+            "area": 404.918,
+            "description": "Top boundary face, [Ground Surface]"
+          }
+        }
+      ]
+    }
+  ],
+  "shells": [
+    {
+      "id": "uuid:218921de-c36d-4bc9-9116-5045538412be",
+      "type": "FeatureCollection",
+      "featureType": "Shell",
+      "features": [
+        {
+          "id": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Shell",
+            "directed_references": [
+              {
+                "ref": "uuid:785fe569-93c7-4a5a-b8dc-1ed6a4964029",
+                "orientation": "+"
+              },
+              {
+                "ref": "uuid:b631b943-8681-4ba7-baba-cbf90555d550",
+                "orientation": "+"
+              }
+            ]
+          },
+          "properties": {
+            "description": "Surface Shell of Ground Surface",
+            "targetParcel": [
+              {
+                "type": "Parcel",
+                "ref": "uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "solids": [],
+  "parcels": [
+    {
+      "id": "uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525",
+      "type": "FeatureCollection",
+      "featureType": "PrimaryParcel",
+      "properties": null,
+      "features": [
+        {
+          "id": "parcel-1",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              "line-geometry-2",
+              "line-geometry-1",
+              "line-geometry-3",
+              "line-geometry-4"
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "type": "wa:LotOnPlanAppellation",
+              "label": "Lot 800 on Plan DP 431276",
+              "hasPart": [
+                {
+                  "type": "surveyType",
+                  "ref": "wa-survey-type:deposited-plan"
+                },
+                {
+                  "type": "surveyNumber",
+                  "label": "DP 431276"
+                },
+                {
+                  "type": "lotPrefix",
+                  "ref": "wa-parcel-purpose:lot"
+                },
+                {
+                  "type": "lotNumber",
+                  "label": "800"
+                }
+              ]
+            },
+            "area": 809,
+            "parcelType": "wa-parcel-type:freehold",
+            "parcelPurpose": "wa-parcel-purpose:lot",
+            "parcelState": "wa-parcel-state:created",
+            "spatialRepresentationDefinitions": {
+              "representationStatus": "representation-status:2-5d",
+              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "coordinateRepresentation": {
+                "coordinateDimension": 3,
+                "zValueRole": "coordinate-z-role:rs"
+              },
+              "verticalExtent": {
+                "status": "vertical-extent-status:na",
+                "lowerBoundary": {
+                  "state": "vertical-boundary-state:na"
+                },
+                "upperBoundary": {
+                  "state": "vertical-boundary-state:na"
+                }
+              },
+              "computabilityStatus": "computability-status:nc",
+              "referenceSurfaces": [
+                {
+                  "id": "surface-ground-1",
+                  "surfaceType": "height-reference:gl",
+                  "geometryLegalStatus": "geometry-legal-status:obs",
+                  "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+                  "boundedByFootprint": true
+                }
+              ],
+              "derivedGeometry": {
+                "status": "notGenerated"
+              }
+            },
+            "interests": []
+          }
+        },
+        {
+          "id": "parcel-2",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              "line-geometry-2",
+              "line-geometry-1",
+              "line-geometry-3",
+              "line-geometry-4"
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "type": "wa:LotOnPlanAppellation",
+              "label": "Lot 1 on Plan SP 28750",
+              "hasPart": [
+                {
+                  "type": "surveyType",
+                  "ref": "wa-survey-type:deposited-plan"
+                },
+                {
+                  "type": "surveyNumber",
+                  "label": "SP 28750"
+                },
+                {
+                  "type": "lotPrefix",
+                  "ref": "wa-parcel-purpose:lot"
+                },
+                {
+                  "type": "lotNumber",
+                  "label": "1"
+                }
+              ]
+            },
+            "area": 809,
+            "parcelType": "wa-parcel-type:freehold",
+            "parcelPurpose": "wa-parcel-purpose:lot",
+            "parcelState": "wa-parcel-state:former-tenure",
+            "representationStatus": "representation-status:a3d",
+            "verticalExtentStatus": "vertical-extent:ns",
+            "geometryLegalStatus": "geometry-legal-status:l3d",
+            "computabilityStatus": "computability-status:nc",
+            "interests": [
+              {
+                "interestLink": "2500-584",
+                "interestType": "wa-interest-type:ct"
+              }
+            ]
+          }
+        },
+        {
+          "id": "parcel-3",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              "line-geometry-2",
+              "line-geometry-1",
+              "line-geometry-3",
+              "line-geometry-4"
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "type": "wa:LotOnPlanAppellation",
+              "label": "Lot 2 on Plan SP 28750",
+              "hasPart": [
+                {
+                  "type": "surveyType",
+                  "ref": "wa-survey-type:deposited-plan"
+                },
+                {
+                  "type": "surveyNumber",
+                  "label": "SP 28750"
+                },
+                {
+                  "type": "lotPrefix",
+                  "ref": "wa-parcel-purpose:lot"
+                },
+                {
+                  "type": "lotNumber",
+                  "label": "2"
+                }
+              ]
+            },
+            "area": 809,
+            "parcelType": "wa-parcel-type:freehold",
+            "parcelPurpose": "wa-parcel-purpose:lot",
+            "parcelState": "wa-parcel-state:former-tenure",
+            "representationStatus": "representation-status:a3d",
+            "verticalExtentStatus": "vertical-extent:ns",
+            "geometryLegalStatus": "geometry-legal-status:l3d",
+            "computabilityStatus": "computability-status:nc",
+            "interests": [
+              {
+                "interestLink": "2500-585",
+                "interestType": "wa-interest-type:ct"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "supportingDocuments": [],
+  "annotations": [
+    {
+      "description": "Subject to Material Change and WAPC approval.",
+      "role": "wa-annotation-role:sp",
+      "lodged": {
+        "date": "2026-01-02"
+      }
+    },
+    {
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
+      "role": "wa-annotation-role:r-4"
+    }
+  ]
+}

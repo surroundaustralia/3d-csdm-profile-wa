@@ -657,7 +657,7 @@ This allows the distinction between the **authoritative source information** and
 There is potential to refactor the seven patterns described above into a single general pattern. 
 However, the approach should be modular and not collapse the legal distinction between stages or types.
 
-The following offers a stable parcel structure with optional components fro `z` ordinate values, reference surfaces, vertical boundary definitions, and derived 3d geometry.
+The following offers a stable parcel structure with optional components for `z` ordinate values, reference surfaces, vertical boundary definitions, and derived 3d geometry.
 
 ### Suggested general pattern
 
@@ -1302,3 +1302,15 @@ The computational result belongs in:
   "derivedGeometry": {}
 }
 ```
+
+### Example files are here
+
+1. [2D Footprint](examples/2d-footprint.json)
+2. [2D Footprint with `z` ordinate](examples/2d-footprint-with-z.json)
+3. [2.5D Footprint with reference surface](examples/2-5d-reference-surface.json)
+4. [Height Described Relative](examples/height-described-relative.json)
+5. [Height Described (AHD)](examples/height-described-ahd.json)
+6. [Jurisdictionally Bounded](examples/jurisdictionally-bounded.json)
+7. [Derived 3D Solid](examples/derived-3d-solid.json)
+
+
