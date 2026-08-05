@@ -664,10 +664,10 @@
               "geometryLegalStatus": "geometry-legal-status:a2d",
               "coordinateRepresentation": {
                 "coordinateDimension": 3,
-                "zValueRole": "coordinate-z-role:gc"
+                "zValueRole": "coordinate-z-role:oh"
               },
               "verticalExtent": {
-                "status": "vertical-extent-status:ud",
+                "status": "vertical-extent-status:und",
                 "lowerBoundary": {
                   "state": "vertical-boundary-state:und"
                 },
