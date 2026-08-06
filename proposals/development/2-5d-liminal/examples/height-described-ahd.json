@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "uuid:height-description-extraction-1",
+      "id": "height-description-extraction-1",
       "activityType": "height-description-extraction",
       "activityName": "Extract absolute height description from source plan",
       "used": [
@@ -731,7 +731,7 @@
                   "description": "limited in height to more than and equal to 16.00 AHD",
                   "sourceReference": "source-height-description-2",
                   "resolutionStatus": "absoluteLimitAvailable",
-                  "provenanceRef": "uuid:height-description-extraction-1"
+                  "provenanceRef": "height-description-extraction-1"
                 },
                 {
                   "id": "absolute-limit-upper-1",
@@ -743,7 +743,7 @@
                   "description": "limited in height to less than and equal to 35.00 AHD",
                   "sourceReference": "source-height-description-1",
                   "resolutionStatus": "absoluteLimitAvailable",
-                  "provenanceRef": "uuid:height-description-extraction-1"
+                  "provenanceRef": "height-description-extraction-1"
                 }
               ],
               "derivedGeometry": {
