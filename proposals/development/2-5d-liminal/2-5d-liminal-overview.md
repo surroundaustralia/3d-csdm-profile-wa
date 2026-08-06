@@ -673,28 +673,28 @@ It contains a `verticalBoundaryDefinitions` structure, a `definitionType` descri
         {
           "properties": {
             {
-              "spatialRepresentationDefinitions": "representationStatus"
-              :
-              "representation-status:2d",
-              "geometryLegalStatus": "geometry-legal-status:a2d",
-              "coordinateRepresentation": {
-                "coordinateDimension": 2,
-                "zValueRole": "coordinate-z-role:absent"
-              },
-              "verticalExtent": {
-                "status": "vertical-extent-status:ud",
-                "lowerBoundary": {
-                  "state": "vertical-boundary-state:und"
+              "spatialRepresentationDefinitions": {
+                "representationStatus":  "representation-status:2d",
+                "geometryLegalStatus": "geometry-legal-status:a2d",
+                "coordinateRepresentation": {
+                  "coordinateDimension": 2,
+                  "zValueRole": "coordinate-z-role:absent"
                 },
-                "upperBoundary": {
-                  "state": "vertical-boundary-state:und"
+                "verticalExtent": {
+                  "status": "vertical-extent-status:ud",
+                  "lowerBoundary": {
+                    "state": "vertical-boundary-state:und"
+                  },
+                  "upperBoundary": {
+                    "state": "vertical-boundary-state:und"
+                  }
+                },
+                "computabilityStatus": "computability-status:nc",
+                "verticalBoundaryDefinitions": [],
+                "referenceSurfaces": [],
+                "derivedGeometry": {
+                  "status": "notGenerated"
                 }
-              },
-              "computabilityStatus": "computability-status:nc",
-              "verticalBoundaryDefinitions": [],
-              "referenceSurfaces": [],
-              "derivedGeometry": {
-                "status": "notGenerated"
               }
             }
           }
