@@ -672,32 +672,30 @@ It contains a `verticalBoundaryDefinitions` structure, a `definitionType` descri
       "features": [
         {
           "properties": {
-            "representationStatus": "representation-status:2d",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
-
-            "coordinateRepresentation": {
-              "coordinateDimension": 2,
-              "zValueRole": "coordinate-z-role:absent"
-            },
-
-            "verticalExtent": {
-              "status": "vertical-extent-status:ud",
-              "lowerBoundary": {
-                "state": "vertical-boundary-state:und"
+            {
+              "spatialRepresentationDefinitions": "representationStatus"
+              :
+              "representation-status:2d",
+              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "coordinateRepresentation": {
+                "coordinateDimension": 2,
+                "zValueRole": "coordinate-z-role:absent"
               },
-              "upperBoundary": {
-                "state": "vertical-boundary-state:und"
+              "verticalExtent": {
+                "status": "vertical-extent-status:ud",
+                "lowerBoundary": {
+                  "state": "vertical-boundary-state:und"
+                },
+                "upperBoundary": {
+                  "state": "vertical-boundary-state:und"
+                }
+              },
+              "computabilityStatus": "computability-status:nc",
+              "verticalBoundaryDefinitions": [],
+              "referenceSurfaces": [],
+              "derivedGeometry": {
+                "status": "notGenerated"
               }
-            },
-
-            "computabilityStatus": "computability-status:nc",
-
-            "verticalBoundaryDefinitions": [],
-
-            "referenceSurfaces": [],
-
-            "derivedGeometry": {
-              "status": "notGenerated"
             }
           }
         }
@@ -754,6 +752,7 @@ The common `verticalBoundaryDefinition` then explains why those statuses apply.
 
 ```json
 {
+  "spatialRepresentationDefinitions": {
   "representationStatus": "representation-status:2d",
   "geometryLegalStatus": "geometry-legal-status:a2d",
 
@@ -781,6 +780,7 @@ The common `verticalBoundaryDefinition` then explains why those statuses apply.
     "status": "notGenerated"
   }
 }
+}
 ```
 
 ### 2 Authoritative 2D footprint with geometry `z` values
@@ -789,31 +789,28 @@ The legal and vertical-extent patterns remain unchanged. Only the coordinate rep
 
 ```json
 {
-  "representationStatus": "representation-status:2d",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 3,
-    "zValueRole": "coordinate-z-role:gc"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:ud",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:und"
+  "spatialRepresentationDefinitions": {
+    "representationStatus": "representation-status:2d",
+    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "coordinateRepresentation": {
+      "coordinateDimension": 3,
+      "zValueRole": "coordinate-z-role:gc"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:und"
+    "verticalExtent": {
+      "status": "vertical-extent-status:ud",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:und"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:und"
+      }
+    },
+    "computabilityStatus": "computability-status:nc",
+    "verticalBoundaryDefinitions": [],
+    "referenceSurfaces": [],
+    "derivedGeometry": {
+      "status": "notGenerated"
     }
-  },
-
-  "computabilityStatus": "computability-status:nc",
-
-  "verticalBoundaryDefinitions": [],
-  "referenceSurfaces": [],
-
-  "derivedGeometry": {
-    "status": "notGenerated"
   }
 }
 ```
@@ -826,6 +823,7 @@ Where unboundedness is positively established by an authoritative source, it sho
 
 ```json
 {
+  "spatialRepresentationDefinitions": {
   "representationStatus": "representation-status:2d",
   "geometryLegalStatus": "geometry-legal-status:a2d",
 
@@ -854,6 +852,7 @@ Where unboundedness is positively established by an authoritative source, it sho
     "status": "notGenerated"
   }
 }
+}
 ```
 
 The separate lower and upper boundary objects make the direction and meaning explicit.
@@ -876,6 +875,7 @@ It also supports mixed cases, such as:
 
 ```json
 {
+  "spatialRepresentationDefinitions": {
   "representationStatus": "representation-status:2-5d",
   "geometryLegalStatus": "geometry-legal-status:a2d",
 
@@ -912,6 +912,7 @@ It also supports mixed cases, such as:
     "status": "notGenerated"
   }
 }
+}
 ```
 
 The surface is supporting geometry. 
@@ -921,63 +922,59 @@ It is not automatically an upper or lower legal boundary.
 
 ```json
 {
-  "representationStatus": "representation-status:hd",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 2,
-    "zValueRole": "coordinate-z-role:absent"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:rr",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:dur",
-      "definitionRef": "relative-limit-lower-1"
+  "spatialRepresentationDefinitions": {
+    "representationStatus": "representation-status:hd",
+    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "coordinateRepresentation": {
+      "coordinateDimension": 2,
+      "zValueRole": "coordinate-z-role:absent"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:dur",
-      "definitionRef": "relative-limit-upper-1"
-    }
-  },
-
-  "computabilityStatus": "computability-status:rrs",
-
-  "verticalBoundaryDefinitions": [
-    {
-      "id": "relative-limit-lower-1",
-      "definitionType": "vertical-definition-type:rel",
-      "limitRole": "vertical-limit-role:ll",
-      "valueType": "vertical-value-type:off",
-      "value": 2,
-      "unit": "uom:m",
-      "direction": "vertical-direction:blw",
-      "heightReference": "height-reference:gl",
-      "description": "2 metres below ground level",
-      "sourceReference": "source-height-description-1",
-      "resolutionStatus": "requiresReferenceSurface",
-      "provenanceRef": "height-description-extraction-1"
+    "verticalExtent": {
+      "status": "vertical-extent-status:rr",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:dur",
+        "definitionRef": "relative-limit-lower-1"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:dur",
+        "definitionRef": "relative-limit-upper-1"
+      }
     },
-    {
-      "id": "relative-limit-upper-1",
-      "definitionType": "vertical-definition-type:rel",
-      "limitRole": "vertical-limit-role:ul",
-      "valueType": "vertical-value-type:off",
-      "value": 12,
-      "unit": "uom:m",
-      "direction": "vertical-direction:abv",
-      "heightReference": "height-reference:gl",
-      "description": "12 metres above ground level",
-      "sourceReference": "source-height-description-2",
-      "resolutionStatus": "requiresReferenceSurface",
-      "provenanceRef": "height-description-extraction-1"
+    "computabilityStatus": "computability-status:rrs",
+    "verticalBoundaryDefinitions": [
+      {
+        "id": "relative-limit-lower-1",
+        "definitionType": "vertical-definition-type:rel",
+        "limitRole": "vertical-limit-role:ll",
+        "valueType": "vertical-value-type:off",
+        "value": 2,
+        "unit": "uom:m",
+        "direction": "vertical-direction:blw",
+        "heightReference": "height-reference:gl",
+        "description": "2 metres below ground level",
+        "sourceReference": "source-height-description-1",
+        "resolutionStatus": "requiresReferenceSurface",
+        "provenanceRef": "height-description-extraction-1"
+      },
+      {
+        "id": "relative-limit-upper-1",
+        "definitionType": "vertical-definition-type:rel",
+        "limitRole": "vertical-limit-role:ul",
+        "valueType": "vertical-value-type:off",
+        "value": 12,
+        "unit": "uom:m",
+        "direction": "vertical-direction:abv",
+        "heightReference": "height-reference:gl",
+        "description": "12 metres above ground level",
+        "sourceReference": "source-height-description-2",
+        "resolutionStatus": "requiresReferenceSurface",
+        "provenanceRef": "height-description-extraction-1"
+      }
+    ],
+    "referenceSurfaces": [],
+    "derivedGeometry": {
+      "status": "notGenerated"
     }
-  ],
-
-  "referenceSurfaces": [],
-
-  "derivedGeometry": {
-    "status": "notGenerated"
   }
 }
 ```
@@ -986,63 +983,59 @@ It is not automatically an upper or lower legal boundary.
 
 ```json
 {
-  "representationStatus": "representation-status:hd",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 2,
-    "zValueRole": "coordinate-z-role:absent"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:ld",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:def",
-      "definitionRef": "absolute-limit-lower-1"
+  "spatialRepresentationDefinitions": {
+    "representationStatus": "representation-status:hd",
+    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "coordinateRepresentation": {
+      "coordinateDimension": 2,
+      "zValueRole": "coordinate-z-role:absent"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:def",
-      "definitionRef": "absolute-limit-upper-1"
-    }
-  },
-
-  "computabilityStatus": "computability-status:c",
-
-  "verticalBoundaryDefinitions": [
-    {
-      "id": "absolute-limit-lower-1",
-      "definitionType": "vertical-definition-type:ahd",
-      "limitRole": "vertical-limit-role:ll",
-      "valueType": "vertical-value-type:ah",
-      "value": 16,
-      "unit": "uom:m",
-      "verticalCRS": "epsg:5711",
-      "comparisonOperator": "greaterThanOrEqual",
-      "description": "limited in height to more than and equal to 16.00 AHD",
-      "sourceReference": "source-height-description-2",
-      "resolutionStatus": "absoluteLimitAvailable",
-      "provenanceRef": "uuid:height-description-extraction-1"
+    "verticalExtent": {
+      "status": "vertical-extent-status:ld",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:def",
+        "definitionRef": "absolute-limit-lower-1"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:def",
+        "definitionRef": "absolute-limit-upper-1"
+      }
     },
-    {
-      "id": "absolute-limit-upper-1",
-      "definitionType": "vertical-definition-type:ahd",
-      "limitRole": "vertical-limit-role:ul",
-      "valueType": "vertical-value-type:ah",
-      "value": 35,
-      "unit": "uom:m",
-      "verticalCRS": "epsg:5711",
-      "comparisonOperator": "lessThanOrEqual",
-      "description": "limited in height to less than and equal to 35.00 AHD",
-      "sourceReference": "source-height-description-1",
-      "resolutionStatus": "absoluteLimitAvailable",
-      "provenanceRef": "uuid:height-description-extraction-1"
+    "computabilityStatus": "computability-status:c",
+    "verticalBoundaryDefinitions": [
+      {
+        "id": "absolute-limit-lower-1",
+        "definitionType": "vertical-definition-type:ahd",
+        "limitRole": "vertical-limit-role:ll",
+        "valueType": "vertical-value-type:ah",
+        "value": 16,
+        "unit": "uom:m",
+        "verticalCRS": "epsg:5711",
+        "comparisonOperator": "greaterThanOrEqual",
+        "description": "limited in height to more than and equal to 16.00 AHD",
+        "sourceReference": "source-height-description-2",
+        "resolutionStatus": "absoluteLimitAvailable",
+        "provenanceRef": "uuid:height-description-extraction-1"
+      },
+      {
+        "id": "absolute-limit-upper-1",
+        "definitionType": "vertical-definition-type:ahd",
+        "limitRole": "vertical-limit-role:ul",
+        "valueType": "vertical-value-type:ah",
+        "value": 35,
+        "unit": "uom:m",
+        "verticalCRS": "epsg:5711",
+        "comparisonOperator": "lessThanOrEqual",
+        "description": "limited in height to less than and equal to 35.00 AHD",
+        "sourceReference": "source-height-description-1",
+        "resolutionStatus": "absoluteLimitAvailable",
+        "provenanceRef": "uuid:height-description-extraction-1"
+      }
+    ],
+    "referenceSurfaces": [],
+    "derivedGeometry": {
+      "status": "notGenerated"
     }
-  ],
-
-  "referenceSurfaces": [],
-
-  "derivedGeometry": {
-    "status": "notGenerated"
   }
 }
 ```
@@ -1051,54 +1044,49 @@ It is not automatically an upper or lower legal boundary.
 
 ```json
 {
-  "representationStatus": "representation-status:jb",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 2,
-    "zValueRole": "coordinate-z-role:absent"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:ld",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:dur",
-      "definitionRef": "jurisdictional-limit-lower-1"
+  "spatialRepresentationDefinitions": {
+    "representationStatus": "representation-status:jb",
+    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "coordinateRepresentation": {
+      "coordinateDimension": 2,
+      "zValueRole": "coordinate-z-role:absent"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:und"
-    }
-  },
-
-  "computabilityStatus": "computability-status:rrs",
-
-  "verticalBoundaryDefinitions": [
-    {
-      "id": "jurisdictional-limit-lower-1",
-      "definitionType": "vertical-definition-type:jur",
-      "limitRole": "vertical-limit-role:ll",
-      "valueType": "vertical-value-type:off",
-      "value": 12.19,
-      "unit": "uom:m",
-      "direction": "vertical-direction:blw",
-      "heightReference": "height-reference:gl",
-      "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
-      "sourceReference": "source-crown-grant-depth-limit-1",
-      "resolutionStatus": "requiresReferenceSurface",
-      "provenanceRef": "crown-grant-depth-limit-extraction-1",
-
-      "sourceBasis": {
-        "ruleType": "crownGrantDepthLimit",
-        "sourceAuthorityType": "CrownGrant",
-        "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+    "verticalExtent": {
+      "status": "vertical-extent-status:ld",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:dur",
+        "definitionRef": "jurisdictional-limit-lower-1"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:und"
       }
+    },
+    "computabilityStatus": "computability-status:rrs",
+    "verticalBoundaryDefinitions": [
+      {
+        "id": "jurisdictional-limit-lower-1",
+        "definitionType": "vertical-definition-type:jur",
+        "limitRole": "vertical-limit-role:ll",
+        "valueType": "vertical-value-type:off",
+        "value": 12.19,
+        "unit": "uom:m",
+        "direction": "vertical-direction:blw",
+        "heightReference": "height-reference:gl",
+        "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
+        "sourceReference": "source-crown-grant-depth-limit-1",
+        "resolutionStatus": "requiresReferenceSurface",
+        "provenanceRef": "crown-grant-depth-limit-extraction-1",
+        "sourceBasis": {
+          "ruleType": "crownGrantDepthLimit",
+          "sourceAuthorityType": "CrownGrant",
+          "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+        }
+      }
+    ],
+    "referenceSurfaces": [],
+    "derivedGeometry": {
+      "status": "notGenerated"
     }
-  ],
-
-  "referenceSurfaces": [],
-
-  "derivedGeometry": {
-    "status": "notGenerated"
   }
 }
 ```
@@ -1110,85 +1098,81 @@ It adds a derived-geometry component.
 
 ```json
 {
-  "representationStatus": "representation-status:d3d",
-  "geometryLegalStatus": "geometry-legal-status:dfld",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 3,
-    "zValueRole": "coordinate-z-role:dbg"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:dfld",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:drv",
-      "definitionRef": "relative-limit-lower-1",
-      "geometryRef": "derived-lower-surface-1"
+  "spatialRepresentationDefinitions": {
+    "representationStatus": "representation-status:d3d",
+    "geometryLegalStatus": "geometry-legal-status:dfld",
+    "coordinateRepresentation": {
+      "coordinateDimension": 3,
+      "zValueRole": "coordinate-z-role:dbg"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:drv",
-      "definitionRef": "relative-limit-upper-1",
-      "geometryRef": "derived-upper-surface-1"
-    }
-  },
-
-  "computabilityStatus": "computability-status:cd",
-
-  "verticalBoundaryDefinitions": [
-    {
-      "id": "relative-limit-lower-1",
-      "definitionType": "vertical-definition-type:rel",
-      "limitRole": "vertical-limit-role:ll",
-      "valueType": "vertical-value-type:off",
-      "value": 2,
-      "unit": "uom:m",
-      "direction": "vertical-direction:blw",
-      "heightReference": "height-reference:gl",
-      "description": "2 metres below ground level",
-      "sourceReference": "source-height-description-1",
-      "resolutionStatus": "resolved",
-      "provenanceRef": "height-description-extraction-1"
+    "verticalExtent": {
+      "status": "vertical-extent-status:dfld",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:drv",
+        "definitionRef": "relative-limit-lower-1",
+        "geometryRef": "derived-lower-surface-1"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:drv",
+        "definitionRef": "relative-limit-upper-1",
+        "geometryRef": "derived-upper-surface-1"
+      }
     },
-    {
-      "id": "relative-limit-upper-1",
-      "definitionType": "vertical-definition-type:rel",
-      "limitRole": "vertical-limit-role:ul",
-      "valueType": "vertical-value-type:off",
-      "value": 12,
-      "unit": "uom:m",
-      "direction": "vertical-direction:abv",
-      "heightReference": "height-reference:gl",
-      "description": "12 metres above ground level",
-      "sourceReference": "source-height-description-2",
-      "resolutionStatus": "resolved",
-      "provenanceRef": "height-description-extraction-1"
-    }
-  ],
-
-  "referenceSurfaces": [
-    {
-      "id": "surface-ground-1",
-      "surfaceType": "height-reference:gl",
-      "geometryLegalStatus": "geometry-legal-status:obs",
-      "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
-      "boundedByFootprint": true
-    }
-  ],
-
-  "derivedGeometry": {
-    "status": "solidGenerated",
-    "geometryType": "Solid",
-    "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
-    "inputFootprintRef": "parcel-footprint-1",
-    "inputDefinitionRefs": [
-      "relative-limit-lower-1",
-      "relative-limit-upper-1"
+    "computabilityStatus": "computability-status:cd",
+    "verticalBoundaryDefinitions": [
+      {
+        "id": "relative-limit-lower-1",
+        "definitionType": "vertical-definition-type:rel",
+        "limitRole": "vertical-limit-role:ll",
+        "valueType": "vertical-value-type:off",
+        "value": 2,
+        "unit": "uom:m",
+        "direction": "vertical-direction:blw",
+        "heightReference": "height-reference:gl",
+        "description": "2 metres below ground level",
+        "sourceReference": "source-height-description-1",
+        "resolutionStatus": "resolved",
+        "provenanceRef": "height-description-extraction-1"
+      },
+      {
+        "id": "relative-limit-upper-1",
+        "definitionType": "vertical-definition-type:rel",
+        "limitRole": "vertical-limit-role:ul",
+        "valueType": "vertical-value-type:off",
+        "value": 12,
+        "unit": "uom:m",
+        "direction": "vertical-direction:abv",
+        "heightReference": "height-reference:gl",
+        "description": "12 metres above ground level",
+        "sourceReference": "source-height-description-2",
+        "resolutionStatus": "resolved",
+        "provenanceRef": "height-description-extraction-1"
+      }
     ],
-    "inputSurfaceRefs": [
-      "surface-ground-1"
+    "referenceSurfaces": [
+      {
+        "id": "surface-ground-1",
+        "surfaceType": "height-reference:gl",
+        "geometryLegalStatus": "geometry-legal-status:obs",
+        "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+        "boundedByFootprint": true
+      }
     ],
-    "sourceReference": "source-surface-offset-1",
-    "provenanceRef": "surface-offset-extraction-1"
+    "derivedGeometry": {
+      "status": "solidGenerated",
+      "geometryType": "Solid",
+      "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
+      "inputFootprintRef": "parcel-footprint-1",
+      "inputDefinitionRefs": [
+        "relative-limit-lower-1",
+        "relative-limit-upper-1"
+      ],
+      "inputSurfaceRefs": [
+        "surface-ground-1"
+      ],
+      "sourceReference": "source-surface-offset-1",
+      "provenanceRef": "surface-offset-extraction-1"
+    }
   }
 }
 ```
