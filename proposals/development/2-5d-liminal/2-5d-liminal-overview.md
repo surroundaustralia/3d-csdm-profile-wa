@@ -167,7 +167,7 @@ It is assumed that these elements will follow the patterns outlined in the examp
 ### Authoritative 2D footprint **and** 2D footprint with `z` values
 
 <figure class="fig fig-wide">
-  <img src="../../img/parcel-on-datum.png" 
+  <img src="../../use-cases/assets/parcel-on-datum.png" 
        alt="Figure 1: Parcel on Datum"
        style="width: 70%;">
   <figcaption id="figure-1-parcel-on-datum">Figure 1: Parcel on Datum</figcaption>
@@ -179,10 +179,8 @@ If `z` is not defined as unbounded:
 {
   "horizontalCRS": "epsg:8031",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "parcels": [
     {
@@ -192,7 +190,7 @@ If `z` is not defined as unbounded:
             "representationStatus": "representation-status:2d",
             "geometryLegalStatus": "geometry-legal-status:a2d",
             "verticalExtentStatus": "vertical-extent-status:ud",
-            "computabilityStatus": "computability-status:nc"       
+            "computabilityStatus": "computability-status:nc"
           }
         }
       ]
@@ -207,10 +205,8 @@ If `z` is unbounded, expand `verticalExtentStatus` to include `unconstrainedAbov
 {
   "horizontalCRS": "epsg:8031",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "parcels": [
     {
@@ -223,24 +219,22 @@ If `z` is unbounded, expand `verticalExtentStatus` to include `unconstrainedAbov
               "vertical-extent-status:uca",
               "vertical-extent-status:ucb"
             ],
-            "computabilityStatus": "computability-status:nc"       
+            "computabilityStatus": "computability-status:nc"
           }
         }
       ]
     }
   ],
   "sourceDocuments": [
-    
   ],
   "hasProvenance": [
-    
   ]
 }
 ```
 ### 2.5D reference surface
 
 <figure class="fig fig-wide">
-  <img src="../../img/parcel-with-surface.png" 
+  <img src="../../use-cases/assets/parcel-with-surface.png" 
        alt="Figure 2: Parcel on Datum with Ground Surface"
        style="width: 70%;">
   <figcaption id="figure-2-parcel-with-surface">Figure 2: Parcel on Datum with Ground Surface</figcaption>
@@ -253,19 +247,14 @@ Same general pattern as **Authoritative 2D footprint and 2D footprint with `z` v
   "horizontalCRS": "epsg:8031",
   "verticalCRS": "epsg:5711",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "rings": [
-    
   ],
   "faces": [
-    
   ],
   "shells": [
-    
   ],
   "parcels": [
     {
@@ -288,7 +277,6 @@ Same general pattern as **Authoritative 2D footprint and 2D footprint with `z` v
     }
   ],
   "hasProvenance": [
-    
   ]
 }
 ```
@@ -301,10 +289,8 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires height de
 {
   "horizontalCRS": "epsg:8031",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "parcels": [
     {
@@ -323,14 +309,12 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires height de
                   "zMinDescription": "2 metres below ground level",
                   "descriptionRole": "lowerLimit",
                   "value": 2,
-                  "unit": "uom:m",
                   "sourceReference": "source-height-description-1"
                 },
                 {
                   "zMaxDescription": "12 metres above ground level",
                   "descriptionRole": "upperLimit",
                   "value": 12,
-                  "unit": "uom:m",
                   "sourceReference": "source-height-description-2"
                 }
               ],
@@ -344,10 +328,8 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires height de
     }
   ],
   "supportingDocuments": [
-    
   ],
   "hasProvenance": [
-    
   ]
 }
 ```
@@ -361,10 +343,8 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires vertical 
   "horizontalCRS": "epsg:8031",
   "verticalCRS": "epsg:5711",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "parcels": [
     {
@@ -378,13 +358,11 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires vertical 
             "absoluteHeight": {
               "maxHeight": {
                 "zMax": 35.0,
-                "unit": "uom:m",
                 "zMaxDescription": "limited in height to less than and equal to 35.00 AHD",
                 "sourceReference": "source-height-description-1"
               },
               "minHeight": {
                 "zMin": 16.0,
-                "unit": "uom:m",
                 "zMinDescription": "limited in height to more than and equal to 16.00 AHD",
                 "sourceReference": "source-height-description-2"
               },
@@ -397,10 +375,8 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires vertical 
     }
   ],
   "supportingDocuments": [
-    
   ],
   "hasProvenance": [
-    
   ]
 }
 ```
@@ -414,10 +390,8 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
   "horizontalCRS": "epsg:8031",
   "verticalCRS": "epsg:5711",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "parcels": [
     {
@@ -436,7 +410,6 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
               "heightReference": "groundLevel",
               "heightOffset": {
                 "value": 12.19,
-                "unit": "uom:m",
                 "direction": "vertical-direction:blw"
               },
               "sourceReference": "source-crown-grant-depth-limit-1",
@@ -448,10 +421,8 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
     }
   ],
   "supportingDocuments": [
-    
   ],
   "hasProvenance": [
-    
   ]
 }
 ```
@@ -459,7 +430,7 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
 ### Derived 3D solid
 
 <figure class="fig fig-wide">
-  <img src="../../img/parcel-with-solid.png" 
+  <img src="../../use-cases/assets/parcel-with-solid.png" 
        alt="Figure 3: Parcel on Datum with derived 3D Solid"
        style="width: 70%;">
   <figcaption id="figure-3-parcel-with-solid">Figure 3: Parcel on Datum with derived 3D Solid</figcaption>
@@ -471,22 +442,16 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
 {
   "horizontalCRS": "epsg:8031",
   "points": [
-    
   ],
   "edges": [
-    
   ],
   "rings": [
-    
   ],
   "faces": [
-    
   ],
   "shells": [
-    
   ],
   "solids": [
-    
   ],
   "parcels": [
     {
@@ -505,14 +470,12 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
                   "zMinDescription": "2 metres below ground level",
                   "descriptionRole": "lowerLimit",
                   "value": 2,
-                  "unit": "uom:m",
                   "sourceReference": "source-height-description-1"
                 },
                 {
                   "zMaxDescription": "12 metres above ground level",
                   "descriptionRole": "upperLimit",
                   "value": 12,
-                  "unit": "uom:m",
                   "sourceReference": "source-height-description-2"
                 }
               ],
@@ -535,10 +498,8 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
     }
   ],
   "supportingDocuments": [
-    
   ],
   "hasProvenance": [
-    
   ]
 }
 ```
@@ -547,80 +508,80 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
 
 ```json
 {
-      "id": "crown-grant-depth-limit-extraction-1",
-      "activityType": "jurisdictional-boundary-rule-extraction",
-      "activityName": "Extract Crown Grant depth limitation from Certificate of Title",
-      "used": [
-        {
-          "id": "source-ct-2500-584",
-          "type": "prov:Entity",
-          "role": "sourceCertificateOfTitle",
-          "interestLink": "2500-584",
-          "interestType": "wa-interest-type:ct",
-          "format": "title-register-record"
-        },
-        {
-          "id": "source-ct-2500-584-depth-limit",
-          "type": "prov:Entity",
-          "role": "sourceJurisdictionalBoundaryStatement",
-          "sourceAuthorityType": "CrownGrantCondition",
-          "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
-        },
-        {
-          "id": "parcel-2",
-          "type": "prov:Entity",
-          "role": "sourceParentParcel"
-        }
-      ],
-      "generated": [
-        {
-          "id": "parcel-1/jurisdictionalBoundaryRule",
-          "type": "prov:Entity",
-          "role": "normalisedJurisdictionalBoundaryRule"
-        },
-        {
-          "id": "parcel-1/jurisdictionalBoundaryRule/crownGrantDepthLimit",
-          "type": "prov:Entity",
-          "role": "normalisedCrownGrantDepthLimit"
-        }
-      ],
-      "wasAssociatedWith": [
-        {
-          "id": "src/process_title/build_wa_title_boundary_rules.py",
-          "type": [
-            "prov:SoftwareAgent",
-            "schema:SoftwareApplication"
-          ],
-          "role": "jurisdictionalBoundaryRuleExtractor",
-          "description": "Python module used to extract Crown Grant depth limitations and other jurisdictional boundary rules from Certificate of Title source records."
-        }
-      ],
-      "startedAtTime": "2026-06-15T17:47:17Z",
-      "endedAtTime": "2026-06-15T17:47:17Z"
+  "id": "crown-grant-depth-limit-extraction-1",
+  "activityType": "jurisdictional-boundary-rule-extraction",
+  "activityName": "Extract Crown Grant depth limitation from Certificate of Title",
+  "used": [
+    {
+      "id": "source-ct-2500-584",
+      "type": "prov:Entity",
+      "role": "sourceCertificateOfTitle",
+      "interestLink": "2500-584",
+      "interestType": "wa-interest-type:ct",
+      "format": "title-register-record"
+    },
+    {
+      "id": "source-ct-2500-584-depth-limit",
+      "type": "prov:Entity",
+      "role": "sourceJurisdictionalBoundaryStatement",
+      "sourceAuthorityType": "CrownGrantCondition",
+      "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+    },
+    {
+      "id": "parcel-2",
+      "type": "prov:Entity",
+      "role": "sourceParentParcel"
     }
+  ],
+  "generated": [
+    {
+      "id": "parcel-1/jurisdictionalBoundaryRule",
+      "type": "prov:Entity",
+      "role": "normalisedJurisdictionalBoundaryRule"
+    },
+    {
+      "id": "parcel-1/jurisdictionalBoundaryRule/crownGrantDepthLimit",
+      "type": "prov:Entity",
+      "role": "normalisedCrownGrantDepthLimit"
+    }
+  ],
+  "wasAssociatedWith": [
+    {
+      "id": "src/process_title/build_wa_title_boundary_rules.py",
+      "type": [
+        "prov:SoftwareAgent",
+        "schema:SoftwareApplication"
+      ],
+      "role": "jurisdictionalBoundaryRuleExtractor",
+      "description": "Python module used to extract Crown Grant depth limitations and other jurisdictional boundary rules from Certificate of Title source records."
+    }
+  ],
+  "startedAtTime": "2026-06-15T17:47:17Z",
+  "endedAtTime": "2026-06-15T17:47:17Z"
+}
 ```
 
 ### Sample `sourceDocument` declaration for a jurisdictional boundary rule
 
 ```json
 {
-      "id": "source-crown-grant-depth-limit-1",
-      "sourceDocumentType": "certificateOfTitle",
-      "sourceDocumentReference": "2500-584",
-      "interestType": "wa-interest-type:ct",
-      "sourceAuthorityType": "CrownGrantCondition",
-      "sourceLocation": {
-        "register": "Certificate of Title",
-        "titleReference": "2500/584",
-        "section": "Limitations, interests, encumbrances and notifications"
-      },
-      "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
-      "transcriptionStatus": "transcribed",
-      "appliesTo": "parcel-2",
-      "inheritedBy": [
-        "parcel-1"
-      ]
-    }
+  "id": "source-crown-grant-depth-limit-1",
+  "sourceDocumentType": "certificateOfTitle",
+  "sourceDocumentReference": "2500-584",
+  "interestType": "wa-interest-type:ct",
+  "sourceAuthorityType": "CrownGrantCondition",
+  "sourceLocation": {
+    "register": "Certificate of Title",
+    "titleReference": "2500/584",
+    "section": "Limitations, interests, encumbrances and notifications"
+  },
+  "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
+  "transcriptionStatus": "transcribed",
+  "appliesTo": "parcel-2",
+  "inheritedBy": [
+    "parcel-1"
+  ]
+}
 ```
 
 ## Discussion points
@@ -672,29 +633,27 @@ It contains a `verticalBoundaryDefinitions` structure, a `definitionType` descri
       "features": [
         {
           "properties": {
-            {
-              "spatialRepresentationDefinitions": {
-                "representationStatus":  "representation-status:2d",
-                "geometryLegalStatus": "geometry-legal-status:a2d",
-                "coordinateRepresentation": {
-                  "coordinateDimension": 2,
-                  "zValueRole": "coordinate-z-role:absent"
+            "spatialRepresentationDefinitions": {
+              "representationStatus": "representation-status:2d",
+              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "coordinateRepresentation": {
+                "coordinateDimension": 2,
+                "zValueRole": "coordinate-z-role:absent"
+              },
+              "verticalExtent": {
+                "status": "vertical-extent-status:ud",
+                "lowerBoundary": {
+                  "state": "vertical-boundary-state:und"
                 },
-                "verticalExtent": {
-                  "status": "vertical-extent-status:ud",
-                  "lowerBoundary": {
-                    "state": "vertical-boundary-state:und"
-                  },
-                  "upperBoundary": {
-                    "state": "vertical-boundary-state:und"
-                  }
-                },
-                "computabilityStatus": "computability-status:nc",
-                "verticalBoundaryDefinitions": [],
-                "referenceSurfaces": [],
-                "derivedGeometry": {
-                  "status": "notGenerated"
+                "upperBoundary": {
+                  "state": "vertical-boundary-state:und"
                 }
+              },
+              "computabilityStatus": "computability-status:nc",
+              "verticalBoundaryDefinitions": [],
+              "referenceSurfaces": [],
+              "derivedGeometry": {
+                "status": "notGenerated"
               }
             }
           }
@@ -755,12 +714,10 @@ The common `verticalBoundaryDefinition` then explains why those statuses apply.
   "spatialRepresentationDefinitions": {
     "representationStatus": "representation-status:2d",
     "geometryLegalStatus": "geometry-legal-status:a2d",
-
     "coordinateRepresentation": {
       "coordinateDimension": 2,
       "zValueRole": "coordinate-z-role:absent"
     },
-
     "verticalExtent": {
       "status": "vertical-extent-status:ud",
       "lowerBoundary": {
@@ -770,16 +727,13 @@ The common `verticalBoundaryDefinition` then explains why those statuses apply.
         "state": "vertical-boundary-state:und"
       }
     },
-
     "computabilityStatus": "computability-status:nc",
-
     "verticalBoundaryDefinitions": [],
     "referenceSurfaces": [],
-
     "derivedGeometry": {
       "status": "notGenerated"
     }
-}
+  }
 }
 ```
 
@@ -824,34 +778,29 @@ Where unboundedness is positively established by an authoritative source, it sho
 ```json
 {
   "spatialRepresentationDefinitions": {
-  "representationStatus": "representation-status:2d",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 2,
-    "zValueRole": "coordinate-z-role:absent"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:uc",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:uc"
+    "representationStatus": "representation-status:2d",
+    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "coordinateRepresentation": {
+      "coordinateDimension": 2,
+      "zValueRole": "coordinate-z-role:absent"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:uc"
+    "verticalExtent": {
+      "status": "vertical-extent-status:uc",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:uc"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:uc"
+      },
+      "sourceReference": "source-unbounded-extent-rule-1"
     },
-    "sourceReference": "source-unbounded-extent-rule-1"
-  },
-
-  "computabilityStatus": "computability-status:nc",
-
-  "verticalBoundaryDefinitions": [],
-  "referenceSurfaces": [],
-
-  "derivedGeometry": {
-    "status": "notGenerated"
+    "computabilityStatus": "computability-status:nc",
+    "verticalBoundaryDefinitions": [],
+    "referenceSurfaces": [],
+    "derivedGeometry": {
+      "status": "notGenerated"
+    }
   }
- }
 }
 ```
 
@@ -876,42 +825,36 @@ It also supports mixed cases, such as:
 ```json
 {
   "spatialRepresentationDefinitions": {
-  "representationStatus": "representation-status:2-5d",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-
-  "coordinateRepresentation": {
-    "coordinateDimension": 3,
-    "zValueRole": "coordinate-z-role:rs"
-  },
-
-  "verticalExtent": {
-    "status": "vertical-extent-status:na",
-    "lowerBoundary": {
-      "state": "vertical-boundary-state:na"
+    "representationStatus": "representation-status:2-5d",
+    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "coordinateRepresentation": {
+      "coordinateDimension": 3,
+      "zValueRole": "coordinate-z-role:rs"
     },
-    "upperBoundary": {
-      "state": "vertical-boundary-state:na"
+    "verticalExtent": {
+      "status": "vertical-extent-status:na",
+      "lowerBoundary": {
+        "state": "vertical-boundary-state:na"
+      },
+      "upperBoundary": {
+        "state": "vertical-boundary-state:na"
+      }
+    },
+    "computabilityStatus": "computability-status:nc",
+    "verticalBoundaryDefinitions": [],
+    "referenceSurfaces": [
+      {
+        "id": "surface-ground-1",
+        "surfaceType": "height-reference:gl",
+        "geometryLegalStatus": "geometry-legal-status:obs",
+        "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+        "boundedByFootprint": true
+      }
+    ],
+    "derivedGeometry": {
+      "status": "notGenerated"
     }
-  },
-
-  "computabilityStatus": "computability-status:nc",
-
-  "verticalBoundaryDefinitions": [],
-
-  "referenceSurfaces": [
-    {
-      "id": "surface-ground-1",
-      "surfaceType": "height-reference:gl",
-      "geometryLegalStatus": "geometry-legal-status:obs",
-      "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
-      "boundedByFootprint": true
-    }
-  ],
-
-  "derivedGeometry": {
-    "status": "notGenerated"
   }
-}
 }
 ```
 
@@ -948,7 +891,6 @@ It is not automatically an upper or lower legal boundary.
         "limitRole": "vertical-limit-role:ll",
         "valueType": "vertical-value-type:off",
         "value": 2,
-        "unit": "uom:m",
         "direction": "vertical-direction:blw",
         "heightReference": "height-reference:gl",
         "description": "2 metres below ground level",
@@ -962,7 +904,6 @@ It is not automatically an upper or lower legal boundary.
         "limitRole": "vertical-limit-role:ul",
         "valueType": "vertical-value-type:off",
         "value": 12,
-        "unit": "uom:m",
         "direction": "vertical-direction:abv",
         "heightReference": "height-reference:gl",
         "description": "12 metres above ground level",
@@ -1009,8 +950,6 @@ It is not automatically an upper or lower legal boundary.
         "limitRole": "vertical-limit-role:ll",
         "valueType": "vertical-value-type:ah",
         "value": 16,
-        "unit": "uom:m",
-        "verticalCRS": "epsg:5711",
         "comparisonOperator": "greaterThanOrEqual",
         "description": "limited in height to more than and equal to 16.00 AHD",
         "sourceReference": "source-height-description-2",
@@ -1023,8 +962,6 @@ It is not automatically an upper or lower legal boundary.
         "limitRole": "vertical-limit-role:ul",
         "valueType": "vertical-value-type:ah",
         "value": 35,
-        "unit": "uom:m",
-        "verticalCRS": "epsg:5711",
         "comparisonOperator": "lessThanOrEqual",
         "description": "limited in height to less than and equal to 35.00 AHD",
         "sourceReference": "source-height-description-1",
@@ -1069,7 +1006,6 @@ It is not automatically an upper or lower legal boundary.
         "limitRole": "vertical-limit-role:ll",
         "valueType": "vertical-value-type:off",
         "value": 12.19,
-        "unit": "uom:m",
         "direction": "vertical-direction:blw",
         "heightReference": "height-reference:gl",
         "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
@@ -1126,7 +1062,6 @@ It adds a derived-geometry component.
         "limitRole": "vertical-limit-role:ll",
         "valueType": "vertical-value-type:off",
         "value": 2,
-        "unit": "uom:m",
         "direction": "vertical-direction:blw",
         "heightReference": "height-reference:gl",
         "description": "2 metres below ground level",
@@ -1140,7 +1075,6 @@ It adds a derived-geometry component.
         "limitRole": "vertical-limit-role:ul",
         "valueType": "vertical-value-type:off",
         "value": 12,
-        "unit": "uom:m",
         "direction": "vertical-direction:abv",
         "heightReference": "height-reference:gl",
         "description": "12 metres above ground level",
