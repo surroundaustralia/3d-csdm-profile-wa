@@ -736,7 +736,6 @@
                   "limitRole": "vertical-limit-role:ll",
                   "valueType": "vertical-value-type:off",
                   "value": 12.19,
-                  "unit": "uom:m",
                   "direction": "vertical-direction:blw",
                   "heightReference": "height-reference:gl",
                   "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
