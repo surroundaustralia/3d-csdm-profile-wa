@@ -1166,7 +1166,7 @@
       ]
     }
   ],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -1744,6 +1744,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 215 DP 572532",
               "hasPart": [
                 {
@@ -1795,6 +1796,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 216 DP 572532",
               "hasPart": [
                 {
@@ -1846,6 +1848,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 217 DP 572532",
               "hasPart": [
                 {
@@ -1897,6 +1900,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 218 DP 572532",
               "hasPart": [
                 {
@@ -1948,6 +1952,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 219 DP 572532",
               "hasPart": [
                 {
@@ -2001,6 +2006,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 220 DP 572532",
               "hasPart": [
                 {
@@ -2058,6 +2064,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area D5 DP 572532",
               "hasPart": [
                 {
@@ -2115,6 +2122,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area D4 DP 572532",
               "hasPart": [
                 {
@@ -2173,6 +2181,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area D3 DP 572532",
               "hasPart": [
                 {
@@ -2232,6 +2241,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area D2 DP 572532",
               "hasPart": [
                 {
@@ -2297,6 +2307,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area D1 DP 572532",
               "hasPart": [
                 {

@@ -18,3 +18,13 @@ transforms:
       # tells the parser to only output the target object - not any components needed to build the geometry
       mode: "parcels"
     code: Extracts a 2D view of polygon geometries from 2 or 3D topology models
+
+  - id: Faces-as-Polygons
+    description: GeoJSON Polygons for faces
+    type: topo2geojson
+    metadata:
+      # all faces defined using generic container patterns - wont show 2D Polygons unless described as a directed face
+      # tells generic topo parser to look in specific container for objects, and the target mapping type of the objects
+      objects: "parcels:Polygon"
+      mode: "faces"
+    code: Extracts a 2D view of polygon geometries from faces in 3D topology models

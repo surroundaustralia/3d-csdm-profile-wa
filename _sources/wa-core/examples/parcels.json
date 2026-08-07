@@ -314,7 +314,7 @@
       ]
     }
   ],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -325,7 +325,7 @@
           "type": "Feature",
           "geometry": null,
           "topology": {
-            "type": "LineString",
+            "type": "Edge",
             "references": [
               "189",
               "184"
@@ -341,7 +341,7 @@
           "type": "Feature",
           "geometry": null,
           "topology": {
-            "type": "LineString",
+            "type": "Edge",
             "references": [
               "184",
               "198"
@@ -357,7 +357,7 @@
           "type": "Feature",
           "geometry": null,
           "topology": {
-            "type": "LineString",
+            "type": "Edge",
             "references": [
               "198",
               "197"
@@ -373,7 +373,7 @@
           "type": "Feature",
           "geometry": null,
           "topology": {
-            "type": "LineString",
+            "type": "Edge",
             "references": [
               "197",
               "196"
@@ -389,7 +389,7 @@
           "type": "Feature",
           "geometry": null,
           "topology": {
-            "type": "LineString",
+            "type": "Edge",
             "references": [
               "196",
               "190"
@@ -405,7 +405,7 @@
           "type": "Feature",
           "geometry": null,
           "topology": {
-            "type": "LineString",
+            "type": "Edge",
             "references": [
               "190",
               "189"
@@ -446,6 +446,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 213 DP 572532",
               "hasPart": [
                 {

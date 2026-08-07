@@ -17,9 +17,10 @@ else
   WORKSPACE_DIR="$(pwd)"
 fi
 
-MSYS_NO_PATHCONV=1  docker run --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" ${VOLUMES} \
+MSYS_NO_PATHCONV=1  docker run -it --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" ${VOLUMES} \
   ghcr.io/opengeospatial/bblocks-postprocess \
   --clean true --base-url http://localhost:9090/register/ "$@"
+
 
 
 

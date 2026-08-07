@@ -11,7 +11,7 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix ex:      <https://example.org/shapes/> .
 
 
@@ -90,8 +90,8 @@ ex:NamePartShape
         sh:path commonpatterns:namePartType ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "Each name part must have exactly one namePartType, which must be a plain string literal." ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Each name part must have exactly one namePartType, which must be an IRI (not a literal or blank node)." ;
         sh:name "namePartType"
     ] ;
 

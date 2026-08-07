@@ -14,9 +14,6 @@
           "$ref": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure"
         }
       ]
-    },
-    {
-      "required": ["type"]
     }
     ]
 }
