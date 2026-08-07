@@ -241,26 +241,26 @@ path	@id	schema
 /_anyOf/3/_anyOf/1/coordRefSys		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
 /_anyOf/3/_anyOf/1/links	rdfs:seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
 /_anyOf/3/_anyOf/1/features	https://purl.org/geojson/vocab#features	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/featureCollection-lenient/schema.yaml
-/_anyOf/3/features		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
-/_anyOf/3/features/_anyOf/0/id		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
-/_anyOf/3/features/_anyOf/0/geometry		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
-/_anyOf/3/features/_anyOf/0/geometry/_oneOf/1/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology	https://purl.org/geojson/vocab#topology	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/type	@type	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/topo#relatedFeatures	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/type	@type	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/topo#relatedFeatures	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/type	@type	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references	https://purl.org/geojson/topo#directedReferences	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references/ref	https://purl.org/geojson/topo#ref	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/oriented-ref/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references/orientation	https://purl.org/geojson/topo#orientation	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/oriented-ref/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/type	@type	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/relationships	https://purl.org/geojson/topo#relatedFeatures	https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
+/_anyOf/3/features/_anyOf/0/id		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+/_anyOf/3/features/_anyOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+/_anyOf/3/features/_anyOf/0/geometry/_oneOf/1/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology	https://purl.org/geojson/vocab#topology	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/0/references	https://purl.org/geojson/topo#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/1/references	https://purl.org/geojson/topo#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references	https://purl.org/geojson/topo#directedReferences	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references/ref	https://purl.org/geojson/topo#ref	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/oriented-ref/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/_oneOf/2/directed_references/orientation	https://purl.org/geojson/topo#orientation	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/oriented-ref/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/type	@type	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/relationships	https://purl.org/geojson/topo#relatedFeatures	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
 /_anyOf/3/features/_anyOf/0/topology/relationships/role	http://www.w3.org/ns/dx/prof/hasRole	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml
 /_anyOf/3/features/_anyOf/0/topology/relationships/conformsTo	http://purl.org/dc/terms/conformsTo	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/link-role/schema.yaml
-/_anyOf/3/features/_anyOf/0/topology/relationships/rel		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
-/_anyOf/3/features/_anyOf/1/geometry		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
-/_anyOf/3/features/_anyOf/1/geometry/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
+/_anyOf/3/features/_anyOf/0/topology/relationships/rel		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/datatypes/topology/schema.yaml
+/_anyOf/3/features/_anyOf/1/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
+/_anyOf/3/features/_anyOf/1/geometry/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
 /time		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /name	rdfs:label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /bearingRotation	https://linked.data.gov.au/def/csdm/container/bearingRotation	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
@@ -381,12 +381,12 @@ path	@id	schema
 /verticalDatum	https://linked.data.gov.au/def/csdm/container/verticalDatum	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /surveyDescription	https://linked.data.gov.au/def/csdm/container/surveyDescription	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /surveyDescriptors	https://linked.data.gov.au/def/csdm/container/surveyDescriptors	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/surveyDescriptors/label	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/surveyDescriptors/template		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/surveyDescriptors/hasPart	http://purl.org/dc/terms/hasPart	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/surveyDescriptors/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/surveyDescriptors/hasPart/ref	https://linked.data.gov.au/def/csdm/commonpatterns/namePartRef	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/surveyDescriptors/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/surveyDescriptors/label	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/surveyDescriptors/template		https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/surveyDescriptors/hasPart	http://purl.org/dc/terms/hasPart	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/surveyDescriptors/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/surveyDescriptors/hasPart/ref	https://w3id.org/ogc/utils/label/namePartRef	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/surveyDescriptors/hasPart/type	https://w3id.org/ogc/utils/label/namePartType	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
 /purpose	https://linked.data.gov.au/def/csdm/container/purpose	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /surveyType	https://linked.data.gov.au/def/csdm/container/surveyType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /referencedCSDs	https://linked.data.gov.au/def/csdm/container/referencedCSD	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
@@ -417,8 +417,8 @@ path	@id	schema
 /points/features/_anyOf/3/featureType		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml
 /points/features/_anyOf/3/properties		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml
 /points/features/_anyOf/3/properties/geodeticid	https://linked.data.gov.au/def/csdm/surveyfeatures/geodeticid	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml
-/points/features/_anyOf/5/topology		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
-/points/features/_anyOf/5/topology/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
+/points/features/_anyOf/5/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
+/points/features/_anyOf/5/topology/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
 /points/features/_anyOf/5/properties		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml
 /points/features/_anyOf/5/properties/distance		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml
 /points/features/_anyOf/5/properties/vectorPurpose	https://linked.data.gov.au/def/csdm/surveyfeatures/vectorPurpose	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyFeatures/schema.yaml
@@ -426,29 +426,29 @@ path	@id	schema
 /points/features/featureType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /observedVectors	https://linked.data.gov.au/def/csdm/container/observedVectors	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /observedVectors/features		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/observedVectors/features/_anyOf/1/topology		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/0/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/0/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/1/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/1/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/1/orientation		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/2/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/2/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/2/radius		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/2/orientation		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/3/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/3/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/3/radius		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/4/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/4/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/5/type		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/5/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/5/startTangentVector		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/5/startTangentVector/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/5/endTangentVector		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/topology/_oneOf/5/endTangentVector/references		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/radius		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
-/observedVectors/features/_anyOf/1/arcLength		https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/0/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/0/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/1/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/1/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/1/orientation		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/radius		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/2/orientation		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/3/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/3/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/3/radius		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/4/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/4/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/startTangentVector		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/startTangentVector/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/endTangentVector		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/topology/_oneOf/5/endTangentVector/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/radius		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
+/observedVectors/features/_anyOf/1/arcLength		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-arc/schema.yaml
 /observedVectors/features/_anyOf/2/topology		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /observedVectors/features/_anyOf/2/topology/type		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /observedVectors/features/_anyOf/2/topology/references		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
@@ -460,35 +460,70 @@ path	@id	schema
 /adoptedVectors/_anyOf/1/features		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /adoptedVectors/_anyOf/1/features/featureType		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /parcels	https://linked.data.gov.au/def/csdm/container/parcels	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
+/parcels/features		https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelCollection/schema.yaml
+/parcels/features/_anyOf/1/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/metadata		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/points	https://purl.org/geojson/topo#points	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/points/_oneOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/points/_oneOf/0/geometry/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/points/_oneOf/0/geometry/coordinates		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/points/_oneOf/1/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/edges	https://purl.org/geojson/topo#edges	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/edges/_oneOf/0/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/edges/_oneOf/0/topology/references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/edges/_oneOf/1/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/rings		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/rings/_oneOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-ring/schema.yaml
+/parcels/features/_anyOf/1/rings/_oneOf/0/circumference	topo:circumference	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-ring/schema.yaml
+/parcels/features/_anyOf/1/rings/_oneOf/0/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-ring/schema.yaml
+/parcels/features/_anyOf/1/rings/_oneOf/0/topology/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-ring/schema.yaml
+/parcels/features/_anyOf/1/rings/_oneOf/0/topology/directed_references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-ring/schema.yaml
+/parcels/features/_anyOf/1/rings/_oneOf/1/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/faces		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/faces/_oneOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-face/schema.yaml
+/parcels/features/_anyOf/1/faces/_oneOf/0/topology	https://purl.org/geojson/vocab#topology	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-face/schema.yaml
+/parcels/features/_anyOf/1/faces/_oneOf/0/topology/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-face/schema.yaml
+/parcels/features/_anyOf/1/faces/_oneOf/1/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/shells		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/shells/_oneOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-shell/schema.yaml
+/parcels/features/_anyOf/1/shells/_oneOf/0/topology	https://purl.org/geojson/vocab#topology	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-shell/schema.yaml
+/parcels/features/_anyOf/1/shells/_oneOf/0/topology/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-shell/schema.yaml
+/parcels/features/_anyOf/1/shells/_oneOf/0/topology/directed_references	https://purl.org/geojson/topo#directedReferences	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-shell/schema.yaml
+/parcels/features/_anyOf/1/shells/_oneOf/1/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/solids	https://purl.org/geojson/topo#solids	https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/_anyOf/1/solids/_oneOf/0/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-solid/schema.yaml
+/parcels/features/_anyOf/1/solids/_oneOf/0/topology		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-solid/schema.yaml
+/parcels/features/_anyOf/1/solids/_oneOf/0/topology/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-solid/schema.yaml
+/parcels/features/_anyOf/1/solids/_oneOf/0/topology/directed_references		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-solid/schema.yaml
+/parcels/features/_anyOf/1/solids/_oneOf/1/features		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-multi-collection/schema.yaml
+/parcels/features/properties		https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/appellation	https://w3id.org/ogc/ladm/parcels/appellation	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/parcelType	https://w3id.org/ogc/ladm/parcels/type	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/parcelState	https://w3id.org/ogc/ladm/parcels/state	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/address	https://schema.org/address	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/parcelPurpose	https://w3id.org/ogc/ladm/parcels/purpose	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/area	https://w3id.org/ogc/ladm/parcels/surfaceArea	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/floor	https://w3id.org/ogc/ladm/parcels/floor	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/zmin	https://w3id.org/ogc/ladm/parcels/zmin	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/zmax	https://w3id.org/ogc/ladm/parcels/zmax	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests	https://w3id.org/ogc/ladm/parcels/interest	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/interestLink	https://w3id.org/ogc/ladm/parcels/interestLink	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/interestName	https://w3id.org/ogc/ladm/parcels/interestName	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/interestType	https://w3id.org/ogc/ladm/parcels/interestType	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/dateInForce	https://w3id.org/ogc/ladm/parcels/interestDateInForce	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/dateExpires	https://w3id.org/ogc/ladm/parcels/interestDateExpires	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/statuteLink	https://w3id.org/ogc/ladm/parcels/statuteLink	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/statuteName	https://w3id.org/ogc/ladm/parcels/statuteName	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/benefitedPartyName	https://w3id.org/ogc/ladm/parcels/benefitedPartyName	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/benefitedPartyLink	https://w3id.org/ogc/ladm/parcels/benefitedPartyLink	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/originalSurveyLink	https://w3id.org/ogc/ladm/parcels/originalSurveyLink	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/referencedParcel	https://w3id.org/ogc/ladm/parcels/referencedParcel	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/burdenedParcels	https://w3id.org/ogc/ladm/parcels/burdened	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/benefitedParcels	https://w3id.org/ogc/ladm/parcels/benefited	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/description	https://w3id.org/ogc/ladm/parcels/interestDescription	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/entitlementPortion	https://w3id.org/ogc/ladm/parcels/entitlementPortion	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
+/parcels/features/properties/interests/liabilityPortion	https://w3id.org/ogc/ladm/parcels/liabilityPortion	https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/schema.yaml
 /parcels/featureType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties	@nest	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/appellation	https://linked.data.gov.au/def/csdm/parcels/appellation	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/parcelType	https://linked.data.gov.au/def/csdm/parcels/type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/parcelState	https://linked.data.gov.au/def/csdm/parcels/state	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/address	https://schema.org/address	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/parcelPurpose	https://linked.data.gov.au/def/csdm/parcels/purpose	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/area	https://linked.data.gov.au/def/csdm/parcels/surfaceArea	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/floor	https://linked.data.gov.au/def/csdm/parcels/floor	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/zmin	https://linked.data.gov.au/def/csdm/parcels/zmin	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/zmax	https://linked.data.gov.au/def/csdm/parcels/zmax	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests	https://linked.data.gov.au/def/csdm/parcels/interest	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/interestLink	https://linked.data.gov.au/def/csdm/parcels/interestLink	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/interestName	https://linked.data.gov.au/def/csdm/parcels/interestName	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/interestType	https://linked.data.gov.au/def/csdm/parcels/interestType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/dateInForce	https://linked.data.gov.au/def/csdm/parcels/interestDateInForce	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/dateExpires	https://linked.data.gov.au/def/csdm/parcels/interestDateExpires	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/statuteLink	https://linked.data.gov.au/def/csdm/parcels/statuteLink	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/statuteName	https://linked.data.gov.au/def/csdm/parcels/statuteName	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/benefitedPartyName	https://linked.data.gov.au/def/csdm/parcels/benefitedPartyName	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/benefitedPartyLink	https://linked.data.gov.au/def/csdm/parcels/benefitedPartyLink	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/originalSurveyLink	https://linked.data.gov.au/def/csdm/parcels/originalSurveyLink	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/referencedParcel	https://linked.data.gov.au/def/csdm/parcels/referencedParcel	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/burdenedParcels	https://linked.data.gov.au/def/csdm/parcels/burdened	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/benefitedParcels	https://linked.data.gov.au/def/csdm/parcels/benefited	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/description	https://linked.data.gov.au/def/csdm/parcels/interestDescription	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/entitlementPortion	https://linked.data.gov.au/def/csdm/parcels/entitlementPortion	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/features/properties/interests/liabilityPortion	https://linked.data.gov.au/def/csdm/parcels/liabilityPortion	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /parcels/_oneOf/0/featureType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /parcels/_oneOf/1/featureType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /parcels/_oneOf/1/features		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml

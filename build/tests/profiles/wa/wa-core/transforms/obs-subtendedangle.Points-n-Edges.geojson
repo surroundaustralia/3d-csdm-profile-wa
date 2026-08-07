@@ -1,0 +1,154 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44459259300403,
+          -30.730750614470015
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "184"
+      },
+      "id": "184"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44476512098763,
+          -30.73074891115523
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "189"
+      },
+      "id": "189"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44454422879919,
+          -30.73051618490328
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:internal-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "198"
+      },
+      "id": "198"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.44476512098763,
+            -30.73074891115523
+          ],
+          [
+            121.44459259300403,
+            -30.730750614470015
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:R",
+        "comment": null
+      },
+      "id": "312"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.44459259300403,
+            -30.730750614470015
+          ],
+          [
+            121.44454422879919,
+            -30.73051618490328
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:I",
+        "comment": null
+      },
+      "id": "313"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.44459259300403,
+            -30.730750614470015
+          ],
+          [
+            [
+              121.44459259300403,
+              -30.730750614470015
+            ],
+            [
+              121.44454422879919,
+              -30.73051618490328
+            ]
+          ],
+          [
+            [
+              121.44476512098763,
+              -30.73074891115523
+            ],
+            [
+              121.44459259300403,
+              -30.730750614470015
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:I",
+        "comment": null
+      },
+      "id": "843"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

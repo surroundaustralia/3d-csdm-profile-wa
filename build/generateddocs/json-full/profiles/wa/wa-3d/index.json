@@ -1,0 +1,253 @@
+
+
+{
+  "itemIdentifier": "icsm.profiles.wa.wa-3d",
+  "name": "WA- 3D profile",
+  "highlighted": true,
+  "abstract": "3D test cases for WA - may constrain to force 3D",
+  "status": "under-development",
+  "dateTimeAddition": "2023-07-31T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "dateOfLastChange": "2026-08-07",
+  "sources": [
+    {
+      "title": "3D Cadastre Survey Data Model",
+      "link": "https://icsm-au.github.io/3d-csdm-common"
+    }
+  ],
+  "link": "https://github.com/icsm-au/3d-csdm-profile-wa",
+  "maturity": "development",
+  "scope": "profiles",
+  "tags": [
+    "wa",
+    "sosa",
+    "ssn",
+    "o&m",
+    "o&m&s",
+    "csdm",
+    "profile"
+  ],
+  "superBBlock": false,
+  "shaclRules": [],
+  "shaclClosures": [
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl",
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl"
+  ],
+  "shaclShapes": {
+    "icsm.profiles.wa.wa-core": [
+      "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
+    ],
+    "icsm.profiles.common": [
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
+    ],
+    "icsm.csdm.features.CSD": [
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+    ],
+    "ogc.bbr.utils.compoundName": [
+      "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+    ],
+    "ogc.geo.topo.features.topo-feature": [
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+    ],
+    "ogc.geo.topo.features.topo-feature-collection": [
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+    ],
+    "ogc.geo.features.featureCollection": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
+    ],
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ],
+    "ogc.geo.topo.features.topo-arc": [
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+    ],
+    "icsm.csdm.features.SurveyObservations": [
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
+    ],
+    "ogc.sosa.properties.observation": [
+      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+    ],
+    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
+    ]
+  },
+  "dependsOn": [
+    "icsm.profiles.wa.wa-core"
+  ],
+  "schema": {
+    "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-3d/schema.yaml",
+    "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-3d/schema.json"
+  },
+  "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-3d/schema.json",
+  "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-3d/context.jsonld",
+  "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-3d/resolvedProperties.json",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-3d/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/wa-3d/",
+  "transforms": [
+    {
+      "id": "Points-n-Edges",
+      "description": "GeoJSON points and Edges",
+      "type": "topo2geojson",
+      "metadata": {
+        "mode": "points,edges"
+      },
+      "code": "is this required",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/json",
+            "label": "JSON",
+            "defaultExtension": "json"
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/geo+json",
+            "label": "GeoJSON",
+            "defaultExtension": "geojson"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Polygons-2D",
+      "description": "GeoJSON Polygons from bounded 2D topology",
+      "type": "topo2geojson",
+      "metadata": {
+        "objects": "parcels:Polygon",
+        "mode": "parcels"
+      },
+      "code": "Extracts a 2D view of polygon geometries from 2 or 3D topology models",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/json",
+            "label": "JSON",
+            "defaultExtension": "json"
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/geo+json",
+            "label": "GeoJSON",
+            "defaultExtension": "geojson"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Faces-as-Polygons",
+      "description": "GeoJSON Polygons for faces",
+      "type": "topo2geojson",
+      "metadata": {
+        "objects": "parcels:Polygon",
+        "mode": "faces"
+      },
+      "code": "Extracts a 2D view of polygon geometries from faces in 3D topology models",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/json",
+            "label": "JSON",
+            "defaultExtension": "json"
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "mimeType": "application/geo+json",
+            "label": "GeoJSON",
+            "defaultExtension": "geojson"
+          }
+        ]
+      }
+    }
+  ],
+  "description": "## 3D test cases\n\nThis building block captures test cases for 3D topology for WA.\n\nIt allows isolation of these from the more general 2D bash view.sh",
+  "examples": [
+    {
+      "title": "WA Subtended Angle Observation Example",
+      "content": "Contains three survey marks defining two vectors that form an included angle observation. The included angle \nreferences the survey mark where the angle has been observed, the Reference Object (RO) vector that the angle was \nmeasured from, and the forward vector that defines the angle. The example also includes three vector observations, \nbeing two distances and an angle. Note that the same vector observation pattern is maintained for the two types of \nobservations. For ***distance*** only observations, ***angle*** is **Null**. For the ***angle*** observation, \n***distance*** is **Null**. Angles are measured clockwise from the RO to the forward vector.\n\n![WA Subtended Angle Observation Example](https://icsm-au.github.io/3d-csdm-profiles/assets/wa-obs-angle.png)",
+      "base-output-filename": "obs-subtendedangle",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-3d/examples/obs-subtendedangle.json",
+          "base-uri": "https://www.wa-example.com/features/",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/obs-subtendedangle.json",
+          "transformResults": {
+            "Points-n-Edges": {
+              "success": true,
+              "sizeBytes": 3537,
+              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/transforms/obs-subtendedangle.Points-n-Edges.geojson"
+            },
+            "Polygons-2D": {
+              "success": true,
+              "sizeBytes": 48,
+              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/transforms/obs-subtendedangle.Polygons-2D.geojson"
+            },
+            "Faces-as-Polygons": {
+              "success": true,
+              "sizeBytes": 48,
+              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/transforms/obs-subtendedangle.Faces-as-Polygons.geojson"
+            }
+          },
+          "sizeBytes": 7235,
+          "code": "{\n  \"id\": \"DP_422532\",\n  \"name\": \"DP 422532\",\n  \"description\": \"Western Australia Subtended Angle Observation Example\",\n  \"type\": \"FeatureCollection\",\n  \"featureType\": \"CSD\",\n  \"tenureType\": \"wa-parcel-type:freehold\",\n  \"planType\": \"wa-survey-type:deposited-plan\",\n  \"purpose\": \"wa-survey-purpose:subdivision\",\n  \"surveyType\": \"wa-survey-type:SSA\",\n  \"time\": { \"date\": \"2022-05-22\" },\n  \"horizontalCRS\": \"epsg:8024\",\n  \"bearingRotation\": 0.0,\n  \"surveyTitle\": \"Lots 210 - 232, 240, Roads, 9005 & Easements\",\n  \"adminUnit\": [\n    {\n      \"href\": \"wa-local-government:city-of-kalgoorlie-boulder\",\n      \"rel\": \"related\",\n      \"role\": \"icsm-admin-unit-type:localGovernmentArea\"\n    },\n    {\n      \"href\": \"wa-locality:karlkurla\",\n      \"rel\": \"related\",\n      \"role\": \"icsm-admin-unit-type:locality\"\n    }\n  ],\n  \"wasGeneratedBy\": {\n    \"id\": \"DP-1-S2\",\n    \"endedAtTime\": \"2029-01-01T01:02:03Z\"\n  },\n  \"features\": [],\n  \"referencedCSDs\": [\n    {\n      \"id\": \"DP_422526\",\n      \"name\": \"DP 422526\",\n      \"adminUnit\": {\n        \"href\": \"wa-locality:hyden\",\n        \"rel\": \"related\",\n        \"role\": \"icsm-admin-unit-type:locality\"\n      },\n      \"bearingRotation\": 0.0,\n      \"time\": { \"date\": \"2013-03-10\" }\n    }\n  ],\n  \"points\": [\n    {\n      \"id\": \"BoundaryMark\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"BoundaryMark\",\n      \"features\": [\n        {\n          \"id\": \"184\",\n          \"type\": \"Feature\",\n          \"featureType\": \"BoundaryMark\",\n          \"time\": null,\n          \"geometry\": null,\n          \"place\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n              54693.284,\n              398706.957\n            ]\n          },\n          \"properties\": {\n            \"purpose\": \"wa-surveypoint-purpose:road-boundary\",\n            \"ptQualityMeasure\": 0.100,\n            \"comment\": null,\n            \"monumentedBy\": {\n              \"form\": \"wa-monument-form:peg\",\n              \"condition\": \"wa-monument-condition:ok\",\n              \"state\": \"wa-monument-state:did-not-search\"\n            }\n          }\n        },\n        {\n          \"id\": \"189\",\n          \"type\": \"Feature\",\n          \"featureType\": \"BoundaryMark\",\n          \"time\": null,\n          \"geometry\": null,\n          \"place\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n              54709.808,\n              398707.154\n            ]\n          },\n          \"properties\": {\n            \"purpose\": \"wa-surveypoint-purpose:road-boundary\",\n            \"ptQualityMeasure\": 0.100,\n            \"comment\": null,\n            \"monumentedBy\": {\n              \"form\": \"wa-monument-form:peg\",\n              \"condition\": \"wa-monument-condition:ok\",\n              \"state\": \"wa-monument-state:did-not-search\"\n            }\n          }\n        },\n        {\n          \"id\": \"198\",\n          \"type\": \"Feature\",\n          \"featureType\": \"BoundaryMark\",\n          \"time\": null,\n          \"geometry\": null,\n          \"place\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n              54688.639,\n              398732.946\n            ]\n          },\n          \"properties\": {\n            \"name\": null,\n            \"purpose\": \"wa-surveypoint-purpose:internal-boundary\",\n            \"ptQualityMeasure\": 0.100,\n            \"comment\": null,\n            \"monumentedBy\": {\n              \"form\": \"wa-monument-form:peg\",\n              \"condition\": \"wa-monument-condition:ok\",\n              \"state\": \"wa-monument-state:did-not-search\"\n            }\n          }\n        }\n      ]\n    }\n  ],\n  \"vectorObservations\": [\n    {\n      \"id\": \"vectorobservation:computed\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"sosa:ObservationCollection\",\n      \"usedProcedure\": \"wa-procedure-used:d\",\n      \"properties\": {\n        \"resultTime\": \"2022-05-22T00:00:00Z\",\n        \"observedProperty\": \"surveyable:VectorDetermination\",\n        \"madeBySensor\": {\n          \"sensorType\": \"icsm-equipment-type:software\"\n        }\n      },\n      \"features\": [\n        {\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"properties\": {\n            \"hasFeatureOfInterest\": \"312\",\n            \"resultTime\": \"2022-05-22T00:00:00Z\",\n            \"hasResult\": {\n              \"distance\": 16.526\n            },\n            \"distanceType\": \"icsm-distance-type:ground\",\n            \"distanceAccuracy\": 4000\n          }\n        },\n        {\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"properties\": {\n            \"hasFeatureOfInterest\": \"313\",\n            \"resultTime\": \"2022-05-22T00:00:00Z\",\n            \"hasResult\": {\n              \"distance\": 26.401\n            },\n            \"distanceType\": \"icsm-distance-type:ground\",\n            \"distanceAccuracy\": 4000\n          }\n        },\n        {\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"properties\": {\n            \"hasFeatureOfInterest\": \"843\",\n            \"resultTime\": \"2022-05-22T00:00:00Z\",\n            \"hasResult\": {\n              \"angle\": 99.4475\n            },\n            \"distanceAccuracy\": null,\n            \"angleType\": \"icsm-angle-type:angle\",\n            \"angleAccuracy\": 0.0083\n          }\n        }\n      ]\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"observedVectors\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"ObservedVector\",\n      \"features\": [\n        {\n          \"id\": \"312\",\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"topology\": {\n            \"type\": \"LineString\",\n            \"references\": [\n              \"189\",\n              \"184\"\n            ]\n          },\n          \"properties\": {\n            \"vectorPurpose\": \"wa-vector-purpose:R\",\n            \"comment\": null\n          }\n        },\n        {\n          \"id\": \"313\",\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"topology\": {\n            \"type\": \"LineString\",\n            \"references\": [\n              \"184\",\n              \"198\"\n            ]\n          },\n          \"properties\": {\n            \"vectorPurpose\": \"wa-vector-purpose:I\",\n            \"comment\": null\n          }\n        }\n      ]\n    },\n    {\n      \"id\": \"SubtendedAngle\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"SubtendedAngle\",\n      \"features\": [\n        {\n          \"id\": \"843\",\n          \"type\": \"Feature\",\n          \"featureType\": \"SubtendedAngle\",\n          \"x-comment\": \"A subtended angle defined vector is an angle formed by two lines, or line segments that originate from the same point and extend to two different points on a circle's circumference.\",\n          \"geometry\": null,\n          \"topology\": {\n            \"type\": \"SubtendedAngle\",\n            \"x-description\": \"References is an ordered list of features being a point geometries representing the location of the subtended angle (the Setup Station), and two LineString geometries commonly referred to as Backsight or Reference Object (RO) and Foresight or Target. The angle is the clockwise angle from the RO to the Target.\",\n            \"references\": [\n              \"184\",\n              \"313\",\n              \"312\"\n            ]\n          },\n          \"properties\": {\n            \"vectorPurpose\": \"wa-vector-purpose:I\",\n            \"comment\": null\n          }\n        }\n      ]\n    }\n  ],\n  \"parcels\": [],\n  \"supportingDocuments\": [],\n  \"annotations\": []\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/obs-subtendedangle.jsonld",
+          "sizeBytes": 7370,
+          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-3d/context.jsonld\",\n  \"id\": \"DP_422532\",\n  \"name\": \"DP 422532\",\n  \"description\": \"Western Australia Subtended Angle Observation Example\",\n  \"type\": \"FeatureCollection\",\n  \"featureType\": \"CSD\",\n  \"tenureType\": \"wa-parcel-type:freehold\",\n  \"planType\": \"wa-survey-type:deposited-plan\",\n  \"purpose\": \"wa-survey-purpose:subdivision\",\n  \"surveyType\": \"wa-survey-type:SSA\",\n  \"time\": {\n    \"date\": \"2022-05-22\"\n  },\n  \"horizontalCRS\": \"epsg:8024\",\n  \"bearingRotation\": 0.0,\n  \"surveyTitle\": \"Lots 210 - 232, 240, Roads, 9005 & Easements\",\n  \"adminUnit\": [\n    {\n      \"href\": \"wa-local-government:city-of-kalgoorlie-boulder\",\n      \"rel\": \"related\",\n      \"role\": \"icsm-admin-unit-type:localGovernmentArea\"\n    },\n    {\n      \"href\": \"wa-locality:karlkurla\",\n      \"rel\": \"related\",\n      \"role\": \"icsm-admin-unit-type:locality\"\n    }\n  ],\n  \"wasGeneratedBy\": {\n    \"id\": \"DP-1-S2\",\n    \"endedAtTime\": \"2029-01-01T01:02:03Z\"\n  },\n  \"features\": [],\n  \"referencedCSDs\": [\n    {\n      \"id\": \"DP_422526\",\n      \"name\": \"DP 422526\",\n      \"adminUnit\": {\n        \"href\": \"wa-locality:hyden\",\n        \"rel\": \"related\",\n        \"role\": \"icsm-admin-unit-type:locality\"\n      },\n      \"bearingRotation\": 0.0,\n      \"time\": {\n        \"date\": \"2013-03-10\"\n      }\n    }\n  ],\n  \"points\": [\n    {\n      \"id\": \"BoundaryMark\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"BoundaryMark\",\n      \"features\": [\n        {\n          \"id\": \"184\",\n          \"type\": \"Feature\",\n          \"featureType\": \"BoundaryMark\",\n          \"time\": null,\n          \"geometry\": null,\n          \"place\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n              54693.284,\n              398706.957\n            ]\n          },\n          \"properties\": {\n            \"purpose\": \"wa-surveypoint-purpose:road-boundary\",\n            \"ptQualityMeasure\": 0.1,\n            \"comment\": null,\n            \"monumentedBy\": {\n              \"form\": \"wa-monument-form:peg\",\n              \"condition\": \"wa-monument-condition:ok\",\n              \"state\": \"wa-monument-state:did-not-search\"\n            }\n          }\n        },\n        {\n          \"id\": \"189\",\n          \"type\": \"Feature\",\n          \"featureType\": \"BoundaryMark\",\n          \"time\": null,\n          \"geometry\": null,\n          \"place\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n              54709.808,\n              398707.154\n            ]\n          },\n          \"properties\": {\n            \"purpose\": \"wa-surveypoint-purpose:road-boundary\",\n            \"ptQualityMeasure\": 0.1,\n            \"comment\": null,\n            \"monumentedBy\": {\n              \"form\": \"wa-monument-form:peg\",\n              \"condition\": \"wa-monument-condition:ok\",\n              \"state\": \"wa-monument-state:did-not-search\"\n            }\n          }\n        },\n        {\n          \"id\": \"198\",\n          \"type\": \"Feature\",\n          \"featureType\": \"BoundaryMark\",\n          \"time\": null,\n          \"geometry\": null,\n          \"place\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n              54688.639,\n              398732.946\n            ]\n          },\n          \"properties\": {\n            \"name\": null,\n            \"purpose\": \"wa-surveypoint-purpose:internal-boundary\",\n            \"ptQualityMeasure\": 0.1,\n            \"comment\": null,\n            \"monumentedBy\": {\n              \"form\": \"wa-monument-form:peg\",\n              \"condition\": \"wa-monument-condition:ok\",\n              \"state\": \"wa-monument-state:did-not-search\"\n            }\n          }\n        }\n      ]\n    }\n  ],\n  \"vectorObservations\": [\n    {\n      \"id\": \"vectorobservation:computed\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"sosa:ObservationCollection\",\n      \"usedProcedure\": \"wa-procedure-used:d\",\n      \"properties\": {\n        \"resultTime\": \"2022-05-22T00:00:00Z\",\n        \"observedProperty\": \"surveyable:VectorDetermination\",\n        \"madeBySensor\": {\n          \"sensorType\": \"icsm-equipment-type:software\"\n        }\n      },\n      \"features\": [\n        {\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"properties\": {\n            \"hasFeatureOfInterest\": \"312\",\n            \"resultTime\": \"2022-05-22T00:00:00Z\",\n            \"hasResult\": {\n              \"distance\": 16.526\n            },\n            \"distanceType\": \"icsm-distance-type:ground\",\n            \"distanceAccuracy\": 4000\n          }\n        },\n        {\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"properties\": {\n            \"hasFeatureOfInterest\": \"313\",\n            \"resultTime\": \"2022-05-22T00:00:00Z\",\n            \"hasResult\": {\n              \"distance\": 26.401\n            },\n            \"distanceType\": \"icsm-distance-type:ground\",\n            \"distanceAccuracy\": 4000\n          }\n        },\n        {\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"properties\": {\n            \"hasFeatureOfInterest\": \"843\",\n            \"resultTime\": \"2022-05-22T00:00:00Z\",\n            \"hasResult\": {\n              \"angle\": 99.4475\n            },\n            \"distanceAccuracy\": null,\n            \"angleType\": \"icsm-angle-type:angle\",\n            \"angleAccuracy\": 0.0083\n          }\n        }\n      ]\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"observedVectors\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"ObservedVector\",\n      \"features\": [\n        {\n          \"id\": \"312\",\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"topology\": {\n            \"type\": \"LineString\",\n            \"references\": [\n              \"189\",\n              \"184\"\n            ]\n          },\n          \"properties\": {\n            \"vectorPurpose\": \"wa-vector-purpose:R\",\n            \"comment\": null\n          }\n        },\n        {\n          \"id\": \"313\",\n          \"type\": \"Feature\",\n          \"geometry\": null,\n          \"topology\": {\n            \"type\": \"LineString\",\n            \"references\": [\n              \"184\",\n              \"198\"\n            ]\n          },\n          \"properties\": {\n            \"vectorPurpose\": \"wa-vector-purpose:I\",\n            \"comment\": null\n          }\n        }\n      ]\n    },\n    {\n      \"id\": \"SubtendedAngle\",\n      \"type\": \"FeatureCollection\",\n      \"featureType\": \"SubtendedAngle\",\n      \"features\": [\n        {\n          \"id\": \"843\",\n          \"type\": \"Feature\",\n          \"featureType\": \"SubtendedAngle\",\n          \"x-comment\": \"A subtended angle defined vector is an angle formed by two lines, or line segments that originate from the same point and extend to two different points on a circle's circumference.\",\n          \"geometry\": null,\n          \"topology\": {\n            \"type\": \"SubtendedAngle\",\n            \"x-description\": \"References is an ordered list of features being a point geometries representing the location of the subtended angle (the Setup Station), and two LineString geometries commonly referred to as Backsight or Reference Object (RO) and Foresight or Target. The angle is the clockwise angle from the RO to the Target.\",\n            \"references\": [\n              \"184\",\n              \"313\",\n              \"312\"\n            ]\n          },\n          \"properties\": {\n            \"vectorPurpose\": \"wa-vector-purpose:I\",\n            \"comment\": null\n          }\n        }\n      ]\n    }\n  ],\n  \"parcels\": [],\n  \"supportingDocuments\": [],\n  \"annotations\": []\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/obs-subtendedangle.ttl",
+          "sizeBytes": 7925,
+          "code": "@prefix container: <https://linked.data.gov.au/def/csdm/container/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .\n@prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .\n@prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .\n@prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .\n@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .\n@prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .\n@prefix time: <http://www.w3.org/2006/time#> .\n@prefix topo: <https://purl.org/geojson/topo#> .\n@prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n@prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .\n@prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .\n@prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .\n@prefix wa-procedure-used: <https://linked.data.gov.au/def/csdm/wa-procedure-used/> .\n@prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n@prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .\n@prefix wa-vector-purpose: <https://linked.data.gov.au/def/csdm/wa-vector-purpose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;\n    rdfs:label \"DP 422532\" ;\n    dcterms:time [ time:hasTime \"2022-05-22\"^^xsd:date ] ;\n    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;\n            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],\n        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:locality ;\n            oa:hasTarget wa-locality:karlkurla ] ;\n    container:bearingRotation 0e+00 ;\n    container:horizontalCRS epsg:8024 ;\n    container:points <https://www.wa-example.com/features/BoundaryMark> ;\n    container:purpose wa-survey-purpose:subdivision ;\n    container:referencedCSD <https://www.wa-example.com/features/DP_422526> ;\n    container:surveyType wa-survey-type:SSA ;\n    container:vectorObservations <vectorobservation:computed> ;\n    topo:edges <https://www.wa-example.com/features/SubtendedAngle>,\n        <https://www.wa-example.com/features/observedVectors> ;\n    geojson:collectionFeatureType \"CSD\" .\n\n<https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"BoundaryMark\" ;\n    geojson:features <https://www.wa-example.com/features/184>,\n        <https://www.wa-example.com/features/189>,\n        <https://www.wa-example.com/features/198> .\n\n<https://www.wa-example.com/features/DP_422526> rdfs:label \"DP 422526\" ;\n    dcterms:time [ time:hasTime \"2013-03-10\"^^xsd:date ] ;\n    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:locality ;\n            oa:hasTarget wa-locality:hyden ] ;\n    container:bearingRotation 0e+00 .\n\n<https://www.wa-example.com/features/observedVectors> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"ObservedVector\" ;\n    geojson:features <https://www.wa-example.com/features/312>,\n        <https://www.wa-example.com/features/313> .\n\n<vectorobservation:computed> a sosa:ObservationCollection,\n        geojson:FeatureCollection ;\n    sosa:hasMember [ a geojson:Feature ;\n            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;\n            sosa:hasResult [ surv:distance 2.6401e+01 ] ;\n            sosa:resultTime \"2022-05-22T00:00:00Z\" ;\n            ns2:distanceType icsm-distance-type:ground ],\n        [ a geojson:Feature ;\n            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/843> ;\n            sosa:hasResult [ ] ;\n            sosa:resultTime \"2022-05-22T00:00:00Z\" ;\n            ns2:angleType icsm-angle-type:angle ],\n        [ a geojson:Feature ;\n            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;\n            sosa:hasResult [ surv:distance 1.6526e+01 ] ;\n            sosa:resultTime \"2022-05-22T00:00:00Z\" ;\n            ns2:distanceType icsm-distance-type:ground ] ;\n    sosa:madeBySensor [ a icsm-equipment-type:software ] ;\n    sosa:observedProperty surveyable:VectorDetermination ;\n    sosa:resultTime \"2022-05-22T00:00:00Z\" ;\n    sosa:usedProcedure wa-procedure-used:d .\n\n<https://www.wa-example.com/features/189> a surv:BoundaryMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;\n    ns3:qualityMeasure 1e-01 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:peg ;\n            surv:state wa-monument-state:did-not-search ] ;\n    surv:purpose wa-surveypoint-purpose:road-boundary .\n\n<https://www.wa-example.com/features/198> a surv:BoundaryMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;\n    ns3:qualityMeasure 1e-01 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:peg ;\n            surv:state wa-monument-state:did-not-search ] ;\n    surv:purpose wa-surveypoint-purpose:internal-boundary .\n\n<https://www.wa-example.com/features/843> a geojson:Feature,\n        <https://www.wa-example.com/features/SubtendedAngle> ;\n    surv:vectorPurpose wa-vector-purpose:I ;\n    geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;\n            topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ] .\n\n<https://www.wa-example.com/features/312> a geojson:Feature ;\n    surv:vectorPurpose wa-vector-purpose:R ;\n    geojson:topology [ a geojson:LineString ;\n            topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .\n\n<https://www.wa-example.com/features/313> a geojson:Feature ;\n    surv:vectorPurpose wa-vector-purpose:I ;\n    geojson:topology [ a geojson:LineString ;\n            topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .\n\n<https://www.wa-example.com/features/SubtendedAngle> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"SubtendedAngle\" ;\n    geojson:features <https://www.wa-example.com/features/843> .\n\n<https://www.wa-example.com/features/184> a surv:BoundaryMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;\n    ns3:qualityMeasure 1e-01 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:peg ;\n            surv:state wa-monument-state:did-not-search ] ;\n    surv:purpose wa-surveypoint-purpose:road-boundary .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: WA profile of Cadastral Survey Data Model\n$ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml\n",
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
+  "gitPath": "_sources/wa-3d"
+}

@@ -3,7 +3,7 @@
 This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), 
 extending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).
  
-This version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre
+This version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre. 
 
 
 
@@ -55,6 +55,12 @@ Parcel appellation shall be based on the Landgate parcel identifier model. Each 
 **Type:** schema
 
 Implementation Profile of the ICSM Cadastral Survey Data Exchange Model for use in Western Australia
+
+### `icsm.profiles.wa.wa-3d` — WA- 3D profile
+
+**Type:** schema
+
+3D test cases for WA - may constrain to force 3D
 
 ### `icsm.profiles.wa.wa-mining` — WA Next Gen Cadastre Mining Profile
 

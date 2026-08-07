@@ -1,0 +1,144 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44441727652362,
+          -30.733209798663808
+        ]
+      },
+      "properties": {
+        "name": {
+          "label": "EFB157243/9533",
+          "hasPart": [
+            {
+              "type": "Source",
+              "label": "EFB157243"
+            },
+            {
+              "type": "Stamp",
+              "label": "9533"
+            }
+          ]
+        },
+        "purpose": "wa-surveypoint-purpose:temporary-control-point",
+        "ptQualityMeasure": 0.028,
+        "comment": "In Bitumen",
+        "monumentedBy": {
+          "form": "wa-monument-form:spike",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "18430386"
+      },
+      "id": "18430386"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44466420312921,
+          -30.7332807436419
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.013,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "17876586"
+      },
+      "id": "17876586"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44530162749408,
+          -30.73271583142415
+        ]
+      },
+      "properties": {
+        "geodeticid": "EFB157243/9802",
+        "name": {
+          "label": "EFB157243/9802",
+          "hasPart": [
+            {
+              "type": "Source",
+              "label": "EFB157243"
+            },
+            {
+              "type": "Stamp",
+              "label": "9802"
+            }
+          ]
+        },
+        "purpose": "wa-surveypoint-purpose:permanent-survey-mark",
+        "ptQualityMeasure": 0.026,
+        "comment": "In Concrete",
+        "monumentedBy": {
+          "form": "wa-monument-form:brass-plaque",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "18430396"
+      },
+      "id": "18430396"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.44441727652362,
+            -30.733209798663808
+          ],
+          [
+            121.44466420312921,
+            -30.7332807436419
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:N",
+        "comment": null
+      },
+      "id": "20805296"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.44441727652362,
+            -30.733209798663808
+          ],
+          [
+            121.44530162749408,
+            -30.73271583142415
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:N",
+        "comment": null
+      },
+      "id": "20805060"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

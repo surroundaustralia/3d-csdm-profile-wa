@@ -10458,7 +10458,7 @@
       ]
     }
   ],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -19082,6 +19082,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 921 DP 400715",
               "hasPart": [
                 {
@@ -19178,6 +19179,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 922 DP 400715",
               "hasPart": [
                 {
@@ -19274,6 +19276,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 923 DP 400715",
               "hasPart": [
                 {
@@ -19371,6 +19374,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 924 DP 400715",
               "hasPart": [
                 {
@@ -19467,6 +19471,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 925 DP 400715",
               "hasPart": [
                 {
@@ -19574,6 +19579,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 926 DP 400715",
               "hasPart": [
                 {
@@ -19680,6 +19686,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 927 DP 400715",
               "hasPart": [
                 {
@@ -19786,6 +19793,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 928 DP 400715",
               "hasPart": [
                 {
@@ -19893,6 +19901,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 929 DP 400715",
               "hasPart": [
                 {
@@ -19991,6 +20000,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 930 DP 400715",
               "hasPart": [
                 {
@@ -20087,6 +20097,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 931 DP 400715",
               "hasPart": [
                 {
@@ -20193,6 +20204,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 932 DP 400715",
               "hasPart": [
                 {
@@ -20289,6 +20301,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 933 DP 400715",
               "hasPart": [
                 {
@@ -20387,6 +20400,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 934 DP 400715",
               "hasPart": [
                 {
@@ -20483,6 +20497,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 935 DP 400715",
               "hasPart": [
                 {
@@ -20589,6 +20604,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 936 DP 400715",
               "hasPart": [
                 {
@@ -20695,6 +20711,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 937 DP 400715",
               "hasPart": [
                 {
@@ -20801,6 +20818,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 938 DP 400715",
               "hasPart": [
                 {
@@ -20907,6 +20925,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 939 DP 400715",
               "hasPart": [
                 {
@@ -21006,6 +21025,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 940 DP 400715",
               "hasPart": [
                 {
@@ -21112,6 +21132,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1006 DP 400715",
               "hasPart": [
                 {
@@ -21218,6 +21239,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1007 DP 400715",
               "hasPart": [
                 {
@@ -21324,6 +21346,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1008 DP 400715",
               "hasPart": [
                 {
@@ -21430,6 +21453,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1009 DP 400715",
               "hasPart": [
                 {
@@ -21526,6 +21550,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1010 DP 400715",
               "hasPart": [
                 {
@@ -21632,6 +21657,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1011 DP 400715",
               "hasPart": [
                 {
@@ -21738,6 +21764,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1015 DP 400715",
               "hasPart": [
                 {
@@ -21834,6 +21861,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1016 DP 400715",
               "hasPart": [
                 {
@@ -21932,6 +21960,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1017 DP 400715",
               "hasPart": [
                 {
@@ -22029,6 +22058,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 1018 DP 400715",
               "hasPart": [
                 {
@@ -22135,6 +22165,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 8015 DP 400715",
               "hasPart": [
                 {
@@ -22638,6 +22669,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 9018 DP 400715",
               "hasPart": [
                 {
@@ -22705,6 +22737,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 9017 DP 76652",
               "hasPart": [
                 {
@@ -22762,6 +22795,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area 33b DP 400715",
               "hasPart": [
                 {

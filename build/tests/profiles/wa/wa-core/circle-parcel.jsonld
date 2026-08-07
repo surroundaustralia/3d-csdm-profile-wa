@@ -437,7 +437,7 @@
     }
   ],
   "vectorObservations": [],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -720,6 +720,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 3 DP 214866",
               "hasPart": [
                 {
@@ -775,6 +776,7 @@
           "properties": {
             "label": "H",
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Area H DP 95092",
               "hasPart": [
                 {

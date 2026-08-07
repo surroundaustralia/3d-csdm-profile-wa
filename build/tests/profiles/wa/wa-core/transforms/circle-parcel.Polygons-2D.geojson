@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.96442901616662,
+              -32.30748685203181
+            ],
+            [
+              118.96525005927111,
+              -32.308031067518115
+            ],
+            [
+              118.96779415163113,
+              -32.31188938900533
+            ],
+            [
+              118.96808996985449,
+              -32.31289532572842
+            ],
+            [
+              118.96809448546455,
+              -32.31786843154877
+            ],
+            [
+              118.9677409579895,
+              -32.319286322386354
+            ],
+            [
+              118.9639740594588,
+              -32.3251497107937
+            ],
+            [
+              118.95561392634649,
+              -32.32510453493225
+            ],
+            [
+              118.95150862104599,
+              -32.32507262748189
+            ],
+            [
+              118.94934100324386,
+              -32.325376688653286
+            ],
+            [
+              118.94753480781455,
+              -32.32592975159244
+            ],
+            [
+              118.94722003533869,
+              -32.32523438598004
+            ],
+            [
+              118.94760655530004,
+              -32.30755964376603
+            ],
+            [
+              118.9477321117331,
+              -32.307461228175214
+            ],
+            [
+              118.96442901616662,
+              -32.30748685203181
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 3 DP 214866",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "3"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "planIdentifier",
+              "label": "214866"
+            }
+          ]
+        },
+        "area": 365750,
+        "parcelType": "wa-parcel-type:crown",
+        "parcelPurpose": "wa-parcel-purpose:reserve",
+        "parcelState": "wa-parcel-state:affected-tenure",
+        "interests": [
+          {
+            "interestLink": "LR-3150-715",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "11636634"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.95997127793014,
+              -32.314812166745284
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "label": "H",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Area H DP 95092",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Area"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "H"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "planIdentifier",
+              "label": "95092"
+            }
+          ]
+        },
+        "parcelType": "wa-secondary-parcel-type:crown",
+        "statuteName": "Sec. 87 of the Aboriginal Cultural Heritage Act 2021",
+        "parcelState": "wa-parcel-state:created",
+        "parcelPurpose": "wa-secondary-parcel-purpose:pre-gazetted-LGA-land",
+        "interests": [
+          {
+            "interestLink": "345-098-456",
+            "interestType": "wa-interest-type:res-cov-cta-38-reg-54-conserv",
+            "burdenedParcels": [
+              "11636634"
+            ]
+          }
+        ],
+        "desc": "PA 15 (Bates/Mulkas Cave Art Site) Gov. Gaz. 5/4/1974 pg. 1180"
+      },
+      "id": "12595541"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

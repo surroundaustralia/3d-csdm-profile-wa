@@ -205,7 +205,7 @@ Minimal example - with combined elements from each test case
       ]
     }
   ],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -458,7 +458,7 @@ Minimal example - with combined elements from each test case
       ]
     }
   ],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -541,7 +541,7 @@ Minimal example - with combined elements from each test case
 
 #### ttl
 ```ttl
-@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix container: <https://linked.data.gov.au/def/csdm/container/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
@@ -550,8 +550,9 @@ Minimal example - with combined elements from each test case
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -576,30 +577,30 @@ Minimal example - with combined elements from each test case
 <https://www.wa-example.com/features/Western-Australia-Example-1> a geojson:FeatureCollection ;
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
-    container:observedVectors <https://www.wa-example.com/features/observedVectors> ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
     container:purpose wa-survey-purpose:subdivision ;
     container:surveyType wa-survey-type:deposited-plan ;
     container:vectorObservations <https://www.wa-example.com/features/vectorObservations> ;
+    topo:edges <https://www.wa-example.com/features/observedVectors> ;
     geojson:collectionFeatureType "CSD" .
 
 <https://www.wa-example.com/features/15432571> a surv:CadastralMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "EFB157243/9540" ;
+    ns1:name [ rdfs:label "EFB157243/9540" ;
             dcterms:hasPart [ rdfs:label "9540" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Stamp> ],
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
                 [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/Source> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -619,8 +620,8 @@ Minimal example - with combined elements from each test case
         <https://www.wa-example.com/features/14005401>,
         <https://www.wa-example.com/features/15432571> .
 
-<https://www.wa-example.com/features/observedVectors> a surv:ObservedVector,
-        geojson:FeatureCollection ;
+<https://www.wa-example.com/features/observedVectors> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "ObservedVector" ;
     geojson:features <https://www.wa-example.com/features/17251502>,
         <https://www.wa-example.com/features/17251503> .
 
@@ -640,7 +641,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "" ] ;
+    ns1:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -652,7 +653,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "" ] ;
+    ns1:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -669,7 +670,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    commonpatterns:name [ rdfs:label "" ] ;
+    ns1:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -908,6 +909,7 @@ Links to the schema:
       "@id": "container:annotations"
     },
     "CSD": "container:CSD",
+    "address": "sdo:address",
     "locality": "csd:locality",
     "edges": "topo:edges",
     "PrimaryParcel": {
@@ -918,11 +920,6 @@ Links to the schema:
       "@id": "parcel:SecondaryParcel",
       "@type": "@id"
     },
-    "parcelQualityClass": {
-      "@id": "parcel:qualityClass",
-      "@type": "@id"
-    },
-    "terrainIntersectionCurve": "parcel:terrainIntersectionCurve",
     "horizontalCRS": {
       "@id": "container:horizontalCRS",
       "@type": "@id"
@@ -946,9 +943,6 @@ Links to the schema:
               "@id": "commonpatterns:namePartRef"
             },
             "type": {
-              "@context": {
-                "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
-              },
               "@type": "@id",
               "@id": "commonpatterns:namePartType"
             }
@@ -1139,6 +1133,7 @@ Links to the schema:
             "geodeticid": {
               "@id": "surv:geodeticid",
               "@context": {
+                "name": "commonpatterns:name",
                 "hasPart": {
                   "@context": {
                     "ref": {
@@ -1146,9 +1141,6 @@ Links to the schema:
                       "@id": "commonpatterns:namePartRef"
                     },
                     "type": {
-                      "@context": {
-                        "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
-                      },
                       "@type": "@id",
                       "@id": "commonpatterns:namePartType"
                     }
@@ -1158,9 +1150,10 @@ Links to the schema:
               }
             },
             "name": {
-              "@id": "commonpatterns:name",
+              "@id": "csdm:commonpatterns/name",
               "@type": "@id",
               "@context": {
+                "name": "commonpatterns:name",
                 "hasPart": {
                   "@context": {
                     "ref": {
@@ -1168,9 +1161,6 @@ Links to the schema:
                       "@id": "commonpatterns:namePartRef"
                     },
                     "type": {
-                      "@context": {
-                        "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
-                      },
                       "@type": "@id",
                       "@id": "commonpatterns:namePartType"
                     }
@@ -1200,29 +1190,8 @@ Links to the schema:
     },
     "parcels": {
       "@context": {
-        "featureType": "@type",
         "features": {
           "@context": {
-            "links": {
-              "@context": {
-                "href": {
-                  "@type": "@id",
-                  "@id": "oa:hasTarget"
-                },
-                "rel": {
-                  "@context": {
-                    "@base": "http://www.iana.org/assignments/relation/"
-                  },
-                  "@id": "http://www.iana.org/assignments/relation",
-                  "@type": "@id"
-                },
-                "type": "dct:type",
-                "hreflang": "dct:language",
-                "title": "rdfs:label",
-                "length": "dct:extent"
-              },
-              "@id": "rdfs:seeAlso"
-            },
             "Prism": {
               "@id": "geojson:Prism",
               "@context": {
@@ -1288,6 +1257,28 @@ Links to the schema:
               "@type": "@id",
               "@id": "geojson:topology"
             },
+            "points": {
+              "@id": "topo:points",
+              "@container": "@list"
+            },
+            "edges": {
+              "@id": "topo:edges",
+              "@container": "@list"
+            },
+            "solids": {
+              "@id": "topo:solids",
+              "@container": "@list"
+            },
+            "bearingRotation": "parcel:bearingRotation",
+            "parcels": "parcel:parcels",
+            "PrimaryParcel": {
+              "@id": "parcel:PrimaryParcel",
+              "@type": "@id"
+            },
+            "SecondaryParcel": {
+              "@id": "parcel:SecondaryParcel",
+              "@type": "@id"
+            },
             "appellation": {
               "@context": {
                 "name": "commonpatterns:name",
@@ -1298,9 +1289,6 @@ Links to the schema:
                       "@id": "commonpatterns:namePartRef"
                     },
                     "type": {
-                      "@context": {
-                        "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
-                      },
                       "@type": "@id",
                       "@id": "commonpatterns:namePartType"
                     }
@@ -1318,7 +1306,6 @@ Links to the schema:
               "@id": "parcel:state",
               "@type": "@id"
             },
-            "address": "sdo:address",
             "parcelPurpose": {
               "@id": "parcel:purpose",
               "@type": "@id"
@@ -1376,7 +1363,8 @@ Links to the schema:
           },
           "@id": "geojson:features",
           "@container": "@set"
-        }
+        },
+        "featureType": "@type"
       },
       "@id": "container:parcels"
     },
@@ -1901,11 +1889,11 @@ Links to the schema:
       "@type": "@id"
     },
     "ptQuality": {
-      "@id": "commonpatterns:qualityClass",
+      "@id": "csdm:commonpatterns/qualityClass",
       "@type": "@id"
     },
     "ptQualityMeasure": {
-      "@id": "commonpatterns:qualityMeasure",
+      "@id": "csdm:commonpatterns/qualityMeasure",
       "@type": "@id"
     },
     "GeodeticReferenceMark": {
@@ -1921,6 +1909,15 @@ Links to the schema:
       "@type": "@id"
     },
     "label": "rdfs:label",
+    "parcelQualityClass": {
+      "@id": "parcel:qualityClass",
+      "@type": "@id"
+    },
+    "terrainIntersectionCurve": "parcel:terrainIntersectionCurve",
+    "directed_references": {
+      "@id": "topo:directedReferences",
+      "@container": "@list"
+    },
     "ActuatableProperty": {
       "@id": "sosa:ActuatableProperty",
       "@type": "@id"
@@ -2303,7 +2300,6 @@ Links to the schema:
     "container": "csdm:container/",
     "sdo": "https://schema.org/",
     "csd": "csdm:csd/",
-    "parcel": "csdm:parcels/",
     "surv": "csdm:surveyfeatures/",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -2315,9 +2311,10 @@ Links to the schema:
     "prof": "http://www.w3.org/ns/dx/prof/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "commonpatterns": "csdm:commonpatterns/",
+    "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "csdm": "https://linked.data.gov.au/def/csdm/",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",

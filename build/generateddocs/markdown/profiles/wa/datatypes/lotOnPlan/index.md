@@ -55,21 +55,21 @@ Example appellation.
 
 #### ttl
 ```ttl
-@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotPrefix> ],
+    dcterms:hasPart [ rdfs:label "4" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
+        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
         [ commonpatterns:namePartRef wa-survey-type:p ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyType> ],
-        [ rdfs:label "4" ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotNumber> ],
+            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ],
         [ rdfs:label "1234" ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyNumber> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ] .
 
 
 ```
@@ -112,9 +112,6 @@ Links to the schema:
           "@id": "commonpatterns:namePartRef"
         },
         "type": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/names/localPartType/"
-          },
           "@type": "@id",
           "@id": "commonpatterns:namePartType"
         }
@@ -122,30 +119,29 @@ Links to the schema:
       "@id": "dct:hasPart"
     },
     "dct": "http://purl.org/dc/terms/",
-    "commonpatterns": "csdm:commonpatterns/",
+    "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "csdm": "https://linked.data.gov.au/def/csdm/",
     "vocabs": "https://linked.data.gov.au/def/csdm/",
-    "wa-surveypoint-purpose": "csdm:wa-surveypoint-purpose/",
-    "wa-survey-purpose": "csdm:wa-survey-purpose/",
-    "wa-survey-type": "csdm:wa-survey-type/",
-    "wa-procedure-used": "csdm:wa-procedure-used/",
-    "wa-survey-documentation-type": "csdm:wa-survey-documentation-type/",
-    "wa-annotation-role": "csdm:wa-annotation/",
-    "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
-    "wa-parcel-type": "csdm:wa-parcel-type/",
-    "wa-parcel-state": "csdm:wa-parcel-state/",
-    "wa-nonprimary-parcel-type": "csdm:wa-secondary-parcel-type/",
-    "wa-monument-form": "csdm:wa-monument-form/",
-    "wa-vector-purpose": "csdm:wa-vector-purpose/",
-    "wa-vector-type": "csdm:wa-vector-type/",
-    "wa-secondary-parcel-purpose": "csdm:wa-secondary-parcel-purpose/",
-    "wa-secondary-parcel-type": "csdm:wa-secondary-parcel-type/",
-    "wa-secondary-purpose": "csdm:wa-secondary-purpose/",
-    "wa-interest-type": "csdm:wa-interest-type/",
-    "wa-interest": "csdm:wa-interest/",
-    "wa-locality": "csdm:wa-locality/",
-    "wa-local-government": "csdm:wa-local-government/",
+    "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
+    "wa-survey-purpose": "vocabs:wa-survey-purpose/",
+    "wa-survey-type": "vocabs:wa-survey-type/",
+    "wa-procedure-used": "vocabs:wa-procedure-used/",
+    "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
+    "wa-annotation-role": "vocabs:wa-annotation/",
+    "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-parcel-type": "vocabs:wa-parcel-type/",
+    "wa-parcel-state": "vocabs:wa-parcel-state/",
+    "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",
+    "wa-monument-form": "vocabs:wa-monument-form/",
+    "wa-vector-purpose": "vocabs:wa-vector-purpose/",
+    "wa-vector-type": "vocabs:wa-vector-type/",
+    "wa-secondary-parcel-purpose": "vocabs:wa-secondary-parcel-purpose/",
+    "wa-secondary-parcel-type": "vocabs:wa-secondary-parcel-type/",
+    "wa-secondary-purpose": "vocabs:wa-secondary-purpose/",
+    "wa-interest-type": "vocabs:wa-interest-type/",
+    "wa-interest": "vocabs:wa-interest/",
+    "wa-locality": "vocabs:wa-locality/",
+    "wa-local-government": "vocabs:wa-local-government/",
     "@version": 1.1
   }
 }

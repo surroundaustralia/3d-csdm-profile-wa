@@ -1,16 +1,16 @@
-@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotPrefix> ],
+    dcterms:hasPart [ rdfs:label "4" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
+        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
         [ commonpatterns:namePartRef wa-survey-type:p ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyType> ],
-        [ rdfs:label "4" ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/lotNumber> ],
+            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ],
         [ rdfs:label "1234" ;
-            commonpatterns:namePartType <https://linked.data.gov.au/def/csdm/names/localPartType/surveyNumber> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ] .
 

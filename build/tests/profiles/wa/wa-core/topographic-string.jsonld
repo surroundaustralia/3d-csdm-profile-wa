@@ -689,7 +689,7 @@
       ]
     }
   ],
-  "observedVectors": [
+  "edges": [
     {
       "id": "observedVectors",
       "type": "FeatureCollection",
@@ -885,6 +885,7 @@
           },
           "properties": {
             "appellation": {
+              "type": "wa:LotOnPlanAppellation",
               "label": "Lot 502 DP 404354",
               "hasPart": [
                 {

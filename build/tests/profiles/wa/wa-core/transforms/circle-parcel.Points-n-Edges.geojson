@@ -1,0 +1,662 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.95997127793014,
+          -32.314812166745284
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:interest-construct",
+        "ptQualityMeasure": 0.1,
+        "comment": "Center of circular Interest",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "16040422"
+      },
+      "id": "16040422"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.94760655530004,
+          -32.30755964376603
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10001"
+      },
+      "id": "10001"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.9477321117331,
+          -32.307461228175214
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10002"
+      },
+      "id": "10002"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.96442901616662,
+          -32.30748685203181
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10003"
+      },
+      "id": "10003"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.96525005927111,
+          -32.308031067518115
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10004"
+      },
+      "id": "10004"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.96779415163113,
+          -32.31188938900533
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10005"
+      },
+      "id": "10005"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.96808996985449,
+          -32.31289532572842
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10006"
+      },
+      "id": "10006"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.96809448546455,
+          -32.31786843154877
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10007"
+      },
+      "id": "10007"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.9677409579895,
+          -32.319286322386354
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10008"
+      },
+      "id": "10008"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.9639740594588,
+          -32.3251497107937
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "10009"
+      },
+      "id": "10009"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.95561392634649,
+          -32.32510453493225
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "100010"
+      },
+      "id": "100010"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.95150862104599,
+          -32.32507262748189
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "100011"
+      },
+      "id": "100011"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.94934100324386,
+          -32.325376688653286
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "100012"
+      },
+      "id": "100012"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.94753480781455,
+          -32.32592975159244
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "100014"
+      },
+      "id": "100014"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.94722003533869,
+          -32.32523438598004
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:did-not-search"
+        },
+        "feature_id": "100015"
+      },
+      "id": "100015"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.95997127793014,
+            -32.314812166745284
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:interest-boundary",
+        "comment": null
+      },
+      "id": "17842481"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.94760655530004,
+            -32.30755964376603
+          ],
+          [
+            118.9477321117331,
+            -32.307461228175214
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2001"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.9477321117331,
+            -32.307461228175214
+          ],
+          [
+            118.96442901616662,
+            -32.30748685203181
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2002"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.96442901616662,
+            -32.30748685203181
+          ],
+          [
+            118.96525005927111,
+            -32.308031067518115
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2003"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.96525005927111,
+            -32.308031067518115
+          ],
+          [
+            118.96779415163113,
+            -32.31188938900533
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2004"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.96779415163113,
+            -32.31188938900533
+          ],
+          [
+            118.96808996985449,
+            -32.31289532572842
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2005"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.96808996985449,
+            -32.31289532572842
+          ],
+          [
+            118.96809448546455,
+            -32.31786843154877
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2006"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.96809448546455,
+            -32.31786843154877
+          ],
+          [
+            118.9677409579895,
+            -32.319286322386354
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2007"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.9677409579895,
+            -32.319286322386354
+          ],
+          [
+            118.9639740594588,
+            -32.3251497107937
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2008"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.9639740594588,
+            -32.3251497107937
+          ],
+          [
+            118.95561392634649,
+            -32.32510453493225
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "2009"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.95561392634649,
+            -32.32510453493225
+          ],
+          [
+            118.95150862104599,
+            -32.32507262748189
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "20010"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.95150862104599,
+            -32.32507262748189
+          ],
+          [
+            118.94934100324386,
+            -32.325376688653286
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "20011"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.94934100324386,
+            -32.325376688653286
+          ],
+          [
+            118.94753480781455,
+            -32.32592975159244
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "20013"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.94753480781455,
+            -32.32592975159244
+          ],
+          [
+            118.94722003533869,
+            -32.32523438598004
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "20014"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.94722003533869,
+            -32.32523438598004
+          ],
+          [
+            118.94760655530004,
+            -32.30755964376603
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "20015"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

@@ -1,0 +1,845 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460026396273,
+              -30.731358561984518
+            ],
+            [
+              121.4446159256435,
+              -30.731358406316723
+            ],
+            [
+              121.44496569272276,
+              -30.73135493825867
+            ],
+            [
+              121.44496276898823,
+              -30.73113486018161
+            ],
+            [
+              121.44459734105843,
+              -30.731138483900338
+            ],
+            [
+              121.44460026396273,
+              -30.731358561984518
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 215 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "215"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "planIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 854,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "AAAAAA",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "215"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460318687948,
+              -30.731578640061176
+            ],
+            [
+              121.44461884859585,
+              -30.731578484393072
+            ],
+            [
+              121.4449686164698,
+              -30.731575016328247
+            ],
+            [
+              121.44496569272276,
+              -30.73135493825867
+            ],
+            [
+              121.4446159256435,
+              -30.731358406316723
+            ],
+            [
+              121.44460026396273,
+              -30.731358561984518
+            ],
+            [
+              121.44460318687948,
+              -30.731578640061176
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 216 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "216"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 854,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "BBBBBB",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "216"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460610981386,
+              -30.73179870911078
+            ],
+            [
+              121.44462177156583,
+              -30.731798553442374
+            ],
+            [
+              121.4449715402344,
+              -30.731795085370727
+            ],
+            [
+              121.4449686164698,
+              -30.731575016328247
+            ],
+            [
+              121.44461884859585,
+              -30.731578484393072
+            ],
+            [
+              121.44460318687948,
+              -30.731578640061176
+            ],
+            [
+              121.44460610981386,
+              -30.73179870911078
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 217 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "217"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 854,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "CCCCCC",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "217"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460903276074,
+              -30.73201877815286
+            ],
+            [
+              121.44462469454828,
+              -30.732018622484162
+            ],
+            [
+              121.44497446401151,
+              -30.732015154405715
+            ],
+            [
+              121.4449715402344,
+              -30.731795085370727
+            ],
+            [
+              121.44462177156583,
+              -30.731798553442374
+            ],
+            [
+              121.44460610981386,
+              -30.73179870911078
+            ],
+            [
+              121.44460903276074,
+              -30.73201877815286
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 218 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "218"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 854,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "DDDDDD",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "218"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44461195572006,
+              -30.73223884718743
+            ],
+            [
+              121.44462761753803,
+              -30.73223870053795
+            ],
+            [
+              121.44497738779593,
+              -30.7322352324527
+            ],
+            [
+              121.44497446401151,
+              -30.732015154405715
+            ],
+            [
+              121.44462469454828,
+              -30.732018622484162
+            ],
+            [
+              121.44460903276074,
+              -30.73201877815286
+            ],
+            [
+              121.44461195572006,
+              -30.73223884718743
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 219 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "219"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 854,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "EEEEEE",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "219"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44461468838666,
+              -30.732444791532345
+            ],
+            [
+              121.44464326254992,
+              -30.732505442095317
+            ],
+            [
+              121.44483842405333,
+              -30.732441107626624
+            ],
+            [
+              121.44504266037245,
+              -30.732373782218925
+            ],
+            [
+              121.44503675778088,
+              -30.73236125157706
+            ],
+            [
+              121.44497738779593,
+              -30.7322352324527
+            ],
+            [
+              121.44462761753803,
+              -30.73223870053795
+            ],
+            [
+              121.44461195572006,
+              -30.73223884718743
+            ],
+            [
+              121.44461468838666,
+              -30.732444791532345
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 220 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "220"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 888,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "FFFFFF",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "220"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460318687948,
+              -30.731578640061176
+            ],
+            [
+              121.44461884859585,
+              -30.731578484393072
+            ],
+            [
+              121.4446159256435,
+              -30.731358406316723
+            ],
+            [
+              121.44460026396273,
+              -30.731358561984518
+            ],
+            [
+              121.44460318687948,
+              -30.731578640061176
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Area D5 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Area"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "D5"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 36.6,
+        "parcelType": "wa-secondary-parcel-type:easement-area",
+        "parcelPurpose": "wa-secondary-parcel-purpose:drain-reserve",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "123-456-741",
+            "label": "D5",
+            "interestType": "wa-secondary-purpose:easement-drainage",
+            "statuteLink": "wa-interest-type:easement-tla-136C",
+            "burdenedParcels": [
+              "216"
+            ],
+            "benefitedParcels": [
+              "215"
+            ]
+          }
+        ]
+      },
+      "id": "12595541"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460610981386,
+              -30.73179870911078
+            ],
+            [
+              121.44462177156583,
+              -30.731798553442374
+            ],
+            [
+              121.44461884859585,
+              -30.731578484393072
+            ],
+            [
+              121.44460318687948,
+              -30.731578640061176
+            ],
+            [
+              121.44460610981386,
+              -30.73179870911078
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Area D4 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Area"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "D4"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 36.6,
+        "parcelType": "wa-secondary-parcel-type:easement-area",
+        "parcelPurpose": "wa-secondary-parcel-purpose:drain-reserve",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "123-456-742",
+            "label": "D4",
+            "interestType": "wa-secondary-purpose:easement-drainage",
+            "statuteLink": "wa-interest-type:easement-tla-136C",
+            "burdenedParcels": [
+              "217"
+            ],
+            "benefitedParcels": [
+              "215",
+              "216"
+            ]
+          }
+        ]
+      },
+      "id": "12595542"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44460903276074,
+              -30.73201877815286
+            ],
+            [
+              121.44462469454828,
+              -30.732018622484162
+            ],
+            [
+              121.44462177156583,
+              -30.731798553442374
+            ],
+            [
+              121.44460610981386,
+              -30.73179870911078
+            ],
+            [
+              121.44460903276074,
+              -30.73201877815286
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Area D3 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Area"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "D3"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 36.6,
+        "parcelType": "wa-secondary-parcel-type:easement-area",
+        "parcelPurpose": "wa-secondary-parcel-purpose:drain-reserve",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "label": "D3",
+            "interestLink": "123-456-743",
+            "interestType": "wa-secondary-purpose:easement-drainage",
+            "statuteLink": "wa-interest-type:easement-tla-136C",
+            "burdenedParcels": [
+              "218"
+            ],
+            "benefitedParcels": [
+              "215",
+              "216",
+              "217"
+            ]
+          }
+        ]
+      },
+      "id": "12595543"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44461195572006,
+              -30.73223884718743
+            ],
+            [
+              121.44462761753803,
+              -30.73223870053795
+            ],
+            [
+              121.44462469454828,
+              -30.732018622484162
+            ],
+            [
+              121.44460903276074,
+              -30.73201877815286
+            ],
+            [
+              121.44461195572006,
+              -30.73223884718743
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Area D2 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Area"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "D2"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 36.6,
+        "parcelType": "wa-secondary-parcel-type:easement-area",
+        "parcelPurpose": "wa-secondary-parcel-purpose:drain-reserve",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "label": "D2",
+            "interestLink": "123-456-744",
+            "interestType": "wa-secondary-purpose:easement-drainage",
+            "statuteLink": "wa-interest-type:easement-tla-136C",
+            "burdenedParcels": [
+              "219"
+            ],
+            "benefitedParcels": [
+              "215",
+              "216",
+              "217",
+              "218"
+            ]
+          }
+        ]
+      },
+      "id": "12595544"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44461468838666,
+              -30.732444791532345
+            ],
+            [
+              121.44464326254992,
+              -30.732505442095317
+            ],
+            [
+              121.44483842405333,
+              -30.732441107626624
+            ],
+            [
+              121.44504266037245,
+              -30.732373782218925
+            ],
+            [
+              121.44503675778088,
+              -30.73236125157706
+            ],
+            [
+              121.44465199085928,
+              -30.73248808320179
+            ],
+            [
+              121.44463032038915,
+              -30.732442065281187
+            ],
+            [
+              121.44462761753803,
+              -30.73223870053795
+            ],
+            [
+              121.44461195572006,
+              -30.73223884718743
+            ],
+            [
+              121.44461468838666,
+              -30.732444791532345
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Area D1 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Area"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "D1"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanIdentifier",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 103.9,
+        "parcelType": "wa-secondary-parcel-type:easement-area",
+        "parcelPurpose": "wa-secondary-parcel-purpose:drain-reserve",
+        "parcelState": "wa-parcel-state:created",
+        "interests": [
+          {
+            "interestLink": "123-456-745",
+            "label": "D1",
+            "interestType": "wa-secondary-purpose:easement-drainage",
+            "statuteLink": "wa-interest-type:easement-tla-136C",
+            "burdenedParcels": [
+              "220"
+            ],
+            "benefitedParcels": [
+              "215",
+              "216",
+              "217",
+              "218",
+              "219"
+            ]
+          }
+        ]
+      },
+      "id": "12595545"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

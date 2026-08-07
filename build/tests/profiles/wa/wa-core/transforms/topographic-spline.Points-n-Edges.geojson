@@ -1,0 +1,823 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71664743087699,
+          -32.53544847523134
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:internal-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "placed 0.4d",
+        "monumentedBy": {
+          "form": "wa-monument-form:spike",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found-and-renewed"
+        },
+        "feature_id": "10"
+      },
+      "id": "10"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71673833385995,
+          -32.53543489508616
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:internal-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "11"
+      },
+      "id": "11"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71681360810103,
+          -32.53528815992884
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:internal-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "12"
+      },
+      "id": "12"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71654683377533,
+          -32.53505581180445
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:internal-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "Deck Spike in Bitument path",
+        "monumentedBy": {
+          "form": "wa-monument-form:deck-spike",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "13"
+      },
+      "id": "13"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71665564668278,
+          -32.534999016353
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:internal-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": null,
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "14"
+      },
+      "id": "14"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71665342303514,
+          -32.534988355967045
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "101"
+      },
+      "id": "101"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71666120744295,
+          -32.5350241884583
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "102"
+      },
+      "id": "102"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71666621036347,
+          -32.53504363404343
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "103"
+      },
+      "id": "103"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71667315671506,
+          -32.53506724723215
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "104"
+      },
+      "id": "104"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71668259494297,
+          -32.53509002377933
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "105"
+      },
+      "id": "105"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71669259434928,
+          -32.53513474021019
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "106"
+      },
+      "id": "106"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71670537716493,
+          -32.53516530146723
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "107"
+      },
+      "id": "107"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71670760063326,
+          -32.53517613318324
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "108"
+      },
+      "id": "108"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71671204320043,
+          -32.53518252106367
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "109"
+      },
+      "id": "109"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.7167150958783,
+          -32.53518474178077
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "110"
+      },
+      "id": "110"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71671871366378,
+          -32.53518613334217
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "111"
+      },
+      "id": "111"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71674509605103,
+          -32.53519224108019
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "112"
+      },
+      "id": "112"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71674787102967,
+          -32.53519530019803
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "113"
+      },
+      "id": "113"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71675399202036,
+          -32.53521446712677
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "114"
+      },
+      "id": "114"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71676851397412,
+          -32.535231837240076
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "115"
+      },
+      "id": "115"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71677898036884,
+          -32.535249014764304
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "116"
+      },
+      "id": "116"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71678821370487,
+          -32.53526459522101
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "117"
+      },
+      "id": "117"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.7167962151986,
+          -32.53527747848344
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "118"
+      },
+      "id": "118"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71680493639106,
+          -32.53528450999657
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "119"
+      },
+      "id": "119"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.71684688269282,
+          -32.53529955733888
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:hwm-boundary",
+        "ptQualityMeasure": 0.1,
+        "comment": "MHW extracted & adopted from SCDB 2014-09",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "120"
+      },
+      "id": "120"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71664743087699,
+            -32.53544847523134
+          ],
+          [
+            115.71673833385995,
+            -32.53543489508616
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:C",
+        "comment": null
+      },
+      "id": "v10"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71673833385995,
+            -32.53543489508616
+          ],
+          [
+            115.71681360810103,
+            -32.53528815992884
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:C",
+        "comment": null
+      },
+      "id": "v11"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71664743087699,
+            -32.53544847523134
+          ],
+          [
+            115.71654683377533,
+            -32.53505581180445
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:C",
+        "comment": null
+      },
+      "id": "v12"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71654683377533,
+            -32.53505581180445
+          ],
+          [
+            115.71665564668278,
+            -32.534999016353
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:R",
+        "comment": null
+      },
+      "id": "v13"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71665564668278,
+            -32.534999016353
+          ],
+          [
+            115.71666120744295,
+            -32.5350241884583
+          ],
+          [
+            115.71666621036347,
+            -32.53504363404343
+          ],
+          [
+            115.71667315671506,
+            -32.53506724723215
+          ],
+          [
+            115.71668259494297,
+            -32.53509002377933
+          ],
+          [
+            115.71669259434928,
+            -32.53513474021019
+          ],
+          [
+            115.71670537716493,
+            -32.53516530146723
+          ],
+          [
+            115.71670760063326,
+            -32.53517613318324
+          ],
+          [
+            115.71671204320043,
+            -32.53518252106367
+          ],
+          [
+            115.7167150958783,
+            -32.53518474178077
+          ],
+          [
+            115.71671871366378,
+            -32.53518613334217
+          ],
+          [
+            115.71674509605103,
+            -32.53519224108019
+          ],
+          [
+            115.71674787102967,
+            -32.53519530019803
+          ],
+          [
+            115.71675399202036,
+            -32.53521446712677
+          ],
+          [
+            115.71676851397412,
+            -32.535231837240076
+          ],
+          [
+            115.71677898036884,
+            -32.535249014764304
+          ],
+          [
+            115.71678821370487,
+            -32.53526459522101
+          ],
+          [
+            115.7167962151986,
+            -32.53527747848344
+          ],
+          [
+            115.71680493639106,
+            -32.53528450999657
+          ],
+          [
+            115.71681360810103,
+            -32.53528815992884
+          ]
+        ]
+      },
+      "properties": {},
+      "id": "26538"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71673833385995,
+            -32.53543489508616
+          ],
+          [
+            [
+              115.71673833385995,
+              -32.53543489508616
+            ],
+            [
+              115.71681360810103,
+              -32.53528815992884
+            ]
+          ],
+          [
+            [
+              115.71664743087699,
+              -32.53544847523134
+            ],
+            [
+              115.71673833385995,
+              -32.53543489508616
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:R",
+        "comment": null
+      },
+      "id": "21"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71664743087699,
+            -32.53544847523134
+          ],
+          [
+            [
+              115.71664743087699,
+              -32.53544847523134
+            ],
+            [
+              115.71673833385995,
+              -32.53543489508616
+            ]
+          ],
+          [
+            [
+              115.71664743087699,
+              -32.53544847523134
+            ],
+            [
+              115.71654683377533,
+              -32.53505581180445
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:R",
+        "comment": null
+      },
+      "id": "22"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.71681360810103,
+            -32.53528815992884
+          ],
+          [
+            [
+              115.71654683377533,
+              -32.53505581180445
+            ],
+            [
+              115.71665564668278,
+              -32.534999016353
+            ]
+          ],
+          [
+            [
+              115.71654683377533,
+              -32.53505581180445
+            ],
+            [
+              115.71665564668278,
+              -32.534999016353
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:R",
+        "comment": null
+      },
+      "id": "23"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.96099146374506,
+          -32.06232428358701
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:other",
+        "comment": "Center of arc 1853004",
+        "monumentedBy": {
+          "state": "wa-monument-state:unmarked"
+        },
+        "feature_id": "p1853004"
+      },
+      "id": "p1853004"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.96083377338218,
+          -32.06326560220351
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.017,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:new-mark"
+        },
+        "feature_id": "1746055"
+      },
+      "id": "1746055"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.96057253944942,
+          -32.063205667114744
+        ]
+      },
+      "properties": {
+        "name": null,
+        "purpose": "wa-surveypoint-purpose:road-boundary",
+        "ptQualityMeasure": 0.016,
+        "comment": null,
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:new-mark"
+        },
+        "feature_id": "1746030"
+      },
+      "id": "1746030"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.96083377338218,
+            -32.06326560220351
+          ],
+          [
+            115.96057253944942,
+            -32.063205667114744
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
+        "comment": "Chord"
+      },
+      "id": "c1853004"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.96083377338218,
+            -32.06326560220351
+          ],
+          [
+            115.96057253944942,
+            -32.063205667114744
+          ],
+          [
+            115.96099146374506,
+            -32.06232428358701
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:R",
+        "comment": null,
+        "arcLength": 25.615,
+        "radius": 105.438,
+        "distanceType": "icsm-distance-type:ground"
+      },
+      "id": "1853004"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

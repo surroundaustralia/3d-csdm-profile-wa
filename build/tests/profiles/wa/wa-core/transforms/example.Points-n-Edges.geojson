@@ -1,0 +1,152 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.09647713372017,
+          -34.70981740542593
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:temporary-control-point",
+        "monumentedBy": {
+          "form": "wa-monument-form:spike",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "name": {
+          "label": "EFB157243/9540",
+          "hasPart": [
+            {
+              "type": "Source",
+              "label": "EFB157243"
+            },
+            {
+              "type": "Stamp",
+              "label": "9540"
+            }
+          ]
+        },
+        "feature_id": "15432571"
+      },
+      "id": "15432571"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.0934904173545,
+          -34.711406228435756
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:monument",
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "name": {
+          "label": ""
+        },
+        "feature_id": "14005391"
+      },
+      "id": "14005391"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.09344703860768,
+          -34.71151562207706
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:monument",
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "name": {
+          "label": ""
+        },
+        "feature_id": "14005400"
+      },
+      "id": "14005400"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.09339442578255,
+          -34.71154090351977
+        ]
+      },
+      "properties": {
+        "purpose": "wa-surveypoint-purpose:monument",
+        "monumentedBy": {
+          "form": "wa-monument-form:peg",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "name": {
+          "label": ""
+        },
+        "feature_id": "14005401"
+      },
+      "id": "14005401"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.0934904173545,
+            -34.711406228435756
+          ],
+          [
+            119.09344703860768,
+            -34.71151562207706
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:boundary",
+        "comment": null
+      },
+      "id": "17251502"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.09344703860768,
+            -34.71151562207706
+          ],
+          [
+            119.09339442578255,
+            -34.71154090351977
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:boundary",
+        "comment": null
+      },
+      "id": "17251503"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

@@ -1,8 +1,8 @@
 path	@id	schema
-/label	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/template		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/hasPart	http://purl.org/dc/terms/hasPart	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/hasPart/ref	https://linked.data.gov.au/def/csdm/commonpatterns/namePartRef	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
-/hasPart/type	https://linked.data.gov.au/def/csdm/commonpatterns/namePartType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/compoundName/schema.yaml
+/label	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/template		https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/hasPart	http://purl.org/dc/terms/hasPart	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/hasPart/label	http://www.w3.org/2000/01/rdf-schema#label	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/hasPart/ref	https://w3id.org/ogc/utils/label/namePartRef	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
+/hasPart/type	https://w3id.org/ogc/utils/label/namePartType	https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema.yaml
 /type		/github/workspace/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml
