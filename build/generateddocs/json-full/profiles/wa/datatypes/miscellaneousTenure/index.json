@@ -32,8 +32,8 @@
     ]
   },
   "dependsOn": [
-    "icsm.profiles.wa.datatypes.waAppellationNamespaces",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "icsm.profiles.wa.datatypes.waAppellationNamespaces"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml",
