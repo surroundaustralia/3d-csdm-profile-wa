@@ -5,6 +5,8 @@ transforms:
     type: topo2geojson
     metadata:
       mode: "points,edges"
+      densify: true
+      max_offset: 0.02
     code: is this required
 
 
@@ -17,4 +19,6 @@ transforms:
       objects: "parcels:Polygon"
       # tells the parser to only output the target object - not any components needed to build the geometry
       mode: "parcels"
+      densify: true
+      max_offset: 0.02
     code: Extracts a 2D view of polygon geometries from 2 or 3D topology models
