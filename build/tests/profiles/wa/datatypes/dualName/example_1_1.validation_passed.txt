@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)
-Generated 2026-08-07T07:10:44.095249+00:00
+Generated 2026-08-12T06:51:51.575142+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:n5deac1d1866e40f791a5e89dd4b45eccb1: *none*
+ - Shape _:nf03fe6704ffb448a9811dfd9eeed2595b1: *none*
 
 === End SHACL ===
 
