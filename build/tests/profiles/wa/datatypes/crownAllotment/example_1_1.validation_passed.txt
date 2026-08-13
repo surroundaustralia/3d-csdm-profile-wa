@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation
-Generated 2026-08-12T17:56:07.040729+00:00
+Generated 2026-08-13T23:14:04.020693+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:nb7628a184df847678d9102822b46d634b1: *none*
+ - Shape _:n74d950b709414dd0935917559058158bb1: *none*
 
 === End SHACL ===
 

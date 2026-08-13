@@ -8,8 +8,8 @@
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -40,10 +40,10 @@
 <https://www.wa-example.com/features/DP_404354> a geojson:FeatureCollection ;
     rdfs:label "DP 404354" ;
     dcterms:time [ time:hasTime "2014-12-12"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:halls-head ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:city-of-mandurah ] ;
     container:bearingRotation 0e+00 ;
@@ -63,14 +63,14 @@
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/s1> <https://www.wa-example.com/features/v11> <https://www.wa-example.com/features/v10> <https://www.wa-example.com/features/v12> <https://www.wa-example.com/features/v13> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 502 DP 404354" ;
-            dcterms:hasPart [ rdfs:label "404354" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "502" ;
+            dcterms:hasPart [ rdfs:label "502" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "404354" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ] ] ;
     parcel:interest [ container:purpose wa-secondary-parcel-purpose:non-extinguisment-native-title ;
             parcel:burdened "1" ;
             parcel:interestLink <https://www.wa-example.com/features/456-987-123> ;
@@ -125,36 +125,36 @@
 <vectorobservation:Measured> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v12> ;
-            sosa:hasResult [ surv:distance 4.455e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v11> ;
+            sosa:hasResult [ surv:distance 1.774e+01 ] ;
             sosa:resultTime "2014-12-12T00:00:00Z" ;
-            ns3:distanceType icsm-distance-type:ground ],
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
+            sosa:hasResult [ ] ;
+            ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v10> ;
             sosa:hasResult [ surv:distance 8.67e+00 ] ;
             sosa:resultTime "2014-12-12T00:00:00Z" ;
-            ns3:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v11> ;
-            sosa:hasResult [ surv:distance 1.774e+01 ] ;
-            sosa:resultTime "2014-12-12T00:00:00Z" ;
-            ns3:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
-            sosa:hasResult [ ] ;
-            ns3:angleType icsm-angle-type:angle ],
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
             sosa:hasResult [ ] ;
-            ns3:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/22> ;
-            sosa:hasResult [ ] ;
-            ns3:angleType icsm-angle-type:angle ],
+            ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v13> ;
             sosa:hasResult [ surv:distance 1.201e+01 ] ;
-            ns3:distanceType icsm-distance-type:ground ] ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v12> ;
+            sosa:hasResult [ surv:distance 4.455e+01 ] ;
+            sosa:resultTime "2014-12-12T00:00:00Z" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/22> ;
+            sosa:hasResult [ ] ;
+            ns2:angleType icsm-angle-type:angle ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2014-12-12T00:00:00Z" ;
