@@ -1,0 +1,23 @@
+{
+  "representationStatus": "representation-status:2d",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+  "verticalExtent": {
+    "status": "vertical-extent-status:ud",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:und"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:und"
+    }
+  },
+  "computabilityStatus": "computability-status:nc",
+  "verticalBoundaryDefinitions": [],
+  "referenceSurfaces": [],
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}

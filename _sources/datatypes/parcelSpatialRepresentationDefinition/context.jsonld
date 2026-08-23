@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "pvb": "https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "sourceBasis": { "@id": "pvb:sourceBasis", "@type": "@id" },
+    "ruleType": { "@id": "pvb:ruleType", "@type": "xsd:string" },
+    "sourceAuthorityType": { "@id": "pvb:sourceAuthorityType", "@type": "xsd:string" },
+    "sourceStatement": { "@id": "pvb:sourceStatement", "@type": "xsd:string" }
+  }
+}

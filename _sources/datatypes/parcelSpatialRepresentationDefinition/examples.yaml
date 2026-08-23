@@ -1,0 +1,10 @@
+examples:
+  - title: Jurisdictionally bounded parcel
+    content: |
+      A parcel whose lower vertical boundary is defined by a Crown Grant depth condition. The
+      jurisdictional rule type, source authority, and verbatim source statement are preserved in
+      `sourceBasis` on the `jurisdictional-limit-lower-1` boundary definition, alongside the
+      `sourceReference` and `provenanceRef` that trace it back to its Certificate of Title extraction.
+    snippets:
+      - language: json
+        ref: examples/jurisdictionally-bounded.json

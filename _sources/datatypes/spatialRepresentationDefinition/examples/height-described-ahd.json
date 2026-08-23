@@ -1,0 +1,50 @@
+{
+  "representationStatus": "representation-status:hd",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+  "verticalExtent": {
+    "status": "vertical-extent-status:ld",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:def",
+      "definitionRef": "absolute-limit-lower-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:def",
+      "definitionRef": "absolute-limit-upper-1"
+    }
+  },
+  "computabilityStatus": "computability-status:c",
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "absolute-limit-lower-1",
+      "definitionType": "vertical-definition-type:ahd",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:ah",
+      "value": 16,
+      "comparisonOperator": "greaterThanOrEqual",
+      "description": "limited in height to more than and equal to 16.00 AHD",
+      "sourceReference": "source-height-description-2",
+      "resolutionStatus": "absoluteLimitAvailable",
+      "provenanceRef": "height-description-extraction-1"
+    },
+    {
+      "id": "absolute-limit-upper-1",
+      "definitionType": "vertical-definition-type:ahd",
+      "limitRole": "vertical-limit-role:ul",
+      "valueType": "vertical-value-type:ah",
+      "value": 35,
+      "comparisonOperator": "lessThanOrEqual",
+      "description": "limited in height to less than and equal to 35.00 AHD",
+      "sourceReference": "source-height-description-1",
+      "resolutionStatus": "absoluteLimitAvailable",
+      "provenanceRef": "height-description-extraction-1"
+    }
+  ],
+  "referenceSurfaces": [],
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}

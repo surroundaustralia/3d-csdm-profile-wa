@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Generic properties describing how a 2D feature's geometry is interpreted with respect to the vertical dimension. A feature remains an authoritative 2D representation unless a legal vertical extent is explicitly described, supported by an authoritative source, and, where a 3D solid is created, capable of being computed and validated. This block is deliberately generic (not parcel-specific) so it can be reused by any 2D feature type gaining a 2.5D or 3D representation. Vocabulary value definitions (the terms referenced by the `*Status`, `*Role`, `*Type` and `direction`/`zValueRole` properties below) are managed as a separate artefact and are not defined here.",
+  "x-jsonld-context": "context.jsonld",
+  "type": "object",
+  "properties": {
+    "representationStatus": {
+      "type": "string",
+      "description": "How the feature's spatial representation currently stands: 2D footprint only, 2.5D (footprint plus reference surface), height-described, jurisdictionally bounded, or derived 3D. A vocabulary-referencing value (e.g. `representation-status:2d`)."
+    },
+    "geometryLegalStatus": {
+      "type": "string",
+      "description": "Which geometry is legally authoritative for the feature: the 2D footprint, an observed surface, or geometry derived from a legal description. A vocabulary-referencing value (e.g. `geometry-legal-status:a2d`)."
+    },
+    "coordinateRepresentation": {
+      "$ref": "#/$defs/coordinateRepresentation"
+    },
+    "verticalExtent": {
+      "$ref": "#/$defs/verticalExtent"
+    },
+    "computabilityStatus": {
+      "type": "string",
+      "description": "Whether coordinate boundaries or geometry can be calculated from the information currently available. A vocabulary-referencing value (e.g. `computability-status:nc`)."
+    },
+    "verticalBoundaryDefinitions": {
+      "type": "array",
+      "description": "The source definitions (relative offset, absolute datum value, or jurisdictional rule) that establish or describe a vertical boundary. Kept separate from any computed/derived geometry — see `derivedGeometry`.",
+      "items": {
+        "$ref": "#/$defs/verticalBoundaryDefinition"
+      }
+    },
+    "referenceSurfaces": {
+      "type": "array",
+      "description": "Reference surfaces (terrain, ground, floor, or other surface) that provide vertical context for the feature. A reference surface supports analysis or visualisation; it is not by itself a legal vertical boundary.",
+      "items": {
+        "$ref": "#/$defs/referenceSurface"
+      }
+    },
+    "derivedGeometry": {
+      "$ref": "#/$defs/derivedGeometry"
+    }
+  },
+  "required": [
+    "representationStatus",
+    "geometryLegalStatus",
+    "coordinateRepresentation",
+    "verticalExtent",
+    "computabilityStatus",
+    "derivedGeometry"
+  ],
+  "$defs": {
+    "coordinateRepresentation": {
+      "type": "object",
+      "description": "Separates the dimensionality of the stored coordinates from the legal dimensionality of the feature. A feature can be legally 2D (`geometryLegalStatus` authoritative-2D) while its coordinates carry a contextual third ordinate.",
+      "properties": {
+        "coordinateDimension": {
+          "type": "integer",
+          "enum": [2, 3],
+          "description": "The number of ordinates carried by the feature's coordinates."
+        },
+        "zValueRole": {
+          "type": "string",
+          "description": "What a third coordinate ordinate, if present, means: absent, a contextual geometry height, a reference-surface height, or a derived-boundary height. A vocabulary-referencing value (e.g. `coordinate-z-role:absent`)."
+        }
+      },
+      "required": ["coordinateDimension", "zValueRole"]
+    },
+    "verticalExtent": {
+      "type": "object",
+      "description": "The overall legal or source state of the feature's vertical extent, with the lower and upper boundary modelled independently so that each direction can carry its own state.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "description": "The overall legal or source state of the vertical extent. A vocabulary-referencing value (e.g. `vertical-extent-status:ud`)."
+        },
+        "lowerBoundary": {
+          "$ref": "#/$defs/verticalBoundary"
+        },
+        "upperBoundary": {
+          "$ref": "#/$defs/verticalBoundary"
+        },
+        "sourceReference": {
+          "type": "string",
+          "description": "Identifier of the supporting source document, where the extent's status (e.g. a positively established unconstrained extent) is itself sourced."
+        }
+      },
+      "required": ["status", "lowerBoundary", "upperBoundary"]
+    },
+    "verticalBoundary": {
+      "type": "object",
+      "description": "The state of one vertical boundary (lower or upper) of the feature.",
+      "properties": {
+        "state": {
+          "type": "string",
+          "description": "The state of this boundary: undefined, not applicable, unconstrained, defined but unresolved, defined, or derived. A vocabulary-referencing value (e.g. `vertical-boundary-state:und`)."
+        },
+        "definitionRef": {
+          "type": "string",
+          "description": "Identifier of the entry in `verticalBoundaryDefinitions` that establishes this boundary, when `state` indicates a source definition exists."
+        },
+        "geometryRef": {
+          "type": "string",
+          "description": "Identifier of the derived boundary geometry (e.g. an upper or lower surface) realising this boundary, when `state` is derived."
+        }
+      },
+      "required": ["state"]
+    },
+    "verticalBoundaryDefinition": {
+      "type": "object",
+      "description": "A single source definition of a vertical boundary: a relative offset, an absolute datum value, or a jurisdictional rule. The `definitionType` discriminates which kind of definition this is.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Local identifier for this definition, referenced by `verticalExtent.lowerBoundary.definitionRef` / `upperBoundary.definitionRef` and by `derivedGeometry.inputDefinitionRefs`."
+        },
+        "definitionType": {
+          "type": "string",
+          "description": "The kind of source definition: relative height description, absolute height description, jurisdictional boundary rule, or geometry boundary reference. A vocabulary-referencing value (e.g. `vertical-definition-type:rel`)."
+        },
+        "limitRole": {
+          "type": "string",
+          "description": "Whether this definition establishes an upper or lower limit. A vocabulary-referencing value (e.g. `vertical-limit-role:ll`)."
+        },
+        "valueType": {
+          "type": "string",
+          "description": "How `value` is expressed: as an offset from a reference, or as an absolute height/depth. A vocabulary-referencing value (e.g. `vertical-value-type:off`)."
+        },
+        "value": {
+          "type": "number",
+          "description": "The numeric height, depth, or offset value."
+        },
+        "direction": {
+          "type": "string",
+          "description": "The direction in which `value` is expressed (above or below the reference), where relevant. A vocabulary-referencing value (e.g. `vertical-direction:blw`)."
+        },
+        "heightReference": {
+          "type": "string",
+          "description": "The surface, level, object, plane or datum that `value` is relative to. A vocabulary-referencing value (e.g. `height-reference:gl`)."
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description or verbatim source wording for this boundary definition."
+        },
+        "comparisonOperator": {
+          "type": "string",
+          "description": "The comparison implied by an absolute value, e.g. `lessThanOrEqual` or `greaterThanOrEqual`."
+        },
+        "resolutionStatus": {
+          "type": "string",
+          "description": "Whether this definition has been resolved into a computable absolute value, e.g. `requiresReferenceSurface`, `absoluteLimitAvailable`, or `resolved`."
+        },
+        "sourceReference": {
+          "type": "string",
+          "description": "Identifier of the supporting source document for this definition."
+        },
+        "provenanceRef": {
+          "type": "string",
+          "description": "Identifier of the PROV activity that extracted or derived this definition."
+        }
+      },
+      "required": ["id", "definitionType", "limitRole"]
+    },
+    "referenceSurface": {
+      "type": "object",
+      "description": "A terrain, ground, floor, or other surface providing vertical context. A reference surface is supporting geometry; it is not automatically an upper or lower legal boundary.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Local identifier for this reference surface, referenced by `derivedGeometry.inputSurfaceRefs`."
+        },
+        "surfaceType": {
+          "type": "string",
+          "description": "What the surface represents, e.g. ground level. A vocabulary-referencing value (e.g. `height-reference:gl`)."
+        },
+        "geometryLegalStatus": {
+          "type": "string",
+          "description": "The legal/analytical status of the surface geometry itself. A vocabulary-referencing value (e.g. `geometry-legal-status:obs`)."
+        },
+        "ref": {
+          "type": "string",
+          "description": "Reference to the surface's geometry, e.g. a surface feature collection identifier."
+        },
+        "boundedByFootprint": {
+          "type": "boolean",
+          "description": "Whether the surface is bounded by (contains) the feature's 2D footprint."
+        }
+      },
+      "required": ["id", "surfaceType", "ref"]
+    },
+    "derivedGeometry": {
+      "type": "object",
+      "description": "The computational result of converting sufficient source information (footprint, vertical boundary definitions, reference surfaces) into derived geometry, e.g. a closed 3D solid. Kept separate from the source definitions, which remain in `verticalBoundaryDefinitions`.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "description": "Whether derived geometry has been generated, e.g. `notGenerated` or `solidGenerated`."
+        },
+        "geometryType": {
+          "type": "string",
+          "description": "The type of derived geometry produced, e.g. `Solid`."
+        },
+        "solidRef": {
+          "type": "string",
+          "description": "Reference to the generated solid geometry."
+        },
+        "inputFootprintRef": {
+          "type": "string",
+          "description": "Reference to the 2D footprint used as an input to the derivation."
+        },
+        "inputDefinitionRefs": {
+          "type": "array",
+          "description": "References to the `verticalBoundaryDefinitions` entries used as inputs to the derivation.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inputSurfaceRefs": {
+          "type": "array",
+          "description": "References to the `referenceSurfaces` entries used as inputs to the derivation.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceReference": {
+          "description": "Identifier(s) of the supporting source document(s) for the derivation.",
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        },
+        "provenanceRef": {
+          "type": "string",
+          "description": "Identifier of the PROV activity that generated this derived geometry."
+        }
+      },
+      "required": ["status"]
+    }
+  }
+}

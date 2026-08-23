@@ -1,0 +1,41 @@
+examples:
+  - title: Authoritative 2D footprint
+    content: |
+      The surveyed horizontal footprint only. No vertical extent is defined and no derived geometry
+      has been generated.
+    snippets:
+      - language: json
+        ref: examples/2d-footprint.json
+
+  - title: 2.5D reference surface
+    content: |
+      The footprint is associated with a ground reference surface. The surface provides vertical
+      context but is not a legal vertical boundary, so `verticalExtent.status` remains `notApplicable`.
+    snippets:
+      - language: json
+        ref: examples/2-5d-reference-surface.json
+
+  - title: Relative height description
+    content: |
+      Both vertical boundaries are described relative to ground level but cannot yet be resolved to
+      absolute values, so `resolutionStatus` is `requiresReferenceSurface`.
+    snippets:
+      - language: json
+        ref: examples/height-described-relative.json
+
+  - title: Absolute AHD height description
+    content: |
+      Both vertical boundaries are supported absolute values referenced to the AHD vertical datum, so
+      `computabilityStatus` is `computable`.
+    snippets:
+      - language: json
+        ref: examples/height-described-ahd.json
+
+  - title: Derived 3D solid
+    content: |
+      Sufficient source information (footprint, resolved vertical boundary definitions, and a ground
+      reference surface) has been converted into a closed 3D solid. The source definitions in
+      `verticalBoundaryDefinitions` are retained alongside the computed result in `derivedGeometry`.
+    snippets:
+      - language: json
+        ref: examples/derived-3d-solid.json

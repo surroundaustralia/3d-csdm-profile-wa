@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "sr": "https://linked.data.gov.au/def/csdm/spatial-representation/",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "representationStatus": { "@id": "sr:representationStatus", "@type": "@vocab" },
+    "geometryLegalStatus": { "@id": "sr:geometryLegalStatus", "@type": "@vocab" },
+    "computabilityStatus": { "@id": "sr:computabilityStatus", "@type": "@vocab" },
+
+    "coordinateRepresentation": { "@id": "sr:coordinateRepresentation", "@type": "@id" },
+    "coordinateDimension": { "@id": "sr:coordinateDimension", "@type": "xsd:integer" },
+    "zValueRole": { "@id": "sr:zValueRole", "@type": "@vocab" },
+
+    "verticalExtent": {
+      "@id": "sr:verticalExtent",
+      "@type": "@id",
+      "@context": {
+        "status": { "@id": "sr:verticalExtentStatus", "@type": "@vocab" }
+      }
+    },
+    "lowerBoundary": { "@id": "sr:lowerBoundary", "@type": "@id" },
+    "upperBoundary": { "@id": "sr:upperBoundary", "@type": "@id" },
+    "state": { "@id": "sr:boundaryState", "@type": "@vocab" },
+    "definitionRef": { "@id": "sr:definitionRef", "@type": "@id" },
+    "geometryRef": { "@id": "sr:geometryRef", "@type": "@id" },
+    "sourceReference": { "@id": "sr:sourceReference", "@type": "@id" },
+
+    "verticalBoundaryDefinitions": { "@id": "sr:verticalBoundaryDefinitions", "@type": "@id", "@container": "@set" },
+    "definitionType": { "@id": "sr:definitionType", "@type": "@vocab" },
+    "limitRole": { "@id": "sr:limitRole", "@type": "@vocab" },
+    "valueType": { "@id": "sr:valueType", "@type": "@vocab" },
+    "value": { "@id": "sr:value", "@type": "xsd:decimal" },
+    "direction": { "@id": "sr:direction", "@type": "@vocab" },
+    "heightReference": { "@id": "sr:heightReference", "@type": "@vocab" },
+    "description": "dct:description",
+    "comparisonOperator": { "@id": "sr:comparisonOperator" },
+    "resolutionStatus": { "@id": "sr:resolutionStatus" },
+    "provenanceRef": { "@id": "sr:provenanceRef", "@type": "@id" },
+
+    "referenceSurfaces": { "@id": "sr:referenceSurfaces", "@type": "@id", "@container": "@set" },
+    "surfaceType": { "@id": "sr:surfaceType", "@type": "@vocab" },
+    "ref": { "@id": "sr:surfaceGeometryRef", "@type": "@id" },
+    "boundedByFootprint": { "@id": "sr:boundedByFootprint", "@type": "xsd:boolean" },
+
+    "derivedGeometry": {
+      "@id": "sr:derivedGeometry",
+      "@type": "@id",
+      "@context": {
+        "status": { "@id": "sr:derivedGeometryStatus" }
+      }
+    },
+    "geometryType": { "@id": "sr:geometryType" },
+    "solidRef": { "@id": "sr:solidRef", "@type": "@id" },
+    "inputFootprintRef": { "@id": "sr:inputFootprintRef", "@type": "@id" },
+    "inputDefinitionRefs": { "@id": "sr:inputDefinitionRefs", "@type": "@id", "@container": "@set" },
+    "inputSurfaceRefs": { "@id": "sr:inputSurfaceRefs", "@type": "@id", "@container": "@set" }
+  }
+}

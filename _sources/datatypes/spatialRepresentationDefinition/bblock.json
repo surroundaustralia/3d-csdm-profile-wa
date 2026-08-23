@@ -1,0 +1,27 @@
+{
+  "name": "Spatial Representation Definition",
+  "highlighted": true,
+  "abstract": "Generic, reusable properties that record how a 2D feature's geometry is being interpreted with respect to the vertical dimension: whether the representation is a plain 2D footprint, has contextual z-values, is bounded by a reference surface, carries a legally defined vertical boundary, or has a derived 3D solid — and how confidently that interpretation can be computed. Not specific to parcels; reusable by any 2D feature type gaining a 2.5D or 3D representation.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-21T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "Summary of Western Australian Parcel Representation Examples (2.5D liminal proposal)",
+      "link": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/2-5d-liminal/2-5d-liminal-overview.md"
+    }
+  ],
+  "link": "https://github.com/icsm-au/3d-csdm-profile-wa",
+  "maturity": "development",
+  "scope": "profiles",
+  "tags": [
+    "wa",
+    "csdm",
+    "vertical",
+    "2.5d",
+    "3d"
+  ],
+  "superBBlock": false
+}

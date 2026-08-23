@@ -1,0 +1,29 @@
+{
+  "name": "Parcel Spatial Representation Definition",
+  "highlighted": true,
+  "abstract": "The WA cadastral parcel-specific extension of the generic spatial representation definition pattern. Adds the jurisdictional source basis (rule type, source authority type, and verbatim source statement) needed to trace a parcel's vertical boundary back to a title, plan, statute, Crown Grant, strata statement, or other approved jurisdictional rule.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-21T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "Summary of Western Australian Parcel Representation Examples (2.5D liminal proposal)",
+      "link": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/2-5d-liminal/2-5d-liminal-overview.md"
+    }
+  ],
+  "link": "https://github.com/icsm-au/3d-csdm-profile-wa",
+  "maturity": "development",
+  "scope": "profiles",
+  "tags": [
+    "wa",
+    "csdm",
+    "parcel",
+    "vertical",
+    "2.5d",
+    "3d",
+    "jurisdictional"
+  ],
+  "superBBlock": false
+}

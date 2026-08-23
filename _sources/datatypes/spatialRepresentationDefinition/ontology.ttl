@@ -1,0 +1,305 @@
+@prefix sr:   <https://linked.data.gov.au/def/csdm/spatial-representation/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+sr: a owl:Ontology ;
+  dct:title "Spatial Representation Definition Vocabulary" ;
+  dct:description "Classes and properties describing how a 2D feature's geometry is interpreted with respect to the vertical dimension: representation and computability status, coordinate dimensionality, vertical extent and boundaries, the source definitions of those boundaries, supporting reference surfaces, and any derived geometry. Deliberately generic across feature types (not parcel-specific). Vocabulary value (codelist/SKOS concept scheme) definitions for the *Status, *Role, *Type, direction and zValueRole properties below are managed as a separate artefact and are out of scope for this ontology." ;
+  owl:versionInfo "0.1" ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/2-5d-liminal/2-5d-liminal-overview.md> .
+
+#################################################################
+# Classes
+#################################################################
+
+sr:SpatialRepresentationDefinition a owl:Class ;
+  rdfs:label "Spatial Representation Definition" ;
+  skos:definition "The set of properties recording how a 2D feature's geometry is currently interpreted with respect to the vertical dimension." ;
+  rdfs:isDefinedBy sr: .
+
+sr:CoordinateRepresentation a owl:Class ;
+  rdfs:label "Coordinate Representation" ;
+  skos:definition "Describes the dimensionality of a feature's stored coordinates, kept separate from the feature's legal dimensionality." ;
+  rdfs:isDefinedBy sr: .
+
+sr:VerticalExtent a owl:Class ;
+  rdfs:label "Vertical Extent" ;
+  skos:definition "The overall legal or source state of a feature's vertical extent, together with its lower and upper boundaries." ;
+  rdfs:isDefinedBy sr: .
+
+sr:VerticalBoundary a owl:Class ;
+  rdfs:label "Vertical Boundary" ;
+  skos:definition "The state of one direction (lower or upper) of a feature's vertical extent." ;
+  rdfs:isDefinedBy sr: .
+
+sr:VerticalBoundaryDefinition a owl:Class ;
+  rdfs:label "Vertical Boundary Definition" ;
+  skos:definition "A single source definition of a vertical boundary: a relative offset, an absolute datum value, a jurisdictional rule, or a geometry boundary reference." ;
+  rdfs:isDefinedBy sr: .
+
+sr:ReferenceSurface a owl:Class ;
+  rdfs:label "Reference Surface" ;
+  skos:definition "A terrain, ground, floor, or other surface providing vertical context for a feature. Supporting geometry only; not by itself a legal vertical boundary." ;
+  rdfs:isDefinedBy sr: .
+
+sr:DerivedGeometry a owl:Class ;
+  rdfs:label "Derived Geometry" ;
+  skos:definition "The computational result, if any, of converting sufficient source information into derived geometry such as a closed 3D solid." ;
+  rdfs:isDefinedBy sr: .
+
+#################################################################
+# Object properties linking the classes together
+#################################################################
+
+sr:coordinateRepresentation a owl:ObjectProperty ;
+  rdfs:label "coordinate representation" ;
+  skos:definition "Links a spatial representation definition to its coordinate representation." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range sr:CoordinateRepresentation ;
+  rdfs:isDefinedBy sr: .
+
+sr:verticalExtent a owl:ObjectProperty ;
+  rdfs:label "vertical extent" ;
+  skos:definition "Links a spatial representation definition to its vertical extent." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range sr:VerticalExtent ;
+  rdfs:isDefinedBy sr: .
+
+sr:lowerBoundary a owl:ObjectProperty ;
+  rdfs:label "lower boundary" ;
+  skos:definition "The lower vertical boundary of a vertical extent." ;
+  rdfs:domain sr:VerticalExtent ;
+  rdfs:range sr:VerticalBoundary ;
+  rdfs:isDefinedBy sr: .
+
+sr:upperBoundary a owl:ObjectProperty ;
+  rdfs:label "upper boundary" ;
+  skos:definition "The upper vertical boundary of a vertical extent." ;
+  rdfs:domain sr:VerticalExtent ;
+  rdfs:range sr:VerticalBoundary ;
+  rdfs:isDefinedBy sr: .
+
+sr:definitionRef a owl:ObjectProperty ;
+  rdfs:label "definition reference" ;
+  skos:definition "References the vertical boundary definition that establishes a vertical boundary." ;
+  rdfs:domain sr:VerticalBoundary ;
+  rdfs:range sr:VerticalBoundaryDefinition ;
+  rdfs:isDefinedBy sr: .
+
+sr:geometryRef a owl:ObjectProperty ;
+  rdfs:label "geometry reference" ;
+  skos:definition "References the derived boundary geometry (e.g. an upper or lower surface) realising a vertical boundary." ;
+  rdfs:domain sr:VerticalBoundary ;
+  rdfs:isDefinedBy sr: .
+
+sr:verticalBoundaryDefinitions a owl:ObjectProperty ;
+  rdfs:label "vertical boundary definitions" ;
+  skos:definition "The source definitions of a feature's vertical boundaries." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range sr:VerticalBoundaryDefinition ;
+  rdfs:isDefinedBy sr: .
+
+sr:referenceSurfaces a owl:ObjectProperty ;
+  rdfs:label "reference surfaces" ;
+  skos:definition "The reference surfaces providing vertical context for a feature." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range sr:ReferenceSurface ;
+  rdfs:isDefinedBy sr: .
+
+sr:derivedGeometry a owl:ObjectProperty ;
+  rdfs:label "derived geometry" ;
+  skos:definition "Links a spatial representation definition to its derived geometry, if any has been generated." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range sr:DerivedGeometry ;
+  rdfs:isDefinedBy sr: .
+
+sr:surfaceGeometryRef a owl:ObjectProperty ;
+  rdfs:label "surface geometry reference" ;
+  skos:definition "References the geometry (e.g. a surface feature collection) realising a reference surface." ;
+  rdfs:domain sr:ReferenceSurface ;
+  rdfs:isDefinedBy sr: .
+
+sr:solidRef a owl:ObjectProperty ;
+  rdfs:label "solid reference" ;
+  skos:definition "References the generated solid geometry of a derived geometry result." ;
+  rdfs:domain sr:DerivedGeometry ;
+  rdfs:isDefinedBy sr: .
+
+sr:inputFootprintRef a owl:ObjectProperty ;
+  rdfs:label "input footprint reference" ;
+  skos:definition "References the 2D footprint used as an input to a derivation." ;
+  rdfs:domain sr:DerivedGeometry ;
+  rdfs:isDefinedBy sr: .
+
+sr:inputDefinitionRefs a owl:ObjectProperty ;
+  rdfs:label "input definition references" ;
+  skos:definition "References the vertical boundary definitions used as inputs to a derivation." ;
+  rdfs:domain sr:DerivedGeometry ;
+  rdfs:range sr:VerticalBoundaryDefinition ;
+  rdfs:isDefinedBy sr: .
+
+sr:inputSurfaceRefs a owl:ObjectProperty ;
+  rdfs:label "input surface references" ;
+  skos:definition "References the reference surfaces used as inputs to a derivation." ;
+  rdfs:domain sr:DerivedGeometry ;
+  rdfs:range sr:ReferenceSurface ;
+  rdfs:isDefinedBy sr: .
+
+sr:sourceReference a owl:ObjectProperty ;
+  rdfs:label "source reference" ;
+  skos:definition "References a supporting source document." ;
+  rdfs:range prov:Entity ;
+  rdfs:isDefinedBy sr: .
+
+sr:provenanceRef a owl:ObjectProperty ;
+  rdfs:label "provenance reference" ;
+  skos:definition "References the PROV activity that extracted, resolved or derived this element." ;
+  rdfs:range prov:Activity ;
+  rdfs:isDefinedBy sr: .
+
+#################################################################
+# Vocabulary-valued properties (range is an external, separately
+# managed vocabulary concept - no concept scheme is declared here)
+#################################################################
+
+sr:representationStatus a owl:ObjectProperty ;
+  rdfs:label "representation status" ;
+  skos:definition "How a feature's spatial representation currently stands, e.g. 2D footprint, 2.5D, height-described, jurisdictionally bounded, or derived 3D." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:geometryLegalStatus a owl:ObjectProperty ;
+  rdfs:label "geometry legal status" ;
+  skos:definition "Which geometry is legally authoritative for a feature." ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:computabilityStatus a owl:ObjectProperty ;
+  rdfs:label "computability status" ;
+  skos:definition "Whether coordinate boundaries or geometry can be calculated from the information currently available." ;
+  rdfs:domain sr:SpatialRepresentationDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:coordinateDimension a owl:DatatypeProperty ;
+  rdfs:label "coordinate dimension" ;
+  skos:definition "The number of ordinates carried by a feature's coordinates (2 or 3)." ;
+  rdfs:domain sr:CoordinateRepresentation ;
+  rdfs:range xsd:integer ;
+  rdfs:isDefinedBy sr: .
+
+sr:zValueRole a owl:ObjectProperty ;
+  rdfs:label "z value role" ;
+  skos:definition "What a third coordinate ordinate, if present, means." ;
+  rdfs:domain sr:CoordinateRepresentation ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:verticalExtentStatus a owl:ObjectProperty ;
+  rdfs:label "vertical extent status" ;
+  skos:definition "The overall legal or source state of a vertical extent." ;
+  rdfs:domain sr:VerticalExtent ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:boundaryState a owl:ObjectProperty ;
+  rdfs:label "boundary state" ;
+  skos:definition "The state of a vertical boundary: undefined, not applicable, unconstrained, defined but unresolved, defined, or derived." ;
+  rdfs:domain sr:VerticalBoundary ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:definitionType a owl:ObjectProperty ;
+  rdfs:label "definition type" ;
+  skos:definition "The kind of source definition: relative height description, absolute height description, jurisdictional boundary rule, or geometry boundary reference." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:limitRole a owl:ObjectProperty ;
+  rdfs:label "limit role" ;
+  skos:definition "Whether a definition establishes an upper or lower limit." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:valueType a owl:ObjectProperty ;
+  rdfs:label "value type" ;
+  skos:definition "How a boundary definition's value is expressed: as an offset from a reference, or as an absolute height/depth." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:direction a owl:ObjectProperty ;
+  rdfs:label "direction" ;
+  skos:definition "The direction (above or below the reference) in which a boundary definition's value is expressed." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:heightReference a owl:ObjectProperty ;
+  rdfs:label "height reference" ;
+  skos:definition "The surface, level, object, plane or datum that a boundary definition's value is relative to." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:surfaceType a owl:ObjectProperty ;
+  rdfs:label "surface type" ;
+  skos:definition "What a reference surface represents, e.g. ground level. Drawn from the same external vocabulary as sr:heightReference, but recorded as a distinct property because it classifies the surface itself rather than a boundary definition's relative position." ;
+  rdfs:domain sr:ReferenceSurface ;
+  rdfs:range skos:Concept ;
+  rdfs:isDefinedBy sr: .
+
+#################################################################
+# Plain literal-valued properties (not backed by a managed
+# vocabulary)
+#################################################################
+
+sr:value a owl:DatatypeProperty ;
+  rdfs:label "value" ;
+  skos:definition "The numeric height, depth, or offset value of a vertical boundary definition." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range xsd:decimal ;
+  rdfs:isDefinedBy sr: .
+
+sr:comparisonOperator a owl:DatatypeProperty ;
+  rdfs:label "comparison operator" ;
+  skos:definition "The comparison implied by an absolute boundary value, e.g. lessThanOrEqual or greaterThanOrEqual." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy sr: .
+
+sr:resolutionStatus a owl:DatatypeProperty ;
+  rdfs:label "resolution status" ;
+  skos:definition "Whether a boundary definition has been resolved into a computable absolute value." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy sr: .
+
+sr:boundedByFootprint a owl:DatatypeProperty ;
+  rdfs:label "bounded by footprint" ;
+  skos:definition "Whether a reference surface is bounded by (contains) the feature's 2D footprint." ;
+  rdfs:domain sr:ReferenceSurface ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy sr: .
+
+sr:derivedGeometryStatus a owl:DatatypeProperty ;
+  rdfs:label "derived geometry status" ;
+  skos:definition "Whether derived geometry has been generated, e.g. notGenerated or solidGenerated." ;
+  rdfs:domain sr:DerivedGeometry ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy sr: .
+
+sr:geometryType a owl:DatatypeProperty ;
+  rdfs:label "geometry type" ;
+  skos:definition "The type of derived geometry produced, e.g. Solid." ;
+  rdfs:domain sr:DerivedGeometry ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy sr: .

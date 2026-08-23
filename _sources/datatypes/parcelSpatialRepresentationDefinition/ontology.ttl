@@ -1,0 +1,57 @@
+@prefix pvb:  <https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/> .
+@prefix sr:   <https://linked.data.gov.au/def/csdm/spatial-representation/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+pvb: a owl:Ontology ;
+  dct:title "Parcel Vertical Boundary Vocabulary" ;
+  dct:description "Extends the generic spatial-representation vertical boundary definition (sr:VerticalBoundaryDefinition, from https://linked.data.gov.au/def/csdm/spatial-representation/) with the jurisdictional source basis needed to trace a WA cadastral parcel's vertical boundary back to a title, plan, statute, Crown Grant, strata statement, or other approved jurisdictional rule. Describes only the properties this parcel profile owns; sr:VerticalBoundaryDefinition itself, and every other inherited element, keeps its meaning from the spatial-representation ontology and is not redescribed here. Vocabulary value (codelist/SKOS concept scheme) definitions are managed as a separate artefact and are out of scope for this ontology." ;
+  owl:versionInfo "0.1" ;
+  owl:imports sr: ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/2-5d-liminal/2-5d-liminal-overview.md> .
+
+#################################################################
+# Classes
+#################################################################
+
+pvb:JurisdictionalSourceBasis a owl:Class ;
+  rdfs:label "Jurisdictional Source Basis" ;
+  skos:definition "The legal or jurisdictional basis of a vertical boundary definition: the rule type, the source authority type, and the original source statement it was extracted from." ;
+  rdfs:isDefinedBy pvb: .
+
+#################################################################
+# Properties
+#################################################################
+
+pvb:sourceBasis a owl:ObjectProperty ;
+  rdfs:label "source basis" ;
+  skos:definition "Links a vertical boundary definition established by a jurisdictional rule to the jurisdictional source basis that supports it. Populated whenever the boundary definition's sr:definitionType is a jurisdictional boundary rule." ;
+  rdfs:domain sr:VerticalBoundaryDefinition ;
+  rdfs:range pvb:JurisdictionalSourceBasis ;
+  rdfs:isDefinedBy pvb: .
+
+pvb:ruleType a owl:DatatypeProperty ;
+  rdfs:label "rule type" ;
+  skos:definition "The specific kind of jurisdictional rule applied, e.g. a Crown Grant depth limit." ;
+  rdfs:domain pvb:JurisdictionalSourceBasis ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy pvb: .
+
+pvb:sourceAuthorityType a owl:DatatypeProperty ;
+  rdfs:label "source authority type" ;
+  skos:definition "The type of authority or instrument the rule derives from, e.g. a Crown Grant or a Crown Grant condition." ;
+  rdfs:domain pvb:JurisdictionalSourceBasis ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy pvb: .
+
+pvb:sourceStatement a owl:DatatypeProperty ;
+  rdfs:label "source statement" ;
+  skos:definition "The verbatim source wording the jurisdictional boundary rule was extracted from." ;
+  rdfs:domain pvb:JurisdictionalSourceBasis ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy pvb: ;
+  skos:closeMatch dct:description .

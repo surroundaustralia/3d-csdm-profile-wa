@@ -1,0 +1,43 @@
+{
+  "representationStatus": "representation-status:jb",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+  "verticalExtent": {
+    "status": "vertical-extent-status:ld",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:dur",
+      "definitionRef": "jurisdictional-limit-lower-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:und"
+    }
+  },
+  "computabilityStatus": "computability-status:rrs",
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "jurisdictional-limit-lower-1",
+      "definitionType": "vertical-definition-type:jur",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:off",
+      "value": 12.19,
+      "direction": "vertical-direction:blw",
+      "heightReference": "height-reference:gl",
+      "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
+      "sourceReference": "source-crown-grant-depth-limit-1",
+      "resolutionStatus": "requiresReferenceSurface",
+      "provenanceRef": "crown-grant-depth-limit-extraction-1",
+      "sourceBasis": {
+        "ruleType": "crownGrantDepthLimit",
+        "sourceAuthorityType": "CrownGrant",
+        "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+      }
+    }
+  ],
+  "referenceSurfaces": [],
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}
