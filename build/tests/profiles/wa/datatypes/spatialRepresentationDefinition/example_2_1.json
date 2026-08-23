@@ -1,0 +1,31 @@
+{
+  "representationStatus": "representation-status:2-5d",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "coordinateRepresentation": {
+    "coordinateDimension": 3,
+    "zValueRole": "coordinate-z-role:rs"
+  },
+  "verticalExtent": {
+    "status": "vertical-extent-status:na",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:na"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:na"
+    }
+  },
+  "computabilityStatus": "computability-status:nc",
+  "verticalBoundaryDefinitions": [],
+  "referenceSurfaces": [
+    {
+      "id": "surface-ground-1",
+      "surfaceType": "height-reference:gl",
+      "geometryLegalStatus": "geometry-legal-status:obs",
+      "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+      "boundedByFootprint": true
+    }
+  ],
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}

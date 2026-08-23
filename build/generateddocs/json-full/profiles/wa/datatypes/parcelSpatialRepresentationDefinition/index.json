@@ -1,0 +1,80 @@
+
+
+{
+  "itemIdentifier": "icsm.profiles.wa.datatypes.parcelSpatialRepresentationDefinition",
+  "name": "Parcel Spatial Representation Definition",
+  "highlighted": true,
+  "abstract": "The WA cadastral parcel-specific extension of the generic spatial representation definition pattern. Adds the jurisdictional source basis (rule type, source authority type, and verbatim source statement) needed to trace a parcel's vertical boundary back to a title, plan, statute, Crown Grant, strata statement, or other approved jurisdictional rule.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-21T00:00:00Z",
+  "itemClass": "schema",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "Summary of Western Australian Parcel Representation Examples (2.5D liminal proposal)",
+      "link": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/2-5d-liminal/2-5d-liminal-overview.md"
+    }
+  ],
+  "link": "https://github.com/icsm-au/3d-csdm-profile-wa",
+  "maturity": "development",
+  "scope": "profiles",
+  "tags": [
+    "wa",
+    "csdm",
+    "parcel",
+    "vertical",
+    "2.5d",
+    "3d",
+    "jurisdictional"
+  ],
+  "superBBlock": false,
+  "shaclShapes": {},
+  "dependsOn": [
+    "icsm.profiles.wa.datatypes.spatialRepresentationDefinition"
+  ],
+  "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/context.jsonld",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/ontology.ttl",
+  "dateOfLastChange": "2026-08-21",
+  "schema": {
+    "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/schema.yaml",
+    "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/schema.json"
+  },
+  "sourceSchema": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelSpatialRepresentationDefinition/schema.json",
+  "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelSpatialRepresentationDefinition/context.jsonld",
+  "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/resolvedProperties.json",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelSpatialRepresentationDefinition/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/",
+  "description": "## Purpose\n\nThis block extends\n[`icsm.profiles.wa.datatypes.spatialRepresentationDefinition`](../spatialRepresentationDefinition)\n(the generic 2D-to-3D interpretation pattern) with the one thing that is specific to a WA cadastral\nparcel rather than to 2D features in general: preserving the jurisdictional basis of a vertical\nboundary.\n\nA jurisdictional boundary rule (`definitionType` = `vertical-definition-type:jur`) is only trustworthy\nif its **rule type**, its **source authority**, its **original source statement**, and the **parcel it\napplies to** all remain explicit and traceable. This block adds `sourceBasis` to each entry of\n`verticalBoundaryDefinitions` to carry the first three; the parcel the rule applies to is already\nidentified by the parcel feature the `spatialRepresentationDefinitions` property is attached to (and,\nwhere the rule was inherited from a related parcel, by the WA profile's `supportingDocuments`\nprovenance).\n\nJurisdictional limits must never be assumed or applied silently \u2014 see the [source proposal's\ndiscussion of important distinctions](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/2-5d-liminal/2-5d-liminal-overview.md#important-distinctions).\n\n## Usage\n\nPopulate `sourceBasis` on a `verticalBoundaryDefinitions` entry whenever that entry's `definitionType`\nis a jurisdictional boundary rule. It is not applicable to relative or absolute height descriptions.\n\n## Vocabularies\n\nAs with the generic block this extends, vocabulary value definitions are managed as a separate\nartefact and are not defined here. `ruleType` and `sourceAuthorityType` are recorded as free text in\nthis version of the pattern \u2014 they are not yet backed by one of the WA CSDM managed vocabularies.\n",
+  "examples": [
+    {
+      "title": "Jurisdictionally bounded parcel",
+      "content": "A parcel whose lower vertical boundary is defined by a Crown Grant depth condition. The\njurisdictional rule type, source authority, and verbatim source statement are preserved in\n`sourceBasis` on the `jurisdictional-limit-lower-1` boundary definition, alongside the\n`sourceReference` and `provenanceRef` that trace it back to its Certificate of Title extraction.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/parcelSpatialRepresentationDefinition/examples/jurisdictionally-bounded.json",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/example_1_1.json",
+          "sizeBytes": 1435,
+          "code": "{\n  \"representationStatus\": \"representation-status:jb\",\n  \"geometryLegalStatus\": \"geometry-legal-status:a2d\",\n  \"coordinateRepresentation\": {\n    \"coordinateDimension\": 2,\n    \"zValueRole\": \"coordinate-z-role:absent\"\n  },\n  \"verticalExtent\": {\n    \"status\": \"vertical-extent-status:ld\",\n    \"lowerBoundary\": {\n      \"state\": \"vertical-boundary-state:dur\",\n      \"definitionRef\": \"jurisdictional-limit-lower-1\"\n    },\n    \"upperBoundary\": {\n      \"state\": \"vertical-boundary-state:und\"\n    }\n  },\n  \"computabilityStatus\": \"computability-status:rrs\",\n  \"verticalBoundaryDefinitions\": [\n    {\n      \"id\": \"jurisdictional-limit-lower-1\",\n      \"definitionType\": \"vertical-definition-type:jur\",\n      \"limitRole\": \"vertical-limit-role:ll\",\n      \"valueType\": \"vertical-value-type:off\",\n      \"value\": 12.19,\n      \"direction\": \"vertical-direction:blw\",\n      \"heightReference\": \"height-reference:gl\",\n      \"description\": \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\",\n      \"sourceReference\": \"source-crown-grant-depth-limit-1\",\n      \"resolutionStatus\": \"requiresReferenceSurface\",\n      \"provenanceRef\": \"crown-grant-depth-limit-extraction-1\",\n      \"sourceBasis\": {\n        \"ruleType\": \"crownGrantDepthLimit\",\n        \"sourceAuthorityType\": \"CrownGrant\",\n        \"sourceStatement\": \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\"\n      }\n    }\n  ],\n  \"referenceSurfaces\": [],\n  \"derivedGeometry\": {\n    \"status\": \"notGenerated\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/example_1_1.jsonld",
+          "sizeBytes": 1597,
+          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/context.jsonld\",\n  \"representationStatus\": \"representation-status:jb\",\n  \"geometryLegalStatus\": \"geometry-legal-status:a2d\",\n  \"coordinateRepresentation\": {\n    \"coordinateDimension\": 2,\n    \"zValueRole\": \"coordinate-z-role:absent\"\n  },\n  \"verticalExtent\": {\n    \"status\": \"vertical-extent-status:ld\",\n    \"lowerBoundary\": {\n      \"state\": \"vertical-boundary-state:dur\",\n      \"definitionRef\": \"jurisdictional-limit-lower-1\"\n    },\n    \"upperBoundary\": {\n      \"state\": \"vertical-boundary-state:und\"\n    }\n  },\n  \"computabilityStatus\": \"computability-status:rrs\",\n  \"verticalBoundaryDefinitions\": [\n    {\n      \"id\": \"jurisdictional-limit-lower-1\",\n      \"definitionType\": \"vertical-definition-type:jur\",\n      \"limitRole\": \"vertical-limit-role:ll\",\n      \"valueType\": \"vertical-value-type:off\",\n      \"value\": 12.19,\n      \"direction\": \"vertical-direction:blw\",\n      \"heightReference\": \"height-reference:gl\",\n      \"description\": \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\",\n      \"sourceReference\": \"source-crown-grant-depth-limit-1\",\n      \"resolutionStatus\": \"requiresReferenceSurface\",\n      \"provenanceRef\": \"crown-grant-depth-limit-extraction-1\",\n      \"sourceBasis\": {\n        \"ruleType\": \"crownGrantDepthLimit\",\n        \"sourceAuthorityType\": \"CrownGrant\",\n        \"sourceStatement\": \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\"\n      }\n    }\n  ],\n  \"referenceSurfaces\": [],\n  \"derivedGeometry\": {\n    \"status\": \"notGenerated\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/example_1_1.ttl",
+          "sizeBytes": 1859,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix pvb: <https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/> .\n@prefix sr: <https://linked.data.gov.au/def/csdm/spatial-representation/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] sr:computabilityStatus <computability-status:rrs> ;\n    sr:coordinateRepresentation [ sr:coordinateDimension 2 ;\n            sr:zValueRole <coordinate-z-role:absent> ] ;\n    sr:derivedGeometry [ sr:derivedGeometryStatus \"notGenerated\" ] ;\n    sr:geometryLegalStatus <geometry-legal-status:a2d> ;\n    sr:representationStatus <representation-status:jb> ;\n    sr:verticalBoundaryDefinitions [ dct:description \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\" ;\n            pvb:sourceBasis [ pvb:ruleType \"crownGrantDepthLimit\"^^xsd:string ;\n                    pvb:sourceAuthorityType \"CrownGrant\"^^xsd:string ;\n                    pvb:sourceStatement \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\"^^xsd:string ] ;\n            sr:definitionType <vertical-definition-type:jur> ;\n            sr:direction <vertical-direction:blw> ;\n            sr:heightReference <height-reference:gl> ;\n            sr:limitRole <vertical-limit-role:ll> ;\n            sr:provenanceRef <file:///github/workspace/crown-grant-depth-limit-extraction-1> ;\n            sr:resolutionStatus \"requiresReferenceSurface\" ;\n            sr:sourceReference <file:///github/workspace/source-crown-grant-depth-limit-1> ;\n            sr:value 12.19 ;\n            sr:valueType <vertical-value-type:off> ] ;\n    sr:verticalExtent [ sr:lowerBoundary [ sr:boundaryState <vertical-boundary-state:dur> ;\n                    sr:definitionRef <file:///github/workspace/jurisdictional-limit-lower-1> ] ;\n            sr:upperBoundary [ sr:boundaryState <vertical-boundary-state:und> ] ;\n            sr:verticalExtentStatus <vertical-extent-status:ld> ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: 'Parcel-specific extension of the generic spatial representation definition\n  pattern (icsm.profiles.wa.datatypes.spatialRepresentationDefinition). Adds `sourceBasis`\n  to each vertical boundary definition so that a jurisdictional boundary rule preserves\n  the rule type, the source authority, and the original source statement it was extracted\n  from. Jurisdictional limits must not be assumed or applied silently: `sourceBasis`\n  should be populated whenever `definitionType` is a jurisdictional boundary rule.\n  Vocabulary value definitions are managed as a separate artefact and are not defined\n  here.'\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/spatialRepresentationDefinition/schema.yaml\n- properties:\n    verticalBoundaryDefinitions:\n      type: array\n      items:\n        properties:\n          sourceBasis:\n            $ref: '#/$defs/jurisdictionalSourceBasis'\n            x-jsonld-id: https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/sourceBasis\n            x-jsonld-type: '@id'\n$defs:\n  jurisdictionalSourceBasis:\n    type: object\n    description: Preserves the legal or jurisdictional basis of a vertical boundary\n      definition established by a title, plan, statute, Crown Grant, strata statement,\n      or approved jurisdictional rule.\n    properties:\n      ruleType:\n        type: string\n        description: The specific kind of jurisdictional rule applied, e.g. `crownGrantDepthLimit`.\n        x-jsonld-id: https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/ruleType\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n      sourceAuthorityType:\n        type: string\n        description: The type of authority or instrument the rule derives from, e.g.\n          `CrownGrant` or `CrownGrantCondition`.\n        x-jsonld-id: https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/sourceAuthorityType\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n      sourceStatement:\n        type: string\n        description: The verbatim source wording the boundary rule was extracted from,\n          e.g. \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\".\n        x-jsonld-id: https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/sourceStatement\n        x-jsonld-type: http://www.w3.org/2001/XMLSchema#string\n    required:\n    - ruleType\n    - sourceAuthorityType\n    - sourceStatement\nx-jsonld-prefixes:\n  pvb: https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/\n  xsd: http://www.w3.org/2001/XMLSchema#\n",
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
+  "gitPath": "_sources/datatypes/parcelSpatialRepresentationDefinition"
+}

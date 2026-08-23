@@ -1,0 +1,77 @@
+{
+  "representationStatus": "representation-status:d3d",
+  "geometryLegalStatus": "geometry-legal-status:dfld",
+  "coordinateRepresentation": {
+    "coordinateDimension": 3,
+    "zValueRole": "coordinate-z-role:dbg"
+  },
+  "verticalExtent": {
+    "status": "vertical-extent-status:dfld",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:drv",
+      "definitionRef": "relative-limit-lower-1",
+      "geometryRef": "derived-lower-surface-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:drv",
+      "definitionRef": "relative-limit-upper-1",
+      "geometryRef": "derived-upper-surface-1"
+    }
+  },
+  "computabilityStatus": "computability-status:cd",
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "relative-limit-lower-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:off",
+      "value": 2,
+      "direction": "vertical-direction:blw",
+      "heightReference": "height-reference:gl",
+      "description": "2 metres below ground level",
+      "sourceReference": "source-height-description-1",
+      "resolutionStatus": "resolved",
+      "provenanceRef": "derived-3d-solid-generation-1"
+    },
+    {
+      "id": "relative-limit-upper-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ul",
+      "valueType": "vertical-value-type:off",
+      "value": 12,
+      "direction": "vertical-direction:abv",
+      "heightReference": "height-reference:gl",
+      "description": "12 metres above ground level",
+      "sourceReference": "source-height-description-2",
+      "resolutionStatus": "resolved",
+      "provenanceRef": "derived-3d-solid-generation-1"
+    }
+  ],
+  "referenceSurfaces": [
+    {
+      "id": "surface-ground-1",
+      "surfaceType": "height-reference:gl",
+      "geometryLegalStatus": "geometry-legal-status:obs",
+      "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+      "boundedByFootprint": true
+    }
+  ],
+  "derivedGeometry": {
+    "status": "solidGenerated",
+    "geometryType": "Solid",
+    "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
+    "inputFootprintRef": "parcel-footprint-1",
+    "inputDefinitionRefs": [
+      "relative-limit-lower-1",
+      "relative-limit-upper-1"
+    ],
+    "inputSurfaceRefs": [
+      "surface-ground-1"
+    ],
+    "sourceReference": [
+      "source-surface-offset-1",
+      "source-surface-offset-2"
+    ],
+    "provenanceRef": "surface-offset-extraction-1"
+  }
+}

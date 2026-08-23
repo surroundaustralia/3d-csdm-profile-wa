@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.wa-mining - WA Next Gen Cadastre Mining Profile
-Generated 2026-08-13T23:18:00.936681+00:00
+Generated 2026-08-23T23:38:39.772005+00:00
 === Files ===
 Using examples/example.json from examples
 JSON-LD context is present - uplifting
@@ -40,45 +40,22 @@ Validation result for profiles/wa-pointnames-shacl.ttl:
   Conforms: True
   
 Focus nodes for profiles/wa-pointnames-shacl.ttl:
- - Shape wap:testLabelPartsPresent: <https://www.wa-example.com/features/14005391>/ns3:name,<https://www.wa-example.com/features/15432571>/ns3:name,<https://www.wa-example.com/features/14005400>/ns3:name,<https://www.wa-example.com/features/14005401>/ns3:name
-
-Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:n3c871d5f869f4819b3171af3f5f31affb1: <https://www.wa-example.com/features/14005391>/ns3:name,<https://www.wa-example.com/features/15432571>/ns3:name,<https://www.wa-example.com/features/14005400>/ns3:name,<https://www.wa-example.com/features/14005401>/ns3:name
+ - Shape wap:testLabelPartsPresent: <https://www.wa-example.com/features/15432571>/ns1:name,<https://www.wa-example.com/features/14005400>/ns1:name,<https://www.wa-example.com/features/14005391>/ns1:name,<https://www.wa-example.com/features/14005401>/ns1:name
 
 Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
+ - Shape ex:NamePartShape: <https://www.wa-example.com/features/15432571>/ns1:name/dcterms:hasPart,<https://www.wa-example.com/features/15432571>/ns1:name/dcterms:hasPart
  - Shape ex:NamedObjectShape: *none*
- - Shape ex:NamePartShape: <https://www.wa-example.com/features/15432571>/ns3:name/dcterms:hasPart,<https://www.wa-example.com/features/15432571>/ns3:name/dcterms:hasPart
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
- - Shape :annotate-madeBySensor: <https://www.wa-example.com/features/vectorObservations>
- - Shape :testInCollectionOrMember-madeBySensor: <https://www.wa-example.com/features/vectorObservations>/sosa:hasMember
- - Shape :testInCollectionOrMember-procedure: <https://www.wa-example.com/features/vectorObservations>
- - Shape :bindSurveyObservation-angle-and-distance-types: <https://www.wa-example.com/features/vectorObservations>
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testSurveyMetadata: <https://www.wa-example.com/features/Western-Australia-Example-1>
- - Shape :testDistanceType: *none*
- - Shape :testAngleType: *none*
- - Shape :testCompoundCRS: *none*
- - Shape :testVHD: *none*
- - Shape :testCRS: <https://www.wa-example.com/features/Western-Australia-Example-1>
+Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
+ - Shape _:nfe91a1c8703240c1ba893f01aeafa755b1: <https://www.wa-example.com/features/15432571>/ns1:name,<https://www.wa-example.com/features/14005400>/ns1:name,<https://www.wa-example.com/features/14005391>/ns1:name,<https://www.wa-example.com/features/14005401>/ns1:name
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
@@ -95,35 +72,49 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
  - Shape :referencedCSDs-present: *none*
 
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :bindSurveyObservation-angle-and-distance-types: <https://www.wa-example.com/features/vectorObservations>
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :annotate-madeBySensor: <https://www.wa-example.com/features/vectorObservations>
+ - Shape :testInCollectionOrMember-madeBySensor: <https://www.wa-example.com/features/vectorObservations>/sosa:hasMember
+ - Shape :testInCollectionOrMember-procedure: <https://www.wa-example.com/features/vectorObservations>
+
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
  - Shape jcl:testBoundVocab-vector-purpose: *none*
- - Shape jcl:testBoundVocab-condition: <https://www.wa-example.com/features/15432571>/surv:monumentedBy,<https://www.wa-example.com/features/14005400>/surv:monumentedBy,<https://www.wa-example.com/features/14005401>/surv:monumentedBy,<https://www.wa-example.com/features/14005391>/surv:monumentedBy
- - Shape jcl:testBoundVocab-form: <https://www.wa-example.com/features/15432571>/surv:monumentedBy,<https://www.wa-example.com/features/14005400>/surv:monumentedBy,<https://www.wa-example.com/features/14005401>/surv:monumentedBy,<https://www.wa-example.com/features/14005391>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-state: <https://www.wa-example.com/features/14005400>/surv:monumentedBy,<https://www.wa-example.com/features/15432571>/surv:monumentedBy,<https://www.wa-example.com/features/14005401>/surv:monumentedBy,<https://www.wa-example.com/features/14005391>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-form: <https://www.wa-example.com/features/14005400>/surv:monumentedBy,<https://www.wa-example.com/features/15432571>/surv:monumentedBy,<https://www.wa-example.com/features/14005401>/surv:monumentedBy,<https://www.wa-example.com/features/14005391>/surv:monumentedBy
  - Shape jcl:testBoundVocab-surveypoint-purpose: <https://www.wa-example.com/features/14005400>,<https://www.wa-example.com/features/14005391>,<https://www.wa-example.com/features/15432571>,<https://www.wa-example.com/features/14005401>
- - Shape jcl:testBoundVocab-state: <https://www.wa-example.com/features/15432571>/surv:monumentedBy,<https://www.wa-example.com/features/14005400>/surv:monumentedBy,<https://www.wa-example.com/features/14005401>/surv:monumentedBy,<https://www.wa-example.com/features/14005391>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: <https://www.wa-example.com/features/14005400>/surv:monumentedBy,<https://www.wa-example.com/features/15432571>/surv:monumentedBy,<https://www.wa-example.com/features/14005401>/surv:monumentedBy,<https://www.wa-example.com/features/14005391>/surv:monumentedBy
  - Shape jcl:testBoundVocab-pt-quality-class: <https://www.wa-example.com/features/14005400>,<https://www.wa-example.com/features/14005391>,<https://www.wa-example.com/features/15432571>,<https://www.wa-example.com/features/14005401>
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :Apellation: *none*
- - Shape :ParcelType: *none*
- - Shape :PropertyUnit: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :Parcel: *none*
- - Shape :LandInterest: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :ParcelState: *none*
- - Shape :EstateParcel: *none*
- - Shape :ParcelQualityClass: *none*
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+ - Shape :testVHD: *none*
+ - Shape :testAngleType: *none*
+ - Shape :testCompoundCRS: *none*
+ - Shape :testCRS: <https://www.wa-example.com/features/Western-Australia-Example-1>
+ - Shape :testSurveyMetadata: <https://www.wa-example.com/features/Western-Australia-Example-1>
+ - Shape :testDistanceType: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+ - Shape container:CSD: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD-seeAlso: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
   Validation Report
@@ -132,55 +123,64 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
  - Shape :testFOIexists: <https://www.wa-example.com/features/vectorObservations>/sosa:hasMember
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
- - Shape container:CSD-seeAlso: *none*
- - Shape container:CSD: *none*
-
-Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n9be26457533c4a138cd9e10d71c39c37b1: <https://www.wa-example.com/features/14005391>/geojson:geometry,<https://www.wa-example.com/features/14005401>/dcterms:spatial,<https://www.wa-example.com/features/14005400>/geojson:geometry,<https://www.wa-example.com/features/15432571>/dcterms:spatial,<https://www.wa-example.com/features/14005401>/geojson:geometry,<https://www.wa-example.com/features/15432571>/geojson:geometry,<https://www.wa-example.com/features/14005400>/dcterms:spatial,<https://www.wa-example.com/features/14005391>/dcterms:spatial
- - Shape _:n9be26457533c4a138cd9e10d71c39c37b3: <https://www.wa-example.com/features/15432571>/geojson:geometry,<https://www.wa-example.com/features/14005401>/geojson:geometry,<https://www.wa-example.com/features/14005391>/geojson:geometry,<https://www.wa-example.com/features/14005400>/geojson:geometry
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
+ - Shape :ParcelType: *none*
+ - Shape :ParcelAggregate: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :Apellation: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelQualityClass: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :EstateParcel: *none*
+ - Shape :Parcel: *none*
+ - Shape :ParcelState: *none*
+ - Shape :PrimaryParcel: *none*
 
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape toporules:testTopoDirectedReferencesExist: *none*
  - Shape toporules:testTopoReferencesExist: <https://www.wa-example.com/features/17251502>/geojson:topology,<https://www.wa-example.com/features/17251503>/geojson:topology
- - Shape toporules:testTopoEdgesReferencePoints: <https://www.wa-example.com/features/17251502>/geojson:topology,<https://www.wa-example.com/features/17251503>/geojson:topology
  - Shape toporules:testTopoLinesReferencePoints: <https://www.wa-example.com/features/17251502>/geojson:topology,<https://www.wa-example.com/features/17251503>/geojson:topology
+ - Shape toporules:testTopoDirectedReferencesExist: *none*
+ - Shape toporules:testTopoEdgesReferencePoints: <https://www.wa-example.com/features/17251502>/geojson:topology,<https://www.wa-example.com/features/17251503>/geojson:topology
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:nf4d4b98a1f8d48ddbcf41712cde80b95b3: <https://www.wa-example.com/features/14005391>/geojson:geometry,<https://www.wa-example.com/features/14005400>/geojson:geometry,<https://www.wa-example.com/features/15432571>/geojson:geometry,<https://www.wa-example.com/features/14005401>/geojson:geometry
+ - Shape _:nf4d4b98a1f8d48ddbcf41712cde80b95b1: <https://www.wa-example.com/features/14005391>/dcterms:spatial,<https://www.wa-example.com/features/14005400>/geojson:geometry,<https://www.wa-example.com/features/15432571>/geojson:geometry,<https://www.wa-example.com/features/14005401>/geojson:geometry,<https://www.wa-example.com/features/14005401>/dcterms:spatial,<https://www.wa-example.com/features/14005400>/dcterms:spatial,<https://www.wa-example.com/features/14005391>/geojson:geometry,<https://www.wa-example.com/features/15432571>/dcterms:spatial
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: <https://www.wa-example.com/features/14005400>,<https://www.wa-example.com/features/17251502>,<https://www.wa-example.com/features/14005401>,<https://www.wa-example.com/features/vectorObservations>/sosa:hasMember,<https://www.wa-example.com/features/15432571>,<https://www.wa-example.com/features/14005391>,<https://www.wa-example.com/features/17251503>
+ - Shape geojson:FeatureShape: <https://www.wa-example.com/features/17251502>,<https://www.wa-example.com/features/vectorObservations>/sosa:hasMember,<https://www.wa-example.com/features/14005391>,<https://www.wa-example.com/features/15432571>,<https://www.wa-example.com/features/14005400>,<https://www.wa-example.com/features/17251503>,<https://www.wa-example.com/features/14005401>
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureCollectionShape: <https://www.wa-example.com/features/WAMarks>,<https://www.wa-example.com/features/observedVectors>
+ - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:FeatureCollectionShape: <https://www.wa-example.com/features/WAMarks>,<https://www.wa-example.com/features/observedVectors>
+ - Shape geojson:LinkShape: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -194,15 +194,15 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <https://www.wa-example.com/features/vectorObservations>
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <https://www.wa-example.com/features/vectorObservations>/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <https://www.wa-example.com/features/vectorObservations>
  - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <https://www.wa-example.com/features/vectorObservations>
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <https://www.wa-example.com/features/vectorObservations>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <https://www.wa-example.com/features/vectorObservations>
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
 
 === End SHACL ===
 

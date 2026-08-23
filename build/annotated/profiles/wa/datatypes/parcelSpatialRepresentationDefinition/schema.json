@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Parcel-specific extension of the generic spatial representation definition pattern (icsm.profiles.wa.datatypes.spatialRepresentationDefinition). Adds `sourceBasis` to each vertical boundary definition so that a jurisdictional boundary rule preserves the rule type, the source authority, and the original source statement it was extracted from. Jurisdictional limits must not be assumed or applied silently: `sourceBasis` should be populated whenever `definitionType` is a jurisdictional boundary rule. Vocabulary value definitions are managed as a separate artefact and are not defined here.",
+  "allOf": [
+    {
+      "$ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/spatialRepresentationDefinition/schema.json"
+    },
+    {
+      "properties": {
+        "verticalBoundaryDefinitions": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "sourceBasis": {
+                "$ref": "#/$defs/jurisdictionalSourceBasis",
+                "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/sourceBasis",
+                "x-jsonld-type": "@id"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "jurisdictionalSourceBasis": {
+      "type": "object",
+      "description": "Preserves the legal or jurisdictional basis of a vertical boundary definition established by a title, plan, statute, Crown Grant, strata statement, or approved jurisdictional rule.",
+      "properties": {
+        "ruleType": {
+          "type": "string",
+          "description": "The specific kind of jurisdictional rule applied, e.g. `crownGrantDepthLimit`.",
+          "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/ruleType",
+          "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "sourceAuthorityType": {
+          "type": "string",
+          "description": "The type of authority or instrument the rule derives from, e.g. `CrownGrant` or `CrownGrantCondition`.",
+          "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/sourceAuthorityType",
+          "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "sourceStatement": {
+          "type": "string",
+          "description": "The verbatim source wording the boundary rule was extracted from, e.g. \"LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND\".",
+          "x-jsonld-id": "https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/sourceStatement",
+          "x-jsonld-type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "required": [
+        "ruleType",
+        "sourceAuthorityType",
+        "sourceStatement"
+      ]
+    }
+  },
+  "x-jsonld-prefixes": {
+    "pvb": "https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

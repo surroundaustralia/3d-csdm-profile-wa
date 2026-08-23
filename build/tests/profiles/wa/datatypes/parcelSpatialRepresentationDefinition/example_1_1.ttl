@@ -1,0 +1,29 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pvb: <https://linked.data.gov.au/def/csdm/parcel-vertical-boundary/> .
+@prefix sr: <https://linked.data.gov.au/def/csdm/spatial-representation/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] sr:computabilityStatus <computability-status:rrs> ;
+    sr:coordinateRepresentation [ sr:coordinateDimension 2 ;
+            sr:zValueRole <coordinate-z-role:absent> ] ;
+    sr:derivedGeometry [ sr:derivedGeometryStatus "notGenerated" ] ;
+    sr:geometryLegalStatus <geometry-legal-status:a2d> ;
+    sr:representationStatus <representation-status:jb> ;
+    sr:verticalBoundaryDefinitions [ dct:description "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND" ;
+            pvb:sourceBasis [ pvb:ruleType "crownGrantDepthLimit"^^xsd:string ;
+                    pvb:sourceAuthorityType "CrownGrant"^^xsd:string ;
+                    pvb:sourceStatement "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"^^xsd:string ] ;
+            sr:definitionType <vertical-definition-type:jur> ;
+            sr:direction <vertical-direction:blw> ;
+            sr:heightReference <height-reference:gl> ;
+            sr:limitRole <vertical-limit-role:ll> ;
+            sr:provenanceRef <file:///github/workspace/crown-grant-depth-limit-extraction-1> ;
+            sr:resolutionStatus "requiresReferenceSurface" ;
+            sr:sourceReference <file:///github/workspace/source-crown-grant-depth-limit-1> ;
+            sr:value 12.19 ;
+            sr:valueType <vertical-value-type:off> ] ;
+    sr:verticalExtent [ sr:lowerBoundary [ sr:boundaryState <vertical-boundary-state:dur> ;
+                    sr:definitionRef <file:///github/workspace/jurisdictional-limit-lower-1> ] ;
+            sr:upperBoundary [ sr:boundaryState <vertical-boundary-state:und> ] ;
+            sr:verticalExtentStatus <vertical-extent-status:ld> ] .
+

@@ -1,0 +1,337 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Generic properties describing how a 2D feature's geometry is interpreted
+  with respect to the vertical dimension. A feature remains an authoritative 2D representation
+  unless a legal vertical extent is explicitly described, supported by an authoritative
+  source, and, where a 3D solid is created, capable of being computed and validated.
+  This block is deliberately generic (not parcel-specific) so it can be reused by
+  any 2D feature type gaining a 2.5D or 3D representation. Vocabulary value definitions
+  (the terms referenced by the `*Status`, `*Role`, `*Type` and `direction`/`zValueRole`
+  properties below) are managed as a separate artefact and are not defined here.
+type: object
+properties:
+  representationStatus:
+    type: string
+    description: 'How the feature''s spatial representation currently stands: 2D footprint
+      only, 2.5D (footprint plus reference surface), height-described, jurisdictionally
+      bounded, or derived 3D. A vocabulary-referencing value (e.g. `representation-status:2d`).'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/representationStatus
+    x-jsonld-type: '@vocab'
+  geometryLegalStatus:
+    type: string
+    description: 'Which geometry is legally authoritative for the feature: the 2D
+      footprint, an observed surface, or geometry derived from a legal description.
+      A vocabulary-referencing value (e.g. `geometry-legal-status:a2d`).'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/geometryLegalStatus
+    x-jsonld-type: '@vocab'
+  coordinateRepresentation:
+    $ref: '#/$defs/coordinateRepresentation'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/coordinateRepresentation
+    x-jsonld-type: '@id'
+  verticalExtent:
+    $ref: '#/$defs/verticalExtent'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/verticalExtent
+    x-jsonld-type: '@id'
+  computabilityStatus:
+    type: string
+    description: Whether coordinate boundaries or geometry can be calculated from
+      the information currently available. A vocabulary-referencing value (e.g. `computability-status:nc`).
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/computabilityStatus
+    x-jsonld-type: '@vocab'
+  verticalBoundaryDefinitions:
+    type: array
+    description: "The source definitions (relative offset, absolute datum value, or
+      jurisdictional rule) that establish or describe a vertical boundary. Kept separate
+      from any computed/derived geometry \u2014 see `derivedGeometry`."
+    items:
+      $ref: '#/$defs/verticalBoundaryDefinition'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/verticalBoundaryDefinitions
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@set'
+  referenceSurfaces:
+    type: array
+    description: Reference surfaces (terrain, ground, floor, or other surface) that
+      provide vertical context for the feature. A reference surface supports analysis
+      or visualisation; it is not by itself a legal vertical boundary.
+    items:
+      $ref: '#/$defs/referenceSurface'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/referenceSurfaces
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@set'
+  derivedGeometry:
+    $ref: '#/$defs/derivedGeometry'
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/derivedGeometry
+    x-jsonld-type: '@id'
+required:
+- representationStatus
+- geometryLegalStatus
+- coordinateRepresentation
+- verticalExtent
+- computabilityStatus
+- derivedGeometry
+$defs:
+  coordinateRepresentation:
+    type: object
+    description: Separates the dimensionality of the stored coordinates from the legal
+      dimensionality of the feature. A feature can be legally 2D (`geometryLegalStatus`
+      authoritative-2D) while its coordinates carry a contextual third ordinate.
+    properties:
+      coordinateDimension:
+        type: integer
+        enum:
+        - 2
+        - 3
+        description: The number of ordinates carried by the feature's coordinates.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/coordinateDimension
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#integer
+      zValueRole:
+        type: string
+        description: 'What a third coordinate ordinate, if present, means: absent,
+          a contextual geometry height, a reference-surface height, or a derived-boundary
+          height. A vocabulary-referencing value (e.g. `coordinate-z-role:absent`).'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/zValueRole
+        x-jsonld-type: '@vocab'
+    required:
+    - coordinateDimension
+    - zValueRole
+  verticalExtent:
+    type: object
+    description: The overall legal or source state of the feature's vertical extent,
+      with the lower and upper boundary modelled independently so that each direction
+      can carry its own state.
+    properties:
+      status:
+        type: string
+        description: The overall legal or source state of the vertical extent. A vocabulary-referencing
+          value (e.g. `vertical-extent-status:ud`).
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/verticalExtentStatus
+        x-jsonld-type: '@vocab'
+      lowerBoundary:
+        $ref: '#/$defs/verticalBoundary'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/lowerBoundary
+        x-jsonld-type: '@id'
+      upperBoundary:
+        $ref: '#/$defs/verticalBoundary'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/upperBoundary
+        x-jsonld-type: '@id'
+      sourceReference:
+        type: string
+        description: Identifier of the supporting source document, where the extent's
+          status (e.g. a positively established unconstrained extent) is itself sourced.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/sourceReference
+        x-jsonld-type: '@id'
+    required:
+    - status
+    - lowerBoundary
+    - upperBoundary
+  verticalBoundary:
+    type: object
+    description: The state of one vertical boundary (lower or upper) of the feature.
+    properties:
+      state:
+        type: string
+        description: 'The state of this boundary: undefined, not applicable, unconstrained,
+          defined but unresolved, defined, or derived. A vocabulary-referencing value
+          (e.g. `vertical-boundary-state:und`).'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/boundaryState
+        x-jsonld-type: '@vocab'
+      definitionRef:
+        type: string
+        description: Identifier of the entry in `verticalBoundaryDefinitions` that
+          establishes this boundary, when `state` indicates a source definition exists.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/definitionRef
+        x-jsonld-type: '@id'
+      geometryRef:
+        type: string
+        description: Identifier of the derived boundary geometry (e.g. an upper or
+          lower surface) realising this boundary, when `state` is derived.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/geometryRef
+        x-jsonld-type: '@id'
+    required:
+    - state
+  verticalBoundaryDefinition:
+    type: object
+    description: 'A single source definition of a vertical boundary: a relative offset,
+      an absolute datum value, or a jurisdictional rule. The `definitionType` discriminates
+      which kind of definition this is.'
+    properties:
+      id:
+        type: string
+        description: Local identifier for this definition, referenced by `verticalExtent.lowerBoundary.definitionRef`
+          / `upperBoundary.definitionRef` and by `derivedGeometry.inputDefinitionRefs`.
+      definitionType:
+        type: string
+        description: 'The kind of source definition: relative height description,
+          absolute height description, jurisdictional boundary rule, or geometry boundary
+          reference. A vocabulary-referencing value (e.g. `vertical-definition-type:rel`).'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/definitionType
+        x-jsonld-type: '@vocab'
+      limitRole:
+        type: string
+        description: Whether this definition establishes an upper or lower limit.
+          A vocabulary-referencing value (e.g. `vertical-limit-role:ll`).
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/limitRole
+        x-jsonld-type: '@vocab'
+      valueType:
+        type: string
+        description: 'How `value` is expressed: as an offset from a reference, or
+          as an absolute height/depth. A vocabulary-referencing value (e.g. `vertical-value-type:off`).'
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/valueType
+        x-jsonld-type: '@vocab'
+      value:
+        type: number
+        description: The numeric height, depth, or offset value.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/value
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#decimal
+      direction:
+        type: string
+        description: The direction in which `value` is expressed (above or below the
+          reference), where relevant. A vocabulary-referencing value (e.g. `vertical-direction:blw`).
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/direction
+        x-jsonld-type: '@vocab'
+      heightReference:
+        type: string
+        description: The surface, level, object, plane or datum that `value` is relative
+          to. A vocabulary-referencing value (e.g. `height-reference:gl`).
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/heightReference
+        x-jsonld-type: '@vocab'
+      description:
+        type: string
+        description: Human-readable description or verbatim source wording for this
+          boundary definition.
+        x-jsonld-id: http://purl.org/dc/terms/description
+      comparisonOperator:
+        type: string
+        description: The comparison implied by an absolute value, e.g. `lessThanOrEqual`
+          or `greaterThanOrEqual`.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/comparisonOperator
+      resolutionStatus:
+        type: string
+        description: Whether this definition has been resolved into a computable absolute
+          value, e.g. `requiresReferenceSurface`, `absoluteLimitAvailable`, or `resolved`.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/resolutionStatus
+      sourceReference:
+        type: string
+        description: Identifier of the supporting source document for this definition.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/sourceReference
+        x-jsonld-type: '@id'
+      provenanceRef:
+        type: string
+        description: Identifier of the PROV activity that extracted or derived this
+          definition.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/provenanceRef
+        x-jsonld-type: '@id'
+    required:
+    - id
+    - definitionType
+    - limitRole
+  referenceSurface:
+    type: object
+    description: A terrain, ground, floor, or other surface providing vertical context.
+      A reference surface is supporting geometry; it is not automatically an upper
+      or lower legal boundary.
+    properties:
+      id:
+        type: string
+        description: Local identifier for this reference surface, referenced by `derivedGeometry.inputSurfaceRefs`.
+      surfaceType:
+        type: string
+        description: What the surface represents, e.g. ground level. A vocabulary-referencing
+          value (e.g. `height-reference:gl`).
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/surfaceType
+        x-jsonld-type: '@vocab'
+      geometryLegalStatus:
+        type: string
+        description: The legal/analytical status of the surface geometry itself. A
+          vocabulary-referencing value (e.g. `geometry-legal-status:obs`).
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/geometryLegalStatus
+        x-jsonld-type: '@vocab'
+      ref:
+        type: string
+        description: Reference to the surface's geometry, e.g. a surface feature collection
+          identifier.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/surfaceGeometryRef
+        x-jsonld-type: '@id'
+      boundedByFootprint:
+        type: boolean
+        description: Whether the surface is bounded by (contains) the feature's 2D
+          footprint.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/boundedByFootprint
+        x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean
+    required:
+    - id
+    - surfaceType
+    - ref
+  derivedGeometry:
+    type: object
+    description: The computational result of converting sufficient source information
+      (footprint, vertical boundary definitions, reference surfaces) into derived
+      geometry, e.g. a closed 3D solid. Kept separate from the source definitions,
+      which remain in `verticalBoundaryDefinitions`.
+    properties:
+      status:
+        type: string
+        description: Whether derived geometry has been generated, e.g. `notGenerated`
+          or `solidGenerated`.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/derivedGeometryStatus
+      geometryType:
+        type: string
+        description: The type of derived geometry produced, e.g. `Solid`.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/geometryType
+      solidRef:
+        type: string
+        description: Reference to the generated solid geometry.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/solidRef
+        x-jsonld-type: '@id'
+      inputFootprintRef:
+        type: string
+        description: Reference to the 2D footprint used as an input to the derivation.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/inputFootprintRef
+        x-jsonld-type: '@id'
+      inputDefinitionRefs:
+        type: array
+        description: References to the `verticalBoundaryDefinitions` entries used
+          as inputs to the derivation.
+        items:
+          type: string
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/inputDefinitionRefs
+        x-jsonld-type: '@id'
+        x-jsonld-container: '@set'
+      inputSurfaceRefs:
+        type: array
+        description: References to the `referenceSurfaces` entries used as inputs
+          to the derivation.
+        items:
+          type: string
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/inputSurfaceRefs
+        x-jsonld-type: '@id'
+        x-jsonld-container: '@set'
+      sourceReference:
+        description: Identifier(s) of the supporting source document(s) for the derivation.
+        oneOf:
+        - type: string
+        - type: array
+          items:
+            type: string
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/sourceReference
+        x-jsonld-type: '@id'
+      provenanceRef:
+        type: string
+        description: Identifier of the PROV activity that generated this derived geometry.
+        x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/provenanceRef
+        x-jsonld-type: '@id'
+    required:
+    - status
+x-jsonld-extra-terms:
+  state:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/boundaryState
+    x-jsonld-type: '@vocab'
+  definitionRef:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/definitionRef
+    x-jsonld-type: '@id'
+  geometryRef:
+    x-jsonld-id: https://linked.data.gov.au/def/csdm/spatial-representation/geometryRef
+    x-jsonld-type: '@id'
+x-jsonld-prefixes:
+  sr: https://linked.data.gov.au/def/csdm/spatial-representation/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  dct: http://purl.org/dc/terms/

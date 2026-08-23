@@ -1592,6 +1592,18 @@
       "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
+    "state": {
+      "@id": "csdm:spatial-representation/boundaryState",
+      "@type": "@vocab"
+    },
+    "definitionRef": {
+      "@id": "csdm:spatial-representation/definitionRef",
+      "@type": "@id"
+    },
+    "geometryRef": {
+      "@id": "csdm:spatial-representation/geometryRef",
+      "@type": "@id"
+    },
     "container": "csdm:container/",
     "sdo": "https://schema.org/",
     "csd": "csdm:csd/",
@@ -1657,6 +1669,20 @@
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "representation-status": "csdm:representation-status/",
+    "geometry-legal-status": "csdm:geometry-legal-status/",
+    "vertical-extent-status": "csdm:vertical-extent-status/",
+    "computability-status": "csdm:computability-status/",
+    "coordinate-z-role": "csdm:coordinate-z-role/",
+    "vertical-boundary-state": "csdm:vertical-boundary-state/",
+    "vertical-definition-type": "csdm:vertical-definition-type/",
+    "vertical-limit-role": "csdm:vertical-limit-role/",
+    "vertical-value-type": "csdm:vertical-value-type/",
+    "vertical-direction": "csdm:vertical-direction/",
+    "height-reference": "csdm:height-reference/",
+    "uuid": "urn:uuid:",
+    "sr": "csdm:spatial-representation/",
+    "pvb": "csdm:parcel-vertical-boundary/",
     "@version": 1.1
   }
 }

@@ -1,0 +1,17 @@
+@prefix sr: <https://linked.data.gov.au/def/csdm/spatial-representation/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] sr:computabilityStatus <computability-status:nc> ;
+    sr:coordinateRepresentation [ sr:coordinateDimension 3 ;
+            sr:zValueRole <coordinate-z-role:rs> ] ;
+    sr:derivedGeometry [ sr:derivedGeometryStatus "notGenerated" ] ;
+    sr:geometryLegalStatus <geometry-legal-status:a2d> ;
+    sr:referenceSurfaces [ sr:boundedByFootprint true ;
+            sr:geometryLegalStatus <geometry-legal-status:obs> ;
+            sr:surfaceGeometryRef <uuid:ca9c4381-9422-4bbb-8f05-c8a835831933> ;
+            sr:surfaceType <height-reference:gl> ] ;
+    sr:representationStatus <representation-status:2-5d> ;
+    sr:verticalExtent [ sr:lowerBoundary [ sr:boundaryState <vertical-boundary-state:na> ] ;
+            sr:upperBoundary [ sr:boundaryState <vertical-boundary-state:na> ] ;
+            sr:verticalExtentStatus <vertical-extent-status:na> ] .
+

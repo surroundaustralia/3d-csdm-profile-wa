@@ -14,6 +14,18 @@ Profiles are defined in a consistent, machine-readable and validatable way using
 
 ## Building Blocks
 
+### `icsm.profiles.wa.datatypes.spatialRepresentationDefinition` — Spatial Representation Definition
+
+**Type:** schema
+
+Generic, reusable properties that record how a 2D feature's geometry is being interpreted with respect to the vertical dimension: whether the representation is a plain 2D footprint, has contextual z-values, is bounded by a reference surface, carries a legally defined vertical boundary, or has a derived 3D solid — and how confidently that interpretation can be computed. Not specific to parcels; reusable by any 2D feature type gaining a 2.5D or 3D representation.
+
+### `icsm.profiles.wa.datatypes.parcelSpatialRepresentationDefinition` — Parcel Spatial Representation Definition
+
+**Type:** schema
+
+The WA cadastral parcel-specific extension of the generic spatial representation definition pattern. Adds the jurisdictional source basis (rule type, source authority type, and verbatim source statement) needed to trace a parcel's vertical boundary back to a title, plan, statute, Crown Grant, strata statement, or other approved jurisdictional rule.
+
 ### `icsm.profiles.wa.datatypes.waAppellationNamespaces` — WA Ref Namespaces
 
 **Type:** schema

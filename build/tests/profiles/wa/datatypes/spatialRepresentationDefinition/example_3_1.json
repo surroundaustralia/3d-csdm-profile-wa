@@ -1,0 +1,52 @@
+{
+  "representationStatus": "representation-status:hd",
+  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "coordinateRepresentation": {
+    "coordinateDimension": 2,
+    "zValueRole": "coordinate-z-role:absent"
+  },
+  "verticalExtent": {
+    "status": "vertical-extent-status:rr",
+    "lowerBoundary": {
+      "state": "vertical-boundary-state:dur",
+      "definitionRef": "relative-limit-lower-1"
+    },
+    "upperBoundary": {
+      "state": "vertical-boundary-state:dur",
+      "definitionRef": "relative-limit-upper-1"
+    }
+  },
+  "computabilityStatus": "computability-status:rrs",
+  "verticalBoundaryDefinitions": [
+    {
+      "id": "relative-limit-lower-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ll",
+      "valueType": "vertical-value-type:off",
+      "value": 2,
+      "direction": "vertical-direction:blw",
+      "heightReference": "height-reference:gl",
+      "description": "2 metres below ground level",
+      "sourceReference": "source-height-description-1",
+      "resolutionStatus": "requiresReferenceSurface",
+      "provenanceRef": "height-description-extraction-1"
+    },
+    {
+      "id": "relative-limit-upper-1",
+      "definitionType": "vertical-definition-type:rel",
+      "limitRole": "vertical-limit-role:ul",
+      "valueType": "vertical-value-type:off",
+      "value": 12,
+      "direction": "vertical-direction:abv",
+      "heightReference": "height-reference:gl",
+      "description": "12 metres above ground level",
+      "sourceReference": "source-height-description-2",
+      "resolutionStatus": "requiresReferenceSurface",
+      "provenanceRef": "height-description-extraction-1"
+    }
+  ],
+  "referenceSurfaces": [],
+  "derivedGeometry": {
+    "status": "notGenerated"
+  }
+}

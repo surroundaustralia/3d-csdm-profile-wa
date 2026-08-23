@@ -1,0 +1,51 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sr: <https://linked.data.gov.au/def/csdm/spatial-representation/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] sr:computabilityStatus <computability-status:cd> ;
+    sr:coordinateRepresentation [ sr:coordinateDimension 3 ;
+            sr:zValueRole <coordinate-z-role:dbg> ] ;
+    sr:derivedGeometry [ sr:derivedGeometryStatus "solidGenerated" ;
+            sr:geometryType "Solid" ;
+            sr:inputDefinitionRefs <file:///github/workspace/relative-limit-lower-1>,
+                <file:///github/workspace/relative-limit-upper-1> ;
+            sr:inputFootprintRef <file:///github/workspace/parcel-footprint-1> ;
+            sr:inputSurfaceRefs <file:///github/workspace/surface-ground-1> ;
+            sr:provenanceRef <file:///github/workspace/surface-offset-extraction-1> ;
+            sr:solidRef <uuid:fbefade9-9cda-4826-9327-3ba8796191f5> ;
+            sr:sourceReference <file:///github/workspace/source-surface-offset-1>,
+                <file:///github/workspace/source-surface-offset-2> ] ;
+    sr:geometryLegalStatus <geometry-legal-status:dfld> ;
+    sr:referenceSurfaces [ sr:boundedByFootprint true ;
+            sr:geometryLegalStatus <geometry-legal-status:obs> ;
+            sr:surfaceGeometryRef <uuid:ca9c4381-9422-4bbb-8f05-c8a835831933> ;
+            sr:surfaceType <height-reference:gl> ] ;
+    sr:representationStatus <representation-status:d3d> ;
+    sr:verticalBoundaryDefinitions [ dct:description "2 metres below ground level" ;
+            sr:definitionType <vertical-definition-type:rel> ;
+            sr:direction <vertical-direction:blw> ;
+            sr:heightReference <height-reference:gl> ;
+            sr:limitRole <vertical-limit-role:ll> ;
+            sr:provenanceRef <file:///github/workspace/derived-3d-solid-generation-1> ;
+            sr:resolutionStatus "resolved" ;
+            sr:sourceReference <file:///github/workspace/source-height-description-1> ;
+            sr:value 2.0 ;
+            sr:valueType <vertical-value-type:off> ],
+        [ dct:description "12 metres above ground level" ;
+            sr:definitionType <vertical-definition-type:rel> ;
+            sr:direction <vertical-direction:abv> ;
+            sr:heightReference <height-reference:gl> ;
+            sr:limitRole <vertical-limit-role:ul> ;
+            sr:provenanceRef <file:///github/workspace/derived-3d-solid-generation-1> ;
+            sr:resolutionStatus "resolved" ;
+            sr:sourceReference <file:///github/workspace/source-height-description-2> ;
+            sr:value 12.0 ;
+            sr:valueType <vertical-value-type:off> ] ;
+    sr:verticalExtent [ sr:lowerBoundary [ sr:boundaryState <vertical-boundary-state:drv> ;
+                    sr:definitionRef <file:///github/workspace/relative-limit-lower-1> ;
+                    sr:geometryRef <file:///github/workspace/derived-lower-surface-1> ] ;
+            sr:upperBoundary [ sr:boundaryState <vertical-boundary-state:drv> ;
+                    sr:definitionRef <file:///github/workspace/relative-limit-upper-1> ;
+                    sr:geometryRef <file:///github/workspace/derived-upper-surface-1> ] ;
+            sr:verticalExtentStatus <vertical-extent-status:dfld> ] .
+

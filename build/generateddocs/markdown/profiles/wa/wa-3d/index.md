@@ -558,9 +558,9 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -585,12 +585,12 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark> ;
@@ -610,7 +610,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -623,20 +623,20 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
-            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns3:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/843> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns3:angleType icsm-angle-type:angle ],
+            ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
             sosa:hasResult [ surv:distance 2.6401e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns3:distanceType icsm-distance-type:ground ] ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
+            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00Z" ;
+            ns2:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
@@ -646,7 +646,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -656,7 +656,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -686,7 +686,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -700,7 +700,34 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 description: WA profile of Cadastral Survey Data Model
-$ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml
+allOf:
+- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml
+- properties:
+    parcels:
+      type: array
+      items:
+        properties:
+          features:
+            type: array
+            items:
+              properties:
+                properties:
+                  properties:
+                    spatialRepresentationDefinitions:
+                      $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/schema.yaml
+x-jsonld-prefixes:
+  representation-status: https://linked.data.gov.au/def/csdm/representation-status/
+  geometry-legal-status: https://linked.data.gov.au/def/csdm/geometry-legal-status/
+  vertical-extent-status: https://linked.data.gov.au/def/csdm/vertical-extent-status/
+  computability-status: https://linked.data.gov.au/def/csdm/computability-status/
+  coordinate-z-role: https://linked.data.gov.au/def/csdm/coordinate-z-role/
+  vertical-boundary-state: https://linked.data.gov.au/def/csdm/vertical-boundary-state/
+  vertical-definition-type: https://linked.data.gov.au/def/csdm/vertical-definition-type/
+  vertical-limit-role: https://linked.data.gov.au/def/csdm/vertical-limit-role/
+  vertical-value-type: https://linked.data.gov.au/def/csdm/vertical-value-type/
+  vertical-direction: https://linked.data.gov.au/def/csdm/vertical-direction/
+  height-reference: https://linked.data.gov.au/def/csdm/height-reference/
+  uuid: 'urn:uuid:'
 
 ```
 
@@ -2307,6 +2334,18 @@ Links to the schema:
       "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
+    "state": {
+      "@id": "csdm:spatial-representation/boundaryState",
+      "@type": "@vocab"
+    },
+    "definitionRef": {
+      "@id": "csdm:spatial-representation/definitionRef",
+      "@type": "@id"
+    },
+    "geometryRef": {
+      "@id": "csdm:spatial-representation/geometryRef",
+      "@type": "@id"
+    },
     "container": "csdm:container/",
     "sdo": "https://schema.org/",
     "csd": "csdm:csd/",
@@ -2372,6 +2411,20 @@ Links to the schema:
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "representation-status": "csdm:representation-status/",
+    "geometry-legal-status": "csdm:geometry-legal-status/",
+    "vertical-extent-status": "csdm:vertical-extent-status/",
+    "computability-status": "csdm:computability-status/",
+    "coordinate-z-role": "csdm:coordinate-z-role/",
+    "vertical-boundary-state": "csdm:vertical-boundary-state/",
+    "vertical-definition-type": "csdm:vertical-definition-type/",
+    "vertical-limit-role": "csdm:vertical-limit-role/",
+    "vertical-value-type": "csdm:vertical-value-type/",
+    "vertical-direction": "csdm:vertical-direction/",
+    "height-reference": "csdm:height-reference/",
+    "uuid": "urn:uuid:",
+    "sr": "csdm:spatial-representation/",
+    "pvb": "csdm:parcel-vertical-boundary/",
     "@version": 1.1
   }
 }
