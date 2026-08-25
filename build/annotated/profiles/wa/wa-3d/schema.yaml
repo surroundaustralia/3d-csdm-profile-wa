@@ -2,19 +2,8 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: WA profile of Cadastral Survey Data Model
 allOf:
 - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml
-- properties:
-    parcels:
-      type: array
-      items:
-        properties:
-          features:
-            type: array
-            items:
-              properties:
-                properties:
-                  properties:
-                    spatialRepresentationDefinitions:
-                      $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelSpatialRepresentationDefinition/schema.yaml
+- required:
+  - solids
 x-jsonld-prefixes:
   representation-status: https://linked.data.gov.au/def/csdm/representation-status/
   geometry-legal-status: https://linked.data.gov.au/def/csdm/geometry-legal-status/

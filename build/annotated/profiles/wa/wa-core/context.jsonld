@@ -1204,6 +1204,18 @@
       "@type": "@id"
     },
     "label": "rdfs:label",
+    "state": {
+      "@id": "csdm:spatial-representation/boundaryState",
+      "@type": "@vocab"
+    },
+    "definitionRef": {
+      "@id": "csdm:spatial-representation/definitionRef",
+      "@type": "@id"
+    },
+    "geometryRef": {
+      "@id": "csdm:spatial-representation/geometryRef",
+      "@type": "@id"
+    },
     "parcelQualityClass": {
       "@id": "parcel:qualityClass",
       "@type": "@id"
@@ -1609,6 +1621,8 @@
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "csdm": "https://linked.data.gov.au/def/csdm/",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "sr": "csdm:spatial-representation/",
+    "pvb": "csdm:parcel-vertical-boundary/",
     "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",

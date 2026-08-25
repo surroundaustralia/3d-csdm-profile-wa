@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation",
   "bblockName": "Miscellaneous Tenure Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.miscellaneousTenure",
-  "generated": "2026-08-23T23:35:18.308565+00:00",
+  "generated": "2026-08-25T01:16:01.774723+00:00",
   "result": true,
   "items": [
     {
@@ -85,8 +85,8 @@
               "focusNodes": {
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N4ab87fd0592c4f45a10e5cc59f99225b",
-                    "_:N7322cdd16e15462e83ea98553491f007"
+                    "_:N9a796121f0bc416a8c94105469255c3b",
+                    "_:N3251669f4e544930a952bb0cdef670d3"
                   ]
                 },
                 "ex:NamedObjectShape": {
@@ -94,7 +94,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N4ab87fd0592c4f45a10e5cc59f99225b,_:N7322cdd16e15462e83ea98553491f007\n - Shape ex:NamedObjectShape: *none*\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N9a796121f0bc416a8c94105469255c3b,_:N3251669f4e544930a952bb0cdef670d3\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -106,12 +106,12 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n6723349d8a6c4da497abdd0a4aafe2eab1": {
+                "_:nadbe83c74104476aab65407233a2bd1eb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n6723349d8a6c4da497abdd0a4aafe2eab1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:nadbe83c74104476aab65407233a2bd1eb1: *none*\n"
             }
           ]
         }
@@ -197,9 +197,9 @@
               "focusNodes": {
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N3461b9c43f324c6bbf7c367f941b7f2c",
-                    "_:N94f24728b052496782dd0cdf03f13a36",
-                    "_:N635824b1938342d28d17f317d93e8440"
+                    "_:N90a01a384bb64d5386d54c5090776969",
+                    "_:N861a66fe007f4f9b8e77d9820e04cbcf",
+                    "_:N0e3d7600e59b4ec89493ac8e4916d561"
                   ]
                 },
                 "ex:NamedObjectShape": {
@@ -207,7 +207,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N3461b9c43f324c6bbf7c367f941b7f2c,_:N94f24728b052496782dd0cdf03f13a36,_:N635824b1938342d28d17f317d93e8440\n - Shape ex:NamedObjectShape: *none*\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N90a01a384bb64d5386d54c5090776969,_:N861a66fe007f4f9b8e77d9820e04cbcf,_:N0e3d7600e59b4ec89493ac8e4916d561\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -219,12 +219,12 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n6723349d8a6c4da497abdd0a4aafe2eab1": {
+                "_:nadbe83c74104476aab65407233a2bd1eb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n6723349d8a6c4da497abdd0a4aafe2eab1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:nadbe83c74104476aab65407233a2bd1eb1: *none*\n"
             }
           ]
         }
@@ -299,9 +299,9 @@
               "focusNodes": {
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:Nb0f5db4fa7f94bb7a761f76b26431cd7",
-                    "_:N6986f2c6b3c34995b9b0960f2d278b3f",
-                    "_:N8d0891eb7b814986b0fe2d35b24de054"
+                    "_:N8695b4634edd4d1ca8c0d7b015829abe",
+                    "_:Nf0834967280e4b0fa5b1bf4e74eb1ade",
+                    "_:N00e3f322a1b544f1adf84a90f55ae4fe"
                   ]
                 },
                 "ex:NamedObjectShape": {
@@ -309,7 +309,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:Nb0f5db4fa7f94bb7a761f76b26431cd7,_:N6986f2c6b3c34995b9b0960f2d278b3f,_:N8d0891eb7b814986b0fe2d35b24de054\n - Shape ex:NamedObjectShape: *none*\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N8695b4634edd4d1ca8c0d7b015829abe,_:Nf0834967280e4b0fa5b1bf4e74eb1ade,_:N00e3f322a1b544f1adf84a90f55ae4fe\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -321,12 +321,12 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n6723349d8a6c4da497abdd0a4aafe2eab1": {
+                "_:nadbe83c74104476aab65407233a2bd1eb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n6723349d8a6c4da497abdd0a4aafe2eab1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:nadbe83c74104476aab65407233a2bd1eb1: *none*\n"
             }
           ]
         }

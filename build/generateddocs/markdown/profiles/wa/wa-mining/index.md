@@ -578,11 +578,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -1909,6 +1909,18 @@ Links to the schema:
       "@type": "@id"
     },
     "label": "rdfs:label",
+    "state": {
+      "@id": "csdm:spatial-representation/boundaryState",
+      "@type": "@vocab"
+    },
+    "definitionRef": {
+      "@id": "csdm:spatial-representation/definitionRef",
+      "@type": "@id"
+    },
+    "geometryRef": {
+      "@id": "csdm:spatial-representation/geometryRef",
+      "@type": "@id"
+    },
     "parcelQualityClass": {
       "@id": "parcel:qualityClass",
       "@type": "@id"
@@ -2314,6 +2326,8 @@ Links to the schema:
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "csdm": "https://linked.data.gov.au/def/csdm/",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "sr": "csdm:spatial-representation/",
+    "pvb": "csdm:parcel-vertical-boundary/",
     "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",

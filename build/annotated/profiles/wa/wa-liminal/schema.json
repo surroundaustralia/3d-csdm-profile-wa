@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Liminal 3D cases profile of Cadastral Survey Data Model",
+  "allOf": [
+    {
+      "$ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.json"
+    },
+    {
+      "properties": {
+        "parcels": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "features": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "properties": {
+                      "required": [
+                        "spatialRepresentationDefinitions"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "x-jsonld-prefixes": {
+    "representation-status": "https://linked.data.gov.au/def/csdm/representation-status/",
+    "geometry-legal-status": "https://linked.data.gov.au/def/csdm/geometry-legal-status/",
+    "vertical-extent-status": "https://linked.data.gov.au/def/csdm/vertical-extent-status/",
+    "computability-status": "https://linked.data.gov.au/def/csdm/computability-status/",
+    "coordinate-z-role": "https://linked.data.gov.au/def/csdm/coordinate-z-role/",
+    "vertical-boundary-state": "https://linked.data.gov.au/def/csdm/vertical-boundary-state/",
+    "vertical-definition-type": "https://linked.data.gov.au/def/csdm/vertical-definition-type/",
+    "vertical-limit-role": "https://linked.data.gov.au/def/csdm/vertical-limit-role/",
+    "vertical-value-type": "https://linked.data.gov.au/def/csdm/vertical-value-type/",
+    "vertical-direction": "https://linked.data.gov.au/def/csdm/vertical-direction/",
+    "height-reference": "https://linked.data.gov.au/def/csdm/height-reference/",
+    "uuid": "urn:uuid:"
+  }
+}

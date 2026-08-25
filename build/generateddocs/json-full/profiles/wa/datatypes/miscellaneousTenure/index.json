@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-08-23",
+  "dateOfLastChange": "2026-08-25",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -32,8 +32,8 @@
     ]
   },
   "dependsOn": [
-    "icsm.profiles.wa.datatypes.waAppellationNamespaces",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "icsm.profiles.wa.datatypes.waAppellationNamespaces"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml",
