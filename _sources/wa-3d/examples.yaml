@@ -1,19 +1,38 @@
-
-- title: WA Subtended Angle Observation Example
+- title: WA 3D Survey Mark Example
   content: |-
-    Contains three survey marks defining two vectors that form an included angle observation. The included angle 
-    references the survey mark where the angle has been observed, the Reference Object (RO) vector that the angle was 
-    measured from, and the forward vector that defines the angle. The example also includes three vector observations, 
-    being two distances and an angle. Note that the same vector observation pattern is maintained for the two types of 
-    observations. For ***distance*** only observations, ***angle*** is **Null**. For the ***angle*** observation, 
-    ***distance*** is **Null**. Angles are measured clockwise from the RO to the forward vector.
+    WA Survey Marks Example extended to include 3D survey marks. **verticalDatum** included for specification of the 
+    Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinates** have been extended to include 
+    **X**, **Y** and **Z** elements. **Z** values are set 0.000 in the examples.
 
-    ![WA Subtended Angle Observation Example](https://icsm-au.github.io/3d-csdm-profiles/assets/wa-obs-angle.png)
-
-  base-output-filename: obs-subtendedangle
+  base-output-filename: 3d-surveypoints
   snippets:
     - language: json
-      ref: examples/obs-subtendedangle.json
-
+      ref: examples/3d-surveypoints.json
       base-uri: https://www.wa-example.com/features/
+
+- title: Four Unit Up/Down test example with stairwell
+  content: |
+    Self-contained collection of topology objects defining a Four Unit Up/Down example with stairwell. 
+    Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and five solids.
+
+    [Open the interactive viewer](assets/topo_viewer.html?example=4-unit-up-down.json)
+
+  base-output-filename: four-unit
+  snippets:
+    - language: json
+      ref: examples/4-unit-up-down.json
+
+
+- title: Four Unit Up/Down test example with stairwell and Parcel
+  content: |
+    Self-contained collection of topology objects defining a Four Unit Up/Down example with stairwell. 
+    Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 rings, 35 faces, five shells, and five solids.
+    ![Tetrahedron Example](assets/4-unit.png)
+    
+    [Open the interactive viewer](assets/topo_viewer.html?example=4-unit-up-down.json)
+
+  base-output-filename: four-unit-parcel
+  snippets:
+    - language: json
+      ref: examples/4-unit-up-down-with-parcel.json
 
