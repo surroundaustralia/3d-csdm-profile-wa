@@ -1,0 +1,19 @@
+Validation report for icsm.profiles.wa.wa-core - Western Australia Cadastral Survey Data Exchange Profile
+Generated 2026-08-25T22:29:14.447394+00:00
+=== Files ===
+Using examples/topographic-string.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD topographic-string.jsonld created
+Output Turtle topographic-string.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+
+** Validation error **
+Error processing examples/topoobjects.ttl: [Errno 2] No such file or directory: '/github/examples/topoobjects.ttl'
+=== End SHACL ===
+

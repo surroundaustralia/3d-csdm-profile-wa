@@ -66,10 +66,10 @@ Example appellation.
 [] rdfs:label "L-3114-12345" ;
     dcterms:hasPart [ rdfs:label "3114" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ],
-        [ commonpatterns:namePartRef wa-parcel-type:l ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],
         [ rdfs:label "12345" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ],
+        [ commonpatterns:namePartRef wa-parcel-type:l ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ] .
 
 
 ```
