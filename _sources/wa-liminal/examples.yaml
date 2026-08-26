@@ -1,0 +1,9 @@
+- title: Parcel Collection
+  content: |-
+    arbitrary (not actual case) attachment of spatial representation to a parcel collection
+
+  base-output-filename: parcel-collection
+  snippets:
+    - language: json
+      ref: examples/parcel-collection.json
+      base-uri: https://www.wa-example.com/features/
