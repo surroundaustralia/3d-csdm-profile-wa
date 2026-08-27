@@ -116,12 +116,12 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
             rdfs:label "Lot 3 DP 214866" ;
             dct:hasPart [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
-                [ rdfs:label "214866" ;
-                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
                 [ rdfs:label "3" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <file:///github/workspace/PlanType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
+                [ rdfs:label "214866" ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 2829 ;

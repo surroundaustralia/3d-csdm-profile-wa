@@ -1,0 +1,116 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                115.79718801276466,
+                -31.893290887647535,
+                -11.989
+              ],
+              [
+                115.79697337440058,
+                -31.893652878797063,
+                -13.39
+              ],
+              [
+                115.79697337440058,
+                -31.893652878797063,
+                -13.39
+              ],
+              [
+                115.79718601252313,
+                -31.893653732234803,
+                -12.989
+              ],
+              [
+                115.79718601252313,
+                -31.893653732234803,
+                -12.989
+              ],
+              [
+                115.79718801276466,
+                -31.893290887647535,
+                -11.989
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "normal": [
+          -0.01998299112273733,
+          -0.02475422339880669,
+          0.9994938261388664
+        ],
+        "area": 404.917,
+        "description": "Top boundary face, [Ground Surface]"
+      },
+      "id": "uuid:785fe569-93c7-4a5a-b8dc-1ed6a4964029"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                115.79697337440058,
+                -31.893652878797063,
+                -13.39
+              ],
+              [
+                115.79718801276466,
+                -31.893290887647535,
+                -11.989
+              ],
+              [
+                115.79718801276466,
+                -31.893290887647535,
+                -11.989
+              ],
+              [
+                115.79697538604657,
+                -31.893290034215067,
+                -12.29
+              ],
+              [
+                115.79697538604657,
+                -31.893290034215067,
+                -12.29
+              ],
+              [
+                115.79697337440058,
+                -31.893652878797063,
+                -13.39
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "normal": [
+          -0.015026957173614096,
+          -0.02726173756617929,
+          0.9995153766816073
+        ],
+        "area": 404.918,
+        "description": "Top boundary face, [Ground Surface]"
+      },
+      "id": "uuid:b631b943-8681-4ba7-baba-cbf90555d550"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    {
+      "wa-profile": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
+      "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/"
+    }
+  ]
+}
