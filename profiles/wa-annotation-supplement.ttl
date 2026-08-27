@@ -23,3 +23,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Regulation 4 Compiled Plan" ;
     skos:topConceptOf cs: ;
 .
+
+:height-limit-description
+    a skos:Concept , termtype:Annotation ;
+    skos:definition "Plan annotation stating a vertical limit relative to a height reference" ;
+    skos:inScheme cs: ;
+    skos:notation "height-limit-description" ;
+    skos:prefLabel "Height limit description" ;
+    skos:topConceptOf cs: ;
+.

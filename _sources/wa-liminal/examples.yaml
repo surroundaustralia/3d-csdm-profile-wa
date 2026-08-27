@@ -31,6 +31,22 @@
       ref: examples/2-5d-reference-surface.json
 
 
+- title: Relative height description
+  content: |
+    Both vertical boundaries are described relative to ground level but cannot yet be resolved to
+    absolute values, so `resolutionStatus` is `requiresReferenceSurface`.
+    
+    This is the same dataset used in the [2D Footprint Example](2d-footprint), along with a spatial 
+    representation describing boundary offsets from ground level. A ground surface is not provided.
+    
+    ![Relative height description](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/height-described-relative.png)
+
+  base-output-filename: relative-height-description
+  snippets:
+    - language: json
+      ref: examples/height-described-relative.json
+
+
 - title: Parcel Collection
   content: |-
     arbitrary (not actual case) attachment of spatial representation to a parcel collection

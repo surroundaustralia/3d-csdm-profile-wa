@@ -48,6 +48,7 @@
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl",
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl",
     "../../profiles/wa-annotation-supplement.ttl",
-    "../../profiles/wa-survey-purpose-supplement.ttl"
+    "../../profiles/wa-survey-purpose-supplement.ttl",
+    "../../profiles/wa-survey-documentation-supplement.ttl"
   ]
 }
