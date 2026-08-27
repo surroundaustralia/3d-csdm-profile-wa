@@ -7,8 +7,8 @@ transforms:
         - application/json
     outputs:
       mediaTypes:
-        - text/plain
-      defaultExtension: txt
+        - mimeType: text/plain
+          defaultExtension: txt
     code: |
       import json
       data = json.loads(input_data)
