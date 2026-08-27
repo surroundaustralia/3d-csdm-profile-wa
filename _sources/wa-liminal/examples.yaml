@@ -7,7 +7,7 @@
     are to be extinguished, and a conventional 2D parcel that is created by the survey (with 
     undefined vertical extents).
     
-    ![2D Footprint Example](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/assets/2d-footprint.png)
+    ![2D Footprint Example](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/2d-footprint.png)
 
   base-output-filename: 2d-footprint
   snippets:
