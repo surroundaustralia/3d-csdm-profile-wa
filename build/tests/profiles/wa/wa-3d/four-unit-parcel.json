@@ -15,6 +15,18 @@
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
+  "adminUnit": [
+    {
+      "href": "wa-locality:innaloo",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    },
+    {
+      "href": "wa-locality:stirling",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    }
+  ],
   "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:389c096d-2d42-4b65-afa3-db52d19d8b2f",

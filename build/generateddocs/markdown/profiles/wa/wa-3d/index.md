@@ -391,11 +391,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -438,10 +438,10 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
             geojson:coordinates ( 5.47613e+04 3.984891e+05 0e+00 ) ] ;
     rdfs:comment "In Concrete" ;
     ns1:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     ns1:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
@@ -490,7 +490,18 @@ Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and fi
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
-
+  "adminUnit": [
+    {
+      "href": "wa-locality:innaloo",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    },
+    {
+      "href": "wa-locality:stirling",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    }
+  ],
   "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:08fe8ebb-59f4-4489-81e1-b0640caa9056",
@@ -5112,6 +5123,18 @@ Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and fi
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
+  "adminUnit": [
+    {
+      "href": "wa-locality:innaloo",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    },
+    {
+      "href": "wa-locality:stirling",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    }
+  ],
   "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:08fe8ebb-59f4-4489-81e1-b0640caa9056",
@@ -9719,14 +9742,19 @@ Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and fi
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
 @prefix icsm-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
+@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
@@ -9738,6 +9766,12 @@ Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and fi
 uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:points uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b ;
@@ -11307,6 +11341,18 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
+  "adminUnit": [
+    {
+      "href": "wa-locality:innaloo",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    },
+    {
+      "href": "wa-locality:stirling",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    }
+  ],
   "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:389c096d-2d42-4b65-afa3-db52d19d8b2f",
@@ -16917,6 +16963,18 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
+  "adminUnit": [
+    {
+      "href": "wa-locality:innaloo",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    },
+    {
+      "href": "wa-locality:stirling",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    }
+  ],
   "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:389c096d-2d42-4b65-afa3-db52d19d8b2f",
@@ -22514,15 +22572,20 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
 @prefix icsm-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
+@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
@@ -22537,6 +22600,12 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
 uuid:e9901182-59a5-4f67-8093-942fef888bf2 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:parcels uuid:f6235c7a-8ada-499d-9574-067ccd370949 ;
@@ -22618,10 +22687,10 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <file:///github/workspace/PlanType> ],
-                [ rdfs:label "3" ;
-                    commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
                 [ rdfs:label "214866" ;
-                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "3" ;
+                    commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 2829 ;
