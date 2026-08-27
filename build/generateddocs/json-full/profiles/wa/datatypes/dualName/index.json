@@ -58,10 +58,10 @@
       "outputs": {
         "mediaTypes": [
           {
-            "mimeType": "text/plain"
+            "mimeType": "text/plain",
+            "defaultExtension": "txt"
           }
-        ],
-        "defaultExtension": "txt"
+        ]
       },
       "code": "import json\ndata = json.loads(input_data)\nen_label=\"\"\nin_label=\"\"\nslash=\"\"\nfor p in data['hasPart']:\n    if p['type'] == 'wa:indigenousName':\n        in_label = p['label']\n    elif  p['type'] == 'wa:placeName':\n        en_label = p['label']\nif in_label and en_label:\n    slash = \" / \"\noutput_data=f\"{in_label}{slash}{en_label}\"\n"
     }
@@ -80,7 +80,7 @@
             "Dual-name-label": {
               "success": true,
               "sizeBytes": 33,
-              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/dualName/transforms/example_1_1.Dual-name-label"
+              "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/dualName/transforms/example_1_1.Dual-name-label.txt"
             }
           },
           "sizeBytes": 313,
@@ -96,7 +96,7 @@
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/dualName/example_1_1.ttl",
           "sizeBytes": 435,
-          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Mammang Koort / King George Sound\" ;\n    dcterms:hasPart [ rdfs:label \"Mammang Koort\" ;\n            commonpatterns:namePartType <wa:indigenousName> ],\n        [ rdfs:label \"King George Sound\" ;\n            commonpatterns:namePartType <wa:placeName> ] .\n\n"
+          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"Mammang Koort / King George Sound\" ;\n    dcterms:hasPart [ rdfs:label \"King George Sound\" ;\n            commonpatterns:namePartType <wa:placeName> ],\n        [ rdfs:label \"Mammang Koort\" ;\n            commonpatterns:namePartType <wa:indigenousName> ] .\n\n"
         }
       ]
     }
