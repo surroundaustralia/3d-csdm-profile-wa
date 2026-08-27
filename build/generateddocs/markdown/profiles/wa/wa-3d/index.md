@@ -491,7 +491,7 @@ Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and fi
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
 
-  "hasProvenance": [],
+  "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:08fe8ebb-59f4-4489-81e1-b0640caa9056",
     "endedAtTime": "2026-05-27T05:58:56.923046+00:00"
@@ -5112,7 +5112,7 @@ Dataset consists of 36 points, 65 edges, 35 rings, 35 faces, five shells, and fi
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
-  "hasProvenance": [],
+  "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:08fe8ebb-59f4-4489-81e1-b0640caa9056",
     "endedAtTime": "2026-05-27T05:58:56.923046+00:00"
@@ -11307,7 +11307,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
-  "hasProvenance": [],
+  "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:389c096d-2d42-4b65-afa3-db52d19d8b2f",
     "endedAtTime": "2026-05-04T02:39:38.197690+00:00"
@@ -16917,7 +16917,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
   "verticalCRS": "epsg:5711",
   "bearingRotation": 0.0,
   "surveyTitle": "4 Unit Up/Down with Stairwell",
-  "hasProvenance": [],
+  "has_provenance": [],
   "wasGeneratedBy": {
     "id": "uuid:389c096d-2d42-4b65-afa3-db52d19d8b2f",
     "endedAtTime": "2026-05-04T02:39:38.197690+00:00"

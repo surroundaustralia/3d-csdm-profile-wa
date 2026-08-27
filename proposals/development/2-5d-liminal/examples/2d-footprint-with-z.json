@@ -31,7 +31,7 @@
       "role": "icsm-admin-unit-type:localGovernmentArea"
     }
   ],
-  "hasProvenance": [
+  "has_provenance": [
     {
       "id": "uuid:f45dc6e9-e1e8-41a8-b8e6-470337ca4a3a",
       "activityType": "certification-of-field-record",
@@ -198,7 +198,7 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-survey-point-purpose:monument",
+            "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
             "methodEstablished": "wa-pt-method:T",
@@ -232,7 +232,7 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-survey-point-purpose:monument",
+            "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
             "methodEstablished": "wa-pt-method:T",
@@ -266,7 +266,7 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-survey-point-purpose:monument",
+            "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
             "methodEstablished": "wa-pt-method:T",
@@ -300,7 +300,7 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-survey-point-purpose:monument",
+            "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
             "methodEstablished": "wa-pt-method:T",

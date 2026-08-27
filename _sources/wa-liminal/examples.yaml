@@ -1,3 +1,19 @@
+- title: Authoritative 2D footprint
+  content: |
+    The surveyed horizontal footprint only. No vertical extent is defined and no derived geometry
+    has been generated.
+    
+    This example contains three parcels; two strata lots that have undefined vertical extents that 
+    are to be extinguished, and a conventional 2D parcel that is created by the survey (with 
+    undefined vertical extents).
+    
+    ![2D Footprint Example](../assets/2d-footprint.png)
+
+  base-output-filename: 2d-footprint
+  snippets:
+    - language: json
+      ref: examples/2d-footprint.json
+
 - title: Parcel Collection
   content: |-
     arbitrary (not actual case) attachment of spatial representation to a parcel collection

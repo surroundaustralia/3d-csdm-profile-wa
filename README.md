@@ -2,7 +2,7 @@
 
 This repository defines a profile of the 3D CSDM (Cadastral Survey Data Model) for Western Australia.
 
-_Note that this profile may be further profiled for specific sub-sets of WA data according to requirements, such as providing certain data in certain circumstances._
+_Note that this profile may be further profiled for specific subsets of WA data according to requirements, such as providing certain data in certain circumstances._
 
 The [published form](https://icsm-au.github.io/3d-csdm-profile-wa) includes compiled schemas and semantic annotations drawing on the underlying 3D CSDM model and ICSM profile.  Examples are validated automatically against all these profiles to ensure compatibility.
 
@@ -12,11 +12,11 @@ Profile descriptions showing the underlying model and logical constraints define
 
 The [form of these profiles](https://ogcincubator.github.io/bblocks-docs/) is based on a common platform for specification development and testing of reusable schemas and profiles (OGC Building Blocks). This supports:
 
-- unambiguous (machine readable) constraints on use of the underlying [3D CSDM model](https://github.com/icsm-au/3d-csdm) and [implementation schema](https://github.com/icsm-au/3d-csdm-common).
+- unambiguous (machine-readable) constraints on use of the underlying [3D CSDM model](https://github.com/icsm-au/3d-csdm) and [implementation schema](https://github.com/icsm-au/3d-csdm-common).
 - validation of examples
 - test cases
 - generation of documentation
-- alternative machine readable forms if required
+- alternative machine-readable forms if required
 - automated regression testing (of all examples and test cases) on any changes
 
 The relationships of the ICSM common and jurisdictional profiles and the underlying  common model is shown below:

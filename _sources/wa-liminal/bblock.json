@@ -23,8 +23,7 @@
     "profile"
   ],
   "superBBlock": false,
-  "shaclRules": [
-  ],
+  "shaclRules": [],
   "shaclClosures": [
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl",
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl",
@@ -47,6 +46,8 @@
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl",
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl",
     "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl",
-    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl"
+    "https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl",
+    "../../profiles/wa-annotation-supplement.ttl",
+    "../../profiles/wa-survey-purpose-supplement.ttl"
   ]
 }

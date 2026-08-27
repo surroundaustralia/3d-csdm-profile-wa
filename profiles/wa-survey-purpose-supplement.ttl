@@ -1,0 +1,25 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/wa-survey-purpose/>
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-survey-purpose>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Local supplement to the published WA CSD Survey Purpose vocabulary.
+# TEMPORARY: remove once these terms are registered in
+# https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
+
+:subdivision-t-sts
+    a
+        skos:Concept ,
+        surv:SurveyPurpose ;
+    skos:definition "Survey Cadastral Dataset prepared to support termination of a Strata Title Scheme in accordance with Part 12 of the Strata Title Act 1985" ;
+    skos:inScheme cs: ;
+    skos:notation "subdivision-t-sts" ;
+    skos:prefLabel "Subdivision: Termination of a Strata Title Scheme" ;
+    skos:topConceptOf cs: ;
+.

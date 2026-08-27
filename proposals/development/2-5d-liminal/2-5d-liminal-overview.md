@@ -161,7 +161,7 @@ The progression does not replace the original 2D parcel boundary. Instead, each 
 
 The examples below are an initial draft of an encoding for describing the various types of 2D and 3D parcel representations outlined in this document.
 The examples focus on the parcel properties for each type of representation.
-`sourceDocuments` and `hasProvenance` elements have not been populated, but examples for these elements follow the `parcel` examples.
+`sourceDocuments` and `has_provenance` elements have not been populated, but examples for these elements follow the `parcel` examples.
 It is assumed that these elements will follow the patterns outlined in the examples.
 
 ### Authoritative 2D footprint **and** 2D footprint with `z` values
@@ -227,7 +227,7 @@ If `z` is unbounded, expand `verticalExtentStatus` to include `unconstrainedAbov
   ],
   "sourceDocuments": [
   ],
-  "hasProvenance": [
+  "has_provenance": [
   ]
 }
 ```
@@ -276,7 +276,7 @@ Same general pattern as **Authoritative 2D footprint and 2D footprint with `z` v
       ]
     }
   ],
-  "hasProvenance": [
+  "has_provenance": [
   ]
 }
 ```
@@ -329,7 +329,7 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires height de
   ],
   "supportingDocuments": [
   ],
-  "hasProvenance": [
+  "has_provenance": [
   ]
 }
 ```
@@ -376,7 +376,7 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires vertical 
   ],
   "supportingDocuments": [
   ],
-  "hasProvenance": [
+  "has_provenance": [
   ]
 }
 ```
@@ -422,7 +422,7 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
   ],
   "supportingDocuments": [
   ],
-  "hasProvenance": [
+  "has_provenance": [
   ]
 }
 ```
@@ -499,7 +499,7 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
   ],
   "supportingDocuments": [
   ],
-  "hasProvenance": [
+  "has_provenance": [
   ]
 }
 ```
