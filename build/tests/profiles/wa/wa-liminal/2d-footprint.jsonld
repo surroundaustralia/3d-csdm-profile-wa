@@ -658,10 +658,12 @@
           "topology": {
             "type": "Polygon",
             "references": [
-              "line-geometry-2",
-              "line-geometry-1",
-              "line-geometry-3",
-              "line-geometry-4"
+              [
+                "line-geometry-2",
+                "line-geometry-1",
+                "line-geometry-3",
+                "line-geometry-4"
+              ]
             ]
           },
           "properties": {
@@ -731,10 +733,12 @@
           "topology": {
             "type": "Polygon",
             "references": [
-              "line-geometry-2",
-              "line-geometry-1",
-              "line-geometry-3",
-              "line-geometry-4"
+              [
+                "line-geometry-2",
+                "line-geometry-1",
+                "line-geometry-3",
+                "line-geometry-4"
+              ]
             ]
           },
           "properties": {
@@ -779,10 +783,12 @@
           "topology": {
             "type": "Polygon",
             "references": [
-              "line-geometry-2",
-              "line-geometry-1",
-              "line-geometry-3",
-              "line-geometry-4"
+              [
+                "line-geometry-2",
+                "line-geometry-1",
+                "line-geometry-3",
+                "line-geometry-4"
+              ]
             ]
           },
           "properties": {

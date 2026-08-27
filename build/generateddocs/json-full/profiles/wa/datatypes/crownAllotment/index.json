@@ -29,8 +29,8 @@
     ]
   },
   "dependsOn": [
-    "icsm.profiles.wa.datatypes.waAppellationNamespaces",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.ogc-utils.iri-or-curie",
+    "icsm.profiles.wa.datatypes.waAppellationNamespaces"
   ],
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml",
@@ -97,7 +97,7 @@
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/crownAllotment/example_1_1.ttl",
           "sizeBytes": 712,
-          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n\n[] rdfs:label \"Albany Town Lot 57\" ;\n    dcterms:hasPart [ rdfs:label \"wa-parcel-purpose:townlot\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ],\n        [ commonpatterns:namePartRef wa-locality:albany ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ],\n        [ rdfs:label \"57\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/number> ] .\n\n"
+          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n\n[] rdfs:label \"Albany Town Lot 57\" ;\n    dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ],\n        [ rdfs:label \"57\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/number> ],\n        [ rdfs:label \"wa-parcel-purpose:townlot\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ] .\n\n"
         }
       ]
     }
