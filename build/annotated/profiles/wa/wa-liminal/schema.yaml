@@ -7,8 +7,10 @@ allOf:
       parcels:
         type: array
         items:
-          required:
-          - spatialRepresentationDefinitions
+          properties:
+            properties:
+              required:
+              - spatialRepresentationDefinitions
   - properties:
       parcels:
         type: array

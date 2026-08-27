@@ -626,6 +626,7 @@ path	@id	schema
 /parcels/features/properties/appellation/_anyOf/1/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml
 /parcels/features/properties/appellation/_anyOf/2/type		https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml
 /_anyOf/0/parcels		/github/workspace/build/annotated/profiles/wa/wa-liminal/schema.yaml
+/_anyOf/0/parcels/properties		/github/workspace/build/annotated/profiles/wa/wa-liminal/schema.yaml
 /_anyOf/1/parcels		/github/workspace/build/annotated/profiles/wa/wa-liminal/schema.yaml
 /_anyOf/1/parcels/features		/github/workspace/build/annotated/profiles/wa/wa-liminal/schema.yaml
 /_anyOf/1/parcels/features/properties		/github/workspace/build/annotated/profiles/wa/wa-liminal/schema.yaml

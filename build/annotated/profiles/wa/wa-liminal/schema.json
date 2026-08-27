@@ -12,9 +12,13 @@
             "parcels": {
               "type": "array",
               "items": {
-                "required": [
-                  "spatialRepresentationDefinitions"
-                ]
+                "properties": {
+                  "properties": {
+                    "required": [
+                      "spatialRepresentationDefinitions"
+                    ]
+                  }
+                }
               }
             }
           }

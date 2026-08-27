@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-08-26",
+  "dateOfLastChange": "2026-08-27",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -32,8 +32,8 @@
     ]
   },
   "dependsOn": [
-    "icsm.profiles.wa.datatypes.crownAllotment",
     "icsm.profiles.wa.datatypes.lotOnPlan",
+    "icsm.profiles.wa.datatypes.crownAllotment",
     "icsm.profiles.wa.datatypes.miscellaneousTenure"
   ],
   "schema": {
