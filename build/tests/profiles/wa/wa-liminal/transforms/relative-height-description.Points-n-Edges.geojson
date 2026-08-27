@@ -1,0 +1,204 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.79697337440058,
+          -31.893652878797063,
+          -13.39
+        ]
+      },
+      "properties": {
+        "name": "",
+        "purpose": "wa-surveypoint-purpose:monument",
+        "ptQualityMeasure": 0.05,
+        "comment": null,
+        "methodEstablished": "wa-pt-method:T",
+        "monumentedBy": {
+          "form": "wa-monument-form:other",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "point-2"
+      },
+      "id": "point-2"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.79718601252313,
+          -31.893653732234803,
+          -12.989
+        ]
+      },
+      "properties": {
+        "name": "",
+        "purpose": "wa-surveypoint-purpose:monument",
+        "ptQualityMeasure": 0.05,
+        "comment": null,
+        "methodEstablished": "wa-pt-method:T",
+        "monumentedBy": {
+          "form": "wa-monument-form:other",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "point-3"
+      },
+      "id": "point-3"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.79697538604657,
+          -31.893290034215067,
+          -12.29
+        ]
+      },
+      "properties": {
+        "name": "",
+        "purpose": "wa-surveypoint-purpose:monument",
+        "ptQualityMeasure": 0.05,
+        "comment": null,
+        "methodEstablished": "wa-pt-method:T",
+        "monumentedBy": {
+          "form": "wa-monument-form:other",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "point-4"
+      },
+      "id": "point-4"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.79718801276466,
+          -31.893290887647535,
+          -11.989
+        ]
+      },
+      "properties": {
+        "name": "",
+        "purpose": "wa-surveypoint-purpose:monument",
+        "ptQualityMeasure": 0.05,
+        "comment": null,
+        "methodEstablished": "wa-pt-method:T",
+        "monumentedBy": {
+          "form": "wa-monument-form:other",
+          "condition": "wa-monument-condition:ok",
+          "state": "wa-monument-state:mark-found"
+        },
+        "feature_id": "point-5"
+      },
+      "id": "point-5"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.79697337440058,
+            -31.893652878797063,
+            -13.39
+          ],
+          [
+            115.79718601252313,
+            -31.893653732234803,
+            -12.989
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
+        "comment": null
+      },
+      "id": "line-geometry-1"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.79697337440058,
+            -31.893652878797063,
+            -13.39
+          ],
+          [
+            115.79697538604657,
+            -31.893290034215067,
+            -12.29
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:boundary",
+        "comment": null
+      },
+      "id": "line-geometry-2"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.79718601252313,
+            -31.893653732234803,
+            -12.989
+          ],
+          [
+            115.79718801276466,
+            -31.893290887647535,
+            -11.989
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:boundary",
+        "comment": null
+      },
+      "id": "line-geometry-3"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.79697538604657,
+            -31.893290034215067,
+            -12.29
+          ],
+          [
+            115.79718801276466,
+            -31.893290887647535,
+            -11.989
+          ]
+        ]
+      },
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:boundary",
+        "comment": null
+      },
+      "id": "line-geometry-4"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    {
+      "wa-profile": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
+      "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/"
+    }
+  ]
+}

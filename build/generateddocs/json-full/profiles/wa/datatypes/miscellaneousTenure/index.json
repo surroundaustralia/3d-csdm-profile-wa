@@ -100,7 +100,7 @@
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/miscellaneousTenure/example_1_1.ttl",
           "sizeBytes": 704,
-          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .\n\n[] rdfs:label \"L-3114-12345\" ;\n    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-type:l ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],\n        [ rdfs:label \"3114\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ],\n        [ rdfs:label \"12345\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ] .\n\n"
+          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .\n\n[] rdfs:label \"L-3114-12345\" ;\n    dcterms:hasPart [ rdfs:label \"3114\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ],\n        [ commonpatterns:namePartRef wa-parcel-type:l ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],\n        [ rdfs:label \"12345\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ] .\n\n"
         }
       ]
     }
