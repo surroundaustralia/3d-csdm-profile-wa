@@ -16,6 +16,1322 @@ This building block captures test cases for 2D topology with 3D extent descripti
 It allows isolation of these from the more general 2D and explicit 3D cases.
 
 Specific validators, transformers and viewers can now be defined for this profile.
+## Examples
+
+### Parcel Collection
+arbitrary (not actual case) attachment of spatial representation to a parcel collection
+#### json
+```json
+{
+  "id": "DP_422532",
+  "name": "DP 422532",
+  "description": "Western-Australia-Parcel-Example",
+  "type": "FeatureCollection",
+  "featureType": "CSD",
+  "tenureType": "wa-parcel-type:freehold",
+  "planType": "wa-survey-type:deposited-plan",
+  "purpose": "wa-survey-purpose:subdivision",
+  "surveyType": "wa-survey-type:SSA",
+  "time": {
+    "date": "2022-05-22"
+  },
+  "horizontalCRS": "epsg:8024",
+  "bearingRotation": 0.0,
+  "surveyTitle": "Lots 210 - 232, 240, Roads, 9005 & Easements",
+  "adminUnit": [
+    {
+      "href": "wa-local-government:city-of-kalgoorlie-boulder",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    },
+    {
+      "href": "wa-locality:karlkurla",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    }
+  ],
+  "wasGeneratedBy": {
+    "id": "DP-1-S2",
+    "endedAtTime": "2029-01-01T01:02:03Z"
+  },
+  "features": [],
+  "referencedCSDs": [
+    {
+      "id": "DP_422526",
+      "name": "DP 422526",
+      "adminUnit": {
+        "href": "wa-locality:hyden",
+        "rel": "related",
+        "role": "icsm-admin-unit-type:locality"
+      },
+      "bearingRotation": 0.0,
+      "time": {
+        "date": "2013-03-10"
+      }
+    }
+  ],
+  "points": [
+    {
+      "id": "BoundaryMark",
+      "type": "FeatureCollection",
+      "featureType": "BoundaryMarks",
+      "features": [
+        {
+          "id": "184",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54693.284,
+              398706.957
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.100,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "189",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54709.808,
+              398707.154
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.100,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "190",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54718.977,
+              398711.145
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.100,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "196",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54725.074,
+              398717.535
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.100,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "197",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54698.303,
+              398743.075
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
+            "ptQualityMeasure": 0.100,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "198",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54688.639,
+              398732.946
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
+            "ptQualityMeasure": 0.100,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "vectorObservations": [
+    {
+      "id": "vectorobservation:computed",
+      "type": "FeatureCollection",
+      "featureType": "sosa:ObservationCollection",
+      "usedProcedure": "wa-procedure-used:d",
+      "properties": {
+        "resultTime": "2011-05-22T00:00:00Z",
+        "observedProperty": "surveyable:VectorDetermination",
+        "madeBySensor": {
+          "sensorType": "icsm-equipment-type:software"
+        }
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "312",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 16.526,
+              "angle": 269.31694905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "313",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 26.401,
+              "angle": 349.86944905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "314",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 14.000,
+              "angle": 43.65444905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "309",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 37.000,
+              "angle": 133.65444905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "311",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 8.832,
+              "angle": 223.65444905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "298",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 10.000,
+              "angle": 246.48556016
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "observedVectors",
+      "type": "FeatureCollection",
+      "featureType": "surv:ObservedVector",
+      "features": [
+        {
+          "id": "312",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "189",
+              "184"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        },
+        {
+          "id": "313",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "184",
+              "198"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "314",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "198",
+              "197"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "309",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "197",
+              "196"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "311",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "196",
+              "190"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        },
+        {
+          "id": "298",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "190",
+              "189"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        }
+      ]
+    }
+  ],
+  "parcels": [
+    {
+      "id": "PrimaryParcels",
+      "type": "FeatureCollection",
+      "featureType": "PrimaryParcel",
+      "properties": {
+        "spatialRepresentationDefinitions": {
+          "representationStatus": "representation-status:jb",
+          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "coordinateRepresentation": {
+            "coordinateDimension": 2,
+            "zValueRole": "coordinate-z-role:absent"
+          },
+          "verticalExtent": {
+            "status": "vertical-extent-status:ld",
+            "lowerBoundary": {
+              "state": "vertical-boundary-state:dur",
+              "definitionRef": "jurisdictional-limit-lower-1"
+            },
+            "upperBoundary": {
+              "state": "vertical-boundary-state:und"
+            }
+          },
+          "computabilityStatus": "computability-status:rrs",
+          "verticalBoundaryDefinitions": [
+            {
+              "id": "jurisdictional-limit-lower-1",
+              "definitionType": "vertical-definition-type:jur",
+              "limitRole": "vertical-limit-role:ll",
+              "valueType": "vertical-value-type:off",
+              "value": 12.19,
+              "direction": "vertical-direction:blw",
+              "heightReference": "height-reference:gl",
+              "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
+              "sourceReference": "source-crown-grant-depth-limit-1",
+              "resolutionStatus": "requiresReferenceSurface",
+              "provenanceRef": "crown-grant-depth-limit-extraction-1",
+              "sourceBasis": {
+                "ruleType": "crownGrantDepthLimit",
+                "sourceAuthorityType": "CrownGrant",
+                "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+              }
+            }
+          ],
+          "referenceSurfaces": [],
+          "derivedGeometry": {
+            "status": "notGenerated"
+          }
+        }
+      },
+      "features": [
+        {
+          "id": "213",
+          "type": "Feature",
+          "featureType": "PrimaryParcel",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              [
+                "298",
+                "311",
+                "309",
+                "314",
+                "313",
+                "312"
+              ]
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "type": "wa:LotOnPlanAppellation",
+              "label": "Lot 213 DP 572532",
+              "hasPart": [
+                {
+                  "type": "ParcelType",
+                  "label": "Lot"
+                },
+                {
+                  "type": "ParcelIdentifier",
+                  "label": "213"
+                },
+                {
+                  "type": "PlanType",
+                  "label": "DP"
+                },
+                {
+                  "type": "PlanNumber",
+                  "label": "572532"
+                }
+              ]
+            },
+            "area": 798,
+            "parcelType": "wa-parcel-type:freehold",
+            "parcelPurpose": "wa-parcel-purpose:lot",
+            "parcelState": "wa-parcel-state:created",
+            "interests": []
+          }
+        }
+      ]
+    }
+  ],
+  "supportingDocuments": [],
+  "annotations": []
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-liminal/context.jsonld",
+  "id": "DP_422532",
+  "name": "DP 422532",
+  "description": "Western-Australia-Parcel-Example",
+  "type": "FeatureCollection",
+  "featureType": "CSD",
+  "tenureType": "wa-parcel-type:freehold",
+  "planType": "wa-survey-type:deposited-plan",
+  "purpose": "wa-survey-purpose:subdivision",
+  "surveyType": "wa-survey-type:SSA",
+  "time": {
+    "date": "2022-05-22"
+  },
+  "horizontalCRS": "epsg:8024",
+  "bearingRotation": 0.0,
+  "surveyTitle": "Lots 210 - 232, 240, Roads, 9005 & Easements",
+  "adminUnit": [
+    {
+      "href": "wa-local-government:city-of-kalgoorlie-boulder",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:localGovernmentArea"
+    },
+    {
+      "href": "wa-locality:karlkurla",
+      "rel": "related",
+      "role": "icsm-admin-unit-type:locality"
+    }
+  ],
+  "wasGeneratedBy": {
+    "id": "DP-1-S2",
+    "endedAtTime": "2029-01-01T01:02:03Z"
+  },
+  "features": [],
+  "referencedCSDs": [
+    {
+      "id": "DP_422526",
+      "name": "DP 422526",
+      "adminUnit": {
+        "href": "wa-locality:hyden",
+        "rel": "related",
+        "role": "icsm-admin-unit-type:locality"
+      },
+      "bearingRotation": 0.0,
+      "time": {
+        "date": "2013-03-10"
+      }
+    }
+  ],
+  "points": [
+    {
+      "id": "BoundaryMark",
+      "type": "FeatureCollection",
+      "featureType": "BoundaryMarks",
+      "features": [
+        {
+          "id": "184",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54693.284,
+              398706.957
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.1,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "189",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54709.808,
+              398707.154
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.1,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "190",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54718.977,
+              398711.145
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.1,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "196",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54725.074,
+              398717.535
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:road-boundary",
+            "ptQualityMeasure": 0.1,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "197",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54698.303,
+              398743.075
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
+            "ptQualityMeasure": 0.1,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        },
+        {
+          "id": "198",
+          "type": "Feature",
+          "featureType": "BoundaryMark",
+          "time": null,
+          "geometry": null,
+          "place": {
+            "type": "Point",
+            "coordinates": [
+              54688.639,
+              398732.946
+            ]
+          },
+          "properties": {
+            "name": null,
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
+            "ptQualityMeasure": 0.1,
+            "comment": null,
+            "monumentedBy": {
+              "form": "wa-monument-form:peg",
+              "condition": "wa-monument-condition:ok",
+              "state": "wa-monument-state:did-not-search"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "vectorObservations": [
+    {
+      "id": "vectorobservation:computed",
+      "type": "FeatureCollection",
+      "featureType": "sosa:ObservationCollection",
+      "usedProcedure": "wa-procedure-used:d",
+      "properties": {
+        "resultTime": "2011-05-22T00:00:00Z",
+        "observedProperty": "surveyable:VectorDetermination",
+        "madeBySensor": {
+          "sensorType": "icsm-equipment-type:software"
+        }
+      },
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "312",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 16.526,
+              "angle": 269.31694905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "313",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 26.401,
+              "angle": 349.86944905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "314",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 14.0,
+              "angle": 43.65444905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "309",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 37.0,
+              "angle": 133.65444905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "311",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 8.832,
+              "angle": 223.65444905
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": null,
+          "properties": {
+            "hasFeatureOfInterest": "298",
+            "resultTime": "2011-05-22T00:00:00Z",
+            "hasResult": {
+              "distance": 10.0,
+              "angle": 246.48556016
+            },
+            "distanceType": "icsm-distance-type:ground",
+            "distanceAccuracy": 4000,
+            "angleType": "icsm-angle-type:bearing",
+            "angleAccuracy": 0.00833333
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "observedVectors",
+      "type": "FeatureCollection",
+      "featureType": "surv:ObservedVector",
+      "features": [
+        {
+          "id": "312",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "189",
+              "184"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        },
+        {
+          "id": "313",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "184",
+              "198"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "314",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "198",
+              "197"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "309",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "197",
+              "196"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:I",
+            "comment": null
+          }
+        },
+        {
+          "id": "311",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "196",
+              "190"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        },
+        {
+          "id": "298",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Edge",
+            "references": [
+              "190",
+              "189"
+            ]
+          },
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:R",
+            "comment": null
+          }
+        }
+      ]
+    }
+  ],
+  "parcels": [
+    {
+      "id": "PrimaryParcels",
+      "type": "FeatureCollection",
+      "featureType": "PrimaryParcel",
+      "properties": {
+        "spatialRepresentationDefinitions": {
+          "representationStatus": "representation-status:jb",
+          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "coordinateRepresentation": {
+            "coordinateDimension": 2,
+            "zValueRole": "coordinate-z-role:absent"
+          },
+          "verticalExtent": {
+            "status": "vertical-extent-status:ld",
+            "lowerBoundary": {
+              "state": "vertical-boundary-state:dur",
+              "definitionRef": "jurisdictional-limit-lower-1"
+            },
+            "upperBoundary": {
+              "state": "vertical-boundary-state:und"
+            }
+          },
+          "computabilityStatus": "computability-status:rrs",
+          "verticalBoundaryDefinitions": [
+            {
+              "id": "jurisdictional-limit-lower-1",
+              "definitionType": "vertical-definition-type:jur",
+              "limitRole": "vertical-limit-role:ll",
+              "valueType": "vertical-value-type:off",
+              "value": 12.19,
+              "direction": "vertical-direction:blw",
+              "heightReference": "height-reference:gl",
+              "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
+              "sourceReference": "source-crown-grant-depth-limit-1",
+              "resolutionStatus": "requiresReferenceSurface",
+              "provenanceRef": "crown-grant-depth-limit-extraction-1",
+              "sourceBasis": {
+                "ruleType": "crownGrantDepthLimit",
+                "sourceAuthorityType": "CrownGrant",
+                "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND"
+              }
+            }
+          ],
+          "referenceSurfaces": [],
+          "derivedGeometry": {
+            "status": "notGenerated"
+          }
+        }
+      },
+      "features": [
+        {
+          "id": "213",
+          "type": "Feature",
+          "featureType": "PrimaryParcel",
+          "geometry": null,
+          "topology": {
+            "type": "Polygon",
+            "references": [
+              [
+                "298",
+                "311",
+                "309",
+                "314",
+                "313",
+                "312"
+              ]
+            ]
+          },
+          "properties": {
+            "appellation": {
+              "type": "wa:LotOnPlanAppellation",
+              "label": "Lot 213 DP 572532",
+              "hasPart": [
+                {
+                  "type": "ParcelType",
+                  "label": "Lot"
+                },
+                {
+                  "type": "ParcelIdentifier",
+                  "label": "213"
+                },
+                {
+                  "type": "PlanType",
+                  "label": "DP"
+                },
+                {
+                  "type": "PlanNumber",
+                  "label": "572532"
+                }
+              ]
+            },
+            "area": 798,
+            "parcelType": "wa-parcel-type:freehold",
+            "parcelPurpose": "wa-parcel-purpose:lot",
+            "parcelState": "wa-parcel-state:created",
+            "interests": []
+          }
+        }
+      ]
+    }
+  ],
+  "supportingDocuments": [],
+  "annotations": []
+}
+```
+
+#### ttl
+```ttl
+@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
+@prefix container: <https://linked.data.gov.au/def/csdm/container/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
+@prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
+@prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
+@prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix topo: <https://purl.org/geojson/topo#> .
+@prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .
+@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
+@prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
+@prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
+@prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
+@prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
+@prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
+@prefix wa-procedure-used: <https://linked.data.gov.au/def/csdm/wa-procedure-used/> .
+@prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
+@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
+@prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
+@prefix wa-vector-purpose: <https://linked.data.gov.au/def/csdm/wa-vector-purpose/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
+    rdfs:label "DP 422532" ;
+    dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+    container:bearingRotation 0e+00 ;
+    container:horizontalCRS epsg:8024 ;
+    container:parcels <https://www.wa-example.com/features/PrimaryParcels> ;
+    container:points <https://www.wa-example.com/features/BoundaryMark> ;
+    container:purpose wa-survey-purpose:subdivision ;
+    container:referencedCSD <https://www.wa-example.com/features/DP_422526> ;
+    container:surveyType wa-survey-type:SSA ;
+    container:vectorObservations <vectorobservation:computed> ;
+    topo:edges <https://www.wa-example.com/features/observedVectors> ;
+    geojson:collectionFeatureType "CSD" .
+
+<https://www.wa-example.com/features/213> a geojson:Feature,
+        parcel:PrimaryParcel ;
+    geojson:topology [ a geojson:Polygon ;
+            topo:relatedFeatures ( ( <https://www.wa-example.com/features/298> <https://www.wa-example.com/features/311> <https://www.wa-example.com/features/309> <https://www.wa-example.com/features/314> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ) ] ;
+    parcel:appellation [ a <wa:LotOnPlanAppellation> ;
+            rdfs:label "Lot 213 DP 572532" ;
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
+                [ rdfs:label "213" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+    parcel:purpose wa-parcel-purpose:lot ;
+    parcel:state wa-parcel-state:created ;
+    parcel:surfaceArea 798 ;
+    parcel:type wa-parcel-type:freehold .
+
+<https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "BoundaryMarks" ;
+    geojson:features <https://www.wa-example.com/features/184>,
+        <https://www.wa-example.com/features/189>,
+        <https://www.wa-example.com/features/190>,
+        <https://www.wa-example.com/features/196>,
+        <https://www.wa-example.com/features/197>,
+        <https://www.wa-example.com/features/198> .
+
+<https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
+    dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:hyden ] ;
+    container:bearingRotation 0e+00 .
+
+<https://www.wa-example.com/features/PrimaryParcels> a geojson:FeatureCollection,
+        parcel:PrimaryParcel ;
+    geojson:features <https://www.wa-example.com/features/213> .
+
+<https://www.wa-example.com/features/observedVectors> a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "surv:ObservedVector" ;
+    geojson:features <https://www.wa-example.com/features/298>,
+        <https://www.wa-example.com/features/309>,
+        <https://www.wa-example.com/features/311>,
+        <https://www.wa-example.com/features/312>,
+        <https://www.wa-example.com/features/313>,
+        <https://www.wa-example.com/features/314> .
+
+<vectorobservation:computed> a sosa:ObservationCollection,
+        geojson:FeatureCollection ;
+    sosa:hasMember [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
+            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
+            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
+            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
+            sosa:hasResult [ surv:distance 8.832e+00 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
+            sosa:hasResult [ surv:distance 1e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/314> ;
+            sosa:hasResult [ surv:distance 1.4e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ] ;
+    sosa:madeBySensor [ a icsm-equipment-type:software ] ;
+    sosa:observedProperty surveyable:VectorDetermination ;
+    sosa:resultTime "2011-05-22T00:00:00Z" ;
+    sosa:usedProcedure wa-procedure-used:d .
+
+<https://www.wa-example.com/features/184> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:did-not-search ] ;
+    surv:purpose wa-surveypoint-purpose:road-boundary .
+
+<https://www.wa-example.com/features/189> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:did-not-search ] ;
+    surv:purpose wa-surveypoint-purpose:road-boundary .
+
+<https://www.wa-example.com/features/190> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.471898e+04 3.987111e+05 ) ] ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:did-not-search ] ;
+    surv:purpose wa-surveypoint-purpose:road-boundary .
+
+<https://www.wa-example.com/features/196> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.472507e+04 3.987175e+05 ) ] ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:did-not-search ] ;
+    surv:purpose wa-surveypoint-purpose:road-boundary .
+
+<https://www.wa-example.com/features/197> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.46983e+04 3.987431e+05 ) ] ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:did-not-search ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary .
+
+<https://www.wa-example.com/features/198> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:did-not-search ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary .
+
+<https://www.wa-example.com/features/298> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:R ;
+    geojson:topology [ a topo:Edge ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/190> <https://www.wa-example.com/features/189> ) ] .
+
+<https://www.wa-example.com/features/309> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
+    geojson:topology [ a topo:Edge ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/197> <https://www.wa-example.com/features/196> ) ] .
+
+<https://www.wa-example.com/features/311> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:R ;
+    geojson:topology [ a topo:Edge ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/196> <https://www.wa-example.com/features/190> ) ] .
+
+<https://www.wa-example.com/features/312> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:R ;
+    geojson:topology [ a topo:Edge ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
+
+<https://www.wa-example.com/features/313> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
+    geojson:topology [ a topo:Edge ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
+
+<https://www.wa-example.com/features/314> a geojson:Feature ;
+    surv:vectorPurpose wa-vector-purpose:I ;
+    geojson:topology [ a topo:Edge ;
+            topo:relatedFeatures ( <https://www.wa-example.com/features/198> <https://www.wa-example.com/features/197> ) ] .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -23,18 +1339,25 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: Liminal 3D cases profile of Cadastral Survey Data Model
 allOf:
 - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml
-- properties:
-    parcels:
-      type: array
-      items:
-        properties:
-          features:
-            type: array
-            items:
-              properties:
+- anyOf:
+  - properties:
+      parcels:
+        type: array
+        items:
+          required:
+          - spatialRepresentationDefinitions
+  - properties:
+      parcels:
+        type: array
+        items:
+          properties:
+            features:
+              type: array
+              items:
                 properties:
-                  required:
-                  - spatialRepresentationDefinitions
+                  properties:
+                    required:
+                    - spatialRepresentationDefinitions
 x-jsonld-prefixes:
   representation-status: https://linked.data.gov.au/def/csdm/representation-status/
   geometry-legal-status: https://linked.data.gov.au/def/csdm/geometry-legal-status/

@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.44459259300403,
+              -30.730750614470015
+            ],
+            [
+              121.44454422879919,
+              -30.73051618490328
+            ],
+            [
+              121.44464518252326,
+              -30.730424869040444
+            ],
+            [
+              121.44492456642654,
+              -30.73065534703183
+            ],
+            [
+              121.44486087494411,
+              -30.730712954871706
+            ],
+            [
+              121.44476512098763,
+              -30.73074891115523
+            ],
+            [
+              121.44459259300403,
+              -30.730750614470015
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 213 DP 572532",
+          "hasPart": [
+            {
+              "type": "ParcelType",
+              "label": "Lot"
+            },
+            {
+              "type": "ParcelIdentifier",
+              "label": "213"
+            },
+            {
+              "type": "PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "PlanNumber",
+              "label": "572532"
+            }
+          ]
+        },
+        "area": 798,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": []
+      },
+      "id": "213"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld"
+  ]
+}

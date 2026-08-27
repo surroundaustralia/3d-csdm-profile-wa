@@ -6,19 +6,35 @@
       "$ref": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.json"
     },
     {
-      "properties": {
-        "parcels": {
-          "type": "array",
-          "items": {
-            "properties": {
-              "features": {
-                "type": "array",
-                "items": {
-                  "properties": {
-                    "properties": {
-                      "required": [
-                        "spatialRepresentationDefinitions"
-                      ]
+      "anyOf": [
+        {
+          "properties": {
+            "parcels": {
+              "type": "array",
+              "items": {
+                "required": [
+                  "spatialRepresentationDefinitions"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "parcels": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "features": {
+                    "type": "array",
+                    "items": {
+                      "properties": {
+                        "properties": {
+                          "required": [
+                            "spatialRepresentationDefinitions"
+                          ]
+                        }
+                      }
                     }
                   }
                 }
@@ -26,7 +42,7 @@
             }
           }
         }
-      }
+      ]
     }
   ],
   "x-jsonld-prefixes": {
