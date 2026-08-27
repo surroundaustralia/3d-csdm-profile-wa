@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation",
   "bblockName": "Crown Allotment Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.crownAllotment",
-  "generated": "2026-08-27T05:02:38.665912+00:00",
+  "generated": "2026-08-27T05:14:25.188979+00:00",
   "result": true,
   "items": [
     {
@@ -72,12 +72,12 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n19177536d4a441aa98434af56b799c55b1": {
+                "_:n6f1853c84eba46f2bc0fe747afe52a96b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n19177536d4a441aa98434af56b799c55b1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n6f1853c84eba46f2bc0fe747afe52a96b1: *none*\n"
             }
           ]
         }

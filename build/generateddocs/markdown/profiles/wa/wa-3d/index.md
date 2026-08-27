@@ -369,8 +369,8 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -390,12 +390,12 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -410,7 +410,7 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470028e+04 3.984264e+05 0e+00 ) ] ;
-    ns2:qualityMeasure 1.3e-02 ;
+    ns1:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -421,12 +421,12 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.467663e+04 3.984343e+05 0e+00 ) ] ;
     rdfs:comment "In Bitumen" ;
-    ns2:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
-    ns2:qualityMeasure 2.8e-02 ;
+    ns1:name [ rdfs:label "EFB157243/9533" ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
+                [ rdfs:label "9533" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+    ns1:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -437,12 +437,12 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.47613e+04 3.984891e+05 0e+00 ) ] ;
     rdfs:comment "In Concrete" ;
-    ns2:name [ rdfs:label "EFB157243/9802" ;
+    ns1:name [ rdfs:label "EFB157243/9802" ;
             dcterms:hasPart [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
                 [ rdfs:label "9802" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
-    ns2:qualityMeasure 2.6e-02 ;
+    ns1:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:brass-plaque ;
@@ -22683,14 +22683,14 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
             topo:relatedFeatures ( ( uuid:13b59b93-6f0f-4773-a8b7-88401c9c1fae uuid:ff22d8d8-5d2e-4fdd-97ce-d80e2b48b5de uuid:5a34b8a2-dac0-4ad4-8a59-cbee38b407c8 uuid:2fbdbc42-6443-4bc2-bd42-0c77a3e9c9fc uuid:54943d43-ea1a-4a8c-8cbb-c6d89187e842 uuid:cf0f9b8d-c8d2-4691-8c41-086e18375574 uuid:ed1e393e-d7f5-4a85-93b1-f08812b85014 uuid:d2ebb167-17a2-4bd0-8411-97f83c92d9e6 uuid:d75b510f-9b88-4a82-bac4-4de995f4a1b9 uuid:7914b52a-e13d-4d79-9f76-43e040fa939f uuid:b4b815fe-eb25-401b-b65f-f7a020da8944 uuid:41e63da1-bee7-48da-be90-527c99fa38d8 uuid:e9b94664-2b7a-4e97-a565-4bcce3896392 uuid:1ce937ba-14a1-48dc-b65c-3b50e98ceb37 uuid:6e614af5-e74d-4c6d-b841-85ac4dd93250 uuid:379f8fe1-7311-4db2-a5b3-8b7cf5dd0882 uuid:780d3b13-0263-4449-ad1e-1627fd0042aa uuid:fd23e6be-fb9a-44fd-8ad1-55df298d506a uuid:f7fb3296-07ab-42f6-937f-0ebbe0ee98ea ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 3 DP 214866" ;
-            dct:hasPart [ rdfs:label "3" ;
-                    commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
+            dct:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
                 [ rdfs:label "214866" ;
                     commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <file:///github/workspace/PlanType> ] ] ;
+                [ rdfs:label "3" ;
+                    commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 2829 ;
