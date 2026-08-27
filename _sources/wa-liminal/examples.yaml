@@ -14,6 +14,23 @@
     - language: json
       ref: examples/2d-footprint.json
 
+
+- title: 2.5D reference surface
+  content: |
+    The footprint is associated with a ground reference surface. The surface provides vertical
+    context but is not a legal vertical boundary, so `verticalExtent.status` remains `notApplicable`.
+    
+    This is the same dataset used in the [2D Footprint Example](2d-footprint), except a reference 
+    surface (ground surface in this instance) has been included.
+    
+    ![2.5D reference surface](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/2-5d-reference-surface.png)
+
+  base-output-filename: 2-5d-footprint-reference-surface
+  snippets:
+    - language: json
+      ref: examples/2-5d-reference-surface.json
+
+
 - title: Parcel Collection
   content: |-
     arbitrary (not actual case) attachment of spatial representation to a parcel collection
