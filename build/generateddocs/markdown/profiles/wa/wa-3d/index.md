@@ -391,11 +391,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -422,10 +422,10 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
             geojson:coordinates ( 5.467663e+04 3.984343e+05 0e+00 ) ] ;
     rdfs:comment "In Bitumen" ;
     ns1:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9533" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     ns1:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
@@ -9767,11 +9767,11 @@ uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:points uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b ;
@@ -22601,11 +22601,11 @@ uuid:e9901182-59a5-4f67-8093-942fef888bf2 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:parcels uuid:f6235c7a-8ada-499d-9574-067ccd370949 ;
@@ -22685,10 +22685,10 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
             rdfs:label "Lot 3 DP 214866" ;
             dct:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <file:///github/workspace/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
                 [ rdfs:label "214866" ;
                     commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
                 [ rdfs:label "3" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -25294,19 +25294,6 @@ Links to the schema:
               "@id": "sosa:hasMember",
               "@type": "@id"
             },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -25322,6 +25309,19 @@ Links to the schema:
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
         },
@@ -25365,19 +25365,6 @@ Links to the schema:
               "@id": "sosa:hasMember",
               "@type": "@id"
             },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -25393,6 +25380,19 @@ Links to the schema:
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
         }

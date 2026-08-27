@@ -703,19 +703,6 @@
               "@id": "sosa:hasMember",
               "@type": "@id"
             },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -731,6 +718,19 @@
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
         },
@@ -774,19 +774,6 @@
               "@id": "sosa:hasMember",
               "@type": "@id"
             },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -802,6 +789,19 @@
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
         }

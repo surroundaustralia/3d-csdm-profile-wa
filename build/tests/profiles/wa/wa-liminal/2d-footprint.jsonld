@@ -474,7 +474,7 @@
     {
       "id": "uuid:a358dcd1-5013-40a0-96b6-e04e70cd2f40",
       "type": "FeatureCollection",
-      "featureType": "ObservedVector",
+      "featureType": "surv:ObservedVector",
       "features": [
         {
           "id": "line-geometry-1",
@@ -545,7 +545,7 @@
     {
       "id": "uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2",
       "type": "FeatureCollection",
-      "featureType": "SubtendedAngle",
+      "featureType": "surv:SubtendedAngle",
       "features": [
         {
           "id": "angle-1",

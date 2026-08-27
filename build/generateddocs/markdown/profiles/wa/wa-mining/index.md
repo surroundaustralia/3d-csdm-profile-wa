@@ -550,9 +550,9 @@ Minimal example - with combined elements from each test case
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -577,12 +577,12 @@ Minimal example - with combined elements from each test case
 <https://www.wa-example.com/features/Western-Australia-Example-1> a geojson:FeatureCollection ;
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -596,11 +596,11 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
-    ns2:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "9540" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
+    ns3:name [ rdfs:label "EFB157243/9540" ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
+                [ rdfs:label "9540" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -634,14 +634,14 @@ Minimal example - with combined elements from each test case
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
     sosa:usedProcedure wa-procedure-used:M ;
-    ns3:angleType icsm-angle-type:angle ;
-    ns3:distanceType icsm-distance-type:grid .
+    ns1:angleType icsm-angle-type:angle ;
+    ns1:distanceType icsm-distance-type:grid .
 
 <https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    ns2:name [ rdfs:label "" ] ;
+    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -653,7 +653,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    ns2:name [ rdfs:label "" ] ;
+    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -670,7 +670,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    ns2:name [ rdfs:label "" ] ;
+    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -1408,19 +1408,6 @@ Links to the schema:
               "@id": "sosa:hasMember",
               "@type": "@id"
             },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -1436,6 +1423,19 @@ Links to the schema:
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
         },
@@ -1479,19 +1479,6 @@ Links to the schema:
               "@id": "sosa:hasMember",
               "@type": "@id"
             },
-            "hasResult": {
-              "@id": "sosa:hasResult",
-              "@type": "@id",
-              "@context": {
-                "pose": {
-                  "@context": {
-                    "angles": "csdm:utils/geopose/angles"
-                  },
-                  "@id": "surv:pose"
-                },
-                "distance": "surv:distance"
-              }
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -1507,6 +1494,19 @@ Links to the schema:
                   "@id": "csdm:surveyobs/angleAccuracyClass"
                 }
               }
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
             }
           }
         }
