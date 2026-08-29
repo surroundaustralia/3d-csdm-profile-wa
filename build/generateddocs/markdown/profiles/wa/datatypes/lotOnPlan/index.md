@@ -64,12 +64,12 @@ Example appellation.
 [] rdfs:label "Lot 4 on Plan 1234" ;
     dcterms:hasPart [ commonpatterns:namePartRef wa-survey-type:p ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ],
+        [ rdfs:label "4" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
         [ rdfs:label "1234" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
-        [ rdfs:label "4" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ] .
 
 
 ```
