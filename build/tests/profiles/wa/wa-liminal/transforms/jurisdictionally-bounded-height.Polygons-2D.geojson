@@ -1,0 +1,190 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.79718801276466,
+              -31.893290887647535,
+              -11.989
+            ],
+            [
+              115.79718601252313,
+              -31.893653732234803,
+              -12.989
+            ],
+            [
+              115.79697337440058,
+              -31.893652878797063,
+              -13.39
+            ],
+            [
+              115.79697538604657,
+              -31.893290034215067,
+              -12.29
+            ],
+            [
+              115.79718801276466,
+              -31.893290887647535,
+              -11.989
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 800 on Plan DP 431276",
+          "hasPart": [
+            {
+              "type": "surveyType",
+              "ref": "wa-survey-type:deposited-plan"
+            },
+            {
+              "type": "surveyNumber",
+              "label": "DP 431276"
+            },
+            {
+              "type": "lotPrefix",
+              "ref": "wa-parcel-purpose:lot"
+            },
+            {
+              "type": "lotNumber",
+              "label": "800"
+            }
+          ]
+        },
+        "area": 809,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:created",
+        "interests": []
+      },
+      "id": "parcel-1"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": []
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 1 on Plan SP 28750",
+          "hasPart": [
+            {
+              "type": "surveyType",
+              "ref": "wa-survey-type:deposited-plan"
+            },
+            {
+              "type": "surveyNumber",
+              "label": "SP 28750"
+            },
+            {
+              "type": "lotPrefix",
+              "ref": "wa-parcel-purpose:lot"
+            },
+            {
+              "type": "lotNumber",
+              "label": "1"
+            }
+          ]
+        },
+        "area": 809,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:former-tenure",
+        "interests": [
+          {
+            "interestLink": "2500-584",
+            "interestType": "wa-interest-type:ct",
+            "role": "sourceCertificateOfTitle"
+          }
+        ]
+      },
+      "id": "parcel-2"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              115.79718801276466,
+              -31.893290887647535,
+              -11.989
+            ],
+            [
+              115.79718601252313,
+              -31.893653732234803,
+              -12.989
+            ],
+            [
+              115.79697337440058,
+              -31.893652878797063,
+              -13.39
+            ],
+            [
+              115.79697538604657,
+              -31.893290034215067,
+              -12.29
+            ],
+            [
+              115.79718801276466,
+              -31.893290887647535,
+              -11.989
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Lot 2 on Plan SP 28750",
+          "hasPart": [
+            {
+              "type": "surveyType",
+              "ref": "wa-survey-type:deposited-plan"
+            },
+            {
+              "type": "surveyNumber",
+              "label": "SP 28750"
+            },
+            {
+              "type": "lotPrefix",
+              "ref": "wa-parcel-purpose:lot"
+            },
+            {
+              "type": "lotNumber",
+              "label": "2"
+            }
+          ]
+        },
+        "area": 809,
+        "parcelType": "wa-parcel-type:freehold",
+        "parcelPurpose": "wa-parcel-purpose:lot",
+        "parcelState": "wa-parcel-state:former-tenure",
+        "interests": [
+          {
+            "interestLink": "2500-585",
+            "interestType": "wa-interest-type:ct"
+          }
+        ]
+      },
+      "id": "parcel-3"
+    }
+  ],
+  "@context": [
+    "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/featureCollection/context.jsonld",
+    {
+      "wa-profile": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
+      "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/"
+    }
+  ]
+}

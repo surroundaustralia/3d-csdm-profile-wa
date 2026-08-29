@@ -1,10 +1,10 @@
 Validation report for icsm.profiles.wa.wa-liminal - WA liminal geometry profile
-Generated 2026-08-29T02:46:53.447304+00:00
+Generated 2026-08-29T02:47:25.439905+00:00
 === Files ===
-Using examples/2d-footprint.json from examples
+Using examples/jurisdictionally-bounded.json from examples
 JSON-LD context is present - uplifting
-Output JSON-LD 2d-footprint.jsonld created
-Output Turtle 2d-footprint.ttl created
+Output JSON-LD jurisdictionally-bounded-height.jsonld created
+Output Turtle jurisdictionally-bounded-height.ttl created
 === End Files ===
 
 === JSON Schema ===
@@ -73,8 +73,8 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testCRS: <file:///github/workspace/01-2d-footprint>
- - Shape :testSurveyMetadata: <file:///github/workspace/01-2d-footprint>
+ - Shape :testCRS: <file:///github/workspace/06-jurisdictionally-bounded>
+ - Shape :testSurveyMetadata: <file:///github/workspace/06-jurisdictionally-bounded>
  - Shape :testDistanceType: *none*
  - Shape :testAngleType: *none*
  - Shape :testVHD: *none*
@@ -103,11 +103,11 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-state: <file:///github/workspace/point-5>/surv:monumentedBy,<file:///github/workspace/point-2>/surv:monumentedBy,<file:///github/workspace/point-3>/surv:monumentedBy,<file:///github/workspace/point-4>/surv:monumentedBy
- - Shape jcl:testBoundVocab-condition: <file:///github/workspace/point-5>/surv:monumentedBy,<file:///github/workspace/point-2>/surv:monumentedBy,<file:///github/workspace/point-3>/surv:monumentedBy,<file:///github/workspace/point-4>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-state: <file:///github/workspace/point-2>/surv:monumentedBy,<file:///github/workspace/point-4>/surv:monumentedBy,<file:///github/workspace/point-5>/surv:monumentedBy,<file:///github/workspace/point-3>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: <file:///github/workspace/point-2>/surv:monumentedBy,<file:///github/workspace/point-4>/surv:monumentedBy,<file:///github/workspace/point-5>/surv:monumentedBy,<file:///github/workspace/point-3>/surv:monumentedBy
  - Shape jcl:testBoundVocab-vector-purpose: *none*
  - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/point-5>,<file:///github/workspace/point-2>,<file:///github/workspace/point-3>,<file:///github/workspace/point-4>
- - Shape jcl:testBoundVocab-form: <file:///github/workspace/point-5>/surv:monumentedBy,<file:///github/workspace/point-2>/surv:monumentedBy,<file:///github/workspace/point-3>/surv:monumentedBy,<file:///github/workspace/point-4>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-form: <file:///github/workspace/point-2>/surv:monumentedBy,<file:///github/workspace/point-4>/surv:monumentedBy,<file:///github/workspace/point-5>/surv:monumentedBy,<file:///github/workspace/point-3>/surv:monumentedBy
  - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/point-5>,<file:///github/workspace/point-2>,<file:///github/workspace/point-3>,<file:///github/workspace/point-4>
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
@@ -165,17 +165,17 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
  - Shape toporules:testTopoDirectedReferencesExist: *none*
- - Shape toporules:testTopoReferencesExist: <file:///github/workspace/line-geometry-1>/geojson:topology,<file:///github/workspace/angle-4>/geojson:topology,<file:///github/workspace/angle-2>/geojson:topology,<file:///github/workspace/line-geometry-2>/geojson:topology,<file:///github/workspace/angle-3>/geojson:topology,<file:///github/workspace/parcel-2>/geojson:topology,<file:///github/workspace/parcel-1>/geojson:topology,<file:///github/workspace/line-geometry-3>/geojson:topology,<file:///github/workspace/line-geometry-4>/geojson:topology,<file:///github/workspace/angle-1>/geojson:topology,<file:///github/workspace/parcel-3>/geojson:topology
- - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/line-geometry-1>/geojson:topology,<file:///github/workspace/line-geometry-3>/geojson:topology,<file:///github/workspace/line-geometry-4>/geojson:topology,<file:///github/workspace/line-geometry-2>/geojson:topology
- - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/line-geometry-1>/geojson:topology,<file:///github/workspace/line-geometry-3>/geojson:topology,<file:///github/workspace/line-geometry-4>/geojson:topology,<file:///github/workspace/line-geometry-2>/geojson:topology
+ - Shape toporules:testTopoReferencesExist: <file:///github/workspace/angle-3>/geojson:topology,<file:///github/workspace/parcel-2>/geojson:topology,<file:///github/workspace/angle-4>/geojson:topology,<file:///github/workspace/line-geometry-1>/geojson:topology,<file:///github/workspace/angle-2>/geojson:topology,<file:///github/workspace/line-geometry-3>/geojson:topology,<file:///github/workspace/angle-1>/geojson:topology,<file:///github/workspace/parcel-3>/geojson:topology,<file:///github/workspace/line-geometry-4>/geojson:topology,<file:///github/workspace/line-geometry-2>/geojson:topology,<file:///github/workspace/parcel-1>/geojson:topology
+ - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/line-geometry-2>/geojson:topology,<file:///github/workspace/line-geometry-1>/geojson:topology,<file:///github/workspace/line-geometry-3>/geojson:topology,<file:///github/workspace/line-geometry-4>/geojson:topology
+ - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/line-geometry-2>/geojson:topology,<file:///github/workspace/line-geometry-1>/geojson:topology,<file:///github/workspace/line-geometry-3>/geojson:topology,<file:///github/workspace/line-geometry-4>/geojson:topology
 
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:neddd7c73dc574b8e994c3292807d7e33b3: <file:///github/workspace/point-3>/geojson:geometry,<file:///github/workspace/point-2>/geojson:geometry,<file:///github/workspace/point-5>/geojson:geometry,<file:///github/workspace/point-4>/geojson:geometry
- - Shape _:neddd7c73dc574b8e994c3292807d7e33b1: <file:///github/workspace/point-3>/geojson:geometry,<file:///github/workspace/point-4>/geojson:geometry,<file:///github/workspace/point-4>/dct:spatial,<file:///github/workspace/point-2>/dct:spatial,<file:///github/workspace/point-5>/dct:spatial,<file:///github/workspace/point-5>/geojson:geometry,<file:///github/workspace/point-3>/dct:spatial,<file:///github/workspace/point-2>/geojson:geometry
+ - Shape _:neddd7c73dc574b8e994c3292807d7e33b3: <file:///github/workspace/point-2>/geojson:geometry,<file:///github/workspace/point-4>/geojson:geometry,<file:///github/workspace/point-3>/geojson:geometry,<file:///github/workspace/point-5>/geojson:geometry
+ - Shape _:neddd7c73dc574b8e994c3292807d7e33b1: <file:///github/workspace/point-2>/geojson:geometry,<file:///github/workspace/point-4>/geojson:geometry,<file:///github/workspace/point-4>/dct:spatial,<file:///github/workspace/point-5>/dct:spatial,<file:///github/workspace/point-3>/geojson:geometry,<file:///github/workspace/point-3>/dct:spatial,<file:///github/workspace/point-2>/dct:spatial,<file:///github/workspace/point-5>/geojson:geometry
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
@@ -227,7 +227,7 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
- - Shape ex:NamePartShape: <file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart
+ - Shape ex:NamePartShape: <file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-1>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-3>/parcel:appellation/dct:hasPart,<file:///github/workspace/parcel-2>/parcel:appellation/dct:hasPart
  - Shape ex:NamedObjectShape: *none*
 
 === End SHACL ===
