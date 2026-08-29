@@ -1,5 +1,5 @@
-PREFIX : <https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/>
-PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-survey-documentation-type>
+PREFIX : <https://linked.data.gov.au/def/csdm/wa-survey-type/>
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-survey-type>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -9,21 +9,10 @@ PREFIX termtype: <https://linked.data.gov.au/def/csdm/termtypes/>
 PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:csd
-    a
-        skos:Concept ,
-        termtype:DocType ;
-    skos:definition "A Cadastral Survey Data (CSD) prepared for lodgement with Landgate to meet the requirements of Transfer of Land (Surveys) Regulations 1995; Regulation 3." ;
-    skos:inScheme cs: ;
-    skos:notation "csd" ;
-    skos:prefLabel "Cadastral Survey Dataset" ;
-    skos:topConceptOf cs: ;
-.
-
 :ct
     a
         skos:Concept ,
-        termtype:DocType ;
+        termtype:SurveyType ;
     skos:definition "An official document issued by an appropriate jurisdictional authority identifying the owner(s) of Real property along with any encumbrances over the property." ;
     skos:inScheme cs: ;
     skos:notation "ct" ;

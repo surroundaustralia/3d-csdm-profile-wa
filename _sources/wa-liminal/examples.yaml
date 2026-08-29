@@ -50,7 +50,8 @@
 - title: Absolute AHD height description
   content: |
     Both vertical boundaries are supported by absolute values referenced to the AHD vertical datum 
-    (EPSG:5711), so `computabilityStatus` is `computable`, but has not been included in the 3D CSDM.
+    (EPSG:5711), so `computabilityStatus` is `computable`, but in this example, has not been included in 
+    the 3D CSDM.
     
     As absolute heights are defined, `zMin` and `zMax` are populated.
     
@@ -60,6 +61,20 @@
   snippets:
     - language: json
       ref: examples/height-described-ahd.json
+
+
+- title: Jurisdictionally bounded height description
+  content: |
+    A vertical boundary is established by title, Crown Grant, statute or by another jurisdictional authority.
+    
+    In this example only a lower vertical extent is defined (commonly resulting from a WA Crown Grant).
+    
+    ![Jurisdictionally bounded height description](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/jurisdictionally-bounded.png)
+
+  base-output-filename: jurisdictionally-bounded-height
+  snippets:
+    - language: json
+      ref: examples/jurisdictionally-bounded.json
 
 
 - title: Parcel Collection
