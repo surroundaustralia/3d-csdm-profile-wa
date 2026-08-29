@@ -57,14 +57,14 @@
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/2001> <https://www.wa-example.com/features/20015> <https://www.wa-example.com/features/20014> <https://www.wa-example.com/features/20013> <https://www.wa-example.com/features/20011> <https://www.wa-example.com/features/20010> <https://www.wa-example.com/features/2009> <https://www.wa-example.com/features/2008> <https://www.wa-example.com/features/2007> <https://www.wa-example.com/features/2006> <https://www.wa-example.com/features/2005> <https://www.wa-example.com/features/2004> <https://www.wa-example.com/features/2003> <https://www.wa-example.com/features/2002> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 3 DP 214866" ;
-            dcterms:hasPart [ rdfs:label "214866" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
+            dcterms:hasPart [ rdfs:label "3" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "3" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                [ rdfs:label "214866" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/LR-3150-715> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:reserve ;
