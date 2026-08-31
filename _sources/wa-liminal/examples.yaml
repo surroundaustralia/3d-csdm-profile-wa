@@ -84,6 +84,21 @@
       ref: examples/jurisdictionally-bounded.json
 
 
+- title: Derived 3D solid
+  content: |
+    Sufficient source information (footprint, resolved vertical boundary definitions, and a ground
+    reference surface) has been converted into a closed 3D solid. The source definitions in
+    `verticalBoundaryDefinitions` are retained alongside the computed result in `derivedGeometry`.
+    
+    ![Jurisdictionally bounded height description](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/derived-3d-solid.png)
+  
+
+  base-output-filename: derived-3d-solid
+  snippets:
+    - language: json
+      ref: examples/derived-3d-solid.json
+
+
 - title: Parcel Collection
   content: |-
     arbitrary (not actual case) attachment of spatial representation to a parcel collection
