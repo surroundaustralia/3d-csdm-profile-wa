@@ -769,6 +769,8 @@
               ]
             },
             "area": 809,
+            "zMin": 16.0,
+            "zMax": 36.0,
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:created",
