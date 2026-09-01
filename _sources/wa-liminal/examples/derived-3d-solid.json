@@ -1663,6 +1663,35 @@
           "properties": {
             "circumference": 105.369
           }
+        },
+        {
+          "id": "uuid:a7af8b94-f9af-43ba-9f61-92f7e23c5d7d",
+          "type": "Feature",
+          "geometry": null,
+          "topology": {
+            "type": "Ring",
+            "directed_references": [
+              {
+                "ref": "line-geometry-2",
+                "orientation": "-"
+              },
+              {
+                "ref": "line-geometry-1",
+                "orientation": "+"
+              },
+              {
+                "ref": "line-geometry-3",
+                "orientation": "+"
+              },
+              {
+                "ref": "line-geometry-4",
+                "orientation": "+"
+              }
+            ]
+          },
+          "properties": {
+            "circumference": 120.733
+          }
         }
       ]
     }
@@ -2451,6 +2480,23 @@
                 "interestType": "wa-interest-type:ct"
               }
             ]
+          }
+        }
+      ]
+    }
+  ],
+  "terrain_intersection_curve": [
+    {
+      "id": "uuid:951164d0-0321-446a-b8fd-15a042725da6",
+      "type": "FeatureCollection",
+      "featureType": "terrainIntersectionCurve",
+      "features": [
+        {
+          "id": "uuid:c2a267e3-84d9-4dc9-9084-8c3013f234bf",
+          "properties": {
+            "groundSurfaceRef": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
+            "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
+            "ringRef": "uuid:a7af8b94-f9af-43ba-9f61-92f7e23c5d7d"
           }
         }
       ]
