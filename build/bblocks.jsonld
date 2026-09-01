@@ -194,7 +194,7 @@
   "name": "Building Blocks - WA Implementation Profile for 3D CSDM",
   "abstract": "This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), \nextending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).\n \nThis version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre. \n",
   "description": "\nThe encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.\n\nProfiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).\n",
-  "modified": "2026-08-31T20:14:03.319826",
+  "modified": "2026-09-01T02:02:33.989100",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"447ae31f978ca3b124bfcbcf5473c7aadddb56af",
@@ -285,7 +285,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -377,7 +377,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -402,8 +402,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces",
-        "bblocks://ogc.ogc-utils.iri-or-curie"
+        "bblocks://ogc.ogc-utils.iri-or-curie",
+        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
       ],
       "schema": [
         {
@@ -495,7 +495,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -612,7 +612,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -637,8 +637,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces",
-        "bblocks://ogc.ogc-utils.iri-or-curie"
+        "bblocks://ogc.ogc-utils.iri-or-curie",
+        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
       ],
       "schema": [
         {
@@ -730,7 +730,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -764,8 +764,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces",
-        "bblocks://ogc.ogc-utils.iri-or-curie"
+        "bblocks://ogc.ogc-utils.iri-or-curie",
+        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
       ],
       "schema": [
         {
@@ -857,7 +857,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -873,27 +873,27 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
           "prof:hasRole": "role:validation",
           "dct:format": "text/turtle",
           "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         }
       ],
       "dependsOn": [
-        "bblocks://icsm.profiles.wa.datatypes.crownAllotment",
+        "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
         "bblocks://icsm.profiles.wa.datatypes.lotOnPlan",
-        "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure"
+        "bblocks://icsm.profiles.wa.datatypes.crownAllotment"
       ],
       "schema": [
         {
@@ -959,7 +959,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -1016,15 +1016,6 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
@@ -1034,11 +1025,20 @@
         },
         {
           "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl"
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.common",
           "prof:hasRole": "role:validation",
@@ -1047,9 +1047,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
             "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.csdm.features.CSD",
           "prof:hasRole": "role:validation",
@@ -1058,8 +1058,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature",
           "prof:hasRole": "role:validation",
@@ -1068,8 +1068,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature-collection",
           "prof:hasRole": "role:validation",
@@ -1096,8 +1096,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-arc",
           "prof:hasRole": "role:validation",
@@ -1254,7 +1254,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -1288,15 +1288,6 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
@@ -1306,11 +1297,20 @@
         },
         {
           "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl"
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.common",
           "prof:hasRole": "role:validation",
@@ -1319,9 +1319,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
             "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.csdm.features.CSD",
           "prof:hasRole": "role:validation",
@@ -1330,8 +1330,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature",
           "prof:hasRole": "role:validation",
@@ -1340,8 +1340,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature-collection",
           "prof:hasRole": "role:validation",
@@ -1368,8 +1368,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-arc",
           "prof:hasRole": "role:validation",
@@ -1549,7 +1549,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "sources": [
         {
           "title": "Summary of Western Australian Parcel Representation Examples (2.5D liminal proposal)",
@@ -1607,15 +1607,6 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
@@ -1625,11 +1616,20 @@
         },
         {
           "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl"
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.common",
           "prof:hasRole": "role:validation",
@@ -1638,9 +1638,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
             "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.csdm.features.CSD",
           "prof:hasRole": "role:validation",
@@ -1649,8 +1649,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature",
           "prof:hasRole": "role:validation",
@@ -1659,8 +1659,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature-collection",
           "prof:hasRole": "role:validation",
@@ -1687,8 +1687,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-arc",
           "prof:hasRole": "role:validation",
@@ -1868,7 +1868,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-08-31",
+      "dateOfLastChange": "2026-09-01",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -1921,15 +1921,6 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-          ],
-          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
-          "prof:hasRole": "role:validation",
-          "dct:format": "text/turtle",
-          "dct:conformsTo": "shacl:"
-        },
-        {
-          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
@@ -1939,11 +1930,20 @@
         },
         {
           "prof:hasArtifact": [
+            "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.bbr.utils.compoundName",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
             "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl"
+            "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.profiles.common",
           "prof:hasRole": "role:validation",
@@ -1952,9 +1952,9 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
             "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
-            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
+            "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
           ],
           "rdfs:seeAlso": "bblocks://icsm.csdm.features.CSD",
           "prof:hasRole": "role:validation",
@@ -1963,8 +1963,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature",
           "prof:hasRole": "role:validation",
@@ -1973,8 +1973,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-feature-collection",
           "prof:hasRole": "role:validation",
@@ -2001,8 +2001,8 @@
         },
         {
           "prof:hasArtifact": [
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
-            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+            "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.features.topo-arc",
           "prof:hasRole": "role:validation",

@@ -83,14 +83,14 @@
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ rdfs:label "DP 431276" ;
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                [ rdfs:label "DP 431276" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ rdfs:label "800" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -103,12 +103,12 @@
             rdfs:label "Lot 1 on Plan SP 28750" ;
             dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "1" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
                 [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -121,14 +121,14 @@
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                [ rdfs:label "2" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -262,6 +262,14 @@ uuid:a358dcd1-5013-40a0-96b6-e04e70cd2f40 a geojson:FeatureCollection ;
         <file:///github/workspace/line-geometry-3>,
         <file:///github/workspace/line-geometry-4> .
 
+uuid:a7af8b94-f9af-43ba-9f61-92f7e23c5d7d a geojson:Feature ;
+    geojson:topology [ a topo:Ring ;
+            topo:directedReferences ( [ topo:orientation "-" ;
+                        topo:ref <file:///github/workspace/line-geometry-2> ] [ topo:orientation "+" ;
+                        topo:ref <file:///github/workspace/line-geometry-1> ] [ topo:orientation "+" ;
+                        topo:ref <file:///github/workspace/line-geometry-3> ] [ topo:orientation "+" ;
+                        topo:ref <file:///github/workspace/line-geometry-4> ] ) ] .
+
 uuid:ae2403ce-5a09-43fb-a89e-fe2832795aa6 a geojson:FeatureCollection ;
     geojson:collectionFeatureType "Edge" ;
     geojson:features uuid:13bf7136-40e5-4784-a777-f1ed13b34a6d,
@@ -296,6 +304,7 @@ uuid:b4ab3483-688b-4b11-9d5b-5624939ef7a5 a geojson:FeatureCollection ;
         uuid:7a02c21b-89a1-48f3-85cb-fa499bda5095,
         uuid:8d059391-8d47-4e63-af4f-9a81373bc71f,
         uuid:9d827ac5-9539-4cea-8c97-04ab159e837d,
+        uuid:a7af8b94-f9af-43ba-9f61-92f7e23c5d7d,
         uuid:b8477ae0-f1fc-4ffd-913e-68e01d25e77e,
         uuid:bd567e31-42fc-4b41-a2e9-016d994c3c12,
         uuid:d84f4fdf-a206-421a-9e65-307a683fab3c,
