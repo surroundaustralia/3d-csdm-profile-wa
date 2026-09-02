@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Topology 3D Viewer (via Three.js)</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/viewer.css" />
+</head>
+<body class="full-window">
+    <div id="sceneContainer">
+        <div id="info">Loading model...<br>Use the mouse to rotate and zoom</div>
+        <div id="controls">
+            <strong id="modelLabel">Model:</strong>
+            <label for="modelSelect">Model</label>
+            <select id="modelSelect">
+                <option value="data/cube.json">Cube</option>
+                <option value="data/polyhedron.json">Polyhedron</option>
+            <option value="data/tetrahedron.json" selected>Tetrahedron</option>
+            <option value="data/4-unit-up-down.json">4 Unit Up/Down</option>
+            <option value="data/cube-with-void.json">Cube with Void</option>
+            <option value="data/cube-with-protrusion.json">Cube with Protrusion</option>
+            <option value="data/parcel.json">DP 431276</option>
+            <option value="data/SP83687.json">SP 83687</option>
+            <option value="data/derived-3d-solid.json">Derived 3D Solid</option>
+            </select>
+            <label><input type="checkbox" id="toggleWireframe"> Wireframe Mode</label>
+            <label><input type="checkbox" id="toggleEdges" checked> Show Edges</label>
+            <label><input type="checkbox" id="toggleVertices"> Show Vertices</label>
+            <button id="resetCamera">Reset Camera</button>
+            <button id="toggleGrid">Toggle Grid</button>
+            <button id="toggleProjection">View: Perspective</button>
+            <hr style="border-color: #555; margin: 10px 0;">
+            <div id="objectsControls"><strong>Objects:</strong></div>
+    </div>
+</div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160/examples/jsm/",
+            "earcut": "https://cdn.jsdelivr.net/npm/earcut@2.2.4/+esm"
+        }
+    }
+    </script>
+    <script type="module" src="js/topology_viewer.js"></script>
+</body>
+</html>

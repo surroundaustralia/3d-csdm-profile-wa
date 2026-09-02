@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3D CSDM Viewer</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/viewer.css" />
+</head>
+<body class="fixed-layout">
+    <div id="sceneContainer">
+        <div id="info">Loading model...<br>Use the mouse to rotate and zoom</div>
+        <div id="controls">
+            <strong id="modelLabel">Model:4-unit-up-down.json</strong>
+            <label><input type="checkbox" id="toggleWireframe"> Wireframe Mode</label>
+            <label><input type="checkbox" id="toggleEdges" checked> Show Edges</label>
+            <label><input type="checkbox" id="toggleVertices"> Show Vertices</label>
+            <button id="resetCamera">Reset Camera</button>
+            <button id="toggleGrid">Toggle Grid</button>
+            <button id="toggleProjection">View: Perspective</button>
+            <hr style="border-color: #555; margin: 10px 0;">
+            <div id="objectsControls"><strong>Objects:</strong></div>
+        </div>
+    </div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+            "earcut": "https://cdn.jsdelivr.net/npm/earcut@2.2.4/+esm"
+        }
+    }
+    </script>
+    <script type="module" src="js/bb_topology_viewer.js"></script>
+</body>
+</html>
