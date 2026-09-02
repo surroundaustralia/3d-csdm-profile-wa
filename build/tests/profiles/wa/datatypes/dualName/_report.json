@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)",
   "bblockName": "Dual Name (Compound)",
   "bblockId": "icsm.profiles.wa.datatypes.dualName",
-  "generated": "2026-09-01T02:02:53.546978+00:00",
+  "generated": "2026-09-02T17:55:16.570397+00:00",
   "result": true,
   "items": [
     {
@@ -72,12 +72,12 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
               "focusNodes": {
-                "_:na815c527221240478357e5a5cc6820e6b1": {
+                "_:n81ac1439c3ea45cab3009c971e2106a6b1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:na815c527221240478357e5a5cc6820e6b1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n81ac1439c3ea45cab3009c971e2106a6b1: *none*\n"
             }
           ]
         }
