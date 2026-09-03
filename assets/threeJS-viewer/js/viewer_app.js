@@ -10,6 +10,17 @@ const MESH_OPACITY_TRANSPARENT = 0.85;
 const MESH_OPACITY_SURFACE = 0.55;
 const MESH_OPACITY_PARCEL = 0.35;
 
+/**
+ * Parcel states drawn by default.
+ *
+ * Parcels outside this set are still built and still appear in the object panel, but start
+ * hidden: the parcels of a dataset commonly share a footprint, so drawing every historical
+ * tenure at once stacks coincident translucent polygons at the datum.
+ */
+const PRIMARY_PARCEL_STATES = new Set([
+    'wa-parcel-state:created',
+]);
+
 // ─── UI messages ──────────────────────────────────────────────────────────────
 
 const LOADING_MESSAGE = 'Loading model...<br>Use the mouse to rotate and zoom';
@@ -105,14 +116,24 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
             const opacity = needsTransparency(data) ? MESH_OPACITY_TRANSPARENT : 1.0;
             const hasParcels = parcels.length > 0;
 
+            // Built once and shared: every parcel is drawn at the datum, and the map is a full
+            // pass over the point map.
+            const datumPointMap = _createDatumPointMap(topologyMaps.pointMap);
+
+            // Colour is chosen by index, so the three lists are numbered consecutively rather
+            // than each starting at zero — otherwise the first parcel, surface, and solid all
+            // share a colour.
             parcels.forEach((parcel, index) => {
-                _addParcelToScene(parcel, index, topologyMaps);
+                _addParcelToScene(parcel, index, topologyMaps, datumPointMap);
             });
             surfaces.forEach((surface, index) => {
-                _addSurfaceToScene(surface, index, topologyMaps, false);
+                _addSurfaceToScene(surface, parcels.length + index, topologyMaps, false);
             });
             solids.forEach((solid, index) => {
-                _addSolidToScene(solid, index, topologyMaps, opacity, !hasParcels);
+                _addSolidToScene(
+                    solid, parcels.length + surfaces.length + index,
+                    topologyMaps, opacity, !hasParcels
+                );
             });
 
             const modelBounds = fitCameraToModel();
@@ -148,18 +169,23 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
      * Adds a parcel polygon to the scene by generating its geometry, mesh, edges, and vertex markers,
      * and then integrating them into the scene.
      *
+     * Current tenure is drawn as a filled face with a solid boundary and starts visible.
+     * Superseded tenure is drawn as a dashed boundary with no fill and starts hidden — its
+     * visibility control is registered either way, so it can be brought back at any time.
+     *
      * @param {Object} parcel - The parcel object to be added to the scene.
      * @param {number} index - The index of the parcel, used for colour selection and labelling.
      * @param {Object} topologyMaps - The topological maps required for constructing the solid geometry.
+     * @param {Object} datumPointMap - The point map flattened to the datum, from `_createDatumPointMap()`.
      * @return {void}
      */
-    function _addParcelToScene(parcel, index, topologyMaps) {
-        const {pointMap, edgeMap} = topologyMaps;
-        const datumPointMap = _createDatumPointMap(pointMap);
+    function _addParcelToScene(parcel, index, topologyMaps, datumPointMap) {
+        const {edgeMap} = topologyMaps;
+        const isCurrentTenure = _isCurrentTenureParcel(parcel);
 
         const {geometry, faceCount} = buildPolygonGeometry(parcel, edgeMap, datumPointMap);
         const mesh = createSolidMesh(parcel, index, geometry, MESH_OPACITY_PARCEL);
-        const edges = buildPolygonEdgeLines(parcel, edgeMap, datumPointMap);
+        const edges = buildPolygonEdgeLines(parcel, edgeMap, datumPointMap, !isCurrentTenure);
         const verticesGroup = createVertexMarkers(geometry);
         const parcelName = parcel.properties?.appellation?.label
             || parcel.properties?.name
@@ -169,7 +195,51 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
             mesh, edges, verticesGroup,
             name: parcelName, kindLabel: 'Parcel', faceCount,
             renderOrder: 1, depthWrite: false,
+            initialVisible: isCurrentTenure,
+            filled: isCurrentTenure,
+            stateLabel: _formatParcelState(parcel),
         });
+    }
+
+    /**
+     * Renders a parcel's state token as display text: `wa-parcel-state:former-tenure`
+     * becomes `Former Tenure`.
+     *
+     * The token is de-slugified rather than looked up in a table, so a state outside the
+     * two this dataset family currently uses still labels itself readably.
+     *
+     * @param {Object} parcel - A parcel feature.
+     * @return {string} The display text, or '' when the parcel declares no state.
+     */
+    function _formatParcelState(parcel) {
+        const parcelState = parcel.properties?.parcelState;
+
+        if (!parcelState) {
+            return '';
+        }
+
+        return parcelState
+            .split(':').pop()
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    }
+
+    /**
+     * Reports whether a parcel represents current tenure, and so should be drawn as a filled
+     * face with a solid boundary and shown on load. Superseded tenure is drawn as a dashed
+     * boundary with no fill.
+     *
+     * A parcel that declares no state counts as current: the state vocabulary is optional, and
+     * a dataset that omits it should not load as an empty scene.
+     *
+     * @param {Object} parcel - A parcel feature.
+     * @return {boolean}
+     */
+    function _isCurrentTenureParcel(parcel) {
+        const parcelState = parcel.properties?.parcelState;
+
+        return !parcelState || PRIMARY_PARCEL_STATES.has(parcelState);
     }
 
     /**
@@ -256,11 +326,17 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
      * @param {number}            renderable.renderOrder         - three.js render order for the mesh.
      * @param {boolean}           [renderable.depthWrite=true]   - Whether the mesh writes to the depth buffer.
      * @param {boolean}           [renderable.initialVisible=true] - Whether the object starts visible.
+     * @param {boolean}           [renderable.filled=true]       - Whether to draw the face; an unfilled
+     *                                                             object is represented by its boundary alone.
+     * @param {string}            [renderable.stateLabel='']     - Status badge text; omitted when empty.
      * @return {void}
      */
-    function _registerRenderable({ mesh, edges, verticesGroup, name, kindLabel, faceCount, renderOrder, depthWrite = true, initialVisible = true }) {
+    function _registerRenderable({ mesh, edges, verticesGroup, name, kindLabel, faceCount, renderOrder, depthWrite = true, initialVisible = true, filled = true, stateLabel = '' }) {
         mesh.material.depthWrite = depthWrite;
         mesh.renderOrder = renderOrder;
+        // Read back by _syncRenderableVisibility, so that toggling an unfilled object on brings
+        // back its boundary without ever revealing its face.
+        mesh.userData.filled = filled;
         scene.add(mesh);
         scene.add(edges);
         scene.add(verticesGroup);
@@ -273,7 +349,7 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
         edges.visible = ui.toggleEdges.checked;
         verticesGroup.visible = false;
 
-        _addObjectVisibilityControl(mesh, edges, verticesGroup, name, kindLabel, faceCount, initialVisible);
+        _addObjectVisibilityControl(mesh, edges, verticesGroup, name, kindLabel, faceCount, initialVisible, stateLabel);
     }
 
     /**
@@ -286,9 +362,10 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
      * @param {string} kindLabel - Object type label shown in the control text.
      * @param {number} faceCount - Face count shown in the label.
      * @param {boolean} initialVisible - Whether the object starts visible.
+     * @param {string} [stateLabel=''] - Status badge text shown after the name; omitted when empty.
      * @return {void}
      */
-    function _addObjectVisibilityControl(mesh, edges, verticesGroup, solidName, kindLabel, faceCount, initialVisible = true) {
+    function _addObjectVisibilityControl(mesh, edges, verticesGroup, solidName, kindLabel, faceCount, initialVisible = true, stateLabel = '') {
         const label = document.createElement('label');
         const checkbox = document.createElement('input');
 
@@ -301,7 +378,18 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
         });
 
         label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(` ${kindLabel}: ${solidName} (${faceCount} faces)`));
+        label.appendChild(document.createTextNode(` ${kindLabel}: ${solidName}`));
+
+        if (stateLabel) {
+            const badge = document.createElement('span');
+
+            badge.className = 'object-state';
+            badge.textContent = stateLabel;
+            label.appendChild(document.createTextNode(' '));
+            label.appendChild(badge);
+        }
+
+        label.appendChild(document.createTextNode(` (${faceCount} faces)`));
         ui.objectsControls.appendChild(label);
         _syncRenderableVisibility(control);
     }
@@ -337,8 +425,9 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
      * or through a nested shell — is already drawn by that solid, so listing it again
      * duplicates geometry and clutters the object panel.
      *
-     * When the dataset names a primary parcel, its explicit surface and solid references
-     * narrow the selection to that parcel's own geometry.
+     * Every parcel matching `_isPrimaryParcel` is returned. Where those parcels carry explicit
+     * surface and solid references, the surface and solid lists are narrowed to the union of
+     * those references; a dataset whose parcels carry no references keeps the full lists.
      *
      * @param {Object} data - The topology dataset.
      * @param {Object} topologyMaps - The topology maps returned by `buildMaps()`.
@@ -349,14 +438,9 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
         const allSurfaces = getOpenShells(data, topologyMaps);
         const allSolids = getFeatures(data.solids);
 
-        const primaryParcel = allParcels.find(feature =>
-            feature.id === 'parcel-1'
-            || feature.properties?.representationStatus === 'representation-status:d3d'
-            || feature.properties?.solidRef
-            || feature.properties?.surface?.ref
-        );
+        const primaryParcels = allParcels.filter(_isPrimaryParcel);
 
-        if (!primaryParcel) {
+        if (primaryParcels.length === 0) {
             return {
                 parcels: allParcels,
                 surfaces: allSurfaces,
@@ -364,20 +448,64 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
             };
         }
 
-        const surfaceId = primaryParcel.properties?.surface?.ref;
-        const solidId = primaryParcel.properties?.solidRef;
+        const surfaceIds = _collectParcelRefs(primaryParcels, parcel => parcel.properties?.surface?.ref);
+        const solidIds = _collectParcelRefs(primaryParcels, parcel => parcel.properties?.solidRef);
 
         return {
-            parcels: [primaryParcel],
-            surfaces: surfaceId
-                ? allSurfaces.filter(surface => surface.id === surfaceId)
-                : allSurfaces,
-            solids: solidId
-                ? allSolids.filter(solid => solid.id === solidId)
-                : allSolids,
+            parcels: primaryParcels,
+            surfaces: _narrowByIds(allSurfaces, surfaceIds),
+            solids: _narrowByIds(allSolids, solidIds),
         };
     }
 
+    /**
+     * Reports whether a parcel is a parcel of this survey rather than incidental context —
+     * it either carries a parcel state, or declares 3D geometry of its own.
+     *
+     * A parcel selected here may still start hidden; see `_isParcelVisibleByDefault()`.
+     *
+     * @param {Object} parcel - A parcel feature.
+     * @return {boolean}
+     */
+    function _isPrimaryParcel(parcel) {
+        const properties = parcel.properties || {};
+
+        return Boolean(properties.parcelState)
+            || properties.representationStatus === 'representation-status:d3d'
+            || Boolean(properties.solidRef)
+            || Boolean(properties.surface?.ref);
+    }
+
+    /**
+     * Collects the distinct, defined references read from a set of parcels.
+     *
+     * @param {Array<Object>} parcels - The parcels to read.
+     * @param {function(Object): (string|undefined)} readRef - Reads one reference from a parcel.
+     * @return {Set<string>} The distinct references found.
+     */
+    function _collectParcelRefs(parcels, readRef) {
+        return new Set(parcels.map(readRef).filter(Boolean));
+    }
+
+    /**
+     * Narrows features to those whose ID appears in `ids`, or returns them all when no parcel
+     * expressed a preference.
+     *
+     * @param {Array<Object>} features - The candidate features.
+     * @param {Set<string>} ids - The IDs to keep; an empty set keeps everything.
+     * @return {Array<Object>} The retained features.
+     */
+    function _narrowByIds(features, ids) {
+        return ids.size === 0 ? features : features.filter(feature => ids.has(feature.id));
+    }
+
+    /**
+     * Copies a point map with every elevation replaced by the datum, so parcels draw as a flat
+     * footprint at z=0 regardless of the elevations their points carry.
+     *
+     * @param {Object} pointMap - A map of point IDs to [x, y, z] coordinates.
+     * @return {Object} A map of point IDs to [x, y, 0] coordinates.
+     */
     function _createDatumPointMap(pointMap) {
         const datumPointMap = {};
 
@@ -434,12 +562,23 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
         ui.toggleProjection.textContent = PROJECTION_BUTTON_LABELS[getProjection()];
     }
 
+    /**
+     * Applies an object's own checkbox together with the global edge and vertex toggles.
+     *
+     * An unfilled object keeps its face hidden throughout, and keeps its boundary regardless of
+     * the global edge toggle: the boundary is the whole of its representation, so dropping it
+     * would leave a ticked object with nothing on screen.
+     *
+     * @param {{checkbox: HTMLInputElement, mesh: THREE.Mesh, edges: THREE.LineSegments, verticesGroup: THREE.Group}} control
+     * @return {void}
+     */
     function _syncRenderableVisibility(control) {
         const {checkbox, mesh, edges, verticesGroup} = control;
         const enabled = checkbox.checked;
+        const filled = mesh.userData.filled !== false;
 
-        mesh.visible = enabled;
-        edges.visible = enabled && ui.toggleEdges.checked;
+        mesh.visible = enabled && filled;
+        edges.visible = enabled && (ui.toggleEdges.checked || !filled);
         verticesGroup.visible = enabled && ui.toggleVertices.checked;
     }
 }

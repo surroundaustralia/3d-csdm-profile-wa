@@ -17,6 +17,11 @@ const MAX_SHELL_NESTING_DEPTH = 16;
 
 const EDGE_LINE_COLOR = 0xffffff;
 const EDGE_LINE_WIDTH = 1;
+// Dash lengths are taken from the drawn extent so the pattern reads the same on a survey
+// spanning tens of metres and on a unit test cube.
+const EDGE_DASH_SIZE_SCALE = 0.03;
+const EDGE_GAP_SIZE_SCALE = 0.02;
+const EDGE_DASH_FALLBACK_SIZE = 1;
 const VERTEX_MARKER_SEGMENTS = 12;
 const VERTEX_MARKER_COLOR = 0xffff00;
 const VERTEX_KEY_PRECISION = 6;
@@ -467,14 +472,38 @@ function _collectUniqueEdgeIds(container, {faceMap, shellMap, ringMap}) {
 }
 
 /**
+ * Builds a dashed line material whose dash lengths suit the extent of the given geometry.
+ *
+ * A degenerate geometry falls back to a fixed dash length: a zero-length dash and gap leave
+ * the shader with nothing to repeat and the line disappears entirely.
+ *
+ * @param {THREE.BufferGeometry} geometry - The line geometry the material will be used with.
+ * @return {THREE.LineDashedMaterial} The dashed material.
+ */
+function _createDashedEdgeMaterial(geometry) {
+    geometry.computeBoundingSphere();
+
+    const radius = geometry.boundingSphere?.radius || 0;
+    const scale = radius > 0 ? radius : EDGE_DASH_FALLBACK_SIZE;
+
+    return new THREE.LineDashedMaterial({
+        color: EDGE_LINE_COLOR,
+        linewidth: EDGE_LINE_WIDTH,
+        dashSize: scale * EDGE_DASH_SIZE_SCALE,
+        gapSize: scale * EDGE_GAP_SIZE_SCALE,
+    });
+}
+
+/**
  * Builds a THREE.LineSegments object spanning the given edges.
  *
  * @param {Set<string>} edgeIds - The edge IDs to draw.
  * @param {Object} edgeMap - A map connecting edge IDs to point ID pairs.
  * @param {Object} pointMap - A map of coordinates indexed by point ID.
+ * @param {boolean} [dashed=false] - Whether to draw the lines dashed rather than solid.
  * @return {THREE.LineSegments} The edge lines.
  */
-function _buildEdgeLines(edgeIds, edgeMap, pointMap) {
+function _buildEdgeLines(edgeIds, edgeMap, pointMap, dashed = false) {
     const positions = [];
 
     edgeIds.forEach(edgeId => {
@@ -494,12 +523,20 @@ function _buildEdgeLines(edgeIds, edgeMap, pointMap) {
     const positionAttribute = new THREE.BufferAttribute(new Float32Array(positions), COORDINATE_DIMENSIONS);
     geometry.setAttribute(POSITION_ATTRIBUTE, positionAttribute);
 
-    const material = new THREE.LineBasicMaterial({
-        color: EDGE_LINE_COLOR,
-        linewidth: EDGE_LINE_WIDTH,
-    });
+    const material = dashed
+        ? _createDashedEdgeMaterial(geometry)
+        : new THREE.LineBasicMaterial({
+            color: EDGE_LINE_COLOR,
+            linewidth: EDGE_LINE_WIDTH,
+        });
+    const edgeLines = new THREE.LineSegments(geometry, material);
 
-    return new THREE.LineSegments(geometry, material);
+    if (dashed) {
+        // LineDashedMaterial reads the lineDistance attribute; without this the line draws solid.
+        edgeLines.computeLineDistances();
+    }
+
+    return edgeLines;
 }
 
 /**
@@ -799,12 +836,13 @@ export function buildPolygonGeometry(polygon, edgeMap, pointMap) {
  * @param {Object} polygon - The polygon feature containing topology information.
  * @param {Object} edgeMap - A map connecting edge IDs to point ID pairs.
  * @param {Object} pointMap - A map containing point information indexed by point IDs.
+ * @param {boolean} [dashed=false] - Whether to draw the boundary dashed rather than solid.
  * @return {THREE.LineSegments} A THREE.LineSegments object representing the polygon boundary.
  */
-export function buildPolygonEdgeLines(polygon, edgeMap, pointMap) {
+export function buildPolygonEdgeLines(polygon, edgeMap, pointMap, dashed = false) {
     const edgeIds = new Set(_normalizePolygonRings(polygon.topology.references).flat());
 
-    return _buildEdgeLines(edgeIds, edgeMap, pointMap);
+    return _buildEdgeLines(edgeIds, edgeMap, pointMap, dashed);
 }
 
 // ─── Solid mesh ───────────────────────────────────────────────────────────────

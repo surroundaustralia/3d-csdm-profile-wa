@@ -36,6 +36,15 @@ label {
     cursor: pointer;
 }
 
+/* Status badge beside an object's name in the objects panel, e.g. a parcel's state. */
+.object-state {
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+    padding: 0 4px;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
 button {
     background: #3388ff;
     color: white;
