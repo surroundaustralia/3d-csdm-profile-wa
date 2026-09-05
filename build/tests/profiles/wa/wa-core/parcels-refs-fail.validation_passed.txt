@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.wa-core - Western Australia Cadastral Survey Data Exchange Profile
-Generated 2026-09-03T19:23:44.293436+00:00
+Generated 2026-09-05T00:20:31.191262+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -31,54 +31,54 @@ On instance['parcels'][0]['features'][0]['properties']['appellation']:
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/nz-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/nz-monument-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-procedure-used.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/icsm-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-documentation-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-state.ttl
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-territorial-authority.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-compound-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/accuracy/nz-point-class.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-vhd.ttl
- - https://www.w3.org/ns/prov-o
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/nz-condition.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-land-district.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/nz-state.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-secondary-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/nz-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/accuracy/nz-point-class.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
+ - https://www.w3.org/ns/prov-o
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-vhd.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-secondary-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/nz-monument-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-vector-purpose.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-documentation-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/icsm-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/nz-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-land-district.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-compound-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-territorial-authority.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/nz-condition.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-purpose.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/ontology.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl
 Validation result for profiles/wa-pointnames-shacl.ttl:
   Validation Report
   Conforms: True
@@ -86,20 +86,20 @@ Validation result for profiles/wa-pointnames-shacl.ttl:
 Focus nodes for profiles/wa-pointnames-shacl.ttl:
  - Shape wap:testLabelPartsPresent: *none*
 
-Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
- - Shape ex:NamePartShape: <file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart
- - Shape ex:NamedObjectShape: *none*
-
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:n1c83a3b9189a4a82a102470c3de91f51b1: *none*
+ - Shape _:n75ccba3d74e64aebbad74439ae1b77f8b1: *none*
+
+Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
+ - Shape ex:NamedObjectShape: *none*
+ - Shape ex:NamePartShape: <file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart,<file:///github/workspace/138>/parcel:appellation/dct:hasPart
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
   Validation Report
@@ -108,56 +108,56 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
  - Shape :referencedCSDs-present: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-state: <file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy
- - Shape jcl:testBoundVocab-vector-purpose: *none*
- - Shape jcl:testBoundVocab-form: <file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy
- - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/184>,<file:///github/workspace/190>,<file:///github/workspace/189>,<file:///github/workspace/198>,<file:///github/workspace/197>,<file:///github/workspace/196>
- - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/184>,<file:///github/workspace/190>,<file:///github/workspace/189>,<file:///github/workspace/198>,<file:///github/workspace/197>,<file:///github/workspace/196>
- - Shape jcl:testBoundVocab-condition: <file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+ - Shape :testCRS: <file:///github/workspace/DP_422532>
+ - Shape :testCompoundCRS: *none*
+ - Shape :testSurveyMetadata: <file:///github/workspace/DP_422532>
+ - Shape :testVHD: *none*
+ - Shape :testAngleType: *none*
+ - Shape :testDistanceType: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :testInCollectionOrMember-procedure: <vectorobservation:computed>
  - Shape :testInCollectionOrMember-madeBySensor: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
  - Shape :bindSurveyObservation-angle-and-distance-types: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
- - Shape :testInCollectionOrMember-procedure: <vectorobservation:computed>
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
  - Shape :annotate-madeBySensor: <vectorobservation:computed>
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testDistanceType: *none*
- - Shape :testSurveyMetadata: <file:///github/workspace/DP_422532>
- - Shape :testAngleType: *none*
- - Shape :testVHD: *none*
- - Shape :testCRS: <file:///github/workspace/DP_422532>
- - Shape :testCompoundCRS: *none*
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-pt-quality-class: <file:///github/workspace/189>,<file:///github/workspace/196>,<file:///github/workspace/190>,<file:///github/workspace/184>,<file:///github/workspace/198>,<file:///github/workspace/197>
+ - Shape jcl:testBoundVocab-vector-purpose: *none*
+ - Shape jcl:testBoundVocab-surveypoint-purpose: <file:///github/workspace/189>,<file:///github/workspace/196>,<file:///github/workspace/190>,<file:///github/workspace/184>,<file:///github/workspace/198>,<file:///github/workspace/197>
+ - Shape jcl:testBoundVocab-state: <file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-condition: <file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy
+ - Shape jcl:testBoundVocab-form: <file:///github/workspace/196>/surv:monumentedBy,<file:///github/workspace/198>/surv:monumentedBy,<file:///github/workspace/190>/surv:monumentedBy,<file:///github/workspace/184>/surv:monumentedBy,<file:///github/workspace/189>/surv:monumentedBy,<file:///github/workspace/197>/surv:monumentedBy
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-parcelType: *none*
  - Shape jcl:testBoundVocab-parcelInterest: *none*
+ - Shape jcl:testBoundVocab-parcelType: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
+ - Shape container:CSD: *none*
  - Shape container:CSD-seeAlso: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
@@ -172,18 +172,502 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
   Conforms: True
   
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :Apellation: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :EstateParcel: *none*
- - Shape :PropertyUnit: *none*
- - Shape :ParcelQualityClass: *none*
+ - Shape :ParcelState: *none*
  - Shape :ParcelType: *none*
- - Shape :PurposeOfSpatialUnit: *none*
+ - Shape :SecondaryParcel: *none*
+ - Shape :PropertyUnit: *none*
+ - Shape :EstateParcel: *none*
+ - Shape :Apellation: *none*
+ - Shape :LandInterest: *none*
+ - Shape :ParcelQualityClass: *none*
  - Shape :ParcelAggregate: *none*
  - Shape :Parcel: *none*
- - Shape :LandInterest: *none*
- - Shape :ParcelState: *none*
+ - Shape :PrimaryParcel: *none*
+ - Shape :PurposeOfSpatialUnit: *none*
+
+
+** Validation error **
+Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (44):
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:41.903237" = 2024-04-11 06:11:41.903237, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:41.834725" = 2024-04-11 06:11:41.834725, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/nz-procedure-used.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.256726" = 2024-04-11 06:11:35.256726, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.177086" = 2024-04-11 06:11:35.177086, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/other/wa-surveypoint-method.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.659782" = 2024-04-11 06:11:34.659782, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.591944" = 2024-04-11 06:11:34.591944, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/icsm-angle-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:42.346017" = 2024-04-11 06:11:42.346017, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:42.244696" = 2024-04-11 06:11:42.244696, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/purpose/wa-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:46.586574" = 2024-04-11 06:11:46.586574, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:45.094775" = 2024-04-11 06:11:45.094775, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-locality.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.590683" = 2024-04-11 06:11:34.590683, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.527766" = 2024-04-11 06:11:34.527766, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-compound-crs.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:36.309717" = 2024-04-11 06:11:36.309717, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:36.234737" = 2024-04-11 06:11:36.234737, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/icsm-equipment-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:45.019362" = 2024-04-11 06:11:45.019362, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:44.940206" = 2024-04-11 06:11:44.940206, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/condition/nz-condition.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.173638" = 2024-04-11 06:11:35.173638, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.099964" = 2024-04-11 06:11:35.099964, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/wa-procedure-used.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:45.092483" = 2024-04-11 06:11:45.092483, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:45.023912" = 2024-04-11 06:11:45.023912, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-survey-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:44.404302" = 2024-04-11 06:11:44.404302, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:44.341111" = 2024-04-11 06:11:44.341111, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-vhd.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:44.719858" = 2024-04-11 06:11:44.719858, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:44.639050" = 2024-04-11 06:11:44.639050, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/wa-parcel-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.451791" = 2024-04-11 06:11:34.451791, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.355059" = 2024-04-11 06:11:34.355059, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-vhd.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.097436" = 2024-04-11 06:11:35.097436, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.026720" = 2024-04-11 06:11:35.026720, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/nz-parcel-state.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:41.456130" = 2024-04-11 06:11:41.456130, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:41.323732" = 2024-04-11 06:11:41.323732, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-territorial-authority.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:36.555889" = 2024-04-11 06:11:36.555889, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:36.484077" = 2024-04-11 06:11:36.484077, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/wa-parcel-state.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:44.633485" = 2024-04-11 06:11:44.633485, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:44.550372" = 2024-04-11 06:11:44.550372, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-survey-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:33.732587" = 2024-04-11 06:11:33.732587, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:33.664072" = 2024-04-11 06:11:33.664072, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/nz-vector-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:33.430769" = 2024-04-11 06:11:33.430769, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:33.322840" = 2024-04-11 06:11:33.322840, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-survey-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:36.058996" = 2024-04-11 06:11:36.058996, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.985750" = 2024-04-11 06:11:35.985750, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-land-district.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:47.070301" = 2024-04-11 06:11:47.070301, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:46.862268" = 2024-04-11 06:11:46.862268, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-crs.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.983380" = 2024-04-11 06:11:35.983380, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.915451" = 2024-04-11 06:11:35.915451, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/state/nz-state.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.556571" = 2024-04-11 06:11:35.556571, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.463205" = 2024-04-11 06:11:35.463205, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/monument/wa-monument-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:42.830934" = 2024-04-11 06:11:42.830934, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:42.754445" = 2024-04-11 06:11:42.754445, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/icsm-parcel-state.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.352475" = 2024-04-11 06:11:34.352475, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.283297" = 2024-04-11 06:11:34.283297, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-annotation.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:41.762002" = 2024-04-11 06:11:41.762002, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:41.693527" = 2024-04-11 06:11:41.693527, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/condition/wa-condition.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:41.138282" = 2024-04-11 06:11:41.138282, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:41.069549" = 2024-04-11 06:11:41.069549, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/nz-parcel-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.834018" = 2024-04-11 06:11:35.834018, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.725558" = 2024-04-11 06:11:35.725558, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-crs.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.008800" = 2024-04-11 06:11:34.008800, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:33.929082" = 2024-04-11 06:11:33.929082, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/purpose/nz-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:40.930118" = 2024-04-11 06:11:40.930118, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:40.860549" = 2024-04-11 06:11:40.860549, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/icsm-distance-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.438161" = 2024-04-11 06:11:35.438161, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:35.259233" = 2024-04-11 06:11:35.259233, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-local-government.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:41.832340" = 2024-04-11 06:11:41.832340, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:41.764171" = 2024-04-11 06:11:41.764171, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/icsm-admin-unit-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:41.215198" = 2024-04-11 06:11:41.215198, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:41.140555" = 2024-04-11 06:11:41.140555, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/nz-secondary-parcel-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:35.023611" = 2024-04-11 06:11:35.023611, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.951797" = 2024-04-11 06:11:34.951797, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/Parcels/nz-parcel-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.525114" = 2024-04-11 06:11:34.525114, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.455967" = 2024-04-11 06:11:34.455967, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/icsm-procedure-used.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:34.165656" = 2024-04-11 06:11:34.165656, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:34.087292" = 2024-04-11 06:11:34.087292, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/wa-survey-documentation-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:44.799651" = 2024-04-11 06:11:44.799651, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:44.725494" = 2024-04-11 06:11:44.725494, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/accuracy/nz-point-class.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:42.742287" = 2024-04-11 06:11:42.742287, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:42.629933" = 2024-04-11 06:11:42.629933, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-survey-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:43.344995" = 2024-04-11 06:11:43.344995, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:43.269948" = 2024-04-11 06:11:43.269948, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/monument/nz-monument-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:40.706744" = 2024-04-11 06:11:40.706744, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:40.634222" = 2024-04-11 06:11:40.634222, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/state/wa-state.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:42.420553" = 2024-04-11 06:11:42.420553, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:42.356566" = 2024-04-11 06:11:42.356566, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-annotation.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:43.078862" = 2024-04-11 06:11:43.078862, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:42.905036" = 2024-04-11 06:11:42.905036, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyObservations/wa-vector-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:33.660711" = 2024-04-11 06:11:33.660711, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:33.586846" = 2024-04-11 06:11:33.586846, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/SurveyPoints/purpose/icsm-purpose.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: <https://www.ogc.org/rules/prov/#prop-wasInformedBy>
+  	Focus Node: [ prov:endedAtTime Literal("2024-04-11T06:11:33.572674" = 2024-04-11 06:11:33.572674, datatype=xsd:dateTime) ; prov:startedAtTime Literal("2024-04-11T06:11:33.435788" = 2024-04-11 06:11:33.435788, datatype=xsd:dateTime) ; prov:used [ dct:format Literal("application/json") ; dct:hasVersion Literal("git:29bbdd91c50914400e0758872364ec1cea2d1501") ; rdf:type prov:Entity ; rdfs:seeAlso Literal("file:///home/runner/work/icsm-vocabs/icsm-vocabs/cadastre/CSD-Header/nz-survey-documentation-type.csv") ] ; prov:wasAssociatedWith [ dct:hasVersion Literal("0.3.44") ; rdf:type prov:Agent, sdo:SoftwareApplication ; rdfs:label Literal("OGC-NA tools") ; rdfs:seeAlso Literal("https://github.com/opengeospatial/ogc-na-tools") ] ; prov:wasInformedBy [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] ; rdf:type prov:Activity ]
+  	Value Node: [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ]
+  	Result Path: prov:wasInformedBy
+  	Message: Node [ dct:identifier Literal("42611fe7-ad51-40e1-adf8-e3a0f1ee7a83") ] does not conform to one or more shapes in [ sh:nodeKind sh:BlankNode ; sh:or ( [ sh:class prov:Activity ] ) ] , [ sh:nodeKind sh:IRI ]
+  
+Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Delegation-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb2: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb146: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Quotation-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb152: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb234: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb56: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb98: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb68: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-generated>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb14: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Communication-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Attribution-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb246: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb50: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Influence-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb224: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb206: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb158: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb226: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Organization-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-agent>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb38: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb62: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb252: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb176: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb104: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb240: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-agent>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb134: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb170: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-entity>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-generated>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb225: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-influencer>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-entity>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#PrimarySource-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-influencer>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-activity>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#AgentInfluence-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb164: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb182: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb218: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb258: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb74: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Association-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-activity>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#ActivityInfluence-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb122: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb44: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-used>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#EntityInfluence-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb86: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Revision-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb194: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb116: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb26: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb92: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb80: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb128: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb20: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb32: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Agent-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb188: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Person-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#SoftwareAgent-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>/sh:or/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb8: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Derivation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-used>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb110: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb200: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb140: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n7be5da93acd5438b869115dc9ae11b7bb212: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>/sh:or/rdf:first: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>/sh:or/rdf:first: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n688ed507995443d79f201be19e5c2c64b3: *none*
+ - Shape _:n688ed507995443d79f201be19e5c2c64b1: <file:///github/workspace/184>/dct:spatial,<file:///github/workspace/196>/dct:spatial,<file:///github/workspace/190>/dct:spatial,<file:///github/workspace/197>/dct:spatial,<file:///github/workspace/198>/dct:spatial,<file:///github/workspace/189>/dct:spatial
 
 
 ** Validation error **
@@ -236,8 +720,8 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: toporules:testTopoLinesReferencePoints
-  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/184> <file:///github/workspace/313> <file:///github/workspace/312> ) ]
-  	Value Node: <file:///github/workspace/313>
+  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/198> <file:///github/workspace/314> <file:///github/workspace/313> ) ]
+  	Value Node: <file:///github/workspace/314>
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
           prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -257,8 +741,8 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: toporules:testTopoLinesReferencePoints
-  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/184> <file:///github/workspace/313> <file:///github/workspace/312> ) ]
-  	Value Node: <file:///github/workspace/312>
+  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/198> <file:///github/workspace/314> <file:///github/workspace/313> ) ]
+  	Value Node: <file:///github/workspace/313>
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
           prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -362,8 +846,8 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: toporules:testTopoLinesReferencePoints
-  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/198> <file:///github/workspace/314> <file:///github/workspace/313> ) ]
-  	Value Node: <file:///github/workspace/314>
+  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/184> <file:///github/workspace/313> <file:///github/workspace/312> ) ]
+  	Value Node: <file:///github/workspace/313>
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
           prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -383,8 +867,8 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: toporules:testTopoLinesReferencePoints
-  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/198> <file:///github/workspace/314> <file:///github/workspace/313> ) ]
-  	Value Node: <file:///github/workspace/313>
+  	Focus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/184> <file:///github/workspace/313> <file:///github/workspace/312> ) ]
+  	Value Node: <file:///github/workspace/312>
   	Result Path: geojson:topology
   	Source Constraint: [ sh:message Literal("Lines topologies must reference points within current graph closure.") ; sh:select Literal("
           prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -403,41 +887,33 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   	Message: Lines topologies must reference points within current graph closure.
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape toporules:testTopoReferencesExist: <file:///github/workspace/842>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/138>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/844>/geojson:topology
- - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/309>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/844>/geojson:topology
+ - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/313>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/844>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/298>/geojson:topology
+ - Shape toporules:testTopoReferencesExist: <file:///github/workspace/313>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/844>/geojson:topology,<file:///github/workspace/842>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/138>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/298>/geojson:topology
  - Shape toporules:testTopoDirectedReferencesExist: *none*
- - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/309>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/298>/geojson:topology,<file:///github/workspace/313>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/844>/geojson:topology
-
-Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n3bdb330359b945dfbbc05ef609f1ab98b1: <file:///github/workspace/190>/dct:spatial,<file:///github/workspace/198>/dct:spatial,<file:///github/workspace/184>/dct:spatial,<file:///github/workspace/196>/dct:spatial,<file:///github/workspace/197>/dct:spatial,<file:///github/workspace/189>/dct:spatial
- - Shape _:n3bdb330359b945dfbbc05ef609f1ab98b3: *none*
+ - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/313>/geojson:topology,<file:///github/workspace/311>/geojson:topology,<file:///github/workspace/312>/geojson:topology,<file:///github/workspace/845>/geojson:topology,<file:///github/workspace/309>/geojson:topology,<file:///github/workspace/844>/geojson:topology,<file:///github/workspace/314>/geojson:topology,<file:///github/workspace/841>/geojson:topology,<file:///github/workspace/843>/geojson:topology,<file:///github/workspace/840>/geojson:topology,<file:///github/workspace/298>/geojson:topology
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:FeatureShape: <vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/184>,<file:///github/workspace/190>,<file:///github/workspace/840>,<file:///github/workspace/198>,<file:///github/workspace/845>,<file:///github/workspace/314>,<file:///github/workspace/189>,<file:///github/workspace/844>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/298>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/843>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/138>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/313>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/842>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/311>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/841>,<file:///github/workspace/196>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/309>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/197>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/312>
+ - Shape geojson:GeometryShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:FeatureShape: <file:///github/workspace/314>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/311>,<file:///github/workspace/138>,<file:///github/workspace/840>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/184>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/197>,<file:///github/workspace/196>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/190>,<file:///github/workspace/844>,<file:///github/workspace/198>,<file:///github/workspace/298>,<file:///github/workspace/313>,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/309>,<file:///github/workspace/845>,<file:///github/workspace/189>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/843>,<vectorobservation:computed>/sosa:hasMember,<file:///github/workspace/312>,<file:///github/workspace/841>,<file:///github/workspace/842>
- - Shape geojson:GeometryShape: *none*
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:FeatureCollectionShape: <file:///github/workspace/observedVectors>,<file:///github/workspace/BoundaryMark>,<file:///github/workspace/SubtendedAngle>,<file:///github/workspace/PrimaryParcels>
- - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:FeatureCollectionShape: <file:///github/workspace/BoundaryMark>,<file:///github/workspace/PrimaryParcels>,<file:///github/workspace/SubtendedAngle>,<file:///github/workspace/observedVectors>
  - Shape geojson:FeatureShape: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -456,7 +932,7 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/842> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/843> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -478,12 +954,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N56768d6bd16443809ff5e6ad3a43c552: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nf713e4a09bcf4103ae7e05c172b9ed08: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/841> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/842> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -505,12 +981,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N30cbd408b489469fb3a244d6b426235b: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nc12865bd35c94457bb1bf0be1d811537: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/843> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/844> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -532,12 +1008,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nc7ee273ec7b24b30aa7aa328156ab180: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N66a11680a5644af39a2f3e73a8286c25: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/840> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/841> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -559,12 +1035,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nef438af2ab70460381327d3bb1c30d66: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N89aa3ea77ea840e4a6c73ba63008d31d: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/844> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/845> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -586,12 +1062,12 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N5969ecda996e496cb0f8c7283c2af617: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in N5135b91acace41109133d0b1782fff36: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
   	Severity: sh:Violation
   	Source Shape: <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>
   	Focus Node: <vectorobservation:computed>
-  	Value Node: [ ns1:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/845> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
+  	Value Node: [ ns2:angleType icsm-distance-type:angle ; rdf:type geojson:Feature ; sosa:hasFeatureOfInterest <file:///github/workspace/840> ; sosa:hasResult [ ] ; sosa:resultTime Literal("2011-05-22T00:00:00") ]
   	Result Path: sosa:resultTime
   	Source Constraint: [ sh:select Literal("
           PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -613,18 +1089,18 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
               BIND(CONCAT(STR(?memberValue), " != ", STR(?collectionValue)) as ?failedValue)
           }
       ") ]
-  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Ndee03a3e1289420eacaadc640086cfeb: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
+  	Message: Collection member values do not match those of the collections (http://www.w3.org/ns/sosa/resultTime property in Nd4c2a8dfacc7407a95ac4a937fa98582: 2011-05-22T00:00:00 != 2011-05-22T00:00:00Z)
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
- - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <vectorobservation:computed>
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: <vectorobservation:computed>
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: <vectorobservation:computed>
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: <vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember,<vectorobservation:computed>/sosa:hasMember
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: <vectorobservation:computed>
 
 === End SHACL ===
 

@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-09-03",
+  "dateOfLastChange": "2026-09-05",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -55,31 +55,34 @@
     "icsm.profiles.wa.wa-core": [
       "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
     ],
-    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-    ],
     "ogc.bbr.utils.compoundName": [
       "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
     ],
+    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
+    ],
     "icsm.profiles.common": [
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
-      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
     ],
     "icsm.csdm.features.CSD": [
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
       "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
     ],
     "ogc.geo.topo.features.topo-feature": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.topo.features.topo-feature-collection": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
@@ -88,8 +91,8 @@
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
     ],
     "ogc.geo.topo.features.topo-arc": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "icsm.csdm.features.SurveyObservations": [
       "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
@@ -110,7 +113,7 @@
   "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-mining/context.jsonld",
   "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-mining/resolvedProperties.json",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-mining/",
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/wa-mining/",
   "description": "## Cadastral Survey Data Model - Western Australia Profile\n\nThis profile is the WA (Western Australia) of the Cadastral Survey Data Model (CSDM). This extends the [common ICSM Profile](https://icsm-au.github.io/3d-csdm-profile-icsm/) with Western Australia specific constraints.\n\nIt only (currently) defines vocabulary bindings to WA specific vocabularies - but can be extended directly, or via sub-profiles, with further data elements and business rules about content requirements.\n\n[More information about the ways profiles are specified](https://ogcincubator.github.io/bblocks-docs/overview/profiles)\n\n\n\nThese constraints are defined in a **_machine-readable_** form to support:\n\n- unambiguous interpretation\n- conformance validation\n- configuration of generic software to meet specific jurisdictional needs. (if implementers choose to use this option)\n\n\n### extensions\n\nNo specific extensions \n",
   "examples": [

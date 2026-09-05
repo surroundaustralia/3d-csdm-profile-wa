@@ -64,10 +64,10 @@ Example appellation.
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 
 [] rdfs:label "L-3114-12345" ;
-    dcterms:hasPart [ rdfs:label "12345" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ],
-        [ commonpatterns:namePartRef wa-parcel-type:l ;
+    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-type:l ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],
+        [ rdfs:label "12345" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ],
         [ rdfs:label "3114" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ] .
 

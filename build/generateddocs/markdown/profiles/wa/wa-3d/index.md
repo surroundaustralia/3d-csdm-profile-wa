@@ -422,10 +422,10 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
             geojson:coordinates ( 5.467663e+04 3.984343e+05 0e+00 ) ] ;
     rdfs:comment "In Bitumen" ;
     ns1:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9533" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     ns1:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
@@ -22685,12 +22685,12 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
             rdfs:label "Lot 3 DP 214866" ;
             dct:hasPart [ rdfs:label "214866" ;
                     commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
                 [ rdfs:label "3" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <file:///github/workspace/ParcelType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 2829 ;

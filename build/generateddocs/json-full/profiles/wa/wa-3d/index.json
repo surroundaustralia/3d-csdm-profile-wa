@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-09-03",
+  "dateOfLastChange": "2026-09-05",
   "sources": [
     {
       "title": "3D Cadastre Survey Data Model",
@@ -36,31 +36,34 @@
     "icsm.profiles.wa.wa-core": [
       "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
     ],
-    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-    ],
     "ogc.bbr.utils.compoundName": [
       "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
     ],
+    "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+      "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
+    ],
     "icsm.profiles.common": [
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
-      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
       "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
     ],
     "icsm.csdm.features.CSD": [
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
       "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl"
+      "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
     ],
     "ogc.geo.topo.features.topo-feature": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.topo.features.topo-feature-collection": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
@@ -69,8 +72,8 @@
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
     ],
     "ogc.geo.topo.features.topo-arc": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "icsm.csdm.features.SurveyObservations": [
       "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl"
@@ -91,7 +94,7 @@
   "sourceLdContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-3d/context.jsonld",
   "resolvedSchemaProperties": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-3d/resolvedProperties.json",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/wa-3d/",
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/wa-3d/",
   "transforms": [
     {
@@ -220,7 +223,7 @@
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/wa-3d/3d-surveypoints.ttl",
           "sizeBytes": 5439,
-          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix container: <https://linked.data.gov.au/def/csdm/container/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .\n@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix ns2: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .\n@prefix time: <http://www.w3.org/2006/time#> .\n@prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n@prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .\n@prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .\n@prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .\n@prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n@prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;\n    rdfs:label \"DP 422532\" ;\n    dcterms:time [ time:hasTime \"2022-05-22\"^^xsd:date ] ;\n    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;\n            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],\n        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:locality ;\n            oa:hasTarget wa-locality:karlkurla ] ;\n    container:bearingRotation 0e+00 ;\n    container:horizontalCRS epsg:8024 ;\n    container:points <https://www.wa-example.com/features/BoundaryMark>,\n        <https://www.wa-example.com/features/CadastralMark>,\n        <https://www.wa-example.com/features/GeodeticReferenceMark> ;\n    container:purpose wa-survey-purpose:subdivision ;\n    container:surveyType wa-survey-type:SSA ;\n    container:verticalDatum epsg:5711 ;\n    geojson:collectionFeatureType \"CSD\" .\n\n<https://www.wa-example.com/features/17876586> a surv:BoundaryMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.470028e+04 3.984264e+05 0e+00 ) ] ;\n    ns1:qualityMeasure 1.3e-02 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:peg ;\n            surv:state wa-monument-state:mark-found ] ;\n    surv:purpose wa-surveypoint-purpose:road-boundary .\n\n<https://www.wa-example.com/features/18430386> a surv:CadastralMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.467663e+04 3.984343e+05 0e+00 ) ] ;\n    rdfs:comment \"In Bitumen\" ;\n    ns1:name [ rdfs:label \"EFB157243/9533\" ;\n            dcterms:hasPart [ rdfs:label \"EFB157243\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],\n                [ rdfs:label \"9533\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;\n    ns1:qualityMeasure 2.8e-02 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:spike ;\n            surv:state wa-monument-state:mark-found ] ;\n    surv:purpose wa-surveypoint-purpose:temporary-control-point .\n\n<https://www.wa-example.com/features/18430396> a surv:GeodeticReferenceMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.47613e+04 3.984891e+05 0e+00 ) ] ;\n    rdfs:comment \"In Concrete\" ;\n    ns1:name [ rdfs:label \"EFB157243/9802\" ;\n            dcterms:hasPart [ rdfs:label \"9802\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],\n                [ rdfs:label \"EFB157243\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;\n    ns1:qualityMeasure 2.6e-02 ;\n    surv:geodeticid \"EFB157243/9802\" ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:brass-plaque ;\n            surv:state wa-monument-state:mark-found ] ;\n    surv:purpose wa-surveypoint-purpose:permanent-survey-mark .\n\n<https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"BoundaryMark\" ;\n    geojson:features <https://www.wa-example.com/features/17876586> .\n\n<https://www.wa-example.com/features/CadastralMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"CadastralMark\" ;\n    geojson:features <https://www.wa-example.com/features/18430386> .\n\n<https://www.wa-example.com/features/GeodeticReferenceMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"GeodeticReferenceMark\" ;\n    geojson:features <https://www.wa-example.com/features/18430396> .\n\n"
+          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix container: <https://linked.data.gov.au/def/csdm/container/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .\n@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix ns2: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix prof: <http://www.w3.org/ns/dx/prof/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .\n@prefix time: <http://www.w3.org/2006/time#> .\n@prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .\n@prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .\n@prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .\n@prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .\n@prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .\n@prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n@prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;\n    rdfs:label \"DP 422532\" ;\n    dcterms:time [ time:hasTime \"2022-05-22\"^^xsd:date ] ;\n    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;\n            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],\n        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;\n            prof:hasRole icsm-admin-unit-type:locality ;\n            oa:hasTarget wa-locality:karlkurla ] ;\n    container:bearingRotation 0e+00 ;\n    container:horizontalCRS epsg:8024 ;\n    container:points <https://www.wa-example.com/features/BoundaryMark>,\n        <https://www.wa-example.com/features/CadastralMark>,\n        <https://www.wa-example.com/features/GeodeticReferenceMark> ;\n    container:purpose wa-survey-purpose:subdivision ;\n    container:surveyType wa-survey-type:SSA ;\n    container:verticalDatum epsg:5711 ;\n    geojson:collectionFeatureType \"CSD\" .\n\n<https://www.wa-example.com/features/17876586> a surv:BoundaryMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.470028e+04 3.984264e+05 0e+00 ) ] ;\n    ns1:qualityMeasure 1.3e-02 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:peg ;\n            surv:state wa-monument-state:mark-found ] ;\n    surv:purpose wa-surveypoint-purpose:road-boundary .\n\n<https://www.wa-example.com/features/18430386> a surv:CadastralMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.467663e+04 3.984343e+05 0e+00 ) ] ;\n    rdfs:comment \"In Bitumen\" ;\n    ns1:name [ rdfs:label \"EFB157243/9533\" ;\n            dcterms:hasPart [ rdfs:label \"9533\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],\n                [ rdfs:label \"EFB157243\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;\n    ns1:qualityMeasure 2.8e-02 ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:spike ;\n            surv:state wa-monument-state:mark-found ] ;\n    surv:purpose wa-surveypoint-purpose:temporary-control-point .\n\n<https://www.wa-example.com/features/18430396> a surv:GeodeticReferenceMark,\n        geojson:Feature ;\n    dcterms:spatial [ a geojson:Point ;\n            geojson:coordinates ( 5.47613e+04 3.984891e+05 0e+00 ) ] ;\n    rdfs:comment \"In Concrete\" ;\n    ns1:name [ rdfs:label \"EFB157243/9802\" ;\n            dcterms:hasPart [ rdfs:label \"9802\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],\n                [ rdfs:label \"EFB157243\" ;\n                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;\n    ns1:qualityMeasure 2.6e-02 ;\n    surv:geodeticid \"EFB157243/9802\" ;\n    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;\n            surv:form wa-monument-form:brass-plaque ;\n            surv:state wa-monument-state:mark-found ] ;\n    surv:purpose wa-surveypoint-purpose:permanent-survey-mark .\n\n<https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"BoundaryMark\" ;\n    geojson:features <https://www.wa-example.com/features/17876586> .\n\n<https://www.wa-example.com/features/CadastralMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"CadastralMark\" ;\n    geojson:features <https://www.wa-example.com/features/18430386> .\n\n<https://www.wa-example.com/features/GeodeticReferenceMark> a geojson:FeatureCollection ;\n    geojson:collectionFeatureType \"GeodeticReferenceMark\" ;\n    geojson:features <https://www.wa-example.com/features/18430396> .\n\n"
         }
       ]
     },
