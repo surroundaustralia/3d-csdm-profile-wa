@@ -2337,49 +2337,46 @@
           }
         }
       ]
-        }
-  ]
-    ,
-    "supportingDocuments": [
+    }
+  ],
+  "supportingDocuments": [
     {
-    "id": "source-height-description-1",
-    "sourceDocument": "source-plan-dp431276",
-    "sourceLocation": {
-    "page": 2,
-    "section": "Plan annotation",
-    "lot": "Lot 800"
+      "id": "source-height-description-1",
+      "sourceDocument": "source-plan-dp431276",
+      "sourceLocation": {
+        "page": 2,
+        "section": "Plan annotation",
+        "lot": "Lot 800"
+      },
+      "sourceStatement": "limited in height to less than ground level plus 12.00 metres",
+      "transcriptionStatus": "transcribed",
+      "appliesTo": "parcel-1"
     },
-    "sourceStatement": "limited in height to less than ground level plus 12.00 metres",
-    "transcriptionStatus": "transcribed",
-    "appliesTo": "parcel-1"
-    }
-    ,
     {
-    "id": "source-height-description-2",
-    "sourceDocument": "source-plan-dp431276",
-    "sourceLocation": {
-    "page": 2,
-    "section": "Plan annotation",
-    "lot": "Lot 800"
+      "id": "source-height-description-2",
+      "sourceDocument": "source-plan-dp431276",
+      "sourceLocation": {
+        "page": 2,
+        "section": "Plan annotation",
+        "lot": "Lot 800"
+      },
+      "sourceStatement": "limited in height to more than and equal ground level minus 2.00 metres",
+      "transcriptionStatus": "transcribed",
+      "appliesTo": "parcel-1"
+    }
+  ],
+  "annotations": [
+    {
+      "description": "Subject to Material Change and WAPC approval.",
+      "role": "wa-annotation-role:sp",
+      "lodged": {
+        "date": "2026-01-02"
+      }
     },
-    "sourceStatement": "limited in height to more than and equal ground level minus 2.00 metres",
-    "transcriptionStatus": "transcribed",
-    "appliesTo": "parcel-1"
-    }
-    ],
-    "annotations": [
     {
-    "description": "Subject to Material Change and WAPC approval.",
-    "role": "wa-annotation-role:sp",
-    "lodged": {
-    "date": "2026-01-02"
-    }
-    }
-    ,
-    {
-    "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
-    "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-    "role": "wa-annotation-role:r-4"
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
+      "role": "wa-annotation-role:r-4"
     }
   ]
-  }
+}

@@ -30,3 +30,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Certificate of Title" ;
     skos:topConceptOf cs: ;
 .
+
+:built-strata-plan
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "An An official survey plan describing a conventional Built Strata survey." ;
+    skos:inScheme cs: ;
+    skos:notation "built-strata-plan" ;
+    skos:prefLabel "Built Strata Plan" ;
+    skos:topConceptOf cs: ;
+.

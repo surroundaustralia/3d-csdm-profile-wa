@@ -32,3 +32,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Height limit description" ;
     skos:topConceptOf cs: ;
 .
+
+:r-54
+    a
+        skos:Concept ,
+        termtype:Annotation ;
+    skos:definition "Survey carried out in accordance with Regulation 54 of the Licensed Surveyors (General Surveying Practice) Regulations 1961" ;
+    skos:inScheme cs: ;
+    skos:notation "r-54" ;
+    skos:prefLabel "Regulation 54 Survey Certificate" ;
+    skos:topConceptOf cs: ;
+.

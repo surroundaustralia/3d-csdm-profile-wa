@@ -1,0 +1,21 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/wa-monument-condition/>
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-monument-condition>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:computed
+    a
+        skos:Concept ,
+        surv:ConditionCode ;
+    skos:definition "A status indicating that the survey position is a virtual point determined solely through mathematical calculations or 3D geometric modeling. No physical mark, monument, or object has been placed in the ground at this location." ;
+    skos:inScheme cs: ;
+    skos:notation "computed" ;
+    skos:prefLabel "Computed" ;
+    skos:topConceptOf cs: ;
+.

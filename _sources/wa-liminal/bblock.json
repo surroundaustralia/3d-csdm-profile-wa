@@ -51,6 +51,7 @@
     "../../profiles/wa-survey-purpose-supplement.ttl",
     "../../profiles/wa-survey-documentation-supplement.ttl",
     "../../profiles/wa-survey-type-supplement.ttl",
-    "../../profiles/wa-purpose-supplement.ttl"
+    "../../profiles/wa-purpose-supplement.ttl",
+    "../../profiles/wa-monument-condition-supplement.ttl"
   ]
 }
