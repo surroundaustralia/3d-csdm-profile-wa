@@ -2,7 +2,7 @@
   "name": "WA Implementation Profile for 3D CSDM",
   "abstract": "This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), \nextending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).\n \nThis version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre. \n",
   "description": "\nThe encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.\n\nProfiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).\n",
-  "modified": "2026-09-05T00:19:36.548986",
+  "modified": "2026-09-07T22:52:02.277896",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"865a527f37dc271186cb8dd7d0386365bf1486d3",
@@ -31,7 +31,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -87,7 +87,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -106,8 +106,8 @@
         ]
       },
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
-        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
+        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/crownAllotment/schema.yaml",
@@ -169,7 +169,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -250,7 +250,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -269,8 +269,8 @@
         ]
       },
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
-        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
+        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/schema.yaml",
@@ -332,7 +332,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -354,8 +354,8 @@
         ]
       },
       "dependsOn": [
-        "bblocks://ogc.ogc-utils.iri-or-curie",
-        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces"
+        "bblocks://icsm.profiles.wa.datatypes.waAppellationNamespaces",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/miscellaneousTenure/schema.yaml",
@@ -417,7 +417,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "link": "https://github.com/icsm-au/3d-csdm-schema",
       "sources": [
         {
@@ -439,9 +439,9 @@
         ]
       },
       "dependsOn": [
-        "bblocks://icsm.profiles.wa.datatypes.crownAllotment",
         "bblocks://icsm.profiles.wa.datatypes.lotOnPlan",
-        "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure"
+        "bblocks://icsm.profiles.wa.datatypes.miscellaneousTenure",
+        "bblocks://icsm.profiles.wa.datatypes.crownAllotment"
       ],
       "schema": {
         "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.yaml",
@@ -477,7 +477,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -526,23 +526,20 @@
         "icsm.profiles.wa.wa-core": [
           "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
         ],
-        "ogc.bbr.utils.compoundName": [
-          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-        ],
-        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-        ],
         "icsm.profiles.common": [
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl"
         ],
         "icsm.csdm.features.CSD": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+        ],
+        "ogc.bbr.utils.compoundName": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -570,11 +567,14 @@
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
         ]
       },
       "dependsOn": [
-        "bblocks://icsm.profiles.wa.datatypes.parcelAppellation",
-        "bblocks://icsm.profiles.common"
+        "bblocks://icsm.profiles.common",
+        "bblocks://icsm.profiles.wa.datatypes.parcelAppellation"
       ],
       "ldContext": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
       "schema": {
@@ -673,7 +673,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -699,23 +699,20 @@
         "icsm.profiles.wa.wa-core": [
           "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
         ],
-        "ogc.bbr.utils.compoundName": [
-          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-        ],
-        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-        ],
         "icsm.profiles.common": [
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl"
         ],
         "icsm.csdm.features.CSD": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+        ],
+        "ogc.bbr.utils.compoundName": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -743,6 +740,9 @@
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
         ]
       },
       "dependsOn": [
@@ -869,7 +869,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "sources": [
         {
           "title": "Summary of Western Australian Parcel Representation Examples (2.5D liminal proposal)",
@@ -920,23 +920,20 @@
         "icsm.profiles.wa.wa-core": [
           "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
         ],
-        "ogc.bbr.utils.compoundName": [
-          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-        ],
-        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-        ],
         "icsm.profiles.common": [
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl"
         ],
         "icsm.csdm.features.CSD": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+        ],
+        "ogc.bbr.utils.compoundName": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -964,6 +961,9 @@
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
         ]
       },
       "dependsOn": [
@@ -1090,7 +1090,7 @@
       "itemClass": "schema",
       "register": "icsm-csdm",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-05",
+      "dateOfLastChange": "2026-09-07",
       "sources": [
         {
           "title": "3D Cadastre Survey Data Model",
@@ -1135,23 +1135,20 @@
         "icsm.profiles.wa.wa-core": [
           "https://surroundaustralia.github.io/3d-csdm-profile-wa/profiles/wa-pointnames-shacl.ttl"
         ],
-        "ogc.bbr.utils.compoundName": [
-          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
-        ],
-        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
-          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
-        ],
         "icsm.profiles.common": [
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl",
           "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl",
+          "https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl"
         ],
         "icsm.csdm.features.CSD": [
           "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl",
-          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl"
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl",
+          "https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl"
+        ],
+        "ogc.bbr.utils.compoundName": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -1179,6 +1176,9 @@
         ],
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
+        ],
+        "icsm.profiles.wa.datatypes.miscellaneousTenure": [
+          "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/datatypes/miscellaneousTenure/rules.shacl"
         ]
       },
       "dependsOn": [
