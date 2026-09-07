@@ -41,3 +41,69 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Built Strata Plan" ;
     skos:topConceptOf cs: ;
 .
+
+:unitEntitlementSchedule
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "An official document registered with Landgate under the Strata Titles Act 1985 that assigns a whole number to every individual lot within a strata or survey-strata scheme." ;
+    skos:inScheme cs: ;
+    skos:notation "unitEntitlementSchedule" ;
+    skos:prefLabel "Schedule of Unit Entitlement" ;
+    skos:topConceptOf cs: ;
+.
+
+:buildingApprovalCertificate
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "An official document that confirms a building or completed structure complies with applicable building standards and regulations." ;
+    skos:inScheme cs: ;
+    skos:notation "buildingApprovalCertificate" ;
+    skos:prefLabel "Building Approval Certificate" ;
+    skos:topConceptOf cs: ;
+.
+
+:strataPlanEndorsementCertificate
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "A formal certification by the Western Australian Planning Commission (WAPC) confirming that unconditional approval for the subdivision has been granted pursuant to section 15 of the Strata Titles Act 1985." ;
+    skos:inScheme cs: ;
+    skos:notation "strataPlanEndorsementCertificate" ;
+    skos:prefLabel "Strata Endorsement Certificate" ;
+    skos:topConceptOf cs: ;
+.
+
+:recordOfStrataTitlesScheme
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "The Limitations, Interests, Encumbrances and Notifications section (known as the Second Schedule) on a Record of Strata Title lists all legal burdens, third-party rights, and statutory restrictions that affect a specific strata lot and its shared interest in the common property." ;
+    skos:inScheme cs: ;
+    skos:notation "recordOfStrataTitlesScheme" ;
+    skos:prefLabel "Record of Strata Title Scheme: Limitations, Interests, Encumbrances and Notifications" ;
+    skos:topConceptOf cs: ;
+.
+
+:schemeByLaws
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "The legally binding rules that govern how residents, owners, and visitors use and share property within a strata titles scheme in Western Australia." ;
+    skos:inScheme cs: ;
+    skos:notation "schemeByLaws" ;
+    skos:prefLabel "Strata Title Scheme: Bylaws" ;
+    skos:topConceptOf cs: ;
+.
+
+:schemeNotices
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "A legal document required under the Strata Titles Act 1985 to establish or amend a strata property." ;
+    skos:inScheme cs: ;
+    skos:notation "schemeNotices" ;
+    skos:prefLabel "Strata Title Scheme: Notice" ;
+    skos:topConceptOf cs: ;
+.

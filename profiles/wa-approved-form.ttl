@@ -1,0 +1,66 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/wa-approved-form/>
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-approved-form>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX termtype: <https://linked.data.gov.au/def/csdm/termtypes/>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:2021-47738
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "The approved Schedule of Unit Entitlements form." ;
+    skos:inScheme cs: ;
+    skos:notation "2021-47738" ;
+    skos:prefLabel "Approved Schedule of Unit Entitlements Form number 2021-47738" ;
+    skos:topConceptOf cs: ;
+    dcterms:type doctype:unitEntitlementSchedule ;
+    dcterms:valid "2021-07-07/.." ;
+    dcterms:source "wa-leg:mrdoc_48587.pdf" ;
+    skos:scopeNote "Approved under section 37, Schedule 2A clause 21T(1)(d) and Schedule 2A clause 31E(1)(c) of the Strata Titles Act 1985." ;
+.
+
+:BA14
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "The approved Building Approval Certificate form." ;
+    skos:inScheme cs: ;
+    skos:notation "BA14" ;
+    skos:prefLabel "Approved Building Approval Certificate form B14" ;
+    skos:topConceptOf cs: ;
+    dcterms:type doctype:buildingApprovalCertificate ;
+    dcterms:valid "2020-03-09/.." ;
+    dcterms:source "wa-leg:mrdoc_49441.pdf" ;
+    skos:scopeNote "Approved under section 51, 52, 61, of the Building Act 2011 and Regulation 4 of the Building Regulations 2012." ;
+.
+
+:2020-27588-v3
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "The approved Record of Strata Title Scheme: Limitations, Interests, Encumbrances and Notifications form." ;
+    skos:inScheme cs: ;
+    skos:notation "2020-27588-v3" ;
+    skos:prefLabel "Approved Record of Strata Title Scheme: 2020-27588-v3" ;
+    skos:topConceptOf cs: ;
+    dcterms:type doctype:recordOfStrataTitlesScheme ;
+    dcterms:valid "2020-07-01/.." ;
+.
+
+:15c
+    a
+        skos:Concept ,
+        termtype:DocType ;
+    skos:definition "Strata endorsement certificate provided by planning or local government approval/endorsement." ;
+    skos:inScheme cs: ;
+    skos:notation "15c" ;
+    skos:prefLabel "Strata endorsement certificate: 15C" ;
+    skos:topConceptOf cs: ;
+    dcterms:type doctype:strataPlanEndorsementCertificate ;
+    dcterms:valid "1980-05-06/.." ;
+.
