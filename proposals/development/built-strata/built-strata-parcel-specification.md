@@ -191,7 +191,7 @@ It gives SP83687 entitlements of 117, 108, 113, 108, 108, 113, 108, 108, and 117
 <figure class="fig fig-wide">
   <img src="../../../assets/unit-entitlement.png" 
        alt="Figure 1: Schedule of Unit Entitlement SP 83687"
-       style="width: 70%;">
+       style="width: 50%;">
   <figcaption id="figure-1-unit-entitlement">Figure 1: Schedule of Unit Entitlement SP 83687</figcaption>
 </figure>
 
