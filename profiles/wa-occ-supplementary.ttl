@@ -1,0 +1,196 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/wa-occ/>
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-occ>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+#
+# Concept Scheme
+#
+
+cs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "WA Occupation Feature Type"@en ;
+    skos:definition
+        "Types of physical occupation features used in Western Australian 3D cadastral survey datasets, including buildings, building elements and other structures that may define, support the interpretation of, or provide evidence for cadastral boundaries."@en ;
+    dcterms:created "2026-09-08"^^xsd:date ;
+    dcterms:modified "2026-09-08"^^xsd:date ;
+    dcterms:publisher [
+        a schema:Organization ;
+        schema:name "Landgate"
+    ] ;
+    skos:hasTopConcept
+        :Building ,
+        :BuildingElement ,
+        :Structure ;
+.
+
+
+#
+# Top-level concepts
+#
+
+:Building
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:notation "Building" ;
+    skos:prefLabel "Building"@en ;
+    skos:definition
+        "A constructed building represented as a physical occupation feature relevant to the definition, interpretation or evidence of cadastral boundaries."@en ;
+.
+
+:BuildingElement
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:notation "BuildingElement" ;
+    skos:prefLabel "Building element"@en ;
+    skos:definition
+        "A physical component of a building that may be represented as an occupation feature and may participate in the definition, interpretation or evidence of a cadastral boundary."@en ;
+.
+
+
+#
+# Building element types
+#
+
+:Wall
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Wall" ;
+    skos:prefLabel "Wall"@en ;
+    skos:definition
+        "A vertical or near-vertical building element forming, enclosing or subdividing part of a building."@en ;
+.
+
+:Slab
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Slab" ;
+    skos:prefLabel "Slab"@en ;
+    skos:definition
+        "A generally horizontal plate-like building element forming a floor, roof or other structural surface."@en ;
+.
+
+:Ceiling
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Ceiling" ;
+    skos:prefLabel "Ceiling"@en ;
+    skos:definition
+        "A building element forming the overhead surface or finish of an enclosed or partially enclosed space."@en ;
+.
+
+:Roof
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Roof" ;
+    skos:prefLabel "Roof"@en ;
+    skos:definition
+        "A building element forming the upper covering or enclosure of a building or part of a building."@en ;
+.
+
+:Column
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Column" ;
+    skos:prefLabel "Column"@en ;
+    skos:definition
+        "A generally vertical structural building element primarily intended to transfer loads."@en ;
+.
+
+:Beam
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Beam" ;
+    skos:prefLabel "Beam"@en ;
+    skos:definition
+        "A generally horizontal or inclined structural building element primarily intended to transfer loads between supports."@en ;
+.
+
+:Stair
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Stair" ;
+    skos:prefLabel "Stair"@en ;
+    skos:definition
+        "A building element providing stepped pedestrian access between different levels."@en ;
+.
+
+:Door
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Door" ;
+    skos:prefLabel "Door"@en ;
+    skos:definition
+        "A building element forming a movable or operable barrier within an opening that provides access between spaces."@en ;
+.
+
+:Window
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "Window" ;
+    skos:prefLabel "Window"@en ;
+    skos:definition
+        "A building element forming an opening or glazed enclosure within a wall, roof or other building element."@en ;
+.
+
+:OtherBuildingElement
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :BuildingElement ;
+    skos:notation "OtherBuildingElement" ;
+    skos:prefLabel "Other building element"@en ;
+    skos:definition
+        "A physical building element relevant to occupation or cadastral interpretation that is not represented by another concept in this vocabulary."@en ;
+.
+
+#
+# Other structure types
+#
+
+:Structure
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
+    skos:notation "Structure" ;
+    skos:prefLabel "Structure"@en ;
+    skos:definition
+        "A constructed physical feature, other than a building or building element, that may be represented as an occupation feature and may be relevant to the definition, interpretation or evidence of a cadastral boundary."@en ;
+.
+
+:Fence
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :Structure ;
+    skos:notation "Fence" ;
+    skos:prefLabel "Fence"@en ;
+    skos:definition
+        "A constructed barrier, screen or enclosure, typically consisting of posts, rails, panels, wire or similar components, that may indicate occupation or provide evidence relevant to a cadastral boundary."@en ;
+.
+
+:RetainingWall
+    a skos:Concept ;
+    skos:inScheme cs: ;
+    skos:broader :Structure ;
+    skos:notation "RetainingWall" ;
+    skos:prefLabel "Retaining wall"@en ;
+    skos:definition
+        "A constructed wall intended primarily to retain soil or other material at different ground levels and which may provide occupation evidence or otherwise be relevant to the interpretation of a cadastral boundary."@en ;
+.

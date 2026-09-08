@@ -3,7 +3,7 @@
 > The 3D CSDM generally expects that parcel identity should follow legal identity. 
 > Geometry decomposition should not create additional cadastral parcels unless the source information creates additional legal parcels or spatial rights.
 
-For Built Strata and Survey-Strata schemes, each legal strata lot shall be represented by one cadastral parcel with a `Solid` or `MultiSolid` geometry. 
+For Built Strata and Survey-Strata schemes, each legal strata lot shall be represented by one cadastral parcel with a `Solid` or `AggregateSolid` geometry. 
 Each constituent solid shall be explicitly identified and assigned a role. 
 Principal units, courtyards, balconies, car bays, and similar components shall not be represented as separate cadastral parcels solely for subsequent aggregation into a legal strata lot.
 
@@ -20,11 +20,11 @@ To maintain consistency with this framework for the built-strata use case:
 - multi-level lots remain one multipart parcel; and 
 - balconies and courtyards forming part of a lot remain part of that lot.
 
-Accordingly, the [Built Strata Overview](built-strata-overview.md) proposes a `MultiSolid` whose `components[]` reference 3D CSDM solid objects.
+Accordingly, the [Built Strata Overview](built-strata-overview.md) proposes a `AggregateSolid` whose `components[]` reference 3D CSDM solid objects.
 The components shall collectively realise one legal cadastral parcel. 
 An individual component shall not imply a separate cadastral parcel or legal interest.
 
-Conceptually represented as a flowchart, the strata lots arranged left-to-right and the `MultiSolid` components grouped in a subgraph
+Conceptually represented as a flowchart, the strata lots arranged left-to-right and the `AggregateSolid` components grouped in a subgraph
 
 ```mermaid
 flowchart TB
@@ -37,9 +37,9 @@ flowchart TB
     scheme --> lot2["Lot 2<br/>Primary Parcel"]
     scheme --> lot3["Lot 3<br/>Primary Parcel"]
 
-    lot1 -->|"hasGeometry"| multi["MultiSolid"]
+    lot1 -->|"hasGeometry"| multi["AggregateSolid"]
 
-    subgraph components["MultiSolid components"]
+    subgraph components["AggregateSolid components"]
         direction TB
         solidA["Solid A<br/>role: principalUnit"]
         solidB["Solid B<br/>role: courtyard"]
@@ -65,7 +65,7 @@ This results in three levels that should not be conflated:
 
 A separately numbered car-park lot would be a parcel. 
 A car bay expressly forming part of Lot 1 would be a geometry component of Lot 1. 
-An exclusive-use area that remains common property should not be incorporated into Lot 1's `MultiSolid`; the working use case recommends preserving the common-property treatment and representing the exclusive-use right as an interest or secondary spatial object where legally required.
+An exclusive-use area that remains common property should not be incorporated into Lot 1's `AggregateSolid`; the working use case recommends preserving the common-property treatment and representing the exclusive-use right as an interest or secondary spatial object where legally required.
 
 For this reason, a `ParcelAggregate` should not be used to assemble the components of a single strata lot. 
 A `ParcelAggregate` is semantically stronger than a multipart geometry because it asserts that its members are themselves parcels.
@@ -106,10 +106,9 @@ For example:
   "id": "parcel-lot-1",
   "featureType": "PrimaryParcel",
   "properties": {
-    "unitEntitlement": 117,
     "spatialRepresentationDefinitions": {
       "derivedGeometry": {
-        "geometryType": "MultiSolid",
+        "geometryType": "AggregateSolid",
         "components": [
           {
             "componentId": "lot-1-principal-ground",
@@ -144,7 +143,7 @@ The proposed properties are not yet defined in the published WA schema.
 Where all components form one continuous, closed volume, the canonical `hasGeometry` may be represented by a single `Solid`. 
 Meaningful internal subdivisions may still be recorded using `hasGeometryPart` or `component` metadata.
 
-A `MultiSolid` is most appropriate where a legal lot comprises spatially disconnected volumes.
+A `AggregateSolid` is most appropriate where a legal lot comprises spatially disconnected volumes.
 
 ## Parent parcel and scheme relationship
 
@@ -169,7 +168,7 @@ flowchart TB
     lot2["Lot 2<br/>PrimaryCadastralParcel"]
     lotN["Lot 9<br/>PrimaryCadastralParcel"]
 
-    geometry["Solid or MultiSolid<br/>Spatial realisation"]
+    geometry["Solid or AggregateSolid<br/>Spatial realisation"]
     components["Individual Solid components"]
 
     source -->|"subdivision / provenance"| scheme

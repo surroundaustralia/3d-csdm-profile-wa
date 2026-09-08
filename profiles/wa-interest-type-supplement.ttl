@@ -1,0 +1,21 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/wa-interest-type/>
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-interest-type>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:strataScheme
+    a
+        skos:Concept ,
+        surv:InterestType ;
+    skos:altLabel "" ;
+    skos:definition "Interest" ;
+    skos:inScheme cs: ;
+    skos:notation "strataScheme" ;
+    skos:prefLabel "Strata Scheme" ;
+    skos:topConceptOf cs: ;

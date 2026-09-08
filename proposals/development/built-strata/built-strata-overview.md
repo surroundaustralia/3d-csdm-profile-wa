@@ -427,7 +427,7 @@ For that reason we recommend extending `derivedGeometry` slightly.
 {
   "derivedGeometry": {
     "status": "solidGenerated",
-    "geometryType": "MultiSolid",
+    "geometryType": "AggregateSolid",
     "components": [
       {
         "componentId": "lot-1-main-unit",
