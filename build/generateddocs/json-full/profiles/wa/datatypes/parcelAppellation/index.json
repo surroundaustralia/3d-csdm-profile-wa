@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-08",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -36,6 +36,9 @@
     "icsm.profiles.wa.datatypes.miscellaneousTenure",
     "icsm.profiles.wa.datatypes.crownAllotment"
   ],
+  "license": {
+    "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/LICENSE"
+  },
   "schema": {
     "application/yaml": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.yaml",
     "application/json": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/parcelAppellation/schema.json"
