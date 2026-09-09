@@ -1,153 +1,251 @@
 # Discussion Note
 
-## Use of `AggregateSolid` for Multipart Built-Strata Geometry
+## Use of `AggregateSolid` for Multipart Cadastral Geometry
 
 ## Introduction
 
-Built-strata cadastral parcels may comprise several spatially separate 3D components, such as principal units, balconies, courtyards, car bays, and storage areas. 
-Although these components collectively represent a single legal strata lot, they do not necessarily touch one another or form a single continuous solid.
+Cadastral units may comprise several spatially separate 3D components that collectively form a single legal or administrative unit.
 
-A consistent term is therefore required to describe a collection of `Solid` geometries associated with one cadastral parcel. 
-The terms `AggregateSolid` and `MultiSolid` have both been used during `built-strata` development, while the ISO 19152 Land Administration Domain Model (LADM) provides a related administrative concept through `BA_Unit`.
+This situation commonly occurs in strata, condominium, unit-title, commonhold, and other forms of multi-level or multipart property development. 
+A single cadastral unit may, for example, comprise a principal occupancy area together with balconies, courtyards, parking spaces, storage areas, or other spatially separated components.
+
+These components do not necessarily touch one another or form a single continuous solid. 
+The core 3D CSDM therefore requires a consistent mechanism for associating multiple `Solid` geometries with a single cadastral unit without implying geometric continuity or creating additional cadastral units solely to accommodate the geometry.
+
+The terms `AggregateSolid` and `MultiSolid` have both been considered for this purpose. 
+[ISO 19107:2019 Geographic information — Spatial schema](https://www.iso.org/standard/66175.html) provides the corresponding geometric concept through `GM_MultiSolid`, while [ISO 19152-1:2024 Geographic information — Spatial schema](https://www.iso.org/standard/81263.html) provides the related administrative concept of `BA_Unit`, which groups spatial units to which common rights, restrictions, or responsibilities apply.
 
 ## Background
 
-### `AggregateSolid`
+### Multipart cadastral units
 
-`AggregateSolid` describes a collection of `Solid` geometries without implying that the individual members are connected or collectively form a single continuous solid.
+A cadastral unit may have a single legal identity while its spatial extent consists of several independent volumes.
 
-This reflects the distinction made in [ISO 19107:2019 Geographic information - Spatial schema](https://www.iso.org/standard/66175.html) between aggregate and composite geometries. 
-An aggregate is a collection whose members are grouped together without requiring spatial continuity or connectivity. 
-This is well suited to built strata, where one cadastral lot may include several disconnected volumes.
-
-For example, one strata lot could comprise:
+For example:
 
 ```text
-Strata Lot 1
-    ├── Solid — principal unit, ground floor
-    ├── Solid — principal unit, upper floor
+Cadastral Unit
+    ├── Solid — principal component, lower level
+    ├── Solid — principal component, upper level
     ├── Solid — balcony
-    ├── Solid — courtyard
-    └── Solid — car bay
+    ├── Solid — private open space
+    └── Solid — parking space
 ```
 
-The association between these solids is cadastral rather than geometric.
-Each contributes to the spatial representation of the same legal parcel.
+The relationship between these solids is not necessarily geometric. 
+Their association may arise because the relevant cadastral, tenure, or registration framework treats them collectively as one legal unit.
 
-The term also provides a useful contrast with `CompositeSolid`. 
-A composite represents component solids that are spatially connected and collectively behave as a single continuous solid. 
-Such a constraint would be inappropriate for many built-strata parcels.
+The core model should therefore distinguish between:
+
+```text
+legal or cadastral identity
+        and
+geometric decomposition
+```
+
+A separate cadastral unit should only be created where the relevant jurisdiction recognises the component as having an independent cadastral or legal identity.
+
+### `AggregateSolid`
+
+`AggregateSolid` describes a collection of `Solid` geometries without implying that the members are connected or collectively form a single continuous solid.
+
+This reflects the distinction made in [ISO 19107:2019](https://www.iso.org/standard/66175.html) between aggregate and composite geometries.
+
+An aggregate groups geometry objects without requiring spatial continuity or connectivity. 
+This behaviour is appropriate where a cadastral unit comprises multiple spatially separate volumes.
+
+The association between the members of an `AggregateSolid` is therefore established by the feature being represented rather than by a requirement for geometric connectivity.
+
+The term also provides a useful distinction from `CompositeSolid`.
+
+A `CompositeSolid` represents component solids that are spatially connected and collectively behave as a single continuous solid. 
+Such connectivity requirements should not be imposed on a multipart cadastral unit unless the underlying geometry actually has those characteristics.
 
 ### `MultiSolid`
 
-ISO 19107 uses `GM_MultiSolid` for the homogeneous aggregate of solid geometries, and related standards and implementations commonly use the term `MultiSolid`. 
-Consequently, `MultiSolid` provides the more direct alignment with [ISO 19107](https://www.iso.org/standard/66175.html) terminology.
+[ISO 19107:2019](https://www.iso.org/standard/66175.html) uses `GM_MultiSolid` for a homogeneous aggregate of solid geometries. 
+Related standards and implementations commonly use the term `MultiSolid`.
 
-However, the term primarily communicates that multiple solids are present. 
-It does not make the distinction between **aggregate** and **composite** clear to an implementer.
+`MultiSolid` therefore provides the closest direct correspondence with [ISO 19107:2019](https://www.iso.org/standard/66175.html) terminology.
 
-Within a cadastral profile, this distinction is significant. 
-A validator should not infer that the members of a multipart strata parcel must:
+However, the term primarily indicates that multiple solids are present. 
+It does not make the distinction between a grouping being **aggregate** or **composite** for an implementer.
+
+For cadastral applications this distinction is important. 
+The presence of multiple solid components should not cause an implementation or validator to infer that those components must:
 
 * touch one another;
 * share common boundary faces;
-* be spatially contiguous; or
-* form a single connected volume.
+* be spatially contiguous;
+* have a connected interior; or
+* collectively form a single `Solid`.
 
-Using `AggregateSolid` makes those semantics more explicit, even though the corresponding [ISO 19107](https://www.iso.org/standard/66175.html) concept is `GM_MultiSolid`.
+The term `AggregateSolid` makes this modelling intention explicit.
 
-From this perspective, `AggregateSolid` can be regarded as a 3D CSDM application-model term corresponding to the aggregate semantics of [ISO 19107](https://www.iso.org/standard/66175.html) `GM_MultiSolid`, rather than as a new form of geometry.
+From this perspective, `AggregateSolid` may be regarded as the cadastral application-model term corresponding to the aggregate semantics of [ISO 19107:2019](https://www.iso.org/standard/66175.html) `GM_MultiSolid`, rather than as a new geometry concept.
 
-### `BA_Unit`
+### `CompositeSolid`
 
-[ISO 19152-1:2025](https://www.iso.org/standard/81263.html) provides a related concept through `BA_Unit`. 
-A `BA_Unit` is an administrative object that groups one or more spatial units to which the same rights, restrictions, or responsibilities apply. 
-A common example is an ownership unit comprising an apartment together with another spatial unit such as a garage.
+A `CompositeSolid` represents a distinctly different geometric situation.
 
-This concept is useful when considering built strata because it separates:
+Its components participate in a geometrically connected structure and collectively represent a single continuous solid. 
+A composite therefore carries stronger spatial and topological semantics than an aggregate.
+
+The distinction can be summarised as:
+
+| Concept          | General meaning                                                                       |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| `Solid`          | A single 3D volume                                                                    |
+| `AggregateSolid` | A collection of solids associated with one feature, without connectivity requirements |
+| `CompositeSolid` | Connected component solids that collectively behave as a single solid                 |
+
+A cadastral model should retain this distinction so that geometry validation does not impose composite-solid rules on what is merely an aggregate of spatial components.
+
+### Relationship to `BA_Unit`
+
+[ISO 19152-1:2024](https://www.iso.org/standard/81263.html) provides a related administrative concept through `BA_Unit`.
+
+A `BA_Unit` groups one or more spatial units to which a homogeneous set of rights, restrictions, or responsibilities applies. 
+This may include cases where an ownership unit consists of several spatial components.
+
+The concept is relevant to multipart cadastral representation because it demonstrates the need to separate administrative or legal grouping from spatial representation.
+
+However, `BA_Unit` and `AggregateSolid` operate at different conceptual levels:
 
 ```text
-administrative/legal grouping
-        from
-spatial representation
+BA_Unit or equivalent
+    administrative/legal grouping
+
+AggregateSolid
+    geometric representation
 ```
 
-However, `BA_Unit` operates at a different level from `AggregateSolid`.
+Within a cadastral model, an existing cadastral parcel, cadastral unit, or equivalent feature may already provide the required legal identity. 
+Where this is the case, the geometry of that feature may be represented by an `AggregateSolid`.
 
-In the 3D CSDM context, the cadastral parcel already provides the legal identity of the strata lot. 
-The aggregate geometry then provides its spatial representation:
+For example:
 
 ```text
-CadastralParcel
+CadastralUnit
        │
        └── AggregateSolid
-              ├── Solid — principalUnit
-              ├── Solid — balcony
-              ├── Solid — courtyard
-              └── Solid — carBay
+              ├── Solid
+              ├── Solid
+              ├── Solid
+              └── Solid
 ```
 
-Introducing a separate cadastral parcel or spatial unit for every geometry component would be appropriate only where the source cadastral framework gives that component an independent legal identity. 
-A balcony, courtyard, or car bay that is simply part of a registered strata lot should not become a separate cadastral parcel solely because it is represented by a separate solid.
+There is therefore no requirement to model every solid as a separate cadastral unit unless the relevant jurisdiction assigns that component an independent legal or cadastral identity.
+
+This distinction is particularly important for strata, condominium, and similar developments, but it is not specific to those forms of tenure.
 
 ### Role of individual components
 
-Because an `AggregateSolid` deliberately imposes few spatial rules on its members, it is useful to describe the cadastral function of each component.
+Because an `AggregateSolid` deliberately imposes minimal semantic constraints on its members, it can be useful to describe the function or role of each component within the cadastral unit.
 
-A controlled `componentRole` can provide this information, for example:
+A qualified component relationship could, therefore, provide an optional `componentRole`.
+
+For example:
 
 ```json
 {
   "type": "AggregateSolid",
   "components": [
     {
-      "solidRef": "solid-lot1-main",
+      "solidRef": "solid-unit-main",
       "componentRole": "principalUnit"
     },
     {
-      "solidRef": "solid-lot1-courtyard",
-      "componentRole": "courtyard"
+      "solidRef": "solid-unit-balcony",
+      "componentRole": "balcony"
     },
     {
-      "solidRef": "solid-lot1-carbay",
-      "componentRole": "carBay"
+      "solidRef": "solid-unit-parking",
+      "componentRole": "parkingSpace"
     }
   ]
 }
 ```
 
-The geometry remains an ordinary collection of 3D CSDM `Solid` objects, while `componentRole` records why each solid forms part of the cadastral parcel.
+The geometry remains a collection of ordinary `Solid` objects, while `componentRole` provides application semantics describing the purpose of each member.
+
+The core model need not prescribe a comprehensive list of cadastral component roles. 
+Instead, it may define the ability to associate a role with a component, while jurisdictional or application profiles define appropriate controlled vocabularies.
+
+Possible roles could include, for example:
+
+```text
+principalUnit
+balcony
+courtyard
+privateOpenSpace
+parkingSpace
+storage
+roofSpace
+accessoryUnit
+other
+```
+
+The vocabulary may vary between jurisdictions without changing the underlying geometry model.
+
+## Core model capability
+
+Multipart cadastral geometry should be treated as a general capability of the core 3D cadastral model rather than as a jurisdiction-specific extension.
+
+The core model should be capable of expressing that:
+
+1. one cadastral parcel feature may have an `AggregateSolid` as its spatial representation;
+2. an `AggregateSolid` contains one or more `Solid` members;
+3. no connectivity or adjacency requirement is imposed between those members;
+4. each member may optionally have a role describing its function within the parent cadastral feature;
+5. membership of an `AggregateSolid` does not, by itself, imply that a member is an independent cadastral unit; and
+6. jurisdictional profiles may impose additional legal, semantic, or validation constraints where required.
+
+This allows the same modelling pattern to support a range of cadastral arrangements, including:
+
+```text
+strata
+condominium
+unit title
+commonhold
+apartment ownership
+multi-level cadastral units
+multipart easements or rights
+other non-contiguous 3D cadastral units
+```
+
+without embedding the terminology or legislative concepts of a particular jurisdiction in the core geometry model.
 
 ## Recommendation
 
-It is recommended that **`AggregateSolid` be retained as the preferred 3D CSDM term for the collection of `Solid` geometries that together represent a multipart cadastral parcel**.
+It is recommended that **`AggregateSolid` be adopted as a core 3D CSDM capability for representing a cadastral parcel feature whose spatial extent comprises multiple `Solid` geometries that are not required to be spatially connected**.
 
-The profile should define the term explicitly as corresponding to the aggregate semantics of [ISO 19107](https://www.iso.org/standard/66175.html) `GM_MultiSolid`. 
-The definition should make clear that member solids are not required to be contiguous, connected, or capable of forming a single `Solid`.
+The core model should define `AggregateSolid` explicitly as corresponding to the aggregate semantics of [ISO 19107:2019](https://www.iso.org/standard/66175.html) `GM_MultiSolid`.
 
-`MultiSolid` should therefore be treated as the [ISO 19107](https://www.iso.org/standard/66175.html) correspondence rather than used interchangeably throughout the WA profile. 
-Consistent use of `AggregateSolid` will make the intended distinction from `CompositeSolid` clearer to implementers and validators.
+A general definition could be:
 
-A suitable definition would be:
-
-> **AggregateSolid** — A collection of one or more `Solid` geometries that collectively represent the spatial extent of a feature. 
+> **AggregateSolid**: A collection of one or more `Solid` geometries that collectively represent the spatial extent of a feature. 
 > No requirement is imposed that the member solids are contiguous, connected, mutually adjacent, or collectively form a single continuous solid. 
-> The concept corresponds to the aggregate semantics of ISO 19107 `GM_MultiSolid`.
+> The concept corresponds to the aggregate semantics of [ISO 19107:2019](https://www.iso.org/standard/66175.html) `GM_MultiSolid`.
 
-For built-strata parcels, the recommended pattern is therefore:
+The model should distinguish `AggregateSolid` from `CompositeSolid`, for which stronger connectivity and continuity requirements apply.
+
+`MultiSolid` should be identified as the corresponding [ISO 19107:2019](https://www.iso.org/standard/66175.html) terminology rather than used interchangeably with `AggregateSolid` within the 3D CSDM model.
+
+The recommended core pattern is:
 
 ```text
-PrimaryCadastralParcel
+CadastralFeature
         │
         └── AggregateSolid
               ├── Solid
-              │    componentRole = principalUnit
+              │    componentRole = ...
               ├── Solid
-              │    componentRole = balcony
-              ├── Solid
-              │    componentRole = courtyard
+              │    componentRole = ...
               └── Solid
-                   componentRole = carBay
+                   componentRole = ...
 ```
 
-This approach preserves the legal identity of the cadastral parcel, provides a clear representation of multipart geometry, avoids inappropriate connectivity requirements, and remains readily mappable to [ISO 19107](https://www.iso.org/standard/66175.html) terminology.
+The `componentRole` capability should also be supported by the core model, but its vocabulary should normally be defined or extended by jurisdictional profiles.
+
+This approach provides a jurisdiction-neutral mechanism for representing multipart cadastral units, preserves the distinction between legal identity and geometric decomposition, avoids inappropriate connectivity requirements, and provides a clear mapping to [ISO 19107:2019](https://www.iso.org/standard/66175.html) geometry concepts and [ISO 19152-1:2024](https://www.iso.org/standard/81263.html) land-administration principles.
