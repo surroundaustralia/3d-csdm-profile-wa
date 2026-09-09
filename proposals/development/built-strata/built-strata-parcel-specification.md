@@ -113,22 +113,34 @@ For example:
           {
             "componentId": "lot-1-principal-ground",
             "componentRole": "principalUnit",
-            "solidRef": "solid-lot-1-ground"
+            "solidRef": "solid-lot-1-ground",
+            "boundaryDefinitionsRef": [
+              "boundary-definition-lo1-1-principal-ground"
+            ]
           },
           {
             "componentId": "lot-1-principal-first",
             "componentRole": "principalUnit",
-            "solidRef": "solid-lot-1-first"
+            "solidRef": "solid-lot-1-first",
+            "boundaryDefinitionsRef": [
+              "boundary-definition-lot-1-principal-first"
+            ]
           },
           {
             "componentId": "lot-1-courtyard",
             "componentRole": "courtyard",
-            "solidRef": "solid-lot-1-courtyard"
+            "solidRef": "solid-lot-1-courtyard",
+            "boundaryDefinitionsRef": [
+              "boundary-definition-lot-1-courtyard"
+            ]
           },
           {
             "componentId": "lot-1-carbay",
             "componentRole": "carBay",
-            "solidRef": "solid-lot-1-carbay"
+            "solidRef": "solid-lot-1-carbay",
+            "boundaryDefinitionsRef": [
+              "boundary-definition-lot-1-carbay"
+            ]
           }
         ]
       }
