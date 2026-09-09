@@ -27,11 +27,11 @@ uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ] ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:points uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b ;

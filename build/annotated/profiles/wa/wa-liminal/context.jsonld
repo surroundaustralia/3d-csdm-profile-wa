@@ -665,33 +665,6 @@
     },
     "vectorObservations": {
       "@context": {
-        "observedProperty": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/property/"
-          },
-          "@id": "sosa:observedProperty",
-          "@type": "@id"
-        },
-        "madeBySensor": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
-            "sensorType": "@type",
-            "baseSensor": "csdm:sensors/baseSensor",
-            "roverSensor": "csdm:sensors/roverSensor"
-          },
-          "@id": "sosa:madeBySensor",
-          "@type": "@id"
-        },
-        "hasMember": {
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            }
-          },
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
         "featureType": "@type",
         "features": {
           "@id": "sosa:hasMember",
@@ -732,6 +705,33 @@
               "@id": "sosa:hasResult",
               "@type": "@id"
             }
+          }
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
           }
         },
         "angleType": {
@@ -753,16 +753,6 @@
     },
     "occupationObservations": {
       "@context": {
-        "hasMember": {
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            }
-          },
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
         "featureType": "@type",
         "features": {
           "@id": "sosa:hasMember",
@@ -804,6 +794,47 @@
               "@type": "@id"
             }
           }
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
+          }
+        },
+        "angleType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/angletypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/angleType"
+        },
+        "distanceType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/distancetypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/distanceType"
         }
       },
       "@id": "container:occupationObservations"
@@ -1305,8 +1336,16 @@
       "@id": "sosa:System",
       "@type": "@id"
     },
+    "actsOn": {
+      "@id": "sosa:actsOn",
+      "@type": "@id"
+    },
     "actsOnProperty": {
       "@id": "sosa:actsOnProperty",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
       "@type": "@id"
     },
     "deployedOnPlatform": {
@@ -1333,6 +1372,10 @@
       "@id": "sosa:hasInput",
       "@type": "@id"
     },
+    "hasMember": {
+      "@id": "sosa:hasMember",
+      "@type": "@id"
+    },
     "hasOriginalSample": {
       "@id": "sosa:hasOriginalSample",
       "@type": "@id"
@@ -1343,10 +1386,6 @@
     },
     "hasProperty": {
       "@id": "sosa:hasProperty",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
       "@type": "@id"
     },
     "hasResultQuality": {
@@ -1361,18 +1400,10 @@
       "@id": "sosa:hasSampledFeature",
       "@type": "@id"
     },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
-      "@type": "@id"
-    },
     "hasSubSystem": {
       "@id": "sosa:hasSubSystem",
       "@type": "@id",
       "@container": "@set"
-    },
-    "hasUltimateFeatureOfInterest": {
-      "@id": "sosa:hasUltimateFeatureOfInterest",
-      "@type": "@id"
     },
     "hosts": {
       "@id": "sosa:hosts",
@@ -1407,6 +1438,10 @@
       "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
+    "isOriginalSampleOf": {
+      "@id": "sosa:isOriginalSampleOf",
+      "@type": "@id"
+    },
     "isPropertyOf": {
       "@id": "sosa:isPropertyOf",
       "@type": "@id"
@@ -1431,6 +1466,14 @@
       "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
+    "isSampleOfUltimateFOI": {
+      "@id": "sosa:isSampleOfUltimateFOI",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
     "madeActuation": {
       "@id": "sosa:madeActuation",
       "@type": "@id"
@@ -1443,12 +1486,28 @@
       "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
     "madeObservation": {
       "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "madeSampling": {
       "@id": "sosa:madeSampling",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
       "@type": "@id"
     },
     "observes": {
@@ -1579,20 +1638,25 @@
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "hasMember": {
-      "@id": "sosa:hasMember",
-      "@type": "@id"
-    },
+    "endTime": "sosa:endTime",
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasUltimateFeatureOfInterest": {
+      "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
     "phenomenonTime": {
@@ -1600,6 +1664,7 @@
       "@type": "@id"
     },
     "resultTime": "sosa:resultTime",
+    "startTime": "sosa:startTime",
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"

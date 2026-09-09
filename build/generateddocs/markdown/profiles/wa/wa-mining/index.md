@@ -551,8 +551,8 @@ Minimal example - with combined elements from each test case
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -596,11 +596,11 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
-    ns3:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9540" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+    ns2:name [ rdfs:label "EFB157243/9540" ;
+            dcterms:hasPart [ rdfs:label "9540" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -634,14 +634,14 @@ Minimal example - with combined elements from each test case
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
     sosa:usedProcedure wa-procedure-used:M ;
-    ns2:angleType icsm-angle-type:angle ;
-    ns2:distanceType icsm-distance-type:grid .
+    ns3:angleType icsm-angle-type:angle ;
+    ns3:distanceType icsm-distance-type:grid .
 
 <https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    ns3:name [ rdfs:label "" ] ;
+    ns2:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -653,7 +653,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    ns3:name [ rdfs:label "" ] ;
+    ns2:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -670,7 +670,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    ns3:name [ rdfs:label "" ] ;
+    ns2:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -1370,33 +1370,6 @@ Links to the schema:
     },
     "vectorObservations": {
       "@context": {
-        "observedProperty": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/property/"
-          },
-          "@id": "sosa:observedProperty",
-          "@type": "@id"
-        },
-        "madeBySensor": {
-          "@context": {
-            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
-            "sensorType": "@type",
-            "baseSensor": "csdm:sensors/baseSensor",
-            "roverSensor": "csdm:sensors/roverSensor"
-          },
-          "@id": "sosa:madeBySensor",
-          "@type": "@id"
-        },
-        "hasMember": {
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            }
-          },
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
         "featureType": "@type",
         "features": {
           "@id": "sosa:hasMember",
@@ -1437,6 +1410,33 @@ Links to the schema:
               "@id": "sosa:hasResult",
               "@type": "@id"
             }
+          }
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
           }
         },
         "angleType": {
@@ -1458,16 +1458,6 @@ Links to the schema:
     },
     "occupationObservations": {
       "@context": {
-        "hasMember": {
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            }
-          },
-          "@id": "sosa:hasMember",
-          "@type": "@id"
-        },
         "featureType": "@type",
         "features": {
           "@id": "sosa:hasMember",
@@ -1509,6 +1499,47 @@ Links to the schema:
               "@type": "@id"
             }
           }
+        },
+        "hasMember": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@context": {
+            "features": {
+              "@id": "sosa:hasMember",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
+          }
+        },
+        "angleType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/angletypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/angleType"
+        },
+        "distanceType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/distancetypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/distanceType"
         }
       },
       "@id": "container:occupationObservations"
@@ -2010,8 +2041,16 @@ Links to the schema:
       "@id": "sosa:System",
       "@type": "@id"
     },
+    "actsOn": {
+      "@id": "sosa:actsOn",
+      "@type": "@id"
+    },
     "actsOnProperty": {
       "@id": "sosa:actsOnProperty",
+      "@type": "@id"
+    },
+    "deployedAsset": {
+      "@id": "sosa:deployedAsset",
       "@type": "@id"
     },
     "deployedOnPlatform": {
@@ -2038,6 +2077,10 @@ Links to the schema:
       "@id": "sosa:hasInput",
       "@type": "@id"
     },
+    "hasMember": {
+      "@id": "sosa:hasMember",
+      "@type": "@id"
+    },
     "hasOriginalSample": {
       "@id": "sosa:hasOriginalSample",
       "@type": "@id"
@@ -2048,10 +2091,6 @@ Links to the schema:
     },
     "hasProperty": {
       "@id": "sosa:hasProperty",
-      "@type": "@id"
-    },
-    "hasResult": {
-      "@id": "sosa:hasResult",
       "@type": "@id"
     },
     "hasResultQuality": {
@@ -2066,18 +2105,10 @@ Links to the schema:
       "@id": "sosa:hasSampledFeature",
       "@type": "@id"
     },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
-      "@type": "@id"
-    },
     "hasSubSystem": {
       "@id": "sosa:hasSubSystem",
       "@type": "@id",
       "@container": "@set"
-    },
-    "hasUltimateFeatureOfInterest": {
-      "@id": "sosa:hasUltimateFeatureOfInterest",
-      "@type": "@id"
     },
     "hosts": {
       "@id": "sosa:hosts",
@@ -2112,6 +2143,10 @@ Links to the schema:
       "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
+    "isOriginalSampleOf": {
+      "@id": "sosa:isOriginalSampleOf",
+      "@type": "@id"
+    },
     "isPropertyOf": {
       "@id": "sosa:isPropertyOf",
       "@type": "@id"
@@ -2136,6 +2171,14 @@ Links to the schema:
       "@id": "sosa:isSampleOf",
       "@type": "@id"
     },
+    "isSampleOfUltimateFOI": {
+      "@id": "sosa:isSampleOfUltimateFOI",
+      "@type": "@id"
+    },
+    "isSubSystemOf": {
+      "@id": "sosa:isSubSystemOf",
+      "@type": "@id"
+    },
     "madeActuation": {
       "@id": "sosa:madeActuation",
       "@type": "@id"
@@ -2148,12 +2191,28 @@ Links to the schema:
       "@id": "sosa:madeBySampler",
       "@type": "@id"
     },
+    "madeBySensor": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "madeBySystem": {
+      "@id": "sosa:madeBySystem",
+      "@type": "@id"
+    },
+    "madeExecution": {
+      "@id": "sosa:madeExecution",
+      "@type": "@id"
+    },
     "madeObservation": {
       "@id": "sosa:madeObservation",
       "@type": "@id"
     },
     "madeSampling": {
       "@id": "sosa:madeSampling",
+      "@type": "@id"
+    },
+    "observedProperty": {
+      "@id": "sosa:observedProperty",
       "@type": "@id"
     },
     "observes": {
@@ -2284,20 +2343,25 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "hasMember": {
-      "@id": "sosa:hasMember",
-      "@type": "@id"
-    },
+    "endTime": "sosa:endTime",
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
     },
-    "madeBySensor": {
-      "@id": "sosa:madeBySensor",
+    "hasInputValue": {
+      "@id": "sosa:hasInputValue",
       "@type": "@id"
     },
-    "observedProperty": {
-      "@id": "sosa:observedProperty",
+    "hasResult": {
+      "@id": "sosa:hasResult",
+      "@type": "@id"
+    },
+    "hasSimpleResult": {
+      "@id": "sosa:hasSimpleResult",
+      "@type": "@id"
+    },
+    "hasUltimateFeatureOfInterest": {
+      "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
     "phenomenonTime": {
@@ -2305,6 +2369,7 @@ Links to the schema:
       "@type": "@id"
     },
     "resultTime": "sosa:resultTime",
+    "startTime": "sosa:startTime",
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
