@@ -90,7 +90,7 @@ We suggest five substantive additions to the general `spatialRepresentationDefin
 | `referenceFeatureRef`                        | Links the legal definition to the wall/floor/ceiling or other occupation/building evidence without treating that evidence as the cadastral boundary.          |
 | `boundaryFaceRef`                            | Links the semantic legal definition directly to the corresponding `Face` in the Point **to** Edge **to** Ring **to** Face **to** Shell **to** Solid topology. |
 
-For multipart strata units, we have also included `derivedGeometry.components[]`, each containing a `solidRef` and its relevant `inputDefinitionRefs`.
+For multipart strata units, we have also included `derivedGeometry.components[]`, each containing a `solidRef` and its relevant `boundaryDefinitionsRef`.
 
 ## New `definitionType` for building-referenced boundaries
 
@@ -405,7 +405,7 @@ For a single-component strata unit:
     "status": "solidGenerated",
     "geometryType": "Solid",
     "solidRef": "solid-lot-1",
-    "inputDefinitionRefs": [
+    "boundaryDefinitionsRef": [
       "boundary-definition-lot-1"
     ],
     "sourceReference": "source-strata-plan-boundary-1",
@@ -433,7 +433,7 @@ For that reason we recommend extending `derivedGeometry` slightly.
         "componentId": "lot-1-main-unit",
         "solidRef": "solid-lot-1-main",
         "componentRole": "principalUnit",
-        "inputDefinitionRefs": [
+        "boundaryDefinitionsRef": [
           "boundary-definition-lot-1-main"
         ]
       },
@@ -441,7 +441,7 @@ For that reason we recommend extending `derivedGeometry` slightly.
         "componentId": "lot-1-car-bay",
         "componentRole": "carBay",
         "solidRef": "solid-lot-1-carbay",
-        "inputDefinitionRefs": [
+        "boundaryDefinitionsRef": [
           "boundary-definition-lot-1-carbay"
         ]
       },
@@ -449,7 +449,7 @@ For that reason we recommend extending `derivedGeometry` slightly.
         "componentId": "lot-1-storage",
         "componentRole": "storage",
         "solidRef": "solid-lot-1-storage",
-        "inputDefinitionRefs": [
+        "boundaryDefinitionsRef": [
           "boundary-definition-lot-1-storage"
         ]
       }
@@ -621,7 +621,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
       "status": "solidGenerated",
       "geometryType": "Solid",
       "solidRef": "solid-lot-1",
-      "inputDefinitionRefs": [
+      "boundaryDefinitionsRef": [
         "boundary-definition-lot-1"
       ],
       "componentRole": "principalUnit",
