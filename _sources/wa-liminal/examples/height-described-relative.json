@@ -1,6 +1,5 @@
 {
   "@context": {
-    "wa-profile": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
     "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/"
   },
   "id": "04-height-described-relative",

@@ -3,3 +3,5 @@
 build-local/
 profiles/wa-vocab-bindings.csv~
 profiles/wa-vocabs-todo.txt
+bblocks-config-local.yml
+.volumes
