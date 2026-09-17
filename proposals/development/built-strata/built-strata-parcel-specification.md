@@ -12,7 +12,7 @@ Principal units, courtyards, balconies, car bays, and similar components shall n
 The core model already supports this distinction. 
 A `CadastralParcel` may be a _single or multi area, or solid_, and a 3D spatial unit has both hasGeometry and hasGeometryPart. 
 A `ParcelAggregate`, by contrast, is explicitly a collection of parcels. 
-As such, the WA profile supports a 3D spatial unit represented by a closed solid or multi-solid and exposes `hasGeometryPart` for component geometry.
+As such, the WA profile supports a 3D spatial unit represented by a closed solid or `AggregateSolid` and exposes `hasGeometryPart` for component geometry.
 
 To maintain consistency with this framework for the built-strata use case: 
 - an apartment lot is a 3D cadastral parcel; 
@@ -74,7 +74,7 @@ A `ParcelAggregate` is semantically stronger than a multipart geometry because i
 > 
 > `ParcelAggregate` is available in the conceptual model and the WA Profile, but it does not appear to be listed in the WA Profile JSON schema’s parcels collection, which lists `PrimaryParcel` and `SecondaryParcel`. 
 > The WA profile therefore needs to determine an appropriate JSON encoding for a scheme-level aggregate. 
-> This of this implementation gap, it does not justify representing individual lot components as artificial cadastral parcels.
+> This is an implementation gap, it does not justify representing individual lot components as artificial cadastral parcels.
 
 ## `componentRole`
 
