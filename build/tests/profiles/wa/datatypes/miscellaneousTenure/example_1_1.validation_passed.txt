@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-09-17T23:21:01.296072+00:00
+Generated 2026-09-18T02:08:13.159008+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
- - Shape ex:NamePartShape: _:N26dd1f9055b14e89b5e153f920f23dee,_:N05c9e4cc9b634c87a8977907388cfb90,_:N34acfde9ad9d4fd8b3c5fe546b37fedf
+ - Shape ex:NamePartShape: _:N3e324503fbba432089aeaf912ecef652,_:N21e0692e91d04cdbbc2c4a0138c8696a,_:N666db9977aa340e9b18496a38c2dbdbb
  - Shape ex:NamedObjectShape: *none*
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
@@ -25,7 +25,7 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:n38a574b493e54181a95760276b948e9cb1: *none*
+ - Shape _:n8c85d7e79f4a4fb6a2faff3ab0ad7ce7b1: *none*
 
 === End SHACL ===
 
