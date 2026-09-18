@@ -1,0 +1,9 @@
+preflabel,definition,notation,altlabel,related
+principalUnit,"A primary spatial component of a lot, unit, or parcel intended to contain the principal area of occupation or use associated with that legal unit.","principalUnit","principal unit|primary unit|main unit","balcony|courtyard|carBay|storage|roofSpace|other"
+carBay,"A spatial component of a lot, unit, or parcel intended primarily for the parking of a motor vehicle.","carBay","car bay|car space|parking bay|parking space","principalUnit|storage|other"
+storage,"A spatial component of a lot, unit, or parcel intended primarily for the storage of goods or possessions.","storage","storage area|storage unit|store|storeroom","principalUnit|carBay|other"
+balcony,"A spatial component of a lot, unit, or parcel forming an elevated external or semi-external area associated with a building.","balcony","balcony area|terrace|deck","principalUnit|courtyard|roofSpace|other"
+courtyard,"A spatial component of a lot, unit, or parcel forming an open or partly enclosed external area at or near ground level.","courtyard","courtyard area|patio|yard","principalUnit|balcony|other"
+roofSpace,"A spatial component of a lot, unit, or parcel located within, immediately below, or otherwise associated with the roof volume of a building.","roofSpace","roof space|roof void|attic space","principalUnit|storage|other"
+privateUseArea,"A spatial component of a lot, unit, or parcel designated for the private or exclusive use of the occupants or owners of that legal unit, without necessarily forming part of its principal occupied space.","privateUseArea","private use area|exclusive use area|private area","principalUnit|balcony|courtyard|carBay|storage|roofSpace|other"
+other,"A spatial component of a lot, unit, or parcel whose role is not represented by another term in this vocabulary.","other","other component|other area|other space","principalUnit|carBay|storage|balcony|courtyard|roofSpace"

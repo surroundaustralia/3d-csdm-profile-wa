@@ -1,6 +1,7 @@
 PREFIX : <https://linked.data.gov.au/def/csdm/wa-approved-form/>
 PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-approved-form>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doctype: <https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>

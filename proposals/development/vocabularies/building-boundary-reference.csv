@@ -1,0 +1,9 @@
+preflabel,definition,notation,altlabel,related
+innerSurface,"The surface of a building element that faces toward the space, unit, or volume being bounded or defined.","innerSurface","inner surface|inner face|internal surface","outerSurface|centrePlane|surface"
+outerSurface,"The surface of a building element that faces away from the space, unit, or volume being bounded or defined.","outerSurface","outer surface|outer face","innerSurface|centrePlane|externalSurface|surface"
+centrePlane,"A plane located midway between two opposing surfaces of a building element, representing its geometric centre through its thickness.","centrePlane","centre plane|center plane|mid-plane|median plane","innerSurface|outerSurface|plane"
+upperSurface,"The surface of a building element that forms its upper or top-facing boundary.","upperSurface","upper surface|top surface|upper face","underSurface|surface"
+underSurface,"The surface of a building element that forms its lower or underside boundary.","underSurface","undersurface|under surface|lower surface|bottom surface|soffit","upperSurface|surface"
+externalSurface,"A surface of a building element that faces the exterior of a building, structure, or other enclosing construction.","externalSurface","external surface|exterior surface|external face","innerSurface|outerSurface|surface"
+surface,"A two-dimensional geometric extent forming part or all of the boundary of a three-dimensional object or spatial extent.","surface","surface geometry|face","plane|innerSurface|outerSurface|upperSurface|underSurface|externalSurface"
+plane,"A flat two-dimensional geometric construct of theoretically unlimited extent that may be used to define or derive a boundary position.","plane","geometric plane|reference plane","surface|centrePlane"
