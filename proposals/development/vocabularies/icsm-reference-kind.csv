@@ -1,0 +1,4 @@
+preflabel,definition,notation,altlabel,related
+Occupation Feature,"A physical feature associated with the occupation or construction of a boundary that is referenced when defining or interpreting a spatial unit boundary.","occupation-feature","occupation feature;physical feature;building element","reference-surface;parcel"
+Reference Surface,"A surface used as a geometric or spatial reference for defining, deriving, constraining, or interpreting a spatial unit boundary or extent.","reference-surface","reference surface;datum surface;reference geometry","occupation-feature;parcel"
+Parcel,"A cadastral parcel referenced when defining, relating, or constraining the boundary or extent of another spatial unit.","parcel","cadastral parcel;spatial unit;land parcel","occupation-feature;reference-surface"

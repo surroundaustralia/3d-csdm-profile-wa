@@ -1,0 +1,4 @@
+preflabel,definition,notation,altlabel,related
+Full Boundary Coverage,"A mode indicating that the complete boundary of the spatial unit is accounted for by explicit boundary definitions or other applicable boundary references.","full-boundary-coverage","complete boundary coverage;complete coverage","partial-boundary-coverage;no-boundary-coverage"
+Partial Boundary Coverage,"A mode indicating that only part of the boundary of the spatial unit is accounted for by explicit boundary definitions or other applicable boundary references.","partial-boundary-coverage","incomplete boundary coverage;partial coverage","full-boundary-coverage;no-boundary-coverage"
+No Boundary Coverage,"A mode indicating that no part of the boundary of the spatial unit is accounted for by explicit boundary definitions or other applicable boundary references.","no-boundary-coverage","no coverage;boundary coverage absent","full-boundary-coverage;partial-boundary-coverage"

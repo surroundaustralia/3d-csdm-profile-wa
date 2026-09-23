@@ -1,0 +1,4 @@
+preflabel,definition,notation,altlabel,related
+Generated,"A status indicating that the derived geometry has been successfully created from the applicable source geometry, boundary definitions, constraints, or other inputs.","generated","geometry generated;derived;complete","not-generated"
+Not Generated,"A status indicating that the derived geometry has not been created, either because generation has not yet been attempted or because the required inputs or conditions for generation have not been satisfied.","not-generated","not generated;pending generation;ungenerated","generated"
+Solid Generated,"A status indicating that a solid geometry has been successfully generated from the applicable source geometry, boundary definitions, reference surfaces, vertical extents, constraints, or other spatial inputs.","solid-generated","generated solid;3D solid generated"

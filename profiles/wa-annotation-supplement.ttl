@@ -43,3 +43,58 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Regulation 54 Survey Certificate" ;
     skos:topConceptOf cs: ;
 .
+
+:boundary-definition-statement
+    a
+        skos:Concept ,
+        termtype:Annotation ;
+    skos:definition "Plan annotation stating the rules by which the boundaries of the lots or part lots shown on the plan are defined, including the building or structure surfaces to which those boundaries are taken" ;
+    skos:inScheme cs: ;
+    skos:notation "boundary-definition-statement" ;
+    skos:prefLabel "Boundary definition statement" ;
+    skos:topConceptOf cs: ;
+.
+
+:licensed-valuer-certification
+    a
+        skos:Concept ,
+        termtype:Annotation ;
+    skos:definition "Plan annotation recording certification of a schedule of unit entitlements by a licensed valuer, including the valuer's name, licence number and date of certification" ;
+    skos:inScheme cs: ;
+    skos:notation "licensed-valuer-certification" ;
+    skos:prefLabel "Licensed valuer certification" ;
+    skos:topConceptOf cs: ;
+.
+
+:building-approval-certification
+    a
+        skos:Concept ,
+        termtype:Annotation ;
+    skos:definition "Plan annotation recording the issue of a building approval certificate under section 52 of the Building Act 2011, including the certificate identifier, the extent of building certified, the issuing building surveyor and local government, and the date of issue" ;
+    skos:inScheme cs: ;
+    skos:notation "building-approval-certification" ;
+    skos:prefLabel "Building approval certification" ;
+    skos:topConceptOf cs: ;
+.
+
+:strata-plan-endorsement
+    a
+        skos:Concept ,
+        termtype:Annotation ;
+    skos:definition "Plan annotation recording endorsement of a strata plan by a local government under section 15(4) of the Strata Titles Act 1985, including the local government reference and the date of endorsement" ;
+    skos:inScheme cs: ;
+    skos:notation "strata-plan-endorsement" ;
+    skos:prefLabel "Strata plan endorsement" ;
+    skos:topConceptOf cs: ;
+.
+
+:record-of-strata-titles-scheme
+    a
+        skos:Concept ,
+        termtype:Annotation ;
+    skos:definition "Plan annotation recording endorsement by the Registrar of Titles of the documents forming the record of the strata titles scheme, such as scheme by-laws and scheme notices, including the document references and the date of endorsement" ;
+    skos:inScheme cs: ;
+    skos:notation "record-of-strata-titles-scheme" ;
+    skos:prefLabel "Record of strata titles scheme" ;
+    skos:topConceptOf cs: ;
+.

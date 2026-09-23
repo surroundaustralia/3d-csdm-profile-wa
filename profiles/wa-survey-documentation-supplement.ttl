@@ -20,13 +20,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:ct
+:certificate-of-title
     a
         skos:Concept ,
         termtype:DocType ;
     skos:definition "An official document issued by an appropriate jurisdictional authority identifying the owner(s) of Real property along with any encumbrances over the property." ;
     skos:inScheme cs: ;
-    skos:notation "ct" ;
+    skos:notation "certificate-of-title" ;
     skos:prefLabel "Certificate of Title" ;
     skos:topConceptOf cs: ;
 .
@@ -35,7 +35,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "An An official survey plan describing a conventional Built Strata survey." ;
+    skos:definition "An official survey plan describing a conventional Built Strata survey." ;
     skos:inScheme cs: ;
     skos:notation "built-strata-plan" ;
     skos:prefLabel "Built Strata Plan" ;

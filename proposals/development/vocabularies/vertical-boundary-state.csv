@@ -7,3 +7,5 @@ definedButUnresolved,A legal or source-based boundary definition exists but cann
 defined,The vertical boundary is directly defined as a usable value or geometry.,def,,
 derived,The vertical boundary value or geometry has been computed from source information.,drv,,
 authoritative,The vertical boundary geometry is legally authoritative.,auth,,
+unconstrainedAbove,The parcel is explicitly not constrained above.,uca,unconstrained above|unconstrained-above,
+unconstrainedBelow,The parcel is explicitly not constrained below.,ucb,unconstrained below|unconstrained-below,

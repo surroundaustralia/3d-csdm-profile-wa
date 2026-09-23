@@ -1,0 +1,7 @@
+preflabel,definition,notation,altlabel,related
+Scheme,"The source applies to the scheme as a whole rather than to an individual parcel or boundary within the scheme.",scheme,"scheme-wide|scheme level","parcel|parcelPart|boundary"
+Parcel,"The source applies to a cadastral parcel as a whole.",parcel,"parcel-wide|parcel level|spatial unit","scheme|parcelPart|boundary"
+Parcel Part,"The source applies to a distinct spatial or functional part of a cadastral parcel rather than to the parcel as a whole.",parcelPart,"parcel part|parcel-part|component","parcel|boundary"
+Boundary,"The source applies to a boundary or boundary definition of a cadastral parcel or parcel part.",boundary,"parcel boundary|boundary definition","parcel|parcelPart|boundaryPart"
+Boundary Part,"The source applies to a specific part, segment, face, limit, or other component of a boundary.",boundaryPart,"boundary part|boundary-part|boundary component","boundary|parcelPart"
+Dataset,"The source applies to the dataset, submission, or encoded cadastral representation as a whole rather than to an individual scheme, parcel, or boundary.",dataset,"dataset-wide|dataset level|submission","scheme|parcel"

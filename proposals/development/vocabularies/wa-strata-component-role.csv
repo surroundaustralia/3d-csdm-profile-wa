@@ -1,0 +1,8 @@
+preflabel,definition,notation,altlabel,related
+Principal Unit,"The primary part of a strata, condominium, or other volumetric parcel intended for the principal occupation or use associated with that parcel.","principal-unit","principal unit;unit","balcony;courtyard;car-bay;storage;roof-space;private-use-area"
+Courtyard,"An open or substantially unenclosed area associated with a parcel, typically at or near ground level, that forms part of or is allocated for the use of that parcel.","courtyard","private courtyard;yard","principal-unit;private-use-area"
+Car Bay,"A spatial area or volume designated for the parking of a motor vehicle and associated with a parcel.","car-bay","car space;parking bay;parking space","principal-unit;private-use-area"
+Storage,"A spatial area or volume designated for the storage of goods or possessions and associated with a parcel.","storage","storage area;storage space;store","principal-unit;private-use-area"
+Balcony,"An elevated external or partially external spatial area associated with a parcel, typically adjoining a principal unit and intended for the use of its occupants.","balcony","terrace;balcony area","principal-unit;private-use-area"
+Roof Space,"A spatial area or volume at, within, or above the roof level of a building that is included in or allocated for the use of a parcel.","roof-space","roofspace;roof area;roof terrace","principal-unit;private-use-area"
+Private Use Area,"A spatial area or volume allocated for the exclusive or restricted use of a particular parcel or its occupants, without necessarily forming part of the parcel's principal unit.","private-use-area","exclusive use area;private area;exclusive-use area","principal-unit;courtyard;car-bay;storage;balcony;roof-space"

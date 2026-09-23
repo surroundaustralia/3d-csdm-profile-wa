@@ -36,21 +36,21 @@ cs:
 # Top-level concepts
 #
 
-:Building
+:building
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
-    skos:notation "Building" ;
+    skos:notation "building" ;
     skos:prefLabel "Building"@en ;
     skos:definition
         "A constructed building represented as a physical occupation feature relevant to the definition, interpretation or evidence of cadastral boundaries."@en ;
 .
 
-:BuildingElement
+:building-element
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
-    skos:notation "BuildingElement" ;
+    skos:notation "building-element" ;
     skos:prefLabel "Building element"@en ;
     skos:definition
         "A physical component of a building that may be represented as an occupation feature and may participate in the definition, interpretation or evidence of a cadastral boundary."@en ;
@@ -61,101 +61,101 @@ cs:
 # Building element types
 #
 
-:Wall
+:wall
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Wall" ;
+    skos:notation "wall" ;
     skos:prefLabel "Wall"@en ;
     skos:definition
         "A vertical or near-vertical building element forming, enclosing or subdividing part of a building."@en ;
 .
 
-:Slab
+:slab
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Slab" ;
+    skos:notation "slab" ;
     skos:prefLabel "Slab"@en ;
     skos:definition
         "A generally horizontal plate-like building element forming a floor, roof or other structural surface."@en ;
 .
 
-:Ceiling
+:ceiling
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Ceiling" ;
+    skos:notation "ceiling" ;
     skos:prefLabel "Ceiling"@en ;
     skos:definition
         "A building element forming the overhead surface or finish of an enclosed or partially enclosed space."@en ;
 .
 
-:Roof
+:roof
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Roof" ;
+    skos:notation "roof" ;
     skos:prefLabel "Roof"@en ;
     skos:definition
         "A building element forming the upper covering or enclosure of a building or part of a building."@en ;
 .
 
-:Column
+:column
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Column" ;
+    skos:notation "column" ;
     skos:prefLabel "Column"@en ;
     skos:definition
         "A generally vertical structural building element primarily intended to transfer loads."@en ;
 .
 
-:Beam
+:beam
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Beam" ;
+    skos:notation "beam" ;
     skos:prefLabel "Beam"@en ;
     skos:definition
         "A generally horizontal or inclined structural building element primarily intended to transfer loads between supports."@en ;
 .
 
-:Stair
+:stair
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Stair" ;
+    skos:notation "stair" ;
     skos:prefLabel "Stair"@en ;
     skos:definition
         "A building element providing stepped pedestrian access between different levels."@en ;
 .
 
-:Door
+:door
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Door" ;
+    skos:notation "door" ;
     skos:prefLabel "Door"@en ;
     skos:definition
         "A building element forming a movable or operable barrier within an opening that provides access between spaces."@en ;
 .
 
-:Window
+:window
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "Window" ;
+    skos:notation "window" ;
     skos:prefLabel "Window"@en ;
     skos:definition
         "A building element forming an opening or glazed enclosure within a wall, roof or other building element."@en ;
 .
 
-:OtherBuildingElement
+:other-building-element
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :BuildingElement ;
-    skos:notation "OtherBuildingElement" ;
+    skos:notation "other-building-element" ;
     skos:prefLabel "Other building element"@en ;
     skos:definition
         "A physical building element relevant to occupation or cadastral interpretation that is not represented by another concept in this vocabulary."@en ;
@@ -165,31 +165,31 @@ cs:
 # Other structure types
 #
 
-:Structure
+:structure
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:topConceptOf cs: ;
-    skos:notation "Structure" ;
+    skos:notation "structure" ;
     skos:prefLabel "Structure"@en ;
     skos:definition
         "A constructed physical feature, other than a building or building element, that may be represented as an occupation feature and may be relevant to the definition, interpretation or evidence of a cadastral boundary."@en ;
 .
 
-:Fence
+:fence
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :Structure ;
-    skos:notation "Fence" ;
+    skos:notation "fence" ;
     skos:prefLabel "Fence"@en ;
     skos:definition
         "A constructed barrier, screen or enclosure, typically consisting of posts, rails, panels, wire or similar components, that may indicate occupation or provide evidence relevant to a cadastral boundary."@en ;
 .
 
-:RetainingWall
+:retaining-wall
     a skos:Concept ;
     skos:inScheme cs: ;
     skos:broader :Structure ;
-    skos:notation "RetainingWall" ;
+    skos:notation "retaining-wall" ;
     skos:prefLabel "Retaining wall"@en ;
     skos:definition
         "A constructed wall intended primarily to retain soil or other material at different ground levels and which may provide occupation evidence or otherwise be relevant to the interpretation of a cadastral boundary."@en ;

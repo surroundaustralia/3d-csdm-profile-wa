@@ -9,13 +9,26 @@ PREFIX surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/>
 PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:strataScheme
+:strata-scheme
     a
         skos:Concept ,
         surv:InterestType ;
     skos:altLabel "" ;
-    skos:definition "Interest" ;
+    skos:definition "Interest: Total value of a Strata Scheme entitlement" ;
     skos:inScheme cs: ;
-    skos:notation "strataScheme" ;
+    skos:notation "strata-scheme" ;
     skos:prefLabel "Strata Scheme" ;
     skos:topConceptOf cs: ;
+.
+
+:strata-lot
+    a
+        skos:Concept ,
+        surv:InterestType ;
+    skos:altLabel "" ;
+    skos:definition "Interest: per Strata Lot entitlement value" ;
+    skos:inScheme cs: ;
+    skos:notation "strata-lot" ;
+    skos:prefLabel "Strata Lot" ;
+    skos:topConceptOf cs: ;
+.
