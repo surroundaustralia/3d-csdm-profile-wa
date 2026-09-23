@@ -560,6 +560,27 @@
               "@id": "topo:edges",
               "@container": "@list"
             },
+            "rings": {
+              "@context": {
+                "circumference": "topo:circumference"
+              },
+              "@id": "topo:rings",
+              "@container": "@list"
+            },
+            "faces": {
+              "@context": {
+                "ref": "@id"
+              },
+              "@id": "topo:faces",
+              "@container": "@list"
+            },
+            "shells": {
+              "@context": {
+                "ref": "@id"
+              },
+              "@id": "topo:shells",
+              "@container": "@list"
+            },
             "solids": {
               "@id": "topo:solids",
               "@container": "@list"
@@ -866,6 +887,7 @@
     "Ring": "topo:Ring",
     "Shell": "topo:Shell",
     "Solid": "topo:Solid",
+    "AggregateSolid": "topo:AggregateSolid",
     "rings": {
       "@id": "topo:rings",
       "@container": "@list"
