@@ -31942,20 +31942,6 @@
                 }
               ]
             },
-            "members": [
-              "uuid:8e5ca9ad-b00d-4871-a723-19b6456480f9",
-              "uuid:e62621ed-1334-4890-964f-608ff68f7a17"
-            ],
-            "spatialRepresentationSummary": {
-              "memberRepresentationStatuses": [
-                "representation-status:d3d"
-              ],
-              "memberParcelCount": 2,
-              "geometryTypes": [
-                "AggregateSolid"
-              ],
-              "allMemberParcelsSpatiallyResolved": true
-            },
             "interests": [
               {
                 "interestType": "wa-interest-type:strata-scheme",
