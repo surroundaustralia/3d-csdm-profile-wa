@@ -31957,7 +31957,6 @@
         {
           "id": "uuid:e62621ed-1334-4890-964f-608ff68f7a17",
           "type": "Feature",
-          "featureType": "PrimaryParcel",
           "geometry": null,
           "properties": {
             "appellation": {
@@ -32716,7 +32715,6 @@
         {
           "id": "uuid:8e5ca9ad-b00d-4871-a723-19b6456480f9",
           "type": "Feature",
-          "featureType": "PrimaryParcel",
           "geometry": null,
           "properties": {
             "appellation": {
