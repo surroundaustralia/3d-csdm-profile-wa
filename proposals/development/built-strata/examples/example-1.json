@@ -1,7 +1,9 @@
 {
   "@context": {
     "wa-profile": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/context.jsonld",
-    "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/"
+    "wa-leg": "https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/",
+    "wa-title": "https://example.com/title/",
+    "wa-interest": "https://example.com/interest/"
   },
   "id": "SP-83687-1-1-0.00",
   "name": "SP83687",
@@ -38,26 +40,27 @@
       "wasAssociatedWith": {
         "agentType": "Person",
         "name": {
-          "firstName": "P. R.",
-          "lastName": "Mattaboni",
-          "formattedName": "P. R. Mattaboni"
+          "firstName": "S.",
+          "lastName": "Example",
+          "formattedName": "S. Example"
         },
         "surveyorReference": null,
         "surveyCertificate": "wa-annotation:r-54",
         "certified": "hereby certify that this plan is accurate and is a correct representation of the (a) survey; and (b) calculations from measurements recorded in the field records, undertaken for the purposes of this plan and that it complies with the relevant written law(s) in relation to which it is lodged",
         "actedOnBehalfOf": {
           "agentType": "Organization",
-          "legalName": "P. R. Mattaboni & Co.",
+          "legalName": "Example Surveying Pty Ltd",
           "Address": {
             "hasPart": [
               {
-                "partType": "apt:numberFirst",
-                "value": 16
+                "partType": "apt:addressNumberFirst",
+                "value": 1
               },
               {
                 "partType": "apt:road",
                 "value": {
-                  "@id": "https://example.com/road/ivory-court"
+                  "@id": "https://example.com/road/example-street",
+                  "label": "Example Street"
                 }
               },
               {
@@ -82,8 +85,8 @@
               }
             ]
           },
-          "phone": "61412078872",
-          "email": "pmsurvey@iinet.net.au"
+          "phone": "61400000000",
+          "email": "surveyor@example.com"
         },
         "surveyReference": "",
         "signedTimestamp": "2023-02-06T05:53:32+08"
@@ -96,9 +99,9 @@
       "wasAssociatedWith": {
         "agentType": "Person",
         "name": {
-          "firstName": "M.",
-          "lastName": "Radich",
-          "formattedName": "M. Radich"
+          "firstName": "E.",
+          "lastName": "Example",
+          "formattedName": "E. Example"
         },
         "actedOnBehalfOf": {
           "agentType": "Organization",
@@ -114,9 +117,9 @@
       "wasAssociatedWith": {
         "agentType": "Person",
         "name": {
-          "firstName": "M.",
-          "lastName": "Radich",
-          "formattedName": "M. Radich"
+          "firstName": "E.",
+          "lastName": "Example",
+          "formattedName": "E. Example"
         },
         "actedOnBehalfOf": {
           "agentType": "Organization",
@@ -137,9 +140,9 @@
       "wasAssociatedWith": {
         "agentType": "Person",
         "name": {
-          "firstName": "M.",
-          "lastName": "Hallis",
-          "formattedName": "M. Hallis"
+          "firstName": "I.",
+          "lastName": "Example",
+          "formattedName": "I. Example"
         },
         "actedOnBehalfOf": {
           "agentType": "Organization",
@@ -155,9 +158,9 @@
       "wasAssociatedWith": {
         "agentType": "Person",
         "name": {
-          "firstName": "B. G.",
-          "lastName": "Roberts",
-          "formattedName": "B. G. Roberts"
+          "firstName": "R.",
+          "lastName": "Example",
+          "formattedName": "R. Example"
         },
         "actedOnBehalfOf": {
           "agentType": "Organization",
@@ -31836,6 +31839,8 @@
             },
             "interests": [
               {
+                "interestLink": "wa-title:4027-1000",
+                "interestType": "wa-interest-type:ct",
                 "titleRefAppellation": {
                   "label": "CT 4027/1000",
                   "hasPart": [
@@ -31911,13 +31916,14 @@
             "schemeAddress": {
               "hasPart": [
                 {
-                  "partType": "apt:numberFirst",
+                  "partType": "apt:addressNumberFirst",
                   "value": 281
                 },
                 {
                   "partType": "apt:road",
                   "value": {
-                    "@id": "https://example.com/road/belmont-avenue"
+                    "@id": "https://example.com/road/belmont-avenue",
+                    "label": "Belmont Avenue"
                   }
                 },
                 {
@@ -31944,6 +31950,7 @@
             },
             "interests": [
               {
+                "interestLink": "wa-interest:SP83687",
                 "interestType": "wa-interest-type:strata-scheme",
                 "entitlementTotal": 1000
               }
@@ -31986,6 +31993,7 @@
             "parcelState": "wa-parcel-state:created",
             "interests": [
               {
+                "interestLink": "wa-interest:SP83687-lot-1",
                 "interestType": "wa-interest-type:strata-lot",
                 "entitlementPortion": 117
               }
@@ -32744,6 +32752,7 @@
             "parcelState": "wa-parcel-state:created",
             "interests": [
               {
+                "interestLink": "wa-interest:SP83687-lot-2",
                 "interestType": "wa-interest-type:strata-lot",
                 "entitlementPortion": 108
               }
@@ -33783,28 +33792,84 @@
     {
       "description": "Survey carried out in accordance with Regulation 54 of the Licensed Surveyors (General Surveying Practice) Regulations 1961",
       "href": "wa-leg:Licensed%20Surveyors%20(General%20Surveying%20Practice)%20Regulations%201961%20-%20%5B05-a0-05%5D.pdf",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "Section 54 Certification - SP83687",
       "role": "wa-annotation-role:r-54"
     },
     {
       "description": "THE BOUNDARIES OF THE PARTS OF LOTS WHICH ARE COURTYARDS SHOWN ON THE STRATA PLAN ARE TO THE OUTER SURFACE OF THE BUILDING WALL, THE INNER SURFACE OF ALL OTHER WALLS OR PIERS OR WHERE SHOWN DESIGNATED DIMENSIONS, THE UPPER SURFACE OF THEIR FLOOR AND THE PROLONGATION OF THE UNDER SURFACE OF THE CEILING OF THE RESPECTIVE BUILDING PART LOT EXCEPT WHERE COVERED. UNDER SCHEDULE 2A, CLAUSE 3AB OF THE STRATA TITLES ACT 1985, THE BOUNDARIES OF THE LOTS OR PART LOTS WHICH ARE BUILDINGS SHOWN ON THE STRATA PLAN ARE THE EXTERNAL SURFACES OF THOSE BUILDINGS. WHERE 2 LOTS HAVE A COMMON OR PARTY WALL OR HAVE BUILDINGS ON THEM WHICH ARE JOINED, THE CENTRE PLANE OF THAT WALL, OR THE PLANE AT WHICH THEY ARE JOINED, IS THE BOUNDARY. DISTANCES ARE FROM BOUNDARIES OR EXTERNAL FACES OF WALLS UNLESS SHOWN OTHERWISE. ALL ANGLES ARE 90 DEGREES UNLESS SHOWN OTHERWISE",
       "href": "wa-leg:Strata%20Titles%20Act%201985%20-%20%5B08-a0-00%5D.pdf",
+      "rel": "related",
+      "type": "application/pdf",
+      "title": "Boundary Definition Statement - SP83687",
       "role": "wa-annotation-role:boundary-definition-statement"
     },
     {
       "role": "wa-annotation-role:licensed-valuer-certification",
-      "description": "Schedule of Unit Entitlements certified by Darren Starcevich AAPI, Licensed Valuer No. 44415, dated 17 May 2022."
+      "description": "Schedule of Unit Entitlements certified by Jordan Example AAPI, Licensed Valuer No. 00000, dated 17 May 2022.",
+      "href": "documents/SP83687-unit-entitlement-schedule.pdf",
+      "rel": "via",
+      "type": "application/pdf",
+      "title": "Schedule of Unit Entitlements - SP83687",
+      "certifier": {
+        "firstName": "Jordan",
+        "lastName": "Example",
+        "licensedValuerNumber": "00000"
+      },
+      "dateCertified": "2022-05-17"
     },
     {
       "role": "wa-annotation-role:building-approval-certification",
-      "description": "Building Approval Certificate 545/2022; whole of building; grouped dwellings and garages; Building Act 2011 section 52; indefinite validity; issued by David Maher, Building Surveying Coordinator, City of Belmont, 9 December 2022."
+      "description": "Building Approval Certificate 545/2022; whole of building; grouped dwellings and garages; Building Act 2011 section 52; indefinite validity; issued by Casey Example, Building Surveying Coordinator, City of Belmont, 9 December 2022.",
+      "href": "documents/SP83687-building-approval-certificate.pdf",
+      "rel": "via",
+      "type": "application/pdf",
+      "title": "Building Approval Certificate",
+      "certifier": {
+        "firstName": "Casey",
+        "lastName": "Example",
+        "jobTitle": "Building Surveying Coordinator"
+      },
+      "dateCertified": "2022-12-09",
+      "authority": {
+        "permitAuthority": "wa-local-government:city-of-belmont",
+        "rel": "related",
+        "role": "icsm-admin-unit-type:localGovernmentArea"
+      }
     },
     {
       "role": "wa-annotation-role:strata-plan-endorsement",
-      "description": "LG Ref 467/2022; approval pursuant to section 15(4) of the Strata Titles Act 1985; endorsed 2 February 2023."
+      "description": "LG Ref 467/2022; approval pursuant to section 15(4) of the Strata Titles Act 1985; endorsed 2 February 2023.",
+      "href": "documents/SP83687-endorsement-certificate.pdf",
+      "rel": "via",
+      "type": "application/pdf",
+      "title": "Certificate Endorsing Strata Plan or Amendment to a Strata Plan by Western Australian Planning Commission",
+      "certifier": {
+        "firstName": "Illegiable",
+        "lastName": "Name",
+        "delegatedAuthority": "wa-leg:planning-and-development-act-2005:16(3)(e)"
+      },
+      "dateCertified": "2023-02-02",
+      "authority": {
+        "permitAuthority": "wa-local-government:city-of-belmont",
+        "rel": "related",
+        "role": "icsm-admin-unit-type:localGovernmentArea"
+      }
     },
     {
       "role": "wa-annotation-role:record-of-strata-titles-scheme",
-      "description": "Annex A, Strata Plan 83687 Scheme Bylaws (P361938) and Scheme Notice (P361939) endorsed 23 February 2023 by B. G. Roberts, Registrar of Titles."
+      "description": "Annex A, Strata Plan 83687 Scheme Bylaws (P361938) and Scheme Notice (P361939) endorsed 23 February 2023 by R. Example, Registrar of Titles.",
+      "href": "documents/SP83687-record-of-strata-titles-scheme.pdf",
+      "rel": "via",
+      "type": "application/pdf",
+      "title": "Record of Strata Title Scheme Limitations, Interests, Encumbrances and Notifications",
+      "certifier": {
+        "firstName": "R.",
+        "lastName": "Example",
+        "jobTitle": "Registrar of Titles"
+      },
+      "dateCertified": "2023-02-23"
     }
   ]
 }
