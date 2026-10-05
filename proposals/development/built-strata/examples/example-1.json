@@ -31466,7 +31466,7 @@
             ]
           },
           "properties": {
-            "name": "Unit 1 Courtyard -upper",
+            "name": "Unit 1 Balcony",
             "floors": [
               2
             ],
@@ -31495,7 +31495,7 @@
             ]
           },
           "properties": {
-            "name": "Unit 2 Courtyard - upper",
+            "name": "Unit 2 Balcony",
             "floors": [
               2
             ],
@@ -32128,7 +32128,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:e62621ed-1334-4890-964f-608ff68f7a17"
                     ]
@@ -32259,7 +32259,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:e62621ed-1334-4890-964f-608ff68f7a17"
                     ]
@@ -32336,7 +32336,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:e62621ed-1334-4890-964f-608ff68f7a17"
                     ]
@@ -32608,7 +32608,7 @@
                           "uuid:5bff8d4d-733a-4bbb-8c38-d33b208f2b2a",
                           "uuid:ae446229-6a99-4635-8072-3a39137bfd08"
                         ],
-                        "separation": 0.29991611279547215
+                        "separation": 0.29991612397134304
                       }
                     },
                     {
@@ -32629,7 +32629,7 @@
                           "uuid:5bff8d4d-733a-4bbb-8c38-d33b208f2b2a",
                           "uuid:ae446229-6a99-4635-8072-3a39137bfd08"
                         ],
-                        "separation": 0.29991611279547215
+                        "separation": 0.29991612397134304
                       }
                     }
                   ],
@@ -32640,7 +32640,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:e62621ed-1334-4890-964f-608ff68f7a17"
                     ]
@@ -32889,7 +32889,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:8e5ca9ad-b00d-4871-a723-19b6456480f9"
                     ]
@@ -33020,7 +33020,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:8e5ca9ad-b00d-4871-a723-19b6456480f9"
                     ]
@@ -33343,7 +33343,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:8e5ca9ad-b00d-4871-a723-19b6456480f9"
                     ]
@@ -33460,7 +33460,7 @@
                     "sourceLocation": {
                       "planReference": "SP83687"
                     },
-                    "scope": "icsm-scope:parcel",
+                    "scope": "icsm-scope:scheme",
                     "appliesTo": [
                       "uuid:8e5ca9ad-b00d-4871-a723-19b6456480f9"
                     ]
