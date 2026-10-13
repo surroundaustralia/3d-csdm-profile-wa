@@ -156,12 +156,12 @@
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -186,12 +186,12 @@
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
