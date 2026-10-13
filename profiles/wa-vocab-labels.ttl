@@ -1,7 +1,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vocabs: <https://linked.data.gov.au/def/csdm/> .
 
+vocabs:wa-annotation rdfs:label "WA CSD Annotation" .
+
 vocabs:wa-crs rdfs:label "WA Coordinate Reference Systems" .
+
+vocabs:wa-interest-type rdfs:label "WA Memorial Types" .
 
 vocabs:wa-local-government rdfs:label "WA Local Government Districts" .
 
@@ -24,6 +28,10 @@ vocabs:wa-procedure-used rdfs:label "WA Survey Procedures" .
 vocabs:wa-secondary-parcel-purpose rdfs:label "WA Secondary Parcel Purpose" .
 
 vocabs:wa-secondary-parcel-type rdfs:label "WA Secondary Parcel Type" .
+
+vocabs:wa-secondary-purpose rdfs:label "WA Secondary Parcel Purpose" .
+
+vocabs:wa-survey-documentation-type rdfs:label "WA Survey Documentation" .
 
 vocabs:wa-survey-purpose rdfs:label "WA Survey Purpose" .
 

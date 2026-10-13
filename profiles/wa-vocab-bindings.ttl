@@ -1,5 +1,6 @@
 @prefix container: <https://linked.data.gov.au/def/csdm/container/> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -7,6 +8,12 @@
 @prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
 @prefix termtype: <https://linked.data.gov.au/def/csdm/termtypes/> .
 @prefix vocabs: <https://linked.data.gov.au/def/csdm/> .
+
+prof:hasRole a qb:CodedProperty ;
+    qb:codeList vocabs:wa-annotation,
+        vocabs:wa-survey-documentation-type ;
+    rdfs:range termtype:Annotation,
+        termtype:DocType .
 
 sosa:usedProcedure a qb:CodedProperty ;
     qb:codeList vocabs:wa-procedure-used ;
@@ -63,6 +70,12 @@ surv:vectorPurpose a qb:CodedProperty ;
     qb:codeList vocabs:wa-vector-purpose ;
     rdfs:range termtype:VectorPurpose .
 
+parcel:interestType a qb:CodedProperty ;
+    qb:codeList vocabs:wa-interest-type,
+        vocabs:wa-secondary-purpose ;
+    rdfs:range surv:InterestType,
+        termtype:ParcelPurpose .
+
 parcel:purpose a qb:CodedProperty ;
     qb:codeList vocabs:wa-parcel-purpose,
         vocabs:wa-secondary-parcel-purpose ;
@@ -75,6 +88,10 @@ parcel:state a qb:CodedProperty ;
     rdfs:range termtype:ParcelState ;
     sh:targetClass parcel:PrimaryParcel,
         parcel:SecondaryParcel .
+
+parcel:statuteLink a qb:CodedProperty ;
+    qb:codeList vocabs:wa-interest-type ;
+    rdfs:range surv:InterestType .
 
 parcel:type a qb:CodedProperty ;
     qb:codeList vocabs:wa-parcel-type,

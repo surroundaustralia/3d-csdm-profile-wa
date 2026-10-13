@@ -14,3 +14,8 @@ surv:CadastralMark surv:BoundaryMark surv:GeodeticReferenceMark surv:SurveyPoint
 ,surv:vectorPurpose,termtype:VectorPurpose,vocabs:wa-vector-purpose
 ,surv:state,surv:SurveyPointState,vocabs:wa-monument-state
 parcel:PrimaryParcel parcel:SecondaryParcel,parcel:state,termtype:ParcelState,vocabs:wa-parcel-state
+,prof:hasRole,termtype:Annotation,vocabs:wa-annotation
+,prof:hasRole,termtype:DocType,vocabs:wa-survey-documentation-type
+,parcel:interestType,surv:InterestType,vocabs:wa-interest-type
+,parcel:interestType,termtype:ParcelPurpose,vocabs:wa-secondary-purpose
+,parcel:statuteLink,surv:InterestType,vocabs:wa-interest-type
