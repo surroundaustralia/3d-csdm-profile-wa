@@ -170,7 +170,7 @@
       "id": "vectorobservation:theodolite+edm",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:m",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
