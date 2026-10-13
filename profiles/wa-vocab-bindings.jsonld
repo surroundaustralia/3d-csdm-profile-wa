@@ -192,6 +192,51 @@
         "vocabs:wa-parcel-state"
       ],
       "@type": "qb:CodedProperty"
+    },
+    {
+      "Classes": [],
+      "Property": "prof:hasRole",
+      "Range": "termtype:Annotation",
+      "Schemes": [
+        "vocabs:wa-annotation"
+      ],
+      "@type": "qb:CodedProperty"
+    },
+    {
+      "Classes": [],
+      "Property": "prof:hasRole",
+      "Range": "termtype:DocType",
+      "Schemes": [
+        "vocabs:wa-survey-documentation-type"
+      ],
+      "@type": "qb:CodedProperty"
+    },
+    {
+      "Classes": [],
+      "Property": "parcel:interestType",
+      "Range": "surv:InterestType",
+      "Schemes": [
+        "vocabs:wa-interest-type"
+      ],
+      "@type": "qb:CodedProperty"
+    },
+    {
+      "Classes": [],
+      "Property": "parcel:interestType",
+      "Range": "termtype:ParcelPurpose",
+      "Schemes": [
+        "vocabs:wa-secondary-purpose"
+      ],
+      "@type": "qb:CodedProperty"
+    },
+    {
+      "Classes": [],
+      "Property": "parcel:statuteLink",
+      "Range": "surv:InterestType",
+      "Schemes": [
+        "vocabs:wa-interest-type"
+      ],
+      "@type": "qb:CodedProperty"
     }
   ]
 }

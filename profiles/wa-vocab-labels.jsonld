@@ -80,6 +80,22 @@
     {
       "Scheme": "vocabs:wa-parcel-state",
       "Label": "WA Parcel States"
+    },
+    {
+      "Scheme": "vocabs:wa-annotation",
+      "Label": "WA CSD Annotation"
+    },
+    {
+      "Scheme": "vocabs:wa-survey-documentation-type",
+      "Label": "WA Survey Documentation"
+    },
+    {
+      "Scheme": "vocabs:wa-interest-type",
+      "Label": "WA Memorial Types"
+    },
+    {
+      "Scheme": "vocabs:wa-secondary-purpose",
+      "Label": "WA Secondary Parcel Purpose"
     }
   ]
 }
