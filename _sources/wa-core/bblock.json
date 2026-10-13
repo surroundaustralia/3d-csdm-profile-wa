@@ -3,6 +3,7 @@
   "highlighted": true,
   "abstract": "Implementation Profile of the ICSM Cadastral Survey Data Exchange Model for use in Western Australia",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",

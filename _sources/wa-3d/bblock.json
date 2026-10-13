@@ -3,6 +3,7 @@
   "highlighted": true,
   "abstract": "3D test cases for WA - may constrain to force 3D",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",

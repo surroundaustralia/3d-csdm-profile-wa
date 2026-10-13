@@ -3,6 +3,7 @@
   "highlighted": true,
   "abstract": "Examples and test cases for 2D geometries with described 3D limits.",
   "status": "under-development",
+  "group": "2. Profiles",
   "dateTimeAddition": "2023-07-31T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",
