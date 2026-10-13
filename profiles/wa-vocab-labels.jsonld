@@ -26,8 +26,8 @@
       "Label": "WA Localities"
     },
     {
-      "Scheme": "vocabs:wa-local-government-area",
-      "Label": "WA Local Government Areas"
+      "Scheme": "vocabs:wa-local-government",
+      "Label": "WA Local Government Districts"
     },
     {
       "Scheme": "vocabs:wa-vhd",
