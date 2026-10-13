@@ -6,11 +6,12 @@
   "highlighted": true,
   "abstract": "Defines the namespaces for use in WA Compound Names",
   "status": "under-development",
+  "group": "4. Datatypes",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-10-06",
+  "dateOfLastChange": "2026-10-13",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
