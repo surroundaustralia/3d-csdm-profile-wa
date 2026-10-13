@@ -38,11 +38,12 @@ context:
     sosa: http://www.w3.org/ns/sosa/
     container: https://linked.data.gov.au/def/csdm/container/
     termtype: https://linked.data.gov.au/def/csdm/termtypes/
-    parcel: https://linked.data.gov.au/def/csdm/parcels/
+    parcel: https://w3id.org/ogc/ladm/parcels/
     qb: http://purl.org/linked-data/cube#
     vocabs: https://linked.data.gov.au/def/csdm/
     rdfs: http://www.w3.org/2000/01/rdf-schema#
     sh: http://www.w3.org/ns/shacl#
+    prof: http://www.w3.org/ns/dx/prof/
 
     Classes:
       '@type': '@id'
