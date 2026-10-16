@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation
-Generated 2026-10-16T00:27:30.333816+00:00
+Generated 2026-10-16T02:56:39.962084+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,7 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:nd4919919feb943148ff2ded2580a867eb1: *none*
+ - Shape _:n82270c3ae76c43f39b5d858ac676390db1: *none*
 
 === End SHACL ===
 
