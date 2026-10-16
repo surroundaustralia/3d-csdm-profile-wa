@@ -33,10 +33,6 @@ Sections 6–8 establish where the programme could go next and the value of doin
 -->
 
 - [1. Executive summary](#1-executive-summary)
-  - [1.1 Engagement overview and purpose](#11-engagement-overview-and-purpose)
-  - [1.2 Key outcomes and value delivered](#12-key-outcomes-and-value-delivered)
-  - [1.3 Principal findings and strategic implications](#13-principal-findings-and-strategic-implications)
-  - [1.4 Priority recommendations and next steps](#14-priority-recommendations-and-next-steps-)
 - [2. Project context, scope and approach](#2-project-context-scope-and-approach)
   - [2.1 NGSC programme context and objectives](#21-ngsc-programme-context-and-objectives)
   - [2.2 Contractual scope and responsibilities](#22-contractual-scope-and-responsibilities)
@@ -53,7 +49,7 @@ Sections 6–8 establish where the programme could go next and the value of doin
   - [4.2 Cadastral data exchange and interoperability](#42-cadastral-data-exchange-and-interoperability)
   - [4.3 3D geometry, topology and boundary representation](#43-3d-geometry-topology-and-boundary-representation)
   - [4.4 Metadata, data quality and standards compliance](#44-metadata-data-quality-and-standards-compliance)
-  - [4.5 Cadastral workflows, APIs and system integration](#45-cadastral-workflows-apis-and-system-integration)
+  - [4.5 CSDM Transforms](#45-csdm-transforms)
   - [4.6 Cross-cutting dependencies and architectural decisions](#46-cross-cutting-dependencies-and-architectural-decisions)
 - [5. Strategic assessment: strengths, gaps, opportunities and risks](#5-strategic-assessment-strengths-gaps-opportunities-and-risks)
   - [5.1 Strengths and capabilities established](#51-strengths-and-capabilities-established)
@@ -101,13 +97,6 @@ End with three to five priority recommendations: what should happen next and why
 Do last
 -->
 
-### 1.1 Engagement overview and purpose
-
-### 1.2 Key outcomes and value delivered
-
-### 1.3 Principal findings and strategic implications
-
-### 1.4 Priority recommendations and next steps 
 
 ## 2. Project context, scope and approach
 <!-- 
@@ -130,10 +119,9 @@ Show how contracted machine-readable specifications and other technical outputs 
 ## 3. Deliverables and outcomes
 <!-- 
 3 - 4 pages
+
 Concise account of what the five deliverables achieved, rather than reproducing the 34 individual assessments.
-
 Add traceability to machine-readable schemas, ontologies, sample datasets, validation and transformation specifications, acceptance criteria and standards compliance.
-
 Compact version here, more details in an Appendix if necessary
 -->
 
@@ -161,7 +149,6 @@ Compact version here, more details in an Appendix if necessary
 4 - 6 pages
 
 Synthesise recurring issues across the 34 assessments: NGSC–3D CSDM alignment, legacy survey data transformation, 3D topology and boundary semantics, metadata governance, and the split between data-model and application-workflow responsibilities.
-
 Include a decision register?
 -->
 
@@ -173,7 +160,7 @@ Include a decision register?
 
 ### 4.4 Metadata, data quality and standards compliance
 
-### 4.5 Cadastral workflows, APIs and system integration
+### 4.5 CSDM Transforms
 
 ### 4.6 Cross-cutting dependencies and architectural decisions
 
