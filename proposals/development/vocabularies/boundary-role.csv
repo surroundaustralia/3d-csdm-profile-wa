@@ -1,4 +1,4 @@
-preflabel,definition,notation,altlabel,related
-lowerBoundary,The definition establishes or contributes to the lower vertical boundary.,lower,lower boundary|lower-boundary|lower limit|lower-limit|ll,
-upperBoundary,The definition establishes or contributes to the upper vertical boundary.,upper,upper boundary|upper-boundary|upper limit|upper-limit|ul,
-lateralBoundary,The definition establishes or contributes to a lateral boundary.,lateral,lateral boundary|lateral-boundary,
+preflabel,definition,notation,altlabel,broader,related,scopenote
+Lower boundary,The definition establishes or contributes to the lower vertical boundary.,lower,ll|lower limit,,,
+Upper boundary,The definition establishes or contributes to the upper vertical boundary.,upper,ul|upper limit,,,
+Lateral boundary,The definition establishes or contributes to a lateral boundary.,lateral,,,,
