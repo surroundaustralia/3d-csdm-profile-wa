@@ -32,7 +32,7 @@ Each item has a **recommendation** from Surround. We are asking Landgate to **ac
 | 6  | `building-boundary-reference`             | `innerSurface`, `outerSurface`, `centrePlane`, `upperSurface`, `underSurface`, `surface`, `projection` | Amended (D1, D8, Surround team, 2026-10-16): renamed `boundary-reference`; kebab notations; `outerSurface` merged into `external-surface` and `underSurface` into `lower-surface`. |
 | 7  | `wa-strata-component-role`                | `principal-unit`, `courtyard`, `balcony`, `car-bay`, `storage`, `roof-space`, `private-use-area` | Amended (D5, Surround team, 2026-10-16): merged into common `component-role`. |
 | 18 | Exclusive-use component role              | Add a distinct role for exclusive-use areas on common property (e.g. parking in a common garage)? | |
-| 12 | `wa-survey-documentation-type`, `wa-approved-form` | Unit entitlement schedule, building approval certificate (BA14), endorsement certificate (15C), record of strata titles scheme, by-laws, notices | Amended (D9, Surround team, 2026-10-16): duplicates map to `scheme-ue` and `scheme-record-form`; the local government endorses the plan (15C, endorsement certificate); the WAPC gives planning approval and compliance. |
+| 12 | `wa-survey-documentation-type`, `wa-approved-form` | Unit entitlement schedule, building approval certificate (BA14), endorsement certificate (15C), record of strata titles scheme, by-laws, notices | Amended (D9, Surround team, 2026-10-16): duplicates map to `scheme-ue` and `scheme-record-form`; the plan is endorsed under section 15(4) by the WAPC or its authorised delegate (15C, endorsement certificate). |
 
 ## D. For information (Surround actions)
 
@@ -57,7 +57,7 @@ Recorded in full in `proposals/development/vocabularies/vocab-review.md` §5.10.
 | D6  | Strata scheme typed by `parcelPurpose: strata-scheme` now; `ParcelAggregate`/`EstateParcel` featureType is the target | Links to items 2 and 17 |
 | D7  | `strata-scheme` and `strata-lot` are not interest types | Entitlements on parcels; lots to be created carry no interest until titles are registered |
 | D8  | Merge `under-surface` → `lower-surface`, `outer-surface` → `external-surface` | Merged labels kept as altLabels |
-| D9  | The local government endorses strata plans; the WAPC gives planning approval and compliance | Three definitions aligned; SP83687 names `wa-local-government:city-of-belmont` |
+| D9  | Strata plans are endorsed under section 15(4) by the WAPC or its authorised delegate, such as a local government | Three definitions aligned; SP83687 names `wa-local-government:city-of-belmont` as the delegate |
 | D10 | Consolidate `limitRole` and `boundaryRole` into one property and `boundaryDefinitions` | `boundary-role` serves both |
 | D11 | Derived boundary points use `wa-surveypoint-purpose:internal-boundary` with `wa-surveypoint-method:G` | `derived-boundary` and `wa-monument-condition:computed` rejected |
 | D12 | `wa-prov-role` stays local; `icsm-boundary-coverage` removed | Components use `"fullBoundaryCoverage": true` |
