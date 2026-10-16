@@ -67,12 +67,14 @@
 
 | Repository | Path (WSL) | Branch / commit | Working tree |
 |---|---|---|---|
-| `icsm-au/icsm-vocabs` | `/mnt/c/Users/Andrew/Documents/GitHub/icsm-vocabs` | `main` @ `944c464` (2026-09-14), in sync with `origin/main` | 369 files flagged modified; **CRLF-only** (no content diff with `--ignore-cr-at-eol`) |
+| `surroundaustralia/icsm-vocabs` (fork of `icsm-au/icsm-vocabs`) | `/mnt/c/Users/Andrew/Documents/GitHub/sa-icsm-vocabs` | `main` @ `ceb7a2c` (2026-10-13) | 213 files flagged modified; **CRLF-only** |
 | `surroundaustralia/3d-csdm-profile-wa` | `…/3d-csdm-profile-wa` | `main` @ `62e4809` (2026-10-13), in sync with `origin/main` | 514 files flagged; **CRLF-only** |
 | `ogcincubator/bblocks-land-parcels` (SRD BBlocks) | `…/bblocks-land-parcels` | `master` @ `45addd0` (2026-09-21) | 4 files with real uncommitted changes (`build.sh`, assets). Reviewed at working-tree state. Don't have write access to repo, but diffs are irrelevant at this stage. |
 | `icsm-au/3d-csdm-profile-icsm` (common profile) | `…/3d-csdm-profile-icsm` | `main` @ `f85d524` (2025-04-08) | clean |
 | `surroundaustralia/3d-cadastre-model` (core OWL model) | `…/3d-cadastre-model` | `main` @ `494bad5` (2024-04-09) | clean |
 | `processWAData` (implementation) | this repo | `feat/scope-note-vocabulary-forms` @ `614ee10` | clean |
+
+**Correction (2026-10-15).** This review was first run against the upstream `icsm-au/icsm-vocabs` checkout (`…/GitHub/icsm-vocabs`, `main` @ `944c464`) instead of the intended local fork `sa-icsm-vocabs`. A rerun of the analysis (`wa-vocab-audit` in processWAData) against `sa-icsm-vocabs` @ `ceb7a2c` produced identical findings. The published vocabularies differ in one concept only: the upstream copy of `wa-procedure-used:measured` has a mis-parsed definition, which the fork corrects. The fork has also replaced the `vocabs-uplift.yml` workflows with `scripts/build_vocabs.py` and `build-vocabs.yml`, so pipeline statements in §5.7 (F-P1) and §5.9 (A9) describe the upstream pipeline and need rechecking against the fork. Repository-relative paths in this document (`icsm-vocabs/vocabs/…`) name the GitHub repository and apply unchanged to the fork.
 
 ### Supporting documentation
 
