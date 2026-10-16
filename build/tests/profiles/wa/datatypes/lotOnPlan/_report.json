@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation",
   "bblockName": "Lot On Plan Appelation",
   "bblockId": "icsm.profiles.wa.datatypes.lotOnPlan",
-  "generated": "2026-10-16T02:56:39.962160+00:00",
+  "generated": "2026-10-16T17:17:04.986893+00:00",
   "result": true,
   "items": [
     {
@@ -72,12 +72,12 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
               "focusNodes": {
-                "_:n82270c3ae76c43f39b5d858ac676390db1": {
+                "_:nf1b61c75d6d049b6b6743b0d5f6f47fcb1": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n82270c3ae76c43f39b5d858ac676390db1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:nf1b61c75d6d049b6b6743b0d5f6f47fcb1: *none*\n"
             }
           ]
         }

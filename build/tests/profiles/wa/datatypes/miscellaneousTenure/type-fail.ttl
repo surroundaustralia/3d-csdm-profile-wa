@@ -6,8 +6,8 @@
 [] rdfs:label "L-3114-12345" ;
     dct:hasPart [ rdfs:label "3114" ;
             commonpatterns:namePartType <file:///github/workspace/documentOrGrantReference> ],
-        [ rdfs:label "12345" ;
-            commonpatterns:namePartType <file:///github/workspace/legalDescriptor> ],
         [ commonpatterns:namePartRef wa-parcel-type:l ;
-            commonpatterns:namePartType <file:///github/workspace/tenureClass> ] .
+            commonpatterns:namePartType <file:///github/workspace/tenureClass> ],
+        [ rdfs:label "12345" ;
+            commonpatterns:namePartType <file:///github/workspace/legalDescriptor> ] .
 
