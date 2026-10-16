@@ -8,7 +8,7 @@
 # Spatial WA – Next Generation Spatial Cadastre (NGSC)
 <div style="margin-top: 8rem;"></div>
 
-## End of Project Report
+## End of project report
 
 <div style="margin-top: 10rem;"></div>
 
@@ -24,15 +24,63 @@ Organisation: Edge Geomatics Limited
 
 <!-- TOC -->
 
-## Table of Contents
+## Table of contents
 
-<!-- 
-Please use the outline structure and headings exactly as provided to ensure all required sections are included.
+<!--
+Sections 1–3 establish what was undertaken and delivered; 
+Sections 4–5 explain what was learned and what remains uncertain; 
+Sections 6–8 establish where the programme could go next and the value of doing so.
 -->
+
+- [1. Executive summary](#1-executive-summary)
+  - [1.1 Engagement overview and purpose](#11-engagement-overview-and-purpose)
+  - [1.2 Key outcomes and value delivered](#12-key-outcomes-and-value-delivered)
+  - [1.3 Principal findings and strategic implications](#13-principal-findings-and-strategic-implications)
+  - [1.4 Priority recommendations and next steps](#14-priority-recommendations-and-next-steps-)
+- [2. Project context, scope and approach](#2-project-context-scope-and-approach)
+  - [2.1 NGSC programme context and objectives](#21-ngsc-programme-context-and-objectives)
+  - [2.2 Contractual scope and responsibilities](#22-contractual-scope-and-responsibilities)
+  - [2.3 Requirements analysis methodology](#23-requirements-analysis-methodology)
+  - [2.4 Engagement, collaboration and knowledge transfer](#24-engagement-collaboration-and-knowledge-transfer)
+- [3. Deliverables and outcomes](#3-deliverables-and-outcomes)
+  - [3.1 Summary of the five deliverables](#31-summary-of-the-five-deliverables)
+  - [3.2 Coverage of the 34 NGSC requirements](#32-coverage-of-the-34-ngsc-requirements)
+  - [3.3 Technical and architectural contributions](#33-technical-and-architectural-contributions)
+  - [3.4 Acceptance criteria and validation readiness](#34-acceptance-criteria-and-validation-readiness)
+  - [3.5 Status of outputs and remaining dependencies](#35-status-of-outputs-and-remaining-dependencies)
+- [4. Consolidated technical and strategic findings](#4-consolidated-technical-and-strategic-findings)
+  - [4.1 3D CSDM alignment and WA profile development](#41-3d-csdm-alignment-and-wa-profile-development)
+  - [4.2 Cadastral data exchange and interoperability](#42-cadastral-data-exchange-and-interoperability)
+  - [4.3 3D geometry, topology and boundary representation](#43-3d-geometry-topology-and-boundary-representation)
+  - [4.4 Metadata, data quality and standards compliance](#44-metadata-data-quality-and-standards-compliance)
+  - [4.5 Cadastral workflows, APIs and system integration](#45-cadastral-workflows-apis-and-system-integration)
+  - [4.6 Cross-cutting dependencies and architectural decisions](#46-cross-cutting-dependencies-and-architectural-decisions)
+- [5. Strategic assessment: strengths, gaps, opportunities and risks](#5-strategic-assessment-strengths-gaps-opportunities-and-risks)
+  - [5.1 Strengths and capabilities established](#51-strengths-and-capabilities-established)
+  - [5.2 Capability gaps and areas requiring further development](#52-capability-gaps-and-areas-requiring-further-development)
+  - [5.3 Opportunities for further value creation](#53-opportunities-for-further-value-creation)
+  - [5.4 Risks to delivery and long-term sustainability](#54-risks-to-delivery-and-long-term-sustainability)
+- [6. Opportunities to strengthen NGSC delivery and capability](#6-opportunities-to-strengthen-ngsc-delivery-and-capability)
+  - [6.1 Prioritisation principles](#61-prioritisation-principles)
+  - [6.2 WA 3D CSDM profile and standards development](#62-wa-3d-csdm-profile-and-standards-development)
+  - [6.3 Validation, testing and quality assurance](#63-validation-testing-and-quality-assurance)
+  - [6.4 Data transformation and migration](#64-data-transformation-and-migration)
+  - [6.5 3D cadastre implementation and demonstrators](#65-3d-cadastre-implementation-and-demonstrators)
+  - [6.6 Integration, governance and capability development](#66-integration-governance-and-capability-development)
+- [7. Implementation roadmap and engagement opportunities](#7-implementation-roadmap-and-engagement-opportunities)
+  - [7.1 Immediate priorities and decision points](#71-immediate-priorities-and-decision-points)
+  - [7.2 Medium-term development opportunities](#72-medium-term-development-opportunities)
+  - [7.3 Longer-term strategic opportunities](#73-longer-term-strategic-opportunities)
+  - [7.4 Potential delivery and collaboration arrangements](#74-potential-delivery-and-collaboration-arrangements)
+- [8. Conclusions and recommended next steps](#8-conclusions-and-recommended-next-steps)
+  - [8.1 Overall assessment](#81-overall-assessment)
+  - [8.2 Decisions and actions recommended](#82-decisions-and-actions-recommended)
+  - [8.3 Pathway to future collaboration](#83-pathway-to-future-collaboration)
+- [References](#references)
 
 <div style="margin-top: 8rem;"></div>
 
-##### Revision History
+##### Revision history
 
 | Version | Status | Date       | Author        | Description |
 |---------|--------|------------|---------------|-------------|
@@ -42,7 +90,7 @@ This document is complete as of the date of presentation to RAN in satisfaction 
 
 <!-- CONTENT -->
 
-## 1. Executive Summary
+## 1. Executive summary
 <!-- 
 2 - 3 pages
 
@@ -53,15 +101,15 @@ End with three to five priority recommendations: what should happen next and why
 Do last
 -->
 
-### 1.1 Engagement Overview and Purpose
+### 1.1 Engagement overview and purpose
 
-### 1.2 Key Outcomes and Value Delivered
+### 1.2 Key outcomes and value delivered
 
-### 1.3 Principal Findings and Strategic Implications
+### 1.3 Principal findings and strategic implications
 
-### 1.4 Priority Recommendations and Next Steps 
+### 1.4 Priority recommendations and next steps 
 
-## 2. Project Context, Scope and Approach
+## 2. Project context, scope and approach
 <!-- 
 2 - 3 pages
 
@@ -71,18 +119,22 @@ Clarify the split of responsibility between SURROUND and the NGSC implementation
 Show how contracted machine-readable specifications and other technical outputs were addressed, referencing artefacts where they exist.
 -->
 
-### 2.1 NGSC Programme Context and Objectives
+### 2.1 NGSC programme context and objectives
 
-### 2.2 Contractual Scope and Responsibilities
+### 2.2 Contractual scope and responsibilities
 
-### 2.3 Requirements Analysis Methodology
+### 2.3 Requirements analysis methodology
 
-### 2.4 Engagement, Collaboration and Knowledge Transfer
+### 2.4 Engagement, collaboration and knowledge transfer
 
-## 3. Deliverables and Outcomes
+## 3. Deliverables and outcomes
 <!-- 
 3 - 4 pages
 Concise account of what the five deliverables achieved, rather than reproducing the 34 individual assessments.
+
+Add traceability to machine-readable schemas, ontologies, sample datasets, validation and transformation specifications, acceptance criteria and standards compliance.
+
+Compact version here, more details in an Appendix if necessary
 -->
 
 | Deliverable | Requirements | Principal focus                                                                 |
@@ -94,96 +146,98 @@ Concise account of what the five deliverables achieved, rather than reproducing 
 | 5           | 2            | Metadata feedback workflows and 3D boundary alignment                           |
 | **Total**   | **34**       |                                                                                 |
 
-### 3.1 Summary of the Five Deliverables
+### 3.1 Summary of the five deliverables
 
-### 3.2 Coverage of the 34 NGSC Requirements
+### 3.2 Coverage of the 34 NGSC requirements
 
-### 3.3 Technical and Architectural Contributions
+### 3.3 Technical and architectural contributions
 
-### 3.4 Acceptance Criteria and Validation Readiness
+### 3.4 Acceptance criteria and validation readiness
 
-### 3.5 Status of Outputs and Remaining Dependencies
+### 3.5 Status of outputs and remaining dependencies
 
-## 4. Consolidated Technical and Strategic Findings
+## 4. Consolidated technical and strategic findings
 <!-- 
 4 - 6 pages
 
 Synthesise recurring issues across the 34 assessments: NGSC–3D CSDM alignment, legacy survey data transformation, 3D topology and boundary semantics, metadata governance, and the split between data-model and application-workflow responsibilities.
+
+Include a decision register?
 -->
 
-### 4.1 3D CSDM Alignment and WA Profile Development
+### 4.1 3D CSDM alignment and WA profile development
 
-### 4.2 Cadastral Data Exchange and Interoperability
+### 4.2 Cadastral data exchange and interoperability
 
-### 4.3 3D Geometry, Topology and Boundary Representation
+### 4.3 3D geometry, topology and boundary representation
 
-### 4.4 Metadata, Data Quality and Standards Compliance
+### 4.4 Metadata, data quality and standards compliance
 
-### 4.5 Cadastral Workflows, APIs and System Integration
+### 4.5 Cadastral workflows, APIs and system integration
 
-### 4.6 Cross-Cutting Dependencies and Architectural Decisions
+### 4.6 Cross-cutting dependencies and architectural decisions
 
-## 5. Strategic Assessment – Strengths, Gaps, Opportunities and Risks
+## 5. Strategic assessment: strengths, gaps, opportunities and risks
 <!-- 
 2 - 3 pages
 
 Analyse the readiness of the NGSC programme to realise the capabilities addressed through this engagement.
 -->
 
-### 5.1 Strengths and Capabilities Established
+### 5.1 Strengths and capabilities established
 
-### 5.2 Capability Gaps and Areas Requiring Further Development
+### 5.2 Capability gaps and areas requiring further development
 
-### 5.3 Opportunities for Further Value Creation
+### 5.3 Opportunities for further value creation
 
-### 5.4 Risks to Delivery and Long-Term Sustainability
+### 5.4 Risks to delivery and long-term sustainability
 
-## 6. Recommended Future Work Programme
+## 6. Opportunities to strengthen NGSC delivery and capability
 <!-- 
 4–5 pages
 
 Identify discrete work packages that could be jointly considered by SURROUND and Accenture
 -->
 
-### 6.1 Prioritisation Principles
+### 6.1 Prioritisation principles
 
-### 6.2 WA 3D CSDM Profile and Standards Development
+### 6.2 WA 3D CSDM profile and standards development
 
-### 6.3 Validation, Testing and Quality Assurance
+### 6.3 Validation, testing and quality assurance
 
-### 6.4 Data Transformation and Migration
+### 6.4 Data transformation and migration
 
-### 6.5 3D Cadastre Implementation and Demonstrators
+### 6.5 3D cadastre implementation and demonstrators
 
-### 6.6 Integration, Governance and Capability Development
+### 6.6 Integration, governance and capability development
 
-## 7. Implementation Roadmap and Engagement Opportunities
+## 7. Implementation roadmap and engagement opportunities
 <!-- 
 2–3 pages
 
 Translate the future work programme into practical phases.
 -->
 
-### 7.1 Immediate Priorities and Decision Points
+### 7.1 Immediate priorities and decision points
 
-### 7.2 Medium-Term Development Opportunities
+### 7.2 Medium-term development opportunities
 
-### 7.3 Longer-Term Strategic Opportunities
+### 7.3 Longer-term strategic opportunities
 
-### 7.4 Potential Delivery and Collaboration Arrangements
+### 7.4 Potential delivery and collaboration arrangements
 
-## 8. Conclusions and Recommended Next Steps
+## 8. Conclusions and recommended next steps
 <!--
 1–2 pages
 
 Conclude with an assessment of the engagement's contribution to NGSC
 -->
 
-### 8.1 Overall Assessment
+### 8.1 Overall assessment
 
-### 8.2 Decisions and Actions Recommended
+### 8.2 Decisions and actions recommended
 
-### 8.3 Pathway to Future Collaboration
+### 8.3 Pathway to future collaboration
 
 ## References
 
