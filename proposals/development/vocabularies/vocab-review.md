@@ -69,7 +69,7 @@
 |---|---|---|---|
 | `icsm-au/icsm-vocabs` | `/mnt/c/Users/Andrew/Documents/GitHub/icsm-vocabs` | `main` @ `944c464` (2026-09-14), in sync with `origin/main` | 369 files flagged modified; **CRLF-only** (no content diff with `--ignore-cr-at-eol`) |
 | `surroundaustralia/3d-csdm-profile-wa` | `…/3d-csdm-profile-wa` | `main` @ `62e4809` (2026-10-13), in sync with `origin/main` | 514 files flagged; **CRLF-only** |
-| `ogcincubator/bblocks-land-parcels` (SRD BBlocks) | `…/bblocks-land-parcels` | `master` @ `45addd0` (2026-09-21) | 6 files with real uncommitted changes (SRD examples, `build.sh`, assets). Reviewed at working-tree state. |
+| `ogcincubator/bblocks-land-parcels` (SRD BBlocks) | `…/bblocks-land-parcels` | `master` @ `45addd0` (2026-09-21) | 4 files with real uncommitted changes (`build.sh`, assets). Reviewed at working-tree state. Don't have write access to repo, but diffs are irrelevant at this stage. |
 | `icsm-au/3d-csdm-profile-icsm` (common profile) | `…/3d-csdm-profile-icsm` | `main` @ `f85d524` (2025-04-08) | clean |
 | `surroundaustralia/3d-cadastre-model` (core OWL model) | `…/3d-cadastre-model` | `main` @ `494bad5` (2024-04-09) | clean |
 | `processWAData` (implementation) | this repo | `feat/scope-note-vocabulary-forms` @ `614ee10` | clean |
