@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-10-16T00:06:52.386373+00:00
+Generated 2026-10-16T00:27:30.617608+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -29,15 +29,15 @@ Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
- - Shape ex:NamePartShape: _:Nfa77cef37ca74d789a5cfc46e5c981bb,_:N5170d05d5a3e40dd806f4f4a2b2791c5
  - Shape ex:NamedObjectShape: *none*
+ - Shape ex:NamePartShape: _:N57455136c161492383c05d6e677c9ace,_:Nc3110991420a4a6cafcbd6d370655d07
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:
- - Shape _:nc858b6aae1b341b792520b2f567273ecb1: *none*
+ - Shape _:nf162ca66dee940e4bfdbadac3e8ff815b1: *none*
 
 === End SHACL ===
 
