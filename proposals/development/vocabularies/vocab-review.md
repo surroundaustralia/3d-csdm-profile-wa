@@ -2,6 +2,7 @@
 
 **Status:** Review and planning document. It changes no vocabulary, supplement, CSV draft, schema, namespace or binding.
 **Date:** 2026-10-15
+**Updated:** 2026-10-16. The Surround team's decisions are recorded in §5.10, and the dispositions they change are marked in place.
 **Scope:** ICSM `icsm-vocabs` LandParcels vocabularies, WA profile `*-supplement.ttl` files, and WA proposed CSV vocabularies.
 
 ---
@@ -40,11 +41,11 @@
 - **Turn the CSV drafts into one common "spatial representation" (SR) vocabulary family.** The 25 CSVs become 15 SR vocabularies, 1 common `component-role` and 2 implementation-local lists; 7 are retired by merge. ICSM 3D CSDM should own it through the SRD BBlock, and it should be published in `icsm-vocabs` under the `…/def/csdm/<name>` IRIs already used in contexts. This needs merges, a split of `height-reference`, and a single notation/URI convention fixed **before** first publication.
 - **Create two common domain vocabularies:**
   - `component-role`: merge of the two component-role CSVs.
-  - `occupation-feature-type`: from `wa-occ`, mapped to IFC.
+  - `occupation-feature`: from `wa-occ`, mapped to IFC.
 
   Both concepts are general and already have core-model anchors (`surv:Occupation`, `container:occupationFeatures`, `EstateParcel`).
 - **Create one WA-only vocabulary, `wa-approved-form`** (Landgate form versions).
-- **Keep processing vocabularies out of the domain model.** `boundary-coverage` and `wa-prov-role` describe the generation pipeline. They should stay implementation-local (processWAData / a future validation BBlock) and not be published.
+- **Keep processing vocabularies out of the domain model.** `boundary-coverage` and `wa-prov-role` describe the generation pipeline. They should stay implementation-local (processWAData / a future validation BBlock) and not be published. Decided 2026-10-16 (D12): `wa-prov-role` stays local; `boundary-coverage` is removed and replaced by the boolean `fullBoundaryCoverage`.
 
 ### Implications for the ongoing update
 
@@ -54,10 +55,10 @@
 
 ### Governance decisions needing agreement
 
-1. Who owns the SRD BBlock and its vocabulary family: ICSM, the OGC incubator, or WA as interim steward. See D2.
-2. The URI and notation convention for new vocabularies. See D1.
-3. Whether ICSM will publish `component-role` and `occupation-feature-type` as common vocabularies. See D5.
-4. Landgate policy items that decide individual terms: strata interests, endorsement authority, and surface synonyms. See D7–D9.
+1. Who owns the SRD BBlock and its vocabulary family: ICSM, the OGC incubator, or WA as interim steward. See D2 (decided 2026-10-16).
+2. The URI and notation convention for new vocabularies. See D1 (decided 2026-10-16).
+3. Whether ICSM will publish `component-role` and `occupation-feature` as common vocabularies. See D5 (Surround position decided 2026-10-16; ICSM to confirm).
+4. Landgate policy items that decide individual terms: strata interests, endorsement authority, and surface synonyms. See D7–D9 (decided 2026-10-16).
 
 ---
 
@@ -208,9 +209,9 @@ Purpose by vocabulary group (to avoid repeating it per row):
 |---|---|---|---|---|---|---|---|---|
 | `wa-annotation-supplement.ttl` (8) | `3d-csdm-profile-wa/profiles/` → `…/wa-annotation` | Plan annotations (regulation certificates, strata certifications, height/boundary statements) | Supplement; file marked "TEMPORARY" | Landgate; `icsm-vocabs` `wa-annotation` | **Incorporate** all 8 | `annotations[].role` (WA); add a `wa-vocab-bindings` row | Jurisdictional plan annotations, like `vic-`/`nz-annotation`. No collisions. | High |
 | `wa-approved-form-supplement.ttl` (4) | as above → `…/wa-approved-form` (**new scheme, no ConceptScheme declared**) | Approved Landgate form versions | Supplement (new vocab) | Landgate; new `icsm-vocabs` `wa-approved-form` | **Create** (after fixes) | `supportingDocuments[].conformsTo` (WA) | Form versions are WA-statutory instances. Their `dcterms:type` links to document types are a good pattern. | High |
-| `wa-interest-type-supplement.ttl` (2) | → `…/wa-interest-type` | Strata scheme / strata lot interests | Supplement | Landgate | **Defer** (pending D7) | `interests[].interestType` | Definitions describe entitlement *values*, not interest types. `strata-lot` may duplicate `ct`. | Medium |
+| `wa-interest-type-supplement.ttl` (2) | → `…/wa-interest-type` | Strata scheme / strata lot interests | Supplement | Landgate | **Reject** (D7, decided 2026-10-16) | — | Definitions describe entitlement *values*, not interest types. Entitlements become scheme and lot parcel properties; `strata-lot` duplicated `ct`. | High |
 | `wa-monument-condition-supplement.ttl` (1) | → `…/wa-monument-condition` | `computed` virtual point | Supplement | — | **Do not incorporate; reuse existing** | — | Condition is the physical state of a mark. Form, state and method already express "unmarked, calculated". | High |
-| `wa-occ-supplement.ttl` (15) | → `…/wa-occ` (new scheme) | Occupation feature types (building elements, structures) | Supplement (new vocab) | **ICSM** (Survey Features); new common `occupation-feature-type` | **Relocate → Create common**; map to IFC | `occupationFeatures[].featureType`; `limits[].buildingElementType` (proposed) | General concepts already anchored in core `surv:Occupation`. Decision register #11 says to align with IFC. | Medium |
+| `wa-occ-supplement.ttl` (15) | → `…/wa-occ` (new scheme) | Occupation feature types (building elements, structures) | Supplement (new vocab) | **ICSM** (Survey Features); new common `occupation-feature` | **Relocate → Create common**; map to IFC | `occupationFeatures[].featureType`; `limits[].buildingElementType` (proposed) | General concepts already anchored in core `surv:Occupation`. Decision register #11 says to align with IFC. | Medium |
 | `wa-parcel-purpose-supplement.ttl` (1) | → `…/wa-parcel-purpose` | `strata-scheme` | Supplement | Landgate | **Incorporate (interim, definition fixed)** | `parcelPurpose` | Stopgap until `ParcelAggregate` is a legal `featureType` (D6) | Medium |
 | `wa-purpose-supplement.ttl` (1) | → `…/wa-surveypoint-purpose` | `derived-boundary` | Supplement | Landgate | **Defer / relocate** to `wa-surveypoint-method` | `points[].methodEstablished` | "Derived" is a creation method, not a purpose | Medium |
 | `wa-survey-documentation-supplement.ttl` (9) | → `…/wa-survey-documentation-type` | Strata document types | Supplement | Landgate | **Mixed**: 6 incorporate, 3 reuse/map existing | `supportingDocuments[].role` | Two duplicate existing terms. Notation style must match the parent (kebab-case). | High |
@@ -235,7 +236,7 @@ Purpose by vocabulary group (to avoid repeating it per row):
 | `icsm-vertical-direction.csv` | identical to above | 3 | CSV draft | — | **Merge** into `vertical-direction`; retire | — | Byte-identical content | High |
 | `vertical-limit-role.csv` | upper / lower limit | 2 | CSV draft | — | **Merge** into `boundary-role`; retire | — | Subsumed by `boundary-role` | High |
 | `boundary-role.csv` | lower / upper / lateral | 3 | CSV draft | SR family | **Create** (survivor) | `sr:limitRole`; `limits[].boundaryRole` (proposed) | "Lateral" is not a vertical limit, so the broader name is right | High |
-| `height-reference.csv` | Reference levels, datum, building surfaces | 15 | CSV draft | SR family | **Split**: keep 8 levels; AHD → reuse EPSG/`wa-vhd`; 6 building-surface terms → `boundary-reference` × `occupation-feature-type` | `sr:heightReference`, `sr:surfaceType` | Mixed abstraction levels; misuse seen in example | High |
+| `height-reference.csv` | Reference levels, datum, building surfaces | 15 | CSV draft | SR family | **Split**: keep 8 levels; AHD → reuse EPSG/`wa-vhd`; 6 building-surface terms → `boundary-reference` × `occupation-feature` | `sr:heightReference`, `sr:surfaceType` | Mixed abstraction levels; misuse seen in example | High |
 | `building-boundary-reference.csv` | Surface of a building element taken as a boundary | 10 | CSV draft | SR family | **Merge** into common `boundary-reference`; collapse synonyms (D8) | `limits[].relationship` (proposed) | General strata survey terminology | Medium |
 | `cadastral-boundary-reference.csv` | 2D title boundary used as 3D face | 1 | CSV draft | SR family | **Merge** into `boundary-reference` | as above | Same property, same role | High |
 | `relative-height-reference.csv` | above / below surface | 2 | CSV draft | — | **Merge** into `boundary-reference` as one `offset-from-surface` concept; direction via `vertical-direction` | as above | Encodes direction twice | Medium |
@@ -245,7 +246,7 @@ Purpose by vocabulary group (to avoid repeating it per row):
 | `icsm-reference-kind.csv` | Kind of thing a limit references | 3 | CSV draft | SR family | **Create** as `reference-kind`; fix altLabels | `limits[].referenceKind` (proposed) | Generic discriminator | Medium |
 | `icsm-mechanism.csv` | Geometric derivation mechanism | 5 | CSV draft | SR family (derivation section) | **Create** as `derivation-mechanism` | `limits[].geometricDerivation.mechanism` (proposed) | Reusable derivation capability; not cadastral domain | Medium |
 | `icsm-derived-geometry-status.csv` | Whether derived geometry was generated | 3 | CSV draft | SR family | **Create**, reduce to `generated` / `not-generated` (+ optional `generation-failed`) | `sr:derivedGeometryStatus` (model change: datatype → object property) | `solid-generated` duplicates `geometryType` | Medium |
-| `icsm-boundary-coverage.csv` | Whether authored limits cover all faces | 3 | CSV draft | **Implementation-local** (processWAData; future validation BBlock) | **Defer** (do not publish) | `components[].boundaryCoverage.mode` (skill-only) | Reconciliation/validation state. Scope note says values `true`/`false`, but the CSV has 3 terms. | Medium |
+| `icsm-boundary-coverage.csv` | Whether authored limits cover all faces | 3 | CSV draft | — | **Remove** (D12, decided 2026-10-16): replaced by the boolean `fullBoundaryCoverage` | `components[].fullBoundaryCoverage` (skill-only) | Reconciliation/validation state. Scope note says values `true`/`false`, but the CSV has 3 terms. | Medium |
 | `wa-resolution-status.csv` | resolved / unresolved | 2 | CSV draft | — | **Merge** into `computability-status` | `sr:resolutionStatus` | Duplicate concept, less informative | Medium |
 | `wa-prov-role.csv` | Roles in a conversion pipeline | 4 | CSV draft | **Implementation-local** (processing workflow) | **Defer** (keep local; do not publish in icsm-vocabs) | `prov:hadRole` in WA examples | Mixes agent and entity roles; open-ended (examples use ~15 other bare roles) | Medium |
 
@@ -289,13 +290,13 @@ Each assessment covers current state, terms, usage, relationships, owner, bindin
 - `dcterms:source "wa-leg:…"` is an undeclared pseudo-CURIE literal. Make it an IRI.
 - Retarget `dcterms:type` to the de-duplicated document types (`scheme-ue`, `scheme-record-form`).
 - The `BA14` label reads "form B14". Notation `15c` vs label "15C" needs a consistent case.
-- The `15c` definition says "planning or local government", which conflicts with other definitions (D9).
+- The `15c` definition says "planning or local government", which conflicts with other definitions (D9). Decided 2026-10-16: the local government endorses the strata plan; the WAPC gives planning approval and planning compliance.
 
 **`wa-interest-type` (2 terms).**
 - The parent is labelled "WA Memorial Types" and already contains `ct` (Certificate of Title).
 - The proposed definitions ("Total value of a Strata Scheme entitlement", "per Strata Lot entitlement value") describe **unit entitlement quantities**. Those belong in properties such as `entitlementTotal` and `entitlementPortion` (decision register #9/#10), not in an interest type.
 - If a WA strata lot is held under a Certificate of Title, `strata-lot` duplicates `ct`.
-- Defer until Landgate confirms the tenure instruments (D7). Any incorporated term needs a rewritten definition.
+- **Decided 2026-10-16 (D7):** neither term is added. Entitlements become properties of the scheme and lot parcels. Lots to be created carry no interest entry; `ct` interests are added once titles are registered.
 
 **`wa-monument-condition:computed`.**
 - Every one of the 256 uses co-occurs with form `cadastral-point-unmarked`, state `unmarked`, purpose `derived-boundary` and method `G` ("Graphical – CO-GO, calculated").
@@ -312,7 +313,7 @@ Each assessment covers current state, terms, usage, relationships, owner, bindin
   - Language tags (`@en`) are used inconsistently with the parent vocabularies.
 - **Core anchoring:** The core model already defines `surv:Occupation` ("fences, walls … buildings …"), `surv:Terrain ⊂ Occupation`, `surveyobs:DesignModel` (BIM) and `container:occupationFeatures`. It has **no** occupation-type property, which is a proposed model change.
 - **Usage:** The worked example carries IFC `bimType` on each occupation feature, alongside `featureType: wa-occ:wall`.
-- **Recommendation:** Create a common `occupation-feature-type`, with `skos:closeMatch` to IFC 4.3 class IRIs and `skos:related` to `surv:Terrain`. The concepts are construction-generic. Nothing in their definitions is WA law.
+- **Recommendation:** Create a common `occupation-feature`, with `skos:closeMatch` to IFC 4.3 class IRIs and `skos:related` to `surv:Terrain`. The concepts are construction-generic. Nothing in their definitions is WA law.
 
 **`wa-parcel-purpose:strata-scheme`.**
 - The definition ("abstract parcel that aggregates…") describes the core class `EstateParcel ⊂ ParcelAggregate`, not a purpose.
@@ -375,7 +376,7 @@ Individual assessments:
 - **`source-scope`, `reference-kind`, `derivation-mechanism` and `derived-geometry-status`.** Generic. Drop the `icsm-` prefix from vocabulary names: the namespace already conveys ownership, and other ICSM vocabularies use the prefix only to distinguish them from jurisdictional variants.
   - `reference-kind` altLabels "building element" and "spatial unit" are wrong, because they are narrower or different concepts.
   - `source-scope` notations need kebab-case (`parcel-part`, `boundary-part`).
-- **`boundary-coverage` and `wa-prov-role`.** See §5.6. These are implementation concepts.
+- **`boundary-coverage` and `wa-prov-role`.** See §5.6. These are implementation concepts. `boundary-coverage` is removed in favour of a boolean (D12).
 
 ---
 
@@ -399,24 +400,24 @@ No supplement IRI collides with a published IRI, and no prefLabel or notation co
 | wa-approved-form | `BA14` | (new) | wa-approved-form | Create; fix label "B14" | — | WA-local |
 | wa-approved-form | `2020-27588-v3` | (new) | wa-approved-form | Create | `dcterms:type` → `scheme-record-form` | WA-local |
 | wa-approved-form | `15c` | (new) | wa-approved-form | Create after D9; normalise case | Definition conflict | WA-local |
-| wa-interest-type | `strata-scheme` | wa-interest-type | wa-interest-type (if confirmed) | Defer (D7); rewrite definition | Definition describes entitlement total → `entitlementTotal` property | WA-local |
-| wa-interest-type | `strata-lot` | wa-interest-type | Reuse `wa-interest-type:ct` if strata lots are held by CT | Defer (D7) / Map | Possible duplicate of `ct` | WA-local |
+| wa-interest-type | `strata-scheme` | wa-interest-type | none; `entitlementTotal` on the scheme parcel | Reject (D7, decided 2026-10-16) | Definition describes entitlement total → `entitlementTotal` property | WA-local |
+| wa-interest-type | `strata-lot` | wa-interest-type | none; `entitlementPortion` on the lot parcel; `wa-interest-type:ct` once titles are registered | Reject (D7, decided 2026-10-16) | Duplicate of `ct` | WA-local |
 | wa-monument-condition | `computed` | wa-monument-condition | none; reuse `wa-monument-form:cadastral-point-unmarked`, `wa-monument-state:unmarked`, `wa-surveypoint-method:G` | Reject / map | Not a condition; fully redundant in 256/256 uses | WA-local |
-| wa-occ | `building` | wa-occ | common `occupation-feature-type` | Relocate + Create | Fix IRI case (`:Building` dangling) | ICSM |
-| wa-occ | `building-element` | wa-occ | occupation-feature-type | Relocate + Create | Fix `:BuildingElement` dangling | ICSM |
-| wa-occ | `wall` | wa-occ | occupation-feature-type | Relocate; `closeMatch` IfcWall | — | ICSM |
-| wa-occ | `slab` | wa-occ | occupation-feature-type | Relocate; IfcSlab; drop "roof" from definition | Overlaps `roof` | ICSM |
-| wa-occ | `ceiling` | wa-occ | occupation-feature-type | Relocate; IfcCovering (CEILING) | Not structural | ICSM |
-| wa-occ | `roof` | wa-occ | occupation-feature-type | Relocate; IfcRoof | — | ICSM |
-| wa-occ | `column` | wa-occ | occupation-feature-type | Relocate; IfcColumn | — | ICSM |
-| wa-occ | `beam` | wa-occ | occupation-feature-type | Relocate; IfcBeam | — | ICSM |
-| wa-occ | `stair` | wa-occ | occupation-feature-type | Relocate; IfcStair | — | ICSM |
-| wa-occ | `door` | wa-occ | occupation-feature-type | Relocate; IfcDoor | — | ICSM |
-| wa-occ | `window` | wa-occ | occupation-feature-type | Relocate; IfcWindow | — | ICSM |
-| wa-occ | `other-building-element` | wa-occ | occupation-feature-type | Relocate | — | ICSM |
-| wa-occ | `structure` | wa-occ | occupation-feature-type | Relocate; fix `:Structure` dangling | — | ICSM |
-| wa-occ | `fence` | wa-occ | occupation-feature-type | Relocate | Named in core `surv:Occupation` definition | ICSM |
-| wa-occ | `retaining-wall` | wa-occ | occupation-feature-type | Relocate | — | ICSM |
+| wa-occ | `building` | wa-occ | common `occupation-feature` | Relocate + Create | Fix IRI case (`:Building` dangling) | ICSM |
+| wa-occ | `building-element` | wa-occ | occupation-feature | Relocate + Create | Fix `:BuildingElement` dangling | ICSM |
+| wa-occ | `wall` | wa-occ | occupation-feature | Relocate; `closeMatch` IfcWall | — | ICSM |
+| wa-occ | `slab` | wa-occ | occupation-feature | Relocate; IfcSlab; drop "roof" from definition | Overlaps `roof` | ICSM |
+| wa-occ | `ceiling` | wa-occ | occupation-feature | Relocate; IfcCovering (CEILING) | Not structural | ICSM |
+| wa-occ | `roof` | wa-occ | occupation-feature | Relocate; IfcRoof | — | ICSM |
+| wa-occ | `column` | wa-occ | occupation-feature | Relocate; IfcColumn | — | ICSM |
+| wa-occ | `beam` | wa-occ | occupation-feature | Relocate; IfcBeam | — | ICSM |
+| wa-occ | `stair` | wa-occ | occupation-feature | Relocate; IfcStair | — | ICSM |
+| wa-occ | `door` | wa-occ | occupation-feature | Relocate; IfcDoor | — | ICSM |
+| wa-occ | `window` | wa-occ | occupation-feature | Relocate; IfcWindow | — | ICSM |
+| wa-occ | `other-building-element` | wa-occ | occupation-feature | Relocate | — | ICSM |
+| wa-occ | `structure` | wa-occ | occupation-feature | Relocate; fix `:Structure` dangling | — | ICSM |
+| wa-occ | `fence` | wa-occ | occupation-feature | Relocate | Named in core `surv:Occupation` definition | ICSM |
+| wa-occ | `retaining-wall` | wa-occ | occupation-feature | Relocate | — | ICSM |
 | wa-parcel-purpose | `strata-scheme` | wa-parcel-purpose | wa-parcel-purpose | Incorporate (interim, fixed definition) | Target: `ParcelAggregate`/`EstateParcel` feature type (D6) | WA-local (+ICSM for D6) |
 | wa-purpose | `derived-boundary` (scheme `wa-surveypoint-purpose`) | wa-surveypoint-purpose | wa-surveypoint-method (new narrower of `G`) + existing boundary purpose | Relocate / defer | Derivation ≠ purpose | WA-local |
 | wa-survey-documentation | `csd` | wa-survey-documentation-type | wa-survey-documentation-type | Incorporate; `skos:related` `3d-plan`, `wa-survey-type:csd` | Fix regulation citation | WA-local |
@@ -437,10 +438,10 @@ No supplement IRI collides with a published IRI, and no prefLabel or notation co
 |---|---|---|
 | Incorporate into WA parent | 16 | 8 annotation, 6 documentation-type, 1 parcel-purpose, 1 survey-purpose (2 conditional on D9) |
 | Create in new WA vocabulary | 4 | `wa-approved-form` |
-| Relocate to a common vocabulary | 15 | `wa-occ` → `occupation-feature-type` |
+| Relocate to a common vocabulary | 15 | `wa-occ` → `occupation-feature` |
 | Relocate within WA | 2 | `ct`, `derived-boundary` |
 | Map / reuse existing (do not add) | 4 | `computed`, `built-strata-plan`, `unitEntitlementSchedule`, `recordOfStrataTitlesScheme` |
-| Defer | 2 | `strata-scheme` and `strata-lot` interest types |
+| Reject (D7) | 2 | `strata-scheme` and `strata-lot` interest types |
 
 ---
 
@@ -457,20 +458,21 @@ No supplement IRI collides with a published IRI, and no prefLabel or notation co
 | `vertical-value-type` | 4 | SR family | Create | — | `sr:valueType` | D2 | — |
 | `vertical-direction` (+ icsm-vertical-direction) | 3 | SR family | Create + Merge | — | `sr:direction`; `limits[].heightOffset.offsetDirection` (proposed) | D2 | — |
 | `boundary-role` (+ vertical-limit-role) | 3 | SR family | Create + Merge | `ll`→`lower`, `ul`→`upper` | `sr:limitRole`; `limits[].boundaryRole` (proposed; consolidate properties, D10) | D2, D10 | — |
-| `height-reference` | 15 → 8 | SR family | Split | AHD → EPSG/`wa-vhd`; 6 building-surface terms → `boundary-reference` × `occupation-feature-type` | `sr:heightReference`, `sr:surfaceType` | D2 | `occupation-feature-type` |
+| `height-reference` | 15 → 8 | SR family | Split | AHD → EPSG/`wa-vhd`; 6 building-surface terms → `boundary-reference` × `occupation-feature` | `sr:heightReference`, `sr:surfaceType` | D2 | `occupation-feature` |
 | `boundary-reference` (building-, cadastral-, relative-height-reference) | 10 + 1 + 2 → ≈ 11 | SR family (parcel extension) | Merge | synonyms (D8); `projection` qualifier; above/below → `offset-from-surface` + direction | `limits[].relationship` (proposed) | D2, D8 | Built-strata limit model in SRD-parcel |
 | `component-role` (+ wa-strata-component-role) | 8 | **ICSM Parcels**, `icsm-vocabs` | Merge → Create | no exclusive-use-CP role | `derivedGeometry.components[].componentRole` (proposed) | D5 | components model |
 | `source-scope` (icsm-scope) | 6 | SR family (parcel extension) | Create (rename) | kebab notations | `…source.scope` / `sourceBasis.scope` (proposed) | D2 | `sourceBasis` model |
 | `reference-kind` (icsm-reference-kind) | 3 | SR family | Create (rename) | fix altLabels | `limits[].referenceKind` (proposed) | D2 | limits model |
 | `derivation-mechanism` (icsm-mechanism) | 5 | SR family (derivation) | Create (rename) | — | `limits[].geometricDerivation.mechanism` (proposed) | D2 | — |
 | `derived-geometry-status` (icsm-derived-geometry-status) | 3 → 2(+1) | SR family | Create (reduced) | drop `solid-generated` (use `geometryType`) | `sr:derivedGeometryStatus` (→ object property) | D2; SRD model change | — |
-| `boundary-coverage` (icsm-boundary-coverage) | 3 | Implementation-local | Defer | — | skill only | Whether a validation BBlock is wanted (C) | — |
+| `boundary-coverage` (icsm-boundary-coverage) | 3 | — | Remove (D12, decided 2026-10-16) | replaced by boolean `fullBoundaryCoverage` | skill only | — | — |
 | `wa-prov-role` | 4 | Implementation-local | Defer | map `source-csd-file` → documentation type `csd` if needed | `prov:hadRole` in pipeline outputs | none (local) | — |
 
 **Outcome for the 25 CSVs:**
 - **15 become the SR family:** `representation-status`, `geometry-legal-status`, `computability-status`, `coordinate-z-role`, `vertical-extent-status`, `vertical-definition-type`, `vertical-value-type`, `vertical-direction`, `boundary-role`, `height-reference`, `boundary-reference` (from `building-boundary-reference`), `source-scope`, `reference-kind`, `derivation-mechanism` and `derived-geometry-status`.
-- **1 becomes a common domain vocabulary:** `component-role`. With `occupation-feature-type` (from the `wa-occ` supplement) there are 2 common domain vocabularies.
-- **2 stay implementation-local:** `boundary-coverage` and `wa-prov-role`.
+- **1 becomes a common domain vocabulary:** `component-role`. With `occupation-feature` (from the `wa-occ` supplement) there are 2 common domain vocabularies.
+- **1 stays implementation-local:** `wa-prov-role`.
+- **1 is removed:** `boundary-coverage`, replaced by the boolean `fullBoundaryCoverage` (D12, decided 2026-10-16).
 - **7 are retired by merge:** `icsm-vertical-direction`, `vertical-limit-role`, `vertical-boundary-state`, `cadastral-boundary-reference`, `relative-height-reference`, `wa-resolution-status` and `wa-strata-component-role`. None was published, so no deprecation is needed.
 
 The only new WA vocabulary is `wa-approved-form`, which comes from a supplement.
@@ -511,7 +513,7 @@ The only new WA vocabulary is `wa-approved-form`, which comes from a supplement.
 - A common document-type core (certificate of title, plan, field record) with jurisdictional narrower terms.
 - Whether `lowest-ground-floor-upper-surface-level` and `plate-height` are WA-specific.
 - `wa-parcel-type` tenure vs scheme-kind split (D6).
-- IFC IRI form and version for `occupation-feature-type` mappings: buildingSMART identifiers vs the ifcOWL namespace.
+- IFC IRI form and version for `occupation-feature` mappings: buildingSMART identifiers vs the ifcOWL namespace. Decided 2026-10-16: buildingSMART identifiers, IFC 4.3.
 
 ---
 
@@ -531,10 +533,10 @@ The only new WA vocabulary is `wa-approved-form`, which comes from a supplement.
 
 | Layer | Owner | Authoritative location | Content |
 |---|---|---|---|
-| External | buildingSMART; EPSG | external IRIs | IFC classes (mapping targets for `occupation-feature-type`); vertical CRS (replaces `height-reference:AHD`) |
+| External | buildingSMART; EPSG | external IRIs | IFC classes (mapping targets for `occupation-feature`); vertical CRS (replaces `height-reference:AHD`) |
 | Core 3D CSDM modules | ICSM | `3d-cadastre-model` (OWL) | Classes `surv:Occupation`, `ParcelAggregate`/`EstateParcel`, `com:RelevantJurisdictionalCodelist`. **Proposed additions:** occupation type property; `ParcelAggregate` as a featureType (common profile schema) |
 | Reusable BBlock: Spatial Representation Definition (+ parcel extension) | ICSM 3D CSDM (D2); WA as interim steward | BBlock in `bblocks-land-parcels` or the ICSM register; ontology `sr:` | Properties `sr:*`; generic SHACL binding each `sr:` property to its SR vocabulary; proposed `limits[]`, `components[]`, `sourceBasis.scope` |
-| Common vocabularies | ICSM | `icsm-vocabs/vocabs/LandParcels/SpatialRepresentation/` and `…/Parcels/`, `…/SurveyFeatures/`; IRIs `…/def/csdm/<name>` | 15 SR-family vocabularies, plus `component-role` and `occupation-feature-type`; existing `icsm-*` codelists |
+| Common vocabularies | ICSM | `icsm-vocabs/vocabs/LandParcels/SpatialRepresentation/` and `…/Parcels/`, `…/SurveyFeatures/`; IRIs `…/def/csdm/<name>` | 15 SR-family vocabularies, plus `component-role` and `occupation-feature`; existing `icsm-*` codelists |
 | ICSM common profile | ICSM | `3d-csdm-profile-icsm/profiles/icsm-vocab-bindings.csv` | Bindings for the common vocabularies; fix `icsm-survey-type` |
 | WA profile | Landgate | `3d-csdm-profile-wa/profiles/wa-vocab-bindings.csv`, contexts, SHACL; `wa-built-strata` BBlock | WA codelist bindings; **subsets** of common vocabularies (e.g. WA forbids `l3d`, `computability-status` values allowed per representation class); built-strata rules (`brb` requires `boundary-definition-statement` annotation) |
 | WA codelists | Landgate (content); ICSM repo hosting | `icsm-vocabs/vocabs/LandParcels/**/wa-*` | 22 existing + new `wa-approved-form`; supplement terms incorporated |
@@ -551,7 +553,7 @@ flowchart TB
     SRD["SRD BBlock + parcel extension\nsr:* properties · limits[] · components[] (proposed)"]
     subgraph CV["Common vocabularies — icsm-vocabs, …/def/csdm/&lt;name&gt;"]
       SR["Spatial-representation family (15)\nrepresentation-status · geometry-legal-status · computability-status\ncoordinate-z-role · vertical-extent-status · vertical-definition-type\nvertical-value-type · vertical-direction · boundary-role · height-reference\nboundary-reference · source-scope · reference-kind\nderivation-mechanism · derived-geometry-status"]
-      DOM["component-role · occupation-feature-type"]
+      DOM["component-role · occupation-feature"]
       ICC["Existing icsm-* codelists (9)"]
     end
     CP["ICSM common profile\nicsm-vocab-bindings"]
@@ -618,7 +620,7 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 | A5 | Clean WA binding artefacts: delete stale `wa-vocab-bindings.csv.json` entries; one prefix per namespace (`wa-annotation`, not `wa-annotation-role`; `wa-surveypoint-method`, not `wa-pt-method`); remove `wa-vector-type`/`wa-interest` context entries or define them; resolve `wa-angle-derivation` | profiles, contexts | same | yes | — |
 | A6 | Consolidate the CSV drafts *in the proposals directory* to the target set (merge duplicates, split `height-reference`, kebab notation, fixed definitions, explicit `id` column) and add `csMapping` entries that point at the intended IRIs. **Do not run the uplift into the published tree yet.** | 25 CSVs | 16 CSVs in `proposals/development/vocabularies/` (2 local ones move to `processWAData`) | none yet | D1 |
 | A7 | Fix data drift: `vertical-extent-status:dfld`; validator codes `cmp`/`rjr`; unify derived-geometry status values | examples, `processWAData/src/csdm_validator` | same | — | A6 |
-| A8 | Keep `boundary-coverage` and `wa-prov-role` local; document them in `processWAData` | CSVs | `processWAData` | none | — |
+| A8 | Keep `wa-prov-role` local and document it in `processWAData`; remove `boundary-coverage` (D12) | CSVs | `processWAData` | none | — |
 | A9 | Extend the uplift pipeline: map `related` (→ `skos:related`), split `altlabel` on one agreed separator, support `broader` | `vocabs-uplift.yml` (both repos) | same | — | before B1 |
 
 ### B. Requires ICSM review or approval
@@ -626,7 +628,7 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 | # | Activity | Target | Binding changes | Dependencies |
 |---|---|---|---|---|
 | B1 | Publish the SR vocabulary family (experimental) | `icsm-vocabs/vocabs/LandParcels/SpatialRepresentation/` | SRD BBlock SHACL binding each `sr:` property; ICSM common profile binding rows; WA profile subsets | D1, D2, A6, A9 |
-| B2 | Publish `component-role` and `occupation-feature-type` (IFC mappings) | `icsm-vocabs/…/Parcels/`, `…/SurveyFeatures/` | proposed `components[].componentRole`; proposed occupation-type property on `surv:Occupation` / `occupationFeatures[]` | D5 |
+| B2 | Publish `component-role` and `occupation-feature` (IFC mappings) | `icsm-vocabs/…/Parcels/`, `…/SurveyFeatures/` | proposed `components[].componentRole`; proposed occupation-type property on `surv:Occupation` / `occupationFeatures[]` | D5 |
 | B3 | Allow `ParcelAggregate` (or `EstateParcel`) as a `featureType` in `icsm-3d` | `3d-csdm-profile-icsm/_sources/icsm-3d/schema.json` | WA scheme parcels | D6 |
 | B4 | SRD model changes: `resolutionStatus` and `derivedGeometryStatus` → object properties with `@vocab`; add the `limits[]` / `components[]` / `sourceBasis.scope` structures; consider `limitRole`/`boundaryRole` consolidation | SRD BBlock ontology, schema, context | as listed | D2, D10 |
 | B5 | Fix `icsm-vocab-bindings` reference to the missing `icsm-survey-type` | ICSM profile | — | — |
@@ -637,7 +639,7 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 |---|---|---|
 | C1 | Agree a vocabulary governance process: status lifecycle (experimental → stable), change requests, deprecation (`owl:deprecated`, `dcterms:isReplacedBy`) | No governance documents found |
 | C2 | Add SKOS mappings from jurisdictional to `icsm-*` concepts (condition, state, purpose, parcel state); later consider common annotation and document-type cores | Removes label-union duplication without changing IRIs |
-| C3 | Decide whether a generation/validation BBlock should own `boundary-coverage`, derivation diagnostics and pipeline roles | Only if reuse emerges |
+| C3 | Decide whether a generation/validation BBlock should own derivation diagnostics and pipeline roles | Only if reuse emerges |
 | C4 | Rename `verticalBoundaryDefinitions` (now holding lateral limits) or introduce `boundaryDefinitions`, with migration | D10 |
 | C5 | Revisit `wa-parcel-type` tenure vs scheme-kind mix and `wa-survey-type` format-vs-plan mix | WA codelist cleanup with deprecations |
 
@@ -652,7 +654,38 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 
 ---
 
-## 5.10 Open decisions
+## 5.10 Decisions
+
+### Decisions taken (2026-10-16)
+
+The Surround team took these decisions during the organisation phase, before the vocabularies go to their custodians. Where the Authority column of the options table names ICSM or Landgate, the custodian confirms the decision at submission. The options considered are kept in the table below this one.
+
+| ID | Status | Decision | Effect on the vocabularies | Decided by | Date |
+|---|---|---|---|---|---|
+| D1 | Decided | Kebab-case words for every draft notation (`not-computable`, `above`). The old code is kept as the first `skos:altLabel`. | The uplift mints IRIs from the notation, so IRIs become kebab-case too; no explicit `id` column is needed. About 250 example values change. | Surround team | 2026-10-16 |
+| D2 | Decided | (a): 3D CSDM (core) owns the SRD BBlock and its vocabulary family, with WA as interim steward. LADM may ultimately become the steward. | Identifiers move off `icsm.profiles.wa.*` to the 3D CSDM core. | Surround team | 2026-10-16 |
+| D3 | Decided | Common vocabularies are part of the 3D CSDM core model, at `https://icsm-au.github.io/3d-csdm`. | Replaces the `icsm-vocabs` recommendation. The common vocabularies (the SR family, `component-role`, `occupation-feature`) are maintained with the core model rather than in `icsm-vocabs`. | Surround team | 2026-10-16 |
+| D4 | Decided | (a): one `vertical-extent-status` scheme with two `skos:Collection`s, one for extent and one for boundary state. | `vertical-boundary-state` is retired. A sidecar `vertical-extent-status.collections.ttl` declares the collections until the pipeline supports them. `dfv` and `a3d` are removed (covered by `geometry-legal-status`); `uca`/`ucb` become `unconstrained-above`/`unconstrained-below` with broader `unconstrained`. | Surround team | 2026-10-16 |
+| D5 | Decided (Surround position) | Common `component-role` and common `occupation-feature` (renamed from `occupation-feature-type`). | `occupation-feature` is hand-written TTL at `proposals/development/vocabularies/occupation-feature.ttl`, IRI `https://linked.data.gov.au/def/csdm/occupation-feature`, replacing `wa-occ-supplement.ttl`. IFC 4.3 `skos:closeMatch` uses buildingSMART identifiers. `wa-strata-component-role` merges into `component-role`. | Surround team; ICSM to confirm | 2026-10-16 |
+| D6 | Decided | (a) now: interim `parcelPurpose: strata-scheme`. (c) is the future target: a `ParcelAggregate`/`EstateParcel` featureType. | `wa-parcel-purpose:strata-scheme` is rewritten as a purpose. The `featureType` gap is raised with the 3D CSDM core. | Surround team | 2026-10-16 |
+| D7 | Decided | `strata-scheme` and `strata-lot` are not interest types. | `wa-interest-type-supplement.ttl` is rejected. `entitlementTotal` and `entitlementPortion` become properties of the scheme and lot parcels. Lots to be created carry no interest entry; `wa-interest-type:ct` interests are added once titles are registered. `ct` stays as defined. | Surround team | 2026-10-16 |
+| D8 | Decided | Merge `under-surface` into `lower-surface` and `outer-surface` into `external-surface`, keeping the merged labels as altLabels. | `boundary-reference:external-surface` takes the SP83687 statute wording "external surface" as prefLabel, with altLabel "outer surface". | Surround team | 2026-10-16 |
+| D9 | Decided | The local government endorses strata plans: `wa-annotation:strata-plan-endorsement`, `wa-survey-documentation-type` `strata-plan-endorsement-certificate` and `wa-approved-form:15c`. The WAPC gives planning approval and planning compliance. | The three definitions name the role ("the local government"), not a specific council. Examples name the body; SP83687 uses `wa-local-government:city-of-belmont`. | Surround team | 2026-10-16 |
+| D10 | Decided | As recommended: consolidate `limitRole` and `boundaryRole` into one property and `boundaryDefinitions`, in the SRD-parcel extension. | `boundary-role` serves both; `vertical-limit-role` merges into it. Renaming `verticalBoundaryDefinitions` follows roadmap C4. | Surround team | 2026-10-16 |
+| D11 | Decided | Existing terms only: purpose `wa-surveypoint-purpose:internal-boundary` with method `wa-surveypoint-method:G`. | `wa-surveypoint-purpose:derived-boundary` and `wa-monument-condition:computed` are rejected; their supplements are deleted. | Surround team | 2026-10-16 |
+| D12 | Decided | `wa-prov-role` stays local. `icsm-boundary-coverage` is removed. | Components use the boolean `"fullBoundaryCoverage": true`, as the built-strata scope note describes. | Surround team | 2026-10-16 |
+
+Other decisions taken by the Surround team on 2026-10-16:
+
+- `wa-survey-type:ct` is relocated to the existing `wa-survey-documentation-type:certificate-of-title`; `wa-survey-type-supplement.ttl` is deleted.
+- `wa-resolution-status` is absorbed into `computability-status`; `vertical-limit-role` into `boundary-role`; `icsm-vertical-direction` into `vertical-direction`; `building-`, `cadastral-` and `relative-height-reference` into `boundary-reference`.
+- `height-reference` keeps its 8 levels. AHD moves to the vertical CRS (EPSG or `wa-vhd`); the 6 building-surface terms become `boundary-reference` combined with an `occupation-feature`.
+- `derived-geometry-status` keeps `generated` and `not-generated` and adds `generation-failed`.
+- `wa-angle-derivation:M` stays as a local value. It is the WA APX-05 CSD code read by `arc_comp`, equivalent to `wa-procedure-used:measured`, and is not added to any vocabulary.
+- `wa-surveypoint-purpose:boundary` in the examples becomes `wa-surveypoint-purpose:internal-boundary`.
+- Examples in `2-5d-liminal`, `built-strata`, `_sources/wa-liminal` and the threeJS viewer data, and the processWAData skill and validators, change in the same release as the vocabularies.
+
+### Options considered (2026-10-15)
 
 | ID | Issue | Alternatives | Recommendation | Rationale | Authority |
 |---|---|---|---|---|---|
@@ -660,7 +693,7 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 | D2 | Owner of the SRD BBlock and SR vocabulary family | (a) ICSM 3D CSDM; (b) OGC incubator land-parcels; (c) WA profile | (a), with WA as interim steward; identifiers moved off `icsm.profiles.wa.*` | Self-described as generic; binds ICSM-namespace IRIs; reusable across jurisdictions | ICSM |
 | D3 | Repository location of common vocabularies | `icsm-vocabs` vs alongside the BBlock | `icsm-vocabs` | Single publication pipeline, catalogue and IRI resolution; the BBlock references them | ICSM |
 | D4 | `vertical-extent-status` / `vertical-boundary-state` | (a) one scheme + two collections; (b) two schemes sharing concepts (multi-`inScheme`); (c) keep separate duplicates | (a) | One concept per meaning; property-specific subsets via collections | ICSM (SRD owner) |
-| D5 | `component-role` and `occupation-feature-type` as common vocabularies | common (ICSM) vs WA-only | common | Jurisdiction-neutral definitions; core anchors exist; IFC alignment | ICSM, with Landgate input |
+| D5 | `component-role` and `occupation-feature` as common vocabularies | common (ICSM) vs WA-only | common | Jurisdiction-neutral definitions; core anchors exist; IFC alignment | ICSM, with Landgate input |
 | D6 | How a strata scheme is typed | (a) interim `parcelPurpose: strata-scheme`; (b) move to `wa-parcel-type` alongside community schemes; (c) `ParcelAggregate`/`EstateParcel` featureType | (a) now, (c) target | (b) conflicts with single-valued tenure (`freehold`) | WA (a); ICSM (c) |
 | D7 | Strata interests | remove `strata-scheme`/`strata-lot`; reuse `ct`; model entitlement as properties | reuse `ct` for lots if they are held by CT; scheme interest only if a distinct instrument; entitlements as properties | Interest types are instruments, not quantities | Landgate |
 | D8 | Building-surface synonyms | merge `under`→`lower` and `external`→`outer`, or keep both | merge, keeping altLabels | Avoid near-duplicate concepts; statute wording kept as label | Landgate survey practice, then ICSM |
