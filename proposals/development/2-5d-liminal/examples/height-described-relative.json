@@ -243,7 +243,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -277,7 +277,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -311,7 +311,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -345,7 +345,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -702,33 +702,33 @@
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:created",
             "spatialRepresentationDefinitions": {
-              "representationStatus": "representation-status:hd",
-              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "representationStatus": "representation-status:height-described",
+              "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
               "coordinateRepresentation": {
                 "coordinateDimension": 2,
                 "zValueRole": "coordinate-z-role:absent"
               },
               "verticalExtent": {
-                "status": "vertical-extent-status:rr",
+                "status": "vertical-extent-status:requires-resolution",
                 "lowerBoundary": {
-                  "state": "vertical-boundary-state:dur",
+                  "state": "vertical-extent-status:defined-but-unresolved",
                   "definitionRef": "relative-limit-lower-1"
                 },
                 "upperBoundary": {
-                  "state": "vertical-boundary-state:dur",
+                  "state": "vertical-extent-status:defined-but-unresolved",
                   "definitionRef": "relative-limit-upper-1"
                 }
               },
-              "computabilityStatus": "computability-status:rrs",
+              "computabilityStatus": "computability-status:requires-reference-surface",
               "verticalBoundaryDefinitions": [
                 {
                   "id": "relative-limit-lower-1",
-                  "definitionType": "vertical-definition-type:rel",
-                  "limitRole": "vertical-limit-role:ll",
-                  "valueType": "vertical-value-type:off",
+                  "definitionType": "vertical-definition-type:relative-height-description",
+                  "limitRole": "boundary-role:lower",
+                  "valueType": "vertical-value-type:offset",
                   "value": 2,
-                  "direction": "vertical-direction:blw",
-                  "heightReference": "height-reference:gl",
+                  "direction": "vertical-direction:below",
+                  "heightReference": "height-reference:ground-level",
                   "description": "2 metres below ground level",
                   "sourceReference": "source-height-description-1",
                   "resolutionStatus": "requiresReferenceSurface",
@@ -736,12 +736,12 @@
                 },
                 {
                   "id": "relative-limit-upper-1",
-                  "definitionType": "vertical-definition-type:rel",
-                  "limitRole": "vertical-limit-role:ul",
-                  "valueType": "vertical-value-type:off",
+                  "definitionType": "vertical-definition-type:relative-height-description",
+                  "limitRole": "boundary-role:upper",
+                  "valueType": "vertical-value-type:offset",
                   "value": 12,
-                  "direction": "vertical-direction:abv",
-                  "heightReference": "height-reference:gl",
+                  "direction": "vertical-direction:above",
+                  "heightReference": "height-reference:ground-level",
                   "description": "12 metres above ground level",
                   "sourceReference": "source-height-description-2",
                   "resolutionStatus": "requiresReferenceSurface",
@@ -749,7 +749,7 @@
                 }
               ],
               "derivedGeometry": {
-                "status": "notGenerated"
+                "status": "derived-geometry-status:not-generated"
               }
             },
             "interests": []
@@ -795,10 +795,10 @@
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:former-tenure",
-            "representationStatus": "representation-status:a3d",
-            "verticalExtentStatus": "vertical-extent:ns",
-            "geometryLegalStatus": "geometry-legal-status:l3d",
-            "computabilityStatus": "computability-status:nc",
+            "representationStatus": "representation-status:authoritative-3d",
+            "verticalExtentStatus": "vertical-extent-status:not-supplied",
+            "geometryLegalStatus": "geometry-legal-status:legal-3d",
+            "computabilityStatus": "computability-status:not-computable",
             "interests": [
               {
                 "interestLink": "2500-584",
@@ -847,10 +847,10 @@
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:former-tenure",
-            "representationStatus": "representation-status:a3d",
-            "verticalExtentStatus": "vertical-extent:ns",
-            "geometryLegalStatus": "geometry-legal-status:l3d",
-            "computabilityStatus": "computability-status:nc",
+            "representationStatus": "representation-status:authoritative-3d",
+            "verticalExtentStatus": "vertical-extent-status:not-supplied",
+            "geometryLegalStatus": "geometry-legal-status:legal-3d",
+            "computabilityStatus": "computability-status:not-computable",
             "interests": [
               {
                 "interestLink": "2500-585",
@@ -891,15 +891,15 @@
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }

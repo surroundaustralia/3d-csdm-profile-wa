@@ -1,5 +1,5 @@
 preflabel,definition,notation,altlabel,broader,related,scopenote
-2D,The parcel is represented by its surveyed horizontal footprint only.,2d,,,geometry-legal-status:legal-2d,
+2D,The parcel is represented by its surveyed horizontal footprint only.,2d,,,geometry-legal-status:authoritative-2d,
 2.5D,"The parcel footprint is associated with a terrain, ground, floor, or reference surface.",2-5d,,,,
 Height described,"The parcel has a height, depth, stratum, datum, or vertical relationship description.",height-described,hd,,,
 Jurisdictionally bounded,The parcel has vertical limits derived from a legal or jurisdictional source.,jurisdictionally-bounded,jb,,,

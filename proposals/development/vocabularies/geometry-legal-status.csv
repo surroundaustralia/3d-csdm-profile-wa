@@ -1,5 +1,5 @@
 preflabel,definition,notation,altlabel,broader,related,scopenote
-Authoritative 2D,The 2D footprint is the authoritative cadastral geometry.,authoritative-2d,a2d,,representation-status:authoritative-2d,
+Authoritative 2D,The 2D footprint is the authoritative cadastral geometry.,authoritative-2d,a2d,,representation-status:2d,
 Legal 3D,The 3D geometry is legally authoritative.,legal-3d,l3d,,representation-status:authoritative-3d,
 Derived from legal description,The geometry is computed from a legal height or boundary description.,derived-from-legal-description,dfld,,representation-status:derived-3d,
 Analytical,The geometry is created for analysis.,analytical,a,,,
