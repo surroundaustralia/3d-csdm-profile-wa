@@ -26,12 +26,11 @@ The following vocabularies (and their responsibilities) have been compiled to su
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | [Representation Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/representation-status.csv)       | What representation is present?                                            |
 | [Geometry Legal Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/geometry-legal-status.csv)       | What is the legal or analytical status of the geometry?                    |
-| [Vertical Extent Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-extent-status.csv)     | What is the overall legal or source state of the parcel’s vertical extent? |
+| [Vertical Extent Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-extent-status.csv)     | What is the overall legal or source state of the parcel’s vertical extent, and the state of each upper or lower boundary? (two collections, see [`vertical-extent-status.collections.ttl`](../vocabularies/vertical-extent-status.collections.ttl)) |
 | [Computability Status](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/computability-status.csv)         | Can the boundary or extent be computed from available inputs?              |
 | [Height Reference](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/height-reference.csv)                 | Relative to what surface, level, object, or plane is a boundary described? |
-| [Vertical Boundary State](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-boundary-state.csv)   | What is the state of the upper or lower boundary?                          |
 | [Vertical Definition Type](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-definition-type.csv) | What kind of source definition establishes the boundary?                   |
-| [Vertical Limit Role](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-limit-role.csv)           | Is the definition an upper or lower limit?                                 |
+| [Boundary Role](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/boundary-role.csv) | Is the definition a lower, upper or lateral limit? |
 | [Vertical Value Type](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-value-type.csv)           | How is the limit expressed?                                                |
 | [Vertical Direction](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/vertical-direction.csv)             | What direction is the limit expressed?                                     |
 | [Coordinate Z Role](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/development/vocabularies/coordinate-z-role.csv)               | What do coordinate `z` values mean?                                        |
@@ -84,12 +83,12 @@ If an authoritative source establishes that a parcel is unconstrained in one or 
 ```json
 {
   "representationStatus": "representation-status:2d",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
+  "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
   "verticalExtentStatus": [
-    "vertical-extent-status:uca",
-    "vertical-extent-status:ucb"
+    "vertical-extent-status:unconstrained-above",
+    "vertical-extent-status:unconstrained-below"
   ],
-  "computabilityStatus": "computability-status:nc"
+  "computabilityStatus": "computability-status:not-computable"
 }
 ```
 
@@ -148,7 +147,7 @@ The progression does not replace the original 2D parcel boundary. Instead, each 
 
 | Stage                                  | Main dataset pattern                                                                                                                                                                   | Status pattern                                                                                                                                                                                                                                                                             | Key difference from the preceding stage                                                                                                                                                                  |
 |----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **1. Authoritative 2D footprint**      | The parcel is represented by a polygon referencing its surveyed boundary edges. No vertical CRS, height description, surface, shell or solid is required to be included.               | `representationStatus`:`2d`; `vertical-extent-status`: `undefined` or `uca`or `ucb` or (`uca` and `ucb`); `geometryLegalStatus`: `a2d`; `computabilityStatus`: `nc`                                                                                                                        | Establishes the authoritative 2D parcel as the baseline representation. If `z` is not defined as unbounded use `ud`, otherwise `uca` and /or `ucb` plus `sourceDocument` plus `PROV`                     |
+| **1. Authoritative 2D footprint**      | The parcel is represented by a polygon referencing its surveyed boundary edges. No vertical CRS, height description, surface, shell or solid is required to be included.               | `representationStatus`:`2d`; [`vertical-extent-status`](../vocabularies/vertical-extent-status.csv): `undefined` or `uca`or `ucb` or (`uca` and `ucb`); `geometryLegalStatus`: `a2d`; `computabilityStatus`: `nc`                                                                                                                        | Establishes the authoritative 2D parcel as the baseline representation. If `z` is not defined as unbounded use `ud`, otherwise `uca` and /or `ucb` plus `sourceDocument` plus `PROV`                     |
 | **2. 2D footprint with `z` values**    | The same 2D parcel pattern is retained, but some points or geometry coordinates include a third ordinate.                                                                              | Remains `2D`; vertical extent remains `undefined` or `uca`or `ucb` or (`uca` and `ucb`) `geometryLegalStatus`: `a2d`; `computabilityStatus`: `nc`, may include `verticalCrs`                                                                                                               | Adds coordinate heights only. May include height datum, but the `z` values are not parcel limits and do not alter the parcel representation. Otherwise the same **1. Authoritative 2D footprint** above. |
 | **3. 2.5D reference surface**          | A vertical CRS and surface topology are added. The surface is represented through points, edges, rings, faces and a surface shell, and the parcel references that surface.             | `2.5D`; vertical extent is `notApplicable`; geometry legal status: `authoritative2D`; not computable as a solid/volume; requires `verticalCrs`; requires `surface` topology; requires `surface` `PROV` (expect it to the the same as the survey `PROV`). `surface` must contain 2D parcel. | Organises height values into a surface bounded by the footprint. The surface provides context but is not a legal parcel boundary.                                                                        |
 | **4. Relative height description**     | The parcel remains a 2D polygon. A structured `heightDescription` records the reference, offset, upper or lower role, source and provenance.                                           | `heightDescribed`; vertical extent `requiresResolution`; requires a reference surface                                                                                                                                                                                                      | Replaces surface context with a legally meaningful relationship, such as a distance above or below ground. The relationship cannot yet be converted into absolute boundaries.                            |
@@ -188,9 +187,9 @@ If `z` is not defined as unbounded:
         {
           "properties": {
             "representationStatus": "representation-status:2d",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
+            "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
             "verticalExtentStatus": "vertical-extent-status:ud",
-            "computabilityStatus": "computability-status:nc"
+            "computabilityStatus": "computability-status:not-computable"
           }
         }
       ]
@@ -214,12 +213,12 @@ If `z` is unbounded, expand `verticalExtentStatus` to include `unconstrainedAbov
         {
           "properties": {
             "representationStatus": "representation-status:2d",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
+            "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
             "verticalExtentStatus": [
-              "vertical-extent-status:uca",
-              "vertical-extent-status:ucb"
+              "vertical-extent-status:unconstrained-above",
+              "vertical-extent-status:unconstrained-below"
             ],
-            "computabilityStatus": "computability-status:nc"
+            "computabilityStatus": "computability-status:not-computable"
           }
         }
       ]
@@ -262,12 +261,12 @@ Same general pattern as **Authoritative 2D footprint and 2D footprint with `z` v
         {
           "properties": {
             "representationStatus": "representation-status:2-5d",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
-            "verticalExtentStatus": "vertical-extent-status:na",
-            "computabilityStatus": "computability-status:nc",
+            "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
+            "verticalExtentStatus": "vertical-extent-status:not-applicable",
+            "computabilityStatus": "computability-status:not-computable",
             "surface": {
-              "type": "height-reference:gl",
-              "status": "geometry-legal-status:obs",
+              "type": "height-reference:ground-level",
+              "status": "geometry-legal-status:observed",
               "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933"
             },
             "surfaceBoundedByFootprint": "True"
@@ -297,13 +296,13 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires height de
       "features": [
         {
           "properties": {
-            "representationStatus": "representation-status:hd",
-            "verticalExtentStatus": "vertical-extent-status:rr",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
-            "computabilityStatus": "computability-status:rrs",
+            "representationStatus": "representation-status:height-described",
+            "verticalExtentStatus": "vertical-extent-status:requires-resolution",
+            "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
+            "computabilityStatus": "computability-status:requires-reference-surface",
             "heightDescription": {
               "type": "relativeHeightDescription",
-              "heightReference": "height-reference:gl",
+              "heightReference": "height-reference:ground-level",
               "heightOffset": [
                 {
                   "zMinDescription": "2 metres below ground level",
@@ -351,10 +350,10 @@ Requires authoritative 2D footprint; Requires horizontal CRS; requires vertical 
       "features": [
         {
           "properties": {
-            "representationStatus": "representation-status:hd",
-            "verticalExtentStatus": "vertical-extent-status:ld",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
-            "computabilityStatus": "computability-status:c",
+            "representationStatus": "representation-status:height-described",
+            "verticalExtentStatus": "vertical-extent-status:legally-defined",
+            "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
+            "computabilityStatus": "computability-status:computable",
             "absoluteHeight": {
               "maxHeight": {
                 "zMax": 35.0,
@@ -398,19 +397,19 @@ Requires horizontal CRS; requires height description; requires jurisdictional so
       "features": [
         {
           "properties": {
-            "representationStatus": "representation-status:jb",
-            "verticalExtentStatus": "vertical-extent-status:ld",
-            "geometryLegalStatus": "geometry-legal-status:a2d",
-            "computabilityStatus": "computability-status:rrs",
+            "representationStatus": "representation-status:jurisdictionally-bounded",
+            "verticalExtentStatus": "vertical-extent-status:legally-defined",
+            "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
+            "computabilityStatus": "computability-status:requires-reference-surface",
             "jurisdictionalBoundaryRule": {
               "ruleType": "crownGrantDepthLimit",
               "sourceAuthorityType": "CrownGrant",
               "sourceStatement": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
-              "limitRole": "vertical-limit-role:ll",
+              "limitRole": "boundary-role:lower",
               "heightReference": "groundLevel",
               "heightOffset": {
                 "value": 12.19,
-                "direction": "vertical-direction:blw"
+                "direction": "vertical-direction:below"
               },
               "sourceReference": "source-crown-grant-depth-limit-1",
               "provenanceRef": "crown-grant-depth-limit-extraction-1"
@@ -458,13 +457,13 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
       "features": [
         {
           "properties": {
-            "representationStatus": "representation-status:d3d",
-            "verticalExtentStatus": "vertical-extent:dfld",
-            "geometryLegalStatus": "geometry-legal-status:dfld",
-            "computabilityStatus": "computability-status:cd",
+            "representationStatus": "representation-status:derived-3d",
+            "verticalExtentStatus": "vertical-extent-status:legally-defined",
+            "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
+            "computabilityStatus": "computability-status:computed",
             "heightDescription": {
               "type": "relativeHeightDescription",
-              "heightReference": "height-reference:gl",
+              "heightReference": "height-reference:ground-level",
               "heightOffset": [
                 {
                   "zMinDescription": "2 metres below ground level",
@@ -485,8 +484,8 @@ Required authoritative 2D footprint; requires horizontal and vertical CRS; depen
             },
             "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
             "surface": {
-              "type": "height-reference:gl",
-              "status": "geometry-legal-status:obs",
+              "type": "height-reference:ground-level",
+              "status": "geometry-legal-status:observed",
               "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933"
             },
             "surfaceBoundedByFootprint": "True",
@@ -635,7 +634,7 @@ It contains a `verticalBoundaryDefinitions` structure, a `definitionType` descri
           "properties": {
             "spatialRepresentationDefinitions": {
               "representationStatus": "representation-status:2d",
-              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
               "coordinateRepresentation": {
                 "coordinateDimension": 2,
                 "zValueRole": "coordinate-z-role:absent"
@@ -643,17 +642,17 @@ It contains a `verticalBoundaryDefinitions` structure, a `definitionType` descri
               "verticalExtent": {
                 "status": "vertical-extent-status:ud",
                 "lowerBoundary": {
-                  "state": "vertical-boundary-state:und"
+                  "state": "vertical-extent-status:undefined"
                 },
                 "upperBoundary": {
-                  "state": "vertical-boundary-state:und"
+                  "state": "vertical-extent-status:undefined"
                 }
               },
-              "computabilityStatus": "computability-status:nc",
+              "computabilityStatus": "computability-status:not-computable",
               "verticalBoundaryDefinitions": [],
               "referenceSurfaces": [],
               "derivedGeometry": {
-                "status": "notGenerated"
+                "status": "derived-geometry-status:not-generated"
               }
             }
           }
@@ -692,10 +691,10 @@ The existing top-level classifications still serve useful and separate purposes:
 
 ```json
 {
-  "representationStatus": "representation-status:hd",
-  "verticalExtentStatus": "vertical-extent-status:ld",
-  "geometryLegalStatus": "geometry-legal-status:a2d",
-  "computabilityStatus": "computability-status:c"
+  "representationStatus": "representation-status:height-described",
+  "verticalExtentStatus": "vertical-extent-status:legally-defined",
+  "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
+  "computabilityStatus": "computability-status:computable"
 }
 ```
 They answer different questions:
@@ -713,7 +712,7 @@ The common `verticalBoundaryDefinition` then explains why those statuses apply.
 {
   "spatialRepresentationDefinitions": {
     "representationStatus": "representation-status:2d",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 2,
       "zValueRole": "coordinate-z-role:absent"
@@ -721,17 +720,17 @@ The common `verticalBoundaryDefinition` then explains why those statuses apply.
     "verticalExtent": {
       "status": "vertical-extent-status:ud",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:und"
+        "state": "vertical-extent-status:undefined"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:und"
+        "state": "vertical-extent-status:undefined"
       }
     },
-    "computabilityStatus": "computability-status:nc",
+    "computabilityStatus": "computability-status:not-computable",
     "verticalBoundaryDefinitions": [],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -745,25 +744,25 @@ The legal and vertical-extent patterns remain unchanged. Only the coordinate rep
 {
   "spatialRepresentationDefinitions": {
     "representationStatus": "representation-status:2d",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 3,
-      "zValueRole": "coordinate-z-role:gc"
+      "zValueRole": "coordinate-z-role:geometry-context"
     },
     "verticalExtent": {
       "status": "vertical-extent-status:ud",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:und"
+        "state": "vertical-extent-status:undefined"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:und"
+        "state": "vertical-extent-status:undefined"
       }
     },
-    "computabilityStatus": "computability-status:nc",
+    "computabilityStatus": "computability-status:not-computable",
     "verticalBoundaryDefinitions": [],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -779,7 +778,7 @@ Where unboundedness is positively established by an authoritative source, it sho
 {
   "spatialRepresentationDefinitions": {
     "representationStatus": "representation-status:2d",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 2,
       "zValueRole": "coordinate-z-role:absent"
@@ -787,18 +786,18 @@ Where unboundedness is positively established by an authoritative source, it sho
     "verticalExtent": {
       "status": "vertical-extent-status:uc",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:uc"
+        "state": "vertical-extent-status:unconstrained"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:uc"
+        "state": "vertical-extent-status:unconstrained"
       },
       "sourceReference": "source-unbounded-extent-rule-1"
     },
-    "computabilityStatus": "computability-status:nc",
+    "computabilityStatus": "computability-status:not-computable",
     "verticalBoundaryDefinitions": [],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -811,11 +810,11 @@ It also supports mixed cases, such as:
 ```json
 {
   "lowerBoundary": {
-    "state": "vertical-boundary-state:def",
+    "state": "vertical-extent-status:defined",
     "definitionRef": "limit-lower-1"
   },
   "upperBoundary": {
-    "state": "vertical-boundary-state:uc"
+    "state": "vertical-extent-status:unconstrained"
   }
 }
 ```
@@ -826,33 +825,33 @@ It also supports mixed cases, such as:
 {
   "spatialRepresentationDefinitions": {
     "representationStatus": "representation-status:2-5d",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 3,
-      "zValueRole": "coordinate-z-role:rs"
+      "zValueRole": "coordinate-z-role:reference-surface"
     },
     "verticalExtent": {
-      "status": "vertical-extent-status:na",
+      "status": "vertical-extent-status:not-applicable",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:na"
+        "state": "vertical-extent-status:not-applicable"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:na"
+        "state": "vertical-extent-status:not-applicable"
       }
     },
-    "computabilityStatus": "computability-status:nc",
+    "computabilityStatus": "computability-status:not-computable",
     "verticalBoundaryDefinitions": [],
     "referenceSurfaces": [
       {
         "id": "surface-ground-1",
-        "surfaceType": "height-reference:gl",
-        "geometryLegalStatus": "geometry-legal-status:obs",
+        "surfaceType": "height-reference:ground-level",
+        "geometryLegalStatus": "geometry-legal-status:observed",
         "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
         "boundedByFootprint": true
       }
     ],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -866,33 +865,33 @@ It is not automatically an upper or lower legal boundary.
 ```json
 {
   "spatialRepresentationDefinitions": {
-    "representationStatus": "representation-status:hd",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "representationStatus": "representation-status:height-described",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 2,
       "zValueRole": "coordinate-z-role:absent"
     },
     "verticalExtent": {
-      "status": "vertical-extent-status:rr",
+      "status": "vertical-extent-status:requires-resolution",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:dur",
+        "state": "vertical-extent-status:defined-but-unresolved",
         "definitionRef": "relative-limit-lower-1"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:dur",
+        "state": "vertical-extent-status:defined-but-unresolved",
         "definitionRef": "relative-limit-upper-1"
       }
     },
-    "computabilityStatus": "computability-status:rrs",
+    "computabilityStatus": "computability-status:requires-reference-surface",
     "verticalBoundaryDefinitions": [
       {
         "id": "relative-limit-lower-1",
-        "definitionType": "vertical-definition-type:rel",
-        "limitRole": "vertical-limit-role:ll",
-        "valueType": "vertical-value-type:off",
+        "definitionType": "vertical-definition-type:relative-height-description",
+        "limitRole": "boundary-role:lower",
+        "valueType": "vertical-value-type:offset",
         "value": 2,
-        "direction": "vertical-direction:blw",
-        "heightReference": "height-reference:gl",
+        "direction": "vertical-direction:below",
+        "heightReference": "height-reference:ground-level",
         "description": "2 metres below ground level",
         "sourceReference": "source-height-description-1",
         "resolutionStatus": "requiresReferenceSurface",
@@ -900,12 +899,12 @@ It is not automatically an upper or lower legal boundary.
       },
       {
         "id": "relative-limit-upper-1",
-        "definitionType": "vertical-definition-type:rel",
-        "limitRole": "vertical-limit-role:ul",
-        "valueType": "vertical-value-type:off",
+        "definitionType": "vertical-definition-type:relative-height-description",
+        "limitRole": "boundary-role:upper",
+        "valueType": "vertical-value-type:offset",
         "value": 12,
-        "direction": "vertical-direction:abv",
-        "heightReference": "height-reference:gl",
+        "direction": "vertical-direction:above",
+        "heightReference": "height-reference:ground-level",
         "description": "12 metres above ground level",
         "sourceReference": "source-height-description-2",
         "resolutionStatus": "requiresReferenceSurface",
@@ -914,7 +913,7 @@ It is not automatically an upper or lower legal boundary.
     ],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -925,30 +924,30 @@ It is not automatically an upper or lower legal boundary.
 ```json
 {
   "spatialRepresentationDefinitions": {
-    "representationStatus": "representation-status:hd",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "representationStatus": "representation-status:height-described",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 2,
       "zValueRole": "coordinate-z-role:absent"
     },
     "verticalExtent": {
-      "status": "vertical-extent-status:ld",
+      "status": "vertical-extent-status:legally-defined",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:def",
+        "state": "vertical-extent-status:defined",
         "definitionRef": "absolute-limit-lower-1"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:def",
+        "state": "vertical-extent-status:defined",
         "definitionRef": "absolute-limit-upper-1"
       }
     },
-    "computabilityStatus": "computability-status:c",
+    "computabilityStatus": "computability-status:computable",
     "verticalBoundaryDefinitions": [
       {
         "id": "absolute-limit-lower-1",
-        "definitionType": "vertical-definition-type:ahd",
-        "limitRole": "vertical-limit-role:ll",
-        "valueType": "vertical-value-type:ah",
+        "definitionType": "vertical-definition-type:absolute-height-description",
+        "limitRole": "boundary-role:lower",
+        "valueType": "vertical-value-type:absolute-height",
         "value": 16,
         "comparisonOperator": "greaterThanOrEqual",
         "description": "limited in height to more than and equal to 16.00 AHD",
@@ -958,9 +957,9 @@ It is not automatically an upper or lower legal boundary.
       },
       {
         "id": "absolute-limit-upper-1",
-        "definitionType": "vertical-definition-type:ahd",
-        "limitRole": "vertical-limit-role:ul",
-        "valueType": "vertical-value-type:ah",
+        "definitionType": "vertical-definition-type:absolute-height-description",
+        "limitRole": "boundary-role:upper",
+        "valueType": "vertical-value-type:absolute-height",
         "value": 35,
         "comparisonOperator": "lessThanOrEqual",
         "description": "limited in height to less than and equal to 35.00 AHD",
@@ -971,7 +970,7 @@ It is not automatically an upper or lower legal boundary.
     ],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -982,32 +981,32 @@ It is not automatically an upper or lower legal boundary.
 ```json
 {
   "spatialRepresentationDefinitions": {
-    "representationStatus": "representation-status:jb",
-    "geometryLegalStatus": "geometry-legal-status:a2d",
+    "representationStatus": "representation-status:jurisdictionally-bounded",
+    "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
     "coordinateRepresentation": {
       "coordinateDimension": 2,
       "zValueRole": "coordinate-z-role:absent"
     },
     "verticalExtent": {
-      "status": "vertical-extent-status:ld",
+      "status": "vertical-extent-status:legally-defined",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:dur",
+        "state": "vertical-extent-status:defined-but-unresolved",
         "definitionRef": "jurisdictional-limit-lower-1"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:und"
+        "state": "vertical-extent-status:undefined"
       }
     },
-    "computabilityStatus": "computability-status:rrs",
+    "computabilityStatus": "computability-status:requires-reference-surface",
     "verticalBoundaryDefinitions": [
       {
         "id": "jurisdictional-limit-lower-1",
-        "definitionType": "vertical-definition-type:jur",
-        "limitRole": "vertical-limit-role:ll",
-        "valueType": "vertical-value-type:off",
+        "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+        "limitRole": "boundary-role:lower",
+        "valueType": "vertical-value-type:offset",
         "value": 12.19,
-        "direction": "vertical-direction:blw",
-        "heightReference": "height-reference:gl",
+        "direction": "vertical-direction:below",
+        "heightReference": "height-reference:ground-level",
         "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
         "sourceReference": "source-crown-grant-depth-limit-1",
         "resolutionStatus": "requiresReferenceSurface",
@@ -1021,7 +1020,7 @@ It is not automatically an upper or lower legal boundary.
     ],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "notGenerated"
+      "status": "derived-geometry-status:not-generated"
     }
   }
 }
@@ -1035,35 +1034,35 @@ It adds a derived-geometry component.
 ```json
 {
   "spatialRepresentationDefinitions": {
-    "representationStatus": "representation-status:d3d",
-    "geometryLegalStatus": "geometry-legal-status:dfld",
+    "representationStatus": "representation-status:derived-3d",
+    "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
     "coordinateRepresentation": {
       "coordinateDimension": 3,
-      "zValueRole": "coordinate-z-role:dbg"
+      "zValueRole": "coordinate-z-role:derived-boundary-geometry"
     },
     "verticalExtent": {
-      "status": "vertical-extent-status:dfld",
+      "status": "vertical-extent-status:legally-defined",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:drv",
+        "state": "vertical-extent-status:derived",
         "definitionRef": "relative-limit-lower-1",
         "geometryRef": "derived-lower-surface-1"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:drv",
+        "state": "vertical-extent-status:derived",
         "definitionRef": "relative-limit-upper-1",
         "geometryRef": "derived-upper-surface-1"
       }
     },
-    "computabilityStatus": "computability-status:cd",
+    "computabilityStatus": "computability-status:computed",
     "verticalBoundaryDefinitions": [
       {
         "id": "relative-limit-lower-1",
-        "definitionType": "vertical-definition-type:rel",
-        "limitRole": "vertical-limit-role:ll",
-        "valueType": "vertical-value-type:off",
+        "definitionType": "vertical-definition-type:relative-height-description",
+        "limitRole": "boundary-role:lower",
+        "valueType": "vertical-value-type:offset",
         "value": 2,
-        "direction": "vertical-direction:blw",
-        "heightReference": "height-reference:gl",
+        "direction": "vertical-direction:below",
+        "heightReference": "height-reference:ground-level",
         "description": "2 metres below ground level",
         "sourceReference": "source-height-description-1",
         "resolutionStatus": "resolved",
@@ -1071,12 +1070,12 @@ It adds a derived-geometry component.
       },
       {
         "id": "relative-limit-upper-1",
-        "definitionType": "vertical-definition-type:rel",
-        "limitRole": "vertical-limit-role:ul",
-        "valueType": "vertical-value-type:off",
+        "definitionType": "vertical-definition-type:relative-height-description",
+        "limitRole": "boundary-role:upper",
+        "valueType": "vertical-value-type:offset",
         "value": 12,
-        "direction": "vertical-direction:abv",
-        "heightReference": "height-reference:gl",
+        "direction": "vertical-direction:above",
+        "heightReference": "height-reference:ground-level",
         "description": "12 metres above ground level",
         "sourceReference": "source-height-description-2",
         "resolutionStatus": "resolved",
@@ -1086,14 +1085,14 @@ It adds a derived-geometry component.
     "referenceSurfaces": [
       {
         "id": "surface-ground-1",
-        "surfaceType": "height-reference:gl",
-        "geometryLegalStatus": "geometry-legal-status:obs",
+        "surfaceType": "height-reference:ground-level",
+        "geometryLegalStatus": "geometry-legal-status:observed",
         "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
         "boundedByFootprint": true
       }
     ],
     "derivedGeometry": {
-      "status": "solidGenerated",
+      "status": "derived-geometry-status:generated",
       "geometryType": "Solid",
       "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
       "inputFootprintRef": "parcel-footprint-1",
@@ -1160,7 +1159,7 @@ A parcel can have:
 ```json
 {
   "coordinateDimension": 3,
-  "geometryLegalStatus": "geometry-legal-status:a2d"
+  "geometryLegalStatus": "geometry-legal-status:authoritative-2d"
 }
 ```
 
@@ -1180,7 +1179,7 @@ The shared `verticalBoundaryDefinitions` array can represent:
 The discriminator is:
 ```json
 {
-  "definitionType": "vertical-definition-type:rel"
+  "definitionType": "vertical-definition-type:relative-height-description"
 }
 
 ```
@@ -1189,7 +1188,7 @@ or:
 
 ```json
 {
-  "definitionType": "vertical-definition-type:ahd"
+  "definitionType": "vertical-definition-type:absolute-height-description"
 }
 ```
 
@@ -1197,7 +1196,7 @@ or:
 
 ```json
 {
-  "definitionType": "vertical-definition-type:jur"
+  "definitionType": "vertical-definition-type:jurisdictional-boundary-rule"
 }
 ```
 
