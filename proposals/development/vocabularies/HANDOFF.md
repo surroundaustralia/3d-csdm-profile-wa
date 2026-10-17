@@ -1,7 +1,7 @@
 # Vocabulary Review — Handoff
 
-**Updated:** 2026-10-16, at the end of the vocabulary cleanup (cleanup Stages [0](#cleanup-stage-0)–[8](#cleanup-stage-8)).
-**Next:** rerun the vocab-audit against [`00-baseline`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/00-baseline) ([section 5](#5-rerun-the-audit)), then hand the drafts to the uplift owner ([section 4](#4-what-the-uplift-owner-receives)).
+**Updated:** 2026-10-17, after the vocabulary cleanup (cleanup Stages [0](#cleanup-stage-0)–[8](#cleanup-stage-8)) and the final audit rerun ([section 5](#5-rerun-the-audit)).
+**Next:** hand the drafts to the uplift owner ([section 4](#4-what-the-uplift-owner-receives)) and scan the downstream consumers with the crosswalk ([section 6](#6-still-open)).
 
 | Document | Purpose |
 |---|---|
@@ -21,7 +21,7 @@ Each branch is pushed to its own remote branch; none is merged into `main`. Each
 | Repository | Branch | What it holds |
 |---|---|---|
 | `3d-csdm-profile-wa` | `vocab-cleanup/content` (from `docs/vocab-review-handoff`) | Decisions ([Stage 1](#cleanup-stage-1)), supplements ([2](#cleanup-stage-2)), CSV merges and crosswalk ([3](#cleanup-stage-3)), normalised CSVs ([4](#cleanup-stage-4)), examples, viewer data and contexts ([5](#cleanup-stage-5)), uplift YAML copy ([7](#cleanup-stage-7)), documentation and scheme metadata ([8](#cleanup-stage-8)) |
-| `processWAData` | `vocab-cleanup/consumers` (from `feat/vocab-audit/analysis-cli`) | Skill, validators, `validate_vocab`, vocab-audit tool and use-case examples on the new codes ([Stage 6](#cleanup-stage-6)); audit runs [`00-baseline`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/00-baseline) … [`06-consumers`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/06-consumers) |
+| `processWAData` | `vocab-cleanup/consumers` (from `feat/vocab-audit/analysis-cli`) | Skill, validators, `validate_vocab`, vocab-audit tool and use-case examples on the new codes ([Stage 6](#cleanup-stage-6)); audit runs [`00-baseline`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/00-baseline) … [`08-cleanup`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/08-cleanup) |
 | `sa-icsm-vocabs` | `vocab-cleanup/uplift-altlabel` | [`source/vocabs-uplift.yml`](https://github.com/surroundaustralia/icsm-vocabs/blob/vocab-cleanup/uplift-altlabel/source/vocabs-uplift.yml) extended ([Stage 7](#cleanup-stage-7)). **Do not push to `main`**: a push touching `source/**` triggers `build-vocabs.yml` and republishes |
 
 ### Cleanup stages
@@ -38,7 +38,8 @@ Other documents cite these as "cleanup Stage N" or, in status cells, "Done (Stag
 | <a id="cleanup-stage-5"></a>5 | Examples, viewer data and contexts migrated | [`1e10472`](https://github.com/surroundaustralia/3d-csdm-profile-wa/commit/1e10472) | [`05-examples`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/05-examples) |
 | <a id="cleanup-stage-6"></a>6 | processWAData skill, validators and vocab-audit tool migrated | [`c069970`](https://github.com/andrewhunter2066/processWAData/commit/c069970) (processWAData) | [`06-consumers`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/06-consumers) |
 | <a id="cleanup-stage-7"></a>7 | Uplift YAML extended | [`47e5f59`](https://github.com/surroundaustralia/icsm-vocabs/commit/47e5f59) (`sa-icsm-vocabs`), [`e944f03`](https://github.com/surroundaustralia/3d-csdm-profile-wa/commit/e944f03) (profile copy) | — |
-| <a id="cleanup-stage-8"></a>8 | Documentation updated, identifiers linked, scheme metadata drafted | not yet committed | [`07-docs`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/07-docs) |
+| <a id="cleanup-stage-8"></a>8 | Documentation updated, identifiers linked, scheme metadata drafted; entitlements moved to parcel properties ([D7](vocab-review.md#decision-d7)); processWAData copies replaced by pointers | [`2c7b8be`](https://github.com/surroundaustralia/3d-csdm-profile-wa/commit/2c7b8be) (profile), [`1f22768`](https://github.com/andrewhunter2066/processWAData/commit/1f22768) (processWAData) | [`07-docs`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/07-docs), [`08-cleanup`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/08-cleanup) |
+| <a id="cleanup-stage-8a"></a>8a | Remaining camelCase [`wa-prov-role`](wa-prov-role.csv) values (`formatConverter`, `sourceCsdFile`, `sourcePdfFile`, `workflowOrchestrator`) changed to the kebab-case notations in the liminal examples, viewer data, the processWAData generator and its examples and outputs | not yet committed | — |
 
 ### What changed
 
@@ -60,6 +61,10 @@ Other documents cite these as "cleanup Stage N" or, in status cells, "Done (Stag
 | [`04-normalise`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/04-normalise) | [Stage 4](#cleanup-stage-4) | 46 | 80 |
 | [`05-examples`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/05-examples) | [Stage 5](#cleanup-stage-5) | 34 | 51 |
 | [`06-consumers`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/06-consumers) | [Stage 6](#cleanup-stage-6) | 23 | 33 |
+| [`07-docs`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/07-docs) | [Stages 7](#cleanup-stage-7)–[8](#cleanup-stage-8) (uncommitted Stage 8) | 23 | 33 |
+| [`08-cleanup`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/08-cleanup) | [Stage 8](#cleanup-stage-8) committed; compared with `00-baseline` | 23 | 33 |
+
+[Stage 8a](#cleanup-stage-8a) removes the four remaining `USAGE_FORM_MISMATCH` warnings for `wa-prov-role`; a check run after it gave 23 errors and 29 warnings, with no new findings.
 
 Rises in Stages [3](#cleanup-stage-3)–[4](#cleanup-stage-4) were expected: examples kept the old values until [Stage 5](#cleanup-stage-5). Each run folder has `compare.md` and the per-folder `tests.txt`; the processWAData test suite is back to its baseline (only the three `write_json` failures and the `record_type` error, which predate the cleanup).
 
@@ -130,11 +135,25 @@ Under [D3](vocab-review.md#decision-d3) the common vocabularies are part of the 
 
 ## 5. Rerun the audit
 
+Done on 2026-10-17 as [`08-cleanup`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/08-cleanup) (`05-cleanup` in the original plan), with profile `2c7b8be` and `sa-icsm-vocabs` `47e5f59`, both with clean working trees:
+
 ```bash
 python .claude/skills/vocab-audit/scripts/run_audit.py 08-cleanup --against 00-baseline
 ```
 
-(`05-cleanup` in the original plan; labels up to [`06-consumers`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/06-consumers) are already taken.) Expected against [`00-baseline`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/00-baseline): the supplement findings (dangling references, mixed identifier styles, undeclared scheme, literal-where-IRI) are cleared, and the unresolved usage that remains is the drift listed in [section 6](#6-still-open), the local `wa-angle-derivation:M` and deliberate test values in processWAData.
+| Measure | `00-baseline` | `08-cleanup` |
+|---|---:|---:|
+| Errors | 44 | 23 |
+| Warnings | 79 | 33 |
+| Info | 182 | 169 |
+| Published concepts | 9410 | 9410 |
+| Supplement concepts | 43 | 20 |
+| CSV-draft concepts | 138 | 104 |
+
+- **Cleared**: dangling references (15 → 0), the undeclared [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) scheme, literal-where-IRI, empty literals, reused notations, the duplicate vocabulary and mixed CSV separators. Undeclared prefixes fell from 19 to 4, usage-form mismatches from 17 to 7 (3 after [Stage 8a](#cleanup-stage-8a)). Published concepts are unchanged, so nothing was republished.
+- **Remaining errors**: all are the drift listed in [section 6](#6-still-open), plus the local `wa-angle-derivation` prefix ([D12](vocab-review.md#decision-d12)) and the missing ICSM binding for `icsm-survey-type`.
+- **New, expected**: overlapping-vocabulary warnings that only show now the codes are readable words (mostly similar names for different concepts); two prefixes for `wa-annotation` (the `wa-core` alias, below); "uses unpublished vocabulary" notes for the renamed drafts until the uplift; deliberately invalid values in the processWAData tests; and legacy inputs such as `representation-status:2D` that the validators still accept.
+- **New, for review**: the audit finds every [`vertical-value-type`](vertical-value-type.csv) concept matched by one in [`vertical-definition-type`](vertical-definition-type.csv) (see [section 6](#6-still-open)).
 
 ---
 
@@ -147,4 +166,6 @@ python .claude/skills/vocab-audit/scripts/run_audit.py 08-cleanup --against 00-b
 - **`wa-core` examples** (`_sources/wa-core/examples`, mainly `extended-example.json`) still use [`wa-annotation-role:`](https://linked.data.gov.au/def/csdm/wa-annotation) and `wa-pt-method:`; the `wa-core` context keeps `wa-annotation-role` as an alias for them.
 - **Viewer PDF link**: two viewer files link a `wa-leg:` PDF named for the 1955 regulations; the descriptions now say 1995.
 - **processWAData**: `_absolute_height_object` is called but not defined (use-case examples 04 and 05 cannot be validated); use-case example 07 lacks height-description, jurisdictional-source and side-face content. Both predate the cleanup.
-- **Drift found by the audit that the review did not list** (unchanged by the cleanup): single-letter [`wa-vector-purpose`](https://linked.data.gov.au/def/csdm/wa-vector-purpose) codes, `wa-procedure-used:M`/`m`/`d`, `wa-parcel-type:road`/`miscellaneous`/`l`, `wa-parcel-purpose:reserve`/`townlot`, `icsm-distance-type:grid`/`bearing`, `wa-survey-type:p`, the undefined `wa-mines` prefix and two prefixes for [`wa-secondary-parcel-type`](https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type).
+- **Drift found by the audit that the review did not list** (unchanged by the cleanup): single-letter [`wa-vector-purpose`](https://linked.data.gov.au/def/csdm/wa-vector-purpose) codes, `wa-procedure-used:M`/`m`/`d`, `wa-parcel-type:road`/`miscellaneous`/`l`, `wa-parcel-purpose:reserve`/`townlot`, `icsm-distance-type:grid`/`bearing`, `wa-survey-type:p`, the undefined `wa-mines` prefix and two prefixes for [`wa-secondary-parcel-type`](https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type). The `wa-core` context also declares `wa-interest` and `wa-vector-type` prefixes that resolve to no vocabulary. In `3d-csdm-profile-icsm` (read-only here), the common context declares `icsm-survey-type` and the vocabulary bindings name it, but no such vocabulary exists (roadmap activity [B5](vocab-review.md#activity-b5)).
+- **[`vertical-value-type`](vertical-value-type.csv) and [`vertical-definition-type`](vertical-definition-type.csv)**: the [`08-cleanup`](https://github.com/andrewhunter2066/processWAData/tree/vocab-cleanup/consumers/data/output/vocab-audit/08-cleanup) audit matches all four `vertical-value-type` concepts to `vertical-definition-type` ones (`relative-height-description` ≈ `offset`, `absolute-height-description` ≈ `absolute-height`, `jurisdictional-boundary-rule` ≈ `rule-expression`, `geometry-boundary-reference` ≈ `geometry-reference`). Confirm with the custodian whether both are needed before publication.
+- **Other provenance roles**: the liminal examples also use bare roles that are in no vocabulary (for example `heightDescriptionExtractor`, `sourceSurveyPlan`, `convertedCsdmJson`). Decide whether they belong in [`wa-prov-role`](wa-prov-role.csv) or stay free text.

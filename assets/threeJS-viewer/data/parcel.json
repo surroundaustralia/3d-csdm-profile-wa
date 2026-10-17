@@ -191,13 +191,13 @@
         {
           "id": "file:CSD_DP431276.csd",
           "type": "prov:Entity",
-          "role": "sourceCsdFile",
+          "role": "source-csd-file",
           "format": "APX-05 CSD"
         },
         {
           "id": "file:DP431276.pdf",
           "type": "prov:Entity",
-          "role": "sourcePdfFile",
+          "role": "source-pdf-file",
           "format": "pdf"
         }
       ],
@@ -216,7 +216,7 @@
             "prov:SoftwareAgent",
             "schema:SoftwareApplication"
           ],
-          "role": "formatConverter",
+          "role": "format-converter",
           "description": "Python module used to convert APX-05 CSD records into WA 3D CSDM JSON."
         },
         {
@@ -225,7 +225,7 @@
             "prov:SoftwareAgent",
             "schema:SoftwareApplication"
           ],
-          "role": "workflowOrchestrator",
+          "role": "workflow-orchestrator",
           "description": "Python module used to run the CSD converter, run the PDF metadata extractor, and merge the resulting JSON outputs."
         }
       ]
