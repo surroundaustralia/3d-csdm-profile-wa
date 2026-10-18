@@ -183,7 +183,7 @@ python .claude/skills/vocab-audit/scripts/run_audit.py 08-cleanup --against 00-b
 - **Cleared**: dangling references (15 → 0), the undeclared [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) scheme, literal-where-IRI, empty literals, reused notations, the duplicate vocabulary and mixed CSV separators.
   Undeclared prefixes fell from 19 to 4, usage-form mismatches from 17 to 7 (3 after [Stage 8a](#cleanup-stage-8a)).
   Published concepts are unchanged, so nothing was republished.
-- **Remaining errors**: all are the drift listed in [section 6](#6-still-open), plus the local `wa-angle-derivation` prefix ([D12](vocab-review.md#decision-d12)) and the missing ICSM binding for `icsm-survey-type`.
+- **Remaining errors**: all are the drift listed in [section 6](#6-still-open), plus the local `wa-angle-derivation` prefix (decided 2026-10-16, [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions)) and the missing ICSM binding for `icsm-survey-type`.
 - **New, expected**: overlapping-vocabulary warnings that only show now the codes are readable words (mostly similar names for different concepts); two prefixes for `wa-annotation` (the `wa-core` alias, below); "uses unpublished vocabulary" notes for the renamed drafts until the uplift; deliberately invalid values in the processWAData tests; and legacy inputs such as `representation-status:2D` that the validators still accept.
 - **New, for review**: the audit finds every [`vertical-value-type`](vertical-value-type.csv) concept matched by one in [`vertical-definition-type`](vertical-definition-type.csv) (see [section 6](#6-still-open)).
 
@@ -235,7 +235,7 @@ python .claude/skills/vocab-audit/scripts/run_audit.py 11-drift --against 00-bas
 - **`wa-core` fixes** (uncommitted on `vocab-cleanup/drift-values`): `wa-pt-method:P` → `wa-surveypoint-method:P` (272 values in `wa-core/examples/extended-example.json` and `parcels.geojson`).
   The dead `wa-interest`, `wa-vector-type` and `wa-mines` prefixes are removed from the `wa-core`, `waAppellationNamespaces` and `wa-mining` contexts and from six threeJS viewer data files that copy the `wa-core` context; no data used them.
   The `waAppellationNamespaces` context also had a trailing comma that made it invalid JSON; it now parses.
-- **Remaining errors** (3): the ICSM `icsm-survey-type` binding and context prefix (ICSM-owned), and the local `wa-angle-derivation` prefix ([D12](vocab-review.md#decision-d12)).
+- **Remaining errors** (3): the ICSM `icsm-survey-type` binding and context prefix (ICSM-owned), and the local `wa-angle-derivation` prefix (decided 2026-10-16, [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions)).
 - **Expected warning**: `PLACEHOLDER_DEFINITION` for `wa-survey-documentation-type` stays until the published file is rebuilt from the CSV; a throwaway build passed and cleared it.
 
 ---
