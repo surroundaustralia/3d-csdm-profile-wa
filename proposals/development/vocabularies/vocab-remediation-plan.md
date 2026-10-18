@@ -1,19 +1,32 @@
 # 3D CSDM Vocabulary Remediation Plan
 
-**Status:** Draft for review. The plan has not started. Nothing in it has been carried out, and no vocabulary, supplement, CSV draft, schema, namespace, binding or pipeline file was changed to prepare it.
+**Status:** Draft for review.
+The plan has not started.
+Nothing in it has been carried out, and no vocabulary, supplement, CSV draft, schema, namespace, binding or pipeline file was changed to prepare it.
 **Date:** 2026-10-15
-**Basis:** [`vocab-review.md`](vocab-review.md), cited below as "the review". Section numbers (§5.x), activity IDs ([A1](vocab-review.md#activity-a1)–[A9](vocab-review.md#activity-a9), [B1](vocab-review.md#activity-b1)–[B5](vocab-review.md#activity-b5), [C1](vocab-review.md#activity-c1)–[C6](vocab-review.md#activity-c6)), finding IDs (F-xx) and decision IDs ([D1](vocab-review.md#decision-d1)–[D12](vocab-review.md#decision-d12)) refer to that document.
+**Basis:** [`vocab-review.md`](vocab-review.md), cited below as "the review".
+Section numbers (§5.x), activity IDs ([A1](vocab-review.md#activity-a1)–[A9](vocab-review.md#activity-a9), [B1](vocab-review.md#activity-b1)–[B5](vocab-review.md#activity-b5), [C1](vocab-review.md#activity-c1)–[C6](vocab-review.md#activity-c6)), finding IDs (F-xx) and decision IDs ([D1](vocab-review.md#decision-d1)–[D12](vocab-review.md#decision-d12)) refer to that document.
 
 ---
 
 ## 1. Purpose and approach
 
-The review set out where each vocabulary should end up. This plan sets out how to get there in a controlled order. It is built around four rules.
+The review set out where each vocabulary should end up.
+This plan sets out how to get there in a controlled order.
+It is built around four rules.
 
-1. **Decide before publishing.** Published IRIs are permanent, so every action that mints an IRI waits behind the decision that fixes its form ([D1](vocab-review.md#decision-d1)) and its owner ([D2](vocab-review.md#decision-d2), [D5](vocab-review.md#decision-d5)).
-2. **Fix, then incorporate, then migrate.** Defects are corrected in staging. Corrected terms are then published. Consumers (examples, contexts, validators, skill) move to the published IRIs in the same release.
-3. **Separate authority tracks.** WA-local work (Landgate authority) moves independently of work that needs ICSM approval. WA never publishes `wa-*` copies of concepts intended to be common (review [§5.9](vocab-review.md#59-implementation-roadmap), "Transitional arrangements").
-4. **Every stage ends at a gate.** Each stage has entry criteria, exit criteria and a rollback route. The next stage does not start until the gate passes and the reviewer signs it off.
+1. **Decide before publishing.**
+   Published IRIs are permanent, so every action that mints an IRI waits behind the decision that fixes its form ([D1](vocab-review.md#decision-d1)) and its owner ([D2](vocab-review.md#decision-d2), [D5](vocab-review.md#decision-d5)).
+2. **Fix, then incorporate, then migrate.**
+   Defects are corrected in staging.
+   Corrected terms are then published.
+   Consumers (examples, contexts, validators, skill) move to the published IRIs in the same release.
+3. **Separate authority tracks.**
+   WA-local work (Landgate authority) moves independently of work that needs ICSM approval.
+   WA never publishes `wa-*` copies of concepts intended to be common (review [§5.9](vocab-review.md#59-implementation-roadmap), "Transitional arrangements").
+4. **Every stage ends at a gate.**
+   Each stage has entry criteria, exit criteria and a rollback route.
+   The next stage does not start until the gate passes and the reviewer signs it off.
 
 ### Stage overview
 
@@ -49,7 +62,8 @@ flowchart LR
   S1 -.-> S10["10 Governance (C1–C6)"]
 ```
 
-The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6--csv-draft-consolidation-staging) → [Stage 7](#stage-7--consumer-migration-drafts) → [Stage 8](#stage-8--common-vocabulary-publication-icsm)**. The WA codelist track (Stages [3](#stage-3--supplement-correction-staging) → [5](#stage-5--wa-codelist-incorporation)) is shorter and should finish first.
+The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6--csv-draft-consolidation-staging) → [Stage 7](#stage-7--consumer-migration-drafts) → [Stage 8](#stage-8--common-vocabulary-publication-icsm)**.
+The WA codelist track (Stages [3](#stage-3--supplement-correction-staging) → [5](#stage-5--wa-codelist-incorporation)) is shorter and should finish first.
 
 ---
 
@@ -70,7 +84,8 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 - **Skill:** the `generate_` and `validate_spatial_representation.py` scripts, `references/{schema-status,generation-rules,built-strata-overview}.md`, and 3 test fixtures.
 - **WA profile:** `wa-liminal` and `wa-3d` contexts; 7 `wa-liminal` examples, 7 `2-5d-liminal` proposal examples, and the built-strata `example-1.json` ([SP83687](../built-strata/examples/example-1.json)).
 
-**Standing constraint for processWAData:** the profile repo stays canonical. processWAData keeps no copies of WA vocabularies or examples, and reads them through `WA_PROFILE_ROOT`. The two implementation-local vocabularies ([Stage 6](#stage-6--csv-draft-consolidation-staging), [A8](vocab-review.md#activity-a8)) are the only vocabularies that will live in processWAData, because they describe its own pipeline.
+**Standing constraint for processWAData:** the profile repo stays canonical. processWAData keeps no copies of WA vocabularies or examples, and reads them through `WA_PROFILE_ROOT`.
+The two implementation-local vocabularies ([Stage 6](#stage-6--csv-draft-consolidation-staging), [A8](vocab-review.md#activity-a8)) are the only vocabularies that will live in processWAData, because they describe its own pipeline.
 
 ---
 
@@ -99,9 +114,11 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 
 ### Stage 1 — Governance decisions
 
-> **Status (2026-10-16):** [D1](vocab-review.md#decision-d1)–[D12](vocab-review.md#decision-d12) decided by the Surround team for this organisation phase; see [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions). Custodians confirm at submission.
+> **Status (2026-10-16):** [D1](vocab-review.md#decision-d1)–[D12](vocab-review.md#decision-d12) decided by the Surround team for this organisation phase; see [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions).
+> Custodians confirm at submission.
 
-**Objective:** obtain the decisions that block IRI minting and term content. This runs alongside Stages [2](#stage-2--wa-binding-and-data-hygiene)–[4](#stage-4--uplift-pipeline-extension), which do not depend on it.
+**Objective:** obtain the decisions that block IRI minting and term content.
+This runs alongside Stages [2](#stage-2--wa-binding-and-data-hygiene)–[4](#stage-4--uplift-pipeline-extension), which do not depend on it.
 
 **Entry:** [Stage 0.7](#task-0-7) has named the approvers.
 
@@ -120,10 +137,14 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 | **[D11](vocab-review.md#decision-d11)** `derived-boundary` points | [Stage 5](#stage-5--wa-codelist-incorporation) (1 term) | Landgate | Method-vs-purpose rationale; 256-point usage evidence | Before that term is moved |
 | **[D12](vocab-review.md#decision-d12)** implementation vocabularies | [Stage 6](#stage-6--csv-draft-consolidation-staging) ([A8](vocab-review.md#activity-a8)) | Project / WA | — | Start of [Stage 6](#stage-6--csv-draft-consolidation-staging) (low risk; recommended answer can be assumed) |
 
-**Exit gate:** each decision is recorded in the WA [`decisions-register.md`](../built-strata/decisions-register.md) (WA decisions) or the ICSM equivalent, with date and approver. A stage can begin once its own blocking decisions are recorded, without waiting for every decision.
+**Exit gate:** each decision is recorded in the WA [`decisions-register.md`](../built-strata/decisions-register.md) (WA decisions) or the ICSM equivalent, with date and approver.
+A stage can begin once its own blocking decisions are recorded, without waiting for every decision.
 **Fallback if a decision stalls:**
-- **[D1](vocab-review.md#decision-d1):** nothing new can be minted. Stages [2](#stage-2--wa-binding-and-data-hygiene)–[4](#stage-4--uplift-pipeline-extension) can still finish.
-- **[D2](vocab-review.md#decision-d2)/[D5](vocab-review.md#decision-d5):** [Stage 8](#stage-8--common-vocabulary-publication-icsm) cannot run. Apply the review's fallback only by explicit agreement: publish as `experimental` under the final common IRIs with ICSM consent. Do not publish `wa-*` duplicates.
+- **[D1](vocab-review.md#decision-d1):** nothing new can be minted.
+  Stages [2](#stage-2--wa-binding-and-data-hygiene)–[4](#stage-4--uplift-pipeline-extension) can still finish.
+- **[D2](vocab-review.md#decision-d2)/[D5](vocab-review.md#decision-d5):** [Stage 8](#stage-8--common-vocabulary-publication-icsm) cannot run.
+  Apply the review's fallback only by explicit agreement: publish as `experimental` under the final common IRIs with ICSM consent.
+  Do not publish `wa-*` duplicates.
 - **[D7](vocab-review.md#decision-d7), [D9](vocab-review.md#decision-d9), [D11](vocab-review.md#decision-d11):** incorporate the other terms and leave these as supplements.
 
 ---
@@ -144,21 +165,27 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 | <a id="task-2-6"></a>2.6 | Raise an issue in `3d-csdm-profile-icsm` for the missing `icsm-survey-type` binding target. The fix itself is [B5](vocab-review.md#activity-b5) ([Stage 9](#stage-9--model-profile-and-binding-alignment)), unless ICSM accepts it now. | issue only | [F-B1](vocab-review.md#finding-f-b1), [B5](vocab-review.md#activity-b5) |
 
 **Verification:**
-- Rerun the WA BBlock build and validation, and the processWAData tests. There should be no new failures compared with the baseline.
-- Diff the vocabulary-usage snapshot against the baseline. Only the intended prefix and code changes should appear.
+- Rerun the WA BBlock build and validation, and the processWAData tests.
+  There should be no new failures compared with the baseline.
+- Diff the vocabulary-usage snapshot against the baseline.
+  Only the intended prefix and code changes should appear.
 
 **Exit gate:** checks pass; register rows updated; PRs merged in `3d-csdm-profile-wa` and `processWAData`.
-**Rollback:** revert the PRs. No published IRI is affected.
+**Rollback:** revert the PRs.
+No published IRI is affected.
 
 ---
 
 ### Stage 3 — Supplement correction (staging)
 
-> **Status (2026-10-16): done** by cleanup [Stage 2](HANDOFF.md#cleanup-stage-2). Four supplements were deleted (`computed`, `derived-boundary`, [`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv), the two strata interest types), `wa-occ-supplement.ttl` became the common [`occupation-feature.ttl`](occupation-feature.ttl), and the remaining supplements were corrected (tasks [3.1](#task-3-1)–[3.8](#task-3-8), including [D9](vocab-review.md#decision-d9)).
+> **Status (2026-10-16): done** by cleanup [Stage 2](HANDOFF.md#cleanup-stage-2).
+> Four supplements were deleted (`computed`, `derived-boundary`, [`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv), the two strata interest types), `wa-occ-supplement.ttl` became the common [`occupation-feature.ttl`](occupation-feature.ttl), and the remaining supplements were corrected (tasks [3.1](#task-3-1)–[3.8](#task-3-8), including [D9](vocab-review.md#decision-d9)).
 
-**Objective:** make every supplement structurally valid and consistent with its parent, so [Stage 5](#stage-5--wa-codelist-incorporation) is a mechanical transfer. The supplements remain staging files throughout this stage.
+**Objective:** make every supplement structurally valid and consistent with its parent, so [Stage 5](#stage-5--wa-codelist-incorporation) is a mechanical transfer.
+The supplements remain staging files throughout this stage.
 
-**Entry:** [Stage 0](#stage-0--mobilisation-and-baseline) complete. [D1](vocab-review.md#decision-d1) is not needed, because these terms extend existing WA vocabularies that already use kebab-case.
+**Entry:** [Stage 0](#stage-0--mobilisation-and-baseline) complete.
+[D1](vocab-review.md#decision-d1) is not needed, because these terms extend existing WA vocabularies that already use kebab-case.
 
 | # | Task | Supplement | Review ref |
 |---|---|---|---|
@@ -174,20 +201,27 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 
 **Verification:**
 - Check 3.9 passes on all 10 supplements.
-- Check that no IRI, prefLabel or notation in a supplement collides with its parent scheme. Rerun the review's collision script.
+- Check that no IRI, prefLabel or notation in a supplement collides with its parent scheme.
+  Rerun the review's collision script.
 
 **Exit gate:** corrected supplements merged in `3d-csdm-profile-wa`; register rows show "ready to incorporate" or "held (Dx)".
-**Rollback:** revert. The supplements are unpublished.
+**Rollback:** revert.
+The supplements are unpublished.
 
 ---
 
 ### Stage 4 — Uplift pipeline extension
 
-> **Status (2026-10-16): partly done** on branch `vocab-cleanup/uplift-altlabel` in `sa-icsm-vocabs` (not pushed). 4.1–4.3: `altlabel` is split on `|` for every CSV; `broader`, `related` and `scopenote` are mapped for draft-format CSVs (those with a `broader` column), leaving the free-text `related` column of published CSVs unmapped. 4.4 is not needed: under [D1](vocab-review.md#decision-d1) the uplift mints IRIs from kebab-case notations. 4.5 was already done. 4.6: the WA profile copy matches the fork; the ICSM profile copy was not changed.
+> **Status (2026-10-16): partly done** on branch `vocab-cleanup/uplift-altlabel` in `sa-icsm-vocabs` (not pushed).
+> 4.1–4.3: `altlabel` is split on `|` for every CSV; `broader`, `related` and `scopenote` are mapped for draft-format CSVs (those with a `broader` column), leaving the free-text `related` column of published CSVs unmapped.
+> 4.4 is not needed: under [D1](vocab-review.md#decision-d1) the uplift mints IRIs from kebab-case notations.
+> 4.5 was already done.
+> 4.6: the WA profile copy matches the fork; the ICSM profile copy was not changed.
 
 **Objective:** make the `icsm-vocabs` uplift able to express what the new and corrected vocabularies need, before anything new goes through it.
 
-**Entry:** [Stage 0](#stage-0--mobilisation-and-baseline) complete. An `icsm-vocabs` maintainer has agreed to review the change.
+**Entry:** [Stage 0](#stage-0--mobilisation-and-baseline) complete.
+An `icsm-vocabs` maintainer has agreed to review the change.
 
 | # | Task | File | Review ref |
 |---|---|---|---|
@@ -205,18 +239,25 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 - A fixture CSV exercising `related`, `broader`, `id` and multi-altLabel produces the expected triples.
 
 **Exit gate:** pipeline PR merged in `icsm-vocabs`.
-**Note:** `uplift-on-push.yml` currently runs only on `workflow_dispatch` (the push trigger is commented out). [Stage 5](#stage-5--wa-codelist-incorporation) and [Stage 8](#stage-8--common-vocabulary-publication-icsm) publications therefore need a maintainer to trigger them manually, or generated TTL to be committed. Agree which before [Stage 5](#stage-5--wa-codelist-incorporation).
-**Rollback:** revert the pipeline PR. Existing output is unchanged by construction (4.7).
+**Note:** `uplift-on-push.yml` currently runs only on `workflow_dispatch` (the push trigger is commented out).
+[Stage 5](#stage-5--wa-codelist-incorporation) and [Stage 8](#stage-8--common-vocabulary-publication-icsm) publications therefore need a maintainer to trigger them manually, or generated TTL to be committed.
+Agree which before [Stage 5](#stage-5--wa-codelist-incorporation).
+**Rollback:** revert the pipeline PR.
+Existing output is unchanged by construction (4.7).
 
 ---
 
 ### Stage 5 — WA codelist incorporation
 
-> **Status (2026-10-16): ready, not started.** The supplement terms are corrected and each disposition is recorded ([`vocab-review.md`](vocab-review.md) [§5.5](vocab-review.md#55-supplementary-term-integration-matrix-43-terms), [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv)). Incorporating them into the `icsm-vocabs` CSVs is for the uplift owner.
+> **Status (2026-10-16): ready, not started.**
+> The supplement terms are corrected and each disposition is recorded ([`vocab-review.md`](vocab-review.md) [§5.5](vocab-review.md#55-supplementary-term-integration-matrix-43-terms), [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv)).
+> Incorporating them into the `icsm-vocabs` CSVs is for the uplift owner.
 
 **Objective:** move the corrected WA supplement terms into published WA vocabularies, update the WA profile in the same release, and retire the supplement files.
 
-**Entry:** Stages [3](#stage-3--supplement-correction-staging) and [4](#stage-4--uplift-pipeline-extension) complete. The publication trigger is agreed. For held terms, [D7](vocab-review.md#decision-d7), [D9](vocab-review.md#decision-d9) and [D11](vocab-review.md#decision-d11) are recorded, or those terms stay held.
+**Entry:** Stages [3](#stage-3--supplement-correction-staging) and [4](#stage-4--uplift-pipeline-extension) complete.
+The publication trigger is agreed.
+For held terms, [D7](vocab-review.md#decision-d7), [D9](vocab-review.md#decision-d9) and [D11](vocab-review.md#decision-d11) are recorded, or those terms stay held.
 
 | # | Task | Terms | Target | Review ref |
 |---|---|---|---|---|
@@ -233,7 +274,8 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 
 **Release coupling:**
 - The `icsm-vocabs` PR (5.1–5.5) merges and publishes first.
-- The `3d-csdm-profile-wa` and `processWAData` PRs (5.6–5.10) merge immediately afterwards. They are tested against the published TTL, not the supplements.
+- The `3d-csdm-profile-wa` and `processWAData` PRs (5.6–5.10) merge immediately afterwards.
+  They are tested against the published TTL, not the supplements.
 
 **Verification:**
 - `test_vocabs_validity.py` passes.
@@ -245,7 +287,9 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 **Exit gate:** register rows for the 43 supplement terms are all "done" or "held (Dx)"; [`wa-occ`](crosswalk/vocab-crosswalk.csv) (15) is shown as "awaiting [Stage 8](#stage-8--common-vocabulary-publication-icsm)".
 **Rollback:**
 - Before publication: revert.
-- After publication: new IRIs are `experimental`. If a term is wrong, mark it [`owl:deprecated`](https://www.w3.org/TR/owl2-syntax/#Annotation_Properties) with [`dcterms:isReplacedBy`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/isReplacedBy/). Never delete it or reuse its IRI.
+- After publication: new IRIs are `experimental`.
+  If a term is wrong, mark it [`owl:deprecated`](https://www.w3.org/TR/owl2-syntax/#Annotation_Properties) with [`dcterms:isReplacedBy`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/isReplacedBy/).
+  Never delete it or reuse its IRI.
 
 ---
 
@@ -253,9 +297,12 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 
 > **Status (2026-10-16): done** by cleanup Stages [3](HANDOFF.md#cleanup-stage-3)–[4](HANDOFF.md#cleanup-stage-4): 25 CSVs became 16 drafts plus the local [`wa-prov-role`](wa-prov-role.csv), all in one normalised format, with [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv), [`vertical-extent-status.collections.ttl`](vertical-extent-status.collections.ttl) and draft scheme metadata in `meta/`.
 
-**Objective:** turn the 25 CSV drafts into the 16 publishable drafts plus 2 local lists, with final IRIs and pipeline mappings. Nothing is published in this stage.
+**Objective:** turn the 25 CSV drafts into the 16 publishable drafts plus 2 local lists, with final IRIs and pipeline mappings.
+Nothing is published in this stage.
 
-**Entry:** [D1](vocab-review.md#decision-d1), [D4](vocab-review.md#decision-d4) and [D8](vocab-review.md#decision-d8) recorded. [D12](vocab-review.md#decision-d12) recorded or its recommended answer assumed. [Stage 4](#stage-4--uplift-pipeline-extension) merged, so that the CSV columns `id`, `broader`, `related` and `altlabel` are supported.
+**Entry:** [D1](vocab-review.md#decision-d1), [D4](vocab-review.md#decision-d4) and [D8](vocab-review.md#decision-d8) recorded.
+[D12](vocab-review.md#decision-d12) recorded or its recommended answer assumed.
+[Stage 4](#stage-4--uplift-pipeline-extension) merged, so that the CSV columns `id`, `broader`, `related` and `altlabel` are supported.
 
 | # | Task | Inputs → outputs | Review ref |
 |---|---|---|---|
@@ -278,14 +325,17 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 - No two drafts share a concept meaning (repeat the review's Pass 2 comparison).
 - Notation and IRI style is uniform.
 
-**Exit gate:** the consolidated drafts are merged into `proposals/development/vocabularies/`. The retired CSVs are deleted in the same PR, and the crosswalk records them.
-**Rollback:** revert. Nothing is published.
+**Exit gate:** the consolidated drafts are merged into `proposals/development/vocabularies/`.
+The retired CSVs are deleted in the same PR, and the crosswalk records them.
+**Rollback:** revert.
+Nothing is published.
 
 ---
 
 ### Stage 7 — Consumer migration (drafts)
 
-> **Status (2026-10-16): done** for the WA profile examples, viewer data and contexts (cleanup [Stage 5](HANDOFF.md#cleanup-stage-5)) and for processWAData (cleanup [Stage 6](HANDOFF.md#cleanup-stage-6), where regenerating SP83687 reproduces the migrated example exactly). Other consumer repositories are still to be scanned.
+> **Status (2026-10-16): done** for the WA profile examples, viewer data and contexts (cleanup [Stage 5](HANDOFF.md#cleanup-stage-5)) and for processWAData (cleanup [Stage 6](HANDOFF.md#cleanup-stage-6), where regenerating SP83687 reproduces the migrated example exactly).
+> Other consumer repositories are still to be scanned.
 
 **Objective:** move every consumer to the consolidated draft IRIs, so [Stage 8](#stage-8--common-vocabulary-publication-icsm) publishes vocabularies that are already in use and tested.
 
@@ -314,7 +364,8 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 
 > **Note (2026-10-16):** under [D3](vocab-review.md#decision-d3) the common vocabularies are part of the 3D CSDM core model; agree with the uplift owner whether `icsm-vocabs` remains the publication route.
 
-**Objective:** publish the SR family and the two common domain vocabularies at their final IRIs. This removes the namespace presumption ([F-G2](vocab-review.md#finding-f-g2)).
+**Objective:** publish the SR family and the two common domain vocabularies at their final IRIs.
+This removes the namespace presumption ([F-G2](vocab-review.md#finding-f-g2)).
 
 **Entry:** [D2](vocab-review.md#decision-d2), [D3](vocab-review.md#decision-d3) and [D5](vocab-review.md#decision-d5) recorded; Stages [4](#stage-4--uplift-pipeline-extension), [6](#stage-6--csv-draft-consolidation-staging) and [7](#stage-7--consumer-migration-drafts) complete; ICSM reviewer assigned.
 
@@ -341,7 +392,9 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 
 **Objective:** make the models and profiles enforce the published vocabularies.
 
-**Entry:** [Stage 8](#stage-8--common-vocabulary-publication-icsm) complete. [D6](vocab-review.md#decision-d6) and [D10](vocab-review.md#decision-d10) recorded where needed. [B5](vocab-review.md#activity-b5) can run as soon as ICSM accepts it.
+**Entry:** [Stage 8](#stage-8--common-vocabulary-publication-icsm) complete.
+[D6](vocab-review.md#decision-d6) and [D10](vocab-review.md#decision-d10) recorded where needed.
+[B5](vocab-review.md#activity-b5) can run as soon as ICSM accepts it.
 
 | # | Task | Target | Review ref |
 |---|---|---|---|
@@ -359,13 +412,16 @@ The critical path is **[D1](vocab-review.md#decision-d1) → [Stage 6](#stage-6-
 - 7.6 passes.
 
 **Exit gate:** each repository's PR approved by its authority.
-**Rollback:** revert per repository. Vocabularies are unaffected.
+**Rollback:** revert per repository.
+Vocabularies are unaffected.
 
 ---
 
 ### Stage 10 — Longer-term governance (C1–C6)
 
-Not scheduled in detail. **[C1](vocab-review.md#activity-c1)** (lifecycle, change requests, deprecation policy) should start during [Stage 1](#stage-1--governance-decisions), because Stages [5](#stage-5--wa-codelist-incorporation) and [8](#stage-8--common-vocabulary-publication-icsm) rely on its deprecation rule. **[C2](vocab-review.md#activity-c2)** (SKOS mappings from jurisdictional to `icsm-*` concepts), **[C3](vocab-review.md#activity-c3)** (validation BBlock), **[C4](vocab-review.md#activity-c4)** (`boundaryDefinitions` rename), **[C5](vocab-review.md#activity-c5)** ([`wa-parcel-type`](https://linked.data.gov.au/def/csdm/wa-parcel-type) and [`wa-survey-type`](https://linked.data.gov.au/def/csdm/wa-survey-type) clean-up) and **[C6](vocab-review.md#activity-c6)** (a jurisdiction-neutral plan endorsement parent concept) follow once [Stage 9](#stage-9--model-profile-and-binding-alignment) is done.
+Not scheduled in detail.
+**[C1](vocab-review.md#activity-c1)** (lifecycle, change requests, deprecation policy) should start during [Stage 1](#stage-1--governance-decisions), because Stages [5](#stage-5--wa-codelist-incorporation) and [8](#stage-8--common-vocabulary-publication-icsm) rely on its deprecation rule.
+**[C2](vocab-review.md#activity-c2)** (SKOS mappings from jurisdictional to `icsm-*` concepts), **[C3](vocab-review.md#activity-c3)** (validation BBlock), **[C4](vocab-review.md#activity-c4)** (`boundaryDefinitions` rename), **[C5](vocab-review.md#activity-c5)** ([`wa-parcel-type`](https://linked.data.gov.au/def/csdm/wa-parcel-type) and [`wa-survey-type`](https://linked.data.gov.au/def/csdm/wa-survey-type) clean-up) and **[C6](vocab-review.md#activity-c6)** (a jurisdiction-neutral plan endorsement parent concept) follow once [Stage 9](#stage-9--model-profile-and-binding-alignment) is done.
 
 ---
 

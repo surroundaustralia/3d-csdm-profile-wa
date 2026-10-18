@@ -1,8 +1,10 @@
 # 3D CSDM Vocabulary Review, Rationalisation and Integration Plan
 
-**Status:** Review and planning document. It changes no vocabulary, supplement, CSV draft, schema, namespace or binding.
+**Status:** Review and planning document.
+It changes no vocabulary, supplement, CSV draft, schema, namespace or binding.
 **Date:** 2026-10-15
-**Updated:** 2026-10-16. The Surround team's decisions are recorded in [§5.10](#510-decisions), and the dispositions they change are marked in place.
+**Updated:** 2026-10-16.
+The Surround team's decisions are recorded in [§5.10](#510-decisions), and the dispositions they change are marked in place.
 **Scope:** ICSM `icsm-vocabs` LandParcels vocabularies, WA profile `*-supplement.ttl` files, and WA proposed CSV vocabularies.
 
 ---
@@ -19,14 +21,35 @@
 
 ### Key findings
 
-1. **None of the published vocabularies is "approved".** All 79 carry `reg-statuses/experimental`. This makes it cheaper to correct things now, and it means nothing is locked in by publication status.
-2. **The CSV drafts already use the common ICSM namespace, not a WA one.** `wa-liminal/context.jsonld` and `wa-3d/context.jsonld` map eleven of them to `https://linked.data.gov.au/def/csdm/<name>/`, which has no `wa-` prefix. Examples and validators depend on these IRIs, but nothing is published there. The URIs therefore already presume ICSM-level ownership, which WA cannot grant itself.
-3. **The binding points belong to a generic BBlock, not to WA.** Most CSV vocabularies populate properties of the *Spatial Representation Definition* (SRD) BBlock. That block describes itself as "not specific to parcels". It lives in `ogcincubator/bblocks-land-parcels` with `register: icsm-csdm`, yet its identifiers are `icsm.profiles.wa.datatypes.*`. **Who owns the SRD BBlock is the most important unresolved governance question.**
-4. **Confirmed duplicates.** [`vertical-direction`](vertical-direction.csv) ≡ [`icsm-vertical-direction`](crosswalk/vocab-crosswalk.csv). [`component-role`](component-role.csv) ≈ [`wa-strata-component-role`](crosswalk/vocab-crosswalk.csv). [`boundary-role`](boundary-role.csv) ⊃ [`vertical-limit-role`](crosswalk/vocab-crosswalk.csv). [`vertical-extent-status`](vertical-extent-status.csv) and [`vertical-boundary-state`](crosswalk/vocab-crosswalk.csv) share 5 concepts. [`wa-resolution-status`](crosswalk/vocab-crosswalk.csv) overlaps [`computability-status`](computability-status.csv). Supplement terms `unitEntitlementSchedule` and `recordOfStrataTitlesScheme` duplicate the existing `scheme-ue` and `scheme-record-form`.
-5. **Some vocabularies are internally incoherent.** [`height-reference`](height-reference.csv) mixes three kinds of concept: reference levels, a vertical datum (AHD) and building surfaces. The worked example shows the effect: `buildingElementType: height-reference:ns`. Three CSV vocabularies (`building-`, `cadastral-` and [`relative-height-reference`](crosswalk/vocab-crosswalk.csv)) all populate the single `relationship` property.
-6. **Some supplement terms sit in the wrong scheme.** [`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv) ("Certificate of Title") is a document, not a survey type. [`wa-monument-condition:computed`](crosswalk/vocab-crosswalk.csv) repeats what form, state and method already say: across 256 points it always co-occurs with [`wa-monument-form:cadastral-point-unmarked`](https://linked.data.gov.au/def/csdm/wa-monument-form/cadastral-point-unmarked), [`wa-monument-state:unmarked`](https://linked.data.gov.au/def/csdm/wa-monument-state/unmarked) and [`wa-surveypoint-method:G`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method/G).
+1. **None of the published vocabularies is "approved".**
+   All 79 carry `reg-statuses/experimental`.
+   This makes it cheaper to correct things now, and it means nothing is locked in by publication status.
+2. **The CSV drafts already use the common ICSM namespace, not a WA one.**
+   `wa-liminal/context.jsonld` and `wa-3d/context.jsonld` map eleven of them to `https://linked.data.gov.au/def/csdm/<name>/`, which has no `wa-` prefix.
+   Examples and validators depend on these IRIs, but nothing is published there.
+   The URIs therefore already presume ICSM-level ownership, which WA cannot grant itself.
+3. **The binding points belong to a generic BBlock, not to WA.**
+   Most CSV vocabularies populate properties of the *Spatial Representation Definition* (SRD) BBlock.
+   That block describes itself as "not specific to parcels".
+   It lives in `ogcincubator/bblocks-land-parcels` with `register: icsm-csdm`, yet its identifiers are `icsm.profiles.wa.datatypes.*`.
+   **Who owns the SRD BBlock is the most important unresolved governance question.**
+4. **Confirmed duplicates.**
+   [`vertical-direction`](vertical-direction.csv) ≡ [`icsm-vertical-direction`](crosswalk/vocab-crosswalk.csv).
+   [`component-role`](component-role.csv) ≈ [`wa-strata-component-role`](crosswalk/vocab-crosswalk.csv).
+   [`boundary-role`](boundary-role.csv) ⊃ [`vertical-limit-role`](crosswalk/vocab-crosswalk.csv).
+   [`vertical-extent-status`](vertical-extent-status.csv) and [`vertical-boundary-state`](crosswalk/vocab-crosswalk.csv) share 5 concepts.
+   [`wa-resolution-status`](crosswalk/vocab-crosswalk.csv) overlaps [`computability-status`](computability-status.csv).
+   Supplement terms `unitEntitlementSchedule` and `recordOfStrataTitlesScheme` duplicate the existing `scheme-ue` and `scheme-record-form`.
+5. **Some vocabularies are internally incoherent.**
+   [`height-reference`](height-reference.csv) mixes three kinds of concept: reference levels, a vertical datum (AHD) and building surfaces.
+   The worked example shows the effect: `buildingElementType: height-reference:ns`.
+   Three CSV vocabularies (`building-`, `cadastral-` and [`relative-height-reference`](crosswalk/vocab-crosswalk.csv)) all populate the single `relationship` property.
+6. **Some supplement terms sit in the wrong scheme.**
+   [`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv) ("Certificate of Title") is a document, not a survey type.
+   [`wa-monument-condition:computed`](crosswalk/vocab-crosswalk.csv) repeats what form, state and method already say: across 256 points it always co-occurs with [`wa-monument-form:cadastral-point-unmarked`](https://linked.data.gov.au/def/csdm/wa-monument-form/cadastral-point-unmarked), [`wa-monument-state:unmarked`](https://linked.data.gov.au/def/csdm/wa-monument-state/unmarked) and [`wa-surveypoint-method:G`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method/G).
 7. **Defects block incorporation as-is.**
-   - [`wa-occ`](crosswalk/vocab-crosswalk.csv)'s top concepts are minted as `:building`, but `hasTopConcept` and [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader) refer to `:Building`, `:BuildingElement` and `:Structure`. Those three IRIs are dangling, so all 12 hierarchy links are broken.
+   - [`wa-occ`](crosswalk/vocab-crosswalk.csv)'s top concepts are minted as `:building`, but `hasTopConcept` and [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader) refer to `:Building`, `:BuildingElement` and `:Structure`.
+     Those three IRIs are dangling, so all 12 hierarchy links are broken.
    - [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) declares no [`skos:ConceptScheme`](https://www.w3.org/2009/08/skos-reference/skos.html#ConceptScheme).
    - Notation styles are mixed: camelCase, kebab-case and opaque codes (`a2d`, `rrs`, `dfld`).
    - The uplift pipeline drops `related` and does not split `altlabel`.
@@ -37,28 +60,41 @@
 
 ### Major recommendations
 
-- **Keep all 79 published vocabularies at their URIs.** Incorporate the WA codelist supplement terms into their WA parents in `icsm-vocabs`, after the defect fixes and de-duplication in [§5.5](#55-supplementary-term-integration-matrix-43-terms).
-- **Turn the CSV drafts into one common "spatial representation" (SR) vocabulary family.** The 25 CSVs become 15 SR vocabularies, 1 common [`component-role`](component-role.csv) and 2 implementation-local lists; 7 are retired by merge. ICSM 3D CSDM should own it through the SRD BBlock, and it should be published in `icsm-vocabs` under the `…/def/csdm/<name>` IRIs already used in contexts. This needs merges, a split of [`height-reference`](height-reference.csv), and a single notation/URI convention fixed **before** first publication.
+- **Keep all 79 published vocabularies at their URIs.**
+  Incorporate the WA codelist supplement terms into their WA parents in `icsm-vocabs`, after the defect fixes and de-duplication in [§5.5](#55-supplementary-term-integration-matrix-43-terms).
+- **Turn the CSV drafts into one common "spatial representation" (SR) vocabulary family.**
+  The 25 CSVs become 15 SR vocabularies, 1 common [`component-role`](component-role.csv) and 2 implementation-local lists; 7 are retired by merge.
+  ICSM 3D CSDM should own it through the SRD BBlock, and it should be published in `icsm-vocabs` under the `…/def/csdm/<name>` IRIs already used in contexts.
+  This needs merges, a split of [`height-reference`](height-reference.csv), and a single notation/URI convention fixed **before** first publication.
 - **Create two common domain vocabularies:**
   - [`component-role`](component-role.csv): merge of the two [component-role](component-role.csv) CSVs.
   - [`occupation-feature`](occupation-feature.ttl): from [`wa-occ`](crosswalk/vocab-crosswalk.csv), mapped to IFC.
 
   Both concepts are general and already have core-model anchors (`surv:Occupation`, `container:occupationFeatures`, `EstateParcel`).
 - **Create one WA-only vocabulary, [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl)** (Landgate form versions).
-- **Keep processing vocabularies out of the domain model.** `boundary-coverage` and [`wa-prov-role`](wa-prov-role.csv) describe the generation pipeline. They should stay implementation-local (processWAData / a future validation BBlock) and not be published. Decided 2026-10-16 ([D12](#decision-d12)): [`wa-prov-role`](wa-prov-role.csv) stays local; `boundary-coverage` is removed and replaced by the boolean `fullBoundaryCoverage`.
+- **Keep processing vocabularies out of the domain model.**
+  `boundary-coverage` and [`wa-prov-role`](wa-prov-role.csv) describe the generation pipeline.
+  They should stay implementation-local (processWAData / a future validation BBlock) and not be published.
+  Decided 2026-10-16 ([D12](#decision-d12)): [`wa-prov-role`](wa-prov-role.csv) stays local; `boundary-coverage` is removed and replaced by the boolean `fullBoundaryCoverage`.
 
 ### Implications for the ongoing update
 
-- Do **not** upload the CSVs into the uplift pipeline as they stand. With no `csMapping` entry they would receive the base `https://icsm.gov.au/csdm/vocabs/notdefined`, their notations would become permanent URIs, and `related` would be lost.
-- WA codelist supplements can proceed now, but only after the corrections in [§5.5](#55-supplementary-term-integration-matrix-43-terms). Several supplement IRIs are camelCase and will change.
+- Do **not** upload the CSVs into the uplift pipeline as they stand.
+  With no `csMapping` entry they would receive the base `https://icsm.gov.au/csdm/vocabs/notdefined`, their notations would become permanent URIs, and `related` would be lost.
+- WA codelist supplements can proceed now, but only after the corrections in [§5.5](#55-supplementary-term-integration-matrix-43-terms).
+  Several supplement IRIs are camelCase and will change.
 - Examples, `wa-built-strata` drafts and `processWAData` validators must be updated in the same release as the vocabulary changes.
 
 ### Governance decisions needing agreement
 
-1. Who owns the SRD BBlock and its vocabulary family: ICSM, the OGC incubator, or WA as interim steward. See [D2](#decision-d2) (decided 2026-10-16).
-2. The URI and notation convention for new vocabularies. See [D1](#decision-d1) (decided 2026-10-16).
-3. Whether ICSM will publish [`component-role`](component-role.csv) and [`occupation-feature`](occupation-feature.ttl) as common vocabularies. See [D5](#decision-d5) (Surround position decided 2026-10-16; ICSM to confirm).
-4. Landgate policy items that decide individual terms: strata interests, endorsement authority, and surface synonyms. See [D7](#decision-d7)–[D9](#decision-d9) (decided 2026-10-16).
+1. Who owns the SRD BBlock and its vocabulary family: ICSM, the OGC incubator, or WA as interim steward.
+   See [D2](#decision-d2) (decided 2026-10-16).
+2. The URI and notation convention for new vocabularies.
+   See [D1](#decision-d1) (decided 2026-10-16).
+3. Whether ICSM will publish [`component-role`](component-role.csv) and [`occupation-feature`](occupation-feature.ttl) as common vocabularies.
+   See [D5](#decision-d5) (Surround position decided 2026-10-16; ICSM to confirm).
+4. Landgate policy items that decide individual terms: strata interests, endorsement authority, and surface synonyms.
+   See [D7](#decision-d7)–[D9](#decision-d9) (decided 2026-10-16).
 
 ---
 
@@ -75,7 +111,12 @@
 | `surroundaustralia/3d-cadastre-model` (core OWL model) | `…/3d-cadastre-model` | `main` @ `494bad5` (2024-04-09) | clean |
 | `processWAData` (implementation) | this repo | `feat/scope-note-vocabulary-forms` @ `614ee10` | clean |
 
-**Correction (2026-10-15).** This review was first run against the upstream `icsm-au/icsm-vocabs` checkout (`…/GitHub/icsm-vocabs`, `main` @ `944c464`) instead of the intended local fork `sa-icsm-vocabs`. A rerun of the analysis (`wa-vocab-audit` in processWAData) against `sa-icsm-vocabs` @ `ceb7a2c` produced identical findings. The published vocabularies differ in one concept only: the upstream copy of [`wa-procedure-used:measured`](https://linked.data.gov.au/def/csdm/wa-procedure-used/measured) has a mis-parsed definition, which the fork corrects. The fork has also replaced the [`vocabs-uplift.yml`](https://github.com/icsm-au/icsm-vocabs/blob/main/source/vocabs-uplift.yml) workflows with `scripts/build_vocabs.py` and `build-vocabs.yml`, so pipeline statements in [§5.7](#57-cross-vocabulary-findings) ([F-P1](#finding-f-p1)) and [§5.9](#59-implementation-roadmap) ([A9](#activity-a9)) describe the upstream pipeline and need rechecking against the fork. Repository-relative paths in this document (`icsm-vocabs/vocabs/…`) name the GitHub repository and apply unchanged to the fork.
+**Correction (2026-10-15).**
+This review was first run against the upstream `icsm-au/icsm-vocabs` checkout (`…/GitHub/icsm-vocabs`, `main` @ `944c464`) instead of the intended local fork `sa-icsm-vocabs`.
+A rerun of the analysis (`wa-vocab-audit` in processWAData) against `sa-icsm-vocabs` @ `ceb7a2c` produced identical findings.
+The published vocabularies differ in one concept only: the upstream copy of [`wa-procedure-used:measured`](https://linked.data.gov.au/def/csdm/wa-procedure-used/measured) has a mis-parsed definition, which the fork corrects.
+The fork has also replaced the [`vocabs-uplift.yml`](https://github.com/icsm-au/icsm-vocabs/blob/main/source/vocabs-uplift.yml) workflows with `scripts/build_vocabs.py` and `build-vocabs.yml`, so pipeline statements in [§5.7](#57-cross-vocabulary-findings) ([F-P1](#finding-f-p1)) and [§5.9](#59-implementation-roadmap) ([A9](#activity-a9)) describe the upstream pipeline and need rechecking against the fork.
+Repository-relative paths in this document (`icsm-vocabs/vocabs/…`) name the GitHub repository and apply unchanged to the fork.
 
 ### Supporting documentation
 
@@ -89,19 +130,29 @@
 - `3d-csdm-profile-{wa,icsm}/profiles/*-vocab-bindings.csv`, `*-vocab-labels.csv`, [`vocabs-uplift.yml`](https://github.com/icsm-au/icsm-vocabs/blob/main/source/vocabs-uplift.yml).
 - `processWAData/src/csdm_validator`, `src/validate_vocab`, and `.claude/skills/built-strata-spatial-representation/` (`_vocab.py`, `references/schema-status.md`).
 - Published sites:
-  - https://icsm-au.github.io/3d-csdm/ lists the modules Parcels, Common Patterns, Container, Geometry Primitives, Survey Features, Survey Provenance and Survey Observations, and the ICSM/NZ/WA/VIC profiles. It says nothing about codelist governance.
-  - The WA profile site is JavaScript-rendered, so the local [`build/register.json`](../../../build/register.json) was used instead. It lists 10 BBlocks, all `under-development` v0.1.
+  - https://icsm-au.github.io/3d-csdm/ lists the modules Parcels, Common Patterns, Container, Geometry Primitives, Survey Features, Survey Provenance and Survey Observations, and the ICSM/NZ/WA/VIC profiles.
+    It says nothing about codelist governance.
+  - The WA profile site is JavaScript-rendered, so the local [`build/register.json`](../../../build/register.json) was used instead.
+    It lists 10 BBlocks, all `under-development` v0.1.
 
 ### Assessment approach
 
-- **Pass 1 ([§5.4](#54-detailed-vocabulary-assessments)).** Every Turtle file was parsed with rdflib 7.6 and every CSV with Python `csv`. Concepts, notations and namespaces were extracted programmatically. For each term the review checked IRI collisions, label and notation collisions, dangling references and cross-scheme mappings. Every vocabulary-valued property in the worked examples was extracted with its JSON path to establish actual use.
-- **Pass 2 ([§5.7](#57-cross-vocabulary-findings)–5.9).** The vocabularies were compared by property they populate, by meaning (definition text) and against the core OWL model classes.
+- **Pass 1 ([§5.4](#54-detailed-vocabulary-assessments)).**
+  Every Turtle file was parsed with rdflib 7.6 and every CSV with Python `csv`.
+  Concepts, notations and namespaces were extracted programmatically.
+  For each term the review checked IRI collisions, label and notation collisions, dangling references and cross-scheme mappings.
+  Every vocabulary-valued property in the worked examples was extracted with its JSON path to establish actual use.
+- **Pass 2 ([§5.7](#57-cross-vocabulary-findings)–5.9).**
+  The vocabularies were compared by property they populate, by meaning (definition text) and against the core OWL model classes.
 
 ### Limitations
 
-- No ICSM governance documents (terms of reference, change process) were found in the repositories. The ownership recommendations are therefore architectural, not procedural.
-- Equivalences are judged from definitions. Several depend on Landgate survey-practice or legal confirmation, and these are flagged.
-- The published `icsm-vocabs` web site was not compared byte-for-byte with the local checkout. Local `main` is level with `origin/main`.
+- No ICSM governance documents (terms of reference, change process) were found in the repositories.
+  The ownership recommendations are therefore architectural, not procedural.
+- Equivalences are judged from definitions.
+  Several depend on Landgate survey-practice or legal confirmation, and these are flagged.
+- The published `icsm-vocabs` web site was not compared byte-for-byte with the local checkout.
+  Local `main` is level with `origin/main`.
 - The validity of statutory references in WA terms (Acts, regulations, form numbers) was not checked against legislation.
 
 ---
@@ -110,7 +161,10 @@
 
 ### 5.3.1 Published vocabularies (`icsm-vocabs`), 79
 
-All are SKOS ConceptSchemes with status `experimental`, flat lists (no [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader)), and no cross-scheme SKOS mappings. "Bindings" are those declared in [`3d-csdm-profile-wa/profiles/wa-vocab-bindings.csv`](../../../profiles/wa-vocab-bindings.csv) (WA) and `3d-csdm-profile-icsm/profiles/icsm-vocab-bindings.csv` (ICSM). Other profiles' bindings were out of scope. Several `wa-` vocabularies are additionally used through `wa-core/context.jsonld` prefixes and `shaclClosures` without a binding row ([§5.7](#57-cross-vocabulary-findings), [F-B3](#finding-f-b3)).
+All are SKOS ConceptSchemes with status `experimental`, flat lists (no [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader)), and no cross-scheme SKOS mappings.
+"Bindings" are those declared in [`3d-csdm-profile-wa/profiles/wa-vocab-bindings.csv`](../../../profiles/wa-vocab-bindings.csv) (WA) and `3d-csdm-profile-icsm/profiles/icsm-vocab-bindings.csv` (ICSM).
+Other profiles' bindings were out of scope.
+Several `wa-` vocabularies are additionally used through `wa-core/context.jsonld` prefixes and `shaclClosures` without a binding row ([§5.7](#57-cross-vocabulary-findings), [F-B3](#finding-f-b3)).
 
 | Vocabulary | Current location — scheme IRI | Terms | Status | Recommended owner/location | Recommended action | Current bindings | Confidence |
 |---|---|---|---|---|---|---|---|
@@ -196,14 +250,19 @@ All are SKOS ConceptSchemes with status `experimental`, flat lists (no [`skos:br
 
 Purpose by vocabulary group (to avoid repeating it per row):
 
-- **CSD-Header:** survey metadata codelists. Admin units, CRSs and height datums, survey type, purpose and documentation type, and annotations.
+- **CSD-Header:** survey metadata codelists.
+  Admin units, CRSs and height datums, survey type, purpose and documentation type, and annotations.
 - **Parcels:** parcel state, purpose and type, and interest (memorial) type.
 - **SurveyObservations:** angle, distance, equipment, procedure, and vector purpose and quality.
 - **SurveyPoints:** monument condition, form and state, survey point purpose, point class, and point creation method.
 
 `SurveyPoints/surveypointvocab.md` is documentation, not a vocabulary.
 
-**Cleanup status (2026-10-16).** The dispositions in [§5.3.2](#532-supplementary-turtle-vocabularies-10-files), [§5.3.3](#533-proposed-csv-vocabularies-25-files), [§5.5](#55-supplementary-term-integration-matrix-43-terms) and [§5.6](#56-new-csv-vocabulary-integration-matrix) were carried out by the WA vocabulary cleanup (Stages [2](HANDOFF.md#cleanup-stage-2)-[4](HANDOFF.md#cleanup-stage-4)) and applied to the examples and processWAData (Stages [5](HANDOFF.md#cleanup-stage-5)-[6](HANDOFF.md#cleanup-stage-6)). Each old term's outcome is in [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv) (181 rows), and the status columns in [§5.5](#55-supplementary-term-integration-matrix-43-terms) and [§5.6](#56-new-csv-vocabulary-integration-matrix) summarise it. The 25 CSVs are now 16 drafts plus the local [`wa-prov-role`](wa-prov-role.csv), and [`wa-occ`](crosswalk/vocab-crosswalk.csv) is the common [`occupation-feature.ttl`](occupation-feature.ttl). Publication remains with the custodians; see [`HANDOFF.md`](HANDOFF.md).
+**Cleanup status (2026-10-16).**
+The dispositions in [§5.3.2](#532-supplementary-turtle-vocabularies-10-files), [§5.3.3](#533-proposed-csv-vocabularies-25-files), [§5.5](#55-supplementary-term-integration-matrix-43-terms) and [§5.6](#56-new-csv-vocabulary-integration-matrix) were carried out by the WA vocabulary cleanup (Stages [2](HANDOFF.md#cleanup-stage-2)-[4](HANDOFF.md#cleanup-stage-4)) and applied to the examples and processWAData (Stages [5](HANDOFF.md#cleanup-stage-5)-[6](HANDOFF.md#cleanup-stage-6)).
+Each old term's outcome is in [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv) (181 rows), and the status columns in [§5.5](#55-supplementary-term-integration-matrix-43-terms) and [§5.6](#56-new-csv-vocabulary-integration-matrix) summarise it.
+The 25 CSVs are now 16 drafts plus the local [`wa-prov-role`](wa-prov-role.csv), and [`wa-occ`](crosswalk/vocab-crosswalk.csv) is the common [`occupation-feature.ttl`](occupation-feature.ttl).
+Publication remains with the custodians; see [`HANDOFF.md`](HANDOFF.md).
 
 ### 5.3.2 Supplementary Turtle vocabularies, 10 files
 
@@ -222,7 +281,8 @@ Purpose by vocabulary group (to avoid repeating it per row):
 
 ### 5.3.3 Proposed CSV vocabularies, 25 files
 
-"SR family" means the recommended common spatial-representation vocabulary family. Its owner is the SRD BBlock owner, recommended to be ICSM 3D CSDM ([D2](#decision-d2)), with `icsm-vocabs` as the authoritative location and IRIs `https://linked.data.gov.au/def/csdm/<name>`.
+"SR family" means the recommended common spatial-representation vocabulary family.
+Its owner is the SRD BBlock owner, recommended to be ICSM 3D CSDM ([D2](#decision-d2)), with `icsm-vocabs` as the authoritative location and IRIs `https://linked.data.gov.au/def/csdm/<name>`.
 
 | Vocabulary (file) | Purpose | Terms | Status | Recommended owner/location | Action | Recommended bindings | Rationale | Conf. |
 |---|---|---|---|---|---|---|---|---|
@@ -260,50 +320,88 @@ Each assessment covers current state, terms, usage, relationships, owner, bindin
 
 ### 5.4.1 Published vocabularies
 
-**ICSM common codelists (9).** These are [`icsm-admin-unit-type`](https://linked.data.gov.au/def/csdm/icsm-admin-unit-type), [`icsm-parcel-state`](https://linked.data.gov.au/def/csdm/icsm-parcel-state), [`icsm-angle-type`](https://linked.data.gov.au/def/csdm/icsm-angle-type), [`icsm-distance-type`](https://linked.data.gov.au/def/csdm/icsm-distance-type), [`icsm-equipment-type`](https://linked.data.gov.au/def/csdm/icsm-equipment-type), [`icsm-procedure-used`](https://linked.data.gov.au/def/csdm/icsm-procedure-used), [`icsm-monument-condition`](https://linked.data.gov.au/def/csdm/icsm-monument-condition), [`icsm-surveypoint-purpose`](https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose) and [`icsm-monument-state`](https://linked.data.gov.au/def/csdm/icsm-monument-state).
+**ICSM common codelists (9).**
+These are [`icsm-admin-unit-type`](https://linked.data.gov.au/def/csdm/icsm-admin-unit-type), [`icsm-parcel-state`](https://linked.data.gov.au/def/csdm/icsm-parcel-state), [`icsm-angle-type`](https://linked.data.gov.au/def/csdm/icsm-angle-type), [`icsm-distance-type`](https://linked.data.gov.au/def/csdm/icsm-distance-type), [`icsm-equipment-type`](https://linked.data.gov.au/def/csdm/icsm-equipment-type), [`icsm-procedure-used`](https://linked.data.gov.au/def/csdm/icsm-procedure-used), [`icsm-monument-condition`](https://linked.data.gov.au/def/csdm/icsm-monument-condition), [`icsm-surveypoint-purpose`](https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose) and [`icsm-monument-state`](https://linked.data.gov.au/def/csdm/icsm-monument-state).
 
-- They act as **label unions** of jurisdictional terms rather than as abstractions. All 6 [`wa-monument-condition`](https://linked.data.gov.au/def/csdm/wa-monument-condition) labels appear in [`icsm-monument-condition`](https://linked.data.gov.au/def/csdm/icsm-monument-condition), and 10 of 11 [`wa-parcel-state`](https://linked.data.gov.au/def/csdm/wa-parcel-state) labels appear in [`icsm-parcel-state`](https://linked.data.gov.au/def/csdm/icsm-parcel-state). The concepts are minted under separate IRIs with **no** [`skos:exactMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch) or `broadMatch`. The "common vocabulary + jurisdictional subset" pattern therefore exists only by duplicated labels, not by reuse.
-- **Action:** Retain. Longer term (C), add [`skos:exactMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch)/`broadMatch` from jurisdictional concepts to ICSM concepts. Do not re-mint either side.
+- They act as **label unions** of jurisdictional terms rather than as abstractions.
+  All 6 [`wa-monument-condition`](https://linked.data.gov.au/def/csdm/wa-monument-condition) labels appear in [`icsm-monument-condition`](https://linked.data.gov.au/def/csdm/icsm-monument-condition), and 10 of 11 [`wa-parcel-state`](https://linked.data.gov.au/def/csdm/wa-parcel-state) labels appear in [`icsm-parcel-state`](https://linked.data.gov.au/def/csdm/icsm-parcel-state).
+  The concepts are minted under separate IRIs with **no** [`skos:exactMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch) or `broadMatch`.
+  The "common vocabulary + jurisdictional subset" pattern therefore exists only by duplicated labels, not by reuse.
+- **Action:** Retain.
+  Longer term (C), add [`skos:exactMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch)/`broadMatch` from jurisdictional concepts to ICSM concepts.
+  Do not re-mint either side.
 - **Binding defect:** `icsm-vocab-bindings.csv` binds `container:surveyType` to `vocabs:icsm-survey-type`, which **does not exist** in `icsm-vocabs`.
 
-**WA codelists (22).** Landgate owns the content and `icsm-vocabs` hosts it. The core model types parcel state, purpose and type as `com:RelevantJurisdictionalCodelist`, which confirms the jurisdictional level is correct. Observations:
+**WA codelists (22).**
+Landgate owns the content and `icsm-vocabs` hosts it.
+The core model types parcel state, purpose and type as `com:RelevantJurisdictionalCodelist`, which confirms the jurisdictional level is correct.
+Observations:
 
-- **Inconsistent filename vs IRI:** [`wa-monument-type.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl) → [`wa-monument-form`](https://linked.data.gov.au/def/csdm/wa-monument-form); [`wa-condition.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl) → [`wa-monument-condition`](https://linked.data.gov.au/def/csdm/wa-monument-condition); [`wa-purpose.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl) → [`wa-surveypoint-purpose`](https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose); [`wa-state.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl) → [`wa-monument-state`](https://linked.data.gov.au/def/csdm/wa-monument-state). Keep the IRIs; renaming files is optional.
-- **[`wa-parcel-type`](https://linked.data.gov.au/def/csdm/wa-parcel-type) mixes tenure and scheme kind.** It holds `freehold`/`crown`/`leasehold` alongside `community-titles-building-scheme`/`-land-scheme`. This matters for `strata-scheme` ([D6](#decision-d6)).
-- **[`wa-survey-type`](https://linked.data.gov.au/def/csdm/wa-survey-type) mixes plan types with data or format types.** `csd`, `dsd`, `field-record` and `survey-sheet` sit alongside `strata-plan` and `deposited-plan`.
-- **[`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) has six terms with the definition "Note: To be confirmed if part of final schema design".** These are placeholder definitions in a published vocabulary.
-- **[`wa-secondary-purpose`](https://linked.data.gov.au/def/csdm/wa-secondary-purpose) (68) vs [`wa-secondary-parcel-purpose`](https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose) (60)** share only 2 labels. They are distinct but confusingly named. Only the latter is bound.
-- **[`wa-surveypoint-method`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method)** has no WA binding row and no `wa-core` context prefix. It is used as `methodEstablished` under two prefixes ([`wa-surveypoint-method:`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method) and the undeclared `wa-pt-method:`).
-- **Action:** Retain all. Incorporate supplements per [§5.5](#55-supplementary-term-integration-matrix-43-terms). Fix bindings and prefixes (A).
+- **Inconsistent filename vs IRI:** [`wa-monument-type.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl) → [`wa-monument-form`](https://linked.data.gov.au/def/csdm/wa-monument-form); [`wa-condition.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl) → [`wa-monument-condition`](https://linked.data.gov.au/def/csdm/wa-monument-condition); [`wa-purpose.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl) → [`wa-surveypoint-purpose`](https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose); [`wa-state.ttl`](https://github.com/icsm-au/icsm-vocabs/blob/main/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl) → [`wa-monument-state`](https://linked.data.gov.au/def/csdm/wa-monument-state).
+  Keep the IRIs; renaming files is optional.
+- **[`wa-parcel-type`](https://linked.data.gov.au/def/csdm/wa-parcel-type) mixes tenure and scheme kind.**
+  It holds `freehold`/`crown`/`leasehold` alongside `community-titles-building-scheme`/`-land-scheme`.
+  This matters for `strata-scheme` ([D6](#decision-d6)).
+- **[`wa-survey-type`](https://linked.data.gov.au/def/csdm/wa-survey-type) mixes plan types with data or format types.**
+  `csd`, `dsd`, `field-record` and `survey-sheet` sit alongside `strata-plan` and `deposited-plan`.
+- **[`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) has six terms with the definition "Note: To be confirmed if part of final schema design".**
+  These are placeholder definitions in a published vocabulary.
+- **[`wa-secondary-purpose`](https://linked.data.gov.au/def/csdm/wa-secondary-purpose) (68) vs [`wa-secondary-parcel-purpose`](https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose) (60)** share only 2 labels.
+  They are distinct but confusingly named.
+  Only the latter is bound.
+- **[`wa-surveypoint-method`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method)** has no WA binding row and no `wa-core` context prefix.
+  It is used as `methodEstablished` under two prefixes ([`wa-surveypoint-method:`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method) and the undeclared `wa-pt-method:`).
+- **Action:** Retain all.
+  Incorporate supplements per [§5.5](#55-supplementary-term-integration-matrix-43-terms).
+  Fix bindings and prefixes (A).
 
-**VIC (24) and NZ (24).** These are out of WA authority and need no change. They are relevant only as the precedent for jurisdictional annotation, document-type and purpose vocabularies, and as candidates for future SKOS mappings to common vocabularies.
+**VIC (24) and NZ (24).**
+These are out of WA authority and need no change.
+They are relevant only as the precedent for jurisdictional annotation, document-type and purpose vocabularies, and as candidates for future SKOS mappings to common vocabularies.
 
 ### 5.4.2 Supplements
 
 **[`wa-annotation`](https://linked.data.gov.au/def/csdm/wa-annotation) (8 terms).**
 - `r-4` and `r-54` are WA regulation certificates, analogous to the existing `r-26a`.
-- `height-limit-description` and `boundary-definition-statement` are plan statements. They are WA-encoded, but the concept is generic, so they are candidates for a future common annotation concept (C).
-- The four certification annotations (`licensed-valuer-certification`, `building-approval-certification`, `strata-plan-endorsement`, `record-of-strata-titles-scheme`) record *that* a certificate is endorsed on the plan. They are distinct from the document types that *are* the certificates. Link each pair with [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related).
-- Usage: `annotations[].role` under the prefix [`wa-annotation-role:`](https://linked.data.gov.au/def/csdm/wa-annotation). The `wa-core` context aliases that prefix to the [`wa-annotation`](https://linked.data.gov.au/def/csdm/wa-annotation) namespace. `hasProvenance…surveyCertificate` uses [`wa-annotation:`](https://linked.data.gov.au/def/csdm/wa-annotation). Two prefixes for one namespace should be reduced to one.
+- `height-limit-description` and `boundary-definition-statement` are plan statements.
+  They are WA-encoded, but the concept is generic, so they are candidates for a future common annotation concept (C).
+- The four certification annotations (`licensed-valuer-certification`, `building-approval-certification`, `strata-plan-endorsement`, `record-of-strata-titles-scheme`) record *that* a certificate is endorsed on the plan.
+  They are distinct from the document types that *are* the certificates.
+  Link each pair with [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related).
+- Usage: `annotations[].role` under the prefix [`wa-annotation-role:`](https://linked.data.gov.au/def/csdm/wa-annotation).
+  The `wa-core` context aliases that prefix to the [`wa-annotation`](https://linked.data.gov.au/def/csdm/wa-annotation) namespace.
+  `hasProvenance…surveyCertificate` uses [`wa-annotation:`](https://linked.data.gov.au/def/csdm/wa-annotation).
+  Two prefixes for one namespace should be reduced to one.
 
-**[`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) (4 terms, new).** A register of Landgate-approved form versions, linked by [`dcterms:type`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) to document types, with validity intervals. It is well designed in principle. Required fixes:
+**[`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) (4 terms, new).**
+A register of Landgate-approved form versions, linked by [`dcterms:type`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) to document types, with validity intervals.
+It is well designed in principle.
+Required fixes:
 - Add the [`skos:ConceptScheme`](https://www.w3.org/2009/08/skos-reference/skos.html#ConceptScheme).
 - Add a pipeline `csMapping` or keep it as hand-authored TTL.
-- `dcterms:source "wa-leg:…"` is an undeclared pseudo-CURIE literal. Make it an IRI.
+- `dcterms:source "wa-leg:…"` is an undeclared pseudo-CURIE literal.
+  Make it an IRI.
 - Retarget [`dcterms:type`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) to the de-duplicated document types (`scheme-ue`, `scheme-record-form`).
-- The `BA14` label reads "form B14". Notation `15c` vs label "15C" needs a consistent case.
-- The `15c` definition says "planning or local government", which conflicts with other definitions ([D9](#decision-d9)). Decided 2026-10-16: the plan is endorsed under section 15(4) by the WAPC or its authorised delegate, such as a local government exercising delegated authority.
+- The `BA14` label reads "form B14".
+  Notation `15c` vs label "15C" needs a consistent case.
+- The `15c` definition says "planning or local government", which conflicts with other definitions ([D9](#decision-d9)).
+  Decided 2026-10-16: the plan is endorsed under section 15(4) by the WAPC or its authorised delegate, such as a local government exercising delegated authority.
 
 **[`wa-interest-type`](https://linked.data.gov.au/def/csdm/wa-interest-type) (2 terms).**
 - The parent is labelled "WA Memorial Types" and already contains `ct` (Certificate of Title).
-- The proposed definitions ("Total value of a Strata Scheme entitlement", "per Strata Lot entitlement value") describe **unit entitlement quantities**. Those belong in properties such as `entitlementTotal` and `entitlementPortion` (decision register #9/#10), not in an interest type.
+- The proposed definitions ("Total value of a Strata Scheme entitlement", "per Strata Lot entitlement value") describe **unit entitlement quantities**.
+  Those belong in properties such as `entitlementTotal` and `entitlementPortion` (decision register #9/#10), not in an interest type.
 - If a WA strata lot is held under a Certificate of Title, `strata-lot` duplicates `ct`.
-- **Decided 2026-10-16 ([D7](#decision-d7)):** neither term is added. Entitlements become properties of the scheme and lot parcels. Lots to be created carry no interest entry; `ct` interests are added once titles are registered.
+- **Decided 2026-10-16 ([D7](#decision-d7)):** neither term is added.
+  Entitlements become properties of the scheme and lot parcels.
+  Lots to be created carry no interest entry; `ct` interests are added once titles are registered.
 
 **[`wa-monument-condition:computed`](crosswalk/vocab-crosswalk.csv).**
 - Every one of the 256 uses co-occurs with form `cadastral-point-unmarked`, state `unmarked`, purpose `derived-boundary` and method `G` ("Graphical – CO-GO, calculated").
 - A condition describes the physical state of a monument, and an unmarked point has no monument.
-- Recommendation: omit `condition` when the form is unmarked. Have the WA profile SHACL make `condition` optional in that case. Do not add the term.
+- Recommendation: omit `condition` when the form is unmarked.
+  Have the WA profile SHACL make `condition` optional in that case.
+  Do not add the term.
 - It is currently loaded via `wa-liminal` `shaclClosures`, so removing it requires the example update.
 
 **[`wa-occ`](crosswalk/vocab-crosswalk.csv) (15 terms, new).**
@@ -313,9 +411,12 @@ Each assessment covers current state, terms, usage, relationships, owner, bindin
   - `slab` is defined to include roofs, which overlaps `roof`.
   - `ceiling` is a covering in IFC (`IfcCovering.CEILING`), not a structural element.
   - Language tags (`@en`) are used inconsistently with the parent vocabularies.
-- **Core anchoring:** The core model already defines `surv:Occupation` ("fences, walls … buildings …"), `surv:Terrain ⊂ Occupation`, `surveyobs:DesignModel` (BIM) and `container:occupationFeatures`. It has **no** occupation-type property, which is a proposed model change.
+- **Core anchoring:** The core model already defines `surv:Occupation` ("fences, walls … buildings …"), `surv:Terrain ⊂ Occupation`, `surveyobs:DesignModel` (BIM) and `container:occupationFeatures`.
+  It has **no** occupation-type property, which is a proposed model change.
 - **Usage:** The worked example carries IFC `bimType` on each occupation feature, alongside `featureType: wa-occ:wall`.
-- **Recommendation:** Create a common [`occupation-feature`](occupation-feature.ttl), with [`skos:closeMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#closeMatch) to IFC 4.3 class IRIs and [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related) to `surv:Terrain`. The concepts are construction-generic. Nothing in their definitions is WA law.
+- **Recommendation:** Create a common [`occupation-feature`](occupation-feature.ttl), with [`skos:closeMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#closeMatch) to IFC 4.3 class IRIs and [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related) to `surv:Terrain`.
+  The concepts are construction-generic.
+  Nothing in their definitions is WA law.
 
 **[`wa-parcel-purpose:strata-scheme`](../../../profiles/wa-parcel-purpose-supplement.ttl).**
 - The definition ("abstract parcel that aggregates…") describes the core class `EstateParcel ⊂ ParcelAggregate`, not a purpose.
@@ -323,70 +424,113 @@ Each assessment covers current state, terms, usage, relationships, owner, bindin
 - Incorporate as a WA interim term, consistent with existing `strata-lot` and `common-property`, with a definition along the lines of "parcel representing the land and scheme of a strata titles scheme".
 - Pursue the `ParcelAggregate` `featureType` with ICSM ([D6](#decision-d6)).
 
-**[`wa-surveypoint-purpose:derived-boundary`](crosswalk/vocab-crosswalk.csv).** A point's *purpose* is to mark a boundary ([`wa-surveypoint-purpose`](https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose) already has `internal-boundary`, `road-boundary` and `3d-normal`). "Derived from the SRD" is the creation method. Options:
+**[`wa-surveypoint-purpose:derived-boundary`](crosswalk/vocab-crosswalk.csv).**
+A point's *purpose* is to mark a boundary ([`wa-surveypoint-purpose`](https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose) already has `internal-boundary`, `road-boundary` and `3d-normal`).
+"Derived from the SRD" is the creation method.
+Options:
 - (a) Use an existing boundary purpose plus [`wa-surveypoint-method:G`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method/G).
-- (b) If generated points must be distinguishable, add a WA method concept narrower than `G`. Preferred.
+- (b) If generated points must be distinguishable, add a WA method concept narrower than `G`.
+  Preferred.
 
-**[`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) (9 terms).** See [§5.5](#55-supplementary-term-integration-matrix-43-terms). Notation must be kebab-case to match the parent; the supplement uses camelCase for 6 terms. The supplement's `strataPlanEndorsementCertificate` (WAPC) conflicts with [`wa-annotation:strata-plan-endorsement`](../../../profiles/wa-annotation-supplement.ttl) (local government, s15(4)) and [`wa-approved-form:15c`](../../../profiles/wa-approved-form-supplement.ttl) (planning or local government), so [D9](#decision-d9) needs resolving.
+**[`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) (9 terms).**
+See [§5.5](#55-supplementary-term-integration-matrix-43-terms).
+Notation must be kebab-case to match the parent; the supplement uses camelCase for 6 terms.
+The supplement's `strataPlanEndorsementCertificate` (WAPC) conflicts with [`wa-annotation:strata-plan-endorsement`](../../../profiles/wa-annotation-supplement.ttl) (local government, s15(4)) and [`wa-approved-form:15c`](../../../profiles/wa-approved-form-supplement.ttl) (planning or local government), so [D9](#decision-d9) needs resolving.
 
-**[`wa-survey-purpose:subdivision-t-sts`](../../../profiles/wa-survey-purpose-supplement.ttl).** Incorporate. Correct "Strata Title Act" to "[Strata Titles Act 1985](https://www.legislation.wa.gov.au/legislation/statutes.nsf/main_mrtitle_938_homepage.html)".
+**[`wa-survey-purpose:subdivision-t-sts`](../../../profiles/wa-survey-purpose-supplement.ttl).**
+Incorporate.
+Correct "Strata Title Act" to "[Strata Titles Act 1985](https://www.legislation.wa.gov.au/legislation/statutes.nsf/main_mrtitle_938_homepage.html)".
 
-**[`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv).** The definition is copied from Certificate of Title. It is used only as `sourceAuthorityType: wa-survey-type:ct` in the liminal example, where the intended reference is a document. Relocate to [`wa-survey-documentation-type:certificate-of-title`](../../../profiles/wa-survey-documentation-supplement.ttl).
+**[`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv).**
+The definition is copied from Certificate of Title.
+It is used only as `sourceAuthorityType: wa-survey-type:ct` in the liminal example, where the intended reference is a document.
+Relocate to [`wa-survey-documentation-type:certificate-of-title`](../../../profiles/wa-survey-documentation-supplement.ttl).
 
 ### 5.4.3 CSV vocabularies (spatial representation family)
 
 **Binding points that exist today.**
-- The SRD ontology (`sr:` = `https://linked.data.gov.au/def/csdm/spatial-representation/`) defines these object properties with range [`skos:Concept`](https://www.w3.org/2009/08/skos-reference/skos.html#Concept): `representationStatus`, `geometryLegalStatus`, `computabilityStatus`, `zValueRole`, `verticalExtentStatus`, `boundaryState`, `definitionType`, `limitRole`, `valueType`, `direction`, `heightReference` and `surfaceType`. The SRD context maps them with `@type: @vocab`.
-- `sr:resolutionStatus` and `sr:derivedGeometryStatus` are **datatype** (string) properties, so they cannot currently be bound to a vocabulary. Changing them is a proposed model change.
-- The SRD schema has **no** enums or vocabulary constraints. Values are free strings described as "vocabulary-referencing".
+- The SRD ontology (`sr:` = `https://linked.data.gov.au/def/csdm/spatial-representation/`) defines these object properties with range [`skos:Concept`](https://www.w3.org/2009/08/skos-reference/skos.html#Concept): `representationStatus`, `geometryLegalStatus`, `computabilityStatus`, `zValueRole`, `verticalExtentStatus`, `boundaryState`, `definitionType`, `limitRole`, `valueType`, `direction`, `heightReference` and `surfaceType`.
+  The SRD context maps them with `@type: @vocab`.
+- `sr:resolutionStatus` and `sr:derivedGeometryStatus` are **datatype** (string) properties, so they cannot currently be bound to a vocabulary.
+  Changing them is a proposed model change.
+- The SRD schema has **no** enums or vocabulary constraints.
+  Values are free strings described as "vocabulary-referencing".
 
-**Binding points that do not exist yet.** All `limits[]` fields, `components[]`, `source.scope`, `geometricDerivation`, `boundaryCoverage` and `occupationFeatures`. They appear only in proposed work repo's and the `built-strata-spatial-representation` skill.
+**Binding points that do not exist yet.**
+All `limits[]` fields, `components[]`, `source.scope`, `geometricDerivation`, `boundaryCoverage` and `occupationFeatures`.
+They appear only in proposed work repo's and the `built-strata-spatial-representation` skill.
 
 Individual assessments:
 
-- **[`representation-status`](representation-status.csv).** A summary classification. `a3d` overlaps [`geometry-legal-status:l3d`](crosswalk/vocab-crosswalk.csv) (same fact at a different level), which is acceptable if documented with [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related).
-- **[`geometry-legal-status`](geometry-legal-status.csv).** It mixes legal authority (`a2d`, `l3d`, `dfld`) with purpose (`analytical`, `visualisationOnly`) and reliability (`approximate`, `observed`). It is coherent as "status of this geometry", so retain. Policy D-#1 (WA `l3d`) is a profile constraint, not a vocabulary change.
+- **[`representation-status`](representation-status.csv).**
+  A summary classification.
+  `a3d` overlaps [`geometry-legal-status:l3d`](crosswalk/vocab-crosswalk.csv) (same fact at a different level), which is acceptable if documented with [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related).
+- **[`geometry-legal-status`](geometry-legal-status.csv).**
+  It mixes legal authority (`a2d`, `l3d`, `dfld`) with purpose (`analytical`, `visualisationOnly`) and reliability (`approximate`, `observed`).
+  It is coherent as "status of this geometry", so retain.
+  Policy D-#1 (WA `l3d`) is a profile constraint, not a vocabulary change.
 - **[`computability-status`](computability-status.csv).**
   - Make `requires-reference-surface`, `requires-vertical-crs`, `requires-source-rule` and `requires-boundary-definition` narrower than `not-computable`.
   - `partially-computable` and `computed` are fine.
   - `resolved` maps to `computable`, and `unresolved` maps to `not-computable`.
   - The liminal example already puts `requiresReferenceSurface` into `resolutionStatus`, which shows the shared range.
-- **[`coordinate-z-role`](coordinate-z-role.csv).** The `referenceSurface` definition is truncated ("forms part of a terrain") and needs completing.
+- **[`coordinate-z-role`](coordinate-z-role.csv).**
+  The `referenceSurface` definition is truncated ("forms part of a terrain") and needs completing.
 - **[`vertical-extent-status`](vertical-extent-status.csv) + [`vertical-boundary-state`](crosswalk/vocab-crosswalk.csv).**
   - Shared concepts: `undefined`, `notSupplied`, `notApplicable`, `unconstrainedAbove`, `unconstrainedBelow`.
   - `vertical-extent-status:derivedForVisualisation` and `:authoritative3D` restate [`geometry-legal-status:vo`](crosswalk/vocab-crosswalk.csv) and `:l3d`.
   - **Drift:** examples and the validator (`wa_derived_3d.py`) use `vertical-extent-status:dfld`, which does not exist.
-  - Recommendation: one scheme with collections for extent-level and boundary-level states, bound to the respective properties via SHACL [`sh:in`](https://www.w3.org/TR/shacl/#InConstraintComponent). The alternative is in [D4](#decision-d4).
+  - Recommendation: one scheme with collections for extent-level and boundary-level states, bound to the respective properties via SHACL [`sh:in`](https://www.w3.org/TR/shacl/#InConstraintComponent).
+    The alternative is in [D4](#decision-d4).
 - **[`vertical-definition-type`](vertical-definition-type.csv).**
-  - The notation `ahd` for `absoluteHeightDescription` misleadingly suggests the AHD datum. Rename to `absolute-height` or `abs`.
+  - The notation `ahd` for `absoluteHeightDescription` misleadingly suggests the AHD datum.
+    Rename to `absolute-height` or `abs`.
   - `brb` is a kind of `gbr`, so model it as narrower.
-  - The built-strata limits include `lateral` roles. This makes "vertical" boundary definitions a misnomer, which is a model naming issue ([D10](#decision-d10)).
-- **[`vertical-value-type`](vertical-value-type.csv).** Near 1:1 with definition types, but genuinely orthogonal: a Crown Grant depth rule (`jur`) is expressed as an offset (`off`). Retain, with a scope note.
+  - The built-strata limits include `lateral` roles.
+    This makes "vertical" boundary definitions a misnomer, which is a model naming issue ([D10](#decision-d10)).
+- **[`vertical-value-type`](vertical-value-type.csv).**
+  Near 1:1 with definition types, but genuinely orthogonal: a Crown Grant depth rule (`jur`) is expressed as an offset (`off`).
+  Retain, with a scope note.
 - **[`height-reference`](height-reference.csv).**
   - Keep `ground-level`, `natural-surface`, `finished-surface`, `surface-level`, `floor-level`, `lowest-ground-floor-upper-surface-level` (narrower than `floor-level`; ask whether it is WA-specific), `ceiling-level` and `plate-height`.
-  - Remove `AHD`. A datum is a vertical CRS (`verticalCRS: epsg:5711`; [`wa-vhd`](https://linked.data.gov.au/def/csdm/wa-vhd)), and `vertical-definition-type:absoluteHeightDescription` already covers it.
-  - Remove `buildingSurface`, `wallSurface`, `floorSurface`, `ceilingSurface`, `roofSurface` and `boundaryPlane`. Each is a product of an element type and a surface relationship, so express it as `relationship` + `buildingElementType`.
-- **[`boundary-reference`](boundary-reference.csv) (merged).** Combines the building surfaces, `title-boundary` and `offset-from-surface`.
-  - Probable synonyms needing Landgate confirmation ([D8](#decision-d8)): `underSurface` ≈ `lowerSurface`, and `externalSurface` ≈ `outerSurface`. The [SP83687](../built-strata/examples/example-1.json) statute text uses "external surfaces", so prefer that as the prefLabel if merged.
+  - Remove `AHD`.
+    A datum is a vertical CRS (`verticalCRS: epsg:5711`; [`wa-vhd`](https://linked.data.gov.au/def/csdm/wa-vhd)), and `vertical-definition-type:absoluteHeightDescription` already covers it.
+  - Remove `buildingSurface`, `wallSurface`, `floorSurface`, `ceilingSurface`, `roofSurface` and `boundaryPlane`.
+    Each is a product of an element type and a surface relationship, so express it as `relationship` + `buildingElementType`.
+- **[`boundary-reference`](boundary-reference.csv) (merged).**
+  Combines the building surfaces, `title-boundary` and `offset-from-surface`.
+  - Probable synonyms needing Landgate confirmation ([D8](#decision-d8)): `underSurface` ≈ `lowerSurface`, and `externalSurface` ≈ `outerSurface`.
+    The [SP83687](../built-strata/examples/example-1.json) statute text uses "external surfaces", so prefer that as the prefLabel if merged.
   - `surface` and `plane` are generic fall-backs.
-  - `projection` is a **modifier** ("projected continuation of …") rather than a surface. The interim is a concept with [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related) to `surface` and `plane`. The target is a boolean or qualifier on the limit (proposed model change).
-  - `centrePlane` (what the boundary is) is distinct from [`derivation-mechanism:wall-centre-plane`](derivation-mechanism.csv) (how it was computed). Keep both, linked by [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related).
+  - `projection` is a **modifier** ("projected continuation of …") rather than a surface.
+    The interim is a concept with [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related) to `surface` and `plane`.
+    The target is a boolean or qualifier on the limit (proposed model change).
+  - `centrePlane` (what the boundary is) is distinct from [`derivation-mechanism:wall-centre-plane`](derivation-mechanism.csv) (how it was computed).
+    Keep both, linked by [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related).
 - **[`component-role`](component-role.csv) (merged).**
   - Definitions are already jurisdiction-neutral ("strata, condominium, or other volumetric parcel").
   - Keep 8 concepts: `principal-unit`, `car-bay`, `storage`, `balcony`, `courtyard`, `roof-space`, `private-use-area` and `other`.
-  - Do **not** add an "exclusive-use common property" role. Decision register #13 recommends those areas are not part of the lot's `AggregateSolid`, so the concept would be a parcel or interest, not a component.
-- **[`source-scope`](source-scope.csv), [`reference-kind`](reference-kind.csv), [`derivation-mechanism`](derivation-mechanism.csv) and [`derived-geometry-status`](derived-geometry-status.csv).** Generic. Drop the `icsm-` prefix from vocabulary names: the namespace already conveys ownership, and other ICSM vocabularies use the prefix only to distinguish them from jurisdictional variants.
+  - Do **not** add an "exclusive-use common property" role.
+    Decision register #13 recommends those areas are not part of the lot's `AggregateSolid`, so the concept would be a parcel or interest, not a component.
+- **[`source-scope`](source-scope.csv), [`reference-kind`](reference-kind.csv), [`derivation-mechanism`](derivation-mechanism.csv) and [`derived-geometry-status`](derived-geometry-status.csv).**
+  Generic.
+  Drop the `icsm-` prefix from vocabulary names: the namespace already conveys ownership, and other ICSM vocabularies use the prefix only to distinguish them from jurisdictional variants.
   - [`reference-kind`](reference-kind.csv) altLabels "building element" and "spatial unit" are wrong, because they are narrower or different concepts.
   - [`source-scope`](source-scope.csv) notations need kebab-case (`parcel-part`, `boundary-part`).
-- **`boundary-coverage` and [`wa-prov-role`](wa-prov-role.csv).** See [§5.6](#56-new-csv-vocabulary-integration-matrix). These are implementation concepts. `boundary-coverage` is removed in favour of a boolean ([D12](#decision-d12)).
+- **`boundary-coverage` and [`wa-prov-role`](wa-prov-role.csv).**
+  See [§5.6](#56-new-csv-vocabulary-integration-matrix).
+  These are implementation concepts.
+  `boundary-coverage` is removed in favour of a boolean ([D12](#decision-d12)).
 
 ---
 
 ## 5.5 Supplementary term integration matrix (43 terms)
 
-No supplement IRI collides with a published IRI, and no prefLabel or notation collides within its target scheme. The semantic duplicates below were found by comparing definitions.
+No supplement IRI collides with a published IRI, and no prefLabel or notation collides within its target scheme.
+The semantic duplicates below were found by comparing definitions.
 
-"WA-local" means Landgate decides the content and the change is a PR to Landgate-owned `wa-*` content in the ICSM-hosted `icsm-vocabs` repository, merged by repository maintainers. "ICSM" means a decision about common vocabularies or models.
+"WA-local" means Landgate decides the content and the change is a PR to Landgate-owned `wa-*` content in the ICSM-hosted `icsm-vocabs` repository, merged by repository maintainers.
+"ICSM" means a decision about common vocabularies or models.
 
 | Source supplement | Term (IRI local name) | Nominated parent | Recommended destination | Action | Rationale / collisions | Approval | Cleanup status (2026-10-16) |
 |---|---|---|---|---|---|---|---|
@@ -472,10 +616,12 @@ No supplement IRI collides with a published IRI, and no prefLabel or notation co
 
 **Outcome for the 25 CSVs:**
 - **15 become the SR family:** [`representation-status`](representation-status.csv), [`geometry-legal-status`](geometry-legal-status.csv), [`computability-status`](computability-status.csv), [`coordinate-z-role`](coordinate-z-role.csv), [`vertical-extent-status`](vertical-extent-status.csv), [`vertical-definition-type`](vertical-definition-type.csv), [`vertical-value-type`](vertical-value-type.csv), [`vertical-direction`](vertical-direction.csv), [`boundary-role`](boundary-role.csv), [`height-reference`](height-reference.csv), [`boundary-reference`](boundary-reference.csv) (from [`building-boundary-reference`](crosswalk/vocab-crosswalk.csv)), [`source-scope`](source-scope.csv), [`reference-kind`](reference-kind.csv), [`derivation-mechanism`](derivation-mechanism.csv) and [`derived-geometry-status`](derived-geometry-status.csv).
-- **1 becomes a common domain vocabulary:** [`component-role`](component-role.csv). With [`occupation-feature`](occupation-feature.ttl) (from the [`wa-occ`](crosswalk/vocab-crosswalk.csv) supplement) there are 2 common domain vocabularies.
+- **1 becomes a common domain vocabulary:** [`component-role`](component-role.csv).
+  With [`occupation-feature`](occupation-feature.ttl) (from the [`wa-occ`](crosswalk/vocab-crosswalk.csv) supplement) there are 2 common domain vocabularies.
 - **1 stays implementation-local:** [`wa-prov-role`](wa-prov-role.csv).
 - **1 is removed:** `boundary-coverage`, replaced by the boolean `fullBoundaryCoverage` ([D12](#decision-d12), decided 2026-10-16).
-- **7 are retired by merge:** [`icsm-vertical-direction`](crosswalk/vocab-crosswalk.csv), [`vertical-limit-role`](crosswalk/vocab-crosswalk.csv), [`vertical-boundary-state`](crosswalk/vocab-crosswalk.csv), [`cadastral-boundary-reference`](crosswalk/vocab-crosswalk.csv), [`relative-height-reference`](crosswalk/vocab-crosswalk.csv), [`wa-resolution-status`](crosswalk/vocab-crosswalk.csv) and [`wa-strata-component-role`](crosswalk/vocab-crosswalk.csv). None was published, so no deprecation is needed.
+- **7 are retired by merge:** [`icsm-vertical-direction`](crosswalk/vocab-crosswalk.csv), [`vertical-limit-role`](crosswalk/vocab-crosswalk.csv), [`vertical-boundary-state`](crosswalk/vocab-crosswalk.csv), [`cadastral-boundary-reference`](crosswalk/vocab-crosswalk.csv), [`relative-height-reference`](crosswalk/vocab-crosswalk.csv), [`wa-resolution-status`](crosswalk/vocab-crosswalk.csv) and [`wa-strata-component-role`](crosswalk/vocab-crosswalk.csv).
+  None was published, so no deprecation is needed.
 
 The only new WA vocabulary is [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl), which comes from a supplement.
 
@@ -511,11 +657,13 @@ The only new WA vocabulary is [`wa-approved-form`](../../../profiles/wa-approved
 
 ### Potential improvements (need further research)
 
-- Common annotation concepts (`height-limit-description`, `boundary-definition-statement`) could be shared with VIC and NZ annotations. Requires a survey of those vocabularies.
+- Common annotation concepts (`height-limit-description`, `boundary-definition-statement`) could be shared with VIC and NZ annotations.
+  Requires a survey of those vocabularies.
 - A common document-type core (certificate of title, plan, field record) with jurisdictional narrower terms.
 - Whether `lowest-ground-floor-upper-surface-level` and `plate-height` are WA-specific.
 - [`wa-parcel-type`](https://linked.data.gov.au/def/csdm/wa-parcel-type) tenure vs scheme-kind split ([D6](#decision-d6)).
-- IFC IRI form and version for [`occupation-feature`](occupation-feature.ttl) mappings: buildingSMART identifiers vs the ifcOWL namespace. Decided 2026-10-16: buildingSMART identifiers, IFC 4.3.
+- IFC IRI form and version for [`occupation-feature`](occupation-feature.ttl) mappings: buildingSMART identifiers vs the ifcOWL namespace.
+  Decided 2026-10-16: buildingSMART identifiers, IFC 4.3.
 
 ---
 
@@ -523,13 +671,21 @@ The only new WA vocabulary is [`wa-approved-form`](../../../profiles/wa-approved
 
 ### Principles applied
 
-1. **Ownership follows meaning; repository and namespace follow ownership, not authorship.** WA drafted the SR vocabularies, but their meaning is generic, so ICSM should own them. WA incubates them.
-2. **Keep published IRIs.** Nothing published is renamed. New vocabularies take their final IRIs once, which is why [D1](#decision-d1) must come before publication.
-3. **One concept, one IRI.** Jurisdictions constrain use through SHACL ([`sh:in`](https://www.w3.org/TR/shacl/#InConstraintComponent), or [`skos:inScheme`](https://www.w3.org/2009/08/skos-reference/skos.html#inScheme) on a [`skos:Collection`](https://www.w3.org/2009/08/skos-reference/skos.html#Collection)) and JSON Schema patterns in their profile. They add new concepts only for genuinely new meanings, linked by [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader) or `broadMatch` to the common concept. A jurisdictional *label* for a common concept is a [`skos:altLabel`](https://www.w3.org/2009/08/skos-reference/skos.html#altLabel) (or a profile label file), not a new concept.
+1. **Ownership follows meaning; repository and namespace follow ownership, not authorship.**
+   WA drafted the SR vocabularies, but their meaning is generic, so ICSM should own them.
+   WA incubates them.
+2. **Keep published IRIs.**
+   Nothing published is renamed.
+   New vocabularies take their final IRIs once, which is why [D1](#decision-d1) must come before publication.
+3. **One concept, one IRI.**
+   Jurisdictions constrain use through SHACL ([`sh:in`](https://www.w3.org/TR/shacl/#InConstraintComponent), or [`skos:inScheme`](https://www.w3.org/2009/08/skos-reference/skos.html#inScheme) on a [`skos:Collection`](https://www.w3.org/2009/08/skos-reference/skos.html#Collection)) and JSON Schema patterns in their profile.
+   They add new concepts only for genuinely new meanings, linked by [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader) or `broadMatch` to the common concept.
+   A jurisdictional *label* for a common concept is a [`skos:altLabel`](https://www.w3.org/2009/08/skos-reference/skos.html#altLabel) (or a profile label file), not a new concept.
 4. **Domain vs implementation.**
    - Domain and modelled-state vocabularies (representation, legal status, computability, boundary references, component roles, occupation types) are published.
    - Processing vocabularies (`boundary-coverage`, [`wa-prov-role`](wa-prov-role.csv)) stay with the implementation, or later with a validation/generation BBlock.
-   - [`derivation-mechanism`](derivation-mechanism.csv) and [`derived-geometry-status`](derived-geometry-status.csv) sit with the SRD *derivation* section. That keeps them reusable without placing them in the cadastral core.
+   - [`derivation-mechanism`](derivation-mechanism.csv) and [`derived-geometry-status`](derived-geometry-status.csv) sit with the SRD *derivation* section.
+     That keeps them reusable without placing them in the cadastral core.
 
 ### Target organisation
 
@@ -585,16 +741,20 @@ flowchart TB
 ### How reuse works without duplication
 
 - A WA dataset uses the common IRI (e.g. [`vertical-definition-type:brb`](crosswalk/vocab-crosswalk.csv)).
-- The WA profile's SHACL limits `sr:definitionType` to the subset WA permits and adds WA rules. For example, `brb` must cite a `boundary-definition-statement` annotation.
+- The WA profile's SHACL limits `sr:definitionType` to the subset WA permits and adds WA rules.
+  For example, `brb` must cite a `boundary-definition-statement` annotation.
 - Another jurisdiction reuses the same concepts with its own subset.
 - Where a jurisdiction needs a narrower legal meaning (e.g. a WA-specific height level), it mints `wa-<name>:term` with [`skos:broadMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#broadMatch) to the common concept, rather than copying the common one.
 
 ### URI and namespace management
 
 - **Published IRIs:** unchanged.
-- **New common vocabularies:** `https://linked.data.gov.au/def/csdm/<name>`, with no jurisdiction prefix. These are the IRIs already present in WA contexts, keeping churn minimal.
+- **New common vocabularies:** `https://linked.data.gov.au/def/csdm/<name>`, with no jurisdiction prefix.
+  These are the IRIs already present in WA contexts, keeping churn minimal.
 - **New WA vocabularies:** `https://linked.data.gov.au/def/csdm/wa-<name>`.
-- **Concept local names:** fixed by [D1](#decision-d1) before first publication. Retired CSV vocabularies were never published, so they need no deprecation. Update examples and code instead.
+- **Concept local names:** fixed by [D1](#decision-d1) before first publication.
+  Retired CSV vocabularies were never published, so they need no deprecation.
+  Update examples and code instead.
 - **If a published concept ever has to move:** keep its IRI, mark it [`owl:deprecated`](https://www.w3.org/TR/owl2-syntax/#Annotation_Properties) with [`dcterms:isReplacedBy`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/isReplacedBy/), and never reuse the IRI.
 
 ---
@@ -650,10 +810,16 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 
 - **Until [B1](#activity-b1):**
   - The CSV drafts stay drafts in the WA proposals directory with their intended final IRIs.
-  - Examples may use them, but WA must not publish duplicate `wa-*` versions of common concepts. Doing so would force a later deprecation and migration.
-  - If WA needs resolvable IRIs before ICSM acts, the least-harm interim is ICSM-agreed publication as `experimental` under the final IRIs. Every published vocabulary already has that status.
-- **[`wa-occ`](crosswalk/vocab-crosswalk.csv):** the same rule applies. Do not publish [`wa-occ`](crosswalk/vocab-crosswalk.csv) and then migrate. If timing forces it, publish [`wa-occ`](crosswalk/vocab-crosswalk.csv) with [`skos:exactMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch) to the common concepts and deprecate it later. That is the explicitly justified fallback, not the preferred path.
-- **[`wa-parcel-purpose:strata-scheme`](../../../profiles/wa-parcel-purpose-supplement.ttl):** an interim term. It can remain after [B3](#activity-b3) as a WA purpose, but it no longer carries the "this is an aggregate" meaning.
+  - Examples may use them, but WA must not publish duplicate `wa-*` versions of common concepts.
+    Doing so would force a later deprecation and migration.
+  - If WA needs resolvable IRIs before ICSM acts, the least-harm interim is ICSM-agreed publication as `experimental` under the final IRIs.
+    Every published vocabulary already has that status.
+- **[`wa-occ`](crosswalk/vocab-crosswalk.csv):** the same rule applies.
+  Do not publish [`wa-occ`](crosswalk/vocab-crosswalk.csv) and then migrate.
+  If timing forces it, publish [`wa-occ`](crosswalk/vocab-crosswalk.csv) with [`skos:exactMatch`](https://www.w3.org/2009/08/skos-reference/skos.html#exactMatch) to the common concepts and deprecate it later.
+  That is the explicitly justified fallback, not the preferred path.
+- **[`wa-parcel-purpose:strata-scheme`](../../../profiles/wa-parcel-purpose-supplement.ttl):** an interim term.
+  It can remain after [B3](#activity-b3) as a WA purpose, but it no longer carries the "this is an aggregate" meaning.
 
 ---
 
@@ -661,7 +827,9 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 
 ### Decisions taken (2026-10-16)
 
-The Surround team took these decisions during the organisation phase, before the vocabularies go to their custodians. Where the Authority column of the options table names ICSM or Landgate, the custodian confirms the decision at submission. The options considered are kept in the table below this one.
+The Surround team took these decisions during the organisation phase, before the vocabularies go to their custodians.
+Where the Authority column of the options table names ICSM or Landgate, the custodian confirms the decision at submission.
+The options considered are kept in the table below this one.
 
 | ID | Status | Decision | Effect on the vocabularies | Decided by | Date |
 |---|---|---|---|---|---|
@@ -682,9 +850,11 @@ Other decisions taken by the Surround team on 2026-10-16:
 
 - [`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv) is relocated to the existing [`wa-survey-documentation-type:certificate-of-title`](../../../profiles/wa-survey-documentation-supplement.ttl); `wa-survey-type-supplement.ttl` is deleted.
 - [`wa-resolution-status`](crosswalk/vocab-crosswalk.csv) is absorbed into [`computability-status`](computability-status.csv); [`vertical-limit-role`](crosswalk/vocab-crosswalk.csv) into [`boundary-role`](boundary-role.csv); [`icsm-vertical-direction`](crosswalk/vocab-crosswalk.csv) into [`vertical-direction`](vertical-direction.csv); `building-`, `cadastral-` and [`relative-height-reference`](crosswalk/vocab-crosswalk.csv) into [`boundary-reference`](boundary-reference.csv).
-- [`height-reference`](height-reference.csv) keeps its 8 levels. AHD moves to the vertical CRS (EPSG or [`wa-vhd`](https://linked.data.gov.au/def/csdm/wa-vhd)); the 6 building-surface terms become [`boundary-reference`](boundary-reference.csv) combined with an [`occupation-feature`](occupation-feature.ttl).
+- [`height-reference`](height-reference.csv) keeps its 8 levels.
+  AHD moves to the vertical CRS (EPSG or [`wa-vhd`](https://linked.data.gov.au/def/csdm/wa-vhd)); the 6 building-surface terms become [`boundary-reference`](boundary-reference.csv) combined with an [`occupation-feature`](occupation-feature.ttl).
 - [`derived-geometry-status`](derived-geometry-status.csv) keeps `generated` and `not-generated` and adds `generation-failed`.
-- `wa-angle-derivation:M` stays as a local value. It is the WA APX-05 CSD code read by `arc_comp`, equivalent to [`wa-procedure-used:measured`](https://linked.data.gov.au/def/csdm/wa-procedure-used/measured), and is not added to any vocabulary.
+- `wa-angle-derivation:M` stays as a local value.
+  It is the WA APX-05 CSD code read by `arc_comp`, equivalent to [`wa-procedure-used:measured`](https://linked.data.gov.au/def/csdm/wa-procedure-used/measured), and is not added to any vocabulary.
 - `wa-surveypoint-purpose:boundary` in the examples becomes [`wa-surveypoint-purpose:internal-boundary`](https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/internal-boundary).
 - Examples in `2-5d-liminal`, `built-strata`, `_sources/wa-liminal` and the threeJS viewer data, and the processWAData skill and validators, change in the same release as the vocabularies.
 
@@ -723,4 +893,5 @@ Other decisions taken by the Surround team on 2026-10-16:
 - Each of the 25 CSVs has a disposition.
 - Ownership ([§5.8](#58-recommended-target-architecture) table) is kept separate from bindings (the binding columns in [§5.3](#53-consolidated-vocabulary-inventory-and-recommendations), [§5.6](#56-new-csv-vocabulary-integration-matrix) and [§5.9](#59-implementation-roadmap)).
 - Every change to centrally governed vocabularies or models is marked ICSM ([§5.5](#55-supplementary-term-integration-matrix-43-terms) "Approval", [§5.9](#59-implementation-roadmap) B).
-- No model property is claimed to exist unless found in the SRD ontology/schema, the core OWL or profile schemas. Proposed properties are labelled "(proposed)".
+- No model property is claimed to exist unless found in the SRD ontology/schema, the core OWL or profile schemas.
+  Proposed properties are labelled "(proposed)".
