@@ -1,0 +1,11 @@
+preflabel,definition,notation,altlabel,broader,related,scopenote
+Inner surface,"The inner surface of a building, wall or surface.",inner-surface,innerSurface|inner,,,
+External surface,"The external (outer) surface of a building, wall, floor or ceiling.",external-surface,externalSurface|outerSurface|outer surface|external|outer,,,
+Centre plane,The centre plane of a wall or floor slab.,centre-plane,centrePlane|centre,,derivation-mechanism:wall-centre-plane,
+Lower surface,"The lower (under) surface of a building, floor, floor slab or ceiling.",lower-surface,lowerSurface|underSurface|under surface|under,,,
+Upper surface,"The upper surface of a building, floor or ceiling.",upper-surface,upperSurface,,,
+Surface,"The surface of a building, wall, floor or ceiling.",surface,,,projection|offset-from-surface,
+Plane,"The plane of a building, wall, floor or ceiling.",plane,,,projection|offset-from-surface,
+Projection,"The projected continuation of a building, wall, floor, ceiling or associated surface or plane used to define a boundary beyond the physical extent of the referenced feature.",projection,projected|projected surface|projected plane,,surface|plane|derivation-mechanism:face-projection,
+Title boundary,A parcel solid face determined by the vertical plane of a 2D title boundary.,title-boundary,titleBoundary,,,
+Offset from surface,The boundary is offset by a stated distance from a referenced surface or plane; the direction of the offset is given by vertical-direction.,offset-from-surface,below-surface|above-surface|offset,,surface|plane|vertical-value-type:offset|derivation-mechanism:surface-offset,

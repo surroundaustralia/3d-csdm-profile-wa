@@ -1,0 +1,37 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/vertical-extent-status/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# Collections for the vertical-extent-status vocabulary (decision D4).
+# One scheme holds every concept; each collection is the subset used by one property.
+# Kept outside the CSV because the uplift pipeline cannot yet express skos:Collection.
+# Members use the kebab-case notations adopted under D1.
+
+:extent
+    a skos:Collection ;
+    skos:prefLabel "Vertical extent status" ;
+    skos:definition "Statuses describing the vertical extent of a parcel representation as a whole." ;
+    skos:member
+        :undefined ,
+        :not-supplied ,
+        :not-applicable ,
+        :unconstrained-above ,
+        :unconstrained-below ,
+        :jurisdictional-default ,
+        :legally-defined ,
+        :requires-resolution ;
+.
+
+:boundary
+    a skos:Collection ;
+    skos:prefLabel "Vertical boundary state" ;
+    skos:definition "States describing a single vertical boundary of a parcel in a stated direction." ;
+    skos:member
+        :undefined ,
+        :not-supplied ,
+        :not-applicable ,
+        :unconstrained ,
+        :defined-but-unresolved ,
+        :defined ,
+        :derived ,
+        :authoritative ;
+.

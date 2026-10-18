@@ -1,8 +1,8 @@
-preflabel,definition,notation,altlabel,related
-absent,The z value is absent.,absent,,
-unspecified,The meaning of the coordinate z value has not been specified.,us,,
-observationHeight,The z value records the height of a survey observation or mark.,oh,observation height|observation-height,
-geometryContext,The z value provides spatial context but does not define a parcel boundary.,gc,geometry context|geometry-context,
-referenceSurface,The z value forms part of a terrain,rs,floor|ground|reference-surface,
-legalBoundary,The z value forms part of legally authoritative boundary geometry.,lb,legal boundary|legal-boundary,
-derivedBoundaryGeometry,The z value forms part of geometry derived from source boundary information.,dbg,derived boundary geometry|derived-boundary-geometry,
+preflabel,definition,notation,altlabel,broader,related,scopenote
+Absent,The z value is absent.,absent,,,,
+Unspecified,The meaning of the coordinate z value has not been specified.,unspecified,us,,,
+Observation height,The z value records the height of a survey observation or mark.,observation-height,oh,,,
+Geometry context,The z value provides spatial context but does not define a parcel boundary.,geometry-context,gc,,,
+Reference surface,"The z value forms part of a terrain, floor or other reference surface from which heights or vertical limits are measured.",reference-surface,rs|floor|ground,,reference-kind:reference-surface,
+Legal boundary,The z value forms part of legally authoritative boundary geometry.,legal-boundary,lb,,,
+Derived boundary geometry,The z value forms part of geometry derived from source boundary information.,derived-boundary-geometry,dbg,,,

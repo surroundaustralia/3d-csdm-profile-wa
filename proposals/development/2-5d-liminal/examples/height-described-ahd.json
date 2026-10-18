@@ -142,13 +142,13 @@
         {
           "id": "file:CSD_DP431276.csd",
           "type": "prov:Entity",
-          "role": "sourceCsdFile",
+          "role": "source-csd-file",
           "format": "APX-05 CSD"
         },
         {
           "id": "file:DP431276.pdf",
           "type": "prov:Entity",
-          "role": "sourcePdfFile",
+          "role": "source-pdf-file",
           "format": "pdf"
         }
       ],
@@ -167,7 +167,7 @@
             "prov:SoftwareAgent",
             "schema:SoftwareApplication"
           ],
-          "role": "formatConverter",
+          "role": "format-converter",
           "description": "Python module used to convert APX-05 CSD records into WA 3D CSDM JSON."
         },
         {
@@ -176,7 +176,7 @@
             "prov:SoftwareAgent",
             "schema:SoftwareApplication"
           ],
-          "role": "workflowOrchestrator",
+          "role": "workflow-orchestrator",
           "description": "Python module used to run the CSD converter, run the PDF metadata extractor, and merge the resulting JSON outputs."
         }
       ]
@@ -243,7 +243,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -277,7 +277,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -311,7 +311,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -345,7 +345,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -702,30 +702,30 @@
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:created",
             "spatialRepresentationDefinitions": {
-              "representationStatus": "representation-status:hd",
-              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "representationStatus": "representation-status:height-described",
+              "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
               "coordinateRepresentation": {
                 "coordinateDimension": 2,
                 "zValueRole": "coordinate-z-role:absent"
               },
               "verticalExtent": {
-                "status": "vertical-extent-status:ld",
+                "status": "vertical-extent-status:legally-defined",
                 "lowerBoundary": {
-                  "state": "vertical-boundary-state:def",
+                  "state": "vertical-extent-status:defined",
                   "definitionRef": "absolute-limit-lower-1"
                 },
                 "upperBoundary": {
-                  "state": "vertical-boundary-state:def",
+                  "state": "vertical-extent-status:defined",
                   "definitionRef": "absolute-limit-upper-1"
                 }
               },
-              "computabilityStatus": "computability-status:c",
+              "computabilityStatus": "computability-status:computable",
               "verticalBoundaryDefinitions": [
                 {
                   "id": "absolute-limit-lower-1",
-                  "definitionType": "vertical-definition-type:ahd",
-                  "limitRole": "vertical-limit-role:ll",
-                  "valueType": "vertical-value-type:ah",
+                  "definitionType": "vertical-definition-type:absolute-height-description",
+                  "limitRole": "boundary-role:lower",
+                  "valueType": "vertical-value-type:absolute-height",
                   "zMin": 16,
                   "comparisonOperator": "greaterThanOrEqual",
                   "description": "limited in height to more than and equal to 16.00 AHD",
@@ -735,9 +735,9 @@
                 },
                 {
                   "id": "absolute-limit-upper-1",
-                  "definitionType": "vertical-definition-type:ahd",
-                  "limitRole": "vertical-limit-role:ul",
-                  "valueType": "vertical-value-type:ah",
+                  "definitionType": "vertical-definition-type:absolute-height-description",
+                  "limitRole": "boundary-role:upper",
+                  "valueType": "vertical-value-type:absolute-height",
                   "zMax": 35,
                   "comparisonOperator": "lessThanOrEqual",
                   "description": "limited in height to less than and equal to 35.00 AHD",
@@ -747,7 +747,7 @@
                 }
               ],
               "derivedGeometry": {
-                "status": "notGenerated"
+                "status": "derived-geometry-status:not-generated"
               }
             },
             "interests": []
@@ -793,10 +793,10 @@
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:former-tenure",
-            "representationStatus": "representation-status:a3d",
-            "verticalExtentStatus": "vertical-extent:ns",
-            "geometryLegalStatus": "geometry-legal-status:l3d",
-            "computabilityStatus": "computability-status:nc",
+            "representationStatus": "representation-status:authoritative-3d",
+            "verticalExtentStatus": "vertical-extent-status:not-supplied",
+            "geometryLegalStatus": "geometry-legal-status:legal-3d",
+            "computabilityStatus": "computability-status:not-computable",
             "interests": [
               {
                 "interestLink": "2500-584",
@@ -845,10 +845,10 @@
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
             "parcelState": "wa-parcel-state:former-tenure",
-            "representationStatus": "representation-status:a3d",
-            "verticalExtentStatus": "vertical-extent:ns",
-            "geometryLegalStatus": "geometry-legal-status:l3d",
-            "computabilityStatus": "computability-status:nc",
+            "representationStatus": "representation-status:authoritative-3d",
+            "verticalExtentStatus": "vertical-extent-status:not-supplied",
+            "geometryLegalStatus": "geometry-legal-status:legal-3d",
+            "computabilityStatus": "computability-status:not-computable",
             "interests": [
               {
                 "interestLink": "2500-585",
@@ -889,15 +889,15 @@
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }

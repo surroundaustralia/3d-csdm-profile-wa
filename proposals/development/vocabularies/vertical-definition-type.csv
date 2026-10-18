@@ -1,6 +1,6 @@
-preflabel,definition,notation,altlabel,related
-relativeHeightDescription,"A vertical boundary is described by an offset from a reference surface, object, or plane.",rel,relative height description|relative-height-description,
-absoluteHeightDescription,A vertical boundary is expressed as an absolute height in a declared vertical CRS or datum.,ahd,absolute height description|absolute-height-description,
-jurisdictionalBoundaryRule,"A vertical boundary is defined by a title, statute, Crown Grant, strata statement, or approved jurisdictional rule.",jur,jurisdictional boundary rule|jurisdictional-boundary-rule,
-geometryBoundaryReference,"A vertical boundary is defined directly by reference to a surface, plane, or other boundary geometry.",gbr,geometry boundary reference|geometry-boundary-reference,
-buildingReferencedBoundary,"The cadastral boundary is established by a defined relationship to a particular building surface, plane or element.",brb,building referenced boundary|building-referenced-boundary,
+preflabel,definition,notation,altlabel,broader,related,scopenote
+Relative height description,"A vertical boundary is described by an offset from a reference surface, object, or plane.",relative-height-description,rel,,vertical-value-type:offset,
+Absolute height description,A vertical boundary is expressed as an absolute height in a declared vertical CRS or datum.,absolute-height-description,ahd,,vertical-value-type:absolute-height,
+Jurisdictional boundary rule,"A vertical boundary is defined by a title, statute, Crown Grant, strata statement, or approved jurisdictional rule.",jurisdictional-boundary-rule,jur,,vertical-value-type:rule-expression,
+Geometry boundary reference,"A vertical boundary is defined directly by reference to a surface, plane, or other boundary geometry.",geometry-boundary-reference,gbr,,vertical-value-type:geometry-reference,
+Building referenced boundary,"The cadastral boundary is established by a defined relationship to a particular building surface, plane or element.",building-referenced-boundary,brb,geometry-boundary-reference,wa-annotation:boundary-definition-statement,

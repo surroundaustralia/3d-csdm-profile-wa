@@ -7,6 +7,8 @@
     "wa-procedure-used": "https://linked.data.gov.au/def/csdm/wa-procedure-used/",
     "wa-survey-documentation-type": "https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/",
     "wa-annotation-role": "https://linked.data.gov.au/def/csdm/wa-annotation/",
+    "wa-annotation": "https://linked.data.gov.au/def/csdm/wa-annotation/",
+    "wa-surveypoint-method": "https://linked.data.gov.au/def/csdm/wa-surveypoint-method/",
     "wa-parcel-purpose": "https://linked.data.gov.au/def/csdm/wa-parcel-purpose/",
     "wa-parcel-type": "https://linked.data.gov.au/def/csdm/wa-parcel-type/",
     "wa-parcel-state": "https://linked.data.gov.au/def/csdm/wa-parcel-state/",

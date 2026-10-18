@@ -216,7 +216,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -250,7 +250,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -284,7 +284,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -318,7 +318,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -806,32 +806,32 @@
       "properties": {
         "spatialRepresentationDefinitions": {
               "representationStatus": "representation-status:2-5d",
-              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
               "coordinateRepresentation": {
                 "coordinateDimension": 3,
-                "zValueRole": "coordinate-z-role:rs"
+                "zValueRole": "coordinate-z-role:reference-surface"
               },
               "verticalExtent": {
-                "status": "vertical-extent-status:na",
+                "status": "vertical-extent-status:not-applicable",
                 "lowerBoundary": {
-                  "state": "vertical-boundary-state:na"
+                  "state": "vertical-extent-status:not-applicable"
                 },
                 "upperBoundary": {
-                  "state": "vertical-boundary-state:na"
+                  "state": "vertical-extent-status:not-applicable"
                 }
               },
-              "computabilityStatus": "computability-status:nc",
+              "computabilityStatus": "computability-status:not-computable",
               "referenceSurfaces": [
                 {
                   "id": "surface-ground-1",
-                  "surfaceType": "height-reference:gl",
-                  "geometryLegalStatus": "geometry-legal-status:obs",
+                  "surfaceType": "height-reference:ground-level",
+                  "geometryLegalStatus": "geometry-legal-status:observed",
                   "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
                   "boundedByFootprint": true
                 }
               ],
               "derivedGeometry": {
-                "status": "notGenerated"
+                "status": "derived-geometry-status:not-generated"
               }
             }
       },
@@ -890,23 +890,23 @@
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -1018,15 +1018,15 @@
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }
