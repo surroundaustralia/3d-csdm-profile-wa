@@ -217,7 +217,7 @@
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
-        "usedProcedure": "wa-procedure-used:M",
+        "usedProcedure": "wa-procedure-used:measured",
         "angleType": "icsm-angle-type:angle",
         "distanceType": "icsm-distance-type:grid",
         "madeBySensor": {
