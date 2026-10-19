@@ -883,7 +883,7 @@ Other decisions taken by the Surround team on 2026-10-16:
 | <a id="option-d9"></a>D9 | Endorsing authority for strata plans (WAPC vs local government, s15) | — | resolve against the Strata Titles Act and the current form, then align 3 definitions | Three conflicting definitions | Landgate |
 | <a id="option-d10"></a>D10 | `limitRole` vs `boundaryRole`; "vertical" naming with lateral limits | consolidate into one property and `boundaryDefinitions`; or keep both | consolidate in the SRD-parcel extension | One vocabulary ([`boundary-role`](boundary-role.csv)) already serves both | ICSM (SRD owner) |
 | <a id="option-d11"></a>D11 | `derived-boundary` points | new purpose; new method narrower than `G`; existing terms only | method narrower than `G` | Purpose vs provenance separation | Landgate |
-| <a id="option-d12"></a>D12 | Implementation vocabularies (`boundary-coverage`, [`wa-prov-role`](wa-prov-role.csv)) | publish common; publish WA; keep local | keep local | Pipeline states, open-ended role sets | Project / WA |
+| <a id="option-d12"></a>D12 | Implementation vocabularies (`boundary-coverage`, [`wa-prov-role`](wa-prov-role.csv)) | publish common; publish WA; keep local | keep local | Pipeline states, open-ended role sets | Internal Project |
 
 ---
 
