@@ -448,8 +448,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -463,8 +462,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -478,8 +476,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -493,8 +490,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -1299,8 +1295,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -1314,8 +1309,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -1329,8 +1323,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -1344,8 +1337,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -2503,8 +2495,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -2518,8 +2509,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -2533,8 +2523,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -2548,8 +2537,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -3543,8 +3531,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -3558,8 +3545,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -3573,8 +3559,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -3588,8 +3573,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -5017,8 +5001,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5032,8 +5015,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5047,8 +5029,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5062,8 +5043,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -5982,8 +5962,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5997,8 +5976,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -6012,8 +5990,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -6027,8 +6004,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -7306,8 +7282,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -7321,8 +7296,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -7336,8 +7310,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -7351,8 +7324,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -8276,8 +8248,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -8291,8 +8262,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -8306,8 +8276,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -8321,8 +8290,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -9609,8 +9577,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -9624,8 +9591,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -9639,8 +9605,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -9654,8 +9619,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -10580,8 +10544,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -10595,8 +10558,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -10610,8 +10572,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -10625,8 +10586,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -12172,8 +12132,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -12187,8 +12146,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -12202,8 +12160,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -12217,8 +12174,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -14737,8 +14693,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -14752,8 +14707,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -14767,8 +14721,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -14782,8 +14735,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
