@@ -238,6 +238,10 @@ python .claude/skills/vocab-audit/scripts/run_audit.py 11-drift --against 00-bas
 - **Remaining errors** (3): the ICSM `icsm-survey-type` binding and context prefix (ICSM-owned), and the local `wa-angle-derivation` prefix (decided 2026-10-16, [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions)).
 - **Expected warning**: `PLACEHOLDER_DEFINITION` for `wa-survey-documentation-type` stays until the published file is rebuilt from the CSV; a throwaway build passed and cleared it.
 
+### Handover run for [`bce3571`](https://github.com/andrewhunter2066/processWAData/commit/bce3571)
+
+-  `wa-angle-derivation` removal as redundant with `"usedProcedure"`.
+
 ---
 
 ## 6. Still open

@@ -154,7 +154,7 @@ A stage can begin once its own blocking decisions are recorded, without waiting 
 > **Status (2026-10-18): mostly done.**
 > [2.1](#task-2-1) and [2.2](#task-2-2) by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9): the bindings JSON was regenerated from the CSV, and the `wa-vector-type`, `wa-interest` and `wa-mines` prefixes were removed from the `wa-core`, `waAppellationNamespaces` and `wa-mining` contexts.
 > [2.3](#task-2-3) is done for `wa-pt-method` (renamed to `wa-surveypoint-method` in Stage 9); the `wa-core` context keeps `wa-annotation-role` as an alias for its examples.
-> [2.4](#task-2-4): `wa-angle-derivation:M` stays a local value (decided 2026-10-16, [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions)).
+> [2.4](#task-2-4): done: 2026-10-19; the field was removed as redundant with "usedProcedure." `wa-angle-derivation:M` stays a local value (decided 2026-10-16, [`vocab-review.md`](vocab-review.md) [§5.10](vocab-review.md#510-decisions)).
 > [2.5](#task-2-5) was done in cleanup [Stage 5](HANDOFF.md#cleanup-stage-5), with `vertical-extent-status:dfld` mapped to `legally-defined` ([`crosswalk/value-aliases.csv`](crosswalk/value-aliases.csv)).
 > [2.6](#task-2-6) is open; the missing `icsm-survey-type` belongs to ICSM ([B5](vocab-review.md#activity-b5)).
 

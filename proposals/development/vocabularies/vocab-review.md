@@ -266,7 +266,7 @@ Publication remains with the custodians; see [`HANDOFF.md`](HANDOFF.md).
 
 The handover fixes (cleanup [Stage 9](HANDOFF.md#cleanup-stage-9), 2026-10-18) resolved most of [F-B1](#finding-f-b1) and [A5](#activity-a5).
 The stale [`wa-vocab-bindings.csv.json`](../../../profiles/wa-vocab-bindings.csv.json) was regenerated from the CSV, the undefined `wa-vector-type`, `wa-interest` and `wa-mines` prefixes were removed from the contexts, and `wa-pt-method:` became [`wa-surveypoint-method:`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method).
-Still open are the missing `icsm-survey-type` ([B5](#activity-b5)), the `wa-annotation-role` alias kept for the `wa-core` examples, and `wa-angle-derivation:`, which stays a local value ([§5.10](#510-decisions)).
+Still open are the missing `icsm-survey-type` ([B5](#activity-b5)), the `wa-annotation-role` alias kept for the `wa-core` examples.
 The seven placeholder [`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) definitions ([F-Q2](#finding-f-q2)) have drafted replacements in the `sa-icsm-vocabs` source CSV; they are still to be confirmed and published (HANDOFF section 6).
 The audit also found 16 example values in no vocabulary that this review did not list (for example `wa-vector-purpose:I`); they are mapped in [`crosswalk/value-aliases.csv`](crosswalk/value-aliases.csv), and `wa-parcel-type:road`, `wa-parcel-type:miscellaneous` and `icsm-distance-type:grid` were added to the published vocabularies.
 
@@ -661,7 +661,7 @@ The only new WA vocabulary is [`wa-approved-form`](../../../profiles/wa-approved
 | <a id="finding-f-g1"></a>F-G1 | Ownership ambiguity | The SRD BBlock describes itself as generic, sits in `ogcincubator/bblocks-land-parcels`, uses `register: icsm-csdm`, ids `icsm.profiles.wa.datatypes.*`, and links to the WA repo |
 | <a id="finding-f-g2"></a>F-G2 | Namespace presumption | WA contexts bind 11 CSV vocabularies to `…/def/csdm/<name>/` (the ICSM namespace pattern); the IRIs are unresolvable today |
 
-**Status (2026-10-18):** [F-B1](#finding-f-b1) is resolved except for `icsm-survey-type` and the local `wa-angle-derivation:`, and the [F-Q2](#finding-f-q2) placeholder definitions are drafted, by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9); see the cleanup status in [§5.3](#53-consolidated-vocabulary-inventory-and-recommendations).
+**Status (2026-10-18):** [F-B1](#finding-f-b1) is resolved except for `icsm-survey-type`, and the [F-Q2](#finding-f-q2) placeholder definitions are drafted, by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9); see the cleanup status in [§5.3](#53-consolidated-vocabulary-inventory-and-recommendations).
 
 ### Potential improvements (need further research)
 
@@ -793,7 +793,7 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 | <a id="activity-a8"></a>A8 | Keep [`wa-prov-role`](wa-prov-role.csv) local and document it in `processWAData`; remove `boundary-coverage` ([D12](#decision-d12)) | CSVs | `processWAData` | none | — |
 | <a id="activity-a9"></a>A9 | Extend the uplift pipeline: map `related` (→ [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related)), split `altlabel` on one agreed separator, support `broader` | [`vocabs-uplift.yml`](https://github.com/icsm-au/icsm-vocabs/blob/main/source/vocabs-uplift.yml) (both repos) | same | — | before [B1](#activity-b1) |
 
-**Status (2026-10-18):** [A5](#activity-a5) is done by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9), except for the `wa-annotation-role` alias kept for the `wa-core` examples and `wa-angle-derivation:`, which stays a local value ([§5.10](#510-decisions)).
+**Status (2026-10-18):** [A5](#activity-a5) is done by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9), except for the `wa-annotation-role` alias kept for the `wa-core` examples.
 
 ### B. Requires ICSM review or approval
 
@@ -863,7 +863,7 @@ Other decisions taken by the Surround team on 2026-10-16:
 - [`height-reference`](height-reference.csv) keeps its 8 levels.
   AHD moves to the vertical CRS (EPSG or [`wa-vhd`](https://linked.data.gov.au/def/csdm/wa-vhd)); the 6 building-surface terms become [`boundary-reference`](boundary-reference.csv) combined with an [`occupation-feature`](occupation-feature.ttl).
 - [`derived-geometry-status`](derived-geometry-status.csv) keeps `generated` and `not-generated` and adds `generation-failed`.
-- `wa-angle-derivation:M` stays as a local value.
+- `wa-angle-derivation:M` ~~stays as a local value.~~ Superseded 2026-10-19: removed from the examples, because the observations already carry usedProcedure: wa-procedure-used:measured."
   It is the WA APX-05 CSD code read by `arc_comp`, equivalent to [`wa-procedure-used:measured`](https://linked.data.gov.au/def/csdm/wa-procedure-used/measured), and is not added to any vocabulary.
 - `wa-surveypoint-purpose:boundary` in the examples becomes [`wa-surveypoint-purpose:internal-boundary`](https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/internal-boundary).
 - Examples in `2-5d-liminal`, `built-strata`, `_sources/wa-liminal` and the threeJS viewer data, and the processWAData skill and validators, change in the same release as the vocabularies.
