@@ -258,11 +258,17 @@ Purpose by vocabulary group (to avoid repeating it per row):
 
 `SurveyPoints/surveypointvocab.md` is documentation, not a vocabulary.
 
-**Cleanup status (2026-10-16).**
+**Cleanup status (2026-10-16, updated 2026-10-18).**
 The dispositions in [§5.3.2](#532-supplementary-turtle-vocabularies-10-files), [§5.3.3](#533-proposed-csv-vocabularies-25-files), [§5.5](#55-supplementary-term-integration-matrix-43-terms) and [§5.6](#56-new-csv-vocabulary-integration-matrix) were carried out by the WA vocabulary cleanup (Stages [2](HANDOFF.md#cleanup-stage-2)-[4](HANDOFF.md#cleanup-stage-4)) and applied to the examples and processWAData (Stages [5](HANDOFF.md#cleanup-stage-5)-[6](HANDOFF.md#cleanup-stage-6)).
 Each old term's outcome is in [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv) (181 rows), and the status columns in [§5.5](#55-supplementary-term-integration-matrix-43-terms) and [§5.6](#56-new-csv-vocabulary-integration-matrix) summarise it.
 The 25 CSVs are now 16 drafts plus the local [`wa-prov-role`](wa-prov-role.csv), and [`wa-occ`](crosswalk/vocab-crosswalk.csv) is the common [`occupation-feature.ttl`](occupation-feature.ttl).
 Publication remains with the custodians; see [`HANDOFF.md`](HANDOFF.md).
+
+The handover fixes (cleanup [Stage 9](HANDOFF.md#cleanup-stage-9), 2026-10-18) resolved most of [F-B1](#finding-f-b1) and [A5](#activity-a5).
+The stale [`wa-vocab-bindings.csv.json`](../../../profiles/wa-vocab-bindings.csv.json) was regenerated from the CSV, the undefined `wa-vector-type`, `wa-interest` and `wa-mines` prefixes were removed from the contexts, and `wa-pt-method:` became [`wa-surveypoint-method:`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method).
+Still open are the missing `icsm-survey-type` ([B5](#activity-b5)), the `wa-annotation-role` alias kept for the `wa-core` examples, and `wa-angle-derivation:`, which stays a local value ([§5.10](#510-decisions)).
+The seven placeholder [`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) definitions ([F-Q2](#finding-f-q2)) have drafted replacements in the `sa-icsm-vocabs` source CSV; they are still to be confirmed and published (HANDOFF section 6).
+The audit also found 16 example values in no vocabulary that this review did not list (for example `wa-vector-purpose:I`); they are mapped in [`crosswalk/value-aliases.csv`](crosswalk/value-aliases.csv), and `wa-parcel-type:road`, `wa-parcel-type:miscellaneous` and `icsm-distance-type:grid` were added to the published vocabularies.
 
 ### 5.3.2 Supplementary Turtle vocabularies, 10 files
 
@@ -344,7 +350,7 @@ Observations:
   This matters for `strata-scheme` ([D6](#decision-d6)).
 - **[`wa-survey-type`](https://linked.data.gov.au/def/csdm/wa-survey-type) mixes plan types with data or format types.**
   `csd`, `dsd`, `field-record` and `survey-sheet` sit alongside `strata-plan` and `deposited-plan`.
-- **[`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) has six terms with the definition "Note: To be confirmed if part of final schema design".**
+- **[`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) has seven terms with the definition "Note: To be confirmed if part of final schema design".**
   These are placeholder definitions in a published vocabulary.
 - **[`wa-secondary-purpose`](https://linked.data.gov.au/def/csdm/wa-secondary-purpose) (68) vs [`wa-secondary-parcel-purpose`](https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose) (60)** share only 2 labels.
   They are distinct but confusingly named.
@@ -647,13 +653,15 @@ The only new WA vocabulary is [`wa-approved-form`](../../../profiles/wa-approved
 | <a id="finding-f-n2"></a>F-N2 | Misleading codes | [`vertical-definition-type:ahd`](crosswalk/vocab-crosswalk.csv) ≠ AHD; `rs` = referenceSurface (z-role) and roofSurface ([height-reference](height-reference.csv)); `ns` = naturalSurface and notSupplied |
 | <a id="finding-f-n3"></a>F-N3 | `icsm-` prefix on WA-drafted vocabularies | 6 CSVs prefixed `icsm-`; scope note says the prefix assumption was "a late consideration" |
 | <a id="finding-f-q1"></a>F-Q1 | Structural defects | [`wa-occ`](crosswalk/vocab-crosswalk.csv) dangling `:Building`, `:BuildingElement` and `:Structure` (12 broken broader links); [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) lacks a ConceptScheme; empty `skos:altLabel ""` in interest-type and parcel-purpose supplements |
-| <a id="finding-f-q2"></a>F-Q2 | Missing or placeholder definitions | 6 [`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) terms "To be confirmed…"; [`wa-annotation`](https://linked.data.gov.au/def/csdm/wa-annotation) 4 terms with no definition; [`wa-monument-condition`](https://linked.data.gov.au/def/csdm/wa-monument-condition) and most [`icsm-monument-condition`](https://linked.data.gov.au/def/csdm/icsm-monument-condition) terms undefined |
+| <a id="finding-f-q2"></a>F-Q2 | Missing or placeholder definitions | 7 [`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type) terms "To be confirmed…"; [`wa-annotation`](https://linked.data.gov.au/def/csdm/wa-annotation) 4 terms with no definition; [`wa-monument-condition`](https://linked.data.gov.au/def/csdm/wa-monument-condition) and most [`icsm-monument-condition`](https://linked.data.gov.au/def/csdm/icsm-monument-condition) terms undefined |
 | <a id="finding-f-b1"></a>F-B1 | Undefined or missing vocabularies referenced | `icsm-vocab-bindings` → `icsm-survey-type` (absent); [`wa-vocab-bindings.csv.json`](../../../profiles/wa-vocab-bindings.csv.json) → `wa-angle-type`, `wa-distance-type`, `wa-equipment-type` (absent; stale file); `wa-core` context → `wa-vector-type`, `wa-interest` (absent); examples → `wa-angle-derivation:`, `wa-pt-method:` (undeclared) |
 | <a id="finding-f-b2"></a>F-B2 | Data/vocabulary drift | `vertical-extent-status:dfld` in examples and validator (not in vocabulary); validator codes `cmp`, `rjr` not in CSVs; derived-geometry status bare `notGenerated` vs [`icsm-derived-geometry-status:not-generated`](crosswalk/vocab-crosswalk.csv) |
 | <a id="finding-f-b3"></a>F-B3 | Registration gaps | [`wa-annotation`](https://linked.data.gov.au/def/csdm/wa-annotation), [`wa-survey-documentation-type`](https://linked.data.gov.au/def/csdm/wa-survey-documentation-type), [`wa-interest-type`](https://linked.data.gov.au/def/csdm/wa-interest-type), [`wa-surveypoint-method`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method), [`wa-occ`](crosswalk/vocab-crosswalk.csv) and [`wa-approved-form`](../../../profiles/wa-approved-form-supplement.ttl) have no binding rows; the latter three lack context prefixes; supplements are loaded only as `wa-liminal` `shaclClosures` (7 of 10) |
 | <a id="finding-f-p1"></a>F-P1 | Pipeline limitations | [`vocabs-uplift.yml`](https://github.com/icsm-au/icsm-vocabs/blob/main/source/vocabs-uplift.yml) does not map `related`, does not split `altlabel` (so "a\|b\|c" becomes one literal), cannot express [`skos:broader`](https://www.w3.org/2009/08/skos-reference/skos.html#broader), and assigns `…/notdefined` to unmapped CSVs; CSV separators inconsistent (`\|` vs `;`) |
 | <a id="finding-f-g1"></a>F-G1 | Ownership ambiguity | The SRD BBlock describes itself as generic, sits in `ogcincubator/bblocks-land-parcels`, uses `register: icsm-csdm`, ids `icsm.profiles.wa.datatypes.*`, and links to the WA repo |
 | <a id="finding-f-g2"></a>F-G2 | Namespace presumption | WA contexts bind 11 CSV vocabularies to `…/def/csdm/<name>/` (the ICSM namespace pattern); the IRIs are unresolvable today |
+
+**Status (2026-10-18):** [F-B1](#finding-f-b1) is resolved except for `icsm-survey-type` and the local `wa-angle-derivation:`, and the [F-Q2](#finding-f-q2) placeholder definitions are drafted, by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9); see the cleanup status in [§5.3](#53-consolidated-vocabulary-inventory-and-recommendations).
 
 ### Potential improvements (need further research)
 
@@ -784,6 +792,8 @@ D6 (featureType) ─► B3 icsm-3d schema change ─► (optional) retire strata
 | <a id="activity-a7"></a>A7 | Fix data drift: `vertical-extent-status:dfld`; validator codes `cmp`/`rjr`; unify derived-geometry status values | examples, `processWAData/src/csdm_validator` | same | — | [A6](#activity-a6) |
 | <a id="activity-a8"></a>A8 | Keep [`wa-prov-role`](wa-prov-role.csv) local and document it in `processWAData`; remove `boundary-coverage` ([D12](#decision-d12)) | CSVs | `processWAData` | none | — |
 | <a id="activity-a9"></a>A9 | Extend the uplift pipeline: map `related` (→ [`skos:related`](https://www.w3.org/2009/08/skos-reference/skos.html#related)), split `altlabel` on one agreed separator, support `broader` | [`vocabs-uplift.yml`](https://github.com/icsm-au/icsm-vocabs/blob/main/source/vocabs-uplift.yml) (both repos) | same | — | before [B1](#activity-b1) |
+
+**Status (2026-10-18):** [A5](#activity-a5) is done by cleanup [Stage 9](HANDOFF.md#cleanup-stage-9), except for the `wa-annotation-role` alias kept for the `wa-core` examples and `wa-angle-derivation:`, which stays a local value ([§5.10](#510-decisions)).
 
 ### B. Requires ICSM review or approval
 

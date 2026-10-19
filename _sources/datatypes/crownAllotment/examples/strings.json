@@ -8,7 +8,7 @@
     },
     {
       "type": "crownAllocationType",
-      "label": "wa-parcel-purpose:townlot"
+      "label": "wa-parcel-purpose:townsite-lot"
     },
     {
       "type": "number",
