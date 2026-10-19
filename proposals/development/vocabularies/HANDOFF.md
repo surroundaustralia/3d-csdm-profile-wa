@@ -97,12 +97,12 @@ cd /mnt/c/Users/Andrew/Documents/GitHub/processWAData
 export PYTHONPATH=src            # or: pip install -e .  (then use `wa-vocab-audit`)
 ```
 
-**Easiest:** ask Claude to use the `vocab-audit` skill (processWAData `.claude/skills/vocab-audit/`).
-It runs the audit, compares with an earlier run and explains the changes.
-Or run its script directly:
+**Easiest:** ask Claude to use the `vocab-audit` skill (`/edge-dev:vocab-audit`; since 2026-10-19 it lives in the `edge-dev` plugin of `edge-development-hub`, not in processWAData).
+It runs processWAData's `vocab_audit` package, compares with an earlier run and explains the changes.
+Or run its script directly (it finds processWAData through `PROCESSWADATA_ROOT` or the sibling checkout, so any working folder will do):
 
 ```bash
-python .claude/skills/vocab-audit/scripts/run_audit.py <NN-label> --against <earlier-label>
+python ../edge-development-hub/plugins/edge-dev/skills/vocab-audit/scripts/run_audit.py <NN-label> --against <earlier-label>
 ```
 
 This writes `data/output/vocab-audit/<NN-label>/` with `summary.md`, `findings.csv`, `usage.csv` and `compare.md`.
@@ -272,12 +272,14 @@ python .claude/skills/vocab-audit/scripts/run_audit.py 11-drift --against 00-bas
 ## 7. Downstream migration
 
 Eight local repositories use 3D CSDM data.
-The processWAData **`vocab-migrate`** skill (`.claude/skills/vocab-migrate/`) scans them read-only against the crosswalk files ([section 3](#3-the-crosswalk)) and the current vocabularies, then replaces whole values on a branch.
+The **`vocab-migrate`** skill (`/edge-dev:vocab-migrate`, in the `edge-dev` plugin of `edge-development-hub` since 2026-10-19; it was in processWAData) scans them read-only against the crosswalk files ([section 3](#3-the-crosswalk)) and the current vocabularies, then replaces whole values on a branch.
 Ask Claude to "use vocab-migrate on `<repository>`", or run its script:
 
 ```bash
-python .claude/skills/vocab-migrate/scripts/vocab_migrate.py scan <label> ../<repo> ...   # read-only
-python .claude/skills/vocab-migrate/scripts/vocab_migrate.py apply ../<repo>              # dry run; --write on a branch
+SCRIPT=../edge-development-hub/plugins/edge-dev/skills/vocab-migrate/scripts/vocab_migrate.py
+python $SCRIPT scan <label> <repo> ...       # read-only; a repo is a sibling name or a path
+python $SCRIPT scan <label> --consumers      # every consumer listed in edge-development-hub/setup/repos.yaml
+python $SCRIPT apply <repo>                  # dry run; --write on a branch
 ```
 
 Status on 2026-10-18.
