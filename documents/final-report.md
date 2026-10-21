@@ -86,7 +86,7 @@ Sections 6–8 establish where the programme could go next and the value of doin
 |---------|--------|------------|---------------|-------------|
 | 0.1     | Draft  | 2026-10-15 | Andrew Hunter | Initial TOC |
 
-This document is complete as of the date of presentation to RAN in satisfaction of the Milestone #6 deliverables. 
+This document is complete as of the date of presentation to Accenture. 
 
 <!-- CONTENT -->
 
@@ -112,107 +112,96 @@ Clarify the split of responsibility between SURROUND and the NGSC implementation
 Show how contracted machine-readable specifications and other technical outputs were addressed, referencing artefacts where they exist.
 -->
 
-This section outlines the context in which SURROUND was engaged to support the Western Australian Next Generation Spatial Cadastre (NGSC) project, the scope of its responsibilities, and the approach adopted in delivering the contracted work.
-
-It describes SURROUND's relationship with Accenture and Landgate, the methodology applied across the five project deliverables, and the distinction between cadastral information modelling and NGSC system implementation responsibilities. 
-It also summarises the collaborative approach to requirements analysis, technical specification development, and knowledge transfer.
-
-Together, these provide the context for assessing the work undertaken, the technical outputs produced, and the opportunities for further development identified through the engagement.
+This section outlines SURROUND's role in the Western Australian Next Generation Spatial Cadastre (NGSC) project, its contractual responsibilities, and the approach adopted across the five deliverables. 
+It also describes the requirements analysis methodology, supporting technical development, collaboration, and knowledge transfer.
 
 ### 2.1 NGSC programme context and objectives
 
-The Western Australian Next Generation Spatial Cadastre (NGSC) project forms part of Landgate's broader Spatial WA programme. 
-The project seeks to modernise the management of cadastral information, including the transition from predominantly two-dimensional cadastral representations to a spatial cadastre capable of supporting three-dimensional parcels, improved data quality, automated validation, and integration with contemporary spatial information systems.
+The Next Generation Spatial Cadastre (NGSC) project forms part of Landgate's broader Spatial WA programme. 
+Its objectives include modernising cadastral information management, supporting the transition from two-dimensional to three-dimensional cadastral representations, improving data quality and validation, and enabling integration with contemporary spatial information systems.
 
-Accenture is the prime contractor responsible for delivery of the NGSC solution to Landgate. 
-Accenture engaged SURROUND Australia to provide specialist cadastral information modelling, standards development, and technical advisory services, with particular emphasis on the Intergovernmental Committee on Surveying and Mapping (ICSM) [3D Cadastral Survey Data Model (3D CSDM)](https://icsm-au.github.io/3d-csdm/).
+Accenture is the prime contractor responsible for delivering the NGSC solution to Landgate. 
+Accenture engaged SURROUND Australia to provide specialist cadastral information modelling, standards development, and technical advice, particularly concerning the Intergovernmental Committee on Surveying and Mapping (ICSM) [3D Cadastral Survey Data Model](https://icsm-au.github.io/3d-csdm/) (3D CSDM).
 
-SURROUND's primary objective was to assist Accenture and Landgate in translating the NGSC business and functional requirements into well-defined, standards-aligned information requirements that could be implemented, tested, and maintained. 
-This included identifying where existing national and international standards could be applied, where Western Australian requirements warranted extensions or additional specification, and where the proposed functionality depended on decisions concerning NGSC system design or business processes.
+SURROUND's primary objective was to translate relevant NGSC requirements into standards-aligned information specifications suitable for implementation and testing. 
+This involved identifying applicable standards, determining where Western Australian extensions were necessary, and highlighting dependencies on NGSC system design or business decisions.
 
-An important consideration throughout the engagement was that the 3D CSDM is an information exchange standard, rather than a specification for the complete NGSC system. 
-The work therefore sought to distinguish the responsibilities of the cadastral information model from those of the applications, services, and business processes required to implement and maintain the spatial cadastre.
+A central consideration was that the 3D CSDM defines cadastral information for exchange, rather than the complete NGSC system. 
+The work therefore distinguished information modelling responsibilities from the applications, services, and business processes needed to operate the spatial cadastre.
 
-The intended outcome was not just to document individual requirements, but to establish a more consistent and reusable standards-based foundation for NGSC development, with opportunities for adoption beyond the immediate Western Australian implementation.
+The broader objective was to establish a consistent, reusable standards-based foundation for NGSC development, with potential application beyond Western Australia.
 
 ### 2.2 Contractual scope and responsibilities
 
-SURROUND was engaged under a 12-month subcontract to Accenture, within the broader NGSC delivery programme. 
-The contracted services covered specialist data design, requirements analysis, co-design, development of CSDM profiles and supporting specifications, identification of technical constraints, validation, and definition of potential acceptance criteria.
+SSURROUND was engaged under a 12-month subcontract to Accenture. 
+Its scope covered requirements analysis, specialist data design, co-design, development of CSDM profiles and specifications, technical constraint assessment, validation, and proposed acceptance criteria.
 
-The Statement of Work distinguished between requirements for which SURROUND had responsibility for leading specified CSD and 3D CSDM-related outputs and requirements for which SURROUND provided specialist support to the Accenture implementation team. 
-This distinction is important when assessing the work undertaken and the associated delivery responsibilities.
+The Statement of Work distinguished between requirements for which SURROUND was responsible for specified CSD and 3D CSDM outputs and those where it provided specialist support to the Accenture implementation team.
 
-For the nominated CSD and 3D CSDM requirements, the contract identified technical outputs including machine-readable schemas, ontologies, example datasets, validation rules, and transformation specifications, where applicable. 
-It also required documentation, test cases, and acceptance criteria to support subsequent solution development and verification.
+For the nominated CSD and 3D CSDM requirements, contracted outputs included machine-readable schemas, ontologies, example datasets, validation rules, and transformation specifications, where applicable. 
+Supporting documentation, test cases, and acceptance criteria were also required.
 
-For supporting requirements, SURROUND's role was primarily to assist in interpreting cadastral and 3D requirements, advise on information modelling and relevant standards, identify technical limitations and dependencies, and contribute to the definition of appropriate acceptance criteria.
+For other requirements, SURROUND provided technical advice on cadastral information modelling, standards, constraints, and dependencies, together with input to acceptance criteria.
 
-Accenture retained overall responsibility for programme management, solution architecture, system development, integration, implementation, and delivery to Landgate. 
-Landgate, as the client and business owner, retained responsibility for confirming business requirements, jurisdictional policy, and operational decisions. 
-SURROUND's technical advice and specifications were intended to inform these activities rather than replace the detailed design and implementation responsibilities of the NGSC delivery team.
+Accenture retained overall responsibility for programme management, solution architecture, system development, integration, and delivery. 
+Landgate retained responsibility for confirming business requirements, jurisdictional policy, and operational decisions. 
+SURROUND's role was to inform these activities through specialist analysis and technical specifications.
 
-This allocation of responsibilities was particularly relevant where a requirement involved both information modelling and operational functionality. 
-For example, the 3D CSDM can define and validate cadastral information exchanged with the NGSC, but the implementation of user interfaces, workflows, application programming interfaces, database services, and operational controls remains a responsibility of the NGSC solution.
+This distinction was particularly important where requirements combined cadastral information modelling with NGSC functionality. 
+For example, the 3D CSDM can define and validate cadastral information, while user interfaces, workflows, APIs, and operational controls remain NGSC implementation responsibilities.
 
-The distinction also informed how unresolved technical and business matters were treated. 
-Where a requirement depended on an agreed workflow, system architecture, data ownership arrangement, or jurisdictional rule, the dependency was identified rather than assuming a design decision on behalf of Accenture or Landgate.
+Where requirements depended on unresolved business, policy, or architectural decisions, these were identified as dependencies rather than assuming decisions on behalf of Accenture or Landgate.
 
 ### 2.3 Requirements analysis methodology
 
-The work was undertaken through five deliverables, aligned with the staged NGSC programme requirements. 
-Together, these addressed 34 requirements spanning cadastral data growth, data standards, 3D spatial representation, survey information, boundary management, metadata, validation, system interfaces, and associated business functions.
+The five deliverables addressed 34 requirements covering cadastral data growth, standards, 3D representation, survey information, boundary management, metadata, validation, interfaces, and related business functions.
 
-The methodology evolved during the engagement but retained a consistent approach to interpreting requirements and identifying the contribution of the 3D CSDM. 
-For each requirement, the analysis generally addressed six related considerations:
-1. Requirement interpretation: Establish the intended business capability, distinguish functional outcomes from proposed implementation approaches, and identify ambiguities or gaps in the requirement.
-2. NGSC responsibilities: Identify the functionality expected of the NGSC solution, including relevant applications, services, workflows, and operational controls.
-3. 3D CSDM alignment: Assess whether existing data models and standards support the requirement and identify any necessary extensions, information structures, or implementation patterns.
-4. Technical constraints: Consider data availability, geometric and topological integrity, compatibility with existing survey information, validation, transformation, and interoperability.
-5. Potential acceptance criteria: Propose testable outcomes and verification approaches, without unnecessarily prescribing implementation technology or detailed solution design.
-6. Dependencies and decisions: Record outstanding policy, business, architectural, and technical matters requiring further consideration by Accenture, Landgate, or the NGSC implementation team.
-The earlier deliverables included more detailed examination of individual data standards and technical requirements, while later deliverables adopted a consolidated reporting structure incorporating the original WA requirement, analysis, NGSC System Perspective, 3D CSDM Perspective, and potential acceptance criteria.
+Although the reporting format evolved, the analysis followed six consistent considerations:
 
-A deliberate feature of this approach was the separation of the NGSC System Perspective from the 3D CSDM Perspective. 
-SURROUND prepared the requirement analysis and cadastral information modelling perspective, with the NGSC System Perspective reserved for completion by the implementation team. 
-This provided a basis for coordinated design while avoiding assumptions about implementation decisions that had not yet been made.
+1. Requirement interpretation: Establish the intended business capability and identify ambiguities or gaps.
+2. NGSC responsibilities: Identify the functionality expected of the NGSC applications, services, and workflows.
+3. 3D CSDM alignment: Assess existing standards and identify necessary extensions or implementation patterns.
+4. Technical constraints: Consider data availability, geometric integrity, validation, transformation, and interoperability.
+5. Potential acceptance criteria: Define testable outcomes and verification methods without unnecessarily prescribing implementation design.
+6. Dependencies and decisions: Identify outstanding business, policy, and technical matters requiring resolution.
 
-The analyses also recognised that not all requirements could be fully resolved through information modelling. 
-Matters such as metadata governance, lodgement and approval workflows, system ownership, historical survey information, and the precise interpretation of certain 3D geometric operations required additional business or technical decisions. 
-Identifying these dependencies was considered an important outcome of the analysis, as it provided greater clarity regarding subsequent design and implementation work.
+Later deliverables adopted a consistent structure comprising the original WA requirement, analysis, NGSC System Perspective, 3D CSDM Perspective, and proposed acceptance criteria.
+
+SURROUND prepared the requirements analysis and 3D CSDM perspective. 
+The NGSC System Perspective was reserved for the implementation team, maintaining a clear distinction between information modelling and system design responsibilities.
+
+Not all requirements could be resolved through information modelling alone. 
+Issues involving metadata governance, lodgement workflows, system ownership, historical survey information, and certain 3D geometric operations required further decisions. 
+Recording these dependencies was an important outcome, providing direction for subsequent design and implementation.
 
 ### 2.4 Machine-readable specifications and technical outputs
 
-In parallel with the requirements analysis, development work was undertaken to support machine-readable specifications and to investigate practical implementation approaches.
+Technical development accompanied the requirements analysis to support contracted machine-readable specifications and investigate practical implementation approaches.
 
-This included work on the Western Australian 3D CSDM profile and supporting common model components; development and refinement of controlled vocabularies; structured cadastral examples; topology and validation functions; and prototype capabilities for visualisation, reporting, and survey data processing.
+Work included the Western Australian 3D CSDM profile, common model components, controlled vocabularies, cadastral example datasets, and topology and validation functions. 
+Supporting proof-of-concept developments included 3D and sectional viewers, reporting components, topology validation tools, and survey calculation utilities.
 
-The work was managed through GitHub repositories, allowing specifications, example datasets, validation logic, and supporting software to be developed and tested in a repeatable manner. 
-These artefacts provide an implementation-oriented complement to the written requirements analyses and help demonstrate how the proposed information structures and constraints can be applied.
+These outputs were managed through GitHub repositories, providing traceable, reusable specifications, examples, validation rules, and supporting software. 
+The principal workstreams included the WA 3D CSDM profile, ICSM vocabularies, common CSDM components, Topo Feature, and topology validation functions.
 
-The principal technical workstreams are represented by the WA 3D CSDM profile, ICSM vocabularies, common CSDM components, Topo Feature model, and topology validation functions. 
-Supporting (proof of concept) developments included horizontal section and 3D viewers, reporting components, and survey calculation utilities. 
-These are discussed further in later sections of this report, together with their applicability to individual NGSC requirements.
+The technical artefacts complement the written requirements analysis and demonstrate potential implementation approaches. 
+Their applicability, maturity, and relationship to individual contractual requirements are examined in later sections of this report.
 
 ### 2.5 Engagement, collaboration, and knowledge transfer
 
-SURROUND's engagement was structured to support Accenture's delivery responsibilities through specialist advice, collaborative requirements interpretation, and development of standards-based technical outputs. 
-The intended approach involved co-design with Landgate and Accenture and its spatial implementation team to clarify business requirements, policy considerations, and acceptance expectations.
+SURROUND supported Accenture through specialist technical advice, collaborative requirements analysis, and standards-based development. 
+The approach involved working with Accenture, its spatial implementation team, and Landgate to clarify requirements, technical considerations, and acceptance expectations.
 
-Collaboration was important because cadastral requirements frequently span multiple areas of responsibility. 
-Survey and land administration practices define the meaning of the information, standards establish how it can be represented and exchanged, and the NGSC implementation determines how that information is managed and used operationally.
+Collaboration was necessary because cadastral requirements span several responsibilities. 
+Survey and land administration practices establish the meaning of the information, standards define its representation and exchange, and the NGSC implementation determines how it is managed operationally.
 
-The requirements reports and associated technical artefacts were developed to provide a common reference for these discussions. 
-Proposed acceptance criteria, documented dependencies, and practical examples were intended to support later design workshops, implementation planning, and verification.
+The requirements reports, proposed acceptance criteria, documented dependencies, and technical examples provided a common reference for design discussions, implementation planning, and verification.
 
-Knowledge transfer was also supported through documented specifications, shared development repositories and reusable examples and validation components. 
-The technical work adopted open standards and the [OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/) approach, allowing specifications and their supporting examples to be published, tested, and maintained independently of any particular NGSC application.
+Knowledge transfer was supported through documentation, shared repositories and reusable examples and validation components. 
+Technical development adopted open standards and the [OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/) approach, enabling specifications and supporting artefacts to be published, tested, and maintained independently of individual applications.
 
-This approach sought to provide Accenture and Landgate with more than individual requirement interpretations. 
-It established a body of reusable cadastral information modelling and validation work that can support continued NGSC development, future refinement of the Australian 3D CSDM, and wider adoption of consistent cadastral information standards.
-
-The distinction between completed analysis, supporting technical development and outstanding implementation decisions remains important. 
-The outputs of this engagement provide a foundation for subsequent design and implementation, but their value will ultimately depend on their adoption, integration, and verification within the NGSC solution.
+Collectively, the work established a reusable foundation for continued NGSC development and further refinement of the Australian 3D CSDM. 
+Its longer-term value will depend on the adoption, integration, and verification of these outputs within the NGSC solution.
 
 ## 3. Deliverables and outcomes
 <!-- 
