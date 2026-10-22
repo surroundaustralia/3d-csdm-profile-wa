@@ -471,7 +471,7 @@ export function initViewerApp({ sceneObjects, viewerControls, initialModel, mode
         const properties = parcel.properties || {};
 
         return Boolean(properties.parcelState)
-            || properties.representationStatus === 'representation-status:d3d'
+            || properties.representationStatus === 'representation-status:derived-3d'
             || Boolean(properties.solidRef)
             || Boolean(properties.surface?.ref);
     }

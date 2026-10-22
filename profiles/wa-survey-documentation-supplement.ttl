@@ -7,16 +7,26 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX termtype: <https://linked.data.gov.au/def/csdm/termtypes/>
 PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/>
+PREFIX wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Local supplement to the published WA Survey Documentation vocabulary.
+# A Schedule of Unit Entitlement is the published :scheme-ue, a Record of
+# Strata Titles Scheme is :scheme-record-form, and a built strata plan is a
+# :2d-plan or :3d-plan with survey type wa-survey-type:strata-plan.
 
 :csd
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "A Cadastral Survey Data (CSD) prepared for lodgement with Landgate to meet the requirements of Transfer of Land (Surveys) Regulations 1995; Regulation 3." ;
+    skos:definition "A Cadastral Survey Dataset (CSD) prepared for lodgement with Landgate to meet the requirements of regulation 3 of the Transfer of Land (Surveys) Regulations 1995." ;
     skos:inScheme cs: ;
     skos:notation "csd" ;
     skos:prefLabel "Cadastral Survey Dataset" ;
+    skos:related
+        :3d-plan ,
+        wa-survey-type:csd ;
     skos:topConceptOf cs: ;
 .
 
@@ -24,86 +34,59 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "An official document issued by an appropriate jurisdictional authority identifying the owner(s) of Real property along with any encumbrances over the property." ;
+    skos:definition "An official document issued by an appropriate jurisdictional authority identifying the owner(s) of real property along with any encumbrances over the property." ;
     skos:inScheme cs: ;
     skos:notation "certificate-of-title" ;
     skos:prefLabel "Certificate of Title" ;
+    skos:related wa-interest-type:ct ;
     skos:topConceptOf cs: ;
 .
 
-:built-strata-plan
+:building-approval-certificate
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "An official survey plan describing a conventional Built Strata survey." ;
-    skos:inScheme cs: ;
-    skos:notation "built-strata-plan" ;
-    skos:prefLabel "Built Strata Plan" ;
-    skos:topConceptOf cs: ;
-.
-
-:unitEntitlementSchedule
-    a
-        skos:Concept ,
-        termtype:DocType ;
-    skos:definition "An official document registered with Landgate under the Strata Titles Act 1985 that assigns a whole number to every individual lot within a strata or survey-strata scheme." ;
-    skos:inScheme cs: ;
-    skos:notation "unitEntitlementSchedule" ;
-    skos:prefLabel "Schedule of Unit Entitlement" ;
-    skos:topConceptOf cs: ;
-.
-
-:buildingApprovalCertificate
-    a
-        skos:Concept ,
-        termtype:DocType ;
+    skos:altLabel "buildingApprovalCertificate" ;
     skos:definition "An official document that confirms a building or completed structure complies with applicable building standards and regulations." ;
     skos:inScheme cs: ;
-    skos:notation "buildingApprovalCertificate" ;
+    skos:notation "building-approval-certificate" ;
     skos:prefLabel "Building Approval Certificate" ;
     skos:topConceptOf cs: ;
 .
 
-:strataPlanEndorsementCertificate
+:strata-plan-endorsement-certificate
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "A formal certification by the Western Australian Planning Commission (WAPC) confirming that unconditional approval for the subdivision has been granted pursuant to section 15 of the Strata Titles Act 1985." ;
+    skos:altLabel "strataPlanEndorsementCertificate" ;
+    skos:definition "A certificate of unconditional approval and endorsement of a built-strata or survey-strata plan, issued under section 15(4) of the Strata Titles Act 1985 by the Western Australian Planning Commission (WAPC) or its authorised delegate, that permits registration of the plan by Landgate." ;
     skos:inScheme cs: ;
-    skos:notation "strataPlanEndorsementCertificate" ;
-    skos:prefLabel "Strata Endorsement Certificate" ;
+    skos:notation "strata-plan-endorsement-certificate" ;
+    skos:prefLabel "Strata Plan Endorsement Certificate" ;
+    skos:scopeNote "Strata subdivision approval under section 15 may first be granted subject to conditions. Development approval and building certification are separate decisions, commonly made by the local government." ;
     skos:topConceptOf cs: ;
 .
 
-:recordOfStrataTitlesScheme
+:scheme-by-laws
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "The Limitations, Interests, Encumbrances and Notifications section (known as the Second Schedule) on a Record of Strata Title lists all legal burdens, third-party rights, and statutory restrictions that affect a specific strata lot and its shared interest in the common property." ;
-    skos:inScheme cs: ;
-    skos:notation "recordOfStrataTitlesScheme" ;
-    skos:prefLabel "Record of Strata Title Scheme: Limitations, Interests, Encumbrances and Notifications" ;
-    skos:topConceptOf cs: ;
-.
-
-:schemeByLaws
-    a
-        skos:Concept ,
-        termtype:DocType ;
+    skos:altLabel "schemeByLaws" ;
+    skos:broader :scheme-form ;
     skos:definition "The legally binding rules that govern how residents, owners, and visitors use and share property within a strata titles scheme in Western Australia." ;
     skos:inScheme cs: ;
-    skos:notation "schemeByLaws" ;
-    skos:prefLabel "Strata Title Scheme: Bylaws" ;
-    skos:topConceptOf cs: ;
+    skos:notation "scheme-by-laws" ;
+    skos:prefLabel "Strata Titles Scheme: By-laws" ;
 .
 
-:schemeNotices
+:scheme-notice
     a
         skos:Concept ,
         termtype:DocType ;
-    skos:definition "A legal document required under the Strata Titles Act 1985 to establish or amend a strata property." ;
+    skos:altLabel "schemeNotices" ;
+    skos:broader :scheme-form ;
+    skos:definition "A notice lodged with the Registrar of Titles under the Strata Titles Act 1985 that records or changes information about a strata titles scheme, and forms part of the record of the strata titles scheme." ;
     skos:inScheme cs: ;
-    skos:notation "schemeNotices" ;
-    skos:prefLabel "Strata Title Scheme: Notice" ;
-    skos:topConceptOf cs: ;
+    skos:notation "scheme-notice" ;
+    skos:prefLabel "Strata Titles Scheme: Notice" ;
 .

@@ -68,15 +68,15 @@ A built-strata lot with generated 3D topology can be described as follows:
 
 ```json
 {
-  "representationStatus": "representation-status:d3d",
-  "geometryLegalStatus": "geometry-legal-status:dfld",
-  "computabilityStatus": "computability-status:cd"
+  "representationStatus": "representation-status:derived-3d",
+  "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
+  "computabilityStatus": "computability-status:computed"
 }
 ```
 
-where, assuming the solid has been derived from legally supported strata-plan boundary definition, `representation-status:d3d` indicates a 3D solid has been generated from computable inputs; `geometry-legal-status:dfld` indicates the geometry is computed from a legal height or boundary description (occupation features, such as walls, floors, and ceilings for built-strata); and `computability-status:cd` indicates that the geometry has been computed and should include derivation provenance.
+where, assuming the solid has been derived from legally supported strata-plan boundary definition, [`representation-status:derived-3d`](../vocabularies/representation-status.csv) indicates a 3D solid has been generated from computable inputs; [`geometry-legal-status:derived-from-legal-description`](../vocabularies/geometry-legal-status.csv) indicates the geometry is computed from a legal height or boundary description (occupation features, such as walls, floors, and ceilings for built-strata); and [`computability-status:computed`](../vocabularies/computability-status.csv) indicates that the geometry has been computed and should include derivation provenance.
 
-If WA ultimately recognises that submitted 3D geometry as being authoritative legal geometry, then `geometry-legal-status` could be changed to `geometry-legal-status:l3d`.
+If WA ultimately recognises that submitted 3D geometry as being authoritative legal geometry, then [`geometry-legal-status`](../vocabularies/geometry-legal-status.csv) could be changed to [`geometry-legal-status:legal-3d`](../vocabularies/geometry-legal-status.csv).
 
 ## Recommended Additions
 
@@ -99,11 +99,11 @@ We suggest adding:
 
 ```json
 {
-  "definitionType": "vertical-definition-type:brb"
+  "definitionType": "vertical-definition-type:building-referenced-boundary"
 }
 ```
 
-where `brb` means **building referenced boundary**. 
+where `building-referenced-boundary` (formerly the code `brb`) means a **building-referenced boundary**. 
 The cadastral boundary is established by a defined relationship to a particular building surface, plane, or element.
 
 For example, a building surface could be:
@@ -125,12 +125,12 @@ For built strata because there are expected to be many surfaces that define the 
   "verticalBoundaryDefinitions": [
     {
       "id": "boundary-definition-lot-1-part-1",
-      "definitionType": "vertical-definition-type:brb",
+      "definitionType": "vertical-definition-type:building-referenced-boundary",
       "limits": [
         {
           "id": "limit-floor-1",
           "boundaryRole": "boundary-role:lower",
-          "relationship": "building-boundary-reference:upperSurface",
+          "relationship": "boundary-reference:upper-surface",
           "buildingElementType": "building-element:floor",
           "referenceFeatureRef": "occupation-floor-12",
           "boundaryFaceRef": "face-101",
@@ -139,7 +139,7 @@ For built strata because there are expected to be many surfaces that define the 
         {
           "id": "limit-ceiling-1",
           "boundaryRole": "boundary-role:upper",
-          "relationship": "building-boundary-reference:underSurface",
+          "relationship": "boundary-reference:lower-surface",
           "buildingElementType": "building-element:ceiling",
           "referenceFeatureRef": "occupation-ceiling-12",
           "boundaryFaceRef": "face-102",
@@ -148,7 +148,7 @@ For built strata because there are expected to be many surfaces that define the 
         {
           "id": "limit-wall-east",
           "boundaryRole": "boundary-role:lateral",
-          "relationship": "building-boundary-reference:centrePlane",
+          "relationship": "boundary-reference:centre-plane",
           "buildingElementType": "building-element:wall",
           "referenceFeatureRef": "occupation-wall-27",
           "boundaryFaceRef": "face-103",
@@ -157,7 +157,7 @@ For built strata because there are expected to be many surfaces that define the 
         {
           "id": "limit-wall-west",
           "boundaryRole": "boundary-role:lateral",
-          "relationship": "building-boundary-reference:innerSurface",
+          "relationship": "boundary-reference:inner-surface",
           "buildingElementType": "building-element:wall",
           "referenceFeatureRef": "occupation-wall-31",
           "boundaryFaceRef": "face-104",
@@ -190,9 +190,9 @@ This provides a useful hierarchy: _source definition_ **to** _individual limits_
 
 ## Broaden `limitRole` into `boundaryRole`
 
-The existing `vertical-limit-role` vocabulary distinguishes only lower and upper limits. 
+The former [`vertical-limit-role`](../vocabularies/crosswalk/vocab-crosswalk.csv) draft distinguished only lower and upper limits; it has since been merged into [`boundary-role`](../vocabularies/boundary-role.csv) (decision [D10](../vocabularies/vocab-review.md#decision-d10)). 
 The current `spatialRepresentationDefinitions` specification for the existing parcel specification describes the boundary-definition array in terms of lower and upper limits.
-For built strata, that is insufficient; hence there is potentially a need to add additional a vocabulary, `boundary-role`, for built strata.
+For built strata, that is insufficient; hence there is potentially a need to add additional a vocabulary, [`boundary-role`](../vocabularies/boundary-role.csv), for built strata.
 
 ```json
 [
@@ -208,20 +208,22 @@ We suggest the addition of a new semantic property, `relationship` for built str
 
 ```json
 {
-  "relationship": "building-boundary-reference:innerSurface"
+  "relationship": "boundary-reference:inner-surface"
 }
 ```
 
-with an initial vocabulary containing:
+with the [`boundary-reference`](../vocabularies/boundary-reference.csv) vocabulary containing:
 
-- innerSurface
-- outerSurface
-- centrePlane
-- upperSurface
-- underSurface
-- externalSurface
+- inner-surface
+- external-surface (altLabel "outer surface")
+- centre-plane
+- upper-surface
+- lower-surface (altLabel "under surface")
 - surface
 - plane
+- projection
+- title-boundary
+- offset-from-surface
 
 This supports the controlled classifications contemplated in the [built strata use case](https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/proposals/use-cases/built-strata.md): `innerFace`, `centreLine`, `upperSurface`, `underSurface`, `AHDHeight`, while retaining free text for the actual plan wording.
 
@@ -232,7 +234,7 @@ For example:
 ```json
 {
   "boundaryRole": "boundary-role:lateral",
-  "relationship": "building-boundary-reference:centrePlane"
+  "relationship": "boundary-reference:centre-plane"
 }
 ```
 
@@ -267,7 +269,7 @@ For example:
 ```json
 {
   "referenceFeatureRef": "occupation-wall-27",
-  "relationship": "building-boundary-reference:centrePlane",
+  "relationship": "boundary-reference:centre-plane",
   "boundaryFaceRef": "face-103"
 }
 ```
@@ -308,7 +310,7 @@ Instead, include it once for the set of boundaries to which it applies:
 
 ```json
 {
-  "definitionType": "vertical-definition-type:brb",
+  "definitionType": "vertical-definition-type:building-referenced-boundary",
   "limits": [
     ...
   ],
@@ -373,11 +375,11 @@ For example:
 {
   "verticalBoundaryDefinitions": [
     {
-      "definitionType": "vertical-definition-type:brb",
+      "definitionType": "vertical-definition-type:building-referenced-boundary",
       ...
     },
     {
-      "definitionType": "vertical-definition-type:ahd",
+      "definitionType": "vertical-definition-type:absolute-height-description",
       ...
     }
   ]
@@ -402,7 +404,7 @@ For a single-component strata unit:
 ```json
 {
   "derivedGeometry": {
-    "status": "solidGenerated",
+    "status": "derived-geometry-status:generated",
     "geometryType": "Solid",
     "solidRef": "solid-lot-1",
     "boundaryDefinitionsRef": [
@@ -426,7 +428,7 @@ For that reason we recommend extending `derivedGeometry` slightly.
 ```json
 {
   "derivedGeometry": {
-    "status": "solidGenerated",
+    "status": "derived-geometry-status:generated",
     "geometryType": "AggregateSolid",
     "components": [
       {
@@ -490,15 +492,15 @@ For example:
 ```json
 {
   "verticalExtent": {
-    "status": "vertical-extent-status:dfld",
+    "status": "vertical-extent-status:legally-defined",
     "lowerBoundary": {
-      "state": "vertical-boundary-state:drv",
+      "state": "vertical-extent-status:derived",
       "definitionRef": "boundary-definition-lot-1",
       "limitRef": "limit-floor-1",
       "geometryRef": "face-101"
     },
     "upperBoundary": {
-      "state": "vertical-boundary-state:drv",
+      "state": "vertical-extent-status:derived",
       "definitionRef": "boundary-definition-lot-1",
       "limitRef": "limit-ceiling-1",
       "geometryRef": "face-102"
@@ -515,37 +517,37 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
 ```json
 {
   "spatialRepresentationDefinitions": {
-    "representationStatus": "representation-status:d3d",
-    "geometryLegalStatus": "geometry-legal-status:dfld",
+    "representationStatus": "representation-status:derived-3d",
+    "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
     "coordinateRepresentation": {
       "coordinateDimension": 3,
-      "zValueRole": "coordinate-z-role:dbg"
+      "zValueRole": "coordinate-z-role:derived-boundary-geometry"
     },
     "verticalExtent": {
-      "status": "vertical-extent-status:dfld",
+      "status": "vertical-extent-status:legally-defined",
       "lowerBoundary": {
-        "state": "vertical-boundary-state:drv",
+        "state": "vertical-extent-status:derived",
         "definitionRef": "boundary-definition-lot-1",
         "limitRef": "limit-floor-1",
         "geometryRef": "face-101"
       },
       "upperBoundary": {
-        "state": "vertical-boundary-state:drv",
+        "state": "vertical-extent-status:derived",
         "definitionRef": "boundary-definition-lot-1",
         "limitRef": "limit-ceiling-1",
         "geometryRef": "face-102"
       }
     },
-    "computabilityStatus": "computability-status:cd",
+    "computabilityStatus": "computability-status:computed",
     "verticalBoundaryDefinitions": [
       {
         "id": "boundary-definition-lot-1",
-        "definitionType": "vertical-definition-type:brb",
+        "definitionType": "vertical-definition-type:building-referenced-boundary",
         "limits": [
           {
             "id": "limit-floor-1",
             "boundaryRole": "boundary-role:lower",
-            "relationship": "building-boundary-reference:upperSurface",
+            "relationship": "boundary-reference:upper-surface",
             "buildingElementType": "building-element:floor",
             "referenceFeatureRef": "occupation-floor-12",
             "boundaryFaceRef": "face-101",
@@ -554,7 +556,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
           {
             "id": "limit-ceiling-1",
             "boundaryRole": "boundary-role:upper",
-            "relationship": "building-boundary-reference:underSurface",
+            "relationship": "boundary-reference:lower-surface",
             "buildingElementType": "building-element:ceiling",
             "referenceFeatureRef": "occupation-ceiling-12",
             "boundaryFaceRef": "face-102",
@@ -563,7 +565,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
           {
             "id": "limit-wall-east",
             "boundaryRole": "boundary-role:lateral",
-            "relationship": "building-boundary-reference:centrePlane",
+            "relationship": "boundary-reference:centre-plane",
             "buildingElementType": "building-element:wall",
             "referenceFeatureRef": "occupation-wall-27",
             "boundaryFaceRef": "face-103",
@@ -572,7 +574,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
           {
             "id": "limit-wall-west",
             "boundaryRole": "boundary-role:lateral",
-            "relationship": "building-boundary-reference:innerSurface",
+            "relationship": "boundary-reference:inner-surface",
             "buildingElementType": "building-element:wall",
             "referenceFeatureRef": "occupation-wall-31",
             "boundaryFaceRef": "face-104",
@@ -581,7 +583,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
           {
             "id": "limit-wall-north",
             "boundaryRole": "boundary-role:lateral",
-            "relationship": "building-boundary-reference:innerSurface",
+            "relationship": "boundary-reference:inner-surface",
             "buildingElementType": "building-element:wall",
             "referenceFeatureRef": "occupation-wall-35",
             "boundaryFaceRef": "face-105",
@@ -590,7 +592,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
           {
             "id": "limit-wall-south",
             "boundaryRole": "boundary-role:lateral",
-            "relationship": "building-boundary-reference:innerSurface",
+            "relationship": "boundary-reference:inner-surface",
             "buildingElementType": "building-element:wall",
             "referenceFeatureRef": "occupation-wall-38",
             "boundaryFaceRef": "face-106",
@@ -618,7 +620,7 @@ This preserves the [initial use case](https://github.com/surroundaustralia/3d-cs
     ],
     "referenceSurfaces": [],
     "derivedGeometry": {
-      "status": "solidGenerated",
+      "status": "derived-geometry-status:generated",
       "geometryType": "Solid",
       "solidRef": "solid-lot-1",
       "boundaryDefinitionsRef": [

@@ -17,9 +17,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         skos:Concept ,
         surv:SurveyPurpose ;
-    skos:definition "Survey Cadastral Dataset prepared to support termination of a Strata Title Scheme in accordance with Part 12 of the Strata Title Act 1985" ;
+    skos:definition "Survey Cadastral Dataset prepared to support termination of a strata titles scheme in accordance with Part 12 of the Strata Titles Act 1985" ;
     skos:inScheme cs: ;
     skos:notation "subdivision-t-sts" ;
-    skos:prefLabel "Subdivision: Termination of a Strata Title Scheme" ;
+    skos:prefLabel "Subdivision: Termination of a Strata Titles Scheme" ;
     skos:topConceptOf cs: ;
 .
