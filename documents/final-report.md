@@ -235,15 +235,15 @@ The work adopted the [OGC Building Blocks](https://ogcincubator.github.io/bblock
 
 The principal GitHub repositories provide traceability to these developments:
 
-| Technical output                                    | Principal repositories                               |
-|-----------------------------------------------------|------------------------------------------------------|
-| WA 3D CSDM profile, schemas and cadastral examples  | `3d-csdm-profile-wa`, `3d-csdm-common`               |
-| Controlled vocabularies and semantic definitions    | `icsm-vocabs`, `3d-csdm-profile-wa`                  |
-| Topological representation and validation functions | `topo-feature`, `topo-functions`                     |
-| 3D and sectional visualisation prototypes           | `topo-feature-viewer`, `bblocks-cesium-viewer` |
+| Technical output                                    | Principal repositories                 |
+|-----------------------------------------------------|----------------------------------------|
+| WA 3D CSDM profile, schemas and cadastral examples  | `3d-csdm-profile-wa`, `3d-csdm-common` |
+| Controlled vocabularies and semantic definitions    | `icsm-vocabs`, `3d-csdm-profile-wa`    |
+| Topological representation and validation functions | `topo-feature`, `topo-functions`       |
+| 3D and sectional visualisation prototypes           | `topo-feature-viewer`                  |
 
 <!--
-`bblocks-xy-section-viewer`, `bblocks-3d-csdm-reporting`, `angles-to-bearings` proof of concept private repositories
+`bblocks-xy-section-viewer`, `bblocks-3d-csdm-reporting`, `angles-to-bearings`, and `bblocks-cesium-viewer` proof of concept private repositories to be discussed in next section, but only with images
 -->
 
 The contract also identified transformation specifications and testing for converting existing cadastral survey formats into 3D CSDM.
@@ -294,6 +294,8 @@ The next stage is to consolidate these outputs into an agreed implementation and
 4 - 6 pages
 
 Synthesise recurring issues across the 34 assessments: NGSC–3D CSDM alignment, legacy survey data transformation, 3D topology and boundary semantics, metadata governance, and the split between data-model and application-workflow responsibilities.
+
+Include discussion of `bblocks-xy-section-viewer`, `bblocks-3d-csdm-reporting`, `angles-to-bearings`, and `bblocks-cesium-viewer` proof of concept private repositories
 
 Include a decision register?
 -->
