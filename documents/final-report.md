@@ -240,8 +240,11 @@ The principal GitHub repositories provide traceability to these developments:
 | WA 3D CSDM profile, schemas and cadastral examples  | `3d-csdm-profile-wa`, `3d-csdm-common`               |
 | Controlled vocabularies and semantic definitions    | `icsm-vocabs`, `3d-csdm-profile-wa`                  |
 | Topological representation and validation functions | `topo-feature`, `topo-functions`                     |
-| 3D and sectional visualisation prototypes           | `bblocks-cesium-viewer`, `bblocks-xy-section-viewer` |
-| Reporting and survey-processing prototypes          | `bblocks-3d-csdm-reporting`, `angles-to-bearings`    |
+| 3D and sectional visualisation prototypes           | `topo-feature-viewer`, `bblocks-cesium-viewer` |
+
+<!--
+`bblocks-xy-section-viewer`, `bblocks-3d-csdm-reporting`, `angles-to-bearings` proof of concept private repositories
+-->
 
 The contract also identified transformation specifications and testing for converting existing cadastral survey formats into 3D CSDM.
 The requirements analyses established expected transformation behaviour, including validation, preservation of source information, and handling of incomplete records.
