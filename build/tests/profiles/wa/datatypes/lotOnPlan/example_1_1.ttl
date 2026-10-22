@@ -9,8 +9,8 @@
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
+        [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ],
         [ rdfs:label "4" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
-        [ commonpatterns:namePartRef wa-survey-type:p ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ] .
 

@@ -253,7 +253,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -287,7 +287,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -321,7 +321,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -355,7 +355,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -667,33 +667,33 @@
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:hd",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:height-described",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:rr",
+            "status": "vertical-extent-status:requires-resolution",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "relative-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "relative-limit-upper-1"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "relative-limit-lower-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 2,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "2 metres below ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -701,12 +701,12 @@
             },
             {
               "id": "relative-limit-upper-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:offset",
               "value": 12,
-              "direction": "vertical-direction:abv",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:above",
+              "heightReference": "height-reference:ground-level",
               "description": "12 metres above ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -714,7 +714,7 @@
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -773,23 +773,23 @@
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -914,20 +914,20 @@
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -939,12 +939,12 @@
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "2 metres below ground level"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "12 metres above ground level"
         }
       ]

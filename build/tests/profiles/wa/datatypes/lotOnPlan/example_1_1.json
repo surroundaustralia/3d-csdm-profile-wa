@@ -4,7 +4,7 @@
   "hasPart": [
     {
       "type": "surveyType",
-      "ref": "wa-survey-type:p"
+      "ref": "wa-survey-type:deposited-plan"
     },
     {
       "type": "surveyNumber",

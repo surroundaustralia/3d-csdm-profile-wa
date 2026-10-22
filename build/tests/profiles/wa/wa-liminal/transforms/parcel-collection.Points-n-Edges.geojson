@@ -155,7 +155,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "312"
@@ -176,7 +176,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "313"
@@ -197,7 +197,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "314"
@@ -218,7 +218,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "309"
@@ -239,7 +239,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "311"
@@ -260,7 +260,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "298"

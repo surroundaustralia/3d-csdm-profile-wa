@@ -19,7 +19,7 @@ Example appellation.
   "hasPart": [
     {
       "type": "tenureClass",
-      "ref": "wa-parcel-type:l"
+      "ref": "wa-parcel-type:freehold"
     },
     {
       "type": "documentOrGrantReference",
@@ -42,7 +42,7 @@ Example appellation.
   "hasPart": [
     {
       "type": "tenureClass",
-      "ref": "wa-parcel-type:l"
+      "ref": "wa-parcel-type:freehold"
     },
     {
       "type": "documentOrGrantReference",
@@ -64,10 +64,10 @@ Example appellation.
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 
 [] rdfs:label "L-3114-12345" ;
-    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-type:l ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],
-        [ rdfs:label "3114" ;
+    dcterms:hasPart [ rdfs:label "3114" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ],
+        [ commonpatterns:namePartRef wa-parcel-type:freehold ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],
         [ rdfs:label "12345" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ] .
 
@@ -88,6 +88,11 @@ allOf:
       - const: wa:MiscellaneousTenureAppellation
   required:
   - type
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.datatypes.miscellaneousTenure
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-22'
 
 ```
 
@@ -134,12 +139,10 @@ Links to the schema:
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-monument-form": "vocabs:wa-monument-form/",
     "wa-vector-purpose": "vocabs:wa-vector-purpose/",
-    "wa-vector-type": "vocabs:wa-vector-type/",
     "wa-secondary-parcel-purpose": "vocabs:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "vocabs:wa-secondary-purpose/",
     "wa-interest-type": "vocabs:wa-interest-type/",
-    "wa-interest": "vocabs:wa-interest/",
     "wa-locality": "vocabs:wa-locality/",
     "wa-local-government": "vocabs:wa-local-government/",
     "@version": 1.1

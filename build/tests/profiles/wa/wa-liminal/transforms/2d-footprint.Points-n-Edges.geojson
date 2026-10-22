@@ -15,7 +15,7 @@
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
-        "methodEstablished": "wa-pt-method:T",
+        "methodEstablished": "wa-surveypoint-method:T",
         "monumentedBy": {
           "form": "wa-monument-form:other",
           "condition": "wa-monument-condition:ok",
@@ -39,7 +39,7 @@
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
-        "methodEstablished": "wa-pt-method:T",
+        "methodEstablished": "wa-surveypoint-method:T",
         "monumentedBy": {
           "form": "wa-monument-form:other",
           "condition": "wa-monument-condition:ok",
@@ -63,7 +63,7 @@
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
-        "methodEstablished": "wa-pt-method:T",
+        "methodEstablished": "wa-surveypoint-method:T",
         "monumentedBy": {
           "form": "wa-monument-form:other",
           "condition": "wa-monument-condition:ok",
@@ -87,7 +87,7 @@
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
-        "methodEstablished": "wa-pt-method:T",
+        "methodEstablished": "wa-surveypoint-method:T",
         "monumentedBy": {
           "form": "wa-monument-form:other",
           "condition": "wa-monument-condition:ok",

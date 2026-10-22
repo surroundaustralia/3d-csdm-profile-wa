@@ -600,7 +600,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v10"
@@ -621,7 +621,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v11"
@@ -642,7 +642,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v12"
@@ -663,7 +663,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "v13"
