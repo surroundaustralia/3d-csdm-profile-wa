@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "1.0",
+  "projects": [
+    {
+      "id": "3d-csdm-profile-wa"
+    }
+  ],
+  "domains": [],
+  "records": [
+    {
+      "id": "3d--three-dimensional",
+      "acronym": "3D",
+      "aliases": [],
+      "expansion": "Three-dimensional",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-001",
+          "originalAcronym": "3D",
+          "originalDescription": "Three-dimensional.",
+          "digest": "sha256:cb7ecf3e5133cc82cd47e7910b2768cf0c8c0a88e78d49a5d198064d5ff7e1a9"
+        }
+      ]
+    },
+    {
+      "id": "3d-csdm--3d-cadastral-survey-data-model",
+      "acronym": "3D CSDM",
+      "aliases": [],
+      "expansion": "3D Cadastral Survey Data Model",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-002",
+          "originalAcronym": "3D CSDM",
+          "originalDescription": "3D Cadastral Survey Data Model.",
+          "digest": "sha256:89ac6c0c85e032b7832650e5fd425a8462452c6416bf18e01921b54e8bb0e097"
+        }
+      ]
+    },
+    {
+      "id": "abs--australian-bureau-of-statistics",
+      "acronym": "ABS",
+      "aliases": [],
+      "expansion": "Australian Bureau of Statistics",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-003",
+          "originalAcronym": "ABS",
+          "originalDescription": "Australian Bureau of Statistics.",
+          "digest": "sha256:75141a506f284f03d9233f27b41d9ffc553b3d687a1d4a82008a520cdfdbb8a7"
+        }
+      ]
+    },
+    {
+      "id": "api--application-programming-interface",
+      "acronym": "API",
+      "aliases": [],
+      "expansion": "Application Programming Interface",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-004",
+          "originalAcronym": "API",
+          "originalDescription": "Application Programming Interface.",
+          "digest": "sha256:f501ad3a4320c1920b1d21161835bb868b528217fe6e65cbdf2098f9647d9cd8"
+        }
+      ]
+    },
+    {
+      "id": "csd--cadastral-survey-dataset",
+      "acronym": "CSD",
+      "aliases": [],
+      "expansion": "Cadastral Survey Dataset",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-005",
+          "originalAcronym": "CSD",
+          "originalDescription": "Cadastral Survey Dataset.",
+          "digest": "sha256:bb64b50192fd5677f5177daced6d560b2b7c59152fac80f4f9c9c36d8abceac9"
+        }
+      ]
+    },
+    {
+      "id": "csdm--cadastral-survey-data-model",
+      "acronym": "CSDM",
+      "aliases": [],
+      "expansion": "Cadastral Survey Data Model",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-006",
+          "originalAcronym": "CSDM",
+          "originalDescription": "Cadastral Survey Data Model.",
+          "digest": "sha256:f4b5e70e545ce2997ede8edfdff5bd1c97d3f0546c8ab6edc5a01d35729af94e"
+        }
+      ]
+    },
+    {
+      "id": "icsm--intergovernmental-committee-on-surveying-and-mapping",
+      "acronym": "ICSM",
+      "aliases": [],
+      "expansion": "Intergovernmental Committee on Surveying and Mapping",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-007",
+          "originalAcronym": "ICSM",
+          "originalDescription": "Intergovernmental Committee on Surveying and Mapping.",
+          "digest": "sha256:902a084bde2714f1e0f22ff8f532093d091075fd77e51eb6de4d73c370b29699"
+        }
+      ]
+    },
+    {
+      "id": "ngsc--next-generation-spatial-cadastre",
+      "acronym": "NGSC",
+      "aliases": [],
+      "expansion": "Next Generation Spatial Cadastre",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-008",
+          "originalAcronym": "NGSC",
+          "originalDescription": "Next Generation Spatial Cadastre.",
+          "digest": "sha256:13338a0cbf0c11e3f09f08407a6a2f6635ecf9df83d2c6d8cdd9b6241ff4a256"
+        }
+      ]
+    },
+    {
+      "id": "ogc--open-geospatial-consortium",
+      "acronym": "OGC",
+      "aliases": [],
+      "expansion": "Open Geospatial Consortium",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-009",
+          "originalAcronym": "OGC",
+          "originalDescription": "Open Geospatial Consortium.",
+          "digest": "sha256:5e3808292d7c2b522e22f62c8e135349f26140c714500c1c87ea514dff49b6b2"
+        }
+      ]
+    },
+    {
+      "id": "wa--western-australia",
+      "acronym": "WA",
+      "aliases": [],
+      "expansion": "Western Australia",
+      "definition": null,
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-010",
+          "originalAcronym": "WA",
+          "originalDescription": "Western Australia.",
+          "digest": "sha256:eef9d39cbb3be191f3f3b78499c20bd1146b6776b30f4dc0dcd6b541738fe766"
+        }
+      ]
+    }
+  ]
+}

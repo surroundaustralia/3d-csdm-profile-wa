@@ -2,313 +2,53 @@
   "items": [
     {
       "id": "acr-001",
-      "acronym": "AI",
-      "description": "Artificial Intelligence; in this document, automated methods (including ML/LLMs) used to support planning, reasoning, and decision support."
+      "acronym": "3D",
+      "description": "Three-dimensional."
     },
     {
       "id": "acr-002",
-      "acronym": "AIS",
-      "description": "Automatic Identification System; vessel tracking broadcasts used here as an input dataset for collision-risk and CPA computations."
-    },
-    {
-      "id": "acr-061",
-      "acronym": "AOI",
-      "description": "Area of Interest; The area that a Commander/Tasker is concerned about because what happens in the area could affect the task."
+      "acronym": "3D CSDM",
+      "description": "3D Cadastral Survey Data Model."
     },
     {
       "id": "acr-003",
-      "acronym": "API",
-      "description": "Application Programming Interface; a software interface used for system-to-system communication."
+      "acronym": "ABS",
+      "description": "Australian Bureau of Statistics."
     },
     {
       "id": "acr-004",
-      "acronym": "AWS",
-      "description": "Amazon Web Services; referenced as the hosting environment (e.g., AWS API Gateway) for prototype services."
+      "acronym": "API",
+      "description": "Application Programming Interface."
     },
     {
       "id": "acr-005",
-      "acronym": "AUVRP",
-      "description": "Requirement identifier prefix used in this report (e.g., AUVRP-01) to label and track prototype demonstration components."
-    },
-    {
-      "id": "acr-052",
-      "acronym": "AZ",
-      "description": "Availability Zone; an isolated, physically separated data centre within an AWS region."
+      "acronym": "CSD",
+      "description": "Cadastral Survey Dataset."
     },
     {
       "id": "acr-006",
-      "acronym": "CMEMS",
-      "description": "Copernicus Marine Environment Monitoring Service; referenced as the source of global ocean physics analysis/forecast ocean current products."
+      "acronym": "CSDM",
+      "description": "Cadastral Survey Data Model."
     },
     {
       "id": "acr-007",
-      "acronym": "CPA",
-      "description": "Closest Point of Approach; a collision-assessment concept for estimating the minimum separation between two moving objects and when it occurs."
+      "acronym": "ICSM",
+      "description": "Intergovernmental Committee on Surveying and Mapping."
     },
     {
       "id": "acr-008",
-      "acronym": "CRS",
-      "description": "Coordinate Reference System; defines how coordinates map to locations on Earth (and how metrics such as distance or direction are computed)."
+      "acronym": "NGSC",
+      "description": "Next Generation Spatial Cadastre."
     },
     {
       "id": "acr-009",
-      "acronym": "DAG",
-      "description": "Directed Acyclic Graph; used to describe a workflow graph (e.g., in Airflow) with ordered tasks."
+      "acronym": "OGC",
+      "description": "Open Geospatial Consortium."
     },
     {
       "id": "acr-010",
-      "acronym": "DCPA",
-      "description": "Distance to Closest Point of Approach; the minimum predicted distance between two moving objects during their encounter."
-    },
-    {
-      "id": "acr-058",
-      "acronym": "DevOps",
-      "description": "DevOps information refers to the practice of combining software development (Dev) with operations and maintenance (Ops)."
-    },
-    {
-      "id": "acr-052",
-      "acronym": "Docker",
-      "description": "A standalone executable software package; Used to ensure a process runs consistently across any computing environment."
-    },
-    {
-      "id": "acr-011",
-      "acronym": "EDR",
-      "description": "Environmental Data Retrieval; an OGC API family for querying/serving environmental/coverage data."
-    },
-    {
-      "id": "acr-051",
-      "acronym": "EC2",
-      "description": "Amazon Elastic Compute Cloud; a core AWS service used to host the prototype services."
-    },
-    {
-      "id": "acr-012",
-      "acronym": "EARS",
-      "description": "Easy Approach to Requirements Syntax; a structured pattern set for writing clear, testable requirement statements (e.g., ubiquitous, state-driven, event-driven)."
-    },
-    {
-      "id": "acr-013",
-      "acronym": "EPSG",
-      "description": "European Petroleum Survey Group; registry of geodetic/CRS identifiers (EPSG codes) such as EPSG:4326 (WGS84) and EPSG:9473 (GDA 2020 Australian Albers)."
-    },
-    {
-      "id": "acr-014",
-      "acronym": "GDB",
-      "description": "Geodatabase; commonly an ESRI file geodatabase format used to store GIS datasets."
-    },
-    {
-      "id": "acr-015",
-      "acronym": "GeoJSON",
-      "description": "A JSON-based geospatial data interchange format (features + geometries), referenced for returning routes as a FeatureCollection."
-    },
-    {
-      "id": "acr-016",
-      "acronym": "GeoTIFF",
-      "description": "Geographic Tagged Image File Format; a TIFF raster image with embedded georeferencing metadata."
-    },
-    {
-      "id": "acr-057",
-      "acronym": "HA",
-      "description": "High Availability; designing applications to ensure high uptime through redundancy and clustering; not supported in prototype but enabled by component model."
-    },
-    {
-      "id": "acr-017",
-      "acronym": "HTTPS",
-      "description": "Hypertext Transfer Protocol Secure; HTTP over TLS for encrypted network communication."
-    },
-    {
-      "id": "acr-018",
-      "acronym": "ICT",
-      "description": "Information and Communications Technology; referenced in the context of Defence ICT networks and security standards."
-    },
-    {
-      "id": "acr-019",
-      "acronym": "JPG",
-      "description": "JPEG image format; referenced as a supported data type for ingestion/fusion."
-    },
-    {
-      "id": "acr-020",
-      "acronym": "KG",
-      "description": "Knowledge Graph; a graph-based representation of entities and relationships used here for flexible information capture and provenance."
-    },
-    {
-      "id": "acr-021",
-      "acronym": "KML",
-      "description": "Keyhole Markup Language; an XML-based geospatial format commonly used for maps and features."
-    },
-    {
-      "id": "acr-022",
-      "acronym": "LLM",
-      "description": "Large Language Model; an AI model class used here for assisted interpretation, reasoning, and explanation in mission planning."
-    },
-    {
-      "id": "acr-023",
-      "acronym": "m/s",
-      "description": "Metres per second; metric unit of speed referenced for consistent calculation/output."
-    },
-    {
-      "id": "acr-024",
-      "acronym": "MP4",
-      "description": "MPEG-4 Part 14; a digital multimedia container format (video/audio)."
-    },
-    {
-      "id": "acr-025",
-      "acronym": "NetCDF",
-      "description": "Network Common Data Form; a scientific data format commonly used for gridded environmental/oceanographic datasets."
-    },
-    {
-      "id": "acr-059",
-      "acronym": "NBI",
-      "description": "Northbound Interface; a lower-level network component that communicates upwards with higher-level applications often using REST APIs protocols. In simple terms, it's a connection that lets an application talk to the system's brain to obtain computational power and information."
-    },
-    {
-      "id": "acr-026",
-      "acronym": "OFFICIAL",
-      "description": "A protective marking / classification level used in Australian Government information handling (referenced here as OFFICIAL-level data)."
-    },
-    {
-      "id": "acr-027",
-      "acronym": "OGC",
-      "description": "Open Geospatial Consortium; global standards organization producing geospatial interoperability standards including OGC APIs."
-    },
-    {
-      "id": "acr-028",
-      "acronym": "OPTASK",
-      "description": "Operational Tasking (document); referenced as an input document type used alongside signals for mission/task interpretation."
-    },
-    {
-      "id": "acr-029",
-      "acronym": "PostGIS",
-      "description": "Spatial extension for PostgreSQL adding geospatial types, functions, and spatial indexing for network and route management."
-    },
-    {
-      "id": "acr-030",
-      "acronym": "PROV",
-      "description": "W3C PROV; the W3C provenance data model used to record traceable inputs, processes, and outputs."
-    },
-    {
-      "id": "acr-031",
-      "acronym": "RAN",
-      "description": "Royal Australian Navy."
-    },
-    {
-      "id": "acr-032",
-      "acronym": "RBAC",
-      "description": "Role-Based Access Control; access permissions are assigned based on user roles (e.g., planner, operator, administrator)."
-    },
-    {
-      "id": "acr-033",
-      "acronym": "REST",
-      "description": "Representational State Transfer; architectural style for web services and APIs used for component integration."
-    },
-    {
-      "id": "acr-034",
-      "acronym": "RFI",
-      "description": "Request for Information; a formal request used to gather mission-relevant information and inputs."
-    },
-    {
-      "id": "acr-056",
-      "acronym": "SaaS",
-      "description": "Software as a Service; a cloud computing model where software applications are delivered and accessed over the internet on a subscription basis, rather than being installed locally."
-    },
-    {
-      "id": "acr-035",
-      "acronym": "SME",
-      "description": "Subject-Matter Expert (also appears as SMEs); domain experts supporting definition, review, validation, and assessment."
-    },
-    {
-      "id": "acr-036",
-      "acronym": "SPARQL",
-      "description": "SPARQL Protocol and RDF Query Language; a query language for RDF/graph data, used here to query the Knowledge Graph."
-    },
-    {
-      "id": "acr-037",
-      "acronym": "SRS",
-      "description": "System Requirements Specification; the document defining intended capabilities, constraints, and testable requirements."
-    },
-    {
-      "id": "acr-038",
-      "acronym": "STANAG",
-      "description": "Standardisation Agreement (NATO); referenced as a formatted signal type that may include structured and free-text elements."
-    },
-    {
-      "id": "acr-039",
-      "acronym": "TCPA",
-      "description": "Time to Closest Point of Approach; the predicted time until the moving objects reach their minimum separation."
-    },
-    {
-      "id": "acr-040",
-      "acronym": "TLS",
-      "description": "Transport Layer Security; cryptographic protocol used to secure communications (e.g., HTTPS/TLS)."
-    },
-    {
-      "id": "acr-051",
-      "acronym": "u",
-      "description": "Eastwards vector component of ocean current velocity in the referenced NetCDF current products."
-    },
-    {
-      "id": "acr-041",
-      "acronym": "UI",
-      "description": "User Interface; the user-facing interface, constrained here to be map-centric."
-    },
-    {
-      "id": "acr-060",
-      "acronym": "UI/API reachability",
-      "description": "The UI and API can be accessed from the intended network and return expected responses (page loads for the UI; endpoint responds for the API)."
-    },
-    {
-      "id": "acr-042",
-      "acronym": "UUV",
-      "description": "Uncrewed Underwater Vehicle; the platform type whose missions/routes are being planned."
-    },
-    {
-      "id": "acr-043",
-      "acronym": "UUVRP",
-      "description": "Uncrewed Underwater Vehicle Route Planning; the prototype/trial capability described in the report."
-    },
-    {
-      "id": "acr-044",
-      "acronym": "UTC",
-      "description": "Coordinated Universal Time; the time standard used for timestamps in examples and workflow parameters."
-    },
-    {
-      "id": "acr-045",
-      "acronym": "UX/UI",
-      "description": "User Experience / User Interface; design concerns around usability and interaction patterns for the system."
-    },
-    {
-      "id": "acr-046",
-      "acronym": "v",
-      "description": "Northward vector component of ocean current velocity in the referenced NetCDF current products."
-    },
-    {
-      "id": "acr-054",
-      "acronym": "VM",
-      "description": "Virtual Machine; a software environment that runs on top of a host operating system (e.g., AWS EC2). Similar to Docker, but runs on top of the host OS rather than a containerised environment."
-    },
-    {
-      "id": "acr-055",
-      "acronym": "VPC",
-      "description": "Virtual Private Cloud; is a logically isolated, virtual network within the Amazon Web Services (AWS) cloud."
-    },
-    {
-      "id": "acr-047",
-      "acronym": "W3C",
-      "description": "World Wide Web Consortium; produces web standards including provenance standards (e.g., PROV)."
-    },
-    {
-      "id": "acr-048",
-      "acronym": "WGS84",
-      "description": "World Geodetic System 1984; a global geodetic datum commonly associated with geographic coordinates (lat/lon)."
-    },
-    {
-      "id": "acr-049",
-      "acronym": "XTF",
-      "description": "eXtended Triton Format; commonly used as a side-scan sonar data format (listed here as an ingestible hydrographic format)."
-    },
-    {
-      "id": "acr-050",
-      "acronym": "XYZ",
-      "description": "A simple coordinate listing format (often ASCII) representing points as X, Y (and optionally Z) values; listed as a supported data type."
+      "acronym": "WA",
+      "description": "Western Australia."
     }
   ]
 }

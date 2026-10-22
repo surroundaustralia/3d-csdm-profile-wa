@@ -135,7 +135,7 @@ The broader objective was to establish a consistent, reusable standards-based fo
 
 ### 2.2 Contractual scope and responsibilities
 
-SSURROUND was engaged under a 12-month subcontract to Accenture. 
+SURROUND was engaged under a 12-month subcontract to Accenture. 
 Its scope covered requirements analysis, specialist data design, co-design, development of CSDM profiles and specifications, technical constraint assessment, validation, and proposed acceptance criteria.
 
 The Statement of Work distinguished between requirements for which SURROUND was responsible for specified CSD and 3D CSDM outputs and those where it provided specialist support to the Accenture implementation team.
