@@ -47,7 +47,7 @@ Sections 6–8 establish where the programme could go next and the value of doin
 | Version | Status | Date       | Author        | Description  |
 |---------|--------|------------|---------------|--------------|
 | 0.1     | Draft  | 2026-10-15 | Andrew Hunter | Initial TOC  |
-| 0.2     | Draft  | 2026-10-28 | Andrew Hunter | Draft Report |
+| 0.2     | Draft  | 2026-10-27 | Andrew Hunter | Draft Report |
 
 This document is complete as of the date of presentation to Accenture. 
 
