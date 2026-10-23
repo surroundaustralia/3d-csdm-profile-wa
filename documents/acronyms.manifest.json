@@ -5,5 +5,5 @@
   "acronymList": "final-report_acronyms.json",
   "acronymOutput": "final-report_acronyms.json",
   "export": {"descriptionPolicy": "expansion", "separator": ": "},
-  "detection": {"ignore": ["SURROUND", "TOC"]}
+  "detection": {"ignore": ["ID", "SURROUND", "TOC"]}
 }

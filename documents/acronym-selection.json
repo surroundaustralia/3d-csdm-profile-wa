@@ -5,6 +5,11 @@
   "separator": ": ",
   "entries": [
     {
+      "acronym": "2D",
+      "record": "2d--two-dimensional",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "3D",
       "record": "3d--three-dimensional",
       "includedBecause": "used"
@@ -31,12 +36,17 @@
     },
     {
       "acronym": "CSDM",
-      "record": "csdm--cadastral-survey-data-model",
+      "record": "3d-csdm--3d-cadastral-survey-data-model",
       "includedBecause": "used"
     },
     {
       "acronym": "ICSM",
       "record": "icsm--intergovernmental-committee-on-surveying-and-mapping",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "JSON",
+      "record": "json--javascript-object-notation",
       "includedBecause": "used"
     },
     {

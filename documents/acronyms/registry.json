@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "projects": [
     {
       "id": "3d-csdm-profile-wa"
@@ -8,11 +8,38 @@
   "domains": [],
   "records": [
     {
+      "id": "2d--two-dimensional",
+      "acronym": "2D",
+      "aliases": [],
+      "expansion": "Two-dimensional",
+      "definition": {
+        "text": "Having or representing extent in two spatial dimensions, such as easting and northing.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "additions_acronyms.json",
+          "sourceId": "acr-001",
+          "originalAcronym": "2D",
+          "originalDescription": "Two-dimensional.",
+          "digest": "sha256:03f719cd718a0f93043cb6b2a810e7b6b2d67525bdaaaf666f3aa064919a2e62"
+        }
+      ]
+    },
+    {
       "id": "3d--three-dimensional",
       "acronym": "3D",
       "aliases": [],
       "expansion": "Three-dimensional",
-      "definition": null,
+      "definition": {
+        "text": "Having or representing extent in three spatial dimensions, usually width, depth and height, or easting, northing and elevation.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -31,9 +58,14 @@
     {
       "id": "3d-csdm--3d-cadastral-survey-data-model",
       "acronym": "3D CSDM",
-      "aliases": [],
+      "aliases": [
+        "CSDM"
+      ],
       "expansion": "3D Cadastral Survey Data Model",
-      "definition": null,
+      "definition": {
+        "text": "A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -54,7 +86,10 @@
       "acronym": "ABS",
       "aliases": [],
       "expansion": "Australian Bureau of Statistics",
-      "definition": null,
+      "definition": {
+        "text": "The Australian Government's national statistical agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -75,7 +110,10 @@
       "acronym": "API",
       "aliases": [],
       "expansion": "Application Programming Interface",
-      "definition": null,
+      "definition": {
+        "text": "A defined set of operations and data formats through which software components or systems exchange requests and data.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -96,7 +134,10 @@
       "acronym": "CSD",
       "aliases": [],
       "expansion": "Cadastral Survey Dataset",
-      "definition": null,
+      "definition": {
+        "text": "The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -117,9 +158,12 @@
       "acronym": "CSDM",
       "aliases": [],
       "expansion": "Cadastral Survey Data Model",
-      "definition": null,
-      "status": "approved",
-      "supersededBy": null,
+      "definition": {
+        "text": "A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions.",
+        "status": "approved"
+      },
+      "status": "deprecated",
+      "supersededBy": "3d-csdm--3d-cadastral-survey-data-model",
       "domains": [],
       "contexts": [],
       "sources": [
@@ -138,7 +182,10 @@
       "acronym": "ICSM",
       "aliases": [],
       "expansion": "Intergovernmental Committee on Surveying and Mapping",
-      "definition": null,
+      "definition": {
+        "text": "The committee of Australian and New Zealand government agencies that coordinates national surveying, mapping, cadastral and geodetic standards.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -155,11 +202,38 @@
       ]
     },
     {
+      "id": "json--javascript-object-notation",
+      "acronym": "JSON",
+      "aliases": [],
+      "expansion": "JavaScript Object Notation",
+      "definition": {
+        "text": "A lightweight, text-based format for structured data, built from name–value pairs and ordered lists.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "additions_acronyms.json",
+          "sourceId": "acr-002",
+          "originalAcronym": "JSON",
+          "originalDescription": "JavaScript Object Notation.",
+          "digest": "sha256:e266aae6a625c7d1c6e0172715b97bb99f64706c6b668e918a9ab870668e8ed5"
+        }
+      ]
+    },
+    {
       "id": "ngsc--next-generation-spatial-cadastre",
       "acronym": "NGSC",
       "aliases": [],
       "expansion": "Next Generation Spatial Cadastre",
-      "definition": null,
+      "definition": {
+        "text": "Landgate's programme to replace Western Australia's cadastral systems with a spatially accurate, three-dimensional-capable digital cadastre.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -180,7 +254,10 @@
       "acronym": "OGC",
       "aliases": [],
       "expansion": "Open Geospatial Consortium",
-      "definition": null,
+      "definition": {
+        "text": "An international not-for-profit consortium that develops open standards for geospatial content and services.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
@@ -201,7 +278,10 @@
       "acronym": "WA",
       "aliases": [],
       "expansion": "Western Australia",
-      "definition": null,
+      "definition": {
+        "text": "The Australian state covering the western third of the continent.",
+        "status": "approved"
+      },
       "status": "approved",
       "supersededBy": null,
       "domains": [],
