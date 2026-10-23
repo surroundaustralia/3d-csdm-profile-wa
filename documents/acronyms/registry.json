@@ -23,11 +23,9 @@
       "sources": [
         {
           "project": "3d-csdm-profile-wa",
-          "file": "additions_acronyms.json",
-          "sourceId": "acr-001",
-          "originalAcronym": "2D",
-          "originalDescription": "Two-dimensional.",
-          "digest": "sha256:03f719cd718a0f93043cb6b2a810e7b6b2d67525bdaaaf666f3aa064919a2e62"
+          "entry": "manual",
+          "date": "2026-10-23",
+          "note": "Added for the final report; first entered through a scratch list."
         }
       ]
     },
@@ -217,11 +215,9 @@
       "sources": [
         {
           "project": "3d-csdm-profile-wa",
-          "file": "additions_acronyms.json",
-          "sourceId": "acr-002",
-          "originalAcronym": "JSON",
-          "originalDescription": "JavaScript Object Notation.",
-          "digest": "sha256:e266aae6a625c7d1c6e0172715b97bb99f64706c6b668e918a9ab870668e8ed5"
+          "entry": "manual",
+          "date": "2026-10-23",
+          "note": "Added for the final report; first entered through a scratch list."
         }
       ]
     },
@@ -289,11 +285,9 @@
       "sources": [
         {
           "project": "3d-csdm-profile-wa",
-          "file": "additions_acronyms.json",
-          "sourceId": "acr-001",
-          "originalAcronym": "PoC",
-          "originalDescription": "Proof of Concept.",
-          "digest": "sha256:d3f69118bf0de0704d8f31b382cbb0d7cc900cc8a9bef7711249a9643da596da"
+          "entry": "manual",
+          "date": "2026-10-23",
+          "note": "Added for the final report; first entered through a scratch list."
         }
       ]
     },
