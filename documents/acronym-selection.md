@@ -1,6 +1,6 @@
 # Acronym selection: 3d-csdm-profile-wa
 
-Policy: expansion; separator `: `; 12 entries; 0 unresolved acronym(s) block export.
+Policy: definition; separator `: `; 13 entries; 0 unresolved acronym(s) block export.
 
 | Acronym | Record | Included because | Override |
 | :- | :- | :- | :- |
@@ -15,4 +15,5 @@ Policy: expansion; separator `: `; 12 entries; 0 unresolved acronym(s) block exp
 | JSON | `json--javascript-object-notation` | used |  |
 | NGSC | `ngsc--next-generation-spatial-cadastre` | used |  |
 | OGC | `ogc--open-geospatial-consortium` | used |  |
+| PoC | `poc--proof-of-concept` | used |  |
 | WA | `wa--western-australia` | used |  |

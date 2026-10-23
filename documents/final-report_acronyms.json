@@ -3,62 +3,67 @@
     {
       "id": "acr-001",
       "acronym": "2D",
-      "description": "Two-dimensional."
+      "description": "Two-dimensional: Having or representing extent in two spatial dimensions, such as easting and northing."
     },
     {
       "id": "acr-002",
       "acronym": "3D",
-      "description": "Three-dimensional."
+      "description": "Three-dimensional: Having or representing extent in three spatial dimensions, usually width, depth and height, or easting, northing and elevation."
     },
     {
       "id": "acr-003",
       "acronym": "3D CSDM",
-      "description": "3D Cadastral Survey Data Model."
+      "description": "3D Cadastral Survey Data Model: A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions."
     },
     {
       "id": "acr-004",
       "acronym": "ABS",
-      "description": "Australian Bureau of Statistics."
+      "description": "Australian Bureau of Statistics: The Australian Government's national statistical agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework."
     },
     {
       "id": "acr-005",
       "acronym": "API",
-      "description": "Application Programming Interface."
+      "description": "Application Programming Interface: A defined set of operations and data formats through which software components or systems exchange requests and data."
     },
     {
       "id": "acr-006",
       "acronym": "CSD",
-      "description": "Cadastral Survey Dataset."
+      "description": "Cadastral Survey Dataset: The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities."
     },
     {
       "id": "acr-007",
       "acronym": "CSDM",
-      "description": "3D Cadastral Survey Data Model."
+      "description": "3D Cadastral Survey Data Model: A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions."
     },
     {
       "id": "acr-008",
       "acronym": "ICSM",
-      "description": "Intergovernmental Committee on Surveying and Mapping."
+      "description": "Intergovernmental Committee on Surveying and Mapping: The committee of Australian and New Zealand government agencies that coordinates national surveying, mapping, cadastral and geodetic standards."
     },
     {
       "id": "acr-009",
       "acronym": "JSON",
-      "description": "JavaScript Object Notation."
+      "description": "JavaScript Object Notation: A lightweight, text-based format for structured data, built from name–value pairs and ordered lists."
     },
     {
       "id": "acr-010",
       "acronym": "NGSC",
-      "description": "Next Generation Spatial Cadastre."
+      "description": "Next Generation Spatial Cadastre: Landgate's programme to replace Western Australia's cadastral systems with a spatially accurate, three-dimensional-capable digital cadastre."
     },
     {
       "id": "acr-011",
       "acronym": "OGC",
-      "description": "Open Geospatial Consortium."
+      "description": "Open Geospatial Consortium: An international not-for-profit consortium that develops open standards for geospatial content and services."
     },
     {
       "id": "acr-012",
+      "acronym": "PoC",
+      "description": "Proof of Concept: A small-scale, preliminary implementation built to show that an approach or design is feasible."
+    },
+    {
+      "id": "acr-013",
       "acronym": "WA",
-      "description": "Western Australia."
+      "description": "Western Australia: The Australian state covering the western third of the continent."
     }
   ]
 }

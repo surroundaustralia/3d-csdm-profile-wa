@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "projects": [
     {
       "id": "3d-csdm-profile-wa"
@@ -270,6 +270,30 @@
           "originalAcronym": "OGC",
           "originalDescription": "Open Geospatial Consortium.",
           "digest": "sha256:5e3808292d7c2b522e22f62c8e135349f26140c714500c1c87ea514dff49b6b2"
+        }
+      ]
+    },
+    {
+      "id": "poc--proof-of-concept",
+      "acronym": "PoC",
+      "aliases": [],
+      "expansion": "Proof of Concept",
+      "definition": {
+        "text": "A small-scale, preliminary implementation built to show that an approach or design is feasible.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "additions_acronyms.json",
+          "sourceId": "acr-001",
+          "originalAcronym": "PoC",
+          "originalDescription": "Proof of Concept.",
+          "digest": "sha256:d3f69118bf0de0704d8f31b382cbb0d7cc900cc8a9bef7711249a9643da596da"
         }
       ]
     },

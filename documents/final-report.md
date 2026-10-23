@@ -399,7 +399,9 @@ Only relationships with continuing cadastral significance necessarily require th
 
 **Visualisation has also been an important part of the technical investigation.**
 
-A horizontal section viewer proof of concept was developed to investigate the generation of two-dimensional sections from three-dimensional cadastral information.
+The [bblocks-cesium-viewer](https://github.com/ogcincubator/bblocks-cesium-viewer) proof of concept explores browser-based three-dimensional visualisation of cadastral information.
+
+A horizontal section viewer proof of concept (PoC) was developed to investigate the generation of two-dimensional sections from three-dimensional cadastral information.
 It directly supports investigation of requirement NF02.02.027: 2D view of level in a building, concerning the viewing of individual building levels.
 The work illustrates the potential to derive floor-based representations from 3D geometry while preserving relationships to the underlying cadastral objects.
 
@@ -410,14 +412,22 @@ The work illustrates the potential to derive floor-based representations from 3D
   <figcaption id="figure-1-ground-floor">Figure 1: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline</figcaption>
 </figure>
 
+[Figure 1](#figure-1-ground-floor) illustrates the horizontal section PoC developed to test that the 3D CSDM can support NF02.02.027.
+The Poc generates a 2D horizontal section from a 3D CSDM built-strata dataset.
+It displays the ground-floor arrangement of principal units, courtyards, and associated parcel components, with individual geometries distinguished by colour and the parent parcel boundary shown as a dashed outline.
+Users can select building levels and control the visibility of individual components.
+
 <figure class="fig fig-wide">
   <img src="../assets/first-floor.png" 
        alt="Figure 2: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines"
        style="width: 88%;">
-  <figcaption id="figure-2-bpmn-workflow">Figure 2: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
+  <figcaption id="figure-2-first-floor">Figure 2: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
 </figure>
 
-The [bblocks-cesium-viewer](https://github.com/ogcincubator/bblocks-cesium-viewer) proof of concept explores browser-based three-dimensional visualisation of cadastral information.
+[Figure 2](#figure-2-first-floor) illustrates the horizontal section through Level/Floor 2 of the 3D CSDM dataset.
+It displays the first-floor arrangement of principal units, and balconies, along with the outlines of ground-floor parcel components.
+
+
 Together, the viewers help demonstrate how standards-based geometry can support different presentation requirements without introducing separate authoritative data models.
 
 These developments demonstrate useful implementation approaches but should not be regarded as production-ready NGSC applications.

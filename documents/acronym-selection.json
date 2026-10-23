@@ -1,7 +1,7 @@
 {
   "selectionVersion": "1.0",
   "project": "3d-csdm-profile-wa",
-  "descriptionPolicy": "expansion",
+  "descriptionPolicy": "definition",
   "separator": ": ",
   "entries": [
     {
@@ -57,6 +57,11 @@
     {
       "acronym": "OGC",
       "record": "ogc--open-geospatial-consortium",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "PoC",
+      "record": "poc--proof-of-concept",
       "includedBecause": "used"
     },
     {

@@ -4,6 +4,6 @@
   "sources": [{"type": "markdown", "path": "final-report.md"}],
   "acronymList": "final-report_acronyms.json",
   "acronymOutput": "final-report_acronyms.json",
-  "export": {"descriptionPolicy": "expansion", "separator": ": "},
+  "export": {"descriptionPolicy": "definition", "separator": ": "},
   "detection": {"ignore": ["ID", "SURROUND", "TOC"]}
 }
