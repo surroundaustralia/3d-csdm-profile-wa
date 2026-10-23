@@ -399,7 +399,34 @@ Only relationships with continuing cadastral significance necessarily require th
 
 **Visualisation has also been an important part of the technical investigation.**
 
-The [bblocks-cesium-viewer](https://github.com/ogcincubator/bblocks-cesium-viewer) proof of concept explores browser-based three-dimensional visualisation of cadastral information.
+The [bblocks-viewer-topo-feature-plugin](https://github.com/ogcincubator/bblocks-viewer-topo-feature-plugin) provides interactive 3D visualisation of Topo Feature datasets using [Three.js](https://threejs.org).
+It supports the inspection of topological components, including points, edges, faces, shells, and solids, and allows their presentation to be controlled through configurable rules.
+
+An architectural feature is that the viewer is independent of cadastral and jurisdiction-specific vocabularies.
+Individual OGC Building Blocks can provide their own visualisation configuration without modifying the viewer software.
+This enables the same component to support different data models and applications, including those outside the cadastral domain.
+
+<figure class="fig fig-wide">
+  <img src="../assets/topo-view.png" 
+       alt="Figure 1: Topo-Feature Viewer"
+       style="width: 69%;">
+  <figcaption id="figure-1-topo-viewer">Figure 1: Topo-Feature Viewer</figcaption>
+</figure>
+
+[Figure 1](#figure-1-topo-viewer) depicts the Topo-Feature Viewer displaying five solids depicting a two-storey building consisting of four-units and a common accessway. 
+The viewer provides basic pan, zoom, and rotation capabilities, along with the ability to turn on and off cadastral solids.
+
+A similar proof of concept has been developed with [Cesium](https://cesium.com/) tools to explore browser-based three-dimensional visualisation of cadastral information.
+
+<figure class="fig fig-wide">
+  <img src="../assets/cesium-viewer.png" 
+       alt="Figure 2: Cesium Viewer"
+       style="width: 68%;">
+  <figcaption id="figure-2-cesium-viewer">Figure 2: Cesium Viewer</figcaption>
+</figure>
+
+In [figure 2](#figure-2-cesium-viewer), a Solid parcel, parcel footprint with `zMin` and `zMax` values, defined by offset from ground is depicted.
+Cesium ion imagery and terrain (albeit flat) provide added context to the parcel geometry.
 
 A horizontal section viewer proof of concept (PoC) was developed to investigate the generation of two-dimensional sections from three-dimensional cadastral information.
 It directly supports investigation of requirement NF02.02.027: 2D view of level in a building, concerning the viewing of individual building levels.
@@ -407,26 +434,45 @@ The work illustrates the potential to derive floor-based representations from 3D
 
 <figure class="fig fig-wide">
   <img src="../assets/ground-floor.png" 
-       alt="Figure 1: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline"
-       style="width: 88%;">
-  <figcaption id="figure-1-ground-floor">Figure 1: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline</figcaption>
+       alt="Figure 3: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline"
+       style="width: 100%;">
+  <figcaption id="figure-3-ground-floor">Figure 3: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline</figcaption>
 </figure>
 
-[Figure 1](#figure-1-ground-floor) illustrates the horizontal section PoC developed to test that the 3D CSDM can support NF02.02.027.
+[Figure 3](#figure-3-ground-floor) illustrates the horizontal section PoC developed to test that the 3D CSDM can support NF02.02.027.
 The Poc generates a 2D horizontal section from a 3D CSDM built-strata dataset.
 It displays the ground-floor arrangement of principal units, courtyards, and associated parcel components, with individual geometries distinguished by colour and the parent parcel boundary shown as a dashed outline.
 Users can select building levels and control the visibility of individual components.
 
 <figure class="fig fig-wide">
   <img src="../assets/first-floor.png" 
-       alt="Figure 2: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines"
-       style="width: 88%;">
-  <figcaption id="figure-2-first-floor">Figure 2: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
+       alt="Figure 4: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines"
+       style="width: 100%;">
+  <figcaption id="figure-4-first-floor">Figure 4: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
 </figure>
 
-[Figure 2](#figure-2-first-floor) illustrates the horizontal section through Level/Floor 2 of the 3D CSDM dataset.
+[Figure 4](#figure-4-first-floor) illustrates the horizontal section through Level/Floor 2 of the 3D CSDM dataset.
 It displays the first-floor arrangement of principal units, and balconies, along with the outlines of ground-floor parcel components.
 
+To aid validation of built strata boundary definition, the topo-feature viewer was extended (as a PoC) to display the built strata boundary definition metadata.
+
+<figure class="fig fig-wide">
+  <img src="../assets/check-built-strata.png" 
+       alt="Figure 5: Visualise built strata boundary definition"
+       style="width: 68%;">
+  <figcaption id="figure-5-built-strata-bdy-def">Figure 5: Visualise built strata boundary definition</figcaption>
+</figure>
+
+[Figure 5](#figure-5-built-strata-bdy-def) displays 3D CSDM built-strata dataset (SP83687), specifically the upstairs primary unit for Lot 1 as an interactive three-dimensional model.
+The primary unit is a gray transparent solid. 
+The (red) cadastral Solid face that has been selected identifies the (green) face that defines the built strata boundary. 
+The blue solid is the `occupationFeature` (Wall) that includes the green face.
+To aid visualisation, the `occupationFeature` is shifted in a perpendicular direction to the red solid face.
+The lower left panel displays the boundary diagnostic panel, which identified the occupation feature as a wall, that the relationship is `inner-surface`, and that the geometries are coincident.
+
+This allows individual parcels and their component solids to be inspected.
+The boundary diagnostic panel demonstrates the ability to examine the relationship between a legal cadastral boundary and its referenced building element, including geometric coincidence and validation results.
+This development supports NGSC requirements concerning 3D cadastral visualisation, boundary representation, and topology validation, demonstrating how standards-based tools can assist cadastral interpretation, quality assurance, and verification of complex 3D parcel definitions.
 
 Together, the viewers help demonstrate how standards-based geometry can support different presentation requirements without introducing separate authoritative data models.
 
