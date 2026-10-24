@@ -302,8 +302,6 @@ Include discussion of `bblocks-xy-section-viewer`, `bblocks-3d-csdm-reporting`, 
 Include a decision register?
 -->
 
-## Consolidated technical and strategic findings
-
 The analysis of the 34 NGSC requirements identified recurring technical and architectural issues extending beyond individual requirements.
 These concern the adoption of the 3D CSDM, integration of legacy survey information, 3D boundary representation, validation, metadata governance, and the relationship between information standards and NGSC applications.
 
@@ -348,7 +346,7 @@ Original observations, identifiers, quality information, reference information, 
 
 The analysis identified circumstances where legacy information may be incomplete, including missing bearings, incomplete observations, uncertain control connections, and absent vertical information.
 
-The [angles-to-bearings](https://github.com/andrewhunter2066/angles-to-bearings) proof of concept investigates one aspect of this problem.
+The `angles-to-bearings` proof of concept investigates one aspect of this problem.
 It explores the calculation of line bearings from survey observations, including known azimuths and angles measured between survey lines, as required by WA standard survey practice.
 The work is relevant to requirement NF02.03.071: Accept angles and bearings when a plan is imported, and the broader processing of Western Australian [APX-05](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/survey-and-plan/appendices/apx-05-digital-data-format-specification-version-2.0) survey information [@landgate_apx-05_2022;].
 
@@ -402,7 +400,7 @@ Individual OGC Building Blocks can supply their own visualisation configurations
 <figure class="fig fig-wide">
   <img src="../assets/topo-view.png" 
        alt="Figure 1: Topo-Feature Viewer"
-       style="width: 69%;">
+       style="width: 50%;">
   <figcaption id="figure-1-topo-viewer">Figure 1: Topo-Feature Viewer</figcaption>
 </figure>
 
@@ -414,7 +412,7 @@ A similar proof of concept has been developed using [Cesium](https://cesium.com/
 <figure class="fig fig-wide">
   <img src="../assets/cesium-viewer.png" 
        alt="Figure 2: Cesium Viewer"
-       style="width: 68%;">
+       style="width: 50%;">
   <figcaption id="figure-2-cesium-viewer">Figure 2: Cesium Viewer</figcaption>
 </figure>
 
@@ -427,7 +425,7 @@ It directly supports requirement NF02.02.027: 2D view of level in a building, by
 <figure class="fig fig-wide">
   <img src="../assets/ground-floor.png" 
        alt="Figure 3: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline"
-       style="width: 100%;">
+       style="width: 75%;">
   <figcaption id="figure-3-ground-floor">Figure 3: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline</figcaption>
 </figure>
 
@@ -438,7 +436,7 @@ Users can select building levels and control the visibility of individual compon
 <figure class="fig fig-wide">
   <img src="../assets/first-floor.png" 
        alt="Figure 4: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines"
-       style="width: 100%;">
+       style="width: 75%;">
   <figcaption id="figure-4-first-floor">Figure 4: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
 </figure>
 
@@ -450,7 +448,7 @@ The Topo Feature Viewer was also extended as a PoC to inspect built-strata bound
 <figure class="fig fig-wide">
   <img src="../assets/check-built-strata.png" 
        alt="Figure 5: Visualise built strata boundary definition"
-       style="width: 68%;">
+       style="width: 50%;">
   <figcaption id="figure-5-built-strata-bdy-def">Figure 5: Visualise built strata boundary definition</figcaption>
 </figure>
 
@@ -522,7 +520,7 @@ A common Cadastral Report component provides shared report structures, provenanc
 <figure class="fig fig-wide">
   <img src="../assets/report-dependencies.png" 
        alt="Figure 6: Cadastral Reporting Building Block"
-       style="width: 100%;">
+       style="width: 60%;">
   <figcaption id="figure-6-report-bblock">Figure 6: Cadastral Reporting Building Block</figcaption>
 </figure>
 
@@ -533,7 +531,7 @@ This provides a reusable foundation for developing further cadastral reports wit
 <figure class="fig fig-wide">
   <img src="../assets/ue-report.png" 
        alt="Figure 7: Potential Unit Entitlement Report"
-       style="width: 100%;">
+       style="width: 60%;">
   <figcaption id="figure-7-ue-report">Figure 7: Potential Unit Entitlement Report</figcaption>
 </figure>
 
