@@ -364,7 +364,7 @@ It also supports investigation of alternative observation paths, network consist
   <figcaption id="figure-1-angles-to-bearings">Figure 1: Derivation of bearings from survey observations</figcaption>
 </figure>
 
-[Figute 1](#figure-1-angles-to-bearings) illustrates the `angles-to-bearings` proof of concept, displaying the derivation of cadastral line bearings from survey observations in a Western Australian APX-05 dataset (DP407880).
+[Figure 1](#figure-1-angles-to-bearings) illustrates the `angles-to-bearings` proof of concept, displaying the derivation of cadastral line bearings from survey observations in a Western Australian APX-05 dataset (DP407880).
 The interactive viewer distinguishes known azimuths, computed bearings, and survey lines lacking sufficient orientation information.
 It also highlights statistical test failures, network closure results, and potential inconsistencies between observed azimuths and coordinate-derived directions.
 A detailed inspection panel provides bearing values, uncertainty estimates, and the observation paths used in their derivation.
@@ -422,10 +422,9 @@ It supports inspection of points, edges, faces, shells, and solids, with present
 A significant architectural feature is its independence from cadastral and jurisdiction-specific vocabularies.
 Individual OGC Building Blocks can supply their own visualisation configurations without modifying the viewer software, allowing the component to support different information models and applications.
 
-<figure class="fig fig-wide">
+<figure class="fig fig-right">
   <img src="../assets/topo-view.png" 
-       alt="Figure 2: Topo-Feature Viewer"
-       style="width: 50%;">
+       alt="Figure 2: Topo-Feature Viewer">
   <figcaption id="figure-2-topo-viewer">Figure 2: Topo-Feature Viewer</figcaption>
 </figure>
 
@@ -434,15 +433,14 @@ The viewer supports navigation and control over the visibility of individual cad
 
 A similar proof of concept has been developed using [Cesium](https://cesium.com/) to investigate browser-based 3D cadastral visualisation with geographic context.
 
-<figure class="fig fig-wide">
-  <img src="../assets/cesium-viewer.png" 
-       alt="Figure 3: Cesium Viewer"
-       style="width: 50%;">
-  <figcaption id="figure-3-cesium-viewer">Figure 3: Cesium Viewer</figcaption>
-</figure>
-
 [Figure 3](#figure-3-cesium-viewer) depicts a solid parcel with a footprint and vertical limits (`zMin` and `zMax`) defined relative to ground level.
 Cesium imagery and terrain provide additional context for the parcel geometry.
+
+<figure class="fig fig-right">
+  <img src="../assets/cesium-viewer.png" 
+       alt="Figure 3: Cesium Viewer">
+  <figcaption id="figure-3-cesium-viewer">Figure 3: Cesium Viewer</figcaption>
+</figure>
 
 A horizontal section viewer proof of concept (PoC) was also developed to investigate the generation of 2D sections from 3D cadastral information.
 It directly supports requirement NF02.02.027: 2D view of level in a building, by deriving floor-based representations from the underlying 3D geometry.
@@ -466,16 +464,9 @@ Users can select building levels and control the visibility of individual compon
 </figure>
 
 [Figure 5](#figure-5-first-floor) shows the corresponding first-floor section, including principal units, balconies, and outlines of ground-floor parcel components.
-Together, Figures 3 and 4 demonstrate how individual building levels can be viewed while retaining their relationship to the wider cadastral structure.
+Together, Figures 4 and 5 demonstrate how individual building levels can be viewed while retaining their relationship to the wider cadastral structure.
 
 The Topo Feature Viewer was also extended as a PoC to inspect built-strata boundary definitions and their relationships to referenced building elements.
-
-<figure class="fig fig-wide">
-  <img src="../assets/check-built-strata.png" 
-       alt="Figure 6: Visualise built strata boundary definition"
-       style="width: 80%;">
-  <figcaption id="figure-6-built-strata-bdy-def">Figure 6: Visualise built strata boundary definition</figcaption>
-</figure>
 
 [Figure 6](#figure-6-built-strata-bdy-def) illustrates the inspection of a boundary definition within built-strata dataset SP83687.
 The selected cadastral boundary face is shown in red, its referenced building-element face in green, and the associated wall occupation feature in blue.
@@ -486,6 +477,13 @@ This capability demonstrates how visual inspection and automated diagnostics can
 
 Collectively, the viewers demonstrate different presentation and inspection capabilities using a common information model.
 They remain proof-of-concept developments requiring further work on performance, interaction, presentation conventions, and NGSC integration.
+
+<figure class="fig fig-wide">
+  <img src="../assets/check-built-strata.png" 
+       alt="Figure 6: Visualise built strata boundary definition"
+       style="width: 80%;">
+  <figcaption id="figure-6-built-strata-bdy-def">Figure 6: Visualise built strata boundary definition</figcaption>
+</figure>
 
 The principal finding is that geometry, topology, and legal boundary semantics must be considered together.
 Visualisation and editing tools should support the interpretation of authoritative cadastral information without independently redefining its meaning.
@@ -561,10 +559,9 @@ The development established reusable reporting infrastructure using OGC Building
 It separates source-data interpretation, report-specific calculations and validation, and presentation.
 A common Cadastral Report component provides shared report structures, provenance, validation results, and processing status, while specialised components support individual report types.
 
-<figure class="fig fig-wide">
+<figure class="fig fig-left">
   <img src="../assets/report-dependencies.png" 
-       alt="Figure 7: Cadastral Reporting Building Block"
-       style="width: 40%;">
+       alt="Figure 7: Cadastral Reporting Building Block">
   <figcaption id="figure-7-report-bblock">Figure 7: Cadastral Reporting Building Block</figcaption>
 </figure>
 
@@ -572,19 +569,19 @@ A common Cadastral Report component provides shared report structures, provenanc
 Strata Scheme Entitlement and Scheme Composition reports build upon the common Cadastral Report component and shared reporting vocabulary.
 This provides a reusable foundation for developing further cadastral reports without creating separate reporting infrastructure for each report type.
 
-<figure class="fig fig-wide">
-  <img src="../assets/ue-report.png" 
-       alt="Figure 8: Potential Unit Entitlement Report"
-       style="width: 60%;">
-  <figcaption id="figure-8-ue-report">Figure 8: Potential Unit Entitlement Report</figcaption>
-</figure>
-
 [Figure 8](#figure-8-ue-report) shows a Unit Entitlement Report generated from a 3D CSDM dataset.
 It includes scheme details, individual lot entitlements, calculated and declared totals, supporting documents, and licensed valuer certification information.
 Automated validation results and source references provide transparency and traceability.
 
 The reporting infrastructure has also been demonstrated through Scheme Composition reports and supports machine-readable report definitions, semantic validation, and HTML and CSV outputs.
 This illustrates how NGSC could integrate consistent, traceable reporting into cadastral workflows and APIs using a common information model.
+
+<figure class="fig fig-wide">
+  <img src="../assets/ue-report.png" 
+       alt="Figure 8: Potential Unit Entitlement Report"
+       style="width: 60%;">
+  <figcaption id="figure-8-ue-report">Figure 8: Potential Unit Entitlement Report</figcaption>
+</figure>
 
 The [bblocks-land-parcels](https://github.com/ogcincubator/bblocks-land-parcels) development provides a further reference point for reusable land-parcel information components.
 
@@ -626,54 +623,92 @@ The same foundation may support wider adoption of the 3D CSDM, particularly wher
 The immediate priority is to resolve the cross-cutting decisions, confirm the maturity and applicability of the technical artefacts, and establish an agreed implementation and validation baseline.
 This would provide a clearer pathway from requirements analysis and technical investigation to operational NGSC capabilities.
 
-## Strategic assessment: strengths, gaps, opportunities, and risks
-<!-- 
-2 - 3 pages
+## Implementation roadmap and future opportunities
 
-Analyse the readiness of the NGSC programme to realise the capabilities addressed through this engagement.
--->
+The NGSC engagement has established a foundation of requirements analysis, standards-based specifications, validation capabilities, and supporting technical development.
+It has also identified outstanding decisions and opportunities to strengthen implementation, extend functionality, and support wider adoption of the 3D CSDM across WA agencies.
 
-### Strengths and capabilities established
+The principal strengths are the established information model, developing WA profile, reusable validation components, and practical demonstrations of complex 3D cadastral capabilities.
+The main gaps concern unresolved business rules, incomplete implementation specifications, integration with NGSC workflows, and agreement on validation and acceptance criteria.
 
-### Capability gaps and areas requiring further development
+Future work should be prioritised according to its contribution to NGSC delivery, dependencies on other programme decisions, and the potential to reuse existing technical components.
+The opportunities outlined below are indicative and would require further discussion with Accenture and Landgate regarding priorities, responsibilities, resources, and funding.
 
-### Opportunities for further value creation
+### Immediate priorities and decisions
 
-### Risks to delivery and long-term sustainability
+The immediate priority is to resolve outstanding matters that could affect NGSC design, implementation, or acceptance.
 
-## Opportunities to strengthen NGSC delivery and capability
-<!-- 
-4–5 pages
+Many are relatively contained issues requiring agreed examples, clarification of business rules, or confirmation of architectural responsibilities.
+Resolving these would reduce implementation uncertainty and provide a more complete basis for validation and testing.
 
-Identify discrete work packages that could be jointly considered by SURROUND and Accenture
--->
+Priority activities include:
 
-### Prioritisation principles
+- **Requirements and acceptance baseline:** Reconcile the 34 assessments with NGSC solution designs, resolve outstanding dependencies, and confirm acceptance criteria and supporting test cases.
+- **WA 3D CSDM profile:** Finalise outstanding schema, vocabulary, and boundary-representation decisions, particularly for complex 3D parcels and jurisdiction-specific constraints.
+- **Product-specific requirements:** Confirm required cadastral product types, representative datasets, and applicable validation rules, including outstanding cases such as community titles.
+- **Implementation architecture:** Resolve responsibilities for plan lodgement, validation, metadata, lifecycle events, and integration with other Landgate systems.
+- **Technical specifications:** Confirm the status and applicability of machine-readable schemas, ontologies, examples, validation rules, and transformation specifications.
 
-### WA 3D CSDM profile and standards development
+These activities should be undertaken jointly with the relevant NGSC implementation and business teams.
+SURROUND is able to provide specialist input where required.
 
-### Validation, testing, and quality assurance
+### Targeted development and integration
 
-### Data transformation and migration
+The next phase would focus on converting existing technical work into components that can be reliably integrated, tested, and maintained within NGSC.
 
-### 3D cadastre implementation and demonstrators
+The highest-value opportunities are those that address multiple requirements or reduce duplication across the solution.
 
-### Integration, governance, and capability development
+#### Table 4: Potential development and expected benefit
 
-## Implementation roadmap and engagement opportunities
-<!-- 
-2–3 pages
+| Workstream                       | Potential development                                                                                                              | Expected benefit                                                                   |
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| 3D CSDM and WA profile           | Complete jurisdictional profiles, cadastral product definitions, and representative examples to address the Landgate GAP analysis. | Consistent implementation of 3D cadastral information requirements.                |
+| Validation and quality assurance | Extend topology and cadastral validators, establish regression datasets, and integrate validation reporting.                       | Repeatable verification and reduced risk of inconsistent cadastral data.           |
+| Data transformation              | Develop and test CSD-to-3D CSDM transformations, including survey observations and incomplete legacy information.                  | Consistent processing of existing survey information with preserved provenance.    |
+| 3D cadastral capabilities        | Refine built-strata representations, boundary derivation, sectional viewing, and inspection tools.                                 | Improved implementation and verification of complex 3D parcel requirements.        |
+| System integration               | Support implementation of metadata mappings, lifecycle events, APIs, and validation workflows.                                     | Clearer integration between cadastral information standards and NGSC applications. |
 
-Translate the future work programme into practical phases.
--->
+The existing OGC Building Blocks, WA profile, and topology validation tools provide starting points for these activities.
+Development should build upon these components where appropriate rather than establish separate solutions for each requirement.
 
-### Immediate priorities and decision points
+A particular opportunity is to create a consolidated NGSC validation and conformance test suite.
+This could bring together machine-readable specifications, representative datasets, expected validation outcomes, and automated reporting.
 
-### Medium-term development opportunities
+Such a capability would support both NGSC implementation testing and the ongoing maintenance of the WA 3D CSDM profile.
 
 ### Longer-term strategic opportunities
 
-### Potential delivery and collaboration arrangements
+Beyond immediate implementation, the technical work provides opportunities to establish reusable cadastral information capabilities with broader application.
+
+These include:
+
+- **Standards development:** Promote generally applicable WA profile concepts into the ICSM 3D CSDM, common vocabularies, and relevant OGC or LADM standards.
+- **Reusable information products:** Extend the reporting framework, transformation components, and validation tools to support additional cadastral products and jurisdictions.
+- **3D cadastral capability:** Investigate automated derivation of 3D parcel geometry from legally defined spatial representations, reference surfaces, and approved elevation data.
+- **Capability development:** Prepare consolidated technical documentation, tutorials, and interactive examples to support NGSC developers, Landgate staff, and future users.
+- **Industry engagement:** Support consistent adoption of 3D CSDM by survey software providers, spatial system vendors, and other jurisdictions.
+
+These opportunities could strengthen the sustainability of NGSC technical outputs while reducing the cost of future standards adoption and application development.
+
+They should be considered selectively, with priority given to capabilities that offer demonstrable benefits to Landgate and align with broader national cadastral information initiatives.
+
+### Delivery and collaboration approach
+
+Progressing the roadmap requires coordination between Landgate as business owner, Accenture as NGSC implementation lead, and specialist standards and cadastral information contributors.
+
+The immediate priorities should be addressed through existing NGSC design, governance, and implementation processes wherever practical.
+This would help ensure that outstanding decisions are resolved within the appropriate business and architectural context.
+
+Targeted technical activities could be organised as discrete work packages, each with an agreed scope, responsible parties, expected outputs, and acceptance criteria.
+Potential contributions from SURROUND include specialist requirements clarification, standards development, machine-readable specifications, validation, technical demonstrators, and knowledge transfer.
+
+Longer-term opportunities may be suitable for collaboration with ICSM, OGC, software vendors, or other jurisdictions where broader adoption would justify shared development.
+
+Any additional work would be subject to agreed programme priorities, delivery arrangements, and available funding.
+
+The recommended approach is to consolidate and adopt the capabilities already developed before undertaking new development.
+This would protect the value of the current investment, address immediate implementation risks, and provide a foundation for the longer-term evolution of the NGSC and Australian 3D CSDM.
+
 
 ## Conclusions and recommended next steps
 <!--
