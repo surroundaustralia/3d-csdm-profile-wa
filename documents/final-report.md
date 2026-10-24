@@ -339,28 +339,53 @@ Requirements concerning the import of lodged surveys, survey observations, minin
 
 The recommended architecture is to use the 3D CSDM as the normalised survey-package representation for downstream processing.
 Native 3D CSDM datasets can be processed directly, while legacy CSD formats can be transformed at the system boundary.
-This reduces the need for separate processing and validation pathways and provides a common basis for applying jurisdictional profiles and business rules.
+This provides a common basis for applying jurisdictional profiles, validation rules, and business processes without maintaining separate processing pathways for each source format.
 
 **Transformation must preserve the meaning and evidence of the original survey information.**
-Original observations, identifiers, quality information, reference information, and provenance should remain available wherever supported by the source data.
+Original observations, identifiers, reference information, quality measures, and provenance should remain available wherever supported by the source data.
+Legacy information may also be incomplete, including missing bearings or observations, uncertain control connections, and absent vertical information.
 
-The analysis identified circumstances where legacy information may be incomplete, including missing bearings, incomplete observations, uncertain control connections, and absent vertical information.
+The derivation of bearings from survey observations was investigated in support of requirement NF02.03.071: Accept angles and bearings when a plan is imported.
+An initial technical report, *Angles and Directions*, was provided to Accenture before the subcontract commenced.
+This was followed by technical discussions, supplementary advice on survey observation quality and error propagation, and implementation recommendations.
 
-The `angles-to-bearings` proof of concept investigates one aspect of this problem.
-It explores the calculation of line bearings from survey observations, including known azimuths and angles measured between survey lines, as required by WA standard survey practice.
-The work is relevant to requirement NF02.03.071: Accept angles and bearings when a plan is imported, and the broader processing of Western Australian [APX-05](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/survey-and-plan/appendices/apx-05-digital-data-format-specification-version-2.0) survey information [@landgate_apx-05_2022;].
+The work highlighted an important distinction between cadastral surveying and conventional GIS processing.
+In Western Australian cadastral practice, observed angles and distances provide the primary survey evidence, while coordinates are generally derived or adjusted from that evidence.
+Bearings calculated directly from coordinates may therefore differ from those derived through the original observations.
 
-The development demonstrates the potential to recover mathematically derivable information from existing observations.
-However, derived bearings must remain distinguishable from original survey measurements, with their derivation and supporting evidence recorded.
+The [`angles-to-bearings`](https://github.com/andrewhunter2066/angles-to-bearings) proof of concept (PoC) was developed and demonstrated to Accenture to investigate automated bearing derivation from observations contained in Western Australian [APX-05](https://www.landgate.wa.gov.au/land-and-property/land-transactions-hub/land-transaction-policy-and-procedure-guides/survey-and-plan/appendices/apx-05-digital-data-format-specification-version-2.0) datasets [@landgate_apx-05_2022;].
+The approach represents survey observations as a connected network, allowing bearings to be propagated from known azimuths through observed angles.
+It also supports investigation of alternative observation paths, network consistency, and incomplete or conflicting survey information.
 
-Requirements concerning cadastral connections to survey control also identified the need to accommodate complete 3D observations and controlled 2D fallback representations.
-A 2D observation should not be treated as sufficient for 3D adjustment without the necessary vertical information.
+<figure class="fig fig-wide">
+  <img src="../assets/angles-to-bearings.png"
+       alt="Figure 1: Derivation of bearings from survey observations"
+       style="width: 75%;">
+  <figcaption id="figure-1-angles-to-bearings">Figure 1: Derivation of bearings from survey observations</figcaption>
+</figure>
 
-Interoperability development has been supported by the [Topo Feature](https://surroundaustralia.github.io/topo-feature/) model and [topo-functions](https://github.com/ogcincubator/topo-functions).
-These provide reusable approaches to representing, processing, and validating topological geometry independently of a particular cadastral application.
+[Figute 1](#figure-1-angles-to-bearings) illustrates the `angles-to-bearings` proof of concept, displaying the derivation of cadastral line bearings from survey observations in a Western Australian APX-05 dataset (DP407880).
+The interactive viewer distinguishes known azimuths, computed bearings, and survey lines lacking sufficient orientation information.
+It also highlights statistical test failures, network closure results, and potential inconsistencies between observed azimuths and coordinate-derived directions.
+A detailed inspection panel provides bearing values, uncertainty estimates, and the observation paths used in their derivation.
 
-The strategic direction is to separate source-format ingestion from common cadastral validation and processing.
-Further work is required to specify supported transformations, document information loss or unresolved source content, and establish representative conformance tests.
+Additional technical advice addressed bearing uncertainty, error propagation, differences between grid bearings and observed azimuths, and the treatment of arcs and LineStrings where distances and directions refer to different geometric measures.
+
+A central recommendation was to preserve the provenance of derived bearings, including their source observations, calculation method, orientation reference, and quality information.
+Where observations are insufficient, geometry-derived bearings should be identified separately rather than treated as equivalent to observed survey evidence.
+
+The PoC demonstrates an approach to processing legacy survey observations while retaining their cadastral meaning.
+Further implementation requires agreement on quality thresholds, incomplete observation networks, and the treatment of alternative or inconsistent solutions.
+
+Related requirements concerning cadastral connections to survey control identified the need to accommodate complete 3D observations and controlled 2D fallback representations.
+A 2D observation should not be considered sufficient for 3D adjustment without the necessary vertical information.
+
+Interoperability development has also been supported by the [Topo Feature](https://surroundaustralia.github.io/topo-feature/) model and [topo-functions](https://github.com/ogcincubator/topo-functions).
+These provide reusable approaches to representing, processing, and validating topological geometry independently of particular cadastral applications. 
+More details are provided in the following section.
+
+The broader architectural recommendation is to separate source-format ingestion from common cadastral validation and processing.
+Remaining work includes specifying supported transformations, recording information loss or unresolved source content, and establishing representative conformance tests.
 
 ### 3D geometry, topology, and boundary representation
 
@@ -399,24 +424,24 @@ Individual OGC Building Blocks can supply their own visualisation configurations
 
 <figure class="fig fig-wide">
   <img src="../assets/topo-view.png" 
-       alt="Figure 1: Topo-Feature Viewer"
+       alt="Figure 2: Topo-Feature Viewer"
        style="width: 50%;">
-  <figcaption id="figure-1-topo-viewer">Figure 1: Topo-Feature Viewer</figcaption>
+  <figcaption id="figure-2-topo-viewer">Figure 2: Topo-Feature Viewer</figcaption>
 </figure>
 
-[Figure 1](#figure-1-topo-viewer) shows the Topo Feature Viewer displaying five solids representing a two-storey building comprising four units and a common accessway.
+[Figure 2](#figure-2-topo-viewer) shows the Topo Feature Viewer displaying five solids representing a two-storey building comprising four units and a common accessway.
 The viewer supports navigation and control over the visibility of individual cadastral solids.
 
 A similar proof of concept has been developed using [Cesium](https://cesium.com/) to investigate browser-based 3D cadastral visualisation with geographic context.
 
 <figure class="fig fig-wide">
   <img src="../assets/cesium-viewer.png" 
-       alt="Figure 2: Cesium Viewer"
+       alt="Figure 3: Cesium Viewer"
        style="width: 50%;">
-  <figcaption id="figure-2-cesium-viewer">Figure 2: Cesium Viewer</figcaption>
+  <figcaption id="figure-3-cesium-viewer">Figure 3: Cesium Viewer</figcaption>
 </figure>
 
-[Figure 2](#figure-2-cesium-viewer) depicts a solid parcel with a footprint and vertical limits (`zMin` and `zMax`) defined relative to ground level.
+[Figure 3](#figure-3-cesium-viewer) depicts a solid parcel with a footprint and vertical limits (`zMin` and `zMax`) defined relative to ground level.
 Cesium imagery and terrain provide additional context for the parcel geometry.
 
 A horizontal section viewer proof of concept (PoC) was also developed to investigate the generation of 2D sections from 3D cadastral information.
@@ -424,35 +449,35 @@ It directly supports requirement NF02.02.027: 2D view of level in a building, by
 
 <figure class="fig fig-wide">
   <img src="../assets/ground-floor.png" 
-       alt="Figure 3: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline"
+       alt="Figure 4: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline"
        style="width: 75%;">
-  <figcaption id="figure-3-ground-floor">Figure 3: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline</figcaption>
+  <figcaption id="figure-4-ground-floor">Figure 4: Ground floor; Lots 1 and 2 of Built Strata Plan with parent parcel outline</figcaption>
 </figure>
 
-[Figure 3](#figure-3-ground-floor) illustrates the ground-floor section generated from a 3D CSDM built-strata dataset.
+[Figure 4](#figure-4-ground-floor) illustrates the ground-floor section generated from a 3D CSDM built-strata dataset.
 Principal units, courtyards, and associated parcel components are distinguished by colour, with the parent parcel boundary shown as a dashed outline.
 Users can select building levels and control the visibility of individual components.
 
 <figure class="fig fig-wide">
   <img src="../assets/first-floor.png" 
-       alt="Figure 4: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines"
+       alt="Figure 5: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines"
        style="width: 75%;">
-  <figcaption id="figure-4-first-floor">Figure 4: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
+  <figcaption id="figure-5-first-floor">Figure 5: First floor; Lots 1 and 2 of Built Strata Plan with ground floor and parent parcel outlines</figcaption>
 </figure>
 
-[Figure 4](#figure-4-first-floor) shows the corresponding first-floor section, including principal units, balconies, and outlines of ground-floor parcel components.
+[Figure 5](#figure-5-first-floor) shows the corresponding first-floor section, including principal units, balconies, and outlines of ground-floor parcel components.
 Together, Figures 3 and 4 demonstrate how individual building levels can be viewed while retaining their relationship to the wider cadastral structure.
 
 The Topo Feature Viewer was also extended as a PoC to inspect built-strata boundary definitions and their relationships to referenced building elements.
 
 <figure class="fig fig-wide">
   <img src="../assets/check-built-strata.png" 
-       alt="Figure 5: Visualise built strata boundary definition"
+       alt="Figure 6: Visualise built strata boundary definition"
        style="width: 80%;">
-  <figcaption id="figure-5-built-strata-bdy-def">Figure 5: Visualise built strata boundary definition</figcaption>
+  <figcaption id="figure-6-built-strata-bdy-def">Figure 6: Visualise built strata boundary definition</figcaption>
 </figure>
 
-[Figure 5](#figure-5-built-strata-bdy-def) illustrates the inspection of a boundary definition within built-strata dataset SP83687.
+[Figure 6](#figure-6-built-strata-bdy-def) illustrates the inspection of a boundary definition within built-strata dataset SP83687.
 The selected cadastral boundary face is shown in red, its referenced building-element face in green, and the associated wall occupation feature in blue.
 The wall has been displaced for visualisation, allowing the relationship between the selected faces to be inspected.
 The diagnostic panel identifies the boundary relationship as `inner-surface` and reports geometric coincidence and validation results.
@@ -467,29 +492,48 @@ Visualisation and editing tools should support the interpretation of authoritati
 
 ### Metadata, data quality, and standards compliance
 
-Metadata and data quality requirements were addressed across several deliverables, particularly Deliverable 2 and subsequent assessments concerning metadata standards, dataset metadata, and feedback.
+Metadata, naming, and data quality requirements were addressed across several deliverables, particularly Deliverable 2 and subsequent assessments concerning metadata standards, dataset metadata, and feedback.
 
-The assessment of the Australian Bureau of Statistics Data Quality Framework and government standards highlighted the distinction between data quality characteristics and the mechanisms used to manage and demonstrate compliance.
+The assessment of the Australian Bureau of Statistics Data Quality Framework and government standards highlighted the need for consistent information structures, defined quality measures, and mechanisms for demonstrating compliance.
+
+Structured naming and appellations were investigated through the development of reusable WA profile datatypes, addressing requirements NN01.02.025: Support data standards from wa.gov.au; NN01.02.015: Geographical naming; and NN01.02.026: Aboriginal naming and dual naming, before the latter was moved out of scope.
+
+The datatypes include [`crownAllotment`](https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.crownAllotment), [`lotOnPlan`](https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.lotOnPlan), [`miscellaneousTenure`](https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.miscellaneousTenure), [`parcelAppellation`](https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.parcelAppellation), and [`waAppellationNamespaces`](https://surroundaustralia.github.io/3d-csdm-profile-wa/bblock/icsm.profiles.wa.datatypes.waAppellationNamespaces).
+
+These apply the reusable `compoundName` pattern, which represents a name as components with defined functional roles that can be assembled into a single string using a template.
+The pattern accommodates different naming conventions without requiring changes to the underlying information model.
+
+Although initially applied to cadastral survey and parcel appellations, the approach can also support alternate and multilingual names, including dual naming of geographical features.
+This provides a potential mechanism for implementing Western Australian naming policies while preserving individual name components and their meaning.
+
+The approach also extends to addressing.
+Both the WA addressing standard, based on AS/NZS 4819:2011 [@icsm_asnzs_2011;], and the newer [ICSM ANZ Address Model](https://icsm-au.github.io/addr-model/model.html), aligned with ISO 19160-1 [@iso_iso_2015;], can be represented using compound naming principles.
+The ICSM model already adopts this approach, treating addresses as structured names comprising reusable, typed components.
+
+The broader significance is the ability to apply consistent naming patterns across cadastral appellations, geographical names, and addresses.
+Jurisdiction-specific requirements can be implemented through profiles, vocabularies, and templates, supporting standards alignment and reuse across NGSC and other Spatial WA applications.
+
+Beyond individual data elements, standards compliance also depends on how datasets are described, governed, and maintained.
+This introduces broader requirements for NGSC metadata management.
 
 The 3D CSDM provides source information, including dataset identifiers, survey purpose, coordinate reference information, provenance, and cadastral content.
-However, it does not define the complete NGSC data catalogue or associated governance processes.
+However, it does not define the complete NGSC data catalogue or its governance processes.
 
-The NGSC Metadata Profile should establish required catalogue information, its relationship to source datasets, and applicable Spatial WA standards.
-Where metadata can be derived from 3D CSDM information, the mapping should be explicit and repeatable.
-Operational custodianship, quality assessments, maintenance status, and other catalogue information may need to be maintained by NGSC or responsible external systems.
+The NGSC Metadata Profile should establish required catalogue information, applicable standards, and mappings to source datasets.
+Metadata derived from 3D CSDM information should be mapped consistently, while operational custodianship, quality assessments, maintenance status, and other catalogue information may require management by NGSC or external systems.
 
 Requirement NF02.02.036: Metadata for my NGSC dataset, demonstrated that metadata governance also requires operational functionality.
 It combines an interface for reporting metadata issues with a managed workflow for their review and resolution.
 
-The workflow must retain references to the catalogue record and, where appropriate, the underlying cadastral dataset.
-The 3D CSDM can provide stable identifiers and source context without being extended to represent workflow states, assignments, or issue resolution.
+The workflow must retain references to the affected catalogue record and, where appropriate, the underlying cadastral dataset.
+Stable identifiers and provenance from the 3D CSDM can support this traceability without extending the information model to represent workflow states, assignments, or issue resolution.
 
 The requirements analysis also identified the need for validation against nominated standards and profiles.
-This may involve JSON Schema, semantic constraints, controlled vocabularies, and additional validation rules that cannot be adequately expressed through schema validation alone.
+This may involve JSON Schema, semantic constraints, controlled vocabularies, and additional rules that cannot be adequately expressed through structural validation alone.
 
-The OGC Building Blocks approach provides a framework for publishing these specifications, examples, and validation resources while distinguishing reusable standards components from jurisdiction-specific requirements.
+The OGC Building Blocks approach provides a framework for publishing these specifications, examples, and validation resources while separating reusable standards components from jurisdiction-specific requirements.
 
-The remaining challenge is to establish the authoritative NGSC Metadata Profile, allocate responsibility for maintaining individual metadata elements, and define how compliance will be tested and reported.
+The remaining priorities are to confirm the authoritative NGSC Metadata Profile, allocate responsibility for maintaining metadata, and establish agreed compliance testing and reporting arrangements.
 
 ### Cadastral workflows, APIs, and system integration
 
@@ -519,23 +563,23 @@ A common Cadastral Report component provides shared report structures, provenanc
 
 <figure class="fig fig-wide">
   <img src="../assets/report-dependencies.png" 
-       alt="Figure 6: Cadastral Reporting Building Block"
+       alt="Figure 7: Cadastral Reporting Building Block"
        style="width: 40%;">
-  <figcaption id="figure-6-report-bblock">Figure 6: Cadastral Reporting Building Block</figcaption>
+  <figcaption id="figure-7-report-bblock">Figure 7: Cadastral Reporting Building Block</figcaption>
 </figure>
 
-[Figure 6](#figure-6-report-bblock) illustrates the modular architecture of the reporting infrastructure.
+[Figure 7](#figure-7-report-bblock) illustrates the modular architecture of the reporting infrastructure.
 Strata Scheme Entitlement and Scheme Composition reports build upon the common Cadastral Report component and shared reporting vocabulary.
 This provides a reusable foundation for developing further cadastral reports without creating separate reporting infrastructure for each report type.
 
 <figure class="fig fig-wide">
   <img src="../assets/ue-report.png" 
-       alt="Figure 7: Potential Unit Entitlement Report"
+       alt="Figure 8: Potential Unit Entitlement Report"
        style="width: 60%;">
-  <figcaption id="figure-7-ue-report">Figure 7: Potential Unit Entitlement Report</figcaption>
+  <figcaption id="figure-8-ue-report">Figure 8: Potential Unit Entitlement Report</figcaption>
 </figure>
 
-[Figure 7](#figure-7-ue-report) shows a Unit Entitlement Report generated from a 3D CSDM dataset.
+[Figure 8](#figure-8-ue-report) shows a Unit Entitlement Report generated from a 3D CSDM dataset.
 It includes scheme details, individual lot entitlements, calculated and declared totals, supporting documents, and licensed valuer certification information.
 Automated validation results and source references provide transparency and traceability.
 
@@ -559,8 +603,8 @@ The following decision register consolidates the principal matters requiring fur
 | ID | Architectural decision | Recommended direction | Primary responsibility |
 |---|---|---|---|
 | AD-01 | Role of 3D CSDM in NGSC information exchange | Adopt 3D CSDM as the normalised survey-package representation, with jurisdictional profiles and source-format transformations. | Accenture / Landgate |
-| AD-02 | Governance of WA profile extensions and vocabularies | Maintain jurisdictional extensions in the WA profile and promote generally applicable concepts to shared standards. | Landgate / ICSM / standards custodians |
-| AD-03 | Legacy CSD transformation and incomplete observations | Define supported transformations, provenance requirements, information-loss reporting, and controlled handling of unresolved observations. | Accenture / Landgate |
+| AD-02 | Governance of WA profile extensions, vocabularies and naming conventions | Maintain jurisdiction-specific constraints in the WA profile while reusing common patterns such as compoundName. Promote generally applicable concepts to shared standards and align cadastral naming, geographical naming and addressing where appropriate. | Landgate / ICSM / standards custodians |
+| AD-03 | Legacy CSD transformation and incomplete observations | Define supported transformations, prioritise original survey observations over geometry-derived values, preserve derivation provenance and quality information, and establish rules for incomplete or inconsistent observation networks. | Accenture / Landgate |
 | AD-04 | Geometry, topology, and cadastral validation | Establish separate but coordinated geometric, topological, and cadastral rule sets, with agreed tolerances and validation outcomes. | Landgate / Accenture |
 | AD-05 | Authoritative 3D boundary relationships | Define which geometric relationships represent legal boundary definitions and which are temporary editing constraints. | Landgate |
 | AD-06 | NGSC Metadata Profile and governance | Confirm metadata standards, source mappings, catalogue ownership, quality rules, and feedback workflows. | Landgate / Accenture |
