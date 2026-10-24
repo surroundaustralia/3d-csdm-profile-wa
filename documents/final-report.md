@@ -448,7 +448,7 @@ The Topo Feature Viewer was also extended as a PoC to inspect built-strata bound
 <figure class="fig fig-wide">
   <img src="../assets/check-built-strata.png" 
        alt="Figure 5: Visualise built strata boundary definition"
-       style="width: 50%;">
+       style="width: 80%;">
   <figcaption id="figure-5-built-strata-bdy-def">Figure 5: Visualise built strata boundary definition</figcaption>
 </figure>
 
@@ -520,7 +520,7 @@ A common Cadastral Report component provides shared report structures, provenanc
 <figure class="fig fig-wide">
   <img src="../assets/report-dependencies.png" 
        alt="Figure 6: Cadastral Reporting Building Block"
-       style="width: 60%;">
+       style="width: 40%;">
   <figcaption id="figure-6-report-bblock">Figure 6: Cadastral Reporting Building Block</figcaption>
 </figure>
 
