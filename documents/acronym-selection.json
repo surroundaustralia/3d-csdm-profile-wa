@@ -25,8 +25,18 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "ANZ",
+      "record": "anz--australia-and-new-zealand",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "API",
       "record": "api--application-programming-interface",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "AS/NZS",
+      "record": "as-nzs--standards-australia-standards-new-zealand",
       "includedBecause": "used"
     },
     {
@@ -40,13 +50,43 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "CSV",
+      "record": "csv--comma-separated-values",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "DQF",
+      "record": "dqf--data-quality-framework",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "GIS",
+      "record": "gis--geographic-information-system",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "HTML",
+      "record": "html--hypertext-markup-language",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "ICSM",
       "record": "icsm--intergovernmental-committee-on-surveying-and-mapping",
       "includedBecause": "used"
     },
     {
+      "acronym": "ISO",
+      "record": "iso--international-organization-for-standardization",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "JSON",
       "record": "json--javascript-object-notation",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "LADM",
+      "record": "ladm--land-administration-domain-model",
       "includedBecause": "used"
     },
     {

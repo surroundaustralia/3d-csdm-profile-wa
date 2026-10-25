@@ -85,7 +85,7 @@
       "aliases": [],
       "expansion": "Australian Bureau of Statistics",
       "definition": {
-        "text": "The Australian Government's national statistical agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework.",
+        "text": "The Australian Government's national statistics agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework.",
         "status": "approved"
       },
       "status": "approved",
@@ -100,6 +100,28 @@
           "originalAcronym": "ABS",
           "originalDescription": "Australian Bureau of Statistics.",
           "digest": "sha256:75141a506f284f03d9233f27b41d9ffc553b3d687a1d4a82008a520cdfdbb8a7"
+        }
+      ]
+    },
+    {
+      "id": "anz--australia-and-new-zealand",
+      "acronym": "ANZ",
+      "aliases": [],
+      "expansion": "Australia and New Zealand",
+      "definition": {
+        "text": "The two countries considered together, typically as a joint jurisdiction for standards, agreements or organisations.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
         }
       ]
     },
@@ -124,6 +146,50 @@
           "originalAcronym": "API",
           "originalDescription": "Application Programming Interface.",
           "digest": "sha256:f501ad3a4320c1920b1d21161835bb868b528217fe6e65cbdf2098f9647d9cd8"
+        }
+      ]
+    },
+    {
+      "id": "as-nzs--australian-new-zealand-standard",
+      "acronym": "AS/NZS",
+      "aliases": [],
+      "expansion": "Australian/New Zealand Standard",
+      "definition": {
+        "text": "A standard published jointly by Standards Australia and Standards New Zealand.",
+        "status": "proposed"
+      },
+      "status": "deprecated",
+      "supersededBy": "as-nzs--standards-australia-standards-new-zealand",
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "as-nzs--standards-australia-standards-new-zealand",
+      "acronym": "AS/NZS",
+      "aliases": [],
+      "expansion": "Standards Australia/Standards New Zealand",
+      "definition": {
+        "text": "A standard published jointly by Standards Australia and Standards New Zealand.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added for the final report; replaces as-nzs--australian-new-zealand-standard (wrong expansion)."
         }
       ]
     },
@@ -176,6 +242,94 @@
       ]
     },
     {
+      "id": "csv--comma-separated-values",
+      "acronym": "CSV",
+      "aliases": [],
+      "expansion": "Comma-Separated Values",
+      "definition": {
+        "text": "A plain-text tabular data format in which each line is a record and fields are separated by commas.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "dqf--data-quality-framework",
+      "acronym": "DQF",
+      "aliases": [],
+      "expansion": "Data Quality Framework",
+      "definition": {
+        "text": "A structured set of dimensions and criteria for assessing and describing the quality of data or statistical information.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "gis--geographic-information-system",
+      "acronym": "GIS",
+      "aliases": [],
+      "expansion": "Geographic Information System",
+      "definition": {
+        "text": "A system for capturing, storing, analysing, managing and presenting spatially referenced data.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "html--hypertext-markup-language",
+      "acronym": "HTML",
+      "aliases": [],
+      "expansion": "HyperText Markup Language",
+      "definition": {
+        "text": "The standard markup language for documents displayed in web browsers.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
       "id": "icsm--intergovernmental-committee-on-surveying-and-mapping",
       "acronym": "ICSM",
       "aliases": [],
@@ -200,6 +354,28 @@
       ]
     },
     {
+      "id": "iso--international-organization-for-standardization",
+      "acronym": "ISO",
+      "aliases": [],
+      "expansion": "International Organization for Standardization",
+      "definition": {
+        "text": "An independent, non-governmental international body that develops and publishes standards through its national member bodies.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
       "id": "json--javascript-object-notation",
       "acronym": "JSON",
       "aliases": [],
@@ -218,6 +394,28 @@
           "entry": "manual",
           "date": "2026-10-23",
           "note": "Added for the final report; first entered through a scratch list."
+        }
+      ]
+    },
+    {
+      "id": "ladm--land-administration-domain-model",
+      "acronym": "LADM",
+      "aliases": [],
+      "expansion": "Land Administration Domain Model",
+      "definition": {
+        "text": "An international conceptual model (ISO 19152) of land administration information, covering parties, rights, restrictions and responsibilities, and spatial units. ISO 19152 Edition II includes land administration concepts relating to marine cadastre, valuation, and land use or spatial planning.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
         }
       ]
     },

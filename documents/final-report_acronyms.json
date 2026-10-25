@@ -18,50 +18,90 @@
     {
       "id": "acr-004",
       "acronym": "ABS",
-      "description": "Australian Bureau of Statistics: The Australian Government's national statistical agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework."
+      "description": "Australian Bureau of Statistics: The Australian Government's national statistics agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework."
     },
     {
       "id": "acr-005",
+      "acronym": "ANZ",
+      "description": "Australia and New Zealand: The two countries considered together, typically as a joint jurisdiction for standards, agreements or organisations."
+    },
+    {
+      "id": "acr-006",
       "acronym": "API",
       "description": "Application Programming Interface: A defined set of operations and data formats through which software components or systems exchange requests and data."
     },
     {
-      "id": "acr-006",
+      "id": "acr-007",
+      "acronym": "AS/NZS",
+      "description": "Standards Australia/Standards New Zealand: A standard published jointly by Standards Australia and Standards New Zealand."
+    },
+    {
+      "id": "acr-008",
       "acronym": "CSD",
       "description": "Cadastral Survey Dataset: The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities."
     },
     {
-      "id": "acr-007",
+      "id": "acr-009",
       "acronym": "CSDM",
       "description": "3D Cadastral Survey Data Model: A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions."
     },
     {
-      "id": "acr-008",
+      "id": "acr-010",
+      "acronym": "CSV",
+      "description": "Comma-Separated Values: A plain-text tabular data format in which each line is a record and fields are separated by commas."
+    },
+    {
+      "id": "acr-011",
+      "acronym": "DQF",
+      "description": "Data Quality Framework: A structured set of dimensions and criteria for assessing and describing the quality of data or statistical information."
+    },
+    {
+      "id": "acr-012",
+      "acronym": "GIS",
+      "description": "Geographic Information System: A system for capturing, storing, analysing, managing and presenting spatially referenced data."
+    },
+    {
+      "id": "acr-013",
+      "acronym": "HTML",
+      "description": "HyperText Markup Language: The standard markup language for documents displayed in web browsers."
+    },
+    {
+      "id": "acr-014",
       "acronym": "ICSM",
       "description": "Intergovernmental Committee on Surveying and Mapping: The committee of Australian and New Zealand government agencies that coordinates national surveying, mapping, cadastral and geodetic standards."
     },
     {
-      "id": "acr-009",
+      "id": "acr-015",
+      "acronym": "ISO",
+      "description": "International Organization for Standardization: An independent, non-governmental international body that develops and publishes standards through its national member bodies."
+    },
+    {
+      "id": "acr-016",
       "acronym": "JSON",
       "description": "JavaScript Object Notation: A lightweight, text-based format for structured data, built from name–value pairs and ordered lists."
     },
     {
-      "id": "acr-010",
+      "id": "acr-017",
+      "acronym": "LADM",
+      "description": "Land Administration Domain Model: An international conceptual model (ISO 19152) of land administration information, covering parties, rights, restrictions and responsibilities, and spatial units. ISO 19152 Edition II includes land administration concepts relating to marine cadastre, valuation, and land use or spatial planning."
+    },
+    {
+      "id": "acr-018",
       "acronym": "NGSC",
       "description": "Next Generation Spatial Cadastre: Landgate's programme to replace Western Australia's cadastral systems with a spatially accurate, three-dimensional-capable digital cadastre."
     },
     {
-      "id": "acr-011",
+      "id": "acr-019",
       "acronym": "OGC",
       "description": "Open Geospatial Consortium: An international not-for-profit consortium that develops open standards for geospatial content and services."
     },
     {
-      "id": "acr-012",
+      "id": "acr-020",
       "acronym": "PoC",
       "description": "Proof of Concept: A small-scale, preliminary implementation built to show that an approach or design is feasible."
     },
     {
-      "id": "acr-013",
+      "id": "acr-021",
       "acronym": "WA",
       "description": "Western Australia: The Australian state covering the western third of the continent."
     }
