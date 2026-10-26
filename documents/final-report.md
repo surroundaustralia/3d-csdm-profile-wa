@@ -63,6 +63,108 @@ End with three to five priority recommendations: what should happen next and why
 Do last
 -->
 
+SURROUND Australia Pty Ltd (SURROUND) was engaged by Accenture Australia Pty Ltd to provide specialist cadastral information modelling, standards development, and technical advice in support of Landgate's Next Generation Spatial Cadastre (NGSC) project.
+The engagement forms part of the broader Spatial WA programme, which aims to modernise cadastral information management, improve data quality and interoperability, and support the transition from two-dimensional to three-dimensional cadastral representations.
+
+The engagement addressed **34 allocated requirements across five deliverables**, covering cadastral information standards, survey data exchange, geometry and topology, boundary management, metadata, validation, visualisation, workflows, and system interfaces.
+One requirement concerning Aboriginal naming and dual naming was subsequently moved out of scope.
+
+The primary objective was to translate relevant NGSC requirements into standards-aligned information specifications and implementation guidance, particularly through the Intergovernmental Committee on Surveying and Mapping (ICSM) 3D Cadastral Survey Data Model (3D CSDM) and its Western Australian profile.
+The work also sought to identify technical constraints, clarify responsibilities, and establish proposed acceptance criteria suitable for subsequent implementation and verification.
+
+### Principal outcomes
+
+The five requirements assessments provided a structured interpretation of the allocated requirements, identifying applicable standards, information modelling requirements, technical considerations, and outstanding dependencies.
+They distinguished capabilities supported by the 3D CSDM from those requiring implementation within NGSC applications, services, and business processes.
+
+This distinction represents an important architectural outcome.
+**The 3D CSDM provides a common standard for representing, exchanging, and validating cadastral information, but does not define the operational NGSC system.**
+Accenture retains responsibility for the overall solution architecture and implementation, while Landgate retains responsibility for jurisdictional policy, business rules, and authoritative decisions.
+
+Supporting technical development contributed to the Western Australian 3D CSDM profile, common information components, controlled vocabularies, example datasets, and geometric and topological validation functions.
+The work adopted the Open Geospatial Consortium (OGC) Building Blocks approach where applicable, supporting the publication and reuse of machine-readable specifications, semantic definitions, examples, and validation resources.
+
+Particular attention was given to complex 3D cadastral information.
+Developments concerning liminal parcels and built-strata schemes investigated how legal boundaries can be defined relative to reference surfaces, building elements, and other cadastral features.
+These approaches distinguish the legal basis of a boundary from its geometric representation and provide a foundation for deriving, validating, and visualising complex 3D parcels.
+
+Proof-of-concept developments complemented the requirements analyses by demonstrating approaches to 3D visualisation, horizontal sectional views, boundary inspection, cadastral reporting, and the derivation of bearings from survey observations.
+These investigations provided practical examples of how structured cadastral information could support NGSC functionality and helped clarify technical requirements that would otherwise remain largely conceptual.
+
+### Key technical and architectural findings
+
+The engagement identified several findings with implications extending beyond individual requirements.
+
+**A consistent information architecture is essential for interoperability.**
+The recommended approach is to use the 3D CSDM as the normalised representation for cadastral survey information, with legacy CSD formats transformed at the system boundary.
+This would provide a common basis for validation and downstream processing while reducing the need for separate implementations for each source format.
+
+**Survey evidence and provenance must be preserved.**
+Transformation and automated processing should retain original observations, identifiers, quality information, and the basis for derived values wherever supported by the source data.
+The investigation of bearing derivation from APX-05 observations demonstrated the importance of distinguishing observed survey information from values calculated using adjusted coordinates or incomplete observations.
+
+**Geometric validity and cadastral validity are distinct.**
+A geometrically valid parcel does not necessarily have legally correct boundary definitions or relationships.
+The requirements analysis and supporting development identified the need for coordinated geometric, topological, and cadastral validation, including jurisdiction-specific rules for complex 3D boundaries.
+
+**Information standards and operational responsibilities must remain clearly separated.**
+The 3D CSDM can define survey information, metadata, boundary relationships, and validation requirements, while NGSC must manage workflows, permissions, transactions, authoritative records, and integration with other Landgate systems.
+This distinction is particularly important for plan lodgement, approval, metadata management, survey import, and cadastral editing.
+
+**Reusable specifications and validation capabilities offer longer-term value.**
+The WA profile, common model components, vocabularies, and supporting tools provide a foundation for consistent implementation across NGSC.
+Concepts with broader applicability may also contribute to national 3D CSDM development and related standards initiatives.
+
+Collectively, these findings have **reduced technical uncertainty, clarified architectural and business responsibilities, and identified an implementable approach to managing three-dimensional cadastral information**.
+
+### Implementation readiness and remaining dependencies
+
+The engagement has established requirements analyses, proposed acceptance criteria, supporting technical specifications, and proof-of-concept developments that can inform NGSC design and implementation.
+
+The associated development repositories remain works in progress, with individual artefacts at different stages of maturity.
+Formal assessment of their completeness, standards compliance, and implementation readiness falls outside the scope of this engagement.
+
+Several matters require further consideration before the full benefits of these developments can be realised.
+These include confirmation of the NGSC information exchange architecture, completion of jurisdictional profiles and validation rules, treatment of incomplete historical survey information, and agreement on legally authoritative 3D boundary relationships.
+
+Other dependencies concern metadata governance, plan lodgement and approval workflows, API responsibilities, integration with existing Landgate systems, and the establishment of agreed acceptance and conformance testing arrangements.
+
+The requirements assessments and consolidated architectural decision register provide a basis for addressing these matters.
+Many of the remaining decisions concern NGSC system design or Landgate business policy rather than limitations of the underlying cadastral information model.
+
+### Priority recommendations
+
+The immediate goal should be to consolidate the work undertaken and establish an agreed basis for NGSC implementation and verification.
+Five priority actions are recommended.
+
+1. **Resolve outstanding architectural and business decisions.**
+   Confirm the information exchange architecture, system responsibilities, metadata governance, and rules governing authoritative 3D boundaries.
+   This will reduce implementation uncertainty and avoid inconsistent decisions across individual NGSC capabilities.
+
+2. **Align the technical findings with the NGSC Solution Architecture Document.**
+   Incorporate relevant 3D CSDM profiles, information structures, validation requirements, and architectural constraints into the broader solution design.
+   This will clarify how standards-based cadastral information is implemented through NGSC applications, services, and workflows.
+
+3. **Establish a consistent validation and acceptance baseline.**
+   Confirm proposed acceptance criteria, representative datasets, conformance tests, and validation responsibilities.
+   This will provide a repeatable basis for assessing information quality and verifying NGSC requirements.
+
+4. **Prioritise the adoption and refinement of existing technical components.**
+   Review the WA profile, controlled vocabularies, topology validation functions, and supporting examples for their suitability within NGSC.
+   Building upon these developments where appropriate will reduce duplication and protect the value of the work undertaken.
+
+5. **Progress further development selectively.**
+   Prioritise activities that address immediate implementation needs, resolve significant dependencies, or provide reusable capabilities across multiple requirements.
+   Longer-term standards development and collaboration should be considered where there are clear benefits and agreed resources.
+
+### Overall conclusion
+
+The engagement has provided Accenture and Landgate with a clearer understanding of the information standards, technical constraints, and architectural decisions associated with implementing a modern 3D spatial cadastre.
+
+The combination of requirements analysis, standards-based development, validation capabilities, and practical demonstrations establishes a foundation for subsequent NGSC implementation and the continued evolution of the 3D CSDM.
+
+The recommended next step is to **consolidate and apply the capabilities already developed**, resolve the remaining architectural and jurisdictional decisions, and establish agreed verification arrangements.
+This approach would support NGSC delivery while providing opportunities for broader reuse of the technical developments across WA business units.
 
 ## Project context, scope, and approach
 <!-- 
@@ -108,6 +210,16 @@ For other requirements, SURROUND provided technical advice on cadastral informat
 Accenture retained overall responsibility for programme management, solution architecture, system development, integration, and delivery. 
 Landgate retained responsibility for confirming business requirements, jurisdictional policy, and operational decisions. 
 SURROUND's role was to inform these activities through specialist analysis and technical specifications.
+
+**Contribution to solution architecture**
+
+The NGSC Solution Architecture Document provides the overall architectural context for implementing the programme requirements, including applications, services, information structures, interfaces, workflows, and technical infrastructure.
+
+SURROUND's contribution focused on the cadastral information architecture, particularly the 3D CSDM and its Western Australian profile, associated schemas, vocabularies, validation rules, and information exchange requirements.
+The requirements analyses also identified architectural constraints, dependencies, and proposed acceptance criteria relevant to the NGSC solution design.
+
+These outputs provide supporting material for incorporation into the broader NGSC Solution Architecture Document.
+Responsibility for their integration into the overall solution architecture, including application design, system interactions, operational workflows, and technology decisions, rests with Accenture and the NGSC implementation team.
 
 This distinction was particularly important where requirements combined cadastral information modelling with NGSC functionality. 
 For example, the 3D CSDM can define and validate cadastral information, while user interfaces, workflows, APIs, and operational controls remain NGSC implementation responsibilities.
@@ -647,7 +759,7 @@ Priority activities include:
 - **Requirements and acceptance baseline:** Reconcile the 34 assessments with NGSC solution designs, resolve outstanding dependencies, and confirm acceptance criteria and supporting test cases.
 - **WA 3D CSDM profile:** Finalise outstanding schema, vocabulary, and boundary-representation decisions, particularly for complex 3D parcels and jurisdiction-specific constraints.
 - **Product-specific requirements:** Confirm required cadastral product types, representative datasets, and applicable validation rules, including outstanding cases such as community titles.
-- **Implementation architecture:** Resolve responsibilities for plan lodgement, validation, metadata, lifecycle events, and integration with other Landgate systems.
+- **Solution architecture:** Incorporate the relevant 3D CSDM specifications and architectural findings into the NGSC Solution Architecture Document, resolving outstanding responsibilities for plan lodgement, validation, metadata, lifecycle events, and system integration..
 - **Technical specifications:** Confirm the status and applicability of machine-readable schemas, ontologies, examples, validation rules, and transformation specifications.
 
 These activities should be undertaken jointly with the relevant NGSC implementation and business teams.
@@ -717,12 +829,65 @@ This would protect the value of the current investment, address immediate implem
 
 Conclude with an assessment of the engagement's contribution to NGSC
 -->
+The engagement has established a foundation of requirements analysis and technical development to support the implementation of the NGSC.
+This section summarises the principal outcomes, identifies recommended actions to address outstanding decisions and dependencies, and considers opportunities for future collaboration.
 
 ### Overall assessment
 
+SURROUND's engagement has provided a structured assessment of 34 NGSC requirements and contributed to the development of a standards-based foundation for 3D cadastral information management in Western Australia.
+
+The five deliverables clarified the intended requirements, identified the contribution and limitations of the 3D CSDM, proposed acceptance criteria, and documented technical and architectural dependencies requiring further consideration.
+
+Supporting technical development extended the Western Australian 3D CSDM profile, controlled vocabularies, geometric and topological validation capabilities, and representative cadastral datasets.
+Additional proof-of-concept developments investigated survey observation processing, 3D visualisation, boundary interpretation, sectional viewing, and cadastral reporting.
+
+An important outcome has been the distinction between the responsibilities of the cadastral information model and those of the NGSC platform.
+The 3D CSDM provides a consistent structure for exchanging and validating cadastral information, while NGSC remains responsible for operational workflows, application services, transactions, and authoritative data management.
+
+The work has also highlighted the importance of preserving survey evidence, provenance, and legally defined boundary relationships when transforming or processing cadastral information.
+These considerations are particularly significant for legacy survey data and complex 3D cadastral representations.
+
+Collectively, the engagement has reduced uncertainty surrounding several technically requirements and established reusable specifications, examples, and supporting software.
+The development repositories remain works in progress, and their formal assessment for completeness, standards compliance, and implementation readiness falls outside the scope of this engagement.
+
 ### Decisions and actions recommended
 
+The immediate priority is to consolidate the requirements analyses and technical developments into an agreed basis for NGSC implementation and verification.
+
+The following actions are recommended:
+
+1. **Confirm outstanding architectural decisions.**
+   Resolve the dependencies identified in the consolidated decision register, particularly those concerning information exchange, authoritative boundary relationships, metadata governance, legacy survey transformation, and system responsibilities.
+
+2. **Align information specifications with the NGSC solution architecture.**
+   Incorporate the relevant 3D CSDM profiles, information structures, validation requirements, and architectural findings into the broader NGSC Solution Architecture Document.
+   Complete the NGSC System Perspective for applicable requirements and confirm the allocation of responsibilities between system components.
+
+3. **Establish an agreed validation and acceptance baseline.**
+   Review the proposed acceptance criteria, identify representative test datasets, and confirm the validation methods and evidence required to demonstrate compliance with applicable standards and NGSC requirements.
+
+4. **Prioritise the adoption of existing technical capabilities.**
+   Assess the suitability of the WA profile, topology validation functions, controlled vocabularies, and supporting examples for integration into NGSC.
+   Give priority to components that address multiple requirements and reduce duplication across the solution.
+
+5. **Resolve remaining jurisdictional and business rules.**
+   Confirm the policies and geometric constraints required for complex 3D boundaries, historical survey information, cadastral workflows, and other matters that cannot be resolved through information modelling alone.
+
+These actions should be progressed through the existing NGSC design and governance arrangements, with decisions confirmed by the appropriate business and implementation authorities.
+
 ### Pathway to future collaboration
+
+The work undertaken provides opportunities for continued collaboration between Accenture, Landgate, SURROUND, and relevant standards organisations.
+
+The most immediate opportunities concern the refinement and adoption of existing specifications, validation capabilities, and representative datasets.
+These could be progressed through targeted activities aligned with NGSC implementation priorities, subject to available resources and agreed delivery arrangements.
+
+Longer-term opportunities include extending reusable cadastral reporting and validation components, developing additional jurisdictional profiles, improving legacy survey data transformations, and contributing generally applicable concepts to the national 3D CSDM and related international standards.
+
+The use of open standards and OGC Building Blocks provides a practical foundation for collaboration beyond the NGSC programme, including opportunities for reuse by other jurisdictions and software providers.
+
+**The recommended approach is to consolidate and apply the work already undertaken before committing to substantial new development.**
+This would support NGSC implementation, preserve the value of the technical investment, and provide a sustainable foundation for the continued development of 3D cadastral information capabilities in Western Australia.
 
 ## References
 
@@ -730,7 +895,7 @@ Conclude with an assessment of the engagement's contribution to NGSC
 
 ## Appendices
 
-### Appendix 1: Requirements traceability matrix
+### Appendix A: Requirements traceability matrix
 
 This appendix provides consolidated traceability between the 34 NGSC requirements allocated across SURROUND's five deliverables, the supporting technical artefacts, and outstanding dependencies.
 
@@ -739,13 +904,13 @@ References to technical repositories indicate relevant supporting work rather th
 
 The decision references (AD-01 to AD-08) correspond to [Table 3](#table-3-consolidated-architectural-decisions-requiring-confirmation-or-further-development), Consolidated architectural decisions requiring confirmation or further development.
 
-#### Table A.1: Deliverable 1 — NGSC data growth and 3D capability
+#### Table A.1: Deliverable 1 NGSC data growth and 3D capability
 
 | Requirement                       | Supporting technical artefacts                                                                                           | Outstanding dependencies                                                                                                      | Decisions           |
 |-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | **NN06.02.001:** NGSC data growth | WA 3D CSDM profile; common components; Topo Feature; `topo-functions`; 3D parcel examples and topology validation rules. | Confirm supported 3D geometry types, coverage targets, performance measures, migration approach and NGSC scalability testing. | AD-01, AD-04, AD-08 |
 
-#### Table A.2: Deliverable 2 — Data standards, naming, and quality
+#### Table A.2: Deliverable 2 Data standards, naming, and quality
 
 | Requirement                                        | Supporting technical artefacts                                                                                            | Outstanding dependencies                                                                                                        | Decisions           |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---------------------|
@@ -760,43 +925,43 @@ The decision references (AD-01 to AD-08) correspond to [Table 3](#table-3-consol
 | **NN01.02.025:** Government data standards         | WA profile; reusable appellation datatypes; ICSM vocabularies; OGC Building Blocks publication and validation mechanisms. | Confirm applicable WA standards, conformance profiles, versioning and compliance evidence.                                      | AD-02, AD-06, AD-08 |
 | **NN01.02.026:** Aboriginal naming and dual naming | `compoundName` pattern and WA appellation datatypes provide a potential technical approach.                               | **Moved out of scope in December 2025.** Any future implementation requires authoritative naming and language-governance rules. | AD-02               |
 
-#### Table A.3 Deliverable 3 — Cadastral editing, exchange, and workflows
+#### Table A.3: Deliverable 3 Cadastral editing, exchange, and workflows
 
-| Requirement                                             | Supporting technical artefacts                                                                                          | Outstanding dependencies                                                                                            | Decisions           |
-|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------|
-| **NF02.02.027:** 2D view of building level              | WA built-strata profile and example datasets; section-viewer PoC; Topo Feature viewer.                                  | Confirm floor-selection rules, section elevation, presentation conventions, accuracy and application integration.   | AD-01, AD-04        |
-| **NF02.03.007:** Align boundary sections                | WA boundary relationship development; built-strata representation patterns; Topo Feature and validator.                 | Define authoritative reference relationships, alignment rules, change propagation and validation.                   | AD-04, AD-05        |
-| **NF02.03.008:** Independent boundaries                 | WA 3D CSDM profile; cadastral topology and boundary relationship examples.                                              | Confirm independent-boundary semantics, editing behaviour and validation constraints.                               | AD-04, AD-05        |
-| **NF02.03.047:** Manually import lodged surveys         | 3D CSDM exchange specifications; WA profile; legacy CSD transformation requirements.                                    | Confirm import pathways, source matching, validation, provenance, exceptions and workflow responsibilities.         | AD-01, AD-03, AD-07 |
-| **NF02.03.059:** eField Records                         | 3D CSDM survey observation and provenance structures; relevant exchange specifications.                                 | Define eField Records interfaces, source mappings, validation and processing workflow.                              | AD-01, AD-03, AD-07 |
-| **NF02.03.061:** Define boundary by relationship        | WA profile boundary-definition work; built-strata examples; Topo Feature; `topo-functions`.                             | Confirm legally authoritative relationships, geometric derivation rules and change propagation.                     | AD-04, AD-05        |
-| **NF02.03.067:** Import 3D CSDM to Mining Cadastre      | Common 3D CSDM structures; WA profile; profile-driven validation approach.                                              | Define Mining Cadastre profile, import rules, authoritative matching and operational workflow.                      | AD-01, AD-02, AD-07 |
-| **NF02.03.071:** Accept angles and bearings             | *Angles and Directions* technical advice; angles-to-bearings PoC; APX-05 observation analysis and implementation notes. | Confirm bearing derivation rules, quality thresholds, provenance, incomplete networks and conflicting observations. | AD-03, AD-08        |
-| **NF03.02.007:** Metadata conforms to standard          | 3D CSDM metadata structures; WA profile; OGC Building Blocks validation mechanisms.                                     | Confirm NGSC Metadata Profile, catalogue mapping, validation and standards-version management.                      | AD-06, AD-08        |
-| **NF04.01.003:** API to approve plan                    | 3D CSDM information requirements; Deliverable 3 analysis and proposed acceptance criteria.                              | Define approval authority, workflow states, legal effect, API contract and transaction responsibilities.            | AD-07               |
-| **NF04.01.008:** Workflow to remove interest            | 3D CSDM legal-interest and provenance structures; Deliverable 3 analysis.                                               | Confirm business rules, authority, lifecycle events, history and transaction handling.                              | AD-07               |
-| **NF04.01.009:** Open NGSC at specified view and extent | Topo Feature viewer; Cesium viewer PoC; relevant 3D CSDM geometry examples.                                             | Define application navigation parameters, supported views, extent interpretation and integration API.               | AD-01, AD-07        |
-| **NF04.01.010:** API eField Records                     | 3D CSDM survey information structures; Deliverable 3 exchange analysis.                                                 | Define API contract, authentication, data mapping, processing states and error handling.                            | AD-03, AD-07        |
-| **NN01.02.016:** Support 3D CSDM exchange specification | 3D CSDM common components; WA profile; JSON schemas, vocabularies, examples and associated validation resources.        | Confirm applicable profile versions, supported exchange products, conformance and integration testing.              | AD-01, AD-02, AD-08 |
-| **NN01.02.017:** Support CSD format specification       | APX-05 format analysis; transformation requirements; angles-to-bearings supporting investigation.                       | Define and test CSD-to-3D CSDM transformations, information preservation, exceptions and conformance.               | AD-03, AD-08        |
+| Requirement                                             | Supporting technical artefacts                                                                                   | Outstanding dependencies                                                                                            | Decisions           |
+|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------|
+| **NF02.02.027:** 2D view of building level              | WA built-strata profile and example datasets; Topo Feature viewer.                                               | Confirm floor-selection rules, section elevation, presentation conventions, accuracy and application integration.   | AD-01, AD-04        |
+| **NF02.03.007:** Align boundary sections                | WA boundary relationship development; built-strata representation patterns; Topo Feature and validator.          | Define authoritative reference relationships, alignment rules, change propagation and validation.                   | AD-04, AD-05        |
+| **NF02.03.008:** Independent boundaries                 | WA 3D CSDM profile; cadastral topology and boundary relationship examples.                                       | Confirm independent-boundary semantics, editing behaviour and validation constraints.                               | AD-04, AD-05        |
+| **NF02.03.047:** Manually import lodged surveys         | 3D CSDM exchange specifications; WA profile; legacy CSD transformation requirements.                             | Confirm import pathways, source matching, validation, provenance, exceptions and workflow responsibilities.         | AD-01, AD-03, AD-07 |
+| **NF02.03.059:** eField Records                         | 3D CSDM survey observation and provenance structures; relevant exchange specifications.                          | Define eField Records interfaces, source mappings, validation and processing workflow.                              | AD-01, AD-03, AD-07 |
+| **NF02.03.061:** Define boundary by relationship        | WA profile boundary-definition work; built-strata examples; Topo Feature; `topo-functions`.                      | Confirm legally authoritative relationships, geometric derivation rules and change propagation.                     | AD-04, AD-05        |
+| **NF02.03.067:** Import 3D CSDM to Mining Cadastre      | Common 3D CSDM structures; WA profile; profile-driven validation approach.                                       | Define Mining Cadastre profile, import rules, authoritative matching and operational workflow.                      | AD-01, AD-02, AD-07 |
+| **NF02.03.071:** Accept angles and bearings             | *Angles and Directions* technical advice; APX-05 observation analysis and implementation notes.                  | Confirm bearing derivation rules, quality thresholds, provenance, incomplete networks and conflicting observations. | AD-03, AD-08        |
+| **NF03.02.007:** Metadata conforms to standard          | 3D CSDM metadata structures; WA profile; OGC Building Blocks validation mechanisms.                              | Confirm NGSC Metadata Profile, catalogue mapping, validation and standards-version management.                      | AD-06, AD-08        |
+| **NF04.01.003:** API to approve plan                    | 3D CSDM information requirements; Deliverable 3 analysis and proposed acceptance criteria.                       | Define approval authority, workflow states, legal effect, API contract and transaction responsibilities.            | AD-07               |
+| **NF04.01.008:** Workflow to remove interest            | 3D CSDM legal-interest and provenance structures; Deliverable 3 analysis.                                        | Confirm business rules, authority, lifecycle events, history and transaction handling.                              | AD-07               |
+| **NF04.01.009:** Open NGSC at specified view and extent | Topo Feature viewer; relevant 3D CSDM geometry examples.                                                         | Define application navigation parameters, supported views, extent interpretation and integration API.               | AD-01, AD-07        |
+| **NF04.01.010:** API eField Records                     | 3D CSDM survey information structures; Deliverable 3 exchange analysis.                                          | Define API contract, authentication, data mapping, processing states and error handling.                            | AD-03, AD-07        |
+| **NN01.02.016:** Support 3D CSDM exchange specification | 3D CSDM common components; WA profile; JSON schemas, vocabularies, examples and associated validation resources. | Confirm applicable profile versions, supported exchange products, conformance and integration testing.              | AD-01, AD-02, AD-08 |
+| **NN01.02.017:** Support CSD format specification       | APX-05 format analysis; transformation requirements; angles-to-bearings supporting investigation.                | Define and test CSD-to-3D CSDM transformations, information preservation, exceptions and conformance.               | AD-03, AD-08        |
 
-#### Table A.4: Deliverable 4 — Survey control, metadata, and APIs
+#### Table A.4: Deliverable 4 Survey control, metadata, and APIs
 
 | Requirement                                               | Supporting technical artefacts                                                                               | Outstanding dependencies                                                                                     | Decisions           |
 |-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------------|
 | **NF02.03.045:** Cadastral connections to control network | 3D CSDM survey observations, points, vectors and provenance; supporting survey-quality analysis.             | Define supported 2D/3D observation forms, reference frames, quality thresholds and adjustment interfaces.    | AD-03, AD-08        |
 | **NF02.03.076:** Import non-geodetic control              | 3D CSDM survey points, marks and observation structures; proposed validation and import criteria.            | Confirm candidate classification, duplicate detection, Editor approval and record-maintenance rules.         | AD-01, AD-07        |
-| **NF03.02.006:** Metadata for NGSC dataset                | 3D CSDM dataset metadata and provenance; proposed catalogue mapping approach.                                | Confirm NGSC Metadata Profile, catalogue responsibilities, source mappings and quality requirements.         | AD-06               |
+| **NF03.02.006:** Metadata for NGSC dataset                | 3D CSDM dataset metadata and provenance.                                                                     | Confirm NGSC Metadata Profile, catalogue responsibilities, source mappings and quality requirements.         | AD-06               |
 | **NF04.01.002:** API to lodge plan                        | 3D CSDM exchange requirements; WA profile; proposed validation and acceptance criteria.                      | Confirm API contract, system ownership and lodgement pathways, including historical and non-survey cases.    | AD-01, AD-07        |
 | **NF04.01.004:** API to validate plan                     | WA profile; schemas and validation resources; `topo-functions`; cadastral validation rules.                  | Define validation stages, API responses, system-of-record responsibilities, test cases and acceptance rules. | AD-04, AD-07, AD-08 |
 | **NF04.01.007:** Maintain boundary relationships API      | WA boundary relationship definitions; Topo Feature; built-strata examples and topology validation functions. | Confirm relationship lifecycle, source authority, geometry changes, API behaviour and transaction handling.  | AD-04, AD-05, AD-07 |
 
-#### Table A.5: Deliverable 5 — Metadata feedback and 3D boundary alignment
+#### Table A.5: Deliverable 5 Metadata feedback and 3D boundary alignment
 
-| Requirement                                        | Supporting technical artefacts                                                                                      | Outstanding dependencies                                                                                                        | Decisions    |
-|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------|
-| **NF02.02.036:** Metadata feedback                 | 3D CSDM dataset identifiers and provenance; proposed catalogue-to-dataset traceability pattern.                     | Define metadata feedback interface, matter-management workflow, ownership, states, audit and closure rules.                     | AD-06, AD-07 |
-| **NF02.03.073:** Change alignment type for 3D edge | WA built-strata boundary-reference vocabulary and geometric derivation patterns; Topo Feature viewer and validator. | Define parallel/perpendicular 3D semantics, additional geometric constraints, authority of relationships and propagation rules. | AD-04, AD-05 |
+| Requirement                                        | Supporting technical artefacts                                                                                      | Outstanding dependencies                                                                                                                                        | Decisions    |
+|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| **NF02.02.036:** Metadata feedback                 | 3D CSDM dataset identifiers and provenance.                                                                         | Define metadata feedback interface, proposed catalogue-to-dataset traceability pattern, matter-management workflow, ownership, states, audit and closure rules. | AD-06, AD-07 |
+| **NF02.03.073:** Change alignment type for 3D edge | WA built-strata boundary-reference vocabulary and geometric derivation patterns; Topo Feature viewer and validator. | Define parallel/perpendicular 3D semantics, additional geometric constraints, authority of relationships and propagation rules.                                 | AD-04, AD-05 |
 
 #### Table A.6: Summary and outstanding verification
 
