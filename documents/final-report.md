@@ -1101,7 +1101,53 @@ Additional technical material was prepared to investigate particular cadastral r
 
 #### Table B.5: Technical Advice  
 
-| Ref.    | Document or material                 | Principal subject                                                                       | Relevant requirements |
-|---------|--------------------------------------|-----------------------------------------------------------------------------------------|-----------------------|
-| TECH-01 | *Angles and Directions*              | Survey observation principles and bearing derivation from observed angles and azimuths. | NF02.03.071           |
-| TECH-02 | *Angles and Directions — Response 1* | Differences                                                                             |                       |
+| Ref.    | Document or material                                         | Principal subject                                                                                              | Relevant requirements                              |
+|---------|--------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| TECH-01 | *Angles and Directions*                                      | Survey observation principles and bearing derivation from observed angles and azimuths.                        | NF02.03.071                                        |
+| TECH-02 | *Angles and Directions — Response 1*                         | Differences                                                                                                    |                                                    |
+| TECH-03 | *Back Bearing Quality*                                       | Relationships between coordinate uncertainty, line length and bearing precision.                               | NF02.03.071                                        |
+| TECH-04 | Angles and Bearings implementation correspondence            | APX-05 processing, observation networks, grid convergence, validation, provenance and incomplete observations. | NF02.03.071                                        |
+| TECH-05 | Built-strata technical examples and validation documentation | Boundary relationships, derived geometry, topology and cadastral validation.                                   | NF02.03.061, NF02.03.073 and related requirements. |
+
+The bearing derivation work included technical discussions with Accenture and demonstration of the associated proof of concept demonstrations.
+
+Additional correspondence and working notes may be included in the handover package where relevant and appropriate.
+
+### B.6 Relationship to the NGSC Solution Architecture
+
+The requirements reports, specifications, and supporting development provide material relevant to the CSD and 3D CSDM information architecture.
+
+Their relationship to the broader NGSC Solution Architecture can be summarised as follows:
+
+#### Table B.6: Architectural contributions
+
+| Architectural perspective                  | Supporting artefacts                                                                   | Principal contribution                                                                                                 |
+|--------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Requirements and business context          | DOC-01 to DOC-07                                                                       | Requirement interpretations, business constraints, proposed acceptance criteria and implementation dependencies.       |
+| Information architecture                   | SPEC-01 to SPEC-03; DATA-01 to DATA-04                                                 | CSD/3D CSDM structures, jurisdictional profiles, semantic definitions, identifiers, provenance and cadastral examples. |
+| Logical processing and services            | SPEC-04, SPEC-05; POC-01 to POC-05                                                     | Approaches to geometry processing, validation, transformation, visualisation and reporting.                            |
+| Specification engineering and verification | OGC Building Blocks publication processes; repository testing and validation resources | Machine-readable specification publication, automated checks and reusable validation approaches.                       |
+| Technical standards                        | 3D CSDM, JSON Schema, JSON-LD, Topo Feature and OGC Building Blocks                    | Standards and technologies supporting interoperable cadastral information exchange.                                    |
+
+These perspectives describe SURROUND's specialist technical contribution and are intended to complement Accenture's overall NGSC Solution Architecture.
+
+They do not define the complete NGSC application, Esri Parcel Fabric implementation, infrastructure, security architecture, or operational system design.
+
+### B.7 Handover status and outstanding references
+
+This register identifies the principal technical artefacts referenced in the final report.
+
+<!--
+Before formal handover, the register should be supplemented with the applicable document filenames, repository paths, version references, and exported copies of the relevant material.
+
+The following items require confirmation:
+
+1. **Document versions:** Identify the final submitted revision of each requirements report and supporting technical document.
+2. **Repository references:** Record relevant commits, tags, or release references, and distinguish applicable development branches from published specifications.
+3. **Specific technical artefacts:** Identify the schemas, ontologies, example datasets, validation rules, transformations, and tests relevant to each applicable requirement.
+4. **Transferable documentation:** Provide exported or archived copies of relevant repository documentation, including any GitHub, wiki, or related material prepared during the engagement.
+5. **Access and maintenance:** Confirm access arrangements, repository ownership, and the location of transferred material.
+6. **Solution Architecture contribution:** Confirm with Accenture how the requirement-specific CSD and 3D CSDM documentation should be incorporated into, or referenced by, the NGSC Solution Architecture Document.
+-->
+The register is intended to support technical handover and future use of the work undertaken.
+It does not replace the detailed requirements reports or establish formal acceptance or implementation readiness of individual technical components.
