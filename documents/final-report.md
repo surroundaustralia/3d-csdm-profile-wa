@@ -992,3 +992,116 @@ Before the matrix is used as a formal delivery baseline, the following should be
 These checks would allow the matrix to become a maintained requirements-to-implementation traceability register without changing its underlying structure.
 
 -->
+
+## Appendix B: Technical artefact and documentation register
+
+This appendix identifies the principal technical documents, specifications, development repositories, and supporting materials associated with SURROUND's engagement on the Next Generation Spatial Cadastre (NGSC) project.
+
+It complements [Appendix A](#appendix-a-requirements-traceability-matrix), which links the 34 allocated requirements to the five deliverables, technical developments, and outstanding dependencies.
+
+The register provides a reference for technical handover and for incorporating relevant CSD and 3D CSDM components into the broader NGSC Solution Architecture.
+It distinguishes requirements documentation, reusable specifications, validation capabilities, and proof-of-concept developments.
+
+The repositories contain work at varying stages of maturity.
+They are considered to be live documents.
+Their inclusion identifies relevant supporting artefacts rather than confirming completeness, formal standards conformance, acceptance, or readiness for operational deployment.
+
+### B.1 Requirements analysis and contractual documentation
+
+The principal contractual documentation comprises five requirements analysis reports covering the 34 allocated requirements.
+These provide the requirement interpretation, applicable standards, technical constraints, 3D CSDM perspective, proposed acceptance criteria, and identified dependencies.
+
+#### Table B.1: Deliverables
+
+| Ref.   | Document                                          | Requirements covered       | Principal contribution                                                                                                                                                                                                                |
+|--------|---------------------------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DOC-01 | Deliverable 1: NGSC data growth                   | NN06.02.001                | Data growth, 3D cadastral representation, geometry and topology considerations.                                                                                                                                                       |
+| DOC-02 | Deliverable 2: Naming, data quality and standards | 10 allocated requirements  | Geographical naming, ABS Data Quality Framework, government standards and information governance.                                                                                                                                     |
+| DOC-03 | Deliverable 3: Requirements analysis              | 15 requirements            | Cadastral editing, visualisation, survey information exchange, workflows, APIs and 3D CSDM alignment.                                                                                                                                 |
+| DOC-04 | Deliverable 4: Requirements analysis              | 6 requirements             | Survey control, metadata, plan lodgement, validation and boundary relationships.                                                                                                                                                      |
+| DOC-05 | Deliverable 5: Requirements analysis              | 2 requirements             | Metadata feedback workflows and 3D edge alignment requirements.                                                                                                                                                                       |
+| DOC-06 | NGSC End of Project Report                        | All allocated requirements | Consolidated outcomes, technical findings, architectural decisions, dependencies and recommendations.                                                                                                                                 |
+| DOC-07 | 3D CSDM Solution Architecture Contribution        | All allocated requirements | Consolidates the requirement-specific CSD and 3D CSDM architectural contributions, linking information models, technical specifications, validation capabilities, and supporting artefacts to the broader NGSC Solution Architecture. |
+
+Requirement NN01.02.026, concerning Aboriginal naming and dual naming of geographical features, was moved out of scope in December 2025 but has been included for traceability.
+
+The deliverable reports provide the primary reference for SURROUND's requirement-specific analyses.
+For Deliverables 3–5, the NGSC System Perspective was reserved for completion by the Accenture implementation team.
+
+### B.2 CSD and 3D CSDM specifications and supporting development
+
+The following repositories contain the principal information specifications and reusable technical components relevant to the engagement.
+
+#### Table B.2: GitHub Repositories 
+
+| Ref.    | Repository or specification                                                      | Principal artefacts                                                                                                        | Relevant requirements                                                                  |
+|---------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| SPEC-01 | [WA 3D CSDM Profile](https://github.com/surroundaustralia/3d-csdm-profile-wa)    | Jurisdictional schemas, Building Blocks, semantic definitions, controlled vocabularies, examples and validation resources. | NN01.02.016, NN01.02.025, NF02.03.061, NF02.03.067 and related requirements.           |
+| SPEC-02 | [3D CSDM Common Components](https://github.com/surroundaustralia/3d-csdm-common) | Reusable 3D CSDM information structures and supporting specifications.                                                     | NN01.02.016, NN01.02.017 and requirements involving 3D CSDM exchange.                  |
+| SPEC-03 | [ICSM Vocabularies](https://github.com/surroundaustralia/icsm-vocabs)            | Controlled vocabularies for cadastral terminology, classification and semantic consistency.                                | NN01.02.015, NN01.02.025 and requirements involving controlled terminology.            |
+| SPEC-04 | [Topo Feature](https://github.com/ogcincubator/topo-feature)                     | Information structures for representing topological geometry and relationships.                                            | NN06.02.001, NF02.03.007, NF02.03.008, NF02.03.061 and related geometric requirements. |
+| SPEC-05 | [Topo Functions](https://github.com/ogcincubator/topo-functions)                 | Geometry processing functions, topology validation rules and supporting tests.                                             | NN06.02.001, NF04.01.004 and requirements involving geometry or topology validation.   |
+
+The WA profile and common components provide the principal basis for representing Western Australian cadastral information using the 3D CSDM.
+
+Topo Feature and Topo Functions provide reusable approaches to geometric and topological representation and validation independently of a particular cadastral application.
+
+**Published technical documentation**
+
+The specifications and supporting material are available through the following publication sites:
+
+- [WA 3D CSDM Profile](https://surroundaustralia.github.io/3d-csdm-profile-wa/)
+- [3D CSDM Common Components](https://surroundaustralia.github.io/3d-csdm-common/)
+- [ICSM Vocabularies](https://surroundaustralia.github.io/icsm-vocabs/)
+- [Topo Feature](https://surroundaustralia.github.io/topo-feature/)
+- [WA 3D CSDM Topology Rules](https://github.com/ogcincubator/topo-functions/blob/main/topo_validator/topology_rules.md)
+
+These publications provide access to the relevant specifications, examples, terminology, and supporting technical documentation.
+
+### B.3 WA profile extensions and representative cadastral information
+
+Development of the WA profile included work addressing 3D cadastral representations and reusable information structures.
+
+#### Table B.3: Technical development  
+
+| Ref. | Technical development | Principal contribution | Relevant requirements |
+|---|---|---|---|
+| DATA-01 | WA appellation and `compoundName` datatypes | Structured cadastral naming using components with defined functional roles and templates. | NN01.02.015, NN01.02.025 and NN01.02.026 (out of scope). |
+| DATA-02 | Liminal parcel representation | Parcel representations with vertical limits defined relative to reference surfaces. | NN06.02.001, NF02.03.008 and related 3D cadastral requirements. |
+| DATA-03 | Built-strata boundary definitions | Legal boundary relationships to building elements, reference surfaces and parcel components. | NF02.03.007, NF02.03.008, NF02.03.061 and NF02.03.073. |
+| DATA-04 | Built-strata example dataset SP83687 | Representative multi-component 3D parcels, boundary definitions, derived geometry and validation examples. | NF02.02.027, NF02.03.061, NF02.03.073 and related validation requirements. |
+| DATA-05 | Topology validation examples | Test cases addressing geometric integrity, topological relationships and cadastral constraints. | NN06.02.001, NF04.01.004 and related requirements. |
+
+These developments demonstrate approaches to representing cadastral information that cannot be adequately described through parcel coordinates alone.
+
+The work also provides potential inputs to wider 3D CSDM development where the information structures are applicable beyond Western Australia.
+
+### B.4 Supporting proof-of-concept developments
+
+Proof-of-concept developments were undertaken to investigate technical feasibility, clarify implementation approaches, and demonstrate how structured cadastral information could support NGSC functionality.
+
+#### Table B.4: Supporting development  
+
+| Ref. | Repository or development | Principal capability | Relevant requirements |
+|---|---|---|---|
+| POC-01 | [Topo Feature Viewer](https://github.com/ogcincubator/bblocks-viewer-topo-feature-plugin) | Browser-based 3D visualisation of topological geometry, including cadastral solids, faces and boundary inspection. | NF02.02.027, NF02.03.061 and related 3D viewing requirements. |
+| POC-02 | Horizontal Section Viewer | Generation of 2D floor and section representations from 3D cadastral geometry. | NF02.02.027. |
+| POC-03 | Cesium Viewer | Visualisation of 3D cadastral parcels within geographic and terrain context. | 3D viewing and spatial presentation requirements. |
+| POC-04 | Cadastral Reporting | Reusable report generation, including strata entitlement and scheme composition examples. | Cadastral information exchange, reporting and validation-related requirements. |
+| POC-05 | Angles to Bearings | Bearing derivation from survey observations, network consistency checks and quality assessment. | NF02.03.071. |
+| POC-06 | [Land Parcels Building Blocks](https://github.com/ogcincubator/bblocks-land-parcels) | Reusable land-parcel information components supporting standards-based representation. | Related cadastral information modelling requirements. |
+
+These developments demonstrate possible implementation approaches but do not constitute completed NGSC application functionality.
+
+Their integration into the Accenture/Esri solution would require separate assessment and agreement.
+
+### B.5 Specialist technical advice and supporting reports
+
+Additional technical material was prepared to investigate particular cadastral requirements and assist the implementation team.
+
+#### Table B.5: Technical Advice  
+
+| Ref.    | Document or material                 | Principal subject                                                                       | Relevant requirements |
+|---------|--------------------------------------|-----------------------------------------------------------------------------------------|-----------------------|
+| TECH-01 | *Angles and Directions*              | Survey observation principles and bearing derivation from observed angles and azimuths. | NF02.03.071           |
+| TECH-02 | *Angles and Directions — Response 1* | Differences                                                                             |                       |
