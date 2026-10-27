@@ -255,7 +255,7 @@ Minimal example - with combined elements from each test case
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
-        "usedProcedure": "wa-procedure-used:M",
+        "usedProcedure": "wa-procedure-used:measured",
         "angleType": "icsm-angle-type:angle",
         "distanceType": "icsm-distance-type:grid",
         "madeBySensor": {
@@ -508,7 +508,7 @@ Minimal example - with combined elements from each test case
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
-        "usedProcedure": "wa-procedure-used:M",
+        "usedProcedure": "wa-procedure-used:measured",
         "angleType": "icsm-angle-type:angle",
         "distanceType": "icsm-distance-type:grid",
         "madeBySensor": {
@@ -550,9 +550,9 @@ Minimal example - with combined elements from each test case
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -596,7 +596,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
-    ns1:name [ rdfs:label "EFB157243/9540" ;
+    ns3:name [ rdfs:label "EFB157243/9540" ;
             dcterms:hasPart [ rdfs:label "9540" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
                 [ rdfs:label "EFB157243" ;
@@ -633,15 +633,15 @@ Minimal example - with combined elements from each test case
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:M ;
-    ns3:angleType icsm-angle-type:angle ;
-    ns3:distanceType icsm-distance-type:grid .
+    sosa:usedProcedure wa-procedure-used:measured ;
+    ns1:angleType icsm-angle-type:angle ;
+    ns1:distanceType icsm-distance-type:grid .
 
 <https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    ns1:name [ rdfs:label "" ] ;
+    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -653,7 +653,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    ns1:name [ rdfs:label "" ] ;
+    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -670,7 +670,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    ns1:name [ rdfs:label "" ] ;
+    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -690,7 +690,11 @@ allOf:
 - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/wa-core/schema.yaml
 x-jsonld-prefixes:
   vocabs: https://linked.data.gov.au/def/csdm/
-  wa-mines: https://linked.data.gov.au/def/csdm/wa-mines/
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.wa-mining
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-22'
 
 ```
 
@@ -2445,6 +2449,8 @@ Links to the schema:
     "wa-procedure-used": "csdm:wa-procedure-used/",
     "wa-survey-documentation-type": "csdm:wa-survey-documentation-type/",
     "wa-annotation-role": "csdm:wa-annotation/",
+    "wa-annotation": "csdm:wa-annotation/",
+    "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
@@ -2453,17 +2459,14 @@ Links to the schema:
     "wa-monument-condition": "csdm:wa-monument-condition/",
     "wa-monument-state": "csdm:wa-monument-state/",
     "wa-vector-purpose": "csdm:wa-vector-purpose/",
-    "wa-vector-type": "csdm:wa-vector-type/",
     "wa-secondary-parcel-purpose": "csdm:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "csdm:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "csdm:wa-secondary-purpose/",
     "wa-interest-type": "csdm:wa-interest-type/",
-    "wa-interest": "csdm:wa-interest/",
     "wa-locality": "csdm:wa-locality/",
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",
     "foaf": "http://xmlns.com/foaf/0.1/",
-    "wa-mines": "csdm:wa-mines/",
     "@version": 1.1
   }
 }

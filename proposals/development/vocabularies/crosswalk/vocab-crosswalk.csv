@@ -1,0 +1,182 @@
+old_iri,new_iri,action,reason
+https://linked.data.gov.au/def/csdm/boundary-role/lateral,https://linked.data.gov.au/def/csdm/boundary-role/lateral,keep,definition corrected
+https://linked.data.gov.au/def/csdm/boundary-role/lower,https://linked.data.gov.au/def/csdm/boundary-role/lower,keep,
+https://linked.data.gov.au/def/csdm/boundary-role/upper,https://linked.data.gov.au/def/csdm/boundary-role/upper,keep,
+https://linked.data.gov.au/def/csdm/building-boundary-reference/centrePlane,https://linked.data.gov.au/def/csdm/boundary-reference/centre-plane,move,vocabulary renamed; kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/building-boundary-reference/externalSurface,https://linked.data.gov.au/def/csdm/boundary-reference/external-surface,move,vocabulary renamed; kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/building-boundary-reference/innerSurface,https://linked.data.gov.au/def/csdm/boundary-reference/inner-surface,move,vocabulary renamed; kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/building-boundary-reference/lowerSurface,https://linked.data.gov.au/def/csdm/boundary-reference/lower-surface,move,vocabulary renamed; kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/building-boundary-reference/outerSurface,https://linked.data.gov.au/def/csdm/boundary-reference/external-surface,merge,synonym merged (D8); kept as altLabel
+https://linked.data.gov.au/def/csdm/building-boundary-reference/plane,https://linked.data.gov.au/def/csdm/boundary-reference/plane,move,vocabulary renamed
+https://linked.data.gov.au/def/csdm/building-boundary-reference/projection,https://linked.data.gov.au/def/csdm/boundary-reference/projection,move,vocabulary renamed
+https://linked.data.gov.au/def/csdm/building-boundary-reference/surface,https://linked.data.gov.au/def/csdm/boundary-reference/surface,move,vocabulary renamed
+https://linked.data.gov.au/def/csdm/building-boundary-reference/underSurface,https://linked.data.gov.au/def/csdm/boundary-reference/lower-surface,merge,synonym merged (D8); kept as altLabel
+https://linked.data.gov.au/def/csdm/building-boundary-reference/upperSurface,https://linked.data.gov.au/def/csdm/boundary-reference/upper-surface,move,vocabulary renamed; kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/cadastral-boundary-reference/title-boundary,https://linked.data.gov.au/def/csdm/boundary-reference/title-boundary,move,cadastral-boundary-reference absorbed
+https://linked.data.gov.au/def/csdm/component-role/balcony,https://linked.data.gov.au/def/csdm/component-role/balcony,keep,
+https://linked.data.gov.au/def/csdm/component-role/carBay,https://linked.data.gov.au/def/csdm/component-role/car-bay,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/component-role/courtyard,https://linked.data.gov.au/def/csdm/component-role/courtyard,keep,
+https://linked.data.gov.au/def/csdm/component-role/other,https://linked.data.gov.au/def/csdm/component-role/other,keep,
+https://linked.data.gov.au/def/csdm/component-role/principalUnit,https://linked.data.gov.au/def/csdm/component-role/principal-unit,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/component-role/privateUseArea,https://linked.data.gov.au/def/csdm/component-role/private-use-area,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/component-role/roofSpace,https://linked.data.gov.au/def/csdm/component-role/roof-space,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/component-role/storage,https://linked.data.gov.au/def/csdm/component-role/storage,keep,
+https://linked.data.gov.au/def/csdm/computability-status/c,https://linked.data.gov.au/def/csdm/computability-status/computable,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/cd,https://linked.data.gov.au/def/csdm/computability-status/computed,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/na,https://linked.data.gov.au/def/csdm/computability-status/not-applicable,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/nc,https://linked.data.gov.au/def/csdm/computability-status/not-computable,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/pc,https://linked.data.gov.au/def/csdm/computability-status/partially-computable,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/rbd,https://linked.data.gov.au/def/csdm/computability-status/requires-boundary-definition,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/rrs,https://linked.data.gov.au/def/csdm/computability-status/requires-reference-surface,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/rsr,https://linked.data.gov.au/def/csdm/computability-status/requires-source-rule,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/computability-status/rvcrs,https://linked.data.gov.au/def/csdm/computability-status/requires-vertical-crs,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/coordinate-z-role/absent,https://linked.data.gov.au/def/csdm/coordinate-z-role/absent,keep,
+https://linked.data.gov.au/def/csdm/coordinate-z-role/dbg,https://linked.data.gov.au/def/csdm/coordinate-z-role/derived-boundary-geometry,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/coordinate-z-role/gc,https://linked.data.gov.au/def/csdm/coordinate-z-role/geometry-context,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/coordinate-z-role/lb,https://linked.data.gov.au/def/csdm/coordinate-z-role/legal-boundary,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/coordinate-z-role/oh,https://linked.data.gov.au/def/csdm/coordinate-z-role/observation-height,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/coordinate-z-role/rs,https://linked.data.gov.au/def/csdm/coordinate-z-role/reference-surface,rename,kebab-case notation (D1); definition completed
+https://linked.data.gov.au/def/csdm/coordinate-z-role/us,https://linked.data.gov.au/def/csdm/coordinate-z-role/unspecified,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/a,https://linked.data.gov.au/def/csdm/geometry-legal-status/analytical,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/a2d,https://linked.data.gov.au/def/csdm/geometry-legal-status/authoritative-2d,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/approx,https://linked.data.gov.au/def/csdm/geometry-legal-status/approximate,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/dfld,https://linked.data.gov.au/def/csdm/geometry-legal-status/derived-from-legal-description,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/l3d,https://linked.data.gov.au/def/csdm/geometry-legal-status/legal-3d,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/obs,https://linked.data.gov.au/def/csdm/geometry-legal-status/observed,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/geometry-legal-status/vo,https://linked.data.gov.au/def/csdm/geometry-legal-status/visualisation-only,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/ahd,,remove,"a datum, not a reference level: use the vertical CRS (EPSG or wa-vhd)"
+https://linked.data.gov.au/def/csdm/height-reference/bp,https://linked.data.gov.au/def/csdm/boundary-reference/plane,replace,boundary plane is a boundary reference
+https://linked.data.gov.au/def/csdm/height-reference/bs,https://linked.data.gov.au/def/csdm/boundary-reference/surface,replace,building surface is a boundary reference
+https://linked.data.gov.au/def/csdm/height-reference/cl,https://linked.data.gov.au/def/csdm/height-reference/ceiling-level,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/cs,https://linked.data.gov.au/def/csdm/boundary-reference/surface,replace,surface of occupation-feature:ceiling
+https://linked.data.gov.au/def/csdm/height-reference/fl,https://linked.data.gov.au/def/csdm/height-reference/floor-level,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/fls,https://linked.data.gov.au/def/csdm/boundary-reference/surface,replace,surface of occupation-feature:slab
+https://linked.data.gov.au/def/csdm/height-reference/fs,https://linked.data.gov.au/def/csdm/height-reference/finished-surface,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/gl,https://linked.data.gov.au/def/csdm/height-reference/ground-level,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/lgfus,https://linked.data.gov.au/def/csdm/height-reference/lowest-ground-floor-upper-surface-level,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/ns,https://linked.data.gov.au/def/csdm/height-reference/natural-surface,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/ph,https://linked.data.gov.au/def/csdm/height-reference/plate-height,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/rs,https://linked.data.gov.au/def/csdm/boundary-reference/surface,replace,surface of occupation-feature:roof
+https://linked.data.gov.au/def/csdm/height-reference/sl,https://linked.data.gov.au/def/csdm/height-reference/surface-level,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/height-reference/ws,https://linked.data.gov.au/def/csdm/boundary-reference/surface,replace,surface of occupation-feature:wall
+https://linked.data.gov.au/def/csdm/icsm-boundary-coverage/full-boundary-coverage,,remove,"use ""fullBoundaryCoverage"": true (D12)"
+https://linked.data.gov.au/def/csdm/icsm-boundary-coverage/no-boundary-coverage,,remove,"use ""fullBoundaryCoverage"": false (D12)"
+https://linked.data.gov.au/def/csdm/icsm-boundary-coverage/partial-boundary-coverage,,remove,"use ""fullBoundaryCoverage"": false (D12)"
+https://linked.data.gov.au/def/csdm/icsm-derived-geometry-status/generated,https://linked.data.gov.au/def/csdm/derived-geometry-status/generated,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-derived-geometry-status/not-generated,https://linked.data.gov.au/def/csdm/derived-geometry-status/not-generated,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-derived-geometry-status/solid-generated,https://linked.data.gov.au/def/csdm/derived-geometry-status/generated,merge,geometryType already says the geometry is a solid
+https://linked.data.gov.au/def/csdm/icsm-mechanism/face-projection,https://linked.data.gov.au/def/csdm/derivation-mechanism/face-projection,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-mechanism/reference-surface-intersection,https://linked.data.gov.au/def/csdm/derivation-mechanism/reference-surface-intersection,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-mechanism/surface-offset,https://linked.data.gov.au/def/csdm/derivation-mechanism/surface-offset,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-mechanism/vertical-extrusion,https://linked.data.gov.au/def/csdm/derivation-mechanism/vertical-extrusion,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-mechanism/wall-centre-plane,https://linked.data.gov.au/def/csdm/derivation-mechanism/wall-centre-plane,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-reference-kind/occupation-feature,https://linked.data.gov.au/def/csdm/reference-kind/occupation-feature,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-reference-kind/parcel,https://linked.data.gov.au/def/csdm/reference-kind/parcel,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-reference-kind/reference-surface,https://linked.data.gov.au/def/csdm/reference-kind/reference-surface,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-scope/boundary,https://linked.data.gov.au/def/csdm/source-scope/boundary,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-scope/boundaryPart,https://linked.data.gov.au/def/csdm/source-scope/boundary-part,move,vocabulary renamed (review F-N3); kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/icsm-scope/dataset,https://linked.data.gov.au/def/csdm/source-scope/dataset,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-scope/parcel,https://linked.data.gov.au/def/csdm/source-scope/parcel,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-scope/parcelPart,https://linked.data.gov.au/def/csdm/source-scope/parcel-part,move,vocabulary renamed (review F-N3); kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/icsm-scope/scheme,https://linked.data.gov.au/def/csdm/source-scope/scheme,move,vocabulary renamed (review F-N3)
+https://linked.data.gov.au/def/csdm/icsm-vertical-direction/abv,https://linked.data.gov.au/def/csdm/vertical-direction/above,merge,duplicate of vertical-direction
+https://linked.data.gov.au/def/csdm/icsm-vertical-direction/blw,https://linked.data.gov.au/def/csdm/vertical-direction/below,merge,duplicate of vertical-direction
+https://linked.data.gov.au/def/csdm/icsm-vertical-direction/cw,https://linked.data.gov.au/def/csdm/vertical-direction/coincident-with,merge,duplicate of vertical-direction
+https://linked.data.gov.au/def/csdm/relative-height-reference/above-surface,https://linked.data.gov.au/def/csdm/boundary-reference/offset-from-surface,merge,direction is given by vertical-direction:above
+https://linked.data.gov.au/def/csdm/relative-height-reference/below-surface,https://linked.data.gov.au/def/csdm/boundary-reference/offset-from-surface,merge,direction is given by vertical-direction:below
+https://linked.data.gov.au/def/csdm/representation-status/2-5d,https://linked.data.gov.au/def/csdm/representation-status/2-5d,keep,
+https://linked.data.gov.au/def/csdm/representation-status/2d,https://linked.data.gov.au/def/csdm/representation-status/2d,keep,
+https://linked.data.gov.au/def/csdm/representation-status/a3d,https://linked.data.gov.au/def/csdm/representation-status/authoritative-3d,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/representation-status/d3d,https://linked.data.gov.au/def/csdm/representation-status/derived-3d,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/representation-status/hd,https://linked.data.gov.au/def/csdm/representation-status/height-described,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/representation-status/jb,https://linked.data.gov.au/def/csdm/representation-status/jurisdictionally-bounded,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/auth,https://linked.data.gov.au/def/csdm/vertical-extent-status/authoritative,move,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/def,https://linked.data.gov.au/def/csdm/vertical-extent-status/defined,move,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/drv,https://linked.data.gov.au/def/csdm/vertical-extent-status/derived,move,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/dur,https://linked.data.gov.au/def/csdm/vertical-extent-status/defined-but-unresolved,move,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/na,https://linked.data.gov.au/def/csdm/vertical-extent-status/not-applicable,merge,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/ns,https://linked.data.gov.au/def/csdm/vertical-extent-status/not-supplied,merge,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/uc,https://linked.data.gov.au/def/csdm/vertical-extent-status/unconstrained,move,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/uca,https://linked.data.gov.au/def/csdm/vertical-extent-status/unconstrained,merge,a boundary state already has a direction; use unconstrained (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/ucb,https://linked.data.gov.au/def/csdm/vertical-extent-status/unconstrained,merge,a boundary state already has a direction; use unconstrained (D4)
+https://linked.data.gov.au/def/csdm/vertical-boundary-state/und,https://linked.data.gov.au/def/csdm/vertical-extent-status/undefined,merge,one scheme with two collections (D4)
+https://linked.data.gov.au/def/csdm/vertical-definition-type/ahd,https://linked.data.gov.au/def/csdm/vertical-definition-type/absolute-height-description,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-definition-type/brb,https://linked.data.gov.au/def/csdm/vertical-definition-type/building-referenced-boundary,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-definition-type/gbr,https://linked.data.gov.au/def/csdm/vertical-definition-type/geometry-boundary-reference,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-definition-type/jur,https://linked.data.gov.au/def/csdm/vertical-definition-type/jurisdictional-boundary-rule,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-definition-type/rel,https://linked.data.gov.au/def/csdm/vertical-definition-type/relative-height-description,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-direction/abv,https://linked.data.gov.au/def/csdm/vertical-direction/above,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-direction/blw,https://linked.data.gov.au/def/csdm/vertical-direction/below,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-direction/cw,https://linked.data.gov.au/def/csdm/vertical-direction/coincident-with,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/a3d,https://linked.data.gov.au/def/csdm/geometry-legal-status/legal-3d,replace,"legal status of the geometry, not an extent status (D4)"
+https://linked.data.gov.au/def/csdm/vertical-extent-status/dfv,https://linked.data.gov.au/def/csdm/geometry-legal-status/visualisation-only,replace,"legal status of the geometry, not an extent status (D4)"
+https://linked.data.gov.au/def/csdm/vertical-extent-status/jd,https://linked.data.gov.au/def/csdm/vertical-extent-status/jurisdictional-default,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/ld,https://linked.data.gov.au/def/csdm/vertical-extent-status/legally-defined,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/na,https://linked.data.gov.au/def/csdm/vertical-extent-status/not-applicable,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/ns,https://linked.data.gov.au/def/csdm/vertical-extent-status/not-supplied,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/rr,https://linked.data.gov.au/def/csdm/vertical-extent-status/requires-resolution,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/uca,https://linked.data.gov.au/def/csdm/vertical-extent-status/unconstrained-above,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/ucb,https://linked.data.gov.au/def/csdm/vertical-extent-status/unconstrained-below,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-extent-status/und,https://linked.data.gov.au/def/csdm/vertical-extent-status/undefined,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-limit-role/ll,https://linked.data.gov.au/def/csdm/boundary-role/lower,merge,vertical-limit-role absorbed; kept as altLabel
+https://linked.data.gov.au/def/csdm/vertical-limit-role/ul,https://linked.data.gov.au/def/csdm/boundary-role/upper,merge,vertical-limit-role absorbed; kept as altLabel
+https://linked.data.gov.au/def/csdm/vertical-value-type/ah,https://linked.data.gov.au/def/csdm/vertical-value-type/absolute-height,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-value-type/gr,https://linked.data.gov.au/def/csdm/vertical-value-type/geometry-reference,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-value-type/off,https://linked.data.gov.au/def/csdm/vertical-value-type/offset,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/vertical-value-type/re,https://linked.data.gov.au/def/csdm/vertical-value-type/rule-expression,rename,kebab-case notation (D1)
+https://linked.data.gov.au/def/csdm/wa-prov-role/format-converter,https://linked.data.gov.au/def/csdm/wa-prov-role/format-converter,keep,implementation-local (D12)
+https://linked.data.gov.au/def/csdm/wa-prov-role/source-csd-file,https://linked.data.gov.au/def/csdm/wa-prov-role/source-csd-file,keep,implementation-local (D12)
+https://linked.data.gov.au/def/csdm/wa-prov-role/source-pdf-file,https://linked.data.gov.au/def/csdm/wa-prov-role/source-pdf-file,keep,implementation-local (D12)
+https://linked.data.gov.au/def/csdm/wa-prov-role/workflow-orchestrator,https://linked.data.gov.au/def/csdm/wa-prov-role/workflow-orchestrator,keep,implementation-local (D12)
+https://linked.data.gov.au/def/csdm/wa-resolution-status/resolved,https://linked.data.gov.au/def/csdm/computability-status/computable,merge,wa-resolution-status absorbed; kept as altLabel
+https://linked.data.gov.au/def/csdm/wa-resolution-status/unresolved,https://linked.data.gov.au/def/csdm/computability-status/not-computable,merge,wa-resolution-status absorbed; kept as altLabel
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/balcony,https://linked.data.gov.au/def/csdm/component-role/balcony,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/car-bay,https://linked.data.gov.au/def/csdm/component-role/car-bay,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/courtyard,https://linked.data.gov.au/def/csdm/component-role/courtyard,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/principal-unit,https://linked.data.gov.au/def/csdm/component-role/principal-unit,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/private-use-area,https://linked.data.gov.au/def/csdm/component-role/private-use-area,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/roof-space,https://linked.data.gov.au/def/csdm/component-role/roof-space,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-strata-component-role/storage,https://linked.data.gov.au/def/csdm/component-role/storage,merge,merged into common component-role (D5)
+https://linked.data.gov.au/def/csdm/wa-annotation/boundary-definition-statement,https://linked.data.gov.au/def/csdm/wa-annotation/boundary-definition-statement,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/building-approval-certification,https://linked.data.gov.au/def/csdm/wa-annotation/building-approval-certification,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/height-limit-description,https://linked.data.gov.au/def/csdm/wa-annotation/height-limit-description,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/licensed-valuer-certification,https://linked.data.gov.au/def/csdm/wa-annotation/licensed-valuer-certification,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/r-4,https://linked.data.gov.au/def/csdm/wa-annotation/r-4,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/r-54,https://linked.data.gov.au/def/csdm/wa-annotation/r-54,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/record-of-strata-titles-scheme,https://linked.data.gov.au/def/csdm/wa-annotation/record-of-strata-titles-scheme,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-annotation/strata-plan-endorsement,https://linked.data.gov.au/def/csdm/wa-annotation/strata-plan-endorsement,keep,incorporate into wa-annotation
+https://linked.data.gov.au/def/csdm/wa-approved-form/15c,https://linked.data.gov.au/def/csdm/wa-approved-form/15c,keep,new WA vocabulary
+https://linked.data.gov.au/def/csdm/wa-approved-form/2020-27588-v3,https://linked.data.gov.au/def/csdm/wa-approved-form/2020-27588-v3,keep,new WA vocabulary
+https://linked.data.gov.au/def/csdm/wa-approved-form/2021-47738,https://linked.data.gov.au/def/csdm/wa-approved-form/2021-47738,keep,new WA vocabulary
+https://linked.data.gov.au/def/csdm/wa-approved-form/BA14,https://linked.data.gov.au/def/csdm/wa-approved-form/BA14,keep,new WA vocabulary
+https://linked.data.gov.au/def/csdm/wa-interest-type/strata-lot,,remove,not an interest type (D7); entitlementPortion on the lot parcel; ct once titles are registered
+https://linked.data.gov.au/def/csdm/wa-interest-type/strata-scheme,,remove,not an interest type (D7); entitlementTotal on the scheme parcel
+https://linked.data.gov.au/def/csdm/wa-monument-condition/computed,https://linked.data.gov.au/def/csdm/wa-monument-condition/ok,replace,not a condition; derived points carry condition ok
+https://linked.data.gov.au/def/csdm/wa-occ/beam,https://linked.data.gov.au/def/csdm/occupation-feature/beam,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/building,https://linked.data.gov.au/def/csdm/occupation-feature/building,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/building-element,https://linked.data.gov.au/def/csdm/occupation-feature/building-element,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/ceiling,https://linked.data.gov.au/def/csdm/occupation-feature/ceiling,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/column,https://linked.data.gov.au/def/csdm/occupation-feature/column,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/door,https://linked.data.gov.au/def/csdm/occupation-feature/door,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/fence,https://linked.data.gov.au/def/csdm/occupation-feature/fence,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/other-building-element,https://linked.data.gov.au/def/csdm/occupation-feature/other-building-element,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/retaining-wall,https://linked.data.gov.au/def/csdm/occupation-feature/retaining-wall,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/roof,https://linked.data.gov.au/def/csdm/occupation-feature/roof,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/slab,https://linked.data.gov.au/def/csdm/occupation-feature/slab,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/stair,https://linked.data.gov.au/def/csdm/occupation-feature/stair,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/structure,https://linked.data.gov.au/def/csdm/occupation-feature/structure,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/wall,https://linked.data.gov.au/def/csdm/occupation-feature/wall,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-occ/window,https://linked.data.gov.au/def/csdm/occupation-feature/window,move,common occupation-feature vocabulary (D5)
+https://linked.data.gov.au/def/csdm/wa-parcel-purpose/strata-scheme,https://linked.data.gov.au/def/csdm/wa-parcel-purpose/strata-scheme,keep,interim WA purpose (D6); definition rewritten
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/buildingApprovalCertificate,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/building-approval-certificate,rename,kebab-case IRI
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/built-strata-plan,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/2d-plan,replace,"survey type, not a document form: use 2d-plan with wa-survey-type:strata-plan"
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/certificate-of-title,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/certificate-of-title,keep,
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/csd,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/csd,keep,
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/recordOfStrataTitlesScheme,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/scheme-record-form,merge,duplicate of published scheme-record-form
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/schemeByLaws,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/scheme-by-laws,rename,kebab-case IRI
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/schemeNotices,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/scheme-notice,rename,kebab-case IRI
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/strataPlanEndorsementCertificate,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/strata-plan-endorsement-certificate,rename,kebab-case IRI (D9 wording)
+https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/unitEntitlementSchedule,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/scheme-ue,merge,duplicate of published scheme-ue
+https://linked.data.gov.au/def/csdm/wa-survey-purpose/subdivision-t-sts,https://linked.data.gov.au/def/csdm/wa-survey-purpose/subdivision-t-sts,keep,Act name corrected
+https://linked.data.gov.au/def/csdm/wa-survey-type/ct,https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/certificate-of-title,move,"a document, not a survey type"
+https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/derived-boundary,https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/internal-boundary,replace,derivation is a method: use method wa-surveypoint-method:G (D11)

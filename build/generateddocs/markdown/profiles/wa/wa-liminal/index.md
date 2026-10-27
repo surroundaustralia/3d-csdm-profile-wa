@@ -149,12 +149,12 @@ Point coordinates are 2D only.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -179,12 +179,12 @@ Point coordinates are 2D only.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -247,7 +247,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -279,7 +279,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -311,7 +311,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -343,7 +343,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -448,8 +448,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -463,8 +462,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -478,8 +476,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -493,8 +490,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -660,23 +656,23 @@ Point coordinates are 2D only.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ud",
+            "status": "vertical-extent-status:undefined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -735,23 +731,23 @@ Point coordinates are 2D only.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -863,15 +859,15 @@ Point coordinates are 2D only.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }
@@ -1000,12 +996,12 @@ Point coordinates are 2D only.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -1030,12 +1026,12 @@ Point coordinates are 2D only.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -1098,7 +1094,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -1130,7 +1126,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -1162,7 +1158,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -1194,7 +1190,7 @@ Point coordinates are 2D only.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -1299,8 +1295,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -1314,8 +1309,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -1329,8 +1323,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -1344,8 +1337,7 @@ Point coordinates are 2D only.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -1511,23 +1503,23 @@ Point coordinates are 2D only.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ud",
+            "status": "vertical-extent-status:undefined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -1586,23 +1578,23 @@ Point coordinates are 2D only.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -1714,15 +1706,15 @@ Point coordinates are 2D only.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }
@@ -1740,8 +1732,8 @@ Point coordinates are 2D only.
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
@@ -1754,7 +1746,7 @@ Point coordinates are 2D only.
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-leg: <https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
@@ -1774,13 +1766,13 @@ Point coordinates are 2D only.
     rdfs:label "2D footprint only" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:sp ],
-        [ prof:hasRole wa-annotation-role:r-4 ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ] ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -1804,14 +1796,14 @@ Point coordinates are 2D only.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "800" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -1822,14 +1814,14 @@ Point coordinates are 2D only.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "SP 28750" ;
+            dct:hasPart [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -1842,14 +1834,14 @@ Point coordinates are 2D only.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ rdfs:label "2" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -1861,25 +1853,25 @@ Point coordinates are 2D only.
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -1923,7 +1915,7 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
         parcel:PrimaryParcel ;
@@ -1933,7 +1925,7 @@ uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
@@ -1965,13 +1957,13 @@ uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 <file:///github/workspace/angle-1> a geojson:Feature ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
@@ -1993,8 +1985,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813698e+04 3.699431e+05 ) ] ;
-    ns2:name <file:///github/workspace/> ;
-    ns2:qualityMeasure 5e-02 ;
+    ns1:name <file:///github/workspace/> ;
+    ns1:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -2006,8 +1998,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815709e+04 3.69943e+05 ) ] ;
-    ns2:name <file:///github/workspace/> ;
-    ns2:qualityMeasure 5e-02 ;
+    ns1:name <file:///github/workspace/> ;
+    ns1:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -2019,8 +2011,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813716e+04 3.699833e+05 ) ] ;
-    ns2:name <file:///github/workspace/> ;
-    ns2:qualityMeasure 5e-02 ;
+    ns1:name <file:///github/workspace/> ;
+    ns1:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -2032,8 +2024,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815727e+04 3.699833e+05 ) ] ;
-    ns2:name <file:///github/workspace/> ;
-    ns2:qualityMeasure 5e-02 ;
+    ns1:name <file:///github/workspace/> ;
+    ns1:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -2196,12 +2188,12 @@ surface (ground surface in this instance) has been included.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -2226,12 +2218,12 @@ surface (ground surface in this instance) has been included.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -2296,7 +2288,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -2330,7 +2322,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -2364,7 +2356,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -2398,7 +2390,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -2503,8 +2495,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -2518,8 +2509,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -2533,8 +2523,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -2548,8 +2537,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -2886,32 +2874,32 @@ surface (ground surface in this instance) has been included.
       "properties": {
         "spatialRepresentationDefinitions": {
               "representationStatus": "representation-status:2-5d",
-              "geometryLegalStatus": "geometry-legal-status:a2d",
+              "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
               "coordinateRepresentation": {
                 "coordinateDimension": 3,
-                "zValueRole": "coordinate-z-role:rs"
+                "zValueRole": "coordinate-z-role:reference-surface"
               },
               "verticalExtent": {
-                "status": "vertical-extent-status:na",
+                "status": "vertical-extent-status:not-applicable",
                 "lowerBoundary": {
-                  "state": "vertical-boundary-state:na"
+                  "state": "vertical-extent-status:not-applicable"
                 },
                 "upperBoundary": {
-                  "state": "vertical-boundary-state:na"
+                  "state": "vertical-extent-status:not-applicable"
                 }
               },
-              "computabilityStatus": "computability-status:nc",
+              "computabilityStatus": "computability-status:not-computable",
               "referenceSurfaces": [
                 {
                   "id": "surface-ground-1",
-                  "surfaceType": "height-reference:gl",
-                  "geometryLegalStatus": "geometry-legal-status:obs",
+                  "surfaceType": "height-reference:ground-level",
+                  "geometryLegalStatus": "geometry-legal-status:observed",
                   "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
                   "boundedByFootprint": true
                 }
               ],
               "derivedGeometry": {
-                "status": "notGenerated"
+                "status": "derived-geometry-status:not-generated"
               }
             }
       },
@@ -2970,23 +2958,23 @@ surface (ground surface in this instance) has been included.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -3098,15 +3086,15 @@ surface (ground surface in this instance) has been included.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }
@@ -3236,12 +3224,12 @@ surface (ground surface in this instance) has been included.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -3266,12 +3254,12 @@ surface (ground surface in this instance) has been included.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -3336,7 +3324,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -3370,7 +3358,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -3404,7 +3392,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -3438,7 +3426,7 @@ surface (ground surface in this instance) has been included.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -3543,8 +3531,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -3558,8 +3545,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -3573,8 +3559,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -3588,8 +3573,7 @@ surface (ground surface in this instance) has been included.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -3926,32 +3910,32 @@ surface (ground surface in this instance) has been included.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2-5d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:na",
+            "status": "vertical-extent-status:not-applicable",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:na"
+              "state": "vertical-extent-status:not-applicable"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:na"
+              "state": "vertical-extent-status:not-applicable"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "referenceSurfaces": [
             {
               "id": "surface-ground-1",
-              "surfaceType": "height-reference:gl",
-              "geometryLegalStatus": "geometry-legal-status:obs",
+              "surfaceType": "height-reference:ground-level",
+              "geometryLegalStatus": "geometry-legal-status:observed",
               "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
               "boundedByFootprint": true
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -4010,23 +3994,23 @@ surface (ground surface in this instance) has been included.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -4138,15 +4122,15 @@ surface (ground surface in this instance) has been included.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }
@@ -4178,7 +4162,7 @@ surface (ground surface in this instance) has been included.
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-leg: <https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
@@ -4198,14 +4182,14 @@ surface (ground surface in this instance) has been included.
     rdfs:label "2D footprint bounds a terrain, ground, floor, or reference surface." ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:r-4 ;
-            oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
-        [ prof:hasRole wa-annotation-role:sp ] ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
+            oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ] ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
     container:parcels uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525,
@@ -4229,12 +4213,12 @@ surface (ground surface in this instance) has been included.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+            dct:hasPart [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
                 [ rdfs:label "800" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -4247,12 +4231,12 @@ surface (ground surface in this instance) has been included.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ rdfs:label "1" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
@@ -4267,12 +4251,12 @@ surface (ground surface in this instance) has been included.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                [ rdfs:label "2" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
                 [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
@@ -4710,12 +4694,12 @@ in this example.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -4740,12 +4724,12 @@ in this example.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -4810,7 +4794,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -4844,7 +4828,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -4878,7 +4862,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -4912,7 +4896,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -5017,8 +5001,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5032,8 +5015,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5047,8 +5029,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5062,8 +5043,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -5228,33 +5208,33 @@ in this example.
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:hd",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:height-described",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:rr",
+            "status": "vertical-extent-status:requires-resolution",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "relative-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "relative-limit-upper-1"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "relative-limit-lower-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 2,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "2 metres below ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -5262,12 +5242,12 @@ in this example.
             },
             {
               "id": "relative-limit-upper-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:offset",
               "value": 12,
-              "direction": "vertical-direction:abv",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:above",
+              "heightReference": "height-reference:ground-level",
               "description": "12 metres above ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -5275,7 +5255,7 @@ in this example.
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -5334,23 +5314,23 @@ in this example.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -5475,20 +5455,20 @@ in this example.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -5500,12 +5480,12 @@ in this example.
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "2 metres below ground level"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "12 metres above ground level"
         }
       ]
@@ -5675,12 +5655,12 @@ in this example.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -5705,12 +5685,12 @@ in this example.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -5775,7 +5755,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -5809,7 +5789,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -5843,7 +5823,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -5877,7 +5857,7 @@ in this example.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -5982,8 +5962,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -5997,8 +5976,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -6012,8 +5990,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -6027,8 +6004,7 @@ in this example.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -6193,33 +6169,33 @@ in this example.
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:hd",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:height-described",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:rr",
+            "status": "vertical-extent-status:requires-resolution",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "relative-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "relative-limit-upper-1"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "relative-limit-lower-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 2,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "2 metres below ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -6227,12 +6203,12 @@ in this example.
             },
             {
               "id": "relative-limit-upper-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:offset",
               "value": 12,
-              "direction": "vertical-direction:abv",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:above",
+              "heightReference": "height-reference:ground-level",
               "description": "12 metres above ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -6240,7 +6216,7 @@ in this example.
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -6299,23 +6275,23 @@ in this example.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -6440,20 +6416,20 @@ in this example.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -6465,12 +6441,12 @@ in this example.
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "2 metres below ground level"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "12 metres above ground level"
         }
       ]
@@ -6492,8 +6468,8 @@ in this example.
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
 @prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -6505,7 +6481,7 @@ in this example.
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-leg: <https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
@@ -6526,13 +6502,13 @@ in this example.
     rdfs:label "Relative height-described parcel." ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:sp ],
-        [ prof:hasRole wa-annotation-role:r-4 ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
@@ -6585,12 +6561,12 @@ in this example.
             rdfs:label "Lot 1 on Plan SP 28750" ;
             dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -6603,12 +6579,12 @@ in this example.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "2" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
@@ -6618,31 +6594,31 @@ in this example.
     parcel:surfaceArea 809 ;
     parcel:type wa-parcel-type:freehold .
 
-<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation-role:height-limit-description .
+<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation:height-limit-description .
 
 <file:///github/workspace/subtended-angle-1> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -6686,7 +6662,7 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
         parcel:PrimaryParcel ;
@@ -6696,7 +6672,7 @@ uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
@@ -6728,13 +6704,13 @@ uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 <file:///github/workspace/angle-1> a geojson:Feature ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
@@ -6756,8 +6732,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813698e+04 3.699431e+05 1.95e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -6769,8 +6745,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815709e+04 3.69943e+05 1.99e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -6782,8 +6758,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813716e+04 3.699833e+05 2.06e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -6795,8 +6771,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815727e+04 3.699833e+05 2.09e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -6999,12 +6975,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -7029,12 +7005,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -7099,7 +7075,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -7133,7 +7109,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -7167,7 +7143,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -7201,7 +7177,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -7306,8 +7282,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -7321,8 +7296,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -7336,8 +7310,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -7351,8 +7324,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -7517,30 +7489,30 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:hd",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:height-described",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:def",
+              "state": "vertical-extent-status:defined",
               "definitionRef": "absolute-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:def",
+              "state": "vertical-extent-status:defined",
               "definitionRef": "absolute-limit-upper-1"
             }
           },
-          "computabilityStatus": "computability-status:c",
+          "computabilityStatus": "computability-status:computable",
           "verticalBoundaryDefinitions": [
             {
               "id": "absolute-limit-lower-1",
-              "definitionType": "vertical-definition-type:ahd",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:ah",
+              "definitionType": "vertical-definition-type:absolute-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:absolute-height",
               "zMin": 16,
               "comparisonOperator": "greaterThanOrEqual",
               "description": "limited in height to more than and equal to 16.00 AHD",
@@ -7550,9 +7522,9 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             },
             {
               "id": "absolute-limit-upper-1",
-              "definitionType": "vertical-definition-type:ahd",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:ah",
+              "definitionType": "vertical-definition-type:absolute-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:absolute-height",
               "zMax": 35,
               "comparisonOperator": "lessThanOrEqual",
               "description": "limited in height to less than and equal to 35.00 AHD",
@@ -7562,7 +7534,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -7623,23 +7595,23 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -7764,20 +7736,20 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -7789,12 +7761,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "limited in height to more than and equal to 16.00 AHD"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "limited in height to less than and equal to 35.00 AHD"
         }
       ]
@@ -7969,12 +7941,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -7999,12 +7971,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -8069,7 +8041,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -8103,7 +8075,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -8137,7 +8109,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -8171,7 +8143,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -8276,8 +8248,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -8291,8 +8262,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -8306,8 +8276,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -8321,8 +8290,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -8487,30 +8455,30 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:hd",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:height-described",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:def",
+              "state": "vertical-extent-status:defined",
               "definitionRef": "absolute-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:def",
+              "state": "vertical-extent-status:defined",
               "definitionRef": "absolute-limit-upper-1"
             }
           },
-          "computabilityStatus": "computability-status:c",
+          "computabilityStatus": "computability-status:computable",
           "verticalBoundaryDefinitions": [
             {
               "id": "absolute-limit-lower-1",
-              "definitionType": "vertical-definition-type:ahd",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:ah",
+              "definitionType": "vertical-definition-type:absolute-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:absolute-height",
               "zMin": 16,
               "comparisonOperator": "greaterThanOrEqual",
               "description": "limited in height to more than and equal to 16.00 AHD",
@@ -8520,9 +8488,9 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             },
             {
               "id": "absolute-limit-upper-1",
-              "definitionType": "vertical-definition-type:ahd",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:ah",
+              "definitionType": "vertical-definition-type:absolute-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:absolute-height",
               "zMax": 35,
               "comparisonOperator": "lessThanOrEqual",
               "description": "limited in height to less than and equal to 35.00 AHD",
@@ -8532,7 +8500,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -8593,23 +8561,23 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -8734,20 +8702,20 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -8759,12 +8727,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "limited in height to more than and equal to 16.00 AHD"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "limited in height to less than and equal to 35.00 AHD"
         }
       ]
@@ -8786,8 +8754,8 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
 @prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -8799,7 +8767,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
@@ -8819,14 +8787,14 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
     rdfs:label "AHD height-described parcel" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:sp ],
-        [ prof:hasRole wa-annotation-role:r-4 ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
+    container:annotations [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget <file:///github/workspace/wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf> ],
+        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -8858,12 +8826,12 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
                 [ rdfs:label "800" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -8876,14 +8844,14 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+            dct:hasPart [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ rdfs:label "1" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -8900,10 +8868,10 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ rdfs:label "2" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -8911,31 +8879,31 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
     parcel:surfaceArea 809 ;
     parcel:type wa-parcel-type:freehold .
 
-<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation-role:height-limit-description .
+<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation:height-limit-description .
 
 <file:///github/workspace/subtended-angle-1> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -8979,7 +8947,7 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
         parcel:PrimaryParcel ;
@@ -8989,7 +8957,7 @@ uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
@@ -9021,13 +8989,13 @@ uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 <file:///github/workspace/angle-1> a geojson:Feature ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
@@ -9049,8 +9017,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813698e+04 3.699431e+05 1.95e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -9062,8 +9030,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815709e+04 3.69943e+05 1.99e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -9075,8 +9043,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813716e+04 3.699833e+05 2.06e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -9088,8 +9056,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815727e+04 3.699833e+05 2.09e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -9302,12 +9270,12 @@ In this example only a lower vertical extent is defined (commonly resulting from
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -9332,12 +9300,12 @@ In this example only a lower vertical extent is defined (commonly resulting from
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -9402,7 +9370,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -9436,7 +9404,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -9470,7 +9438,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -9504,7 +9472,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -9609,8 +9577,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -9624,8 +9591,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -9639,8 +9605,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -9654,8 +9619,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -9820,32 +9784,32 @@ In this example only a lower vertical extent is defined (commonly resulting from
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:jb",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:jurisdictionally-bounded",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "jurisdictional-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "jurisdictional-limit-lower-1",
-              "definitionType": "vertical-definition-type:jur",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 12.19,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -9858,7 +9822,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -9917,23 +9881,23 @@ In this example only a lower vertical extent is defined (commonly resulting from
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -10056,28 +10020,28 @@ In this example only a lower vertical extent is defined (commonly resulting from
     {
       "title": "Certificate of Title for Lot 800",
       "href": "https://wa.gov.au/ct/ct-2500-585.pdf",
-      "role": "wa-survey-documentation-type:ct",
+      "role": "wa-survey-documentation-type:certificate-of-title",
       "rel": "related"
     }
   ],
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in depth to 12.19 metres below ground level.",
-      "role": "wa-annotation-role:height-limit-description",
-      "sourceAuthorityType": "wa-survey-type:ct",
+      "role": "wa-annotation:height-limit-description",
+      "sourceAuthorityType": "wa-survey-documentation-type:certificate-of-title",
       "sourceLocation": {
         "page": 4,
         "section": "CT encumbrances",
@@ -10088,7 +10052,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "limited in depth to 12.19 metres below ground level"
         }
       ]
@@ -10273,12 +10237,12 @@ In this example only a lower vertical extent is defined (commonly resulting from
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -10303,12 +10267,12 @@ In this example only a lower vertical extent is defined (commonly resulting from
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -10373,7 +10337,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -10407,7 +10371,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -10441,7 +10405,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -10475,7 +10439,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -10580,8 +10544,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -10595,8 +10558,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -10610,8 +10572,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -10625,8 +10586,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -10791,32 +10751,32 @@ In this example only a lower vertical extent is defined (commonly resulting from
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:jb",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:jurisdictionally-bounded",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "jurisdictional-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "jurisdictional-limit-lower-1",
-              "definitionType": "vertical-definition-type:jur",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 12.19,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -10829,7 +10789,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -10888,23 +10848,23 @@ In this example only a lower vertical extent is defined (commonly resulting from
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -11027,28 +10987,28 @@ In this example only a lower vertical extent is defined (commonly resulting from
     {
       "title": "Certificate of Title for Lot 800",
       "href": "https://wa.gov.au/ct/ct-2500-585.pdf",
-      "role": "wa-survey-documentation-type:ct",
+      "role": "wa-survey-documentation-type:certificate-of-title",
       "rel": "related"
     }
   ],
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in depth to 12.19 metres below ground level.",
-      "role": "wa-annotation-role:height-limit-description",
-      "sourceAuthorityType": "wa-survey-type:ct",
+      "role": "wa-annotation:height-limit-description",
+      "sourceAuthorityType": "wa-survey-documentation-type:certificate-of-title",
       "sourceLocation": {
         "page": 4,
         "section": "CT encumbrances",
@@ -11059,7 +11019,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "limited in depth to 12.19 metres below ground level"
         }
       ]
@@ -11081,8 +11041,8 @@ In this example only a lower vertical extent is defined (commonly resulting from
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
 @prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -11094,7 +11054,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
@@ -11114,14 +11074,14 @@ In this example only a lower vertical extent is defined (commonly resulting from
     rdfs:label "Jurisdictionally bounded parcel" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:r-4 ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget <file:///github/workspace/wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf> ],
-        [ prof:hasRole wa-annotation-role:sp ],
+        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -11131,18 +11091,18 @@ In this example only a lower vertical extent is defined (commonly resulting from
     container:purpose wa-survey-purpose:subdivision-t-sts ;
     container:referencedCSD uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc,
         uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 ;
-    container:supportingDocuments [ rdfs:label "DP 431276" ;
+    container:supportingDocuments [ rdfs:label "Certificate of Title for Lot 800" ;
+            ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole wa-survey-documentation-type:certificate-of-title ;
+            oa:hasTarget <https://wa.gov.au/ct/ct-2500-585.pdf> ],
+        [ rdfs:label "DP 431276" ;
             ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:2d-plan ;
             oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ],
         [ rdfs:label "CSD for DP 431276" ;
             ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:csd ;
-            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ],
-        [ rdfs:label "Certificate of Title for Lot 800" ;
-            ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole wa-survey-documentation-type:ct ;
-            oa:hasTarget <https://wa.gov.au/ct/ct-2500-585.pdf> ] ;
+            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ] ;
     container:surveyType wa-survey-type:compiled ;
     container:vectorObservations uuid:0e582a81-b517-4012-a3bb-7605853e0159 ;
     topo:edges uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2,
@@ -11159,12 +11119,12 @@ In this example only a lower vertical extent is defined (commonly resulting from
             rdfs:label "Lot 800 on Plan DP 431276" ;
             dct:hasPart [ rdfs:label "DP 431276" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "800" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -11175,14 +11135,14 @@ In this example only a lower vertical extent is defined (commonly resulting from
             topo:relatedFeatures ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "1" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11195,10 +11155,10 @@ In this example only a lower vertical extent is defined (commonly resulting from
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "2" ;
+            dct:hasPart [ rdfs:label "2" ;
                     commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "SP 28750" ;
@@ -11210,31 +11170,31 @@ In this example only a lower vertical extent is defined (commonly resulting from
     parcel:surfaceArea 809 ;
     parcel:type wa-parcel-type:freehold .
 
-<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation-role:height-limit-description .
+<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation:height-limit-description .
 
 <file:///github/workspace/subtended-angle-1> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:angleType icsm-angle-type:angle .
+    ns3:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -11278,7 +11238,7 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
         parcel:PrimaryParcel ;
@@ -11288,7 +11248,7 @@ uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
@@ -11320,13 +11280,13 @@ uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns3:distanceType icsm-distance-type:ground .
 
 <file:///github/workspace/angle-1> a geojson:Feature ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
@@ -11348,8 +11308,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813698e+04 3.699431e+05 1.95e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -11361,8 +11321,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815709e+04 3.69943e+05 1.99e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -11374,8 +11334,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.813716e+04 3.699833e+05 2.06e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -11387,8 +11347,8 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
         geojson:Feature ;
     dct:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.815727e+04 3.699833e+05 2.09e+01 ) ] ;
-    ns3:name <file:///github/workspace/> ;
-    ns3:qualityMeasure 5e-02 ;
+    ns2:name <file:///github/workspace/> ;
+    ns2:qualityMeasure 5e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:other ;
             surv:state wa-monument-state:mark-found ] ;
@@ -11593,12 +11553,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -11623,12 +11583,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -11690,10 +11650,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -11727,7 +11687,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -11761,7 +11721,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -11792,10 +11752,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -11826,10 +11786,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -11860,10 +11820,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -11894,10 +11854,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -11928,10 +11888,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -11965,7 +11925,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -11999,7 +11959,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -12030,10 +11990,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -12064,10 +12024,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -12172,8 +12132,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -12187,8 +12146,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -12202,8 +12160,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -12217,8 +12174,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -13657,35 +13613,35 @@ reference surface) has been converted into a closed 3D solid. The source definit
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:d3d",
-          "geometryLegalStatus": "geometry-legal-status:dfld",
+          "representationStatus": "representation-status:derived-3d",
+          "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:dbg"
+            "zValueRole": "coordinate-z-role:derived-boundary-geometry"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:dfld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:drv",
+              "state": "vertical-extent-status:derived",
               "definitionRef": "relative-limit-lower-1",
               "geometryRef": "uuid:82b3d84c-b6eb-400e-bb86-83f67d9c7a45"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:drv",
+              "state": "vertical-extent-status:derived",
               "definitionRef": "relative-limit-upper-1",
               "geometryRef": "uuid:350d3b01-a2cc-415b-8f9b-8ed12bb6fc0d"
             }
           },
-          "computabilityStatus": "computability-status:cd",
+          "computabilityStatus": "computability-status:computed",
           "verticalBoundaryDefinitions": [
             {
               "id": "relative-limit-lower-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 2,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "2 metres below ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "resolved",
@@ -13693,12 +13649,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
             },
             {
               "id": "relative-limit-upper-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:offset",
               "value": 12,
-              "direction": "vertical-direction:abv",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:above",
+              "heightReference": "height-reference:ground-level",
               "description": "12 metres above ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "resolved",
@@ -13708,14 +13664,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
           "referenceSurfaces": [
             {
               "id": "surface-ground-1",
-              "surfaceType": "height-reference:gl",
-              "geometryLegalStatus": "geometry-legal-status:obs",
+              "surfaceType": "height-reference:ground-level",
+              "geometryLegalStatus": "geometry-legal-status:observed",
               "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
               "boundedByFootprint": true
             }
           ],
           "derivedGeometry": {
-            "status": "solidGenerated",
+            "status": "derived-geometry-status:generated",
             "geometryType": "Solid",
             "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
             "inputFootprintRef": "parcel-footprint-1",
@@ -13791,23 +13747,23 @@ reference surface) has been converted into a closed 3D solid. The source definit
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -13949,20 +13905,20 @@ reference surface) has been converted into a closed 3D solid. The source definit
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -13974,12 +13930,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "2 metres below ground level"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "12 metres above ground level"
         }
       ]
@@ -14158,12 +14114,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -14188,12 +14144,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -14255,10 +14211,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14292,7 +14248,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -14326,7 +14282,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -14357,10 +14313,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14391,10 +14347,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14425,10 +14381,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14459,10 +14415,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14493,10 +14449,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14530,7 +14486,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -14564,7 +14520,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -14595,10 +14551,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14629,10 +14585,10 @@ reference surface) has been converted into a closed 3D solid. The source definit
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -14737,8 +14693,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -14752,8 +14707,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -14767,8 +14721,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -14782,8 +14735,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -16222,35 +16174,35 @@ reference surface) has been converted into a closed 3D solid. The source definit
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:d3d",
-          "geometryLegalStatus": "geometry-legal-status:dfld",
+          "representationStatus": "representation-status:derived-3d",
+          "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:dbg"
+            "zValueRole": "coordinate-z-role:derived-boundary-geometry"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:dfld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:drv",
+              "state": "vertical-extent-status:derived",
               "definitionRef": "relative-limit-lower-1",
               "geometryRef": "uuid:82b3d84c-b6eb-400e-bb86-83f67d9c7a45"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:drv",
+              "state": "vertical-extent-status:derived",
               "definitionRef": "relative-limit-upper-1",
               "geometryRef": "uuid:350d3b01-a2cc-415b-8f9b-8ed12bb6fc0d"
             }
           },
-          "computabilityStatus": "computability-status:cd",
+          "computabilityStatus": "computability-status:computed",
           "verticalBoundaryDefinitions": [
             {
               "id": "relative-limit-lower-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 2,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "2 metres below ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "resolved",
@@ -16258,12 +16210,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
             },
             {
               "id": "relative-limit-upper-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:offset",
               "value": 12,
-              "direction": "vertical-direction:abv",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:above",
+              "heightReference": "height-reference:ground-level",
               "description": "12 metres above ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "resolved",
@@ -16273,14 +16225,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
           "referenceSurfaces": [
             {
               "id": "surface-ground-1",
-              "surfaceType": "height-reference:gl",
-              "geometryLegalStatus": "geometry-legal-status:obs",
+              "surfaceType": "height-reference:ground-level",
+              "geometryLegalStatus": "geometry-legal-status:observed",
               "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
               "boundedByFootprint": true
             }
           ],
           "derivedGeometry": {
-            "status": "solidGenerated",
+            "status": "derived-geometry-status:generated",
             "geometryType": "Solid",
             "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
             "inputFootprintRef": "parcel-footprint-1",
@@ -16356,23 +16308,23 @@ reference surface) has been converted into a closed 3D solid. The source definit
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -16514,20 +16466,20 @@ reference surface) has been converted into a closed 3D solid. The source definit
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -16539,12 +16491,12 @@ reference surface) has been converted into a closed 3D solid. The source definit
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "2 metres below ground level"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "12 metres above ground level"
         }
       ]
@@ -16566,8 +16518,8 @@ reference surface) has been converted into a closed 3D solid. The source definit
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -16579,7 +16531,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-leg: <https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
@@ -16599,14 +16551,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
 <file:///github/workspace/07-derived-3d-solid> a geojson:FeatureCollection ;
     rdfs:label "Derived 3D solid parcel" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:sp ],
-        [ prof:hasRole wa-annotation-role:r-4 ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
@@ -16618,11 +16570,11 @@ reference surface) has been converted into a closed 3D solid. The source definit
     container:referencedCSD uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc,
         uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 ;
     container:supportingDocuments [ rdfs:label "CSD for DP 431276" ;
-            ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:csd ;
             oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ],
         [ rdfs:label "DP 431276" ;
-            ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:2d-plan ;
             oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ] ;
     container:surveyType wa-survey-type:compiled ;
@@ -16640,14 +16592,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+            dct:hasPart [ rdfs:label "800" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -16658,14 +16610,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
                     commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -16678,14 +16630,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "SP 28750" ;
+            dct:hasPart [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -16693,31 +16645,31 @@ reference surface) has been converted into a closed 3D solid. The source definit
     parcel:surfaceArea 809 ;
     parcel:type wa-parcel-type:freehold .
 
-<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation-role:height-limit-description .
+<file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation:height-limit-description .
 
 <file:///github/workspace/subtended-angle-1> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -16776,7 +16728,7 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
         parcel:PrimaryParcel ;
@@ -16786,11 +16738,11 @@ uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 2.595435e-01 .
@@ -16894,7 +16846,7 @@ uuid:de0e7541-5584-42c2-998e-0f8b32ffeb74 a geojson:Feature ;
 
 uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 rdfs:label "D36053" ;
     dct:time [ ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 2.595435e-01 .
@@ -16903,13 +16855,13 @@ uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00Z" ;
-    ns3:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 <file:///github/workspace/angle-1> a geojson:Feature ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
@@ -17220,7 +17172,7 @@ uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -2.9e-01 ) ] .
 
@@ -17234,7 +17186,7 @@ uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -9.89e-01 ) ] .
 
@@ -17248,7 +17200,7 @@ uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.429e+01 ) ] .
 
@@ -17262,7 +17214,7 @@ uuid:e742b56c-50e4-4036-a654-2b95f76fe40d a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.4989e+01 ) ] .
 
@@ -17276,7 +17228,7 @@ uuid:03b1846e-dcda-49ad-b349-b64561b7344e a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 1.1e-02 ) ] .
 
@@ -17290,7 +17242,7 @@ uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.3989e+01 ) ] .
 
@@ -17304,7 +17256,7 @@ uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.539e+01 ) ] .
 
@@ -17318,7 +17270,7 @@ uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:cadastral-point-unmarked ;
             surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:derived-boundary ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.39e+00 ) ] .
 
@@ -17618,7 +17570,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2011-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -17744,7 +17696,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -17760,7 +17712,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -17776,7 +17728,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -17792,7 +17744,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -17808,7 +17760,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -17824,7 +17776,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -17838,32 +17790,32 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:jb",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:jurisdictionally-bounded",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "jurisdictional-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "jurisdictional-limit-lower-1",
-              "definitionType": "vertical-definition-type:jur",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 12.19,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
               "sourceReference": "source-crown-grant-depth-limit-1",
               "resolutionStatus": "requiresReferenceSurface",
@@ -17877,7 +17829,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
           ],
           "referenceSurfaces": [],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -18153,7 +18105,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2011-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -18279,7 +18231,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -18295,7 +18247,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -18311,7 +18263,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -18327,7 +18279,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -18343,7 +18295,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -18359,7 +18311,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -18373,32 +18325,32 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:jb",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:jurisdictionally-bounded",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "jurisdictional-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "jurisdictional-limit-lower-1",
-              "definitionType": "vertical-definition-type:jur",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 12.19,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
               "sourceReference": "source-crown-grant-depth-limit-1",
               "resolutionStatus": "requiresReferenceSurface",
@@ -18412,7 +18364,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
           ],
           "referenceSurfaces": [],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -18484,9 +18436,9 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns3: <http://www.iana.org/assignments/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -18515,10 +18467,10 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:karlkurla ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
@@ -18542,10 +18494,10 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 798 ;
@@ -18562,7 +18514,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -18583,51 +18535,51 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
-            sosa:hasResult [ surv:distance 1e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
             sosa:hasResult [ surv:distance 8.832e+00 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
-            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
+            sosa:hasResult [ surv:distance 1e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
-            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
-            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/314> ;
             sosa:hasResult [ surv:distance 1.4e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
+            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
+            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
+            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2011-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:d .
+    sosa:usedProcedure wa-procedure-used:described .
 
 <https://www.wa-example.com/features/184> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -18637,7 +18589,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -18647,7 +18599,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.471898e+04 3.987111e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -18657,7 +18609,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472507e+04 3.987175e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -18667,7 +18619,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.46983e+04 3.987431e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -18677,39 +18629,39 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <https://www.wa-example.com/features/298> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/190> <https://www.wa-example.com/features/189> ) ] .
 
 <https://www.wa-example.com/features/309> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/197> <https://www.wa-example.com/features/196> ) ] .
 
 <https://www.wa-example.com/features/311> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/196> <https://www.wa-example.com/features/190> ) ] .
 
 <https://www.wa-example.com/features/312> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
 
 <https://www.wa-example.com/features/313> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
 
 <https://www.wa-example.com/features/314> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/198> <https://www.wa-example.com/features/197> ) ] .
 
@@ -18750,13 +18702,24 @@ x-jsonld-prefixes:
   vertical-extent-status: https://linked.data.gov.au/def/csdm/vertical-extent-status/
   computability-status: https://linked.data.gov.au/def/csdm/computability-status/
   coordinate-z-role: https://linked.data.gov.au/def/csdm/coordinate-z-role/
-  vertical-boundary-state: https://linked.data.gov.au/def/csdm/vertical-boundary-state/
   vertical-definition-type: https://linked.data.gov.au/def/csdm/vertical-definition-type/
-  vertical-limit-role: https://linked.data.gov.au/def/csdm/vertical-limit-role/
   vertical-value-type: https://linked.data.gov.au/def/csdm/vertical-value-type/
   vertical-direction: https://linked.data.gov.au/def/csdm/vertical-direction/
   height-reference: https://linked.data.gov.au/def/csdm/height-reference/
+  boundary-role: https://linked.data.gov.au/def/csdm/boundary-role/
+  boundary-reference: https://linked.data.gov.au/def/csdm/boundary-reference/
+  component-role: https://linked.data.gov.au/def/csdm/component-role/
+  occupation-feature: https://linked.data.gov.au/def/csdm/occupation-feature/
+  source-scope: https://linked.data.gov.au/def/csdm/source-scope/
+  reference-kind: https://linked.data.gov.au/def/csdm/reference-kind/
+  derivation-mechanism: https://linked.data.gov.au/def/csdm/derivation-mechanism/
+  derived-geometry-status: https://linked.data.gov.au/def/csdm/derived-geometry-status/
   uuid: 'urn:uuid:'
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.wa-liminal
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-22'
 
 ```
 
@@ -20511,6 +20474,8 @@ Links to the schema:
     "wa-procedure-used": "csdm:wa-procedure-used/",
     "wa-survey-documentation-type": "csdm:wa-survey-documentation-type/",
     "wa-annotation-role": "csdm:wa-annotation/",
+    "wa-annotation": "csdm:wa-annotation/",
+    "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
@@ -20519,12 +20484,10 @@ Links to the schema:
     "wa-monument-condition": "csdm:wa-monument-condition/",
     "wa-monument-state": "csdm:wa-monument-state/",
     "wa-vector-purpose": "csdm:wa-vector-purpose/",
-    "wa-vector-type": "csdm:wa-vector-type/",
     "wa-secondary-parcel-purpose": "csdm:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "csdm:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "csdm:wa-secondary-purpose/",
     "wa-interest-type": "csdm:wa-interest-type/",
-    "wa-interest": "csdm:wa-interest/",
     "wa-locality": "csdm:wa-locality/",
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",
@@ -20534,12 +20497,18 @@ Links to the schema:
     "vertical-extent-status": "csdm:vertical-extent-status/",
     "computability-status": "csdm:computability-status/",
     "coordinate-z-role": "csdm:coordinate-z-role/",
-    "vertical-boundary-state": "csdm:vertical-boundary-state/",
     "vertical-definition-type": "csdm:vertical-definition-type/",
-    "vertical-limit-role": "csdm:vertical-limit-role/",
     "vertical-value-type": "csdm:vertical-value-type/",
     "vertical-direction": "csdm:vertical-direction/",
     "height-reference": "csdm:height-reference/",
+    "boundary-role": "csdm:boundary-role/",
+    "boundary-reference": "csdm:boundary-reference/",
+    "component-role": "csdm:component-role/",
+    "occupation-feature": "csdm:occupation-feature/",
+    "source-scope": "csdm:source-scope/",
+    "reference-kind": "csdm:reference-kind/",
+    "derivation-mechanism": "csdm:derivation-mechanism/",
+    "derived-geometry-status": "csdm:derived-geometry-status/",
     "uuid": "urn:uuid:",
     "@version": 1.1
   }

@@ -179,7 +179,7 @@
       "id": "vectorobservation:t-band",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "1970-04-10",
         "observedProperty": "surveyable:VectorDetermination",
@@ -247,7 +247,7 @@
             "orientation": "cw"
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null,
             "arcLength": 25.615,
             "radius": 105.438,

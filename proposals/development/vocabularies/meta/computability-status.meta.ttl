@@ -1,0 +1,21 @@
+# ConceptScheme metadata for computability-status.csv (sidecar for scripts/build_vocabs.py).
+# Draft for the uplift owner: confirm creator, publisher and status before publication.
+# Concepts and top concepts come from the CSV; only scheme-level metadata belongs here.
+PREFIX cs: <https://linked.data.gov.au/def/csdm/computability-status>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+cs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Computability Status" ;
+    skos:definition "Whether a parcel's height or 3D extent can be computed from the available information, and what is still required to compute it." ;
+    skos:historyNote "2026-10-16 Drafted by the Surround team during the WA vocabulary cleanup (decisions D1-D12, vocab-review.md section 5.10). Status experimental until reviewed by the custodian." ;
+    schema:creator <https://linked.data.gov.au/org/csdm-pg> ;
+    schema:publisher <https://linked.data.gov.au/org/icsm> ;
+    schema:dateCreated "2026-07-23"^^xsd:date ;
+    schema:dateModified "2026-10-16"^^xsd:date ;
+    schema:keywords unggim:LandParcels ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+.

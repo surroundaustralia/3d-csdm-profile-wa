@@ -1,0 +1,21 @@
+# ConceptScheme metadata for derivation-mechanism.csv (sidecar for scripts/build_vocabs.py).
+# Draft for the uplift owner: confirm creator, publisher and status before publication.
+# Concepts and top concepts come from the CSV; only scheme-level metadata belongs here.
+PREFIX cs: <https://linked.data.gov.au/def/csdm/derivation-mechanism>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+cs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Derivation Mechanism" ;
+    skos:definition "The geometric method by which a boundary surface or solid is derived from source geometry." ;
+    skos:historyNote "2026-10-16 Drafted by the Surround team during the WA vocabulary cleanup (decisions D1-D12, vocab-review.md section 5.10). Status experimental until reviewed by the custodian." ;
+    schema:creator <https://linked.data.gov.au/org/csdm-pg> ;
+    schema:publisher <https://linked.data.gov.au/org/icsm> ;
+    schema:dateCreated "2026-09-22"^^xsd:date ;
+    schema:dateModified "2026-10-16"^^xsd:date ;
+    schema:keywords unggim:LandParcels ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+.

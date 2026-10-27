@@ -587,7 +587,7 @@
       "id": "vectorobservation:Measured",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:M",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2014-12-12T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -725,7 +725,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:3",
+            "vectorPurpose": "wa-vector-purpose:MHWM-Boundary",
             "comment": [
               "M.H.W.",
               "Waterlines on this plan do not necessarily depict an exact cadastral boundary and have been adopted from SCDB data obtained September 2014."
@@ -744,7 +744,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -760,7 +760,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -776,7 +776,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -792,7 +792,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -817,7 +817,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -835,7 +835,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -853,7 +853,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -916,7 +916,7 @@
                 "interestLink": "456-987-123",
                 "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
                 "interestType": "wa-interest-type:native-title",
-                "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
+                "purpose": "wa-secondary-purpose:non-extinguisment-native-title",
                 "burdenedParcels": [
                   "1"
                 ]

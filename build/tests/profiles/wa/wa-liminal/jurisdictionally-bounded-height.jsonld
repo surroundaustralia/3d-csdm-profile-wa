@@ -171,12 +171,12 @@
       {
         "type": "Usage",
         "entity": "file:CSD_DP431276.csd",
-        "hadRole": "wa-prov-role:sourceCsdFile"
+        "hadRole": "wa-prov-role:source-csd-file"
       },
       {
         "type": "Usage",
         "entity": "file:DP431276.pdf",
-        "hadRole": "wa-prov-role:sourcePdfFile"
+        "hadRole": "wa-prov-role:source-pdf-file"
       }
     ],
     "wasAssociatedWith": [
@@ -201,12 +201,12 @@
       {
         "type": "Association",
         "agent": "src/process_csd/process_wa_csd.py",
-        "hadRole": "wa-prov-role:formatConverter"
+        "hadRole": "wa-prov-role:format-converter"
       },
       {
         "type": "Association",
         "agent": "src/process_csd_pdf/build_wa_csd_pdf.py",
-        "hadRole": "wa-prov-role:workflowOrchestrator"
+        "hadRole": "wa-prov-role:workflow-orchestrator"
       }
     ]
   },
@@ -271,7 +271,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -305,7 +305,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -339,7 +339,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -373,7 +373,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -478,8 +478,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -493,8 +492,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -508,8 +506,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -523,8 +520,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -689,32 +685,32 @@
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:jb",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:jurisdictionally-bounded",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "jurisdictional-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "jurisdictional-limit-lower-1",
-              "definitionType": "vertical-definition-type:jur",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 12.19,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "requiresReferenceSurface",
@@ -727,7 +723,7 @@
             }
           ],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -786,23 +782,23 @@
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -925,28 +921,28 @@
     {
       "title": "Certificate of Title for Lot 800",
       "href": "https://wa.gov.au/ct/ct-2500-585.pdf",
-      "role": "wa-survey-documentation-type:ct",
+      "role": "wa-survey-documentation-type:certificate-of-title",
       "rel": "related"
     }
   ],
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in depth to 12.19 metres below ground level.",
-      "role": "wa-annotation-role:height-limit-description",
-      "sourceAuthorityType": "wa-survey-type:ct",
+      "role": "wa-annotation:height-limit-description",
+      "sourceAuthorityType": "wa-survey-documentation-type:certificate-of-title",
       "sourceLocation": {
         "page": 4,
         "section": "CT encumbrances",
@@ -957,7 +953,7 @@
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "limited in depth to 12.19 metres below ground level"
         }
       ]

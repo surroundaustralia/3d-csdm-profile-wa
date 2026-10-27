@@ -170,7 +170,7 @@
       "id": "vectorobservation:theodolite+edm",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -191,7 +191,7 @@
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 20000,
-            "angleType": "icsm-distance-type:bearing",
+            "angleType": "icsm-angle-type:bearing",
             "angleAccuracy": 20000
           }
         },
@@ -207,7 +207,7 @@
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 20000,
-            "angleType": "icsm-distance-type:bearing",
+            "angleType": "icsm-angle-type:bearing",
             "angleAccuracy": 20000
           }
         }
@@ -232,7 +232,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:N",
+            "vectorPurpose": "wa-vector-purpose:control-network",
             "comment": null
           }
         },
@@ -248,7 +248,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:N",
+            "vectorPurpose": "wa-vector-purpose:control-network",
             "comment": null
           }
         }

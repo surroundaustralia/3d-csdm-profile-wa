@@ -369,8 +369,8 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -390,12 +390,12 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -410,7 +410,7 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470028e+04 3.984264e+05 0e+00 ) ] ;
-    ns2:qualityMeasure 1.3e-02 ;
+    ns1:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -421,12 +421,12 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.467663e+04 3.984343e+05 0e+00 ) ] ;
     rdfs:comment "In Bitumen" ;
-    ns2:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
-    ns2:qualityMeasure 2.8e-02 ;
+    ns1:name [ rdfs:label "EFB157243/9533" ;
+            dcterms:hasPart [ rdfs:label "9533" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
+    ns1:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -437,12 +437,12 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.47613e+04 3.984891e+05 0e+00 ) ] ;
     rdfs:comment "In Concrete" ;
-    ns2:name [ rdfs:label "EFB157243/9802" ;
+    ns1:name [ rdfs:label "EFB157243/9802" ;
             dcterms:hasPart [ rdfs:label "9802" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
                 [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
-    ns2:qualityMeasure 2.6e-02 ;
+    ns1:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:brass-plaque ;
@@ -14291,7 +14291,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14307,7 +14307,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14323,7 +14323,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14339,7 +14339,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14355,7 +14355,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14371,7 +14371,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14387,7 +14387,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14403,7 +14403,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14419,7 +14419,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14435,7 +14435,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14451,7 +14451,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14467,7 +14467,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14483,7 +14483,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14499,7 +14499,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14515,7 +14515,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14531,7 +14531,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14547,7 +14547,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14563,7 +14563,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -14579,7 +14579,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -19912,7 +19912,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -19928,7 +19928,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -19944,7 +19944,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -19960,7 +19960,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -19976,7 +19976,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -19992,7 +19992,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20008,7 +20008,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20024,7 +20024,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20040,7 +20040,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20056,7 +20056,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20072,7 +20072,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20088,7 +20088,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20104,7 +20104,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20120,7 +20120,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20136,7 +20136,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20152,7 +20152,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20168,7 +20168,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20184,7 +20184,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -20200,7 +20200,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -22683,10 +22683,10 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
             rdfs:label "Lot 3 DP 214866" ;
             dct:hasPart [ rdfs:label "3" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <file:///github/workspace/ParcelType> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
                 [ rdfs:label "214866" ;
                     commonpatterns:namePartType <file:///github/workspace/planIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -22975,7 +22975,7 @@ uuid:0e17be70-1378-48cc-b88b-f12de3d9e112 a geojson:Feature ;
                         topo:ref uuid:887b4e80-25a7-491c-9f99-c567acf7a098 ] ) ] .
 
 uuid:13b59b93-6f0f-4773-a8b7-88401c9c1fae a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:c4aa05ba-997c-4b7e-b5bd-071f385e17d5 uuid:489a1c4c-0ac4-470f-9757-e50bc71d3aa8 ) ] .
 
@@ -22988,7 +22988,7 @@ uuid:1c3ca0ce-fbaf-4929-bd1d-44ca6c3fd3bc a geojson:Feature ;
                         topo:ref uuid:380f1122-b209-41f6-8fd0-f013d06de253 ] ) ] .
 
 uuid:1ce937ba-14a1-48dc-b65c-3b50e98ceb37 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:3cf6b3c0-3acc-4720-a643-d885d6951b2a uuid:67c660f1-0e49-4ee4-996d-4d453fe6209b ) ] .
 
@@ -23025,7 +23025,7 @@ uuid:2f59c9a6-1cd7-4cc0-86df-cc3c44d22286 a geojson:Feature ;
                         topo:ref uuid:777a02bc-f2d3-4b31-bc4c-7180bc13a31c ] ) ] .
 
 uuid:2fbdbc42-6443-4bc2-bd42-0c77a3e9c9fc a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:313731cb-1e0c-469c-b64e-06af1629ba2a uuid:c7c0b650-ed8a-496d-bff5-46d9953137fd ) ] .
 
@@ -23055,7 +23055,7 @@ uuid:356935be-07f0-4a7f-895d-78848298cc32 a geojson:Feature ;
                         topo:ref uuid:5cb6b170-6c30-4578-9fdf-a06662911c3f ] ) ] .
 
 uuid:379f8fe1-7311-4db2-a5b3-8b7cf5dd0882 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:3c6c5996-1c40-4e52-932b-13cc41fcee71 uuid:97571fb3-9987-49b3-b54c-88b8adcd2655 ) ] .
 
@@ -23065,7 +23065,7 @@ uuid:41901fb2-753b-4b9f-8687-ae11d6f69439 a geojson:Feature ;
                         topo:ref uuid:f6d80de2-ba10-4748-9c16-f74eafa5e454 ] ) ] .
 
 uuid:41e63da1-bee7-48da-be90-527c99fa38d8 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:d72f308c-110a-459d-ae5f-9d459d9ae51e uuid:a221f31d-26c6-46f0-872a-567244fa5447 ) ] .
 
@@ -23091,7 +23091,7 @@ uuid:542934a9-f32d-401e-8e05-05d529492483 a geojson:Feature ;
                         topo:ref uuid:f52b81d9-6877-4f7f-9210-8002f8ddc85f ] ) ] .
 
 uuid:54943d43-ea1a-4a8c-8cbb-c6d89187e842 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:c7c0b650-ed8a-496d-bff5-46d9953137fd uuid:4261adb8-2fa6-4ce6-94cc-d4906f2a40fc ) ] .
 
@@ -23114,7 +23114,7 @@ uuid:5943a3e8-75e7-45c0-9b66-3f29e77150cf a geojson:Feature ;
                         topo:ref uuid:f20cfff2-f3e6-41b2-843b-93e32f3f205a ] ) ] .
 
 uuid:5a34b8a2-dac0-4ad4-8a59-cbee38b407c8 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:e18342eb-1272-4582-b6bf-3c9d7e138667 uuid:313731cb-1e0c-469c-b64e-06af1629ba2a ) ] .
 
@@ -23146,7 +23146,7 @@ uuid:6d219ad2-36b7-4f0d-bc02-deba6c975ea2 a geojson:Feature ;
                         topo:ref uuid:b769cbe5-703f-441e-8fc5-1b79d6ff3561 ] ) ] .
 
 uuid:6e614af5-e74d-4c6d-b841-85ac4dd93250 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:67c660f1-0e49-4ee4-996d-4d453fe6209b uuid:3c6c5996-1c40-4e52-932b-13cc41fcee71 ) ] .
 
@@ -23186,12 +23186,12 @@ uuid:777a02bc-f2d3-4b31-bc4c-7180bc13a31c a geojson:Feature ;
                         topo:ref uuid:3accc489-4f33-4a69-ae3c-ad302bea4102 ] ) ] .
 
 uuid:780d3b13-0263-4449-ad1e-1627fd0042aa a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:97571fb3-9987-49b3-b54c-88b8adcd2655 uuid:4c83a22b-2309-4240-97b1-d130cb1a8d43 ) ] .
 
 uuid:7914b52a-e13d-4d79-9f76-43e040fa939f a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:7023d838-169a-4b01-a85f-e2b270751a7c uuid:fbebc23c-cdef-4d02-bced-5b5bb7686b1f ) ] .
 
@@ -23288,7 +23288,7 @@ uuid:b3470cac-a616-4768-a74b-182208496ee1 a geojson:Feature ;
                         topo:ref uuid:7d373590-b767-45a5-8e6a-120d938d3736 ] ) ] .
 
 uuid:b4b815fe-eb25-401b-b65f-f7a020da8944 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:fbebc23c-cdef-4d02-bced-5b5bb7686b1f uuid:d72f308c-110a-459d-ae5f-9d459d9ae51e ) ] .
 
@@ -23356,12 +23356,12 @@ uuid:ce095212-8b35-48bf-b77d-57ba8bcf9882 a geojson:Feature ;
                         topo:ref uuid:bdf1b7f8-6f4e-4652-a24e-2d7328101807 ] ) ] .
 
 uuid:cf0f9b8d-c8d2-4691-8c41-086e18375574 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:4261adb8-2fa6-4ce6-94cc-d4906f2a40fc uuid:d9e43ed6-9387-4180-a25a-3b3208422263 ) ] .
 
 uuid:d2ebb167-17a2-4bd0-8411-97f83c92d9e6 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:4a98b01f-7e97-4049-9f39-a0ba56758ce9 uuid:be40befb-8498-4793-9ed6-d0e72c1a1d5b ) ] .
 
@@ -23379,7 +23379,7 @@ uuid:d627f2d7-d27f-40bf-b30a-2298c50c5b88 a geojson:Feature ;
                         topo:ref uuid:64cb5d00-fba4-44b2-ad2a-1913a94fe5a8 ] ) ] .
 
 uuid:d75b510f-9b88-4a82-bac4-4de995f4a1b9 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:be40befb-8498-4793-9ed6-d0e72c1a1d5b uuid:7023d838-169a-4b01-a85f-e2b270751a7c ) ] .
 
@@ -23397,12 +23397,12 @@ uuid:e6fb50a4-9678-4e44-b31c-70cd67726e49 a geojson:Feature ;
                         topo:ref uuid:5cb6b170-6c30-4578-9fdf-a06662911c3f ] ) ] .
 
 uuid:e9b94664-2b7a-4e97-a565-4bcce3896392 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:a221f31d-26c6-46f0-872a-567244fa5447 uuid:3cf6b3c0-3acc-4720-a643-d885d6951b2a ) ] .
 
 uuid:ed1e393e-d7f5-4a85-93b1-f08812b85014 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:d9e43ed6-9387-4180-a25a-3b3208422263 uuid:4a98b01f-7e97-4049-9f39-a0ba56758ce9 ) ] .
 
@@ -23431,7 +23431,7 @@ uuid:f6d80de2-ba10-4748-9c16-f74eafa5e454 a geojson:Feature ;
                         topo:ref uuid:0175c2aa-87ea-4e50-9b5e-a702710d09a5 ] ) ] .
 
 uuid:f7fb3296-07ab-42f6-937f-0ebbe0ee98ea a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:291b7f49-8f18-498e-bd2f-7bfb6760eaa2 uuid:c4aa05ba-997c-4b7e-b5bd-071f385e17d5 ) ] .
 
@@ -23441,12 +23441,12 @@ uuid:fa9fc866-8b5d-4056-9afb-a5294b52eea3 a geojson:Feature ;
                         topo:ref uuid:2eba2a4e-7b02-4921-894b-7882959e13fd ] ) ] .
 
 uuid:fd23e6be-fb9a-44fd-8ad1-55df298d506a a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:4c83a22b-2309-4240-97b1-d130cb1a8d43 uuid:291b7f49-8f18-498e-bd2f-7bfb6760eaa2 ) ] .
 
 uuid:ff22d8d8-5d2e-4fdd-97ce-d80e2b48b5de a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( uuid:489a1c4c-0ac4-470f-9757-e50bc71d3aa8 uuid:e18342eb-1272-4582-b6bf-3c9d7e138667 ) ] .
 
@@ -24568,13 +24568,24 @@ x-jsonld-prefixes:
   vertical-extent-status: https://linked.data.gov.au/def/csdm/vertical-extent-status/
   computability-status: https://linked.data.gov.au/def/csdm/computability-status/
   coordinate-z-role: https://linked.data.gov.au/def/csdm/coordinate-z-role/
-  vertical-boundary-state: https://linked.data.gov.au/def/csdm/vertical-boundary-state/
   vertical-definition-type: https://linked.data.gov.au/def/csdm/vertical-definition-type/
-  vertical-limit-role: https://linked.data.gov.au/def/csdm/vertical-limit-role/
   vertical-value-type: https://linked.data.gov.au/def/csdm/vertical-value-type/
   vertical-direction: https://linked.data.gov.au/def/csdm/vertical-direction/
   height-reference: https://linked.data.gov.au/def/csdm/height-reference/
+  boundary-role: https://linked.data.gov.au/def/csdm/boundary-role/
+  boundary-reference: https://linked.data.gov.au/def/csdm/boundary-reference/
+  component-role: https://linked.data.gov.au/def/csdm/component-role/
+  occupation-feature: https://linked.data.gov.au/def/csdm/occupation-feature/
+  source-scope: https://linked.data.gov.au/def/csdm/source-scope/
+  reference-kind: https://linked.data.gov.au/def/csdm/reference-kind/
+  derivation-mechanism: https://linked.data.gov.au/def/csdm/derivation-mechanism/
+  derived-geometry-status: https://linked.data.gov.au/def/csdm/derived-geometry-status/
   uuid: 'urn:uuid:'
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.wa-3d
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-22'
 
 ```
 
@@ -26329,6 +26340,8 @@ Links to the schema:
     "wa-procedure-used": "csdm:wa-procedure-used/",
     "wa-survey-documentation-type": "csdm:wa-survey-documentation-type/",
     "wa-annotation-role": "csdm:wa-annotation/",
+    "wa-annotation": "csdm:wa-annotation/",
+    "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
@@ -26337,12 +26350,10 @@ Links to the schema:
     "wa-monument-condition": "csdm:wa-monument-condition/",
     "wa-monument-state": "csdm:wa-monument-state/",
     "wa-vector-purpose": "csdm:wa-vector-purpose/",
-    "wa-vector-type": "csdm:wa-vector-type/",
     "wa-secondary-parcel-purpose": "csdm:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "csdm:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "csdm:wa-secondary-purpose/",
     "wa-interest-type": "csdm:wa-interest-type/",
-    "wa-interest": "csdm:wa-interest/",
     "wa-locality": "csdm:wa-locality/",
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",
@@ -26352,12 +26363,18 @@ Links to the schema:
     "vertical-extent-status": "csdm:vertical-extent-status/",
     "computability-status": "csdm:computability-status/",
     "coordinate-z-role": "csdm:coordinate-z-role/",
-    "vertical-boundary-state": "csdm:vertical-boundary-state/",
     "vertical-definition-type": "csdm:vertical-definition-type/",
-    "vertical-limit-role": "csdm:vertical-limit-role/",
     "vertical-value-type": "csdm:vertical-value-type/",
     "vertical-direction": "csdm:vertical-direction/",
     "height-reference": "csdm:height-reference/",
+    "boundary-role": "csdm:boundary-role/",
+    "boundary-reference": "csdm:boundary-reference/",
+    "component-role": "csdm:component-role/",
+    "occupation-feature": "csdm:occupation-feature/",
+    "source-scope": "csdm:source-scope/",
+    "reference-kind": "csdm:reference-kind/",
+    "derivation-mechanism": "csdm:derivation-mechanism/",
+    "derived-geometry-status": "csdm:derived-geometry-status/",
     "uuid": "urn:uuid:",
     "@version": 1.1
   }

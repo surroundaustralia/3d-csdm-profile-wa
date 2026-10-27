@@ -255,7 +255,7 @@ Minimal example - with combined elements from each test case
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
-        "usedProcedure": "wa-procedure-used:M",
+        "usedProcedure": "wa-procedure-used:measured",
         "angleType": "icsm-angle-type:angle",
         "distanceType": "icsm-distance-type:grid",
         "madeBySensor": {
@@ -508,7 +508,7 @@ Minimal example - with combined elements from each test case
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
-        "usedProcedure": "wa-procedure-used:M",
+        "usedProcedure": "wa-procedure-used:measured",
         "angleType": "icsm-angle-type:angle",
         "distanceType": "icsm-distance-type:grid",
         "madeBySensor": {
@@ -550,9 +550,9 @@ Minimal example - with combined elements from each test case
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -577,12 +577,12 @@ Minimal example - with combined elements from each test case
 <https://www.wa-example.com/features/Western-Australia-Example-1> a geojson:FeatureCollection ;
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -596,11 +596,11 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
-    ns1:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9540" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+    ns2:name [ rdfs:label "EFB157243/9540" ;
+            dcterms:hasPart [ rdfs:label "9540" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -633,15 +633,15 @@ Minimal example - with combined elements from each test case
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:M ;
-    ns3:angleType icsm-angle-type:angle ;
-    ns3:distanceType icsm-distance-type:grid .
+    sosa:usedProcedure wa-procedure-used:measured ;
+    ns1:angleType icsm-angle-type:angle ;
+    ns1:distanceType icsm-distance-type:grid .
 
 <https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    ns1:name [ rdfs:label "" ] ;
+    ns2:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -653,7 +653,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    ns1:name [ rdfs:label "" ] ;
+    ns2:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -670,7 +670,7 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    ns1:name [ rdfs:label "" ] ;
+    ns2:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -1090,8 +1090,8 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -1111,10 +1111,10 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
@@ -1131,7 +1131,7 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470028e+04 3.984264e+05 ) ] ;
-    ns2:name [ rdfs:label "Peg 1 DP 422532" ;
+    ns1:name [ rdfs:label "Peg 1 DP 422532" ;
             dcterms:hasPart [ rdfs:label "Peg" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/MarkType> ],
                 [ rdfs:label "1" ;
@@ -1140,7 +1140,7 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
                     commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
-    ns2:qualityMeasure 1.3e-02 ;
+    ns1:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -1151,12 +1151,12 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.467663e+04 3.984343e+05 ) ] ;
     rdfs:comment "In Bitumen" ;
-    ns2:name [ rdfs:label "EFB157243/9533" ;
+    ns1:name [ rdfs:label "EFB157243/9533" ;
             dcterms:hasPart [ rdfs:label "9533" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
                 [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
-    ns2:qualityMeasure 2.8e-02 ;
+    ns1:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -1167,12 +1167,12 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.47613e+04 3.984891e+05 ) ] ;
     rdfs:comment "In Concrete" ;
-    ns2:name [ rdfs:label "EFB157243/9802" ;
+    ns1:name [ rdfs:label "EFB157243/9802" ;
             dcterms:hasPart [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
                 [ rdfs:label "9802" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
-    ns2:qualityMeasure 2.6e-02 ;
+    ns1:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:brass-plaque ;
@@ -1189,7 +1189,7 @@ Contains three Survey Marks, one of each subtype being a CadastralMark, a Bounda
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 .
@@ -1380,7 +1380,7 @@ Survey Mark example above.
       "id": "vectorobservation:theodolite+edm",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -1401,7 +1401,7 @@ Survey Mark example above.
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 20000,
-            "angleType": "icsm-distance-type:bearing",
+            "angleType": "icsm-angle-type:bearing",
             "angleAccuracy": 20000
           }
         },
@@ -1417,7 +1417,7 @@ Survey Mark example above.
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 20000,
-            "angleType": "icsm-distance-type:bearing",
+            "angleType": "icsm-angle-type:bearing",
             "angleAccuracy": 20000
           }
         }
@@ -1442,7 +1442,7 @@ Survey Mark example above.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:N",
+            "vectorPurpose": "wa-vector-purpose:control-network",
             "comment": null
           }
         },
@@ -1458,7 +1458,7 @@ Survey Mark example above.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:N",
+            "vectorPurpose": "wa-vector-purpose:control-network",
             "comment": null
           }
         }
@@ -1650,7 +1650,7 @@ Survey Mark example above.
       "id": "vectorobservation:theodolite+edm",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -1671,7 +1671,7 @@ Survey Mark example above.
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 20000,
-            "angleType": "icsm-distance-type:bearing",
+            "angleType": "icsm-angle-type:bearing",
             "angleAccuracy": 20000
           }
         },
@@ -1687,7 +1687,7 @@ Survey Mark example above.
             },
             "distanceType": "icsm-distance-type:ground",
             "distanceAccuracy": 20000,
-            "angleType": "icsm-distance-type:bearing",
+            "angleType": "icsm-angle-type:bearing",
             "angleAccuracy": 20000
           }
         }
@@ -1712,7 +1712,7 @@ Survey Mark example above.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:N",
+            "vectorPurpose": "wa-vector-purpose:control-network",
             "comment": null
           }
         },
@@ -1728,7 +1728,7 @@ Survey Mark example above.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:N",
+            "vectorPurpose": "wa-vector-purpose:control-network",
             "comment": null
           }
         }
@@ -1749,10 +1749,11 @@ Survey Mark example above.
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
+@prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -1768,6 +1769,7 @@ Survey Mark example above.
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-procedure-used: <https://linked.data.gov.au/def/csdm/wa-procedure-used/> .
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
@@ -1777,10 +1779,10 @@ Survey Mark example above.
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
@@ -1805,7 +1807,7 @@ Survey Mark example above.
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -1822,27 +1824,27 @@ Survey Mark example above.
 <vectorobservation:theodolite+edm> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805296> ;
-            sosa:hasResult [ surv:distance 2.4923e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns3:angleType icsm-distance-type:bearing ;
-            ns3:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805060> ;
             sosa:hasResult [ surv:distance 1.00856e+02 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns3:angleType icsm-distance-type:bearing ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20805296> ;
+            sosa:hasResult [ surv:distance 2.4923e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00Z" ;
+            ns3:angleType icsm-angle-type:bearing ;
             ns3:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
-    sosa:usedProcedure <wa-wa-procedure-used:m> .
+    sosa:usedProcedure wa-procedure-used:measured .
 
 <https://www.wa-example.com/features/17876586> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470028e+04 3.984264e+05 ) ] ;
-    ns2:qualityMeasure 1.3e-02 ;
+    ns1:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -1853,12 +1855,12 @@ Survey Mark example above.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.47613e+04 3.984891e+05 ) ] ;
     rdfs:comment "In Concrete" ;
-    ns2:name [ rdfs:label "EFB157243/9802" ;
+    ns1:name [ rdfs:label "EFB157243/9802" ;
             dcterms:hasPart [ rdfs:label "9802" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
                 [ rdfs:label "EFB157243" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
-    ns2:qualityMeasure 2.6e-02 ;
+    ns1:qualityMeasure 2.6e-02 ;
     surv:geodeticid "EFB157243/9802" ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:brass-plaque ;
@@ -1866,12 +1868,12 @@ Survey Mark example above.
     surv:purpose wa-surveypoint-purpose:permanent-survey-mark .
 
 <https://www.wa-example.com/features/20805060> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:N ;
+    surv:vectorPurpose wa-vector-purpose:control-network ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/18430386> <https://www.wa-example.com/features/18430396> ) ] .
 
 <https://www.wa-example.com/features/20805296> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:N ;
+    surv:vectorPurpose wa-vector-purpose:control-network ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/18430386> <https://www.wa-example.com/features/17876586> ) ] .
 
@@ -1880,12 +1882,12 @@ Survey Mark example above.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.467663e+04 3.984343e+05 ) ] ;
     rdfs:comment "In Bitumen" ;
-    ns2:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
-    ns2:qualityMeasure 2.8e-02 ;
+    ns1:name [ rdfs:label "EFB157243/9533" ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
+                [ rdfs:label "9533" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+    ns1:qualityMeasure 2.8e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -2037,7 +2039,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -2107,7 +2109,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -2123,7 +2125,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -2150,7 +2152,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -2301,7 +2303,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -2371,7 +2373,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -2387,7 +2389,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -2414,7 +2416,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -2437,8 +2439,8 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -2464,10 +2466,10 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 <https://www.wa-example.com/features/DP_422532> a geojson:FeatureCollection ;
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
@@ -2489,7 +2491,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -2519,13 +2521,13 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:d .
+    sosa:usedProcedure wa-procedure-used:described .
 
 <https://www.wa-example.com/features/189> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -2535,7 +2537,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -2543,17 +2545,17 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
 
 <https://www.wa-example.com/features/843> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ] .
 
 <https://www.wa-example.com/features/312> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
 
 <https://www.wa-example.com/features/313> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
 
@@ -2565,7 +2567,7 @@ observations. For ***distance*** only observations, ***angle*** is **Null**. For
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -2794,7 +2796,7 @@ describing the six boundary line geometries and six subtended angle geometries.
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -2985,7 +2987,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -3001,7 +3003,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3017,7 +3019,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3033,7 +3035,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3049,7 +3051,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -3065,7 +3067,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -3090,7 +3092,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3108,7 +3110,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3126,7 +3128,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3144,7 +3146,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3162,7 +3164,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3180,7 +3182,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -3464,7 +3466,7 @@ describing the six boundary line geometries and six subtended angle geometries.
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -3655,7 +3657,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -3671,7 +3673,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3687,7 +3689,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3703,7 +3705,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3719,7 +3721,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -3735,7 +3737,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -3760,7 +3762,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3778,7 +3780,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3796,7 +3798,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3814,7 +3816,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3832,7 +3834,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -3850,7 +3852,7 @@ describing the six boundary line geometries and six subtended angle geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -3932,8 +3934,8 @@ describing the six boundary line geometries and six subtended angle geometries.
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns3: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -3962,12 +3964,12 @@ describing the six boundary line geometries and six subtended angle geometries.
 <https://www.wa-example.com/features/DP_42253> a geojson:FeatureCollection ;
     rdfs:label "DP 42253" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:parcels <https://www.wa-example.com/features/PrimaryParcels> ;
@@ -3986,14 +3988,14 @@ describing the six boundary line geometries and six subtended angle geometries.
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/312> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/314> <https://www.wa-example.com/features/309> <https://www.wa-example.com/features/311> <https://www.wa-example.com/features/298> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 213 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "213" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 798 ;
@@ -4010,7 +4012,7 @@ describing the six boundary line geometries and six subtended angle geometries.
 
 <https://www.wa-example.com/features/DP_422526> rdfs:label "DP 422526" ;
     dcterms:time [ time:hasTime "2013-03-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -4031,7 +4033,12 @@ describing the six boundary line geometries and six subtended angle geometries.
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/840> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
+            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:resultTime "2022-05-22T00:00:00Z" ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/843> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:angleType icsm-angle-type:angle ],
@@ -4041,10 +4048,15 @@ describing the six boundary line geometries and six subtended angle geometries.
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
-            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/841> ;
+            sosa:hasResult [ ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns1:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/840> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2022-05-22T00:00:00Z" ;
+            ns1:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/314> ;
             sosa:hasResult [ surv:distance 1.4e+01 ] ;
@@ -4056,77 +4068,67 @@ describing the six boundary line geometries and six subtended angle geometries.
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/841> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/845> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
-            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
-            sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
             sosa:hasResult [ surv:distance 1e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/842> ;
-            sosa:hasResult [ ] ;
-            ns1:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/843> ;
-            sosa:hasResult [ ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
+            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:angle ],
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
             sosa:hasResult [ surv:distance 8.832e+00 ] ;
             sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/845> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/842> ;
             sosa:hasResult [ ] ;
-            sosa:resultTime "2022-05-22T00:00:00Z" ;
             ns1:angleType icsm-angle-type:angle ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:d .
+    sosa:usedProcedure wa-procedure-used:described .
 
 <https://www.wa-example.com/features/840> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/196> <https://www.wa-example.com/features/311> <https://www.wa-example.com/features/309> ) ] .
 
 <https://www.wa-example.com/features/841> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/190> <https://www.wa-example.com/features/298> <https://www.wa-example.com/features/311> ) ] .
 
 <https://www.wa-example.com/features/842> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/312> <https://www.wa-example.com/features/298> ) ] .
 
 <https://www.wa-example.com/features/843> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ] .
 
 <https://www.wa-example.com/features/844> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/198> <https://www.wa-example.com/features/314> <https://www.wa-example.com/features/313> ) ] .
 
 <https://www.wa-example.com/features/845> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/197> <https://www.wa-example.com/features/309> <https://www.wa-example.com/features/314> ) ] .
 
@@ -4134,7 +4136,7 @@ describing the six boundary line geometries and six subtended angle geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -4144,7 +4146,7 @@ describing the six boundary line geometries and six subtended angle geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -4154,7 +4156,7 @@ describing the six boundary line geometries and six subtended angle geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.471898e+04 3.987111e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -4164,7 +4166,7 @@ describing the six boundary line geometries and six subtended angle geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472507e+04 3.987175e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -4174,7 +4176,7 @@ describing the six boundary line geometries and six subtended angle geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.46983e+04 3.987431e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -4184,39 +4186,39 @@ describing the six boundary line geometries and six subtended angle geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns3:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <https://www.wa-example.com/features/298> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/190> <https://www.wa-example.com/features/189> ) ] .
 
 <https://www.wa-example.com/features/309> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/197> <https://www.wa-example.com/features/196> ) ] .
 
 <https://www.wa-example.com/features/311> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/196> <https://www.wa-example.com/features/190> ) ] .
 
 <https://www.wa-example.com/features/312> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
 
 <https://www.wa-example.com/features/313> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
 
 <https://www.wa-example.com/features/314> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/198> <https://www.wa-example.com/features/197> ) ] .
 
@@ -4449,7 +4451,7 @@ six boundary line geometries.
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2011-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -4575,7 +4577,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -4591,7 +4593,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -4607,7 +4609,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -4623,7 +4625,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -4639,7 +4641,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -4655,7 +4657,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -4940,7 +4942,7 @@ six boundary line geometries.
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2011-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -5066,7 +5068,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -5082,7 +5084,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -5098,7 +5100,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -5114,7 +5116,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -5130,7 +5132,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -5146,7 +5148,7 @@ six boundary line geometries.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -5227,8 +5229,8 @@ six boundary line geometries.
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -5259,11 +5261,11 @@ six boundary line geometries.
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:parcels <https://www.wa-example.com/features/PrimaryParcels> ;
@@ -5281,14 +5283,14 @@ six boundary line geometries.
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/298> <https://www.wa-example.com/features/311> <https://www.wa-example.com/features/309> <https://www.wa-example.com/features/314> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 213 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "213" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 798 ;
@@ -5326,51 +5328,51 @@ six boundary line geometries.
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
-            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/314> ;
             sosa:hasResult [ surv:distance 1.4e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
-            sosa:hasResult [ surv:distance 3.7e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
             sosa:hasResult [ surv:distance 2.6401e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
-            sosa:hasResult [ surv:distance 8.832e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
+            sosa:hasResult [ surv:distance 1.6526e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
             sosa:hasResult [ surv:distance 1e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00Z" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ] ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
+            sosa:hasResult [ surv:distance 8.832e+00 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
+            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00Z" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:software ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2011-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:d .
+    sosa:usedProcedure wa-procedure-used:described .
 
 <https://www.wa-example.com/features/184> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469328e+04 3.98707e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -5380,7 +5382,7 @@ six boundary line geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.470981e+04 3.987072e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -5390,7 +5392,7 @@ six boundary line geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.471898e+04 3.987111e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -5400,7 +5402,7 @@ six boundary line geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472507e+04 3.987175e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -5410,7 +5412,7 @@ six boundary line geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.46983e+04 3.987431e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -5420,39 +5422,39 @@ six boundary line geometries.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.468864e+04 3.987329e+05 ) ] ;
-    ns2:qualityMeasure 1e-01 ;
+    ns1:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <https://www.wa-example.com/features/298> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/190> <https://www.wa-example.com/features/189> ) ] .
 
 <https://www.wa-example.com/features/309> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/197> <https://www.wa-example.com/features/196> ) ] .
 
 <https://www.wa-example.com/features/311> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/196> <https://www.wa-example.com/features/190> ) ] .
 
 <https://www.wa-example.com/features/312> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/189> <https://www.wa-example.com/features/184> ) ] .
 
 <https://www.wa-example.com/features/313> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/184> <https://www.wa-example.com/features/198> ) ] .
 
 <https://www.wa-example.com/features/314> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a topo:Edge ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/198> <https://www.wa-example.com/features/197> ) ] .
 
@@ -5861,11 +5863,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -6122,7 +6124,7 @@ along with the arc length and radius.
       "id": "vectorobservation:t-band",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "1970-04-10",
         "observedProperty": "surveyable:VectorDetermination",
@@ -6190,7 +6192,7 @@ along with the arc length and radius.
             "orientation": "cw"
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null,
             "arcLength": 25.615,
             "radius": 105.438,
@@ -6389,7 +6391,7 @@ along with the arc length and radius.
       "id": "vectorobservation:t-band",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "1970-04-10",
         "observedProperty": "surveyable:VectorDetermination",
@@ -6457,7 +6459,7 @@ along with the arc length and radius.
             "orientation": "cw"
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null,
             "arcLength": 25.615,
             "radius": 105.438,
@@ -6483,9 +6485,9 @@ along with the arc length and radius.
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
 @prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns3: <http://www.iana.org/assignments/> .
+@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6510,12 +6512,12 @@ along with the arc length and radius.
 <https://www.wa-example.com/features/Plan_9674> a geojson:FeatureCollection ;
     rdfs:label "Plan 9674" ;
     dcterms:time [ time:hasTime "1970-04-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-perth ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:thornlie ] ;
+            oa:hasTarget wa-locality:thornlie ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-perth ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/BoundaryMark>,
@@ -6532,7 +6534,7 @@ along with the arc length and radius.
 
 <https://www.wa-example.com/features/1853004> a surv:ObservedVector,
         geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:arcLength 2.5615e+01 ;
     geojson:radius 1.05438e+02 ;
     geojson:topology [ a geojson:ArcWithCenter ;
@@ -6550,28 +6552,28 @@ along with the arc length and radius.
 
 <https://www.wa-example.com/features/DP_12034> rdfs:label "DP 12034" ;
     dcterms:time [ time:hasTime "1970-04-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:thornlie ] ;
     container:bearingRotation 0e+00 .
 
 <https://www.wa-example.com/features/DP_9675> rdfs:label "DP 9675" ;
     dcterms:time [ time:hasTime "1970-04-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:thornlie ] ;
     container:bearingRotation 0e+00 .
 
 <https://www.wa-example.com/features/DP_9677> rdfs:label "DP 9677" ;
     dcterms:time [ time:hasTime "1970-04-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:thornlie ] ;
     container:bearingRotation 0e+00 .
 
 <https://www.wa-example.com/features/DP_9679> rdfs:label "DP 9679" ;
     dcterms:time [ time:hasTime "1970-04-10"^^xsd:date ] ;
-    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:thornlie ] ;
     container:bearingRotation 0e+00 .
@@ -6587,12 +6589,12 @@ along with the arc length and radius.
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/c1853004> ;
             sosa:hasResult [ surv:distance 2.5552e+01 ] ;
             sosa:resultTime "1970-04-10" ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ] ;
+            ns3:angleType icsm-angle-type:bearing ;
+            ns3:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-band ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "1970-04-10" ;
-    sosa:usedProcedure wa-procedure-used:m .
+    sosa:usedProcedure wa-procedure-used:measured .
 
 <https://www.wa-example.com/features/c1853004> a surv:ObservedVector,
         geojson:Feature ;
@@ -7288,7 +7290,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
       "id": "vectorobservation:theodolite+edm",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -7828,7 +7830,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -7844,7 +7846,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -7860,7 +7862,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -7876,7 +7878,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -7892,7 +7894,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -7908,7 +7910,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -7924,7 +7926,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -7940,7 +7942,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -7956,7 +7958,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -7972,7 +7974,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -7988,7 +7990,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -8004,7 +8006,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8020,7 +8022,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8036,7 +8038,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -8052,7 +8054,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8068,7 +8070,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8084,7 +8086,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -8100,7 +8102,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8116,7 +8118,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8132,7 +8134,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -8148,7 +8150,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8164,7 +8166,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8180,7 +8182,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8196,7 +8198,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8212,7 +8214,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -8228,7 +8230,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8244,7 +8246,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -8260,7 +8262,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -8276,7 +8278,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -8292,7 +8294,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8308,7 +8310,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -8324,7 +8326,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -8340,7 +8342,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -8356,7 +8358,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -9653,7 +9655,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
       "id": "vectorobservation:theodolite+edm",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2022-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -10193,7 +10195,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10209,7 +10211,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10225,7 +10227,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10241,7 +10243,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10257,7 +10259,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10273,7 +10275,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10289,7 +10291,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10305,7 +10307,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10321,7 +10323,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10337,7 +10339,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10353,7 +10355,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10369,7 +10371,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10385,7 +10387,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10401,7 +10403,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10417,7 +10419,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10433,7 +10435,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10449,7 +10451,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10465,7 +10467,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10481,7 +10483,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10497,7 +10499,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10513,7 +10515,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10529,7 +10531,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10545,7 +10547,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10561,7 +10563,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10577,7 +10579,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -10593,7 +10595,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10609,7 +10611,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10625,7 +10627,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10641,7 +10643,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10657,7 +10659,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10673,7 +10675,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10689,7 +10691,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:E",
+            "vectorPurpose": "wa-vector-purpose:easement",
             "comment": null
           }
         },
@@ -10705,7 +10707,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -10721,7 +10723,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         }
@@ -11380,8 +11382,8 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -11438,10 +11440,10 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220192> <https://www.wa-example.com/features/20220189> <https://www.wa-example.com/features/20220191> <https://www.wa-example.com/features/20220176> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Area D5 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "Area" ;
+            dcterms:hasPart [ rdfs:label "Area" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "D5" ;
@@ -11462,14 +11464,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220191> <https://www.wa-example.com/features/20220190> <https://www.wa-example.com/features/20220299> <https://www.wa-example.com/features/20220178> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Area D4 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "Area" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "D4" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                [ rdfs:label "Area" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ rdfs:label "D4" ;
             parcel:benefited "215",
                 "216" ;
@@ -11487,14 +11489,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220299> <https://www.wa-example.com/features/20220250> <https://www.wa-example.com/features/20220248> <https://www.wa-example.com/features/20220209> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Area D3 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "D3" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Area" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ rdfs:label "D3" ;
             parcel:benefited "215",
                 "216",
@@ -11513,14 +11515,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220248> <https://www.wa-example.com/features/20220249> <https://www.wa-example.com/features/20220244> <https://www.wa-example.com/features/20220212> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Area D2 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "D2" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "572532" ;
+            dcterms:hasPart [ rdfs:label "572532" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "Area" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "D2" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ rdfs:label "D2" ;
             parcel:benefited "215",
                 "216",
@@ -11544,10 +11546,10 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Area" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "D1" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ rdfs:label "D1" ;
             parcel:benefited "215",
                 "216",
@@ -11568,14 +11570,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220170> <https://www.wa-example.com/features/20220171> <https://www.wa-example.com/features/20220172> <https://www.wa-example.com/features/20220192> <https://www.wa-example.com/features/20220173> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 215 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
+                [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "215" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/AAAAAA> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11588,12 +11590,12 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220192> <https://www.wa-example.com/features/20220172> <https://www.wa-example.com/features/20220174> <https://www.wa-example.com/features/20220175> <https://www.wa-example.com/features/20220191> <https://www.wa-example.com/features/20220176> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 216 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "216" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "216" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/BBBBBB> ;
@@ -11608,14 +11610,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220191> <https://www.wa-example.com/features/20220175> <https://www.wa-example.com/features/20220177> <https://www.wa-example.com/features/20220300> <https://www.wa-example.com/features/20220299> <https://www.wa-example.com/features/20220178> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 217 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "217" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/CCCCCC> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11628,14 +11630,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220299> <https://www.wa-example.com/features/20220300> <https://www.wa-example.com/features/20220207> <https://www.wa-example.com/features/20220208> <https://www.wa-example.com/features/20220248> <https://www.wa-example.com/features/20220209> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 218 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "218" ;
+            dcterms:hasPart [ rdfs:label "218" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/DDDDDD> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11648,14 +11650,14 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20220248> <https://www.wa-example.com/features/20220208> <https://www.wa-example.com/features/20220210> <https://www.wa-example.com/features/20220211> <https://www.wa-example.com/features/20220244> <https://www.wa-example.com/features/20220212> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 219 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "572532" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+                [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "219" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
+                [ rdfs:label "219" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/EEEEEE> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11670,12 +11672,12 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
             rdfs:label "Lot 220 DP 572532" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "572532" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "220" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/FFFFFF> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11774,185 +11776,185 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
 <vectorobservation:theodolite+edm> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220170> ;
-            sosa:hasResult [ surv:distance 3.5e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220207> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220174> ;
             sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220190> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220211> ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220172> ;
             sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220244> ;
-            sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220209> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220214> ;
-            sosa:hasResult [ surv:distance 7.26e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220299> ;
-            sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220174> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220249> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220247> ;
-            sosa:hasResult [ surv:distance 3.944e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220248> ;
-            sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220215> ;
-            sosa:hasResult [ surv:distance 2.2832e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220191> ;
-            sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220300> ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220175> ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220222> ;
-            sosa:hasResult [ surv:distance 2.0005e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220219> ;
-            sosa:hasResult [ surv:distance 2.0935e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220173> ;
             sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220245> ;
-            sosa:hasResult [ surv:distance 2.2548e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220177> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220246> ;
-            sosa:hasResult [ surv:distance 5.508e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220243> ;
             sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220212> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220192> ;
-            sosa:hasResult [ surv:distance 1.5e+00 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220178> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220171> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220208> ;
-            sosa:hasResult [ surv:distance 3.35e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220213> ;
-            sosa:hasResult [ surv:distance 1.5084e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220176> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220189> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220250> ;
-            sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220210> ;
             sosa:hasResult [ surv:distance 2.44e+01 ] ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220208> ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220245> ;
+            sosa:hasResult [ surv:distance 2.2548e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220189> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220178> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220170> ;
+            sosa:hasResult [ surv:distance 3.5e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220213> ;
+            sosa:hasResult [ surv:distance 1.5084e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220177> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220215> ;
+            sosa:hasResult [ surv:distance 2.2832e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220248> ;
+            sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220222> ;
+            sosa:hasResult [ surv:distance 2.0005e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220211> ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220207> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220192> ;
+            sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220209> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220191> ;
+            sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220214> ;
+            sosa:hasResult [ surv:distance 7.26e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220300> ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220299> ;
+            sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220246> ;
+            sosa:hasResult [ surv:distance 5.508e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220190> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220244> ;
+            sosa:hasResult [ surv:distance 1.5e+00 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220175> ;
+            sosa:hasResult [ surv:distance 3.35e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220250> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220219> ;
+            sosa:hasResult [ surv:distance 2.0935e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220176> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220247> ;
+            sosa:hasResult [ surv:distance 3.944e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220171> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220212> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20220249> ;
+            sosa:hasResult [ surv:distance 2.44e+01 ] ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:m .
+    sosa:usedProcedure wa-procedure-used:measured .
 
 <https://www.wa-example.com/features/17876563> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472876e+04 3.986644e+05 ) ] ;
-    ns1:qualityMeasure 1.3e-02 ;
+    ns2:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -11962,7 +11964,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469376e+04 3.98664e+05 ) ] ;
-    ns1:qualityMeasure 1.4e-02 ;
+    ns2:qualityMeasure 1.4e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -11972,7 +11974,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.473648e+04 3.98527e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -11982,7 +11984,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469823e+04 3.985124e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -11992,7 +11994,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469549e+04 3.985191e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12002,7 +12004,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.471692e+04 3.985195e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12012,7 +12014,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469699e+04 3.985194e+05 ) ] ;
-    ns1:qualityMeasure 1.5e-02 ;
+    ns2:qualityMeasure 1.5e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
@@ -12020,82 +12022,82 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469907e+04 3.985143e+05 ) ] ;
-    ns1:qualityMeasure 1.5e-02 ;
+    ns2:qualityMeasure 1.5e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
 <https://www.wa-example.com/features/20220170> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876563> <https://www.wa-example.com/features/17876564> ) ] .
 
 <https://www.wa-example.com/features/20220171> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876565> <https://www.wa-example.com/features/17876563> ) ] .
 
 <https://www.wa-example.com/features/20220173> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876564> <https://www.wa-example.com/features/17876567> ) ] .
 
 <https://www.wa-example.com/features/20220174> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876565> <https://www.wa-example.com/features/17876568> ) ] .
 
 <https://www.wa-example.com/features/20220177> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876571> <https://www.wa-example.com/features/17876568> ) ] .
 
 <https://www.wa-example.com/features/20220189> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876569> <https://www.wa-example.com/features/17876566> ) ] .
 
 <https://www.wa-example.com/features/20220190> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876582> <https://www.wa-example.com/features/17876569> ) ] .
 
 <https://www.wa-example.com/features/20220207> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876595> <https://www.wa-example.com/features/17876571> ) ] .
 
 <https://www.wa-example.com/features/20220210> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876595> <https://www.wa-example.com/features/17876589> ) ] .
 
 <https://www.wa-example.com/features/20220213> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876589> <https://www.wa-example.com/features/17876600> ) ] .
 
 <https://www.wa-example.com/features/20220245> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876598> <https://www.wa-example.com/features/17876624> ) ] .
 
 <https://www.wa-example.com/features/20220246> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876625> <https://www.wa-example.com/features/17876624> ) ] .
 
 <https://www.wa-example.com/features/20220247> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876600> <https://www.wa-example.com/features/17876625> ) ] .
 
 <https://www.wa-example.com/features/20220249> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876596> <https://www.wa-example.com/features/17876598> ) ] .
 
 <https://www.wa-example.com/features/20220250> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:E ;
+    surv:vectorPurpose wa-vector-purpose:easement ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876596> <https://www.wa-example.com/features/17876582> ) ] .
 
@@ -12103,7 +12105,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472905e+04 3.9864e+05 ) ] ;
-    ns1:qualityMeasure 1.3e-02 ;
+    ns2:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12113,7 +12115,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469555e+04 3.986396e+05 ) ] ;
-    ns1:qualityMeasure 1.3e-02 ;
+    ns2:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
@@ -12121,7 +12123,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469405e+04 3.986396e+05 ) ] ;
-    ns1:qualityMeasure 1.3e-02 ;
+    ns2:qualityMeasure 1.3e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12131,7 +12133,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472934e+04 3.986156e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12141,7 +12143,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469434e+04 3.986152e+05 ) ] ;
-    ns1:qualityMeasure 1.1e-02 ;
+    ns2:qualityMeasure 1.1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12151,7 +12153,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472964e+04 3.985912e+05 ) ] ;
-    ns1:qualityMeasure 1.2e-02 ;
+    ns2:qualityMeasure 1.2e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12161,7 +12163,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469464e+04 3.985908e+05 ) ] ;
-    ns1:qualityMeasure 1.2e-02 ;
+    ns2:qualityMeasure 1.2e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12171,7 +12173,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.473022e+04 3.985424e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12181,7 +12183,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.472993e+04 3.985668e+05 ) ] ;
-    ns1:qualityMeasure 1.2e-02 ;
+    ns2:qualityMeasure 1.2e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12191,7 +12193,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469493e+04 3.985664e+05 ) ] ;
-    ns1:qualityMeasure 1.2e-02 ;
+    ns2:qualityMeasure 1.2e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12201,7 +12203,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469522e+04 3.98542e+05 ) ] ;
-    ns1:qualityMeasure 1.1e-02 ;
+    ns2:qualityMeasure 1.1e-02 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:new-mark ] ;
@@ -12211,77 +12213,77 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.473591e+04 3.985284e+05 ) ] ;
-    ns1:qualityMeasure 1e-02 ;
+    ns2:qualityMeasure 1e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
 <https://www.wa-example.com/features/20220172> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876565> <https://www.wa-example.com/features/17876566> ) ] .
 
 <https://www.wa-example.com/features/20220175> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876568> <https://www.wa-example.com/features/17876569> ) ] .
 
 <https://www.wa-example.com/features/20220176> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876570> <https://www.wa-example.com/features/17876567> ) ] .
 
 <https://www.wa-example.com/features/20220178> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876572> <https://www.wa-example.com/features/17876570> ) ] .
 
 <https://www.wa-example.com/features/20220208> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876595> <https://www.wa-example.com/features/17876596> ) ] .
 
 <https://www.wa-example.com/features/20220209> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876597> <https://www.wa-example.com/features/17876572> ) ] .
 
 <https://www.wa-example.com/features/20220211> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876589> <https://www.wa-example.com/features/17876598> ) ] .
 
 <https://www.wa-example.com/features/20220212> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876597> <https://www.wa-example.com/features/17876599> ) ] .
 
 <https://www.wa-example.com/features/20220214> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876602> <https://www.wa-example.com/features/17876603> ) ] .
 
 <https://www.wa-example.com/features/20220215> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876603> <https://www.wa-example.com/features/17876599> ) ] .
 
 <https://www.wa-example.com/features/20220219> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876601> <https://www.wa-example.com/features/17876605> ) ] .
 
 <https://www.wa-example.com/features/20220222> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876605> <https://www.wa-example.com/features/17876602> ) ] .
 
 <https://www.wa-example.com/features/20220243> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876600> <https://www.wa-example.com/features/17876601> ) ] .
 
 <https://www.wa-example.com/features/20220300> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876571> <https://www.wa-example.com/features/17876582> ) ] .
 
@@ -12289,7 +12291,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469584e+04 3.986152e+05 ) ] ;
-    ns1:qualityMeasure 1.1e-02 ;
+    ns2:qualityMeasure 1.1e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
@@ -12297,7 +12299,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469614e+04 3.985908e+05 ) ] ;
-    ns1:qualityMeasure 1.2e-02 ;
+    ns2:qualityMeasure 1.2e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
@@ -12305,7 +12307,7 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469643e+04 3.985664e+05 ) ] ;
-    ns1:qualityMeasure 1.2e-02 ;
+    ns2:qualityMeasure 1.2e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
@@ -12313,32 +12315,32 @@ easement burdens a single lot, and benefits 1 to 5 lots depending on the easemen
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.469672e+04 3.98542e+05 ) ] ;
-    ns1:qualityMeasure 1.1e-02 ;
+    ns2:qualityMeasure 1.1e-02 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-boundary .
 
 <https://www.wa-example.com/features/20220192> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876566> <https://www.wa-example.com/features/17876567> ) ] .
 
 <https://www.wa-example.com/features/20220191> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876569> <https://www.wa-example.com/features/17876570> ) ] .
 
 <https://www.wa-example.com/features/20220244> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876598> <https://www.wa-example.com/features/17876599> ) ] .
 
 <https://www.wa-example.com/features/20220248> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876596> <https://www.wa-example.com/features/17876597> ) ] .
 
 <https://www.wa-example.com/features/20220299> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:I ;
+    surv:vectorPurpose wa-vector-purpose:lot-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/17876582> <https://www.wa-example.com/features/17876572> ) ] .
 
@@ -13096,7 +13098,7 @@ data provided.
             },
             "area": 365750,
             "parcelType": "wa-parcel-type:crown",
-            "parcelPurpose": "wa-parcel-purpose:reserve",
+            "parcelPurpose": "wa-parcel-purpose:reserve-vest",
             "parcelState": "wa-parcel-state:affected-tenure",
             "interests": [
               {
@@ -13921,7 +13923,7 @@ data provided.
             },
             "area": 365750,
             "parcelType": "wa-parcel-type:crown",
-            "parcelPurpose": "wa-parcel-purpose:reserve",
+            "parcelPurpose": "wa-parcel-purpose:reserve-vest",
             "parcelState": "wa-parcel-state:affected-tenure",
             "interests": [
               {
@@ -14007,8 +14009,8 @@ data provided.
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix icsm-admin-unit-type: <https://linked.data.gov.au/def/csdm/icsm-admin-unit-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -14037,12 +14039,12 @@ data provided.
 <https://www.wa-example.com/features/DP_423693> a geojson:FeatureCollection ;
     rdfs:label "DP 423693" ;
     dcterms:time [ time:hasTime "2023-05-30"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:hyden ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:shire-of-kondinin ] ;
+            oa:hasTarget wa-local-government:shire-of-kondinin ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:parcels <https://www.wa-example.com/features/PrimaryParcels>,
@@ -14060,17 +14062,17 @@ data provided.
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/2001> <https://www.wa-example.com/features/20015> <https://www.wa-example.com/features/20014> <https://www.wa-example.com/features/20013> <https://www.wa-example.com/features/20011> <https://www.wa-example.com/features/20010> <https://www.wa-example.com/features/2009> <https://www.wa-example.com/features/2008> <https://www.wa-example.com/features/2007> <https://www.wa-example.com/features/2006> <https://www.wa-example.com/features/2005> <https://www.wa-example.com/features/2004> <https://www.wa-example.com/features/2003> <https://www.wa-example.com/features/2002> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 3 DP 214866" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "3" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "214866" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                [ rdfs:label "3" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/LR-3150-715> ;
             parcel:interestType wa-interest-type:ct ] ;
-    parcel:purpose wa-parcel-purpose:reserve ;
+    parcel:purpose wa-parcel-purpose:reserve-vest ;
     parcel:state wa-parcel-state:affected-tenure ;
     parcel:surfaceArea 365750 ;
     parcel:type wa-parcel-type:crown .
@@ -14081,14 +14083,14 @@ data provided.
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/17842481> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Area H DP 95092" ;
-            dcterms:hasPart [ rdfs:label "H" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "95092" ;
+            dcterms:hasPart [ rdfs:label "95092" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
-                [ rdfs:label "Area" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "H" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "Area" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ parcel:burdened "11636634" ;
             parcel:interestLink <https://www.wa-example.com/features/345-098-456> ;
             parcel:interestType wa-interest-type:res-cov-cta-38-reg-54-conserv ] ;
@@ -14119,7 +14121,7 @@ data provided.
 
 <https://www.wa-example.com/features/DP_214866> rdfs:label "DP 214866" ;
     dcterms:time [ time:hasTime "2023-05-30"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:hyden ] ;
     container:bearingRotation 0e+00 .
@@ -14155,7 +14157,7 @@ data provided.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.8451e+05 6.422981e+06 ) ] ;
     rdfs:comment "Center of circular Interest" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:interest-construct .
 
@@ -14239,7 +14241,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.833604e+05 6.423807e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14249,7 +14251,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.840789e+05 6.421848e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14259,7 +14261,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.836924e+05 6.421858e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14269,7 +14271,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.834878e+05 6.421828e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14279,7 +14281,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.833166e+05 6.42177e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14289,7 +14291,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.832884e+05 6.421848e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14299,7 +14301,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.833724e+05 6.423818e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14309,7 +14311,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.849446e+05 6.423786e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14319,7 +14321,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.850208e+05 6.423724e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14329,7 +14331,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.852525e+05 6.423292e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14339,7 +14341,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.852783e+05 6.42318e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14349,7 +14351,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.852686e+05 6.422629e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14359,7 +14361,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.852324e+05 6.422472e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14369,7 +14371,7 @@ data provided.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 6.848658e+05 6.421828e+06 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:did-not-search ] ;
@@ -14560,11 +14562,11 @@ sheets, and the field book containing observation records captured in the field.
     rdfs:label "DP 422532" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8024 ;
     container:purpose wa-survey-purpose:subdivision ;
@@ -15194,7 +15196,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
       "id": "vectorobservation:Measured",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:M",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2014-12-12T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -15332,7 +15334,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:3",
+            "vectorPurpose": "wa-vector-purpose:MHWM-Boundary",
             "comment": [
               "M.H.W.",
               "Waterlines on this plan do not necessarily depict an exact cadastral boundary and have been adopted from SCDB data obtained September 2014."
@@ -15351,7 +15353,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -15367,7 +15369,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -15383,7 +15385,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -15399,7 +15401,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -15424,7 +15426,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -15442,7 +15444,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -15460,7 +15462,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -15523,7 +15525,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
                 "interestLink": "456-987-123",
                 "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
                 "interestType": "wa-interest-type:native-title",
-                "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
+                "purpose": "wa-secondary-purpose:non-extinguisment-native-title",
                 "burdenedParcels": [
                   "1"
                 ]
@@ -16130,7 +16132,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
       "id": "vectorobservation:Measured",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:M",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2014-12-12T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -16268,7 +16270,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:3",
+            "vectorPurpose": "wa-vector-purpose:MHWM-Boundary",
             "comment": [
               "M.H.W.",
               "Waterlines on this plan do not necessarily depict an exact cadastral boundary and have been adopted from SCDB data obtained September 2014."
@@ -16287,7 +16289,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -16303,7 +16305,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -16319,7 +16321,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -16335,7 +16337,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -16360,7 +16362,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -16378,7 +16380,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -16396,7 +16398,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -16459,7 +16461,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
                 "interestLink": "456-987-123",
                 "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
                 "interestType": "wa-interest-type:native-title",
-                "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
+                "purpose": "wa-secondary-purpose:non-extinguisment-native-title",
                 "burdenedParcels": [
                   "1"
                 ]
@@ -16509,7 +16511,7 @@ blue line is the right-line version. There is also an Interest/Notification defi
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 @prefix wa-procedure-used: <https://linked.data.gov.au/def/csdm/wa-procedure-used/> .
-@prefix wa-secondary-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose/> .
+@prefix wa-secondary-purpose: <https://linked.data.gov.au/def/csdm/wa-secondary-purpose/> .
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
@@ -16542,15 +16544,15 @@ blue line is the right-line version. There is also an Interest/Notification defi
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/s1> <https://www.wa-example.com/features/v11> <https://www.wa-example.com/features/v10> <https://www.wa-example.com/features/v12> <https://www.wa-example.com/features/v13> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 502 DP 404354" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "404354" ;
+            dcterms:hasPart [ rdfs:label "404354" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "502" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
-    parcel:interest [ container:purpose wa-secondary-parcel-purpose:non-extinguisment-native-title ;
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+    parcel:interest [ container:purpose wa-secondary-purpose:non-extinguisment-native-title ;
             parcel:burdened "1" ;
             parcel:interestLink <https://www.wa-example.com/features/456-987-123> ;
             parcel:interestType wa-interest-type:native-title ;
@@ -16604,25 +16606,8 @@ blue line is the right-line version. There is also an Interest/Notification defi
 <vectorobservation:Measured> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v13> ;
-            sosa:hasResult [ surv:distance 1.201e+01 ] ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v10> ;
             sosa:hasResult [ surv:distance 8.67e+00 ] ;
-            sosa:resultTime "2014-12-12T00:00:00Z" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
-            sosa:hasResult [ ] ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
-            sosa:hasResult [ ] ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v12> ;
-            sosa:hasResult [ surv:distance 4.455e+01 ] ;
             sosa:resultTime "2014-12-12T00:00:00Z" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
@@ -16631,13 +16616,30 @@ blue line is the right-line version. There is also an Interest/Notification defi
             sosa:resultTime "2014-12-12T00:00:00Z" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v12> ;
+            sosa:hasResult [ surv:distance 4.455e+01 ] ;
+            sosa:resultTime "2014-12-12T00:00:00Z" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
+            sosa:hasResult [ ] ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/22> ;
             sosa:hasResult [ ] ;
-            ns2:angleType icsm-angle-type:angle ] ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
+            sosa:hasResult [ ] ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v13> ;
+            sosa:hasResult [ surv:distance 1.201e+01 ] ;
+            ns2:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2014-12-12T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:M .
+    sosa:usedProcedure wa-procedure-used:measured .
 
 <https://www.wa-example.com/features/102> a surv:CadastralMark,
         geojson:Feature ;
@@ -16803,26 +16805,26 @@ blue line is the right-line version. There is also an Interest/Notification defi
 
 <https://www.wa-example.com/features/21> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/11> <https://www.wa-example.com/features/v11> <https://www.wa-example.com/features/v10> ) ] .
 
 <https://www.wa-example.com/features/22> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/v10> <https://www.wa-example.com/features/v12> ) ] .
 
 <https://www.wa-example.com/features/23> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/12> <https://www.wa-example.com/features/v13> <https://www.wa-example.com/features/v13> ) ] .
 
 <https://www.wa-example.com/features/s1> a geojson:Feature ;
     rdfs:comment "M.H.W.",
         "Waterlines on this plan do not necessarily depict an exact cadastral boundary and have been adopted from SCDB data obtained September 2014." ;
-    surv:vectorPurpose wa-vector-purpose:3 ;
+    surv:vectorPurpose wa-vector-purpose:MHWM-Boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/14> <https://www.wa-example.com/features/102> <https://www.wa-example.com/features/103> <https://www.wa-example.com/features/104> <https://www.wa-example.com/features/105> <https://www.wa-example.com/features/106> <https://www.wa-example.com/features/107> <https://www.wa-example.com/features/108> <https://www.wa-example.com/features/109> <https://www.wa-example.com/features/110> <https://www.wa-example.com/features/111> <https://www.wa-example.com/features/112> <https://www.wa-example.com/features/113> <https://www.wa-example.com/features/114> <https://www.wa-example.com/features/115> <https://www.wa-example.com/features/116> <https://www.wa-example.com/features/117> <https://www.wa-example.com/features/118> <https://www.wa-example.com/features/119> <https://www.wa-example.com/features/12> ) ] .
 
@@ -16875,22 +16877,22 @@ blue line is the right-line version. There is also an Interest/Notification defi
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <https://www.wa-example.com/features/v11> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:C ;
+    surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/11> <https://www.wa-example.com/features/12> ) ] .
 
 <https://www.wa-example.com/features/v12> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:C ;
+    surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/13> ) ] .
 
 <https://www.wa-example.com/features/v10> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:C ;
+    surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/11> ) ] .
 
 <https://www.wa-example.com/features/v13> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/13> <https://www.wa-example.com/features/14> ) ] .
 
@@ -17547,7 +17549,7 @@ LineString version in the WA Topographic String Example.
       "id": "vectorobservation:Measured",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:M",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2014-12-12T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -17665,7 +17667,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -17681,7 +17683,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -17697,7 +17699,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -17713,7 +17715,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -17790,7 +17792,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -17808,7 +17810,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -17826,7 +17828,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -17888,7 +17890,7 @@ LineString version in the WA Topographic String Example.
                 "interestLink": "147-852-369",
                 "interestType": "wa-interest-type:native-title",
                 "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
-                "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
+                "purpose": "wa-secondary-purpose:non-extinguisment-native-title",
                 "burdenedParcels": [
                   "1"
                 ]
@@ -18542,7 +18544,7 @@ LineString version in the WA Topographic String Example.
       "id": "vectorobservation:Measured",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:M",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
         "resultTime": "2014-12-12T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -18660,7 +18662,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -18676,7 +18678,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -18692,7 +18694,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:C",
+            "vectorPurpose": "wa-vector-purpose:cadastral-construction",
             "comment": null
           }
         },
@@ -18708,7 +18710,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -18785,7 +18787,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -18803,7 +18805,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -18821,7 +18823,7 @@ LineString version in the WA Topographic String Example.
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -18883,7 +18885,7 @@ LineString version in the WA Topographic String Example.
                 "interestLink": "147-852-369",
                 "interestType": "wa-interest-type:native-title",
                 "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
-                "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
+                "purpose": "wa-secondary-purpose:non-extinguisment-native-title",
                 "burdenedParcels": [
                   "1"
                 ]
@@ -18910,9 +18912,9 @@ LineString version in the WA Topographic String Example.
 @prefix icsm-angle-type: <https://linked.data.gov.au/def/csdm/icsm-angle-type/> .
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -18933,7 +18935,7 @@ LineString version in the WA Topographic String Example.
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 @prefix wa-procedure-used: <https://linked.data.gov.au/def/csdm/wa-procedure-used/> .
-@prefix wa-secondary-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose/> .
+@prefix wa-secondary-purpose: <https://linked.data.gov.au/def/csdm/wa-secondary-purpose/> .
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
@@ -18943,10 +18945,10 @@ LineString version in the WA Topographic String Example.
 <https://www.wa-example.com/features/DP_404354> a geojson:FeatureCollection ;
     rdfs:label "DP 404354" ;
     dcterms:time [ time:hasTime "2014-12-12"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:city-of-mandurah ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:halls-head ] ;
     container:bearingRotation 0e+00 ;
@@ -18967,15 +18969,15 @@ LineString version in the WA Topographic String Example.
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/26538> <https://www.wa-example.com/features/v11> <https://www.wa-example.com/features/v10> <https://www.wa-example.com/features/v12> <https://www.wa-example.com/features/v13> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 502 DP 404354" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+            dcterms:hasPart [ rdfs:label "404354" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
                 [ rdfs:label "502" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "404354" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ] ] ;
-    parcel:interest [ container:purpose wa-secondary-parcel-purpose:non-extinguisment-native-title ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+    parcel:interest [ container:purpose wa-secondary-purpose:non-extinguisment-native-title ;
             parcel:burdened "1" ;
             parcel:interestLink <https://www.wa-example.com/features/147-852-369> ;
             parcel:interestType wa-interest-type:native-title ;
@@ -19034,45 +19036,45 @@ LineString version in the WA Topographic String Example.
 <vectorobservation:Measured> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v12> ;
-            sosa:hasResult [ surv:distance 4.455e+01 ] ;
-            ns3:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
-            sosa:hasResult [ ] ;
-            ns3:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
-            sosa:hasResult [ ] ;
-            ns3:angleType icsm-angle-type:angle ],
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v11> ;
+            sosa:hasResult [ surv:distance 1.774e+01 ] ;
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v10> ;
             sosa:hasResult [ surv:distance 8.67e+00 ] ;
             sosa:resultTime "2014-12-12T00:00:00Z" ;
-            ns3:distanceType icsm-distance-type:ground ],
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/22> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v12> ;
+            sosa:hasResult [ surv:distance 4.455e+01 ] ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
             sosa:hasResult [ ] ;
-            ns3:angleType icsm-angle-type:angle ],
+            ns1:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v13> ;
             sosa:hasResult [ surv:distance 1.201e+01 ] ;
-            ns3:distanceType icsm-distance-type:ground ],
+            ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v11> ;
-            sosa:hasResult [ surv:distance 1.774e+01 ] ;
-            ns3:distanceType icsm-distance-type:ground ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/22> ;
+            sosa:hasResult [ ] ;
+            ns1:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
+            sosa:hasResult [ ] ;
+            ns1:angleType icsm-angle-type:angle ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2014-12-12T00:00:00Z" ;
-    sosa:usedProcedure wa-procedure-used:M .
+    sosa:usedProcedure wa-procedure-used:measured .
 
 <https://www.wa-example.com/features/101> a surv:CadastralMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060473e+04 1.988209e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19081,7 +19083,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060546e+04 1.988169e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19090,7 +19092,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060593e+04 1.988147e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19099,7 +19101,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060659e+04 1.988121e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19108,7 +19110,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060748e+04 1.988096e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19117,7 +19119,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060842e+04 1.988046e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19126,7 +19128,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060963e+04 1.988013e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19135,7 +19137,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060984e+04 1.988001e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19144,7 +19146,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061025e+04 1.987994e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19153,7 +19155,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061054e+04 1.987991e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19162,7 +19164,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061088e+04 1.98799e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19171,7 +19173,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061336e+04 1.987983e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19180,7 +19182,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061362e+04 1.987979e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19189,7 +19191,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.06142e+04 1.987958e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19198,7 +19200,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061556e+04 1.987939e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19207,7 +19209,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061655e+04 1.98792e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19216,7 +19218,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061742e+04 1.987903e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19225,7 +19227,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061817e+04 1.987888e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19234,7 +19236,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061899e+04 1.98788e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
@@ -19243,25 +19245,25 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.062293e+04 1.987864e+05 ) ] ;
     rdfs:comment "MHW extracted & adopted from SCDB 2014-09" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:hwm-boundary .
 
 <https://www.wa-example.com/features/21> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/11> <https://www.wa-example.com/features/v11> <https://www.wa-example.com/features/v10> ) ] .
 
 <https://www.wa-example.com/features/22> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/v10> <https://www.wa-example.com/features/v12> ) ] .
 
 <https://www.wa-example.com/features/23> a geojson:Feature,
         <https://www.wa-example.com/features/SubtendedAngle> ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a <https://www.wa-example.com/features/SubtendedAngle> ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/12> <https://www.wa-example.com/features/v13> <https://www.wa-example.com/features/v13> ) ] .
 
@@ -19277,7 +19279,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.059472e+04 1.988134e+05 ) ] ;
     rdfs:comment "Deck Spike in Bitument path" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:deck-spike ;
             surv:state wa-monument-state:mark-found ] ;
@@ -19288,7 +19290,7 @@ LineString version in the WA Topographic String Example.
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060421e+04 1.987699e+05 ) ] ;
     rdfs:comment "placed 0.4d" ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found-and-renewed ] ;
@@ -19298,7 +19300,7 @@ LineString version in the WA Topographic String Example.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061275e+04 1.987714e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
@@ -19308,17 +19310,17 @@ LineString version in the WA Topographic String Example.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.060494e+04 1.988197e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <https://www.wa-example.com/features/v11> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:C ;
+    surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/11> <https://www.wa-example.com/features/12> ) ] .
 
 <https://www.wa-example.com/features/v12> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:C ;
+    surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/13> ) ] .
 
@@ -19326,17 +19328,17 @@ LineString version in the WA Topographic String Example.
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 4.061981e+04 1.987876e+05 ) ] ;
-    ns1:qualityMeasure 1e-01 ;
+    ns2:qualityMeasure 1e-01 ;
     surv:monumentedBy [ surv:state wa-monument-state:unmarked ] ;
     surv:purpose wa-surveypoint-purpose:internal-boundary .
 
 <https://www.wa-example.com/features/v10> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:C ;
+    surv:vectorPurpose wa-vector-purpose:cadastral-construction ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/11> ) ] .
 
 <https://www.wa-example.com/features/v13> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:R ;
+    surv:vectorPurpose wa-vector-purpose:road-boundary ;
     geojson:topology [ a geojson:LineString ;
             topo:relatedFeatures ( <https://www.wa-example.com/features/13> <https://www.wa-example.com/features/14> ) ] .
 
@@ -19495,7 +19497,7 @@ Contains five annotation examples that may be included on the plan face of a con
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
@@ -19506,16 +19508,16 @@ Contains five annotation examples that may be included on the plan face of a con
     rdfs:label "DP 58955" ;
     dcterms:time [ time:hasTime "2010-06-29"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:marble-bar ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:shire-of-east-pilbara ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:total-area ],
-        [ prof:hasRole wa-annotation-role:unsurveyed-dimensions ],
-        [ prof:hasRole wa-annotation-role:parcel-derived ],
-        [ prof:hasRole wa-annotation-role:transfer-of-land-exempt ],
-        [ prof:hasRole wa-annotation-role:public-acquisition ] ;
+            oa:hasTarget wa-local-government:shire-of-east-pilbara ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:marble-bar ] ;
+    container:annotations [ prof:hasRole wa-annotation:unsurveyed-dimensions ],
+        [ prof:hasRole wa-annotation:parcel-derived ],
+        [ prof:hasRole wa-annotation:transfer-of-land-exempt ],
+        [ prof:hasRole wa-annotation:total-area ],
+        [ prof:hasRole wa-annotation:public-acquisition ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:purpose wa-survey-purpose:acquisition ;
@@ -19796,7 +19798,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -19822,7 +19824,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -19848,7 +19850,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -19874,7 +19876,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -19900,7 +19902,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -19926,7 +19928,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -19952,7 +19954,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -19978,7 +19980,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20004,7 +20006,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20030,7 +20032,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20056,7 +20058,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20082,7 +20084,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20108,7 +20110,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20134,7 +20136,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20160,7 +20162,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20186,7 +20188,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20212,7 +20214,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20238,7 +20240,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20264,7 +20266,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20290,7 +20292,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -20316,7 +20318,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:deck-spike",
               "condition": "wa-monument-condition:ok",
@@ -20342,7 +20344,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20368,7 +20370,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20394,7 +20396,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20420,7 +20422,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20446,7 +20448,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20472,7 +20474,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20498,7 +20500,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:drill-hole",
               "condition": "wa-monument-condition:ok",
@@ -20524,7 +20526,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20550,7 +20552,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20576,7 +20578,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20602,7 +20604,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20628,7 +20630,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20654,7 +20656,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20680,7 +20682,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20706,7 +20708,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20732,7 +20734,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20758,7 +20760,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20784,7 +20786,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:drill-hole",
               "condition": "wa-monument-condition:ok",
@@ -20810,7 +20812,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20836,7 +20838,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:deck-spike",
               "condition": "wa-monument-condition:ok",
@@ -20862,7 +20864,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20888,7 +20890,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20914,7 +20916,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20940,7 +20942,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20966,7 +20968,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -20992,7 +20994,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -21018,7 +21020,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -21044,7 +21046,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -21070,7 +21072,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -21096,7 +21098,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -21122,7 +21124,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -21148,7 +21150,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21174,7 +21176,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21200,7 +21202,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -21226,7 +21228,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21252,7 +21254,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21278,7 +21280,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21304,7 +21306,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21330,7 +21332,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21356,7 +21358,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21382,7 +21384,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21408,7 +21410,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21434,7 +21436,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21460,7 +21462,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21486,7 +21488,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21512,7 +21514,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21538,7 +21540,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21564,7 +21566,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21590,7 +21592,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21616,7 +21618,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21642,7 +21644,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21668,7 +21670,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21694,7 +21696,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21720,7 +21722,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21746,7 +21748,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21772,7 +21774,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21798,7 +21800,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21824,7 +21826,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21850,7 +21852,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21876,7 +21878,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21902,7 +21904,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21928,7 +21930,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21954,7 +21956,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -21980,7 +21982,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22006,7 +22008,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22032,7 +22034,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22058,7 +22060,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22084,7 +22086,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22110,7 +22112,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22136,7 +22138,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22162,7 +22164,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22188,7 +22190,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22214,7 +22216,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22240,7 +22242,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22266,7 +22268,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22292,7 +22294,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22318,7 +22320,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22344,7 +22346,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -22370,7 +22372,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22396,7 +22398,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22422,7 +22424,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -22448,7 +22450,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22474,7 +22476,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": "In top of wall",
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail",
               "condition": "wa-monument-condition:ok",
@@ -22500,7 +22502,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -22526,7 +22528,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22552,7 +22554,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22578,7 +22580,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22604,7 +22606,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22630,7 +22632,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22656,7 +22658,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22682,7 +22684,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22708,7 +22710,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22734,7 +22736,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22760,7 +22762,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22786,7 +22788,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22812,7 +22814,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22838,7 +22840,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22864,7 +22866,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22890,7 +22892,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22916,7 +22918,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22942,7 +22944,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -22968,7 +22970,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -22994,7 +22996,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23020,7 +23022,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -23046,7 +23048,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23072,7 +23074,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -23098,7 +23100,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23124,7 +23126,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23150,7 +23152,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23176,7 +23178,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23202,7 +23204,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23228,7 +23230,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23254,7 +23256,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23280,7 +23282,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -23306,7 +23308,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -38642,7 +38644,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-852",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -38739,7 +38741,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-857",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -38836,7 +38838,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-858",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -38934,7 +38936,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-859",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39031,7 +39033,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-860",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39139,7 +39141,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-861",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39246,7 +39248,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-862",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39353,7 +39355,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-863",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39461,7 +39463,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-864",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39560,7 +39562,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-865",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39657,7 +39659,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-866",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39764,7 +39766,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-867",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39861,7 +39863,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-868",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -39960,7 +39962,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-869",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40057,7 +40059,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-870",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40164,7 +40166,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-871",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40271,7 +40273,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-872",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40378,7 +40380,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-873",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40485,7 +40487,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-874",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40585,7 +40587,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-875",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40692,7 +40694,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-876",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40799,7 +40801,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-878",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -40906,7 +40908,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-879",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41013,7 +41015,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-880",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41110,7 +41112,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-881",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41217,7 +41219,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-882",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41324,7 +41326,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-883",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41421,7 +41423,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-884",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41520,7 +41522,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-885",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -41618,7 +41620,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-886",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdened": {
@@ -42292,7 +42294,7 @@ with two easements over the parcel.
             "area": 93220.0,
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
-            "parcelState": "wa-parcel-state:Cancelled",
+            "parcelState": "wa-parcel-state:cancelled",
             "interests": [
               {
                 "interestLink": "2812-495",
@@ -42356,7 +42358,7 @@ with two easements over the parcel.
                 "interestLink": "159-357-852",
                 "label": "33b",
                 "interestType": "wa-secondary-purpose:easement-sewerage",
-                "statuteLink": "wa-interest-type:413",
+                "statuteLink": "wa-interest-type:easement-p-d-167-reg-33-b-",
                 "originalSurveyLink": "DP-74641",
                 "burdened": {
                   "references": [
@@ -42370,7 +42372,7 @@ with two easements over the parcel.
                 "label": "33b1",
                 "interestLink": "67856-5643",
                 "interestType": "wa-secondary-purpose:easement-water-supply",
-                "statuteLink": "wa-interest-type:413",
+                "statuteLink": "wa-interest-type:easement-p-d-167-reg-33-b-",
                 "originalSurveyLink": "DP-74641",
                 "burdenedParcel": {
                   "references": [
@@ -42710,7 +42712,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42736,7 +42738,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42762,7 +42764,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42788,7 +42790,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42814,7 +42816,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -42840,7 +42842,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42866,7 +42868,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42892,7 +42894,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42918,7 +42920,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42944,7 +42946,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42970,7 +42972,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -42996,7 +42998,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43022,7 +43024,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43048,7 +43050,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43074,7 +43076,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43100,7 +43102,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43126,7 +43128,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43152,7 +43154,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43178,7 +43180,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43204,7 +43206,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -43230,7 +43232,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:deck-spike",
               "condition": "wa-monument-condition:ok",
@@ -43256,7 +43258,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43282,7 +43284,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43308,7 +43310,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43334,7 +43336,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43360,7 +43362,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43386,7 +43388,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43412,7 +43414,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:drill-hole",
               "condition": "wa-monument-condition:ok",
@@ -43438,7 +43440,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43464,7 +43466,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43490,7 +43492,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43516,7 +43518,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43542,7 +43544,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43568,7 +43570,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43594,7 +43596,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43620,7 +43622,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43646,7 +43648,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43672,7 +43674,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43698,7 +43700,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:drill-hole",
               "condition": "wa-monument-condition:ok",
@@ -43724,7 +43726,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43750,7 +43752,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:deck-spike",
               "condition": "wa-monument-condition:ok",
@@ -43776,7 +43778,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43802,7 +43804,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43828,7 +43830,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43854,7 +43856,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43880,7 +43882,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43906,7 +43908,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43932,7 +43934,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43958,7 +43960,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -43984,7 +43986,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -44010,7 +44012,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -44036,7 +44038,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -44062,7 +44064,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44088,7 +44090,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44114,7 +44116,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -44140,7 +44142,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44166,7 +44168,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44192,7 +44194,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44218,7 +44220,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44244,7 +44246,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44270,7 +44272,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44296,7 +44298,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44322,7 +44324,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44348,7 +44350,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44374,7 +44376,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44400,7 +44402,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44426,7 +44428,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44452,7 +44454,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44478,7 +44480,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44504,7 +44506,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44530,7 +44532,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44556,7 +44558,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44582,7 +44584,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44608,7 +44610,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44634,7 +44636,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44660,7 +44662,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44686,7 +44688,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44712,7 +44714,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44738,7 +44740,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44764,7 +44766,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44790,7 +44792,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44816,7 +44818,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44842,7 +44844,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44868,7 +44870,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44894,7 +44896,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44920,7 +44922,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44946,7 +44948,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44972,7 +44974,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -44998,7 +45000,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45024,7 +45026,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45050,7 +45052,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45076,7 +45078,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45102,7 +45104,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45128,7 +45130,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45154,7 +45156,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45180,7 +45182,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45206,7 +45208,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45232,7 +45234,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45258,7 +45260,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -45284,7 +45286,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45310,7 +45312,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45336,7 +45338,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -45362,7 +45364,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45388,7 +45390,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": "In top of wall",
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail",
               "condition": "wa-monument-condition:ok",
@@ -45414,7 +45416,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:nail-and-plate",
               "condition": "wa-monument-condition:ok",
@@ -45440,7 +45442,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45466,7 +45468,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45492,7 +45494,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45518,7 +45520,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45544,7 +45546,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45570,7 +45572,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45596,7 +45598,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45622,7 +45624,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45648,7 +45650,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45674,7 +45676,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45700,7 +45702,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45726,7 +45728,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45752,7 +45754,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45778,7 +45780,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45804,7 +45806,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45830,7 +45832,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45856,7 +45858,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45882,7 +45884,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45908,7 +45910,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45934,7 +45936,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -45960,7 +45962,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -45986,7 +45988,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:peg",
               "condition": "wa-monument-condition:ok",
@@ -46012,7 +46014,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46038,7 +46040,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46064,7 +46066,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46090,7 +46092,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46116,7 +46118,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46142,7 +46144,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46168,7 +46170,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46194,7 +46196,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -46220,7 +46222,7 @@ with two easements over the parcel.
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.001,
             "comment": null,
-            "methodEstablished": "wa-pt-method:P",
+            "methodEstablished": "wa-surveypoint-method:P",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -61556,7 +61558,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-852",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -61653,7 +61655,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-857",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -61750,7 +61752,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-858",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -61848,7 +61850,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-859",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -61945,7 +61947,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-860",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62053,7 +62055,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-861",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62160,7 +62162,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-862",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62267,7 +62269,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-863",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62375,7 +62377,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-864",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62474,7 +62476,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-865",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62571,7 +62573,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-866",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62678,7 +62680,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-867",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62775,7 +62777,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-868",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62874,7 +62876,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-869",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -62971,7 +62973,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-870",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63078,7 +63080,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-871",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63185,7 +63187,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-872",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63292,7 +63294,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-873",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63399,7 +63401,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-874",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63499,7 +63501,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-875",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63606,7 +63608,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-876",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63713,7 +63715,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-878",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63820,7 +63822,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-879",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -63927,7 +63929,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-880",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -64024,7 +64026,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-881",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -64131,7 +64133,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-882",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -64238,7 +64240,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-883",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -64335,7 +64337,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-884",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -64434,7 +64436,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-885",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdenedParcels": [
@@ -64532,7 +64534,7 @@ with two easements over the parcel.
               {
                 "interestLink": "689-654-886",
                 "interestType": "wa-secondary-purpose:restrictive-covenant-building-envelope",
-                "statuteLink": "wa-interest:easement-tla-136D",
+                "statuteLink": "wa-interest-type:easement-tla-136D",
                 "originalNotificationLink": "wa-doc:M443039",
                 "dateExpires": "2022-12-31T23:59:59Z",
                 "burdened": {
@@ -65206,7 +65208,7 @@ with two easements over the parcel.
             "area": 93220.0,
             "parcelType": "wa-parcel-type:freehold",
             "parcelPurpose": "wa-parcel-purpose:lot",
-            "parcelState": "wa-parcel-state:Cancelled",
+            "parcelState": "wa-parcel-state:cancelled",
             "interests": [
               {
                 "interestLink": "2812-495",
@@ -65270,7 +65272,7 @@ with two easements over the parcel.
                 "interestLink": "159-357-852",
                 "label": "33b",
                 "interestType": "wa-secondary-purpose:easement-sewerage",
-                "statuteLink": "wa-interest-type:413",
+                "statuteLink": "wa-interest-type:easement-p-d-167-reg-33-b-",
                 "originalSurveyLink": "DP-74641",
                 "burdened": {
                   "references": [
@@ -65284,7 +65286,7 @@ with two easements over the parcel.
                 "label": "33b1",
                 "interestLink": "67856-5643",
                 "interestType": "wa-secondary-purpose:easement-water-supply",
-                "statuteLink": "wa-interest-type:413",
+                "statuteLink": "wa-interest-type:easement-p-d-167-reg-33-b-",
                 "originalSurveyLink": "DP-74641",
                 "burdenedParcel": {
                   "references": [
@@ -65378,8 +65380,7 @@ with two easements over the parcel.
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix topo: <https://purl.org/geojson/topo#> .
-@prefix wa-annotation-role: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
-@prefix wa-interest: <https://linked.data.gov.au/def/csdm/wa-interest/> .
+@prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-local-government: <https://linked.data.gov.au/def/csdm/wa-local-government/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
@@ -65403,16 +65404,16 @@ with two easements over the parcel.
     rdfs:label "DP 400715" ;
     dcterms:time [ time:hasTime "2013-10-24"^^xsd:date ] ;
     container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-mandurah ],
-        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:dudley-park ] ;
-    container:annotations [ prof:hasRole wa-annotation-role:sp ],
-        [ prof:hasRole wa-annotation-role:surveyed-dimensions ],
-        [ prof:hasRole wa-annotation-role:r-26a ;
+            oa:hasTarget wa-locality:dudley-park ],
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-mandurah ] ;
+    container:annotations [ prof:hasRole wa-annotation:surveyed-dimensions ],
+        [ prof:hasRole wa-annotation:r-26a ;
             oa:hasTarget <https://www.wa-example.com/features/wa_leg:Licensed%20Surveyors%20(General%20Surveying%20Practice)%20Regulations%201961%20-%20%5B05-a0-05%5D.pdf> ],
-        [ prof:hasRole wa-annotation-role:r-26a ;
+        [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-26a ;
             oa:hasTarget <https://www.wa-example.com/features/wa_leg:Licensed%20Surveyors%20(General%20Surveying%20Practice)%20Regulations%201961%20-%20%5B05-a0-05%5D.pdf> ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
@@ -65424,22 +65425,22 @@ with two easements over the parcel.
     container:purpose wa-survey-purpose:subdivision ;
     container:referencedCSD <https://www.wa-example.com/features/DP_74646>,
         <https://www.wa-example.com/features/DP_76653> ;
-    container:supportingDocuments [ rdfs:label "Field Book 81073" ;
-            ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole wa-survey-documentation-type:field-record ;
-            oa:hasTarget <https://wa.gov.au/field-books/81073.pdf> ],
-        [ rdfs:label "Survey Report DP 400715" ;
+    container:supportingDocuments [ rdfs:label "Survey Report DP 400715" ;
             ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:survey-report ;
             oa:hasTarget <https://wa.gov.au/survey-reports/400715.pdf> ],
-        [ rdfs:label "Field Book 80658" ;
-            ns3:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole wa-survey-documentation-type:field-record ;
-            oa:hasTarget <https://wa.gov.au/field-books/80658.pdf> ],
         [ rdfs:label "DP 400715 Plan" ;
             ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:2d-plan ;
-            oa:hasTarget <https://wa.gov.au/deposited-plans/DP400715.pdf> ] ;
+            oa:hasTarget <https://wa.gov.au/deposited-plans/DP400715.pdf> ],
+        [ rdfs:label "Field Book 81073" ;
+            ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole wa-survey-documentation-type:field-record ;
+            oa:hasTarget <https://wa.gov.au/field-books/81073.pdf> ],
+        [ rdfs:label "Field Book 80658" ;
+            ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole wa-survey-documentation-type:field-record ;
+            oa:hasTarget <https://wa.gov.au/field-books/80658.pdf> ] ;
     container:surveyType wa-survey-type:SSA ;
     container:vectorObservations <vectorobservation:calculated>,
         <vectorobservation:totalstation> ;
@@ -65462,12 +65463,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             rdfs:label "Lot 921 DP 400715" ;
             dcterms:hasPart [ rdfs:label "921" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:burdened "1301" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-800> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -65505,7 +65506,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-852> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 8.4938e+02 ;
@@ -65516,19 +65517,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/7> <https://www.wa-example.com/features/6> <https://www.wa-example.com/features/8> <https://www.wa-example.com/features/9> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 922 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+                [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "922" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
-    parcel:interest [ parcel:burdened "1302" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-801> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+    parcel:interest [ parcel:benefited "1301",
                 "1303",
                 "1304",
                 "1305",
@@ -65561,7 +65558,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-857> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1302" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-801> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 5.8795e+02 ;
@@ -65572,19 +65573,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/10> <https://www.wa-example.com/features/9> <https://www.wa-example.com/features/11> <https://www.wa-example.com/features/12> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 923 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "923" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
-    parcel:interest [ parcel:burdened "1303" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-802> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1304",
                 "1305",
@@ -65617,7 +65614,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-858> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1303" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-802> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.299e+02 ;
@@ -65628,14 +65629,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/13> <https://www.wa-example.com/features/12> <https://www.wa-example.com/features/14> <https://www.wa-example.com/features/15> <https://www.wa-example.com/features/16> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 924 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "924" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
@@ -65669,7 +65670,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-859> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1304" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-803> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -65686,12 +65687,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             rdfs:label "Lot 925 DP 400715" ;
             dcterms:hasPart [ rdfs:label "925" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
@@ -65725,7 +65726,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-860> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1305" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-900> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -65744,15 +65745,19 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/20> <https://www.wa-example.com/features/21> <https://www.wa-example.com/features/19> <https://www.wa-example.com/features/1122> <https://www.wa-example.com/features/23> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 926 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "926" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "926" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
     parcel:interest [ parcel:burdened "1306" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-805> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ],
+        [ parcel:burdened "1306" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-901> ;
             parcel:interestType wa-secondary-purpose:notification ;
             parcel:statuteLink wa-interest-type:70a-tla ],
@@ -65789,11 +65794,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-861> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1306" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-805> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.4175e+02 ;
@@ -65808,10 +65809,10 @@ sensordesc:568542 a icsm-equipment-type:p .
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "927" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "927" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
@@ -65845,7 +65846,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-862> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1307" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-806> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -65864,19 +65865,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/27> <https://www.wa-example.com/features/26> <https://www.wa-example.com/features/28> <https://www.wa-example.com/features/29> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 928 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "928" ;
+            dcterms:hasPart [ rdfs:label "928" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
-    parcel:interest [ parcel:burdened "1308" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-903> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:70a-tla ],
-        [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -65909,11 +65906,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-863> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1308" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-807> ;
             parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ] ;
+            parcel:statuteLink wa-interest-type:165-pda ],
+        [ parcel:burdened "1308" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-903> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:70a-tla ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.4175e+02 ;
@@ -65932,11 +65933,7 @@ sensordesc:568542 a icsm-equipment-type:p .
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
-    parcel:interest [ parcel:burdened "1309" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-808> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -65969,7 +65966,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-864> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1309" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-808> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 5.3771e+02 ;
@@ -65980,14 +65981,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/33> <https://www.wa-example.com/features/35> <https://www.wa-example.com/features/36> <https://www.wa-example.com/features/37> <https://www.wa-example.com/features/38> <https://www.wa-example.com/features/39> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 930 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "930" ;
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "930" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:burdened "1310" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-809> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66025,7 +66026,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-865> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 8.907e+02 ;
@@ -66036,15 +66037,23 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/40> <https://www.wa-example.com/features/38> <https://www.wa-example.com/features/41> <https://www.wa-example.com/features/42> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 931 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "400715" ;
+            dcterms:hasPart [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "931" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
-    parcel:interest [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+    parcel:interest [ parcel:burdened "1311" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-810> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ],
+        [ parcel:burdened "1311" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-904> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:70a-tla ],
+        [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -66077,15 +66086,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-866> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1311" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-904> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:70a-tla ],
-        [ parcel:burdened "1311" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-810> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.3835e+02 ;
@@ -66100,10 +66101,10 @@ sensordesc:568542 a icsm-equipment-type:p .
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
     parcel:interest [ parcel:burdened "1312" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-811> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66141,7 +66142,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-867> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.2861e+02 ;
@@ -66152,14 +66153,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/46> <https://www.wa-example.com/features/45> <https://www.wa-example.com/features/47> <https://www.wa-example.com/features/48> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 933 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "933" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
@@ -66193,7 +66194,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-868> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1313" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-812> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66208,12 +66209,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/49> <https://www.wa-example.com/features/48> <https://www.wa-example.com/features/50> <https://www.wa-example.com/features/51> <https://www.wa-example.com/features/52> <https://www.wa-example.com/features/53> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 934 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "934" ;
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "934" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:burdened "1314" ;
@@ -66253,7 +66254,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-869> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 8.6376e+02 ;
@@ -66264,15 +66265,19 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/54> <https://www.wa-example.com/features/55> <https://www.wa-example.com/features/56> <https://www.wa-example.com/features/57> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 935 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "935" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:burdened "1315" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-814> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ],
+        [ parcel:burdened "1315" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-905> ;
             parcel:interestType wa-secondary-purpose:notification ;
             parcel:statuteLink wa-interest-type:70a-tla ],
@@ -66309,11 +66314,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-870> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1315" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-814> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.2137e+02 ;
@@ -66326,12 +66327,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             rdfs:label "Lot 936 DP 400715" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "936" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
@@ -66365,15 +66366,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-871> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1316" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-815> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1316" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-906> ;
             parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:70a-tla ] ;
+            parcel:statuteLink wa-interest-type:70a-tla ],
+        [ parcel:burdened "1316" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-815> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.2137e+02 ;
@@ -66384,14 +66385,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/61> <https://www.wa-example.com/features/60> <https://www.wa-example.com/features/62> <https://www.wa-example.com/features/63> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 937 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "937" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+            dcterms:hasPart [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "937" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
     parcel:interest [ parcel:burdened "1317" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-907> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66433,7 +66434,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-872> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.2137e+02 ;
@@ -66444,19 +66445,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/64> <https://www.wa-example.com/features/63> <https://www.wa-example.com/features/65> <https://www.wa-example.com/features/66> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 938 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "938" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
-    parcel:interest [ parcel:burdened "1318" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-817> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -66489,7 +66486,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-873> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1318" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-817> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ],
         [ parcel:burdened "1318" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-908> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66504,14 +66505,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/67> <https://www.wa-example.com/features/66> <https://www.wa-example.com/features/68> <https://www.wa-example.com/features/69> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 939 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "939" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
     parcel:interest [ parcel:burdened "1319" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-818> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66549,7 +66550,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-874> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 5.8643e+02 ;
@@ -66560,19 +66561,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/70> <https://www.wa-example.com/features/71> <https://www.wa-example.com/features/72> <https://www.wa-example.com/features/69> <https://www.wa-example.com/features/73> <https://www.wa-example.com/features/74> <https://www.wa-example.com/features/75> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 940 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "940" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "940" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:burdened "1320" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-819> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:burdened "1320" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-909> ;
             parcel:interestType wa-secondary-purpose:notification ;
             parcel:statuteLink wa-interest-type:70a-tla ],
@@ -66609,7 +66606,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-875> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1320" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-819> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.0973e+02 ;
@@ -66620,15 +66621,19 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/76> <https://www.wa-example.com/features/29> <https://www.wa-example.com/features/77> <https://www.wa-example.com/features/78> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1006 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+            dcterms:hasPart [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "1006" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ] ] ;
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
     parcel:interest [ parcel:burdened "1321" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-820> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ],
+        [ parcel:burdened "1321" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-910> ;
             parcel:interestType wa-secondary-purpose:notification ;
             parcel:statuteLink wa-interest-type:70a-tla ],
@@ -66665,11 +66670,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-876> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1321" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-820> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.4175e+02 ;
@@ -66680,14 +66681,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/79> <https://www.wa-example.com/features/78> <https://www.wa-example.com/features/80> <https://www.wa-example.com/features/81> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1007 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+            dcterms:hasPart [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "1007" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ parcel:burdened "1322" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-821> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66729,7 +66730,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-878> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.4175e+02 ;
@@ -66740,15 +66741,23 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/82> <https://www.wa-example.com/features/81> <https://www.wa-example.com/features/83> <https://www.wa-example.com/features/84> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1008 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
+            dcterms:hasPart [ rdfs:label "1008" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "1008" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
-    parcel:interest [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+    parcel:interest [ parcel:burdened "1323" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-913> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:70a-tla ],
+        [ parcel:burdened "1323" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-822> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ],
+        [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -66781,15 +66790,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-879> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1323" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-822> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:burdened "1323" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-913> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:70a-tla ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 4.4175e+02 ;
@@ -66800,19 +66801,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/85> <https://www.wa-example.com/features/86> <https://www.wa-example.com/features/87> <https://www.wa-example.com/features/88> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1009 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "1009" ;
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "1009" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
-    parcel:interest [ parcel:burdened "1324" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-823> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -66845,7 +66842,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-880> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1324" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-823> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 5.5444e+02 ;
@@ -66856,15 +66857,19 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/89> <https://www.wa-example.com/features/88> <https://www.wa-example.com/features/90> <https://www.wa-example.com/features/91> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1010 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "1010" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ] ] ;
-    parcel:interest [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
+                [ rdfs:label "1010" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+    parcel:interest [ parcel:burdened "1325" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-915> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:70a-tla ],
+        [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -66897,11 +66902,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-881> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
-        [ parcel:burdened "1325" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-915> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:70a-tla ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1325" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-824> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66916,12 +66917,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/92> <https://www.wa-example.com/features/91> <https://www.wa-example.com/features/93> <https://www.wa-example.com/features/55> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1011 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+            dcterms:hasPart [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "1011" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:benefited "1301",
@@ -66957,7 +66958,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-882> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:burdened "1326" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-825> ;
             parcel:interestType wa-secondary-purpose:notification ;
@@ -66978,10 +66979,10 @@ sensordesc:568542 a icsm-equipment-type:p .
             rdfs:label "Lot 1015 DP 400715" ;
             dcterms:hasPart [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
-                [ rdfs:label "1015" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "1015" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
     parcel:interest [ parcel:burdened "1327" ;
@@ -67021,7 +67022,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-883> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.0424e+02 ;
@@ -67032,19 +67033,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/97> <https://www.wa-example.com/features/96> <https://www.wa-example.com/features/98> <https://www.wa-example.com/features/31> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1016 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
+            dcterms:hasPart [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "1016" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
-    parcel:interest [ parcel:burdened "1328" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-827> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ] ] ;
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -67077,7 +67074,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-884> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1328" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-827> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.0424e+02 ;
@@ -67088,19 +67089,15 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/99> <https://www.wa-example.com/features/100> <https://www.wa-example.com/features/101> <https://www.wa-example.com/features/53> <https://www.wa-example.com/features/102> <https://www.wa-example.com/features/103> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1017 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "1017" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "Lot" ;
+            dcterms:hasPart [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ] ] ;
-    parcel:interest [ parcel:burdened "1329" ;
-            parcel:interestLink <https://www.wa-example.com/features/689-654-828> ;
-            parcel:interestType wa-secondary-purpose:notification ;
-            parcel:statuteLink wa-interest-type:165-pda ],
-        [ parcel:benefited "1301",
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
+                [ rdfs:label "1017" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+    parcel:interest [ parcel:benefited "1301",
                 "1302",
                 "1303",
                 "1304",
@@ -67133,7 +67130,11 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-885> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ] ;
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
+        [ parcel:burdened "1329" ;
+            parcel:interestLink <https://www.wa-example.com/features/689-654-828> ;
+            parcel:interestType wa-secondary-purpose:notification ;
+            parcel:statuteLink wa-interest-type:165-pda ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 6.1644e+02 ;
@@ -67144,12 +67145,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/104> <https://www.wa-example.com/features/105> <https://www.wa-example.com/features/103> <https://www.wa-example.com/features/106> <https://www.wa-example.com/features/86> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1018 DP 400715" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
+            dcterms:hasPart [ rdfs:label "1018" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "1018" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ] ] ;
     parcel:interest [ parcel:benefited "1301",
@@ -67184,7 +67185,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             parcel:interestDateExpires "2022-12-31T23:59:59Z" ;
             parcel:interestLink <https://www.wa-example.com/features/689-654-886> ;
             parcel:interestType wa-secondary-purpose:restrictive-covenant-building-envelope ;
-            parcel:statuteLink wa-interest:easement-tla-136D ],
+            parcel:statuteLink wa-interest-type:easement-tla-136D ],
         [ parcel:interestLink <https://www.wa-example.com/features/689-654-829> ;
             parcel:interestType wa-secondary-purpose:notification ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -67199,12 +67200,12 @@ sensordesc:568542 a icsm-equipment-type:p .
             rdfs:label "Lot 8015 DP 400715" ;
             dcterms:hasPart [ rdfs:label "8015" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
-                [ rdfs:label "400715" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                [ rdfs:label "400715" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ] ] ;
     parcel:purpose wa-parcel-purpose:reserve-vest ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 2.60877e+03 ;
@@ -67217,24 +67218,24 @@ sensordesc:568542 a icsm-equipment-type:p .
             rdfs:label "Area 33b DP 400715" ;
             dcterms:hasPart [ rdfs:label "DP" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "33b" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "Area" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
                 [ rdfs:label "400715" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
-                [ rdfs:label "Area" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ] ] ;
+                [ rdfs:label "33b" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ rdfs:label "33b1" ;
             parcel:benefitedPartyName "Water Corporation" ;
             parcel:interestLink <https://www.wa-example.com/features/67856-5643> ;
             parcel:interestType wa-secondary-purpose:easement-water-supply ;
             parcel:originalSurveyLink <https://www.wa-example.com/features/DP-74641> ;
-            parcel:statuteLink wa-interest-type:413 ],
+            parcel:statuteLink wa-interest-type:easement-p-d-167-reg-33-b- ],
         [ rdfs:label "33b" ;
             parcel:benefitedPartyName "Water Corporation" ;
             parcel:interestLink <https://www.wa-example.com/features/159-357-852> ;
             parcel:interestType wa-secondary-purpose:easement-sewerage ;
             parcel:originalSurveyLink <https://www.wa-example.com/features/DP-74641> ;
-            parcel:statuteLink wa-interest-type:413 ] ;
+            parcel:statuteLink wa-interest-type:easement-p-d-167-reg-33-b- ] ;
     parcel:purpose wa-secondary-parcel-purpose:drain-reserve ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 8.658e+01 ;
@@ -67249,10 +67250,10 @@ sensordesc:568542 a icsm-equipment-type:p .
                     commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "9018" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 7.0139e+04 ;
@@ -67497,18 +67498,18 @@ sensordesc:568542 a icsm-equipment-type:p .
             topo:relatedFeatures ( <https://www.wa-example.com/features/1343> <https://www.wa-example.com/features/1344> ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 9017 DP 76652" ;
-            dcterms:hasPart [ rdfs:label "76652" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
+            dcterms:hasPart [ rdfs:label "DP" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                [ rdfs:label "76652" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
                 [ rdfs:label "9017" ;
                     commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/2812-495> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
-    parcel:state wa-parcel-state:Cancelled ;
+    parcel:state wa-parcel-state:cancelled ;
     parcel:surfaceArea 9.322e+04 ;
     parcel:type wa-parcel-type:freehold .
 
@@ -68004,302 +68005,52 @@ sensordesc:568542 a icsm-equipment-type:p .
 <vectorobservation:calculated> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13240> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13194> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/69> ;
-            sosa:hasResult [ surv:distance 4.9529e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13153> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/169> ;
+            sosa:hasResult [ surv:distance 1.3004e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13204> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13154> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13169> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13076> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/120> ;
-            sosa:hasResult [ surv:distance 3.9634e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13123> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/123> ;
+            sosa:hasResult [ surv:distance 5e-01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13155> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/155> ;
-            sosa:hasResult [ surv:distance 1.06e+02 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/129> ;
+            sosa:hasResult [ surv:distance 8.22e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13033> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13018> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13133> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13201> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13165> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/89> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/62> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13063> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/33> ;
-            sosa:hasResult [ surv:distance 2.463e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13161> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/176> ;
-            sosa:hasResult [ surv:distance 7e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/46> ;
-            sosa:hasResult [ surv:distance 1.796e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/133> ;
-            sosa:hasResult [ surv:distance 3.2774e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13291> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13213> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13263> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/82> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13151> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/104> ;
-            sosa:hasResult [ surv:distance 6.74e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/131> ;
-            sosa:hasResult [ surv:distance 3.2951e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13126> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13131> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13080> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13198> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13162> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/81> ;
-            sosa:hasResult [ surv:distance 4.65e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13184> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13087> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/2> ;
-            sosa:hasResult [ surv:distance 2.1698e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13070> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13108> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13185> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13086> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/71> ;
-            sosa:hasResult [ surv:distance 8.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/92> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13271> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13195> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/155> ;
-            sosa:hasResult [ surv:distance 1.06e+02 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/34> ;
-            sosa:hasResult [ surv:distance 1.4904e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13071> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13065> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/17> ;
-            sosa:hasResult [ surv:distance 9.511e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13077> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13041> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/26> ;
-            sosa:hasResult [ surv:distance 4.65e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13102> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13025> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/106> ;
-            sosa:hasResult [ surv:distance 1.2507e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13290> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/95> ;
-            sosa:hasResult [ surv:distance 1.25e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/53> ;
-            sosa:hasResult [ surv:distance 2.2836e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13144> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13136> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13020> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13128> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -68309,82 +68060,307 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13163> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13092> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13289> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13298> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13011> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/88> ;
+            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13179> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13091> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13202> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13010> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13270> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13034> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13218> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13175> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13275> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/112> ;
+            sosa:hasResult [ surv:distance 3.7047e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13181> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
+            sosa:hasResult [ surv:distance 3.5e-01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13265> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13190> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13015> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13274> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/96> ;
+            sosa:hasResult [ surv:distance 5.0178e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13165> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13171> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13177> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13201> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13062> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/97> ;
+            sosa:hasResult [ surv:distance 1.303e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/50> ;
             sosa:hasResult [ surv:distance 1.4757e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/119> ;
-            sosa:hasResult [ surv:distance 2.21013e+02 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13239> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/82> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13200> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13248> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13251> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13214> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/174> ;
-            sosa:hasResult [ surv:distance 6.26e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13278> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13087> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/173> ;
+            sosa:hasResult [ surv:distance 5.91e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13132> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13250> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/177> ;
-            sosa:hasResult [ surv:distance 1.2246e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13043> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13003> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/75> ;
+            sosa:hasResult [ surv:distance 3.002e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13029> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/12> ;
-            sosa:hasResult [ surv:distance 4.7411e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/164> ;
+            sosa:hasResult [ surv:distance 6.116e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13187> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13158> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/159> ;
-            sosa:hasResult [ surv:distance 1.2956e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/116> ;
+            sosa:hasResult [ surv:distance 9.31e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13023> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13028> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13057> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13047> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/40> ;
+            sosa:hasResult [ surv:distance 2.0477e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13211> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13004> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/64> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/125> ;
+            sosa:hasResult [ surv:distance 4.276e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13055> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/37> ;
+            sosa:hasResult [ surv:distance 9.6e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/163> ;
+            sosa:hasResult [ surv:distance 2.4566e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/26> ;
+            sosa:hasResult [ surv:distance 4.65e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13257> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13156> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13254> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13022> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13119> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13071> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13020> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13143> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13240> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -68394,60 +68370,515 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/86> ;
-            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/102> ;
-            sosa:hasResult [ surv:distance 1.5009e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/161> ;
-            sosa:hasResult [ surv:distance 1.3228e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/40> ;
-            sosa:hasResult [ surv:distance 2.0477e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13164> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13208> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13199> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/175> ;
+            sosa:hasResult [ surv:distance 1.249e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13182> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13046> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13226> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13206> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13233> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13052> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/162> ;
+            sosa:hasResult [ surv:distance 5.91e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13228> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13188> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13266> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/101> ;
+            sosa:hasResult [ surv:distance 1.5467e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/104> ;
+            sosa:hasResult [ surv:distance 6.74e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/89> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13030> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/2> ;
+            sosa:hasResult [ surv:distance 2.1698e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13231> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13017> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13146> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/4> ;
+            sosa:hasResult [ surv:distance 8.617e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/134> ;
+            sosa:hasResult [ surv:distance 2.05e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/136> ;
+            sosa:hasResult [ surv:distance 2.05e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/56> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13061> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13271> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/78> ;
+            sosa:hasResult [ surv:distance 4.65e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/142> ;
+            sosa:hasResult [ surv:distance 1.4999e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13126> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13245> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13155> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13192> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13189> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13093> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13007> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13029> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13230> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13120> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/31> ;
+            sosa:hasResult [ surv:distance 4.65e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13203> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20> ;
+            sosa:hasResult [ surv:distance 9.15e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13100> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13073> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/92> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/84> ;
+            sosa:hasResult [ surv:distance 4.65e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13111> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13176> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/24> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/90> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13070> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/52> ;
+            sosa:hasResult [ surv:distance 2.7176e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/115> ;
+            sosa:hasResult [ surv:distance 5.4461e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/109> ;
+            sosa:hasResult [ surv:distance 4e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/57> ;
             sosa:hasResult [ surv:distance 4.4355e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/68> ;
-            sosa:hasResult [ surv:distance 1.3364e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/83> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/135> ;
-            sosa:hasResult [ surv:distance 5.5182e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13284> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13244> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/167> ;
-            sosa:hasResult [ surv:distance 1e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13090> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/170> ;
+            sosa:hasResult [ surv:distance 6.26e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13147> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13166> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/172> ;
+            sosa:hasResult [ surv:distance 6.116e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13009> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/93> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/27> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/91> ;
+            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13251> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13223> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13212> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/108> ;
+            sosa:hasResult [ surv:distance 8.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/16> ;
+            sosa:hasResult [ surv:distance 4.698e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13122> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13058> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/19> ;
+            sosa:hasResult [ surv:distance 4.6517e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13225> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/114> ;
+            sosa:hasResult [ surv:distance 3.5073e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13013> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/154> ;
+            sosa:hasResult [ surv:distance 2.0091e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/145> ;
+            sosa:hasResult [ surv:distance 3.4571e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13035> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/67> ;
+            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13016> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13059> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/144> ;
+            sosa:hasResult [ surv:distance 1.5467e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/98> ;
+            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/158> ;
+            sosa:hasResult [ surv:distance 1.51023e+02 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13060> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13172> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13285> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/72> ;
+            sosa:hasResult [ surv:distance 6.879e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13149> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13038> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13075> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13032> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13102> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13205> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/76> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13124> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13241> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/46> ;
+            sosa:hasResult [ surv:distance 1.796e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13103> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/55> ;
+            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13088> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/150> ;
             sosa:hasResult [ surv:distance 8.0931e+01 ] ;
@@ -68459,877 +68890,27 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/4> ;
-            sosa:hasResult [ surv:distance 8.617e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/85> ;
+            sosa:hasResult [ surv:distance 1.2507e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13148> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13274> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/150> ;
-            sosa:hasResult [ surv:distance 8.0931e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/7> ;
-            sosa:hasResult [ surv:distance 1.2502e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13176> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13121> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13192> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/172> ;
-            sosa:hasResult [ surv:distance 6.116e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/5> ;
-            sosa:hasResult [ surv:distance 2.0679e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13259> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13096> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13211> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13030> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13143> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/14> ;
-            sosa:hasResult [ surv:distance 2.993e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13115> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/113> ;
-            sosa:hasResult [ surv:distance 6.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13107> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13014> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/160> ;
-            sosa:hasResult [ surv:distance 1.8069e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13038> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13224> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/165> ;
-            sosa:hasResult [ surv:distance 4.4987e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13079> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13285> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13168> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13174> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/105> ;
-            sosa:hasResult [ surv:distance 5.982e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/121> ;
-            sosa:hasResult [ surv:distance 8.505e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13210> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/64> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/72> ;
-            sosa:hasResult [ surv:distance 6.879e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13273> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13297> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13083> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/143> ;
-            sosa:hasResult [ surv:distance 9.3965e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13088> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13106> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13097> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13067> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/77> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13042> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13280> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/66> ;
-            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/90> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13209> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13173> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13082> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13276> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13006> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/29> ;
-            sosa:hasResult [ surv:distance 4.65e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13269> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13078> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13046> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/130> ;
-            sosa:hasResult [ surv:distance 8.775e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13040> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13229> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/139> ;
-            sosa:hasResult [ surv:distance 1.38796e+02 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13044> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13100> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/35> ;
-            sosa:hasResult [ surv:distance 2.5923e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/84> ;
-            sosa:hasResult [ surv:distance 4.65e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13256> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/154> ;
-            sosa:hasResult [ surv:distance 2.0091e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13197> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/168> ;
-            sosa:hasResult [ surv:distance 1.7955e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/122> ;
-            sosa:hasResult [ surv:distance 7.004e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13117> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13218> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13200> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/162> ;
-            sosa:hasResult [ surv:distance 5.91e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/70> ;
-            sosa:hasResult [ surv:distance 3.791e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/175> ;
-            sosa:hasResult [ surv:distance 1.249e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13031> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13056> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13298> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13074> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13243> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13223> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/149> ;
-            sosa:hasResult [ surv:distance 5.371e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13105> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13154> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/32> ;
-            sosa:hasResult [ surv:distance 1.25e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13139> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/79> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13007> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13194> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13152> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13220> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13261> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13292> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/131> ;
-            sosa:hasResult [ surv:distance 3.2951e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/166> ;
-            sosa:hasResult [ surv:distance 1e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13294> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13244> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/16> ;
-            sosa:hasResult [ surv:distance 4.698e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/123> ;
-            sosa:hasResult [ surv:distance 5e-01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/74> ;
-            sosa:hasResult [ surv:distance 5.845e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/56> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/118> ;
-            sosa:hasResult [ surv:distance 2.10308e+02 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13231> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/134> ;
-            sosa:hasResult [ surv:distance 2.05e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13073> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13054> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13035> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13120> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/103> ;
-            sosa:hasResult [ surv:distance 4.2953e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13249> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/169> ;
-            sosa:hasResult [ surv:distance 1.3004e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13017> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/49> ;
-            sosa:hasResult [ surv:distance 6.014e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13172> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13125> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/73> ;
-            sosa:hasResult [ surv:distance 9.987e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/97> ;
-            sosa:hasResult [ surv:distance 1.303e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13024> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13091> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13068> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13265> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13111> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/163> ;
-            sosa:hasResult [ surv:distance 2.4566e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13237> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/93> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/6> ;
-            sosa:hasResult [ surv:distance 4.692e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13015> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/173> ;
-            sosa:hasResult [ surv:distance 5.91e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13226> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/67> ;
-            sosa:hasResult [ surv:distance 1.25e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/59> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13234> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13190> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13254> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13109> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13075> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/107> ;
-            sosa:hasResult [ surv:distance 7.7466e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/146> ;
-            sosa:hasResult [ surv:distance 5.693e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/30> ;
-            sosa:hasResult [ surv:distance 1.431e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13233> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1> ;
-            sosa:hasResult [ surv:distance 6.68e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13255> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13183> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/75> ;
-            sosa:hasResult [ surv:distance 3.002e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/110> ;
-            sosa:hasResult [ surv:distance 3.7e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13253> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13058> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13028> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13160> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13189> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13221> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13281> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13227> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13222> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13141> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13182> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13215> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13236> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/44> ;
-            sosa:hasResult [ surv:distance 1.347e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/60> ;
-            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13258> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13150> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13245> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/38> ;
-            sosa:hasResult [ surv:distance 3.7705e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/144> ;
-            sosa:hasResult [ surv:distance 1.5467e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1122> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13279> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/20> ;
-            sosa:hasResult [ surv:distance 9.15e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/80> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/85> ;
-            sosa:hasResult [ surv:distance 1.2507e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13093> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13247> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13059> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13123> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13186> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13235> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13119> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13204> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -69339,377 +68920,102 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13066> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/28> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/100> ;
+            sosa:hasResult [ surv:distance 1.592e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13032> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13277> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13114> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13130> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13270> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13122> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13004> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/8> ;
-            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/62> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/19> ;
-            sosa:hasResult [ surv:distance 4.6517e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/133> ;
+            sosa:hasResult [ surv:distance 3.2774e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13076> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13053> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/142> ;
-            sosa:hasResult [ surv:distance 1.4999e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/128> ;
+            sosa:hasResult [ surv:distance 1.1488e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13084> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13291> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/25> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13232> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13220> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/131> ;
+            sosa:hasResult [ surv:distance 3.2951e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13050> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/9> ;
-            sosa:hasResult [ surv:distance 4.7151e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/139> ;
+            sosa:hasResult [ surv:distance 1.38796e+02 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13049> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13156> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13293> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/52> ;
-            sosa:hasResult [ surv:distance 2.7176e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/157> ;
+            sosa:hasResult [ surv:distance 6.1958e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13199> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/140> ;
-            sosa:hasResult [ surv:distance 1.8669e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/43> ;
+            sosa:hasResult [ surv:distance 1.7592e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13012> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13104> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13036> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/11> ;
-            sosa:hasResult [ surv:distance 1.4151e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/73> ;
+            sosa:hasResult [ surv:distance 9.987e+00 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13219> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/50> ;
-            sosa:hasResult [ surv:distance 1.4757e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/102> ;
+            sosa:hasResult [ surv:distance 1.5009e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/63> ;
-            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13079> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/5> ;
+            sosa:hasResult [ surv:distance 2.0679e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13026> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13134> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/109> ;
-            sosa:hasResult [ surv:distance 4e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/155> ;
+            sosa:hasResult [ surv:distance 1.06e+02 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/115> ;
-            sosa:hasResult [ surv:distance 5.4461e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/130> ;
+            sosa:hasResult [ surv:distance 8.775e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13055> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13042> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13178> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13128> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13171> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/18> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/45> ;
-            sosa:hasResult [ surv:distance 3.8958e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/10> ;
-            sosa:hasResult [ surv:distance 1.25e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/150> ;
-            sosa:hasResult [ surv:distance 8.0931e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13011> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/147> ;
-            sosa:hasResult [ surv:distance 2.181e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13241> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13248> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/127> ;
-            sosa:hasResult [ surv:distance 3.1309e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13112> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
-            sosa:hasResult [ surv:distance 3.5e-01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13037> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13181> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13288> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13202> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/111> ;
-            sosa:hasResult [ surv:distance 4e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13193> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/42> ;
-            sosa:hasResult [ surv:distance 4.2877e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13039> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13242> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/76> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13062> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13296> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/41> ;
-            sosa:hasResult [ surv:distance 1.186e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13113> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13216> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13170> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/136> ;
-            sosa:hasResult [ surv:distance 2.05e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/94> ;
-            sosa:hasResult [ surv:distance 1.303e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13018> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/99> ;
-            sosa:hasResult [ surv:distance 1.4567e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13239> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13048> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13188> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/112> ;
-            sosa:hasResult [ surv:distance 3.7047e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13001> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13238> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13249> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -69719,177 +69025,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/98> ;
-            sosa:hasResult [ surv:distance 1.25e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13089> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13085> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13208> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/31> ;
-            sosa:hasResult [ surv:distance 4.65e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13282> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13167> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/145> ;
-            sosa:hasResult [ surv:distance 3.4571e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13266> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13116> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13> ;
-            sosa:hasResult [ surv:distance 1.249e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/96> ;
-            sosa:hasResult [ surv:distance 5.0178e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13129> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13095> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13287> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13045> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13272> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13212> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13214> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/125> ;
-            sosa:hasResult [ surv:distance 4.276e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/147> ;
-            sosa:hasResult [ surv:distance 2.181e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13228> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13081> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13043> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/157> ;
-            sosa:hasResult [ surv:distance 6.1958e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13047> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/100> ;
-            sosa:hasResult [ surv:distance 1.592e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13052> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13002> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13090> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/101> ;
-            sosa:hasResult [ surv:distance 1.5467e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/43> ;
-            sosa:hasResult [ surv:distance 1.7592e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13246> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13264> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13124> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13293> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -69899,387 +69035,7 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13034> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/128> ;
-            sosa:hasResult [ surv:distance 1.1488e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13232> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/3> ;
-            sosa:hasResult [ surv:distance 2.8949e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13060> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13003> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13295> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13021> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13061> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/158> ;
-            sosa:hasResult [ surv:distance 1.51023e+02 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13205> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13278> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/15> ;
-            sosa:hasResult [ surv:distance 1.1024e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13250> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13177> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13196> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13145> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13118> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13008> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13064> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13153> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13009> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/24> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13262> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/27> ;
-            sosa:hasResult [ surv:distance 9.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/87> ;
-            sosa:hasResult [ surv:distance 1.2507e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/129> ;
-            sosa:hasResult [ surv:distance 8.22e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/126> ;
-            sosa:hasResult [ surv:distance 6.833e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13051> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/55> ;
-            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13286> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/114> ;
-            sosa:hasResult [ surv:distance 3.5073e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13149> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13099> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13101> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13203> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
-            sosa:hasResult [ surv:distance 4.65e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13146> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/164> ;
-            sosa:hasResult [ surv:distance 6.116e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/117> ;
-            sosa:hasResult [ surv:distance 5e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13159> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13110> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13142> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/37> ;
-            sosa:hasResult [ surv:distance 9.6e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/47> ;
-            sosa:hasResult [ surv:distance 1.4598e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13157> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/58> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/116> ;
-            sosa:hasResult [ surv:distance 9.31e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13138> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/35> ;
-            sosa:hasResult [ surv:distance 2.5923e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13252> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/54> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13134> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/137> ;
-            sosa:hasResult [ surv:distance 8.383e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13094> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13019> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/108> ;
-            sosa:hasResult [ surv:distance 8.5e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/48> ;
-            sosa:hasResult [ surv:distance 3.5215e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/170> ;
-            sosa:hasResult [ surv:distance 6.26e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13092> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/88> ;
-            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13257> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/39> ;
-            sosa:hasResult [ surv:distance 6.03e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13260> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/141> ;
-            sosa:hasResult [ surv:distance 1.5134e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13140> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13166> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13127> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13103> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13016> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13022> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13175> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13268> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/65> ;
-            sosa:hasResult [ surv:distance 9.506e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13230> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13005> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13069> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13141> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -70289,37 +69045,302 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/78> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13262> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/33> ;
+            sosa:hasResult [ surv:distance 2.463e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13044> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/65> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13127> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13158> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13162> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/83> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/8> ;
+            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13168> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13283> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13107> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13065> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13261> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13113> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/32> ;
+            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13174> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/28> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/106> ;
+            sosa:hasResult [ surv:distance 1.2507e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13095> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13036> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13037> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/17> ;
+            sosa:hasResult [ surv:distance 9.511e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13222> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13150> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13288> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/80> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/167> ;
+            sosa:hasResult [ surv:distance 1e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/11> ;
+            sosa:hasResult [ surv:distance 1.4151e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13180> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13054> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/69> ;
+            sosa:hasResult [ surv:distance 4.9529e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13048> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13021> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13142> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13209> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/74> ;
+            sosa:hasResult [ surv:distance 5.845e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13001> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13167> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13152> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13296> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13069> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/45> ;
+            sosa:hasResult [ surv:distance 3.8958e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13080> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13094> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13039> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/29> ;
             sosa:hasResult [ surv:distance 4.65e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13206> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13157> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13098> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13289> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13275> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13010> ;
-            sosa:hasResult [ ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:angle ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/138> ;
-            sosa:hasResult [ surv:distance 1.4625e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/103> ;
+            sosa:hasResult [ surv:distance 4.2953e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13283> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13068> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13112> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/147> ;
+            sosa:hasResult [ surv:distance 2.181e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13031> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/81> ;
+            sosa:hasResult [ surv:distance 4.65e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/87> ;
+            sosa:hasResult [ surv:distance 1.2507e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13210> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/50> ;
+            sosa:hasResult [ surv:distance 1.4757e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/113> ;
+            sosa:hasResult [ surv:distance 6.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13049> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -70329,17 +69350,157 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13072> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13185> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13147> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/60> ;
+            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13067> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13013> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13229> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13272> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13019> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13140> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/127> ;
+            sosa:hasResult [ surv:distance 3.1309e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13040> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13195> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/35> ;
+            sosa:hasResult [ surv:distance 2.5923e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/117> ;
+            sosa:hasResult [ surv:distance 5e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13219> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/25> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/39> ;
+            sosa:hasResult [ surv:distance 6.03e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13132> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/137> ;
+            sosa:hasResult [ surv:distance 8.383e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13064> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13246> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13063> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13286> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13292> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/79> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13294> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13268> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13173> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/105> ;
+            sosa:hasResult [ surv:distance 5.982e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13136> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13273> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/141> ;
+            sosa:hasResult [ surv:distance 1.5134e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13148> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
@@ -70349,32 +69510,872 @@ sensordesc:568542 a icsm-equipment-type:p .
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/63> ;
+            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/70> ;
+            sosa:hasResult [ surv:distance 3.791e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13066> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13118> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/71> ;
+            sosa:hasResult [ surv:distance 8.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/30> ;
+            sosa:hasResult [ surv:distance 1.431e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13170> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13> ;
+            sosa:hasResult [ surv:distance 1.249e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/177> ;
+            sosa:hasResult [ surv:distance 1.2246e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13050> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13114> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13295> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13125> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13238> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/48> ;
+            sosa:hasResult [ surv:distance 3.5215e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13109> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13198> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/111> ;
+            sosa:hasResult [ surv:distance 4e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/143> ;
+            sosa:hasResult [ surv:distance 9.3965e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13026> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13197> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13002> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13008> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13160> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/138> ;
+            sosa:hasResult [ surv:distance 1.4625e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/176> ;
+            sosa:hasResult [ surv:distance 7e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13144> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13282> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/58> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/160> ;
+            sosa:hasResult [ surv:distance 1.8069e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/120> ;
+            sosa:hasResult [ surv:distance 3.9634e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13078> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13263> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13159> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13281> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/12> ;
+            sosa:hasResult [ surv:distance 4.7411e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13089> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13101> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13145> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13121> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13237> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/168> ;
+            sosa:hasResult [ surv:distance 1.7955e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/15> ;
+            sosa:hasResult [ surv:distance 1.1024e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13252> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/147> ;
+            sosa:hasResult [ surv:distance 2.181e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13221> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13014> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/135> ;
+            sosa:hasResult [ surv:distance 5.5182e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13264> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13097> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13081> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13258> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13098> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/10> ;
+            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/34> ;
+            sosa:hasResult [ surv:distance 1.4904e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/150> ;
+            sosa:hasResult [ surv:distance 8.0931e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/23> ;
+            sosa:hasResult [ surv:distance 4.65e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13056> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13242> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13045> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13297> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13033> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13085> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13096> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/41> ;
+            sosa:hasResult [ surv:distance 1.186e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13108> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13138> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/110> ;
+            sosa:hasResult [ surv:distance 3.7e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13276> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/68> ;
+            sosa:hasResult [ surv:distance 1.3364e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13280> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/149> ;
+            sosa:hasResult [ surv:distance 5.371e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13084> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13025> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13178> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/107> ;
+            sosa:hasResult [ surv:distance 7.7466e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13287> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13051> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13284> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13110> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/9> ;
+            sosa:hasResult [ surv:distance 4.7151e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13216> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/49> ;
+            sosa:hasResult [ surv:distance 6.014e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13247> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13163> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1> ;
+            sosa:hasResult [ surv:distance 6.68e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/54> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13099> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/171> ;
             sosa:hasResult [ surv:distance 1.3134e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13180> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13057> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13179> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13116> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/91> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/94> ;
+            sosa:hasResult [ surv:distance 1.303e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13104> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13187> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13236> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13279> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13269> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/126> ;
+            sosa:hasResult [ surv:distance 6.833e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/7> ;
+            sosa:hasResult [ surv:distance 1.2502e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/35> ;
+            sosa:hasResult [ surv:distance 2.5923e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/53> ;
+            sosa:hasResult [ surv:distance 2.2836e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/146> ;
+            sosa:hasResult [ surv:distance 5.693e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/165> ;
+            sosa:hasResult [ surv:distance 4.4987e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/122> ;
+            sosa:hasResult [ surv:distance 7.004e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13260> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1122> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13005> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13277> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13164> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13235> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13259> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13131> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13196> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13133> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13086> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13129> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13012> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/99> ;
+            sosa:hasResult [ surv:distance 1.4567e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13186> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13255> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13041> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/59> ;
+            sosa:hasResult [ surv:distance 9.506e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/131> ;
+            sosa:hasResult [ surv:distance 3.2951e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13224> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13213> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13074> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13006> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/159> ;
+            sosa:hasResult [ surv:distance 1.2956e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13077> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13083> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/77> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/166> ;
+            sosa:hasResult [ surv:distance 1e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13183> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/118> ;
+            sosa:hasResult [ surv:distance 2.10308e+02 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/66> ;
             sosa:hasResult [ surv:distance 4.4355e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13225> ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/119> ;
+            sosa:hasResult [ surv:distance 2.21013e+02 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13139> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13193> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/86> ;
+            sosa:hasResult [ surv:distance 4.4355e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/47> ;
+            sosa:hasResult [ surv:distance 1.4598e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13227> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13053> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/121> ;
+            sosa:hasResult [ surv:distance 8.505e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/18> ;
+            sosa:hasResult [ surv:distance 9.5e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13184> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13072> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13161> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/95> ;
+            sosa:hasResult [ surv:distance 1.25e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13243> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/38> ;
+            sosa:hasResult [ surv:distance 3.7705e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13215> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/14> ;
+            sosa:hasResult [ surv:distance 2.993e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13105> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/3> ;
+            sosa:hasResult [ surv:distance 2.8949e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/42> ;
+            sosa:hasResult [ surv:distance 4.2877e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/150> ;
+            sosa:hasResult [ surv:distance 8.0931e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13234> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13256> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13169> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13082> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/140> ;
+            sosa:hasResult [ surv:distance 1.8669e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/174> ;
+            sosa:hasResult [ surv:distance 6.26e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13023> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13290> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/44> ;
+            sosa:hasResult [ surv:distance 1.347e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/6> ;
+            sosa:hasResult [ surv:distance 4.692e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13130> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13151> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13137> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/155> ;
+            sosa:hasResult [ surv:distance 1.06e+02 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/161> ;
+            sosa:hasResult [ surv:distance 1.3228e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13024> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13115> ;
+            sosa:hasResult [ ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:angle ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/13253> ;
             sosa:hasResult [ ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:angle ] ;
@@ -70386,8 +70387,32 @@ sensordesc:568542 a icsm-equipment-type:p .
 <vectorobservation:totalstation> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1203> ;
+            sosa:hasResult [ surv:distance 7.958e+00 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1210> ;
             sosa:hasResult [ surv:distance 1.9103e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1207> ;
+            sosa:hasResult [ surv:distance 1.7131e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1202> ;
+            sosa:hasResult [ surv:distance 6.4409e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1204> ;
+            sosa:hasResult [ surv:distance 1.229e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ],
@@ -70404,26 +70429,14 @@ sensordesc:568542 a icsm-equipment-type:p .
             ns2:angleType icsm-angle-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1200> ;
+            sosa:hasResult [ surv:distance 6.2257e+01 ] ;
+            sosa:resultTime "2013-10-24T00:00:00" ;
+            ns2:angleType icsm-angle-type:bearing ;
+            ns2:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1208> ;
             sosa:hasResult [ surv:distance 6.604e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1204> ;
-            sosa:hasResult [ surv:distance 1.229e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1203> ;
-            sosa:hasResult [ surv:distance 7.958e+00 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1207> ;
-            sosa:hasResult [ surv:distance 1.7131e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ],
@@ -70434,20 +70447,8 @@ sensordesc:568542 a icsm-equipment-type:p .
             ns2:angleType icsm-angle-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1200> ;
-            sosa:hasResult [ surv:distance 6.2257e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1209> ;
             sosa:hasResult [ surv:distance 1.6744e+01 ] ;
-            sosa:resultTime "2013-10-24T00:00:00" ;
-            ns2:angleType icsm-angle-type:bearing ;
-            ns2:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/1202> ;
-            sosa:hasResult [ surv:distance 6.4409e+01 ] ;
             sosa:resultTime "2013-10-24T00:00:00" ;
             ns2:angleType icsm-angle-type:bearing ;
             ns2:distanceType icsm-distance-type:ground ] ;
@@ -75151,6 +75152,8 @@ x-jsonld-prefixes:
   wa-procedure-used: https://linked.data.gov.au/def/csdm/wa-procedure-used/
   wa-survey-documentation-type: https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/
   wa-annotation-role: https://linked.data.gov.au/def/csdm/wa-annotation/
+  wa-annotation: https://linked.data.gov.au/def/csdm/wa-annotation/
+  wa-surveypoint-method: https://linked.data.gov.au/def/csdm/wa-surveypoint-method/
   wa-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-parcel-purpose/
   wa-parcel-type: https://linked.data.gov.au/def/csdm/wa-parcel-type/
   wa-parcel-state: https://linked.data.gov.au/def/csdm/wa-parcel-state/
@@ -75159,16 +75162,19 @@ x-jsonld-prefixes:
   wa-monument-condition: https://linked.data.gov.au/def/csdm/wa-monument-condition/
   wa-monument-state: https://linked.data.gov.au/def/csdm/wa-monument-state/
   wa-vector-purpose: https://linked.data.gov.au/def/csdm/wa-vector-purpose/
-  wa-vector-type: https://linked.data.gov.au/def/csdm/wa-vector-type/
   wa-secondary-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose/
   wa-secondary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/
   wa-secondary-purpose: https://linked.data.gov.au/def/csdm/wa-secondary-purpose/
   wa-interest-type: https://linked.data.gov.au/def/csdm/wa-interest-type/
-  wa-interest: https://linked.data.gov.au/def/csdm/wa-interest/
   wa-locality: https://linked.data.gov.au/def/csdm/wa-locality/
   wa-local-government: https://linked.data.gov.au/def/csdm/wa-local-government/
   registered-surveyors: https://wa.gov.au/surveyors/
   foaf: http://xmlns.com/foaf/0.1/
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.wa-core
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-22'
 
 ```
 
@@ -76923,6 +76929,8 @@ Links to the schema:
     "wa-procedure-used": "csdm:wa-procedure-used/",
     "wa-survey-documentation-type": "csdm:wa-survey-documentation-type/",
     "wa-annotation-role": "csdm:wa-annotation/",
+    "wa-annotation": "csdm:wa-annotation/",
+    "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
@@ -76931,12 +76939,10 @@ Links to the schema:
     "wa-monument-condition": "csdm:wa-monument-condition/",
     "wa-monument-state": "csdm:wa-monument-state/",
     "wa-vector-purpose": "csdm:wa-vector-purpose/",
-    "wa-vector-type": "csdm:wa-vector-type/",
     "wa-secondary-parcel-purpose": "csdm:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "csdm:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "csdm:wa-secondary-purpose/",
     "wa-interest-type": "csdm:wa-interest-type/",
-    "wa-interest": "csdm:wa-interest/",
     "wa-locality": "csdm:wa-locality/",
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",

@@ -243,7 +243,7 @@
         "type": "Point",
         "coordinates": [
           115.71670537716493,
-          -32.53516530146723
+          -32.53516530146724
         ]
       },
       "properties": {
@@ -547,7 +547,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v10"
@@ -568,7 +568,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v11"
@@ -589,7 +589,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v12"
@@ -610,7 +610,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "v13"
@@ -670,7 +670,7 @@
           ],
           [
             115.71670537716493,
-            -32.53516530146723
+            -32.53516530146724
           ],
           [
             115.71670760063326,

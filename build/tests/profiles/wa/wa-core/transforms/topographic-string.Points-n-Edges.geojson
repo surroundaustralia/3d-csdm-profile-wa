@@ -221,7 +221,7 @@
         "type": "Point",
         "coordinates": [
           115.71670537716493,
-          -32.53516530146723
+          -32.53516530146724
         ]
       },
       "properties": {
@@ -519,7 +519,7 @@
           ],
           [
             115.71670537716493,
-            -32.53516530146723
+            -32.53516530146724
           ],
           [
             115.71670760063326,
@@ -576,7 +576,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:3",
+        "vectorPurpose": "wa-vector-purpose:MHWM-Boundary",
         "comment": [
           "M.H.W.",
           "Waterlines on this plan do not necessarily depict an exact cadastral boundary and have been adopted from SCDB data obtained September 2014."
@@ -600,7 +600,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v10"
@@ -621,7 +621,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v11"
@@ -642,7 +642,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:C",
+        "vectorPurpose": "wa-vector-purpose:cadastral-construction",
         "comment": null
       },
       "id": "v12"
@@ -663,7 +663,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "v13"

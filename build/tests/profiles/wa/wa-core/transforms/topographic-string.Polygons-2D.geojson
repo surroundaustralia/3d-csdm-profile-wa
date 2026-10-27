@@ -33,7 +33,7 @@
             ],
             [
               115.71670537716493,
-              -32.53516530146723
+              -32.53516530146724
             ],
             [
               115.71670760063326,
@@ -139,7 +139,7 @@
             "interestLink": "456-987-123",
             "statuteName": "Sec. 24KA & 238 of the Native Title Act 1993",
             "interestType": "wa-interest-type:native-title",
-            "purpose": "wa-secondary-parcel-purpose:non-extinguisment-native-title",
+            "purpose": "wa-secondary-purpose:non-extinguisment-native-title",
             "burdenedParcels": [
               "1"
             ]

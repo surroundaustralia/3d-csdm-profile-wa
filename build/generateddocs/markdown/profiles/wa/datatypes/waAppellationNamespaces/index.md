@@ -27,14 +27,17 @@ x-jsonld-prefixes:
   wa-nonprimary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/
   wa-monument-form: https://linked.data.gov.au/def/csdm/wa-monument-form/
   wa-vector-purpose: https://linked.data.gov.au/def/csdm/wa-vector-purpose/
-  wa-vector-type: https://linked.data.gov.au/def/csdm/wa-vector-type/
   wa-secondary-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-purpose/
   wa-secondary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/
   wa-secondary-purpose: https://linked.data.gov.au/def/csdm/wa-secondary-purpose/
   wa-interest-type: https://linked.data.gov.au/def/csdm/wa-interest-type/
-  wa-interest: https://linked.data.gov.au/def/csdm/wa-interest/
   wa-locality: https://linked.data.gov.au/def/csdm/wa-locality/
   wa-local-government: https://linked.data.gov.au/def/csdm/wa-local-government/
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.datatypes.waAppellationNamespaces
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-22'
 
 ```
 
@@ -81,12 +84,10 @@ Links to the schema:
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-monument-form": "vocabs:wa-monument-form/",
     "wa-vector-purpose": "vocabs:wa-vector-purpose/",
-    "wa-vector-type": "vocabs:wa-vector-type/",
     "wa-secondary-parcel-purpose": "vocabs:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "vocabs:wa-secondary-purpose/",
     "wa-interest-type": "vocabs:wa-interest-type/",
-    "wa-interest": "vocabs:wa-interest/",
     "wa-locality": "vocabs:wa-locality/",
     "wa-local-government": "vocabs:wa-local-government/",
     "@version": 1.1

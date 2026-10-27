@@ -5,7 +5,7 @@
   "hasPart": [
     {
       "type": "tenureClass",
-      "ref": "wa-parcel-type:l"
+      "ref": "wa-parcel-type:freehold"
     },
     {
       "type": "documentOrGrantReference",

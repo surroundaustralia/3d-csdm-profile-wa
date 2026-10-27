@@ -8,6 +8,6 @@
             commonpatterns:namePartType <http://www.example.com/namedobjects/number> ],
         [ commonpatterns:namePartRef wa-locality:albany ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ],
-        [ rdfs:label "wa-parcel-purpose:townlot" ;
+        [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ] .
 
