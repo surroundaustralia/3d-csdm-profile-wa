@@ -66,10 +66,10 @@ Example appellation.
 [] rdfs:label "L-3114-12345" ;
     dcterms:hasPart [ rdfs:label "3114" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ],
-        [ commonpatterns:namePartRef wa-parcel-type:freehold ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ],
         [ rdfs:label "12345" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ],
+        [ commonpatterns:namePartRef wa-parcel-type:freehold ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ] .
 
 
 ```
@@ -92,7 +92,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.miscellaneousTenure
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-22'
+  dateOfLastChange: '2026-10-27'
 
 ```
 

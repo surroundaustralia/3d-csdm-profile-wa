@@ -552,7 +552,6 @@ Minimal example - with combined elements from each test case
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix ns2: <http://www.iana.org/assignments/> .
-@prefix ns3: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -578,11 +577,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -596,17 +595,17 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.270199e+04 3.505189e+05 ) ] ;
-    ns3:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "9540" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:spike ;
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:temporary-control-point ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190965e+02 -3.470982e+01 ) ] .
+            geojson:coordinates ( 1.190965e+02 -3.470982e+01 ) ] ;
+    commonpatterns:name [ rdfs:label "EFB157243/9540" ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
+                [ rdfs:label "9540" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] .
 
 <https://www.wa-example.com/features/17251503> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:boundary ;
@@ -632,7 +631,7 @@ Minimal example - with combined elements from each test case
             sosa:hasResult [ surv:distance 1.2784e+01 ] ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
-    sosa:resultTime "2022-05-22T00:00:00Z" ;
+    sosa:resultTime "2022-05-22T00:00:00+00:00"^^xsd:dateTime ;
     sosa:usedProcedure wa-procedure-used:measured ;
     ns1:angleType icsm-angle-type:angle ;
     ns1:distanceType icsm-distance-type:grid .
@@ -641,25 +640,25 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190935e+02 -3.471141e+01 ) ] .
+            geojson:coordinates ( 1.190935e+02 -3.471141e+01 ) ] ;
+    commonpatterns:name [ rdfs:label "" ] .
 
 <https://www.wa-example.com/features/14005401> a surv:BoundaryMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190934e+02 -3.471154e+01 ) ] .
+            geojson:coordinates ( 1.190934e+02 -3.471154e+01 ) ] ;
+    commonpatterns:name [ rdfs:label "" ] .
 
 <https://www.wa-example.com/features/17251502> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:boundary ;
@@ -670,13 +669,13 @@ Minimal example - with combined elements from each test case
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
             geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    ns3:name [ rdfs:label "" ] ;
     surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
             surv:form wa-monument-form:peg ;
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190934e+02 -3.471152e+01 ) ] .
+            geojson:coordinates ( 1.190934e+02 -3.471152e+01 ) ] ;
+    commonpatterns:name [ rdfs:label "" ] .
 
 
 ```
@@ -694,7 +693,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.wa-mining
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-22'
+  dateOfLastChange: '2026-10-27'
 
 ```
 
@@ -1137,7 +1136,6 @@ Links to the schema:
             "geodeticid": {
               "@id": "surv:geodeticid",
               "@context": {
-                "name": "commonpatterns:name",
                 "hasPart": {
                   "@context": {
                     "ref": {
@@ -1154,10 +1152,9 @@ Links to the schema:
               }
             },
             "name": {
-              "@id": "csdm:commonpatterns/name",
+              "@id": "commonpatterns:name",
               "@type": "@id",
               "@context": {
-                "name": "commonpatterns:name",
                 "hasPart": {
                   "@context": {
                     "ref": {
@@ -1422,6 +1419,43 @@ Links to the schema:
                 }
               }
             },
+            "phenomenonTime": {
+              "@context": {
+                "hasBeginning": "owlTime:hasBeginning",
+                "hasEnd": "owlTime:hasEnd",
+                "inXSDDateTime": {
+                  "@id": "owlTime:inXSDDateTime",
+                  "@type": "xsd:dateTime"
+                },
+                "inXSDDateTimeStamp": {
+                  "@id": "owlTime:inXSDDateTimeStamp",
+                  "@type": "xsd:dateTimeStamp"
+                },
+                "inXSDDate": {
+                  "@id": "owlTime:inXSDDate",
+                  "@type": "xsd:date"
+                },
+                "Instant": "owlTime:Instant",
+                "Interval": "owlTime:Interval",
+                "ProperInterval": "owlTime:ProperInterval",
+                "hasDuration": "owlTime:hasDuration",
+                "hasXSDDuration": {
+                  "@id": "owlTime:hasXSDDuration",
+                  "@type": "xsd:duration"
+                },
+                "inTimePosition": "owlTime:inTimePosition",
+                "inXSDgYear": {
+                  "@id": "owlTime:inXSDgYear",
+                  "@type": "xsd:gYear"
+                },
+                "inXSDgYearMonth": {
+                  "@id": "owlTime:inXSDgYearMonth",
+                  "@type": "xsd:gYearMonth"
+                }
+              },
+              "@id": "sosa:phenomenonTime",
+              "@type": "xsd:dateTime"
+            },
             "hasResult": {
               "@context": {
                 "pose": {
@@ -1463,6 +1497,43 @@ Links to the schema:
           "@context": {
             "@base": "https://linked.data.gov.au/def/csdm/property/"
           }
+        },
+        "phenomenonTime": {
+          "@context": {
+            "hasBeginning": "owlTime:hasBeginning",
+            "hasEnd": "owlTime:hasEnd",
+            "inXSDDateTime": {
+              "@id": "owlTime:inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "inXSDDateTimeStamp": {
+              "@id": "owlTime:inXSDDateTimeStamp",
+              "@type": "xsd:dateTimeStamp"
+            },
+            "inXSDDate": {
+              "@id": "owlTime:inXSDDate",
+              "@type": "xsd:date"
+            },
+            "Instant": "owlTime:Instant",
+            "Interval": "owlTime:Interval",
+            "ProperInterval": "owlTime:ProperInterval",
+            "hasDuration": "owlTime:hasDuration",
+            "hasXSDDuration": {
+              "@id": "owlTime:hasXSDDuration",
+              "@type": "xsd:duration"
+            },
+            "inTimePosition": "owlTime:inTimePosition",
+            "inXSDgYear": {
+              "@id": "owlTime:inXSDgYear",
+              "@type": "xsd:gYear"
+            },
+            "inXSDgYearMonth": {
+              "@id": "owlTime:inXSDgYearMonth",
+              "@type": "xsd:gYearMonth"
+            }
+          },
+          "@id": "sosa:phenomenonTime",
+          "@type": "xsd:dateTime"
         },
         "angleType": {
           "@context": {
@@ -1510,6 +1581,43 @@ Links to the schema:
                 }
               }
             },
+            "phenomenonTime": {
+              "@context": {
+                "hasBeginning": "owlTime:hasBeginning",
+                "hasEnd": "owlTime:hasEnd",
+                "inXSDDateTime": {
+                  "@id": "owlTime:inXSDDateTime",
+                  "@type": "xsd:dateTime"
+                },
+                "inXSDDateTimeStamp": {
+                  "@id": "owlTime:inXSDDateTimeStamp",
+                  "@type": "xsd:dateTimeStamp"
+                },
+                "inXSDDate": {
+                  "@id": "owlTime:inXSDDate",
+                  "@type": "xsd:date"
+                },
+                "Instant": "owlTime:Instant",
+                "Interval": "owlTime:Interval",
+                "ProperInterval": "owlTime:ProperInterval",
+                "hasDuration": "owlTime:hasDuration",
+                "hasXSDDuration": {
+                  "@id": "owlTime:hasXSDDuration",
+                  "@type": "xsd:duration"
+                },
+                "inTimePosition": "owlTime:inTimePosition",
+                "inXSDgYear": {
+                  "@id": "owlTime:inXSDgYear",
+                  "@type": "xsd:gYear"
+                },
+                "inXSDgYearMonth": {
+                  "@id": "owlTime:inXSDgYearMonth",
+                  "@type": "xsd:gYearMonth"
+                }
+              },
+              "@id": "sosa:phenomenonTime",
+              "@type": "xsd:dateTime"
+            },
             "hasResult": {
               "@context": {
                 "pose": {
@@ -1551,6 +1659,43 @@ Links to the schema:
           "@context": {
             "@base": "https://linked.data.gov.au/def/csdm/property/"
           }
+        },
+        "phenomenonTime": {
+          "@context": {
+            "hasBeginning": "owlTime:hasBeginning",
+            "hasEnd": "owlTime:hasEnd",
+            "inXSDDateTime": {
+              "@id": "owlTime:inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "inXSDDateTimeStamp": {
+              "@id": "owlTime:inXSDDateTimeStamp",
+              "@type": "xsd:dateTimeStamp"
+            },
+            "inXSDDate": {
+              "@id": "owlTime:inXSDDate",
+              "@type": "xsd:date"
+            },
+            "Instant": "owlTime:Instant",
+            "Interval": "owlTime:Interval",
+            "ProperInterval": "owlTime:ProperInterval",
+            "hasDuration": "owlTime:hasDuration",
+            "hasXSDDuration": {
+              "@id": "owlTime:hasXSDDuration",
+              "@type": "xsd:duration"
+            },
+            "inTimePosition": "owlTime:inTimePosition",
+            "inXSDgYear": {
+              "@id": "owlTime:inXSDgYear",
+              "@type": "xsd:gYear"
+            },
+            "inXSDgYearMonth": {
+              "@id": "owlTime:inXSDgYearMonth",
+              "@type": "xsd:gYearMonth"
+            }
+          },
+          "@id": "sosa:phenomenonTime",
+          "@type": "xsd:dateTime"
         },
         "angleType": {
           "@context": {
@@ -1946,11 +2091,11 @@ Links to the schema:
       "@type": "@id"
     },
     "ptQuality": {
-      "@id": "csdm:commonpatterns/qualityClass",
+      "@id": "commonpatterns:qualityClass",
       "@type": "@id"
     },
     "ptQualityMeasure": {
-      "@id": "csdm:commonpatterns/qualityMeasure",
+      "@id": "commonpatterns:qualityMeasure",
       "@type": "@id"
     },
     "GeodeticReferenceMark": {
@@ -2369,7 +2514,10 @@ Links to the schema:
       "@id": "ssn-system:qualityOfObservation",
       "@type": "@id"
     },
-    "endTime": "sosa:endTime",
+    "endTime": {
+      "@id": "sosa:endTime",
+      "@type": "xsd:dateTime"
+    },
     "hasFeatureOfInterest": {
       "@id": "sosa:hasFeatureOfInterest",
       "@type": "@id"
@@ -2382,20 +2530,57 @@ Links to the schema:
       "@id": "sosa:hasResult",
       "@type": "@id"
     },
-    "hasSimpleResult": {
-      "@id": "sosa:hasSimpleResult",
-      "@type": "@id"
-    },
+    "hasSimpleResult": "sosa:hasSimpleResult",
     "hasUltimateFeatureOfInterest": {
       "@id": "sosa:hasUltimateFeatureOfInterest",
       "@type": "@id"
     },
     "phenomenonTime": {
       "@id": "sosa:phenomenonTime",
-      "@type": "@id"
+      "@type": "xsd:dateTime",
+      "@context": {
+        "time": "http://www.w3.org/2006/time#",
+        "Instant": "owlTime:Instant",
+        "Interval": "owlTime:Interval",
+        "ProperInterval": "owlTime:ProperInterval",
+        "hasBeginning": "owlTime:hasBeginning",
+        "hasEnd": "owlTime:hasEnd",
+        "hasDuration": "owlTime:hasDuration",
+        "hasXSDDuration": {
+          "@id": "owlTime:hasXSDDuration",
+          "@type": "xsd:duration"
+        },
+        "inTimePosition": "owlTime:inTimePosition",
+        "inXSDDate": {
+          "@id": "owlTime:inXSDDate",
+          "@type": "xsd:date"
+        },
+        "inXSDDateTime": {
+          "@id": "owlTime:inXSDDateTime",
+          "@type": "xsd:dateTime"
+        },
+        "inXSDDateTimeStamp": {
+          "@id": "owlTime:inXSDDateTimeStamp",
+          "@type": "xsd:dateTimeStamp"
+        },
+        "inXSDgYear": {
+          "@id": "owlTime:inXSDgYear",
+          "@type": "xsd:gYear"
+        },
+        "inXSDgYearMonth": {
+          "@id": "owlTime:inXSDgYearMonth",
+          "@type": "xsd:gYearMonth"
+        }
+      }
     },
-    "resultTime": "sosa:resultTime",
-    "startTime": "sosa:startTime",
+    "resultTime": {
+      "@id": "sosa:resultTime",
+      "@type": "xsd:dateTime"
+    },
+    "startTime": {
+      "@id": "sosa:startTime",
+      "@type": "xsd:dateTime"
+    },
     "usedProcedure": {
       "@id": "sosa:usedProcedure",
       "@type": "@id"
