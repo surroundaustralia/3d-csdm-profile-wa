@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation
-Generated 2026-10-28T03:04:55.603904+00:00
+Generated 2026-10-28T05:11:56.077278+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -25,14 +25,14 @@ On instance['type']:
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
  - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
 Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:
- - Shape ex:NamePartShape: _:N9f53bb1b42724d1ea50cb2b2878548e9,_:Neba3865448dc42deaf13f7e9f69aa2b7,_:N4573a2c81e354652a489479f7c5638db
+ - Shape ex:NamePartShape: _:Nef2d5c6faab945c7ab5c8781989da9b9,_:N9fba119b7f8e49adb70ddcb85ccb30d3,_:N3a58bfa8afa943488b600fd425af813d
  - Shape ex:NamedObjectShape: *none*
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
@@ -40,9 +40,9 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
- - Shape :MeasureShape: *none*
  - Shape :CompoundNameShape: *none*
  - Shape :NamePartShape: *none*
+ - Shape :MeasureShape: *none*
 
 === End SHACL ===
 
