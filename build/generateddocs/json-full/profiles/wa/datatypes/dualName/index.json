@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "icsm-csdm",
   "version": "0.1",
-  "dateOfLastChange": "2026-10-27",
+  "dateOfLastChange": "2026-10-28",
   "link": "https://github.com/icsm-au/3d-csdm-schema",
   "sources": [
     {
@@ -105,7 +105,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Compound Name\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/waAppellationNamespaces/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.wa.datatypes.dualName\n  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-27'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Compound Name\nallOf:\n- $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/waAppellationNamespaces/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: icsm.profiles.wa.datatypes.dualName\n  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-28'\n",
   "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
   "gitPath": "_sources/datatypes/dualName"
 }

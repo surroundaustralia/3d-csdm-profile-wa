@@ -262,7 +262,7 @@ path	@id	schema
 /_anyOf/3/features/_anyOf/1/geometry		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
 /_anyOf/3/features/_anyOf/1/geometry/type		https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-feature-collection/schema.yaml
 /time		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/name	rdfs:label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
+/name	http://www.w3.org/2000/01/rdf-schema#label	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /bearingRotation	https://linked.data.gov.au/def/csdm/container/bearingRotation	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /annotations	https://linked.data.gov.au/def/csdm/container/annotations	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /annotations/_anyOf/1/description		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
@@ -579,7 +579,7 @@ path	@id	schema
 /parcels/_oneOf/0/featureType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /parcels/_oneOf/1/featureType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /parcels/_oneOf/1/features		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
-/parcels/_oneOf/1/features/properties	@nest	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
+/parcels/_oneOf/1/features/properties		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /vectorObservations	https://linked.data.gov.au/def/csdm/container/vectorObservations	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /vectorObservations/resultTime	http://www.w3.org/ns/sosa/resultTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.yaml
 /vectorObservations/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/executionCollection/schema.yaml
@@ -619,14 +619,14 @@ path	@id	schema
 /vectorObservations/hasMember/_anyOf/1/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
 /vectorObservations/hasMember/_anyOf/1/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
 /vectorObservations/hasMember/_anyOf/1/featureType	@type	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation/schema.yaml
-/vectorObservations/features	sosa:hasMember	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
+/vectorObservations/features	http://www.w3.org/ns/sosa/hasMember	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/features/properties	@nest	https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml
 /vectorObservations/features/properties/hasResultQuality		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/features/properties/hasResultQuality/angleAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyMeasure	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml
 /vectorObservations/features/properties/hasResultQuality/distanceAccuracy	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyMeasure	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml
 /vectorObservations/features/properties/hasResultQuality/distanceAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/distanceAccuracyClass	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml
 /vectorObservations/features/properties/hasResultQuality/angleAccuracyClass	https://linked.data.gov.au/def/csdm/surveyobs/angleAccuracyClass	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/datatypes/quality/schema.yaml
-/vectorObservations/features/properties/hasResult	sosa:hasResult	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
+/vectorObservations/features/properties/hasResult	http://www.w3.org/ns/sosa/hasResult	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/features/properties/hasResult/pose	https://linked.data.gov.au/def/csdm/surveyfeatures/pose	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/features/properties/hasResult/pose/angles	https://linked.data.gov.au/def/csdm/utils/geopose/angles	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/features/properties/hasResult/pose/angles/yaw		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
@@ -637,13 +637,13 @@ path	@id	schema
 /vectorObservations/properties		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/angleType	https://linked.data.gov.au/def/csdm/surveyobs/angleType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/distanceType	https://linked.data.gov.au/def/csdm/surveyobs/distanceType	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
-/vectorObservations/properties/madeBySensor	sosa:madeBySensor	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
+/vectorObservations/properties/madeBySensor	http://www.w3.org/ns/sosa/madeBySensor	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/madeBySensor/sensorType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/madeBySensor/_oneOf/0/sensorType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/madeBySensor/_oneOf/0/baseSensor	https://linked.data.gov.au/def/csdm/sensors/baseSensor	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/madeBySensor/_oneOf/0/roverSensor	https://linked.data.gov.au/def/csdm/sensors/roverSensor	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /vectorObservations/properties/madeBySensor/_oneOf/1/sensorType	@type	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
-/vectorObservations/properties/observedProperty	sosa:observedProperty	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
+/vectorObservations/properties/observedProperty	http://www.w3.org/ns/sosa/observedProperty	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/SurveyObservations/schema.yaml
 /adoptedObservations		https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /occupationObservations	https://linked.data.gov.au/def/csdm/container/occupationObservations	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
 /occupationFeatures	https://linked.data.gov.au/def/csdm/container/occupationFeatures	https://surroundaustralia.github.io/3d-csdm-common/build/annotated/csdm/features/CSD/schema.yaml
