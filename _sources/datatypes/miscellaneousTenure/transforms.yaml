@@ -16,14 +16,14 @@ transforms:
       legalDescriptor = ""
       tenureClass = "Plan"
       for p in data['hasPart']:
-          if p['type'] == 'crowntenureClass':
+          if p['type'] == 'wa-name-part-type:tenureClass':
             if 'ref' in p:
               tenureClass = p['ref'].split(":")[1].title()
             else:
               tenureClass = "Not Defined"
-          elif  p['type'] == 'documentOrGrantReference':
+          elif  p['type'] == 'wa-name-part-type:documentOrGrantReference':
             documentOrGrantReference = "Town Lot"
-          elif  p['type'] == 'legalDescriptor':
+          elif  p['type'] == 'wa-name-part-type:legalDescriptor':
             legalDescriptor = p['label']
       output_data=f"{tenureClass}-{documentOrGrantReference}-{legalDescriptor}"
       

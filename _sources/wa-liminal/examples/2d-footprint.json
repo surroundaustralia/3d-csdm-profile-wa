@@ -209,7 +209,6 @@
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -241,7 +240,6 @@
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -273,7 +271,6 @@
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -305,7 +302,6 @@
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -664,19 +660,19 @@
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -739,19 +735,19 @@
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -789,19 +785,19 @@
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]

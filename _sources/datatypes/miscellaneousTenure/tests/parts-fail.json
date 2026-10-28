@@ -3,11 +3,11 @@
   "label": "L-3114-12345",
   "hasPart": [
     {
-      "type": "tenureClass",
+      "type": "wa-name-part-type:tenureClass",
       "ref": "wa-parcel-type:freehold"
     },
     {
-      "type": "legalDescriptor",
+      "type": "wa-name-part-type:legalDescriptor",
       "label": "12345"
     }
   ]

@@ -12,6 +12,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix ex:      <https://example.org/shapes/> .
 
 
@@ -35,9 +36,9 @@ ex:NamedObjectShape
                 [ sh:sequence ( dcterms:hasPart commonpatterns:namePartType ) ]
             )
         ] ;
-        sh:hasValue "legalDescriptor" ;
+        sh:hasValue wa-name-part-type:legalDescriptor ;
         sh:minCount 1 ;
-        sh:message "Missing a dcterms:hasPart with namePartType 'legalDescriptor'." ;
+        sh:message "Missing a dcterms:hasPart with namePartType wa-name-part-type:legalDescriptor." ;
         sh:name "legalDescriptor part"
     ] ;
 
@@ -48,9 +49,9 @@ ex:NamedObjectShape
                 [ sh:sequence ( dcterms:hasPart commonpatterns:namePartType ) ]
             )
         ] ;
-        sh:hasValue "tenureClass" ;
+        sh:hasValue wa-name-part-type:tenureClass ;
         sh:minCount 1 ;
-        sh:message "Missing a dcterms:hasPart with namePartType 'tenureClass'." ;
+        sh:message "Missing a dcterms:hasPart with namePartType wa-name-part-type:tenureClass." ;
         sh:name "tenureClass part"
     ] ;
 
@@ -61,9 +62,9 @@ ex:NamedObjectShape
                 [ sh:sequence ( dcterms:hasPart commonpatterns:namePartType ) ]
             )
         ] ;
-        sh:hasValue "documentOrGrantReference" ;
+        sh:hasValue wa-name-part-type:documentOrGrantReference ;
         sh:minCount 1 ;
-        sh:message "Missing a dcterms:hasPart with namePartType 'documentOrGrantReference'." ;
+        sh:message "Missing a dcterms:hasPart with namePartType wa-name-part-type:documentOrGrantReference." ;
         sh:name "documentOrGrantReference part"
     ] .
 
@@ -72,7 +73,7 @@ ex:NamedObjectShape
 # Shape 2 – NamePartShape
 #   Validates every blank node that appears as a dcterms:hasPart value.
 #   Rules:
-#     • namePartType  – required (exactly 1), must be a plain string literal.
+#     • namePartType  – required (exactly 1), must be an IRI (a wa-name-part-type concept).
 #     • namePartRef   – optional, but if present MUST be an IRI (not a literal
 #                       or blank node).
 # ---------------------------------------------------------------------------
@@ -85,7 +86,7 @@ ex:NamePartShape
     # Target every node that is the object of dcterms:hasPart
     sh:targetObjectsOf dcterms:hasPart ;
 
-    # namePartType: required, exactly one, plain string literal
+    # namePartType: required, exactly one, IRI
     sh:property [
         sh:path commonpatterns:namePartType ;
         sh:minCount 1 ;

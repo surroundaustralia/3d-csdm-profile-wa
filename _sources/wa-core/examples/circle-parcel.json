@@ -719,19 +719,19 @@
               "label": "Lot 3 DP 214866",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "3"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "planIdentifier",
+                  "type": "wa-name-part-type:planIdentifier",
                   "label": "214866"
                 }
               ]
@@ -775,19 +775,19 @@
               "label": "Area H DP 95092",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Area"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "H"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "planIdentifier",
+                  "type": "wa-name-part-type:planIdentifier",
                   "label": "95092"
                 }
               ]

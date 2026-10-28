@@ -5,11 +5,16 @@ abstract: |
   This repository contains the working copy of the WA profile of the [Cadastral Survey Data Model Exchange Specification](https://icsm-au.github.io/3d-csdm-common/), 
   extending the  [common ICSM profile](https://icsm-au.github.io/3d-csdm-profile-icsm/).
    
-  This version is being refined as required to meet the requirements of the WA Next Generation Spatial Cadastre. 
+  This version has been updated and extended to meet the requirements of the WA Next Generation Spatial Cadastre. 
+  
+  Note that the upstream dependencies have been extended to support the requirements for 3D (including liminal - or relative boundarys).
 
 description: |
 
-  The encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by any standards compliant software capable of handling nested object sub-schemas and control of codelist in content.
+  The encoding specification and all profiles are compatible with the [OGC API Features](https://opengeospatial.github.io/e-learning/ogcapi-features/text/basic-main.html) data exchange specification, and can thus be implemented by standards compliant software capable of handling two basic patterns:
+  
+  1. nested object sub-schemas
+  2. control of content using codelists
   
   Profiles are defined in a consistent, machine-readable and validatable way using the [OGC Building Blocks methodology](https://ogcincubator.github.io/bblocks-docs/).
   

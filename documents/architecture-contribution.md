@@ -101,9 +101,7 @@ Acronyms: list them in architecture-contribution_acronyms.json (see acronym-mana
 -->
 
 ## Purpose, scope, and responsibilities
-<!--
-Describe the document's relationship to Accenture's overall Solution Architecture and Schedule 1.
--->
+
 ### Purpose
 
 This document consolidates SURROUND Australia Pty Ltd's (SURROUND) Cadastral Survey Data (CSD), 3D Cadastral Survey Data Model (3D CSDM), and metadata architecture contributions to the Western Australian Next Generation Spatial Cadastre (NGSC) project.
