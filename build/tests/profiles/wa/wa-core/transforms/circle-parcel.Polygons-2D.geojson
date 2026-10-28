@@ -95,7 +95,7 @@
         },
         "area": 365750,
         "parcelType": "wa-parcel-type:crown",
-        "parcelPurpose": "wa-parcel-purpose:reserve",
+        "parcelPurpose": "wa-parcel-purpose:reserve-vest",
         "parcelState": "wa-parcel-state:affected-tenure",
         "interests": [
           {

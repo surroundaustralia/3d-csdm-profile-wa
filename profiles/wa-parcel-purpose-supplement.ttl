@@ -13,8 +13,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         skos:Concept ,
         termtype:ParcelPurpose ;
-    skos:altLabel "" ;
-    skos:definition "An abstract parcel that aggregates a set of individually owned primary parcels alongside shared common real property." ;
+    skos:definition "A parcel representing the land and scheme of a strata titles scheme." ;
+    skos:scopeNote "Interim WA term. The target is a ParcelAggregate or EstateParcel feature type in the 3D CSDM core (decision D6)." ;
     skos:inScheme cs: ;
     skos:notation "strata-scheme" ;
     skos:prefLabel "Strata Scheme" ;

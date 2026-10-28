@@ -1,13 +1,14 @@
 {
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
   "name": "Land parcels",
   "abstract": "This repository contains a JSON schema model for land parcels, semantically annotated and aligned with LADM conceptual model.\n\nThese schemas use a generalised 3D topology model to provide explicit definition of parcels required for survey record keeping. \n\nThe topology model supports transformations to well known geometry formats which may be used to visualise and validated geometry representations of  Parcel objects in 2 or 3D.\n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-09-16T22:19:45.745600",
+  "modified": "2026-10-26T10:51:41.468766",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"e9e9cb5c905d4e569b44b4816a663ec450322f6f",
-      "shortCommitId": "\"e9e9cb",
-      "date": "2026-09-14T10:12:51+00:00\""
+      "commitId": "\"f95ba4022243650aa74a2266e366ed583fc21d30",
+      "shortCommitId": "\"f95ba4",
+      "date": "2026-10-26T09:56:22+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-land-parcels",
@@ -32,7 +33,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-16",
+      "dateOfLastChange": "2026-10-26",
       "dependsOn": [],
       "sources": [],
       "scope": "dev",
@@ -68,7 +69,7 @@
       "itemClass": "model",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-16",
+      "dateOfLastChange": "2026-10-26",
       "dependsOn": [],
       "sources": [],
       "scope": "dev",
@@ -95,42 +96,6 @@
       }
     },
     {
-      "itemIdentifier": "ogc.ladm.land-parcels.ontology",
-      "name": "Land Parcels Ontology",
-      "highlighted": true,
-      "abstract": "Terms and definitions for the Land Parcels model.  This is aligned with LADM semantics and terminology and could be evolved or mapped to an authoritative LADM ontology component as required/",
-      "status": "under-development",
-      "dateTimeAddition": "2023-09-18T00:00:00Z",
-      "itemClass": "model",
-      "register": "ogc-incubator",
-      "version": "0.1",
-      "dateOfLastChange": "2026-09-16",
-      "dependsOn": [],
-      "sources": [],
-      "scope": "dev",
-      "tags": [
-        "OSPD"
-      ],
-      "shaclShapes": {},
-      "ontology": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-land-parcels/_sources/ontology/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-land-parcels/build/generateddocs/markdown/ladm/land-parcels/ontology/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-land-parcels/build/generateddocs/json-full/ladm/land-parcels/ontology/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-land-parcels/bblock/ogc.ladm.land-parcels.ontology"
-        }
-      }
-    },
-    {
       "itemIdentifier": "ogc.ladm.land-parcels.spatialRepresentationDefinition",
       "name": "Spatial Representation Definition",
       "highlighted": true,
@@ -153,9 +118,9 @@
       ],
       "superBBlock": false,
       "shaclShapes": {},
+      "dateOfLastChange": "2026-10-26",
       "ldContext": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/context.jsonld",
       "ontology": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl",
-      "dateOfLastChange": "2026-08-21",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/schema.yaml",
         "application/json": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/schema.json"
@@ -214,9 +179,9 @@
       "dependsOn": [
         "bblocks://ogc.ladm.land-parcels.spatialRepresentationDefinition"
       ],
+      "dateOfLastChange": "2026-10-26",
       "ldContext": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/context.jsonld",
       "ontology": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/ontology.ttl",
-      "dateOfLastChange": "2026-08-21",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/schema.yaml",
         "application/json": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/schema.json"
@@ -243,6 +208,48 @@
       }
     },
     {
+      "itemIdentifier": "ogc.ladm.land-parcels.ontology",
+      "name": "Land Parcels Ontology",
+      "highlighted": true,
+      "abstract": "Terms and definitions for the Land Parcels model.  This is aligned with LADM semantics and terminology and could be evolved or mapped to an authoritative LADM ontology component as required/",
+      "status": "under-development",
+      "dateTimeAddition": "2023-09-18T00:00:00Z",
+      "itemClass": "model",
+      "register": "ogc-incubator",
+      "version": "0.1",
+      "dateOfLastChange": "2026-10-26",
+      "dependsOn": [
+        "bblocks://ogc.bbr.utils.compoundName.ontology"
+      ],
+      "sources": [],
+      "scope": "dev",
+      "tags": [
+        "OSPD"
+      ],
+      "shaclShapes": {
+        "ogc.bbr.utils.compoundName.ontology": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+        ]
+      },
+      "ontology": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-land-parcels/_sources/ontology/",
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-land-parcels/build/generateddocs/markdown/ladm/land-parcels/ontology/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-land-parcels/build/generateddocs/json-full/ladm/land-parcels/ontology/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-land-parcels/bblock/ogc.ladm.land-parcels.ontology"
+        }
+      }
+    },
+    {
       "itemIdentifier": "ogc.ladm.land-parcels.parcel",
       "name": "Land Parcel",
       "highlighted": true,
@@ -251,35 +258,35 @@
       "dateTimeAddition": "2024-06-03T00:00:00Z",
       "itemClass": "schema",
       "dependsOn": [
-        "bblocks://ogc.ladm.land-parcels.ontology",
+        "bblocks://ogc.bbr.utils.compoundName.schema",
         "bblocks://ogc.geo.json-fg.feature-lenient",
-        "bblocks://ogc.ladm.land-parcels.parcelSpatialRepresentationDefinition",
         "bblocks://ogc.geo.topo.features.topo-feature",
-        "bblocks://ogc.ogc-utils.iri-or-curie",
         "bblocks://ogc.geo.topo.features.topo-feature-multi-collection",
-        "bblocks://ogc.bbr.utils.compoundName"
+        "bblocks://ogc.ladm.land-parcels.ontology",
+        "bblocks://ogc.ladm.land-parcels.parcelSpatialRepresentationDefinition",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
       "register": "ogcincubator",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-16",
+      "dateOfLastChange": "2026-10-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "shaclShapes": {
+        "ogc.bbr.utils.compoundName.ontology": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+        ],
         "ogc.geo.features.feature": [
           "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
         ],
         "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
         ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
         ],
         "ogc.geo.features.featureCollection": [
           "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
-        ],
-        "ogc.bbr.utils.compoundName": [
-          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
         ]
       },
       "ldContext": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcel/context.jsonld",
@@ -386,7 +393,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-09-16",
+      "dateOfLastChange": "2026-10-26",
       "link": "https://github.com/opengeospatial/bblock-template",
       "shaclShapes": {
         "ogc.geo.features.featureCollection": [
@@ -395,23 +402,23 @@
         "ogc.geo.features.feature": [
           "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
         ],
-        "ogc.geo.topo.features.topo-feature": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
-        ],
         "ogc.geo.topo.features.topo-feature-collection": [
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
         ],
-        "ogc.bbr.utils.compoundName": [
-          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl"
+        "ogc.geo.topo.features.topo-feature": [
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+          "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
+        ],
+        "ogc.bbr.utils.compoundName.ontology": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
         ]
       },
       "dependsOn": [
         "bblocks://ogc.geo.json-fg.featureCollection-lenient",
+        "bblocks://ogc.geo.topo.features.topo-feature-collection",
         "bblocks://ogc.ladm.land-parcels.parcel",
-        "bblocks://ogc.ladm.land-parcels.parcelSpatialRepresentationDefinition",
-        "bblocks://ogc.geo.topo.features.topo-feature-collection"
+        "bblocks://ogc.ladm.land-parcels.parcelSpatialRepresentationDefinition"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelCollection/schema.yaml",

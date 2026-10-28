@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation",
   "bblockName": "Miscellaneous Tenure Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.miscellaneousTenure",
-  "generated": "2026-10-16T17:17:05.136913+00:00",
+  "generated": "2026-10-27T13:11:36.601050+00:00",
   "result": true,
   "items": [
     {
@@ -74,6 +74,10 @@
           "title": "SHACL",
           "entries": [
             {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl"
+            },
+            {
               "op": "shacl-report",
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
@@ -88,30 +92,36 @@
                 },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N82ade4a77b5245f8be0d23182dc24661",
-                    "_:Nba3021a9c8c14f4cae4996748b4e0d78"
+                    "_:Ne1eeec88ffe245e3b70f914c7387b607",
+                    "_:N14130a52214c4d26806f680f32bee4c3"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N82ade4a77b5245f8be0d23182dc24661,_:Nba3021a9c8c14f4cae4996748b4e0d78\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:Ne1eeec88ffe245e3b70f914c7387b607,_:N14130a52214c4d26806f680f32bee4c3\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                "_:n32fc2645eb1b489fa3cd0316d3fef480b1": {
+                ":NamePartShape": {
+                  "nodes": []
+                },
+                ":MeasureShape": {
+                  "nodes": []
+                },
+                ":CompoundNameShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n32fc2645eb1b489fa3cd0316d3fef480b1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :MeasureShape: *none*\n - Shape :CompoundNameShape: *none*\n"
             }
           ]
         }
@@ -186,6 +196,10 @@
           "title": "SHACL",
           "entries": [
             {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl"
+            },
+            {
               "op": "shacl-report",
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
@@ -200,31 +214,37 @@
                 },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N11eade6959ad449b9dc1feaf361ed1e5",
-                    "_:Nbb342ca1f17d4864a1bb78e30f507420",
-                    "_:N2f8be7db29144823b5da2614ddd5da7a"
+                    "_:N963b2e20c7a1451aae9c4e8d9e3597bc",
+                    "_:N53c4cb9631874de986ef2cd5c5dbbab4",
+                    "_:N304da3618ee047a08a377aef3a424a84"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N11eade6959ad449b9dc1feaf361ed1e5,_:Nbb342ca1f17d4864a1bb78e30f507420,_:N2f8be7db29144823b5da2614ddd5da7a\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N963b2e20c7a1451aae9c4e8d9e3597bc,_:N53c4cb9631874de986ef2cd5c5dbbab4,_:N304da3618ee047a08a377aef3a424a84\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                "_:n32fc2645eb1b489fa3cd0316d3fef480b1": {
+                ":NamePartShape": {
+                  "nodes": []
+                },
+                ":MeasureShape": {
+                  "nodes": []
+                },
+                ":CompoundNameShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n32fc2645eb1b489fa3cd0316d3fef480b1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :MeasureShape: *none*\n - Shape :CompoundNameShape: *none*\n"
             }
           ]
         }
@@ -288,6 +308,10 @@
           "title": "SHACL",
           "entries": [
             {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl"
+            },
+            {
               "op": "shacl-report",
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
@@ -302,31 +326,37 @@
                 },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N67aee5f0be29469a9250d9af286e6448",
-                    "_:N300286a3cc97468c92378f6a48b2caf4",
-                    "_:N003bc6610e814098b7128f2670a73fef"
+                    "_:N29232ea4bcba41f0af939e4722904c2f",
+                    "_:N70bae4106bba4f658c4eda4a7e16631f",
+                    "_:Nd811a18b5a024f8e89d78f98933e6046"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N67aee5f0be29469a9250d9af286e6448,_:N300286a3cc97468c92378f6a48b2caf4,_:N003bc6610e814098b7128f2670a73fef\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N29232ea4bcba41f0af939e4722904c2f,_:N70bae4106bba4f658c4eda4a7e16631f,_:Nd811a18b5a024f8e89d78f98933e6046\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                "_:n32fc2645eb1b489fa3cd0316d3fef480b1": {
+                ":NamePartShape": {
+                  "nodes": []
+                },
+                ":MeasureShape": {
+                  "nodes": []
+                },
+                ":CompoundNameShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/rules.shacl:\n - Shape _:n32fc2645eb1b489fa3cd0316d3fef480b1: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :MeasureShape: *none*\n - Shape :CompoundNameShape: *none*\n"
             }
           ]
         }

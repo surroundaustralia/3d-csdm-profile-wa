@@ -210,7 +210,7 @@
       "id": "vectorobservation:computed",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:d",
+      "usedProcedure": "wa-procedure-used:described",
       "properties": {
         "resultTime": "2011-05-22T00:00:00Z",
         "observedProperty": "surveyable:VectorDetermination",
@@ -336,7 +336,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -352,7 +352,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -368,7 +368,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -384,7 +384,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:I",
+            "vectorPurpose": "wa-vector-purpose:lot-boundary",
             "comment": null
           }
         },
@@ -400,7 +400,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         },
@@ -416,7 +416,7 @@
             ]
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null
           }
         }
@@ -430,32 +430,32 @@
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:jb",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "representationStatus": "representation-status:jurisdictionally-bounded",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:dur",
+              "state": "vertical-extent-status:defined-but-unresolved",
               "definitionRef": "jurisdictional-limit-lower-1"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:rrs",
+          "computabilityStatus": "computability-status:requires-reference-surface",
           "verticalBoundaryDefinitions": [
             {
               "id": "jurisdictional-limit-lower-1",
-              "definitionType": "vertical-definition-type:jur",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:jurisdictional-boundary-rule",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 12.19,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "LIMITED IN DEPTH TO 12.19 METRES BELOW GROUND",
               "sourceReference": "source-crown-grant-depth-limit-1",
               "resolutionStatus": "requiresReferenceSurface",
@@ -469,7 +469,7 @@
           ],
           "referenceSurfaces": [],
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },

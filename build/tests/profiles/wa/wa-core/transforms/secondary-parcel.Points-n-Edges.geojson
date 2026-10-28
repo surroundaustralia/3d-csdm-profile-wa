@@ -553,7 +553,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220170"
@@ -574,7 +574,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220171"
@@ -595,7 +595,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220172"
@@ -616,7 +616,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220173"
@@ -637,7 +637,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220174"
@@ -658,7 +658,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220175"
@@ -679,7 +679,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220176"
@@ -700,7 +700,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220177"
@@ -721,7 +721,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220178"
@@ -742,7 +742,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220189"
@@ -763,7 +763,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220190"
@@ -784,7 +784,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220191"
@@ -805,7 +805,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220192"
@@ -826,7 +826,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220207"
@@ -847,7 +847,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220208"
@@ -868,7 +868,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220209"
@@ -889,7 +889,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220210"
@@ -910,7 +910,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220211"
@@ -931,7 +931,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220212"
@@ -952,7 +952,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220213"
@@ -973,7 +973,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220214"
@@ -994,7 +994,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220215"
@@ -1015,7 +1015,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220219"
@@ -1036,7 +1036,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220222"
@@ -1057,7 +1057,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null
       },
       "id": "20220243"
@@ -1078,7 +1078,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220244"
@@ -1099,7 +1099,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220245"
@@ -1120,7 +1120,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220246"
@@ -1141,7 +1141,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220247"
@@ -1162,7 +1162,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220248"
@@ -1183,7 +1183,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220249"
@@ -1204,7 +1204,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:E",
+        "vectorPurpose": "wa-vector-purpose:easement",
         "comment": null
       },
       "id": "20220250"
@@ -1225,7 +1225,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220299"
@@ -1246,7 +1246,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:I",
+        "vectorPurpose": "wa-vector-purpose:lot-boundary",
         "comment": null
       },
       "id": "20220300"

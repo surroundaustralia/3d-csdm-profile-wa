@@ -57,10 +57,10 @@ A name with a label, but also a set of parts with roles that can be validated ag
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "Mammang Koort / King George Sound" ;
-    dcterms:hasPart [ rdfs:label "Mammang Koort" ;
-            commonpatterns:namePartType <wa:indigenousName> ],
-        [ rdfs:label "King George Sound" ;
-            commonpatterns:namePartType <wa:placeName> ] .
+    dcterms:hasPart [ rdfs:label "King George Sound" ;
+            commonpatterns:namePartType <wa:placeName> ],
+        [ rdfs:label "Mammang Koort" ;
+            commonpatterns:namePartType <wa:indigenousName> ] .
 
 
 ```
@@ -72,6 +72,11 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: Compound Name
 allOf:
 - $ref: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/waAppellationNamespaces/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.datatypes.dualName
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-27'
 
 ```
 
@@ -118,12 +123,10 @@ Links to the schema:
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-monument-form": "vocabs:wa-monument-form/",
     "wa-vector-purpose": "vocabs:wa-vector-purpose/",
-    "wa-vector-type": "vocabs:wa-vector-type/",
     "wa-secondary-parcel-purpose": "vocabs:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "vocabs:wa-secondary-purpose/",
     "wa-interest-type": "vocabs:wa-interest-type/",
-    "wa-interest": "vocabs:wa-interest/",
     "wa-locality": "vocabs:wa-locality/",
     "wa-local-government": "vocabs:wa-local-government/",
     "@version": 1.1

@@ -1,0 +1,23 @@
+# IMPLEMENTATION-LOCAL (decision D12): wa-prov-role stays with the processing pipeline and is
+# not for publication. Use this file only if that decision changes.
+# ConceptScheme metadata for wa-prov-role.csv (sidecar for scripts/build_vocabs.py).
+# Draft for the uplift owner: confirm creator, publisher and status before publication.
+# Concepts and top concepts come from the CSV; only scheme-level metadata belongs here.
+PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-prov-role>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+cs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "WA Provenance Role" ;
+    skos:definition "Roles played by software components and source files in the WA CSD processing workflow." ;
+    skos:historyNote "2026-10-16 Drafted by the Surround team during the WA vocabulary cleanup (decisions D1-D12, vocab-review.md section 5.10). Status experimental until reviewed by the custodian." ;
+    schema:creator <https://linked.data.gov.au/org/csdm-pg> ;
+    schema:publisher <https://linked.data.gov.au/org/icsm> ;
+    schema:dateCreated "2026-09-22"^^xsd:date ;
+    schema:dateModified "2026-10-16"^^xsd:date ;
+    schema:keywords unggim:LandParcels ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+.

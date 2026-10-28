@@ -179,9 +179,9 @@
       "id": "vectorobservation:t-band",
       "type": "FeatureCollection",
       "featureType": "sosa:ObservationCollection",
-      "usedProcedure": "wa-procedure-used:m",
+      "usedProcedure": "wa-procedure-used:measured",
       "properties": {
-        "resultTime": "1970-04-10",
+        "resultTime": "1970-04-10T00:00:00",
         "observedProperty": "surveyable:VectorDetermination",
         "madeBySensor": {
           "sensorType": "icsm-equipment-type:t-band"
@@ -193,7 +193,7 @@
           "geometry": null,
           "properties": {
             "hasFeatureOfInterest": "c1853004",
-            "resultTime": "1970-04-10",
+            "resultTime": "1970-04-10T00:00:00",
             "hasResult": {
               "distance": 25.552,
               "angle": 285.15519551238583
@@ -247,7 +247,7 @@
             "orientation": "cw"
           },
           "properties": {
-            "vectorPurpose": "wa-vector-purpose:R",
+            "vectorPurpose": "wa-vector-purpose:road-boundary",
             "comment": null,
             "arcLength": 25.615,
             "radius": 105.438,

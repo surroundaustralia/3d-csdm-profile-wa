@@ -17,8 +17,9 @@ else
   WORKSPACE_DIR="$(pwd)"
 fi
 
-MSYS_NO_PATHCONV=1  docker run -it --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" ${VOLUMES} \
-  ghcr.io/opengeospatial/bblocks-postprocess \
+# -it only when attached to a terminal (fails under agents/CI otherwise)
+MSYS_NO_PATHCONV=1  docker run $([ -t 0 ] && [ -t 1 ] && echo -it ) --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" ${VOLUMES} \
+  ghcr.io/opengeospatial/bblocks-postprocess:${BBP_IMAGE_TAG:-latest} \
   --clean true --base-url http://localhost:9090/register/ "$@"
 
 

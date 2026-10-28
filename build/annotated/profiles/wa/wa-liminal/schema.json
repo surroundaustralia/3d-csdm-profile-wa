@@ -55,12 +55,24 @@
     "vertical-extent-status": "https://linked.data.gov.au/def/csdm/vertical-extent-status/",
     "computability-status": "https://linked.data.gov.au/def/csdm/computability-status/",
     "coordinate-z-role": "https://linked.data.gov.au/def/csdm/coordinate-z-role/",
-    "vertical-boundary-state": "https://linked.data.gov.au/def/csdm/vertical-boundary-state/",
     "vertical-definition-type": "https://linked.data.gov.au/def/csdm/vertical-definition-type/",
-    "vertical-limit-role": "https://linked.data.gov.au/def/csdm/vertical-limit-role/",
     "vertical-value-type": "https://linked.data.gov.au/def/csdm/vertical-value-type/",
     "vertical-direction": "https://linked.data.gov.au/def/csdm/vertical-direction/",
     "height-reference": "https://linked.data.gov.au/def/csdm/height-reference/",
+    "boundary-role": "https://linked.data.gov.au/def/csdm/boundary-role/",
+    "boundary-reference": "https://linked.data.gov.au/def/csdm/boundary-reference/",
+    "component-role": "https://linked.data.gov.au/def/csdm/component-role/",
+    "occupation-feature": "https://linked.data.gov.au/def/csdm/occupation-feature/",
+    "source-scope": "https://linked.data.gov.au/def/csdm/source-scope/",
+    "reference-kind": "https://linked.data.gov.au/def/csdm/reference-kind/",
+    "derivation-mechanism": "https://linked.data.gov.au/def/csdm/derivation-mechanism/",
+    "derived-geometry-status": "https://linked.data.gov.au/def/csdm/derived-geometry-status/",
     "uuid": "urn:uuid:"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "icsm.profiles.wa.wa-liminal",
+    "register": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-10-27"
   }
 }

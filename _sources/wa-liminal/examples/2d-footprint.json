@@ -213,7 +213,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -245,7 +245,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -277,7 +277,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -309,7 +309,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -414,8 +414,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -429,8 +428,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -444,8 +442,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -459,8 +456,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -626,23 +622,23 @@
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:und",
+            "status": "vertical-extent-status:undefined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -701,23 +697,23 @@
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 2,
             "zValueRole": "coordinate-z-role:absent"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -829,15 +825,15 @@
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     }
   ]
 }

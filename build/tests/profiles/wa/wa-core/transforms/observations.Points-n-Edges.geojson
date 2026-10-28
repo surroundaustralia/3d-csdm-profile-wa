@@ -111,7 +111,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:N",
+        "vectorPurpose": "wa-vector-purpose:control-network",
         "comment": null
       },
       "id": "20805296"
@@ -132,7 +132,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:N",
+        "vectorPurpose": "wa-vector-purpose:control-network",
         "comment": null
       },
       "id": "20805060"

@@ -128,7 +128,7 @@
         ]
       },
       "properties": {
-        "vectorPurpose": "wa-vector-purpose:R",
+        "vectorPurpose": "wa-vector-purpose:road-boundary",
         "comment": null,
         "arcLength": 25.615,
         "radius": 105.438,

@@ -262,10 +262,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -299,7 +299,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -333,7 +333,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -364,10 +364,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -398,10 +398,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -432,10 +432,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -466,10 +466,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -500,10 +500,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -537,7 +537,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -571,7 +571,7 @@
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
-            "methodEstablished": "wa-pt-method:T",
+            "methodEstablished": "wa-surveypoint-method:T",
             "monumentedBy": {
               "form": "wa-monument-form:other",
               "condition": "wa-monument-condition:ok",
@@ -602,10 +602,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -636,10 +636,10 @@
           },
           "properties": {
             "name": "",
-            "purpose": "wa-surveypoint-purpose:derived-boundary",
+            "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
-            "methodEstablished": "wa-pt-method:G",
+            "methodEstablished": "wa-surveypoint-method:G",
             "monumentedBy": {
               "form": "wa-monument-form:cadastral-point-unmarked",
               "condition": "wa-monument-condition:ok",
@@ -744,8 +744,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -759,8 +758,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -774,8 +772,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         },
         {
@@ -789,8 +786,7 @@
               "angle": 90.0
             },
             "angleAccuracy": 0.0056,
-            "angleType": "icsm-angle-type:angle",
-            "angleDerivation": "wa-angle-derivation:M"
+            "angleType": "icsm-angle-type:angle"
           }
         }
       ]
@@ -2229,35 +2225,35 @@
       "featureType": "PrimaryParcel",
       "properties": {
         "spatialRepresentationDefinitions": {
-          "representationStatus": "representation-status:d3d",
-          "geometryLegalStatus": "geometry-legal-status:dfld",
+          "representationStatus": "representation-status:derived-3d",
+          "geometryLegalStatus": "geometry-legal-status:derived-from-legal-description",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:dbg"
+            "zValueRole": "coordinate-z-role:derived-boundary-geometry"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:dfld",
+            "status": "vertical-extent-status:legally-defined",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:drv",
+              "state": "vertical-extent-status:derived",
               "definitionRef": "relative-limit-lower-1",
               "geometryRef": "uuid:82b3d84c-b6eb-400e-bb86-83f67d9c7a45"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:drv",
+              "state": "vertical-extent-status:derived",
               "definitionRef": "relative-limit-upper-1",
               "geometryRef": "uuid:350d3b01-a2cc-415b-8f9b-8ed12bb6fc0d"
             }
           },
-          "computabilityStatus": "computability-status:cd",
+          "computabilityStatus": "computability-status:computed",
           "verticalBoundaryDefinitions": [
             {
               "id": "relative-limit-lower-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ll",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:lower",
+              "valueType": "vertical-value-type:offset",
               "value": 2,
-              "direction": "vertical-direction:blw",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:below",
+              "heightReference": "height-reference:ground-level",
               "description": "2 metres below ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "resolved",
@@ -2265,12 +2261,12 @@
             },
             {
               "id": "relative-limit-upper-1",
-              "definitionType": "vertical-definition-type:rel",
-              "limitRole": "vertical-limit-role:ul",
-              "valueType": "vertical-value-type:off",
+              "definitionType": "vertical-definition-type:relative-height-description",
+              "limitRole": "boundary-role:upper",
+              "valueType": "vertical-value-type:offset",
               "value": 12,
-              "direction": "vertical-direction:abv",
-              "heightReference": "height-reference:gl",
+              "direction": "vertical-direction:above",
+              "heightReference": "height-reference:ground-level",
               "description": "12 metres above ground level",
               "sourceReference": "source-height-description-dp431276-lot800",
               "resolutionStatus": "resolved",
@@ -2280,14 +2276,14 @@
           "referenceSurfaces": [
             {
               "id": "surface-ground-1",
-              "surfaceType": "height-reference:gl",
-              "geometryLegalStatus": "geometry-legal-status:obs",
+              "surfaceType": "height-reference:ground-level",
+              "geometryLegalStatus": "geometry-legal-status:observed",
               "ref": "uuid:ca9c4381-9422-4bbb-8f05-c8a835831933",
               "boundedByFootprint": true
             }
           ],
           "derivedGeometry": {
-            "status": "solidGenerated",
+            "status": "derived-geometry-status:generated",
             "geometryType": "Solid",
             "solidRef": "uuid:fbefade9-9cda-4826-9327-3ba8796191f5",
             "inputFootprintRef": "parcel-footprint-1",
@@ -2363,23 +2359,23 @@
       "properties": {
         "spatialRepresentationDefinitions": {
           "representationStatus": "representation-status:2d",
-          "geometryLegalStatus": "geometry-legal-status:a2d",
+          "geometryLegalStatus": "geometry-legal-status:authoritative-2d",
           "coordinateRepresentation": {
             "coordinateDimension": 3,
-            "zValueRole": "coordinate-z-role:rs"
+            "zValueRole": "coordinate-z-role:reference-surface"
           },
           "verticalExtent": {
-            "status": "vertical-extent-status:ns",
+            "status": "vertical-extent-status:not-supplied",
             "lowerBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             },
             "upperBoundary": {
-              "state": "vertical-boundary-state:und"
+              "state": "vertical-extent-status:undefined"
             }
           },
-          "computabilityStatus": "computability-status:nc",
+          "computabilityStatus": "computability-status:not-computable",
           "derivedGeometry": {
-            "status": "notGenerated"
+            "status": "derived-geometry-status:not-generated"
           }
         }
       },
@@ -2521,20 +2517,20 @@
   "annotations": [
     {
       "description": "Subject to Material Change and WAPC approval.",
-      "role": "wa-annotation-role:sp",
+      "role": "wa-annotation:sp",
       "lodged": {
         "date": "2026-01-02"
       }
     },
     {
-      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1955",
+      "description": "Survey carried out under Regulation 4 Compiled Plan of Transfer of Land (Surveys) Regulations 1995",
       "href": "wa-leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf",
-      "role": "wa-annotation-role:r-4"
+      "role": "wa-annotation:r-4"
     },
     {
       "id": "source-height-description-dp431276-lot800",
       "description": "Lot 800 is limited in vertical extent from 2 metres below ground level to 12 metres above ground level.",
-      "role": "wa-annotation-role:height-limit-description",
+      "role": "wa-annotation:height-limit-description",
       "sourceAuthorityType": "wa-survey-type:deposited-plan",
       "sourceLocation": {
         "page": 2,
@@ -2546,12 +2542,12 @@
       "definesVerticalBoundaries": [
         {
           "definitionRef": "relative-limit-lower-1",
-          "limitRole": "vertical-limit-role:ll",
+          "limitRole": "boundary-role:lower",
           "sourceStatement": "2 metres below ground level"
         },
         {
           "definitionRef": "relative-limit-upper-1",
-          "limitRole": "vertical-limit-role:ul",
+          "limitRole": "boundary-role:upper",
           "sourceStatement": "12 metres above ground level"
         }
       ]

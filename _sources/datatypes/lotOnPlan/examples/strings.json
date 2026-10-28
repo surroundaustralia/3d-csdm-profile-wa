@@ -2,7 +2,7 @@
      "type": "wa:LotOnPlanAppellation",
     "label": "Lot 4 on Plan 1234",
     "hasPart": [
-      { "type": "surveyType", "ref": "wa-survey-type:p" },
+      { "type": "surveyType", "ref": "wa-survey-type:deposited-plan" },
       { "type": "surveyNumber", "label": "1234" },
       { "type": "lotPrefix", "ref": "wa-parcel-purpose:lot" },
       { "type": "lotNumber", "label": "4" }

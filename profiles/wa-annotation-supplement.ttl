@@ -1,12 +1,14 @@
 PREFIX : <https://linked.data.gov.au/def/csdm/wa-annotation/>
 PREFIX cs: <https://linked.data.gov.au/def/csdm/wa-annotation>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX doctype: <https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX termtype: <https://linked.data.gov.au/def/csdm/termtypes/>
 PREFIX unggim: <https://linked.data.gov.au/def/unggim-themes/>
+PREFIX vertical-definition-type: <https://linked.data.gov.au/def/csdm/vertical-definition-type/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # Local supplement to the published WA CSD Annotation vocabulary.
@@ -17,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         skos:Concept ,
         termtype:Annotation ;
-    skos:definition "Survey carried out under Regulation 4 Compiled Plan, Transfer of Land (Surveys) Regulations 1955" ;
+    skos:definition "Survey carried out under Regulation 4 Compiled Plan, Transfer of Land (Surveys) Regulations 1995" ;
     skos:inScheme cs: ;
     skos:notation "r-4" ;
     skos:prefLabel "Regulation 4 Compiled Plan" ;
@@ -52,6 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:notation "boundary-definition-statement" ;
     skos:prefLabel "Boundary definition statement" ;
+    skos:related vertical-definition-type:building-referenced-boundary ;
     skos:topConceptOf cs: ;
 .
 
@@ -63,6 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:notation "licensed-valuer-certification" ;
     skos:prefLabel "Licensed valuer certification" ;
+    skos:related doctype:scheme-ue ;
     skos:topConceptOf cs: ;
 .
 
@@ -74,6 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:notation "building-approval-certification" ;
     skos:prefLabel "Building approval certification" ;
+    skos:related doctype:building-approval-certificate ;
     skos:topConceptOf cs: ;
 .
 
@@ -81,10 +86,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         skos:Concept ,
         termtype:Annotation ;
-    skos:definition "Plan annotation recording endorsement of a strata plan by a local government under section 15(4) of the Strata Titles Act 1985, including the local government reference and the date of endorsement" ;
+    skos:definition "Plan annotation recording the unconditional approval and endorsement of a built-strata or survey-strata plan under section 15(4) of the Strata Titles Act 1985 by the Western Australian Planning Commission (WAPC) or its authorised delegate, such as a local government exercising delegated authority, including the endorsement reference and the date of endorsement" ;
     skos:inScheme cs: ;
     skos:notation "strata-plan-endorsement" ;
     skos:prefLabel "Strata plan endorsement" ;
+    skos:related doctype:strata-plan-endorsement-certificate ;
     skos:topConceptOf cs: ;
 .
 
@@ -96,5 +102,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:notation "record-of-strata-titles-scheme" ;
     skos:prefLabel "Record of strata titles scheme" ;
+    skos:related doctype:scheme-record-form ;
     skos:topConceptOf cs: ;
 .

@@ -17,7 +17,7 @@ Example appellation.
      "type": "wa:LotOnPlanAppellation",
     "label": "Lot 4 on Plan 1234",
     "hasPart": [
-      { "type": "surveyType", "ref": "wa-survey-type:p" },
+      { "type": "surveyType", "ref": "wa-survey-type:deposited-plan" },
       { "type": "surveyNumber", "label": "1234" },
       { "type": "lotPrefix", "ref": "wa-parcel-purpose:lot" },
       { "type": "lotNumber", "label": "4" }
@@ -35,7 +35,7 @@ Example appellation.
   "hasPart": [
     {
       "type": "surveyType",
-      "ref": "wa-survey-type:p"
+      "ref": "wa-survey-type:deposited-plan"
     },
     {
       "type": "surveyNumber",
@@ -62,13 +62,13 @@ Example appellation.
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "1234" ;
+    dcterms:hasPart [ rdfs:label "4" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
+        [ rdfs:label "1234" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
-        [ rdfs:label "4" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
-        [ commonpatterns:namePartRef wa-survey-type:p ;
+        [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ] .
 
 
@@ -88,6 +88,11 @@ allOf:
       - const: wa:LotOnPlanAppellation
   required:
   - type
+x-bblocks-metadata:
+  itemIdentifier: icsm.profiles.wa.datatypes.lotOnPlan
+  register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-27'
 
 ```
 
@@ -134,12 +139,10 @@ Links to the schema:
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-monument-form": "vocabs:wa-monument-form/",
     "wa-vector-purpose": "vocabs:wa-vector-purpose/",
-    "wa-vector-type": "vocabs:wa-vector-type/",
     "wa-secondary-parcel-purpose": "vocabs:wa-secondary-parcel-purpose/",
     "wa-secondary-parcel-type": "vocabs:wa-secondary-parcel-type/",
     "wa-secondary-purpose": "vocabs:wa-secondary-purpose/",
     "wa-interest-type": "vocabs:wa-interest-type/",
-    "wa-interest": "vocabs:wa-interest/",
     "wa-locality": "vocabs:wa-locality/",
     "wa-local-government": "vocabs:wa-local-government/",
     "@version": 1.1
