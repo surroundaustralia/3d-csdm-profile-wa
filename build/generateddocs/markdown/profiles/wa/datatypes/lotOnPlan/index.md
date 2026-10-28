@@ -62,12 +62,12 @@ Example appellation.
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "1234" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
-        [ rdfs:label "4" ;
+    dcterms:hasPart [ rdfs:label "4" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
+        [ rdfs:label "1234" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
         [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ] .
 
