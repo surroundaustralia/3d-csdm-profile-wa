@@ -53,7 +53,7 @@ The CSDM is a modular specification based on OGC and other standards, implemente
 
 This diagram shows the WA Profile in development 
 
-![WA profile component architecture](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/architecure/component-architecture.svg)
+![WA profile component architecture](assets/architecture/component-architecture.svg)
 
 ### Building Blocks (general architecture)
 
@@ -81,7 +81,7 @@ Transforms can be in-line code snippets or managed re-usable software libraries.
 
 The following diagram shows the broad architecture. 
 
-![WA profile component architecture](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/architecure/bblocks-architecture.svg)
+![WA profile component architecture](assets/architecture/bblocks-architecture.svg)
 
 For more information read the [Building Blocks](https://ogcincubator.github.io/bblocks-docs/) and the sources
 
@@ -89,7 +89,7 @@ For more information read the [Building Blocks](https://ogcincubator.github.io/b
 
 **A vocabulary management system** is necessary for the long term, however a decision on providing this was deferred by the client, and the interim solution devised to support the initial CSDM development has been re-used.  This is not intended to be the permanent solution, CSDM only requires online accessible resources. Run-time (i.e. software) applications are likely to download these as part of configuration for a particular jurisdiction. There is currently no standard model for mapping vocabularies to schemas (although this is an active discussion within OGC and JSON schema working groups.) Hence the implementation architecture described here should be regarded as a short term workaround.
 
-![Interim Vocabulary Definition architecture](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/architecure/bblocks-architecture.svg)
+![Interim Vocabulary Definition architecture](https://surroundaustralia.github.io/3d-csdm-profile-wa/assets/architecture/bblocks-architecture.svg)
 
 "Vocabulary bindings" are managed in the form of a CSV referencing the semantic element (defined by the JSON-LD mapping on the schema), and the "short form" of the vocabulary - e.g `vocabs:wa-survey-purpose`.  The ICSM vocabulary repository manages the content of these vocabularies - e.g. https://github.com/surroundaustralia/icsm-vocabs/blob/main/source/LandParcels/CSD-Header/wa-survey-purpose.csv
 
