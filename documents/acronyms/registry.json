@@ -490,6 +490,69 @@
       ]
     },
     {
+      "id": "prov--provenance",
+      "acronym": "PROV",
+      "aliases": [],
+      "expansion": "Provenance",
+      "definition": {
+        "text": "A W3C family of specifications for describing the provenance of data: the entities, activities and agents involved in producing it.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": "shacl--shapes-constraint-language",
+      "acronym": "SHACL",
+      "aliases": [],
+      "expansion": "Shapes Constraint Language",
+      "definition": {
+        "text": "A W3C language for describing constraints on RDF data and for validating RDF graphs against them.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": "sosa--sensor-observation-sample-and-actuator",
+      "acronym": "SOSA",
+      "aliases": [],
+      "expansion": "Sensor, Observation, Sample, and Actuator",
+      "definition": {
+        "text": "A lightweight W3C and OGC ontology for describing sensors, observations, sampling and actuation, and the procedures behind them.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
       "id": "wa--western-australia",
       "acronym": "WA",
       "aliases": [],

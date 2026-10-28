@@ -1,0 +1,10 @@
+{
+  "manifestVersion": "1.0",
+  "project": "3d-csdm-profile-wa",
+  "sources": [{"type": "markdown", "path": "architecture-contribution.md"}],
+  "acronymList": "architecture-contribution_acronyms.json",
+  "acronymOutput": "architecture-contribution_acronyms.json",
+  "selection": "architecture-contribution_acronym-selection.json",
+  "export": {"descriptionPolicy": "definition", "separator": ": "},
+  "detection": {"ignore": ["ID", "SURROUND", "TOC", "SP83687"]}
+}

@@ -1,3 +1,69 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "acr-001",
+      "acronym": "2D",
+      "description": "Two-dimensional: Having or representing extent in two spatial dimensions, such as easting and northing."
+    },
+    {
+      "id": "acr-002",
+      "acronym": "3D",
+      "description": "Three-dimensional: Having or representing extent in three spatial dimensions, usually width, depth and height, or easting, northing and elevation."
+    },
+    {
+      "id": "acr-003",
+      "acronym": "3D CSDM",
+      "description": "3D Cadastral Survey Data Model: A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions."
+    },
+    {
+      "id": "acr-004",
+      "acronym": "API",
+      "description": "Application Programming Interface: A defined set of operations and data formats through which software components or systems exchange requests and data."
+    },
+    {
+      "id": "acr-005",
+      "acronym": "CSD",
+      "description": "Cadastral Survey Dataset: The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities."
+    },
+    {
+      "id": "acr-006",
+      "acronym": "ICSM",
+      "description": "Intergovernmental Committee on Surveying and Mapping: The committee of Australian and New Zealand government agencies that coordinates national surveying, mapping, cadastral and geodetic standards."
+    },
+    {
+      "id": "acr-007",
+      "acronym": "JSON",
+      "description": "JavaScript Object Notation: A lightweight, text-based format for structured data, built from name–value pairs and ordered lists."
+    },
+    {
+      "id": "acr-008",
+      "acronym": "NGSC",
+      "description": "Next Generation Spatial Cadastre: Landgate's programme to replace Western Australia's cadastral systems with a spatially accurate, three-dimensional-capable digital cadastre."
+    },
+    {
+      "id": "acr-009",
+      "acronym": "OGC",
+      "description": "Open Geospatial Consortium: An international not-for-profit consortium that develops open standards for geospatial content and services."
+    },
+    {
+      "id": "acr-010",
+      "acronym": "PROV",
+      "description": "Provenance: A W3C family of specifications for describing the provenance of data: the entities, activities and agents involved in producing it."
+    },
+    {
+      "id": "acr-011",
+      "acronym": "SHACL",
+      "description": "Shapes Constraint Language: A W3C language for describing constraints on RDF data and for validating RDF graphs against them."
+    },
+    {
+      "id": "acr-012",
+      "acronym": "SOSA",
+      "description": "Sensor, Observation, Sample, and Actuator: A lightweight W3C and OGC ontology for describing sensors, observations, sampling and actuation, and the procedures behind them."
+    },
+    {
+      "id": "acr-013",
+      "acronym": "WA",
+      "description": "Western Australia: The Australian state covering the western third of the continent."
+    }
+  ]
 }

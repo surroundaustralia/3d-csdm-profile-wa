@@ -1,0 +1,74 @@
+{
+  "selectionVersion": "1.0",
+  "project": "3d-csdm-profile-wa",
+  "descriptionPolicy": "definition",
+  "separator": ": ",
+  "entries": [
+    {
+      "acronym": "2D",
+      "record": "2d--two-dimensional",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "3D",
+      "record": "3d--three-dimensional",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "3D CSDM",
+      "record": "3d-csdm--3d-cadastral-survey-data-model",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "API",
+      "record": "api--application-programming-interface",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "CSD",
+      "record": "csd--cadastral-survey-dataset",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "ICSM",
+      "record": "icsm--intergovernmental-committee-on-surveying-and-mapping",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "JSON",
+      "record": "json--javascript-object-notation",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "NGSC",
+      "record": "ngsc--next-generation-spatial-cadastre",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "OGC",
+      "record": "ogc--open-geospatial-consortium",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "PROV",
+      "record": "prov--provenance",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "SHACL",
+      "record": "shacl--shapes-constraint-language",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "SOSA",
+      "record": "sosa--sensor-observation-sample-and-actuator",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "WA",
+      "record": "wa--western-australia",
+      "includedBecause": "used"
+    }
+  ],
+  "unresolved": []
+}
