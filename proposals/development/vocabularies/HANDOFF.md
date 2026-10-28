@@ -1,7 +1,8 @@
 # Vocabulary Review — Handoff
 
-**Updated:** 2026-10-18, after the vocabulary cleanup (cleanup Stages [0](#cleanup-stage-0)–[8a](#cleanup-stage-8a)), the final audit rerun ([section 5](#5-rerun-the-audit)), the first downstream migrations ([section 7](#7-downstream-migration)), the `09-migrate` audit check ([section 5](#rerun-09-migrate)) and the handover fixes ([cleanup Stage 9](#cleanup-stage-9), audits `10-handover` and `11-drift`, [section 5](#rerun-handover)).
-**Next:** commit the `wa-core` prefix fixes on `vocab-cleanup/drift-values` and merge that branch into the handover branch, confirm the survey documentation definitions ([section 6](#6-still-open)), hand the drafts to the uplift owner ([section 4](#4-what-the-uplift-owner-receives)), and migrate the remaining downstream repositories ([section 7](#7-downstream-migration)).
+**Updated:** 2026-10-27, with the Landgate response to the built-strata decisions register ([section 8](#8-built-strata-landgate-response)).
+Earlier update: 2026-10-18, after the vocabulary cleanup (cleanup Stages [0](#cleanup-stage-0)–[8a](#cleanup-stage-8a)), the final audit rerun ([section 5](#5-rerun-the-audit)), the first downstream migrations ([section 7](#7-downstream-migration)), the `09-migrate` audit check ([section 5](#rerun-09-migrate)) and the handover fixes ([cleanup Stage 9](#cleanup-stage-9), audits `10-handover` and `11-drift`, [section 5](#rerun-handover)).
+**Next:** phase 2 of the Landgate response (draft vocabulary changes, [section 8](#8-built-strata-landgate-response)), confirm the survey documentation definitions ([section 6](#6-still-open)), hand the drafts to the uplift owner ([section 4](#4-what-the-uplift-owner-receives)), and migrate the remaining downstream repositories ([section 7](#7-downstream-migration)).
 
 | Document | Purpose |
 |---|---|
@@ -18,7 +19,7 @@
 ### Repositories and branches
 
 Each branch is pushed to its own remote branch.
-Only the processWAData branch is merged into `main`.
+As of 2026-10-27 all of them are merged into `main` (`docs/vocab-review-handoff`, `vocab-cleanup/content` and `vocab-cleanup/drift-values` in `3d-csdm-profile-wa`; `vocab-cleanup/uplift-altlabel` in `sa-icsm-vocabs`).
 Each cleanup stage is one commit (see [Cleanup stages](#cleanup-stages)), so it can be reviewed or reverted alone.
 
 | Repository | Branch | What it holds |
@@ -247,7 +248,8 @@ python .claude/skills/vocab-audit/scripts/run_audit.py 11-drift --against 00-bas
 ## 6. Still open
 
 - **Downstream consumers**: see [section 7](#7-downstream-migration).
-- **`entitlementPortion` placement ([D7](vocab-review.md#decision-d7))**: [SP83687](../built-strata/examples/example-1.json) puts it on the lot parcels, but the common schema defines it on `interests[]`; this needs a schema extension (decision register items [9](../built-strata/decisions-register.md#item-9) and [10](../built-strata/decisions-register.md#item-10)).
+- **`entitlementPortion` placement ([D7](vocab-review.md#decision-d7))**: decided 2026-10-27: `entitlementPortion` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-lot`; `entitlementTotal` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-scheme`, as [SP83687](../built-strata/examples/example-1.json) has it.
+  The common schema still defines `entitlementPortion` on `interests[]`, so this needs a schema extension (decision register items [9](../built-strata/decisions-register.md#item-9), [10](../built-strata/decisions-register.md#item-10) and [21](../built-strata/decisions-register.md#item-21)).
 - **Published `related` columns**: 78 published CSVs have a free-text `related` column (labels, not concept references).
   The uplift leaves it unmapped; whether those should become links is for the uplift owner.
 - **[`3d-csdm-profile-icsm/vocabs-uplift.yml`](https://github.com/icsm-au/3d-csdm-profile-icsm/blob/main/vocabs-uplift.yml)** still differs from the fork (read-only for this work).
@@ -311,3 +313,40 @@ Open decisions:
   Each needs a decision in the profile first (section 6).
 
 The earlier one-off scan (processWAData `data/output/vocab-audit/downstream-scan/`, 2026-10-17) is superseded by the skill.
+
+---
+
+## 8. Built-strata: Landgate response
+
+Landgate responded to the built-strata [decisions register](../built-strata/decisions-register.md) on 2026-10-27 (working notes, Rev A; [issue #43](https://github.com/surroundaustralia/3d-csdm-profile-wa/issues/43)).
+The analysis and phased plan are in [`landgate-response-analysis.md`](../built-strata/landgate-response-analysis.md).
+Landgate responded to the register as it stood before [D1](vocab-review.md#decision-d1)–[D12](vocab-review.md#decision-d12); the analysis maps their responses onto the current vocabularies.
+
+### Done
+
+- Phase 1: Landgate's decisions recorded against items 1–18 of the register, new items 19–26 added (section F), and the Status column of [`built-strata-questions.md`](../built-strata/built-strata-questions.md) updated (PR #78).
+- Decided on 2026-10-27:
+  - `entitlementPortion` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-lot`, and `entitlementTotal` of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-scheme` (register item [10](../built-strata/decisions-register.md#item-10), confirming D7).
+  - The [`boundary-reference`](boundary-reference.csv) definitions say "structure" rather than "building" (item [6](../built-strata/decisions-register.md#item-6)).
+
+### Changes still to make
+
+| Phase | Where | Change |
+|---|---|---|
+| 2 | [`vertical-definition-type.csv`](vertical-definition-type.csv) | `building-referenced-boundary` → `structure-referenced-boundary` (altLabels `srb`, `brb`) |
+| 2 | [`boundary-reference.csv`](boundary-reference.csv) | Add `projection-centreline` and `projection-face` (broader `projection`); "structure" for "building" in the definitions |
+| 2 | [`source-scope.csv`](source-scope.csv) | Add `stage` |
+| 2 | [`component-role.csv`](component-role.csv) | Remove exclusive use from `private-use-area` |
+| 2 | [`crosswalk/vocab-crosswalk.csv`](crosswalk/vocab-crosswalk.csv) | Matching rows for the renames |
+| 3 | `sa-icsm-vocabs` (uplift owner) | `wa-secondary-parcel-purpose`: by-law exclusive use and by-law restricted use |
+| 4 | [`example-1.json`](../built-strata/examples/example-1.json), scope note | Renamed terms, 43 `projection` uses reclassified, `stage` scope, component `area`, an exclusive-use `SecondaryParcel`, item 11 worked examples |
+| 5 | Schema proposal | Stage, scheme document and unit-entitlement history (items 19–21) |
+
+### Waiting on Landgate
+
+- Replacement names for `lateral` and `principal-unit` (items [5](../built-strata/decisions-register.md#item-5) and [7](../built-strata/decisions-register.md#item-7)).
+- Whether `scheme-ue` needs separate PDF and digital terms (item [12](../built-strata/decisions-register.md#item-12)).
+- "Exclusive Use" or "By-Law Exclusive Use" (item [13](../built-strata/decisions-register.md#item-13)).
+- Items 19–26 in section F of the register.
+
+Before phase 2, run `/edge-dev:impact-assessment` for the renamed terms; the consumers are listed in the analysis (section 5).
