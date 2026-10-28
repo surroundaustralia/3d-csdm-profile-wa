@@ -6,7 +6,7 @@ It records what Landgate decided for each register item, what that means for the
 Landgate responded to the register as it stood before the vocabulary decisions D1–D12 of 16 October 2026 ([`vocab-review.md` §5.10](../vocabularies/vocab-review.md#510-decisions)).
 Their responses are mapped here onto the current vocabularies: `building-boundary-reference` is now [`boundary-reference`](../vocabularies/boundary-reference.csv), `wa-strata-component-role` is now the common [`component-role`](../vocabularies/component-role.csv), `icsm-scope` is now [`source-scope`](../vocabularies/source-scope.csv), and notations are kebab-case (D1).
 
-Status: phase 1 (register) done; later phases not started.
+Status: phase 1 (register) done; open questions 1 and 6 decided on 2026-10-27; later phases not started.
 
 ## 1. Item-by-item analysis
 
@@ -25,7 +25,7 @@ Status: phase 1 (register) done; later phases not started.
 |----|-------------------|-----------------------|
 | 2  | **Accepted.** Landgate's annotated diagram adds a **stage** level between the scheme and its lots. | Register only for item 2; stage is new item 19. Consistent with D6 (`parcelPurpose: strata-scheme` now, `ParcelAggregate` as the target). |
 | 8  | **Amended.** Boundary wording applies at **stage** level, with variations at element level; hierarchy scheme → stage → parcel → parcel part → boundary. Specific components (car bays, balconies) can have their own note. See [issue #35](https://github.com/surroundaustralia/3d-csdm-profile-wa/issues/35) and the 3D CSDM gap analysis. | Add `stage` to `source-scope`. The nine `source-scope:scheme` uses in the example need reviewing; component notes use `parcel-part`. |
-| 10 | **Accepted** the original recommendation (a scheme-level interest). Landgate leadership also supports a scheme-level document. Unit entitlements are a separate document of the plan; Landgate stores current values and intends to store all values digitally, so the schema needs extending for extracts. Landgate sketched a unit-entitlement document and a per-lot `unitEntitlement` with a history dated by stage approval. | **Conflict with D7**, which put `entitlementTotal` on the scheme parcel and `entitlementPortion` on each lot parcel, with no strata interest types. Landgate's per-lot sketch fits D7, so D7 should stand, subject to confirmation with Landgate. Schema work in items 20 and 21; property name and datatype overlap item 9. |
+| 10 | **Accepted** the original recommendation (a scheme-level interest). Landgate leadership also supports a scheme-level document. Unit entitlements are a separate document of the plan; Landgate stores current values and intends to store all values digitally, so the schema needs extending for extracts. Landgate sketched a unit-entitlement document and a per-lot `unitEntitlement` with a history dated by stage approval. | **Conflict with D7**, which put `entitlementTotal` on the scheme parcel and `entitlementPortion` on each lot parcel, with no strata interest types. Landgate's per-lot sketch fits D7. Decided 2026-10-27: `entitlementPortion` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-lot`; `entitlementTotal` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-scheme`, as D7 and the example already have it; Landgate to be informed. Schema work in items 20 and 21; property name and datatype overlap item 9. |
 | 11 | **Accepted;** Landgate would like worked examples. Two options were raised: (1) single terms such as `inside-face-of-wall`; (2) paired terms such as `innerSurface` + `wall`. | D5 and the example already use option 2: a `boundary-reference` relationship plus a reference to an `occupation-feature` (wall, slab, ceiling). Worked examples needed. |
 | 17 | **Accepted.** | Register only. |
 
@@ -70,7 +70,7 @@ Added to the register as section F, items 19–26.
 | Vocabulary | Change | Owner |
 |------------|--------|-------|
 | `vertical-definition-type.csv` | Replace `building-referenced-boundary` with `structure-referenced-boundary`; altLabels `srb`, `brb`, `building-referenced-boundary`; definition refers to a structure surface, plane or element. | WA |
-| `boundary-reference.csv` | Add `projection-centreline` and `projection-face` with broader `projection`; review the definitions that say "building" against Landgate's preference for "structure". | 3D CSDM core (D3) |
+| `boundary-reference.csv` | Add `projection-centreline` and `projection-face` with broader `projection`; replace "building" with "structure" in the definitions (decided 2026-10-27). | 3D CSDM core (D3) |
 | `source-scope.csv` | Add `stage`, between `scheme` and `parcel`. | 3D CSDM core (D3) |
 | `component-role.csv` | Narrow `private-use-area` to space that forms part of the lot: remove the altLabel "exclusive use area" and "exclusive or restricted use" from the definition. Rename `principal-unit` once Landgate choose a name. | 3D CSDM core (D5) |
 | `boundary-role.csv` | Rename `lateral` once Landgate choose a name. | 3D CSDM core |
@@ -119,6 +119,7 @@ Each phase stops for review before the next starts.
 
 1. **Register (done).** Decisions for items 1–18 recorded in [`decisions-register.md`](decisions-register.md), section F added for items 19–26, and section D updated; the Status column of [`built-strata-questions.md`](built-strata-questions.md) updated to match.
    Organisations are named, not individuals.
+   Open questions 1 and 6 decided on 2026-10-27 and recorded in both files.
 2. **Draft vocabularies in this repository.** Apply §3, holding the `lateral` and `principal-unit` renames until Landgate choose names.
 3. **Vocabularies in `sa-icsm-vocabs`.** Send the §3 requests to the uplift owner.
 4. **Example and scope note.** Apply §4, including the item 11 worked examples, and validate the example against the published blocks.
@@ -128,9 +129,9 @@ Each phase stops for review before the next starts.
 
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Item 10: does D7 (entitlements as parcel properties) stand, given Landgate accepted the earlier scheme-level-interest recommendation? | Yes; Landgate's own per-lot sketch fits D7. Confirm with Landgate. |
+| 1 | Item 10: does D7 (entitlements as parcel properties) stand, given Landgate accepted the earlier scheme-level-interest recommendation? | **Decided 2026-10-27:** `entitlementPortion` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-lot`; `entitlementTotal` is a property of a `PrimaryParcel` feature with `parcelPurpose` `wa-parcel-purpose:strata-scheme`. Landgate to be informed. |
 | 2 | Item 16: new abuttal line codes, or reuse `wa-parcel-state:abuttal` with the element name as the parcel label? | Reuse `abuttal` and labels; add a `common-property` purpose only if querying needs it. |
 | 3 | Item 12: one or two unit-entitlement documentation types? | One term (`scheme-ue`); distinguish PDF and digital forms by file media type and `wa-approved-form` version. |
 | 4 | Item 13: "Exclusive Use" or "By-Law Exclusive Use"? | "By-Law Exclusive Use", matching "By-Law Restricted Use" and the instrument that creates it. |
 | 5 | Items 5 and 7: replacement names for `lateral` and `principal-unit`. | Ask Landgate for preferred names; keep the current terms until then. |
-| 6 | Should "building" also be replaced in the `boundary-reference` definitions? | Yes, where the term applies to any structure, in the same change as `structure-referenced-boundary`. |
+| 6 | Should "building" also be replaced in the `boundary-reference` definitions? | **Decided 2026-10-27:** yes; replace "building" with "structure" in the `boundary-reference` definitions, in phase 2. |

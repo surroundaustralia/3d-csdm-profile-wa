@@ -1,4 +1,5 @@
 # Shell scripts must always be checked out with LF line endings so they run
 # correctly under bash (including WSL and Docker on Windows), regardless of core.autocrlf.
-*.sh text eol=lf
+* text=auto eol=lf
 *.pdf binary
+build/** -text
