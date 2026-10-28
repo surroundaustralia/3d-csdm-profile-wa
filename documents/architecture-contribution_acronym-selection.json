@@ -25,8 +25,13 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "APX-05",
+      "record": "apx-05--wa-digital-data-format-specification",
+      "includedBecause": "added"
+    },
+    {
       "acronym": "CSD",
-      "record": "csd--cadastral-survey-dataset",
+      "record": "csd--cadastral-survey-data",
       "includedBecause": "used"
     },
     {
@@ -55,6 +60,11 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "RDF",
+      "record": "rdf--resource-description-framework",
+      "includedBecause": "description"
+    },
+    {
       "acronym": "SHACL",
       "record": "shacl--shapes-constraint-language",
       "includedBecause": "used"
@@ -63,6 +73,11 @@
       "acronym": "SOSA",
       "record": "sosa--sensor-observation-sample-and-actuator",
       "includedBecause": "used"
+    },
+    {
+      "acronym": "W3C",
+      "record": "w3c--world-wide-web-consortium",
+      "includedBecause": "description"
     },
     {
       "acronym": "WA",

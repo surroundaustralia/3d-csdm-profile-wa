@@ -150,6 +150,27 @@
       ]
     },
     {
+      "id": "apx-05--wa-digital-data-format-specification",
+      "acronym": "APX-05",
+      "aliases": [],
+      "expansion": "WA Digital Data Format specification",
+      "definition": {
+        "text": "The Western Australian User Guide produced for surveyors when creating Cadastral Survey Data (CSD) files for lodgement with Landgate to meet the requirements of Transfer of Land (Surveys) Regulations 1995 - Regulation 3.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
       "id": "as-nzs--australian-new-zealand-standard",
       "acronym": "AS/NZS",
       "aliases": [],
@@ -194,6 +215,28 @@
       ]
     },
     {
+      "id": "csd--cadastral-survey-data",
+      "acronym": "CSD",
+      "aliases": [],
+      "expansion": "Cadastral Survey Data",
+      "definition": {
+        "text": "The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28",
+          "note": "Replaces csd--cadastral-survey-dataset; the reports and APX-05 use 'Cadastral Survey Data'."
+        }
+      ]
+    },
+    {
       "id": "csd--cadastral-survey-dataset",
       "acronym": "CSD",
       "aliases": [],
@@ -202,8 +245,8 @@
         "text": "The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities.",
         "status": "approved"
       },
-      "status": "approved",
-      "supersededBy": null,
+      "status": "deprecated",
+      "supersededBy": "csd--cadastral-survey-data",
       "domains": [],
       "contexts": [],
       "sources": [
@@ -511,6 +554,27 @@
       ]
     },
     {
+      "id": "rdf--resource-description-framework",
+      "acronym": "RDF",
+      "aliases": [],
+      "expansion": "Resource Description Framework",
+      "definition": {
+        "text": "A W3C data model that represents information as subject–predicate–object statements (triples), forming graphs that can be linked across sources.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
       "id": "shacl--shapes-constraint-language",
       "acronym": "SHACL",
       "aliases": [],
@@ -538,6 +602,27 @@
       "expansion": "Sensor, Observation, Sample, and Actuator",
       "definition": {
         "text": "A lightweight W3C and OGC ontology for describing sensors, observations, sampling and actuation, and the procedures behind them.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": "w3c--world-wide-web-consortium",
+      "acronym": "W3C",
+      "aliases": [],
+      "expansion": "World Wide Web Consortium",
+      "definition": {
+        "text": "An international standards organisation that develops open standards for the World Wide Web.",
         "status": "approved"
       },
       "status": "approved",

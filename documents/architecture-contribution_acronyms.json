@@ -22,46 +22,61 @@
     },
     {
       "id": "acr-005",
-      "acronym": "CSD",
-      "description": "Cadastral Survey Dataset: The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities."
+      "acronym": "APX-05",
+      "description": "WA Digital Data Format specification: The Western Australian User Guide produced for surveyors when creating Cadastral Survey Data (CSD) files for lodgement with Landgate to meet the requirements of Transfer of Land (Surveys) Regulations 1995 - Regulation 3."
     },
     {
       "id": "acr-006",
+      "acronym": "CSD",
+      "description": "Cadastral Survey Data: The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities."
+    },
+    {
+      "id": "acr-007",
       "acronym": "ICSM",
       "description": "Intergovernmental Committee on Surveying and Mapping: The committee of Australian and New Zealand government agencies that coordinates national surveying, mapping, cadastral and geodetic standards."
     },
     {
-      "id": "acr-007",
+      "id": "acr-008",
       "acronym": "JSON",
       "description": "JavaScript Object Notation: A lightweight, text-based format for structured data, built from name–value pairs and ordered lists."
     },
     {
-      "id": "acr-008",
+      "id": "acr-009",
       "acronym": "NGSC",
       "description": "Next Generation Spatial Cadastre: Landgate's programme to replace Western Australia's cadastral systems with a spatially accurate, three-dimensional-capable digital cadastre."
     },
     {
-      "id": "acr-009",
+      "id": "acr-010",
       "acronym": "OGC",
       "description": "Open Geospatial Consortium: An international not-for-profit consortium that develops open standards for geospatial content and services."
     },
     {
-      "id": "acr-010",
+      "id": "acr-011",
       "acronym": "PROV",
       "description": "Provenance: A W3C family of specifications for describing the provenance of data: the entities, activities and agents involved in producing it."
     },
     {
-      "id": "acr-011",
+      "id": "acr-012",
+      "acronym": "RDF",
+      "description": "Resource Description Framework: A W3C data model that represents information as subject–predicate–object statements (triples), forming graphs that can be linked across sources."
+    },
+    {
+      "id": "acr-013",
       "acronym": "SHACL",
       "description": "Shapes Constraint Language: A W3C language for describing constraints on RDF data and for validating RDF graphs against them."
     },
     {
-      "id": "acr-012",
+      "id": "acr-014",
       "acronym": "SOSA",
       "description": "Sensor, Observation, Sample, and Actuator: A lightweight W3C and OGC ontology for describing sensors, observations, sampling and actuation, and the procedures behind them."
     },
     {
-      "id": "acr-013",
+      "id": "acr-015",
+      "acronym": "W3C",
+      "description": "World Wide Web Consortium: An international standards organisation that develops open standards for the World Wide Web."
+    },
+    {
+      "id": "acr-016",
       "acronym": "WA",
       "description": "Western Australia: The Australian state covering the western third of the continent."
     }

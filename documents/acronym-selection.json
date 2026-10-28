@@ -35,13 +35,18 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "APX-05",
+      "record": "apx-05--wa-digital-data-format-specification",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "AS/NZS",
       "record": "as-nzs--standards-australia-standards-new-zealand",
       "includedBecause": "used"
     },
     {
       "acronym": "CSD",
-      "record": "csd--cadastral-survey-dataset",
+      "record": "csd--cadastral-survey-data",
       "includedBecause": "used"
     },
     {
