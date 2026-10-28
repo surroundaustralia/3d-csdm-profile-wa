@@ -50,12 +50,12 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:road-boundary ;
     commonpatterns:name [ rdfs:label "Peg 1 DP 422532" ;
-            dcterms:hasPart [ rdfs:label "DP" ;
-                    commonpatterns:namePartType wa-name-part-type:PlanType ],
-                [ rdfs:label "1" ;
+            dcterms:hasPart [ rdfs:label "1" ;
                     commonpatterns:namePartType wa-name-part-type:MarkIdentifier ],
                 [ rdfs:label "422532" ;
                     commonpatterns:namePartType wa-name-part-type:planIdentifier ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType wa-name-part-type:PlanType ],
                 [ rdfs:label "Peg" ;
                     commonpatterns:namePartType wa-name-part-type:MarkType ] ] ;
     commonpatterns:qualityMeasure 1.3e-02 .
@@ -87,10 +87,10 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:permanent-survey-mark ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType wa-name-part-type:Source ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 .
 
 <https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;

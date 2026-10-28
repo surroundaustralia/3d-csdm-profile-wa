@@ -65,12 +65,12 @@ Example appellation.
 @prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 
 [] rdfs:label "Albany Town Lot 57" ;
-    dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType wa-name-part-type:crownAreaCode ],
-        [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
+    dcterms:hasPart [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
             commonpatterns:namePartType wa-name-part-type:crownAllocationType ],
         [ rdfs:label "57" ;
-            commonpatterns:namePartType wa-name-part-type:number ] .
+            commonpatterns:namePartType wa-name-part-type:number ],
+        [ commonpatterns:namePartRef wa-locality:albany ;
+            commonpatterns:namePartType wa-name-part-type:crownAreaCode ] .
 
 
 ```
