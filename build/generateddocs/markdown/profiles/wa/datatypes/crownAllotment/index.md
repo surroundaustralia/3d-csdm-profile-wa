@@ -67,10 +67,10 @@ Example appellation.
 [] rdfs:label "Albany Town Lot 57" ;
     dcterms:hasPart [ rdfs:label "57" ;
             commonpatterns:namePartType wa-name-part-type:number ],
-        [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType wa-name-part-type:crownAreaCode ],
         [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
-            commonpatterns:namePartType wa-name-part-type:crownAllocationType ] .
+            commonpatterns:namePartType wa-name-part-type:crownAllocationType ],
+        [ commonpatterns:namePartRef wa-locality:albany ;
+            commonpatterns:namePartType wa-name-part-type:crownAreaCode ] .
 
 
 ```
