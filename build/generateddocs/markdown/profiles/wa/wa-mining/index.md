@@ -577,11 +577,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
+        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:karlkurla ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -602,10 +602,10 @@ Minimal example - with combined elements from each test case
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.190965e+02 -3.470982e+01 ) ] ;
     commonpatterns:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9540" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] .
+            dcterms:hasPart [ rdfs:label "9540" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] .
 
 <https://www.wa-example.com/features/17251503> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:boundary ;
@@ -693,7 +693,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.wa-mining
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-27'
+  dateOfLastChange: '2026-10-28'
 
 ```
 
@@ -1153,7 +1153,6 @@ Links to the schema:
             },
             "name": {
               "@id": "commonpatterns:name",
-              "@type": "@id",
               "@context": {
                 "hasPart": {
                   "@context": {
@@ -1291,16 +1290,9 @@ Links to the schema:
               "@id": "topo:solids",
               "@container": "@list"
             },
+            "name": "rdfs:label",
             "bearingRotation": "parcel:bearingRotation",
             "parcels": "parcel:parcels",
-            "PrimaryParcel": {
-              "@id": "parcel:PrimaryParcel",
-              "@type": "@id"
-            },
-            "SecondaryParcel": {
-              "@id": "parcel:SecondaryParcel",
-              "@type": "@id"
-            },
             "appellation": {
               "@context": {
                 "name": "commonpatterns:name",
@@ -1398,11 +1390,6 @@ Links to the schema:
           "@type": "@id",
           "@container": "@set",
           "@context": {
-            "features": {
-              "@container": "@set",
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -1467,16 +1454,6 @@ Links to the schema:
                 "distance": "surv:distance"
               },
               "@id": "sosa:hasResult",
-              "@type": "@id"
-            }
-          }
-        },
-        "hasMember": {
-          "@id": "sosa:hasMember",
-          "@type": "@id",
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
               "@type": "@id"
             }
           }
@@ -1560,11 +1537,6 @@ Links to the schema:
           "@type": "@id",
           "@container": "@set",
           "@context": {
-            "features": {
-              "@container": "@set",
-              "@id": "sosa:hasMember",
-              "@type": "@id"
-            },
             "hasResultQuality": {
               "@id": "sosa:hasResultQuality",
               "@type": "@id",
@@ -1629,16 +1601,6 @@ Links to the schema:
                 "distance": "surv:distance"
               },
               "@id": "sosa:hasResult",
-              "@type": "@id"
-            }
-          }
-        },
-        "hasMember": {
-          "@id": "sosa:hasMember",
-          "@type": "@id",
-          "@context": {
-            "features": {
-              "@id": "sosa:hasMember",
               "@type": "@id"
             }
           }
@@ -2586,16 +2548,17 @@ Links to the schema:
       "@type": "@id"
     },
     "container": "csdm:container/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "sdo": "https://schema.org/",
     "csd": "csdm:csd/",
+    "topo": "https://purl.org/geojson/topo#",
+    "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "surv": "csdm:surveyfeatures/",
     "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "owlTime": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "topo": "https://purl.org/geojson/topo#",
     "prof": "http://www.w3.org/ns/dx/prof/",
     "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -2604,11 +2567,11 @@ Links to the schema:
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "sr": "csdm:spatial-representation/",
     "pvb": "csdm:parcel-vertical-boundary/",
-    "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "ssn:systems/",
     "ssn": "http://www.w3.org/ns/ssn/",
     "geopose": "csdm:utils/geopose/",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "angletype": "csdm:defs/angletypes/",
     "distancetype": "csdm:defs/distancetypes/",
     "surveyproc": "csdm:defs/surveyprocedures/",

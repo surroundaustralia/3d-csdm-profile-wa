@@ -64,12 +64,12 @@ Example appellation.
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 
 [] rdfs:label "Albany Town Lot 57" ;
-    dcterms:hasPart [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ],
-        [ rdfs:label "57" ;
+    dcterms:hasPart [ rdfs:label "57" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/number> ],
         [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ] .
+            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ],
+        [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ] .
 
 
 ```
@@ -92,7 +92,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.crownAllotment
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-27'
+  dateOfLastChange: '2026-10-28'
 
 ```
 

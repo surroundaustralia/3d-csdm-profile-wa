@@ -62,10 +62,10 @@ Example appellation.
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "4" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
-        [ rdfs:label "1234" ;
+    dcterms:hasPart [ rdfs:label "1234" ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
+        [ rdfs:label "4" ;
+            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
             commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
         [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
@@ -92,7 +92,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.lotOnPlan
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-27'
+  dateOfLastChange: '2026-10-28'
 
 ```
 

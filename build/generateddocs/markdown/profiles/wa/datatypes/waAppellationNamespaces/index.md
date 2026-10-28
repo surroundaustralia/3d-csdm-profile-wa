@@ -37,7 +37,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.waAppellationNamespaces
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-27'
+  dateOfLastChange: '2026-10-28'
 
 ```
 
