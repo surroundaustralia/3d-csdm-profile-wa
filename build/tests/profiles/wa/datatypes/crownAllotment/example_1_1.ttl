@@ -2,12 +2,13 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 
 [] rdfs:label "Albany Town Lot 57" ;
-    dcterms:hasPart [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ],
+    dcterms:hasPart [ rdfs:label "57" ;
+            commonpatterns:namePartType wa-name-part-type:number ],
         [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ],
-        [ rdfs:label "57" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/number> ] .
+            commonpatterns:namePartType wa-name-part-type:crownAreaCode ],
+        [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
+            commonpatterns:namePartType wa-name-part-type:crownAllocationType ] .
 

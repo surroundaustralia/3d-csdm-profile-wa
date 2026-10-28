@@ -18,15 +18,15 @@ Example appellation.
   "label": "Albany Town Lot 57",
   "hasPart": [
     {
-      "type": "crownAreaCode",
+      "type": "wa-name-part-type:crownAreaCode",
       "ref": "wa-locality:albany"
     },
     {
-      "type": "crownAllocationType",
+      "type": "wa-name-part-type:crownAllocationType",
       "label": "wa-parcel-purpose:townsite-lot"
     },
     {
-      "type": "number",
+      "type": "wa-name-part-type:number",
       "label": "57"
     }
   ]
@@ -41,15 +41,15 @@ Example appellation.
   "label": "Albany Town Lot 57",
   "hasPart": [
     {
-      "type": "crownAreaCode",
+      "type": "wa-name-part-type:crownAreaCode",
       "ref": "wa-locality:albany"
     },
     {
-      "type": "crownAllocationType",
+      "type": "wa-name-part-type:crownAllocationType",
       "label": "wa-parcel-purpose:townsite-lot"
     },
     {
-      "type": "number",
+      "type": "wa-name-part-type:number",
       "label": "57"
     }
   ]
@@ -62,14 +62,15 @@ Example appellation.
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 
 [] rdfs:label "Albany Town Lot 57" ;
-    dcterms:hasPart [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAllocationType> ],
+    dcterms:hasPart [ rdfs:label "57" ;
+            commonpatterns:namePartType wa-name-part-type:number ],
         [ commonpatterns:namePartRef wa-locality:albany ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/crownAreaCode> ],
-        [ rdfs:label "57" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/number> ] .
+            commonpatterns:namePartType wa-name-part-type:crownAreaCode ],
+        [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
+            commonpatterns:namePartType wa-name-part-type:crownAllocationType ] .
 
 
 ```
@@ -134,6 +135,7 @@ Links to the schema:
     "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
     "wa-annotation-role": "vocabs:wa-annotation/",
     "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-name-part-type": "vocabs:wa-name-part-type/",
     "wa-parcel-type": "vocabs:wa-parcel-type/",
     "wa-parcel-state": "vocabs:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",

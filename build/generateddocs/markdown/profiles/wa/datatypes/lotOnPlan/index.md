@@ -17,10 +17,10 @@ Example appellation.
      "type": "wa:LotOnPlanAppellation",
     "label": "Lot 4 on Plan 1234",
     "hasPart": [
-      { "type": "surveyType", "ref": "wa-survey-type:deposited-plan" },
-      { "type": "surveyNumber", "label": "1234" },
-      { "type": "lotPrefix", "ref": "wa-parcel-purpose:lot" },
-      { "type": "lotNumber", "label": "4" }
+      { "type": "wa-name-part-type:surveyType", "ref": "wa-survey-type:deposited-plan" },
+      { "type": "wa-name-part-type:surveyNumber", "label": "1234" },
+      { "type": "wa-name-part-type:lotPrefix", "ref": "wa-parcel-purpose:lot" },
+      { "type": "wa-name-part-type:lotNumber", "label": "4" }
     ]
 
 }
@@ -34,19 +34,19 @@ Example appellation.
   "label": "Lot 4 on Plan 1234",
   "hasPart": [
     {
-      "type": "surveyType",
+      "type": "wa-name-part-type:surveyType",
       "ref": "wa-survey-type:deposited-plan"
     },
     {
-      "type": "surveyNumber",
+      "type": "wa-name-part-type:surveyNumber",
       "label": "1234"
     },
     {
-      "type": "lotPrefix",
+      "type": "wa-name-part-type:lotPrefix",
       "ref": "wa-parcel-purpose:lot"
     },
     {
-      "type": "lotNumber",
+      "type": "wa-name-part-type:lotNumber",
       "label": "4"
     }
   ]
@@ -58,18 +58,19 @@ Example appellation.
 @prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
 [] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "4" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],
-        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],
+    dcterms:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+            commonpatterns:namePartType wa-name-part-type:surveyType ],
         [ rdfs:label "1234" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],
-        [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ] .
+            commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+        [ rdfs:label "4" ;
+            commonpatterns:namePartType wa-name-part-type:lotNumber ] .
 
 
 ```
@@ -134,6 +135,7 @@ Links to the schema:
     "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
     "wa-annotation-role": "vocabs:wa-annotation/",
     "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-name-part-type": "vocabs:wa-name-part-type/",
     "wa-parcel-type": "vocabs:wa-parcel-type/",
     "wa-parcel-state": "vocabs:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",

@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation
-Generated 2026-10-28T05:11:54.468296+00:00
+Generated 2026-10-28T11:05:32.746188+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting

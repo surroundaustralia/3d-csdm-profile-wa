@@ -243,7 +243,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -275,7 +274,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -307,7 +305,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -339,7 +336,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -698,19 +694,19 @@ Point coordinates are 2D only.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -773,19 +769,19 @@ Point coordinates are 2D only.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -823,19 +819,19 @@ Point coordinates are 2D only.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -1090,7 +1086,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -1122,7 +1117,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -1154,7 +1148,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -1186,7 +1179,6 @@ Point coordinates are 2D only.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -1545,19 +1537,19 @@ Point coordinates are 2D only.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -1620,19 +1612,19 @@ Point coordinates are 2D only.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -1670,19 +1662,19 @@ Point coordinates are 2D only.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -1752,6 +1744,7 @@ Point coordinates are 2D only.
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -1795,14 +1788,14 @@ Point coordinates are 2D only.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ rdfs:label "800" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -1813,14 +1806,14 @@ Point coordinates are 2D only.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -1833,14 +1826,14 @@ Point coordinates are 2D only.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -1990,7 +1983,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-3> a surv:BoundaryMark,
@@ -2003,7 +1995,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-4> a surv:BoundaryMark,
@@ -2016,7 +2007,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-5> a surv:BoundaryMark,
@@ -2029,7 +2019,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
@@ -2283,7 +2272,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -2317,7 +2305,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -2351,7 +2338,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -2385,7 +2371,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -2924,19 +2909,19 @@ surface (ground surface in this instance) has been included.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -2999,19 +2984,19 @@ surface (ground surface in this instance) has been included.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -3049,19 +3034,19 @@ surface (ground surface in this instance) has been included.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -3319,7 +3304,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -3353,7 +3337,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -3387,7 +3370,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -3421,7 +3403,6 @@ surface (ground surface in this instance) has been included.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -3960,19 +3941,19 @@ surface (ground surface in this instance) has been included.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -4035,19 +4016,19 @@ surface (ground surface in this instance) has been included.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -4085,19 +4066,19 @@ surface (ground surface in this instance) has been included.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -4167,6 +4148,7 @@ surface (ground surface in this instance) has been included.
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -4180,14 +4162,14 @@ surface (ground surface in this instance) has been included.
     rdfs:label "2D footprint bounds a terrain, ground, floor, or reference surface." ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation:r-4 ;
-            oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
-        [ prof:hasRole wa-annotation:sp ] ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
+            oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ] ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
     container:parcels uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525,
@@ -4212,13 +4194,13 @@ surface (ground surface in this instance) has been included.
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
             dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -4229,14 +4211,14 @@ surface (ground surface in this instance) has been included.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -4249,14 +4231,14 @@ surface (ground surface in this instance) has been included.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -4459,7 +4441,6 @@ uuid:412069d1-fbd1-4b81-b171-4411b850c3cc a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-4> a surv:BoundaryMark,
@@ -4472,7 +4453,6 @@ uuid:412069d1-fbd1-4b81-b171-4411b850c3cc a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-2> a surv:BoundaryMark,
@@ -4485,7 +4465,6 @@ uuid:412069d1-fbd1-4b81-b171-4411b850c3cc a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-5> a surv:BoundaryMark,
@@ -4498,7 +4477,6 @@ uuid:412069d1-fbd1-4b81-b171-4411b850c3cc a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
@@ -4788,7 +4766,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -4822,7 +4799,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -4856,7 +4832,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -4890,7 +4865,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -5279,19 +5253,19 @@ in this example.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -5354,19 +5328,19 @@ in this example.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -5404,19 +5378,19 @@ in this example.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -5749,7 +5723,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -5783,7 +5756,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -5817,7 +5789,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -5851,7 +5822,6 @@ in this example.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -6240,19 +6210,19 @@ in this example.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -6315,19 +6285,19 @@ in this example.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -6365,19 +6335,19 @@ in this example.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -6465,8 +6435,8 @@ in this example.
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
-@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
-@prefix ns2: <http://www.iana.org/assignments/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -6485,6 +6455,7 @@ in this example.
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -6498,15 +6469,15 @@ in this example.
 <file:///github/workspace/04-height-described-relative> a geojson:FeatureCollection ;
     rdfs:label "Relative height-described parcel." ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ],
-        [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ] ;
-    container:annotations [ prof:hasRole wa-annotation:r-4 ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
-        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -6516,14 +6487,14 @@ in this example.
     container:purpose wa-survey-purpose:subdivision-t-sts ;
     container:referencedCSD uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc,
         uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 ;
-    container:supportingDocuments [ rdfs:label "CSD for DP 431276" ;
-            ns2:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole wa-survey-documentation-type:csd ;
-            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ],
-        [ rdfs:label "DP 431276" ;
-            ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:supportingDocuments [ rdfs:label "DP 431276" ;
+            ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:2d-plan ;
-            oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ] ;
+            oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ],
+        [ rdfs:label "CSD for DP 431276" ;
+            ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole wa-survey-documentation-type:csd ;
+            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ] ;
     container:surveyType wa-survey-type:compiled ;
     container:vectorObservations uuid:0e582a81-b517-4012-a3bb-7605853e0159 ;
     topo:edges uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2,
@@ -6539,13 +6510,13 @@ in this example.
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
             dct:hasPart [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -6557,13 +6528,13 @@ in this example.
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
             dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -6577,13 +6548,13 @@ in this example.
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
             dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -6597,25 +6568,25 @@ in this example.
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
     sosa:hasResult [ ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:angleType icsm-angle-type:angle .
+    ns2:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -6659,7 +6630,7 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
         parcel:PrimaryParcel ;
@@ -6669,11 +6640,11 @@ uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 2.595435e-01 .
@@ -6692,7 +6663,7 @@ uuid:c627546f-1b7e-44d2-ba45-36d7dc1293e6 a geojson:FeatureCollection,
 
 uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 rdfs:label "D36053" ;
     dct:time [ ] ;
-    container:adminUnit [ ns2:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 2.595435e-01 .
@@ -6701,13 +6672,13 @@ uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns1:distanceType icsm-distance-type:ground .
+    ns2:distanceType icsm-distance-type:ground .
 
 <file:///github/workspace/angle-1> a geojson:Feature ;
     geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
@@ -6735,7 +6706,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-3> a surv:BoundaryMark,
@@ -6748,7 +6718,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-4> a surv:BoundaryMark,
@@ -6761,7 +6730,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-5> a surv:BoundaryMark,
@@ -6774,7 +6742,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
@@ -7068,7 +7035,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -7102,7 +7068,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -7136,7 +7101,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -7170,7 +7134,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -7557,19 +7520,19 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -7634,19 +7597,19 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -7684,19 +7647,19 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -8034,7 +7997,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -8068,7 +8030,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -8102,7 +8063,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -8136,7 +8096,6 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -8523,19 +8482,19 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -8600,19 +8559,19 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -8650,19 +8609,19 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -8769,6 +8728,7 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -8822,14 +8782,14 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -8840,14 +8800,14 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+            dct:hasPart [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -8860,14 +8820,14 @@ As absolute heights are defined, `zMin` and `zMax` are populated.
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
+            dct:hasPart [ rdfs:label "2" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -9019,7 +8979,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-3> a surv:BoundaryMark,
@@ -9032,7 +8991,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-4> a surv:BoundaryMark,
@@ -9045,7 +9003,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-5> a surv:BoundaryMark,
@@ -9058,7 +9015,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
@@ -9362,7 +9318,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -9396,7 +9351,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -9430,7 +9384,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -9464,7 +9417,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -9844,19 +9796,19 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -9917,19 +9869,19 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -9968,19 +9920,19 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -10329,7 +10281,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -10363,7 +10314,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -10397,7 +10347,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -10431,7 +10380,6 @@ In this example only a lower vertical extent is defined (commonly resulting from
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -10811,19 +10759,19 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -10884,19 +10832,19 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -10935,19 +10883,19 @@ In this example only a lower vertical extent is defined (commonly resulting from
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -11055,6 +11003,7 @@ In this example only a lower vertical extent is defined (commonly resulting from
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -11069,14 +11018,14 @@ In this example only a lower vertical extent is defined (commonly resulting from
     rdfs:label "Jurisdictionally bounded parcel" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation:r-4 ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget <file:///github/workspace/wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf> ],
-        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -11112,14 +11061,14 @@ In this example only a lower vertical extent is defined (commonly resulting from
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ rdfs:label "800" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -11131,13 +11080,13 @@ In this example only a lower vertical extent is defined (commonly resulting from
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
             dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
-                [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11150,14 +11099,14 @@ In this example only a lower vertical extent is defined (commonly resulting from
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -11309,7 +11258,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-3> a surv:BoundaryMark,
@@ -11322,7 +11270,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-4> a surv:BoundaryMark,
@@ -11335,7 +11282,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-5> a surv:BoundaryMark,
@@ -11348,7 +11294,6 @@ uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
@@ -11644,7 +11589,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -11678,7 +11622,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -11712,7 +11655,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -11746,7 +11688,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -11780,7 +11721,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -11814,7 +11754,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -11848,7 +11787,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -11882,7 +11820,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -11916,7 +11853,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -11950,7 +11886,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -11984,7 +11919,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -12018,7 +11952,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -13707,19 +13640,19 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -13784,19 +13717,19 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -13834,19 +13767,19 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -14205,7 +14138,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14239,7 +14171,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -14273,7 +14204,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -14307,7 +14237,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14341,7 +14270,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14375,7 +14303,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14409,7 +14336,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14443,7 +14369,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14477,7 +14402,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -14511,7 +14435,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:monument",
             "ptQualityMeasure": 0.05,
             "comment": null,
@@ -14545,7 +14468,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -14579,7 +14501,6 @@ reference surface) has been converted into a closed 3D solid. The source definit
             ]
           },
           "properties": {
-            "name": "",
             "purpose": "wa-surveypoint-purpose:internal-boundary",
             "ptQualityMeasure": 0.1,
             "comment": null,
@@ -16268,19 +16189,19 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "label": "Lot 800 on Plan DP 431276",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "DP 431276"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "800"
                 }
               ]
@@ -16345,19 +16266,19 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "label": "Lot 1 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "1"
                 }
               ]
@@ -16395,19 +16316,19 @@ reference surface) has been converted into a closed 3D solid. The source definit
               "label": "Lot 2 on Plan SP 28750",
               "hasPart": [
                 {
-                  "type": "surveyType",
+                  "type": "wa-name-part-type:surveyType",
                   "ref": "wa-survey-type:deposited-plan"
                 },
                 {
-                  "type": "surveyNumber",
+                  "type": "wa-name-part-type:surveyNumber",
                   "label": "SP 28750"
                 },
                 {
-                  "type": "lotPrefix",
+                  "type": "wa-name-part-type:lotPrefix",
                   "ref": "wa-parcel-purpose:lot"
                 },
                 {
-                  "type": "lotNumber",
+                  "type": "wa-name-part-type:lotNumber",
                   "label": "2"
                 }
               ]
@@ -16532,6 +16453,7 @@ reference surface) has been converted into a closed 3D solid. The source definit
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -16546,14 +16468,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
     rdfs:label "Derived 3D solid parcel" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ] ;
-    container:annotations [ prof:hasRole wa-annotation:r-4 ;
+            oa:hasTarget wa-locality:stirling ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:locality ;
+            oa:hasTarget wa-locality:innaloo ] ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
-        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -16563,14 +16485,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
     container:purpose wa-survey-purpose:subdivision-t-sts ;
     container:referencedCSD uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc,
         uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 ;
-    container:supportingDocuments [ rdfs:label "DP 431276" ;
-            ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole wa-survey-documentation-type:2d-plan ;
-            oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ],
-        [ rdfs:label "CSD for DP 431276" ;
+    container:supportingDocuments [ rdfs:label "CSD for DP 431276" ;
             ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:csd ;
-            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ] ;
+            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ],
+        [ rdfs:label "DP 431276" ;
+            ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole wa-survey-documentation-type:2d-plan ;
+            oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ] ;
     container:surveyType wa-survey-type:compiled ;
     container:vectorObservations uuid:0e582a81-b517-4012-a3bb-7605853e0159 ;
     topo:edges uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2,
@@ -16587,13 +16509,13 @@ reference surface) has been converted into a closed 3D solid. The source definit
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
             dct:hasPart [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "800" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                [ rdfs:label "800" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -16604,14 +16526,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ],
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -16624,14 +16546,14 @@ reference surface) has been converted into a closed 3D solid. The source definit
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyNumber> ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType <file:///github/workspace/lotPrefix> ],
-                [ rdfs:label "2" ;
-                    commonpatterns:namePartType <file:///github/workspace/lotNumber> ],
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType <file:///github/workspace/surveyType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ rdfs:label "2" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -17167,7 +17089,6 @@ uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -2.9e-01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae a surv:BoundaryMark,
@@ -17181,7 +17102,6 @@ uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -9.89e-01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 a surv:BoundaryMark,
@@ -17195,7 +17115,6 @@ uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.429e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:e742b56c-50e4-4036-a654-2b95f76fe40d a surv:BoundaryMark,
@@ -17209,7 +17128,6 @@ uuid:e742b56c-50e4-4036-a654-2b95f76fe40d a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.4989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:03b1846e-dcda-49ad-b349-b64561b7344e a surv:BoundaryMark,
@@ -17223,7 +17141,6 @@ uuid:03b1846e-dcda-49ad-b349-b64561b7344e a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 1.1e-02 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 a surv:BoundaryMark,
@@ -17237,7 +17154,6 @@ uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.3989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 a surv:BoundaryMark,
@@ -17251,7 +17167,6 @@ uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.539e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
@@ -17265,7 +17180,6 @@ uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:internal-boundary ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.39e+00 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 1e-01 .
 
 <file:///github/workspace/point-3> a surv:BoundaryMark,
@@ -17279,7 +17193,6 @@ uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-4> a surv:BoundaryMark,
@@ -17293,7 +17206,6 @@ uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-2> a surv:BoundaryMark,
@@ -17307,7 +17219,6 @@ uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/point-5> a surv:BoundaryMark,
@@ -17321,7 +17232,6 @@ uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
     surv:purpose wa-surveypoint-purpose:monument ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] ;
-    commonpatterns:name "" ;
     commonpatterns:qualityMeasure 5e-02 .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
@@ -17852,19 +17762,19 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
               "label": "Lot 213 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "213"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanNumber",
+                  "type": "wa-name-part-type:PlanNumber",
                   "label": "572532"
                 }
               ]
@@ -18387,19 +18297,19 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
               "label": "Lot 213 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "213"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanNumber",
+                  "type": "wa-name-part-type:PlanNumber",
                   "label": "572532"
                 }
               ]
@@ -18447,6 +18357,7 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -18483,14 +18394,14 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/298> <https://www.wa-example.com/features/311> <https://www.wa-example.com/features/309> <https://www.wa-example.com/features/314> <https://www.wa-example.com/features/313> <https://www.wa-example.com/features/312> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 213 DP 572532" ;
-            dcterms:hasPart [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
-                [ rdfs:label "572532" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanNumber> ],
-                [ rdfs:label "213" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+            dcterms:hasPart [ rdfs:label "572532" ;
+                    commonpatterns:namePartType wa-name-part-type:PlanNumber ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:PlanType ],
+                [ rdfs:label "213" ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelIdentifier ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelType ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 798 ;
@@ -18528,8 +18439,14 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
 <vectorobservation:computed> a sosa:ObservationCollection,
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
-            sosa:hasResult [ surv:distance 8.832e+00 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
+            sosa:hasResult [ surv:distance 3.7e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
+            sosa:hasResult [ surv:distance 1e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ground ],
@@ -18540,26 +18457,20 @@ arbitrary (not actual case) attachment of spatial representation to a parcel col
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
-            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/309> ;
-            sosa:hasResult [ surv:distance 3.7e+01 ] ;
-            sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
-            ns1:angleType icsm-angle-type:bearing ;
-            ns1:distanceType icsm-distance-type:ground ],
-        [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/312> ;
             sosa:hasResult [ surv:distance 1.6526e+01 ] ;
             sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/298> ;
-            sosa:hasResult [ surv:distance 1e+01 ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/313> ;
+            sosa:hasResult [ surv:distance 2.6401e+01 ] ;
+            sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
+            ns1:angleType icsm-angle-type:bearing ;
+            ns1:distanceType icsm-distance-type:ground ],
+        [ a geojson:Feature ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/311> ;
+            sosa:hasResult [ surv:distance 8.832e+00 ] ;
             sosa:resultTime "2011-05-22T00:00:00+00:00"^^xsd:dateTime ;
             ns1:angleType icsm-angle-type:bearing ;
             ns1:distanceType icsm-distance-type:ground ] ;
@@ -20619,6 +20530,7 @@ Links to the schema:
     "wa-annotation": "csdm:wa-annotation/",
     "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
+    "wa-name-part-type": "csdm:wa-name-part-type/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "csdm:wa-secondary-parcel-type/",

@@ -112,19 +112,19 @@
           "label": "Lot 502 DP 404354",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "502"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "planIdentifier",
+              "type": "wa-name-part-type:planIdentifier",
               "label": "404354"
             }
           ]

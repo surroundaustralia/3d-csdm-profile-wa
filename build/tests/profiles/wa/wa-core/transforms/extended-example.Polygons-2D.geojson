@@ -44,19 +44,19 @@
           "label": "Lot 921 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "921"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -156,19 +156,19 @@
           "label": "Lot 922 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "922"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -268,19 +268,19 @@
           "label": "Lot 923 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "923"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -384,19 +384,19 @@
           "label": "Lot 924 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "924"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -496,19 +496,19 @@
           "label": "Lot 925 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "925"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -622,19 +622,19 @@
           "label": "Lot 926 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "926"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -744,19 +744,19 @@
           "label": "Lot 927 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "927"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -866,19 +866,19 @@
           "label": "Lot 928 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "928"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -992,19 +992,19 @@
           "label": "Lot 929 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "929"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1160,19 +1160,19 @@
           "label": "Lot 930 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "930"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1272,19 +1272,19 @@
           "label": "Lot 931 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "931"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1394,19 +1394,19 @@
           "label": "Lot 932 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "932"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1506,19 +1506,19 @@
           "label": "Lot 933 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "933"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1670,19 +1670,19 @@
           "label": "Lot 934 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "934"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1782,19 +1782,19 @@
           "label": "Lot 935 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "935"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -1904,19 +1904,19 @@
           "label": "Lot 936 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "936"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2026,19 +2026,19 @@
           "label": "Lot 937 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "937"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2148,19 +2148,19 @@
           "label": "Lot 938 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "938"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2270,19 +2270,19 @@
           "label": "Lot 939 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "939"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2394,19 +2394,19 @@
           "label": "Lot 940 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "940"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2516,19 +2516,19 @@
           "label": "Lot 1006 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1006"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2638,19 +2638,19 @@
           "label": "Lot 1007 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1007"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2760,19 +2760,19 @@
           "label": "Lot 1008 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1008"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2882,19 +2882,19 @@
           "label": "Lot 1009 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1009"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanIdentifier",
+              "type": "wa-name-part-type:PlanIdentifier",
               "label": "400715"
             }
           ]
@@ -2994,19 +2994,19 @@
           "label": "Lot 1010 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1010"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -3116,19 +3116,19 @@
           "label": "Lot 1011 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1011"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -3238,19 +3238,19 @@
           "label": "Lot 1015 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1015"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -3350,19 +3350,19 @@
           "label": "Lot 1016 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1016"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -3470,19 +3470,19 @@
           "label": "Lot 1017 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1017"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -3586,19 +3586,19 @@
           "label": "Lot 1018 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "1018"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -3726,19 +3726,19 @@
           "label": "Lot 8015 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "8015"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -6283,19 +6283,19 @@
           "label": "Lot 9018 DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "9018"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]
@@ -7518,19 +7518,19 @@
           "label": "Lot 9017 DP 76652",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Lot"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "9017"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "76652"
             }
           ]
@@ -7583,19 +7583,19 @@
           "label": "Area 33b DP 400715",
           "hasPart": [
             {
-              "type": "ParcelType",
+              "type": "wa-name-part-type:ParcelType",
               "label": "Area"
             },
             {
-              "type": "ParcelIdentifier",
+              "type": "wa-name-part-type:ParcelIdentifier",
               "label": "33b"
             },
             {
-              "type": "PlanType",
+              "type": "wa-name-part-type:PlanType",
               "label": "DP"
             },
             {
-              "type": "PlanNumber",
+              "type": "wa-name-part-type:PlanNumber",
               "label": "400715"
             }
           ]

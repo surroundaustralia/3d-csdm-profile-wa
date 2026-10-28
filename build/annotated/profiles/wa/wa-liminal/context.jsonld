@@ -1892,6 +1892,7 @@
     "wa-annotation": "csdm:wa-annotation/",
     "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
+    "wa-name-part-type": "csdm:wa-name-part-type/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "csdm:wa-secondary-parcel-type/",

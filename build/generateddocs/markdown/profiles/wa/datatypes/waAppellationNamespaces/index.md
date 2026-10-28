@@ -22,6 +22,7 @@ x-jsonld-prefixes:
   wa-survey-documentation-type: https://linked.data.gov.au/def/csdm/wa-survey-documentation-type/
   wa-annotation-role: https://linked.data.gov.au/def/csdm/wa-annotation/
   wa-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-parcel-purpose/
+  wa-name-part-type: https://linked.data.gov.au/def/csdm/wa-name-part-type/
   wa-parcel-type: https://linked.data.gov.au/def/csdm/wa-parcel-type/
   wa-parcel-state: https://linked.data.gov.au/def/csdm/wa-parcel-state/
   wa-nonprimary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/
@@ -79,6 +80,7 @@ Links to the schema:
     "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
     "wa-annotation-role": "vocabs:wa-annotation/",
     "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-name-part-type": "vocabs:wa-name-part-type/",
     "wa-parcel-type": "vocabs:wa-parcel-type/",
     "wa-parcel-state": "vocabs:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",

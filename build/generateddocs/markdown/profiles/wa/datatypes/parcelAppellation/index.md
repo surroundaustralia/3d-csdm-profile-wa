@@ -63,6 +63,7 @@ Links to the schema:
     "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
     "wa-annotation-role": "vocabs:wa-annotation/",
     "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-name-part-type": "vocabs:wa-name-part-type/",
     "wa-parcel-type": "vocabs:wa-parcel-type/",
     "wa-parcel-state": "vocabs:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",

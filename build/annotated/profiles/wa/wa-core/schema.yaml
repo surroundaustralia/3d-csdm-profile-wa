@@ -28,6 +28,7 @@ x-jsonld-prefixes:
   wa-annotation: https://linked.data.gov.au/def/csdm/wa-annotation/
   wa-surveypoint-method: https://linked.data.gov.au/def/csdm/wa-surveypoint-method/
   wa-parcel-purpose: https://linked.data.gov.au/def/csdm/wa-parcel-purpose/
+  wa-name-part-type: https://linked.data.gov.au/def/csdm/wa-name-part-type/
   wa-parcel-type: https://linked.data.gov.au/def/csdm/wa-parcel-type/
   wa-parcel-state: https://linked.data.gov.au/def/csdm/wa-parcel-state/
   wa-nonprimary-parcel-type: https://linked.data.gov.au/def/csdm/wa-secondary-parcel-type/

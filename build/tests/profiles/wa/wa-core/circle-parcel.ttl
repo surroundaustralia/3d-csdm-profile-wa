@@ -19,6 +19,7 @@
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -57,13 +58,13 @@
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 3 DP 214866" ;
             dcterms:hasPart [ rdfs:label "214866" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ],
-                [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                    commonpatterns:namePartType wa-name-part-type:planIdentifier ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
+                    commonpatterns:namePartType wa-name-part-type:PlanType ],
+                [ rdfs:label "Lot" ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelType ],
                 [ rdfs:label "3" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelIdentifier ] ] ;
     parcel:interest [ parcel:interestLink <https://www.wa-example.com/features/LR-3150-715> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:reserve-vest ;
@@ -77,14 +78,14 @@
             topo:relatedFeatures ( ( <https://www.wa-example.com/features/17842481> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Area H DP 95092" ;
-            dcterms:hasPart [ rdfs:label "H" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelIdentifier> ],
+            dcterms:hasPart [ rdfs:label "95092" ;
+                    commonpatterns:namePartType wa-name-part-type:planIdentifier ],
                 [ rdfs:label "Area" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/ParcelType> ],
+                    commonpatterns:namePartType wa-name-part-type:ParcelType ],
+                [ rdfs:label "H" ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelIdentifier ],
                 [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/PlanType> ],
-                [ rdfs:label "95092" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/planIdentifier> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:PlanType ] ] ;
     parcel:interest [ parcel:burdened "11636634" ;
             parcel:interestLink <https://www.wa-example.com/features/345-098-456> ;
             parcel:interestType wa-interest-type:res-cov-cta-38-reg-54-conserv ] ;

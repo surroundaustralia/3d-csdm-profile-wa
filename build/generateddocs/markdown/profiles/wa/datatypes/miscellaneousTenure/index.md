@@ -18,15 +18,15 @@ Example appellation.
   "label": "L-3114-12345",
   "hasPart": [
     {
-      "type": "tenureClass",
+      "type": "wa-name-part-type:tenureClass",
       "ref": "wa-parcel-type:freehold"
     },
     {
-      "type": "documentOrGrantReference",
+      "type": "wa-name-part-type:documentOrGrantReference",
       "label": "3114"
     },
     {
-      "type": "legalDescriptor",
+      "type": "wa-name-part-type:legalDescriptor",
       "label": "12345"
     }
   ]
@@ -41,15 +41,15 @@ Example appellation.
   "label": "L-3114-12345",
   "hasPart": [
     {
-      "type": "tenureClass",
+      "type": "wa-name-part-type:tenureClass",
       "ref": "wa-parcel-type:freehold"
     },
     {
-      "type": "documentOrGrantReference",
+      "type": "wa-name-part-type:documentOrGrantReference",
       "label": "3114"
     },
     {
-      "type": "legalDescriptor",
+      "type": "wa-name-part-type:legalDescriptor",
       "label": "12345"
     }
   ]
@@ -61,15 +61,16 @@ Example appellation.
 @prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 
 [] rdfs:label "L-3114-12345" ;
     dcterms:hasPart [ rdfs:label "3114" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/documentOrGrantReference> ],
-        [ rdfs:label "12345" ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/legalDescriptor> ],
+            commonpatterns:namePartType wa-name-part-type:documentOrGrantReference ],
         [ commonpatterns:namePartRef wa-parcel-type:freehold ;
-            commonpatterns:namePartType <http://www.example.com/namedobjects/tenureClass> ] .
+            commonpatterns:namePartType wa-name-part-type:tenureClass ],
+        [ rdfs:label "12345" ;
+            commonpatterns:namePartType wa-name-part-type:legalDescriptor ] .
 
 
 ```
@@ -134,6 +135,7 @@ Links to the schema:
     "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
     "wa-annotation-role": "vocabs:wa-annotation/",
     "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-name-part-type": "vocabs:wa-name-part-type/",
     "wa-parcel-type": "vocabs:wa-parcel-type/",
     "wa-parcel-state": "vocabs:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",

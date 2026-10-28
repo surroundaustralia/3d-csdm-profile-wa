@@ -70,11 +70,11 @@
               "label": "EFB157243/9533",
               "hasPart": [
                 {
-                  "type": "Source",
+                  "type": "wa-name-part-type:Source",
                   "label": "EFB157243"
                 },
                 {
-                  "type": "Stamp",
+                  "type": "wa-name-part-type:Stamp",
                   "label": "9533"
                 }
               ]
@@ -114,19 +114,19 @@
               "label": "Peg 1 DP 422532",
               "hasPart": [
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "planIdentifier",
+                  "type": "wa-name-part-type:planIdentifier",
                   "label": "422532"
                 },
                 {
-                  "type": "MarkType",
+                  "type": "wa-name-part-type:MarkType",
                   "label": "Peg"
                 },
                 {
-                  "type": "MarkIdentifier",
+                  "type": "wa-name-part-type:MarkIdentifier",
                   "label": "1"
                 }
               ]
@@ -166,11 +166,11 @@
               "label": "EFB157243/9802",
               "hasPart": [
                 {
-                  "type": "Source",
+                  "type": "wa-name-part-type:Source",
                   "label": "EFB157243"
                 },
                 {
-                  "type": "Stamp",
+                  "type": "wa-name-part-type:Stamp",
                   "label": "9802"
                 }
               ]

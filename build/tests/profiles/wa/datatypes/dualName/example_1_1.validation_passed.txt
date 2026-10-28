@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)
-Generated 2026-10-28T05:11:55.012269+00:00
+Generated 2026-10-28T11:05:33.250174+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting

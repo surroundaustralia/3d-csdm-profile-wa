@@ -16,6 +16,7 @@
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
@@ -60,10 +61,10 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:temporary-control-point ;
     commonpatterns:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ],
+                [ rdfs:label "9533" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] ;
     commonpatterns:qualityMeasure 2.8e-02 .
 
 <https://www.wa-example.com/features/18430396> a surv:GeodeticReferenceMark,
@@ -77,10 +78,10 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:permanent-survey-mark ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 .
 
 <https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;

@@ -57,10 +57,10 @@ A name with a label, but also a set of parts with roles that can be validated ag
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "Mammang Koort / King George Sound" ;
-    dcterms:hasPart [ rdfs:label "Mammang Koort" ;
-            commonpatterns:namePartType <wa:indigenousName> ],
-        [ rdfs:label "King George Sound" ;
-            commonpatterns:namePartType <wa:placeName> ] .
+    dcterms:hasPart [ rdfs:label "King George Sound" ;
+            commonpatterns:namePartType <wa:placeName> ],
+        [ rdfs:label "Mammang Koort" ;
+            commonpatterns:namePartType <wa:indigenousName> ] .
 
 
 ```
@@ -118,6 +118,7 @@ Links to the schema:
     "wa-survey-documentation-type": "vocabs:wa-survey-documentation-type/",
     "wa-annotation-role": "vocabs:wa-annotation/",
     "wa-parcel-purpose": "vocabs:wa-parcel-purpose/",
+    "wa-name-part-type": "vocabs:wa-name-part-type/",
     "wa-parcel-type": "vocabs:wa-parcel-type/",
     "wa-parcel-state": "vocabs:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "vocabs:wa-secondary-parcel-type/",

@@ -79,11 +79,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
               "label": "EFB157243/9533",
               "hasPart": [
                 {
-                  "type": "Source",
+                  "type": "wa-name-part-type:Source",
                   "label": "EFB157243"
                 },
                 {
-                  "type": "Stamp",
+                  "type": "wa-name-part-type:Stamp",
                   "label": "9533"
                 }
               ]
@@ -158,11 +158,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
               "label": "EFB157243/9802",
               "hasPart": [
                 {
-                  "type": "Source",
+                  "type": "wa-name-part-type:Source",
                   "label": "EFB157243"
                 },
                 {
-                  "type": "Stamp",
+                  "type": "wa-name-part-type:Stamp",
                   "label": "9802"
                 }
               ]
@@ -251,11 +251,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
               "label": "EFB157243/9533",
               "hasPart": [
                 {
-                  "type": "Source",
+                  "type": "wa-name-part-type:Source",
                   "label": "EFB157243"
                 },
                 {
-                  "type": "Stamp",
+                  "type": "wa-name-part-type:Stamp",
                   "label": "9533"
                 }
               ]
@@ -330,11 +330,11 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
               "label": "EFB157243/9802",
               "hasPart": [
                 {
-                  "type": "Source",
+                  "type": "wa-name-part-type:Source",
                   "label": "EFB157243"
                 },
                 {
-                  "type": "Stamp",
+                  "type": "wa-name-part-type:Stamp",
                   "label": "9802"
                 }
               ]
@@ -381,6 +381,7 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-survey-purpose: <https://linked.data.gov.au/def/csdm/wa-survey-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 @prefix wa-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/> .
@@ -425,10 +426,10 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:temporary-control-point ;
     commonpatterns:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "9533" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ] ] ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ],
+                [ rdfs:label "9533" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] ;
     commonpatterns:qualityMeasure 2.8e-02 .
 
 <https://www.wa-example.com/features/18430396> a surv:GeodeticReferenceMark,
@@ -442,10 +443,10 @@ Vertical Height Datum, epsg:5711 (Australian Height Datum 1971) and **coordinate
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:permanent-survey-mark ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Source> ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType <https://www.wa-example.com/features/Stamp> ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 .
 
 <https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;
@@ -9766,11 +9767,11 @@ uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ] ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:points uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b ;
@@ -13133,19 +13134,19 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
               "label": "Lot 3 DP 214866",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "3"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "planIdentifier",
+                  "type": "wa-name-part-type:planIdentifier",
                   "label": "214866"
                 }
               ]
@@ -18754,19 +18755,19 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
               "label": "Lot 3 DP 214866",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "3"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "planIdentifier",
+                  "type": "wa-name-part-type:planIdentifier",
                   "label": "214866"
                 }
               ]
@@ -22585,6 +22586,7 @@ Dataset consists of 57 points, 19 vectorObservations, one Polygon, 65 edges, 35 
 @prefix wa-monument-condition: <https://linked.data.gov.au/def/csdm/wa-monument-condition/> .
 @prefix wa-monument-form: <https://linked.data.gov.au/def/csdm/wa-monument-form/> .
 @prefix wa-monument-state: <https://linked.data.gov.au/def/csdm/wa-monument-state/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-parcel-state: <https://linked.data.gov.au/def/csdm/wa-parcel-state/> .
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
@@ -22597,11 +22599,11 @@ uuid:e9901182-59a5-4f67-8093-942fef888bf2 a geojson:FeatureCollection ;
     rdfs:label "DP 12347" ;
     dct:time [ owlTime:hasTime "2026-04-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-locality:stirling ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:innaloo ] ;
+            oa:hasTarget wa-locality:innaloo ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-locality:stirling ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
     container:parcels uuid:f6235c7a-8ada-499d-9574-067ccd370949 ;
@@ -22679,14 +22681,14 @@ uuid:458ba315-9601-4e0c-9385-f54c1e2372f6 a geojson:Feature ;
             topo:relatedFeatures ( ( uuid:13b59b93-6f0f-4773-a8b7-88401c9c1fae uuid:ff22d8d8-5d2e-4fdd-97ce-d80e2b48b5de uuid:5a34b8a2-dac0-4ad4-8a59-cbee38b407c8 uuid:2fbdbc42-6443-4bc2-bd42-0c77a3e9c9fc uuid:54943d43-ea1a-4a8c-8cbb-c6d89187e842 uuid:cf0f9b8d-c8d2-4691-8c41-086e18375574 uuid:ed1e393e-d7f5-4a85-93b1-f08812b85014 uuid:d2ebb167-17a2-4bd0-8411-97f83c92d9e6 uuid:d75b510f-9b88-4a82-bac4-4de995f4a1b9 uuid:7914b52a-e13d-4d79-9f76-43e040fa939f uuid:b4b815fe-eb25-401b-b65f-f7a020da8944 uuid:41e63da1-bee7-48da-be90-527c99fa38d8 uuid:e9b94664-2b7a-4e97-a565-4bcce3896392 uuid:1ce937ba-14a1-48dc-b65c-3b50e98ceb37 uuid:6e614af5-e74d-4c6d-b841-85ac4dd93250 uuid:379f8fe1-7311-4db2-a5b3-8b7cf5dd0882 uuid:780d3b13-0263-4449-ad1e-1627fd0042aa uuid:fd23e6be-fb9a-44fd-8ad1-55df298d506a uuid:f7fb3296-07ab-42f6-937f-0ebbe0ee98ea ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 3 DP 214866" ;
-            dct:hasPart [ rdfs:label "214866" ;
-                    commonpatterns:namePartType <file:///github/workspace/planIdentifier> ],
-                [ rdfs:label "3" ;
-                    commonpatterns:namePartType <file:///github/workspace/ParcelIdentifier> ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType <file:///github/workspace/PlanType> ],
+            dct:hasPart [ rdfs:label "3" ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelIdentifier ],
                 [ rdfs:label "Lot" ;
-                    commonpatterns:namePartType <file:///github/workspace/ParcelType> ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelType ],
+                [ rdfs:label "214866" ;
+                    commonpatterns:namePartType wa-name-part-type:planIdentifier ],
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType wa-name-part-type:PlanType ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 2829 ;
@@ -26490,6 +26492,7 @@ Links to the schema:
     "wa-annotation": "csdm:wa-annotation/",
     "wa-surveypoint-method": "csdm:wa-surveypoint-method/",
     "wa-parcel-purpose": "csdm:wa-parcel-purpose/",
+    "wa-name-part-type": "csdm:wa-name-part-type/",
     "wa-parcel-type": "csdm:wa-parcel-type/",
     "wa-parcel-state": "csdm:wa-parcel-state/",
     "wa-nonprimary-parcel-type": "csdm:wa-secondary-parcel-type/",

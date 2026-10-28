@@ -68,7 +68,7 @@
           }
         ]
       },
-      "code": "import json\ndata = json.loads(input_data)\ncatype = \"\"\nlnumber = \"\"\nareaCode = \"Plan\"\nfor p in data['hasPart']:\n    if p['type'] == 'surveyType':\n        areaCode = \"Plan\"\n    elif  p['type'] == 'surveyNumber':\n        catype = p['label']\n    elif  p['type'] == 'lotNumber':\n        lnumber = p['label']\noutput_data=f\"Lot {lnumber} {areaCode} {catype}\"\n"
+      "code": "import json\ndata = json.loads(input_data)\ncatype = \"\"\nlnumber = \"\"\nareaCode = \"Plan\"\nfor p in data['hasPart']:\n    if p['type'] == 'wa-name-part-type:surveyType':\n        areaCode = \"Plan\"\n    elif  p['type'] == 'wa-name-part-type:surveyNumber':\n        catype = p['label']\n    elif  p['type'] == 'wa-name-part-type:lotNumber':\n        lnumber = p['label']\noutput_data=f\"Lot {lnumber} {areaCode} {catype}\"\n"
     }
   ],
   "examples": [
@@ -88,20 +88,20 @@
               "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/lotOnPlan/transforms/example_1_1.Dual-name-label.txt"
             }
           },
-          "sizeBytes": 332,
-          "code": "{\n     \"type\": \"wa:LotOnPlanAppellation\",\n    \"label\": \"Lot 4 on Plan 1234\",\n    \"hasPart\": [\n      { \"type\": \"surveyType\", \"ref\": \"wa-survey-type:deposited-plan\" },\n      { \"type\": \"surveyNumber\", \"label\": \"1234\" },\n      { \"type\": \"lotPrefix\", \"ref\": \"wa-parcel-purpose:lot\" },\n      { \"type\": \"lotNumber\", \"label\": \"4\" }\n    ]\n\n}"
+          "sizeBytes": 404,
+          "code": "{\n     \"type\": \"wa:LotOnPlanAppellation\",\n    \"label\": \"Lot 4 on Plan 1234\",\n    \"hasPart\": [\n      { \"type\": \"wa-name-part-type:surveyType\", \"ref\": \"wa-survey-type:deposited-plan\" },\n      { \"type\": \"wa-name-part-type:surveyNumber\", \"label\": \"1234\" },\n      { \"type\": \"wa-name-part-type:lotPrefix\", \"ref\": \"wa-parcel-purpose:lot\" },\n      { \"type\": \"wa-name-part-type:lotNumber\", \"label\": \"4\" }\n    ]\n\n}"
         },
         {
           "language": "jsonld",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/lotOnPlan/example_1_1.jsonld",
-          "sizeBytes": 513,
-          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/context.jsonld\",\n  \"type\": \"wa:LotOnPlanAppellation\",\n  \"label\": \"Lot 4 on Plan 1234\",\n  \"hasPart\": [\n    {\n      \"type\": \"surveyType\",\n      \"ref\": \"wa-survey-type:deposited-plan\"\n    },\n    {\n      \"type\": \"surveyNumber\",\n      \"label\": \"1234\"\n    },\n    {\n      \"type\": \"lotPrefix\",\n      \"ref\": \"wa-parcel-purpose:lot\"\n    },\n    {\n      \"type\": \"lotNumber\",\n      \"label\": \"4\"\n    }\n  ]\n}"
+          "sizeBytes": 585,
+          "code": "{\n  \"@context\": \"https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/datatypes/lotOnPlan/context.jsonld\",\n  \"type\": \"wa:LotOnPlanAppellation\",\n  \"label\": \"Lot 4 on Plan 1234\",\n  \"hasPart\": [\n    {\n      \"type\": \"wa-name-part-type:surveyType\",\n      \"ref\": \"wa-survey-type:deposited-plan\"\n    },\n    {\n      \"type\": \"wa-name-part-type:surveyNumber\",\n      \"label\": \"1234\"\n    },\n    {\n      \"type\": \"wa-name-part-type:lotPrefix\",\n      \"ref\": \"wa-parcel-purpose:lot\"\n    },\n    {\n      \"type\": \"wa-name-part-type:lotNumber\",\n      \"label\": \"4\"\n    }\n  ]\n}"
         },
         {
           "language": "ttl",
           "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/datatypes/lotOnPlan/example_1_1.ttl",
-          "sizeBytes": 938,
-          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n\n[] rdfs:label \"Lot 4 on Plan 1234\" ;\n    dcterms:hasPart [ rdfs:label \"4\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/lotNumber> ],\n        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/lotPrefix> ],\n        [ rdfs:label \"1234\" ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyNumber> ],\n        [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;\n            commonpatterns:namePartType <http://www.example.com/namedobjects/surveyType> ] .\n\n"
+          "sizeBytes": 944,
+          "code": "@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .\n@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n\n[] rdfs:label \"Lot 4 on Plan 1234\" ;\n    dcterms:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;\n            commonpatterns:namePartType wa-name-part-type:surveyType ],\n        [ rdfs:label \"1234\" ;\n            commonpatterns:namePartType wa-name-part-type:surveyNumber ],\n        [ commonpatterns:namePartRef wa-parcel-purpose:lot ;\n            commonpatterns:namePartType wa-name-part-type:lotPrefix ],\n        [ rdfs:label \"4\" ;\n            commonpatterns:namePartType wa-name-part-type:lotNumber ] .\n\n"
         }
       ]
     }

@@ -454,19 +454,19 @@
               "label": "Lot 213 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "213"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanNumber",
+                  "type": "wa-name-part-type:PlanNumber",
                   "label": "572532"
                 }
               ]

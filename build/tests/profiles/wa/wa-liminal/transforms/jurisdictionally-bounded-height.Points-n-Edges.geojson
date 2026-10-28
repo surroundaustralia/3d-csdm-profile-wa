@@ -12,7 +12,6 @@
         ]
       },
       "properties": {
-        "name": "",
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
@@ -37,7 +36,6 @@
         ]
       },
       "properties": {
-        "name": "",
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
@@ -62,7 +60,6 @@
         ]
       },
       "properties": {
-        "name": "",
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,
@@ -87,7 +84,6 @@
         ]
       },
       "properties": {
-        "name": "",
         "purpose": "wa-surveypoint-purpose:monument",
         "ptQualityMeasure": 0.05,
         "comment": null,

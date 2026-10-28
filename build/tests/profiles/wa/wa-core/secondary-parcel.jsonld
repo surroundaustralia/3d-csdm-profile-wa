@@ -1749,19 +1749,19 @@
               "label": "Lot 215 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "215"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "planIdentifier",
+                  "type": "wa-name-part-type:planIdentifier",
                   "label": "572532"
                 }
               ]
@@ -1801,19 +1801,19 @@
               "label": "Lot 216 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "216"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -1853,19 +1853,19 @@
               "label": "Lot 217 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "217"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -1905,19 +1905,19 @@
               "label": "Lot 218 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "218"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -1957,19 +1957,19 @@
               "label": "Lot 219 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "219"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -2011,19 +2011,19 @@
               "label": "Lot 220 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Lot"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "220"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -2069,19 +2069,19 @@
               "label": "Area D5 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Area"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "D5"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -2127,19 +2127,19 @@
               "label": "Area D4 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Area"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "D4"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -2186,19 +2186,19 @@
               "label": "Area D3 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Area"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "D3"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -2246,19 +2246,19 @@
               "label": "Area D2 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Area"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "D2"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]
@@ -2312,19 +2312,19 @@
               "label": "Area D1 DP 572532",
               "hasPart": [
                 {
-                  "type": "ParcelType",
+                  "type": "wa-name-part-type:ParcelType",
                   "label": "Area"
                 },
                 {
-                  "type": "ParcelIdentifier",
+                  "type": "wa-name-part-type:ParcelIdentifier",
                   "label": "D1"
                 },
                 {
-                  "type": "PlanType",
+                  "type": "wa-name-part-type:PlanType",
                   "label": "DP"
                 },
                 {
-                  "type": "PlanIdentifier",
+                  "type": "wa-name-part-type:PlanIdentifier",
                   "label": "572532"
                 }
               ]

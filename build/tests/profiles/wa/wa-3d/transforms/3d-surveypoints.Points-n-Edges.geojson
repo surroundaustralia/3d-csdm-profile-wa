@@ -16,11 +16,11 @@
           "label": "EFB157243/9533",
           "hasPart": [
             {
-              "type": "Source",
+              "type": "wa-name-part-type:Source",
               "label": "EFB157243"
             },
             {
-              "type": "Stamp",
+              "type": "wa-name-part-type:Stamp",
               "label": "9533"
             }
           ]
@@ -77,11 +77,11 @@
           "label": "EFB157243/9802",
           "hasPart": [
             {
-              "type": "Source",
+              "type": "wa-name-part-type:Source",
               "label": "EFB157243"
             },
             {
-              "type": "Stamp",
+              "type": "wa-name-part-type:Stamp",
               "label": "9802"
             }
           ]
