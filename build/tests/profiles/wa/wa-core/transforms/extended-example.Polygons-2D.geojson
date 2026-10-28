@@ -3941,7 +3941,28 @@
         ]
       },
       "properties": {
-        "appellation": "9018a",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Strata Lot on 9018a DP 400715",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelType",
+              "label": "Strata Lot"
+            },
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "9018a"
+            },
+            {
+              "type": "wa-name-part-type:PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "wa-name-part-type:PlanNumber",
+              "label": "400715"
+            }
+          ]
+        },
         "area": 33365.28,
         "parcelType": "wa-parcel-type:freehold",
         "parcelPurpose": "wa-parcel-purpose:vacant-strata-lot",
@@ -4344,7 +4365,28 @@
         ]
       },
       "properties": {
-        "appellation": "9018b",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Strata Lot on 9018b DP 400715",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelType",
+              "label": "Strata Lot"
+            },
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "9018b"
+            },
+            {
+              "type": "wa-name-part-type:PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "wa-name-part-type:PlanNumber",
+              "label": "400715"
+            }
+          ]
+        },
         "area": 36771.78,
         "parcelType": "wa-parcel-type:freehold",
         "parcelPurpose": "wa-parcel-purpose:vacant-strata-lot",
@@ -4427,7 +4469,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 1203.49,
         "parcelType": "wa-parcel-type:freehold",
         "parcelPurpose": "wa-parcel-purpose:road-vest",
@@ -4502,7 +4553,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 964.73,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4565,7 +4625,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 619.88,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4624,7 +4693,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 722.23,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4671,7 +4749,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 309.65,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4706,7 +4793,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 18.69,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4741,7 +4837,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 0.48,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4776,7 +4881,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 17.45,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -4811,7 +4925,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 17.39,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -5010,7 +5133,24 @@
         ]
       },
       "properties": {
-        "appellation": "SURROUND",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Surround Lot on DP 400715",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelType",
+              "label": "Surround Lot"
+            },
+            {
+              "type": "wa-name-part-type:PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "wa-name-part-type:PlanNumber",
+              "label": "400715"
+            }
+          ]
+        },
         "area": 33365.28,
         "parcelType": "wa-parcel-type:miscellaneous",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -5689,7 +5829,24 @@
         ]
       },
       "properties": {
-        "appellation": "SURROUND",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Surround Lot on DP 400715",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelType",
+              "label": "Surround Lot"
+            },
+            {
+              "type": "wa-name-part-type:PlanType",
+              "label": "DP"
+            },
+            {
+              "type": "wa-name-part-type:PlanNumber",
+              "label": "400715"
+            }
+          ]
+        },
         "area": 59854.61,
         "parcelType": "wa-parcel-type:miscellaneous",
         "parcelPurpose": "wa-parcel-purpose:lot",
@@ -6648,7 +6805,16 @@
         ]
       },
       "properties": {
-        "appellation": "Midas Retreat",
+        "appellation": {
+          "type": "wa:LotOnPlanAppellation",
+          "label": "Midas Retreat",
+          "hasPart": [
+            {
+              "type": "wa-name-part-type:ParcelIdentifier",
+              "label": "Midas Retreat"
+            }
+          ]
+        },
         "area": 3872.3,
         "parcelType": "wa-parcel-type:road",
         "parcelPurpose": "wa-parcel-purpose:lot",
