@@ -1,0 +1,9 @@
+{
+  "manifestVersion": "1.0",
+  "project": "3d-csdm-profile-wa",
+  "sources": [{"type": "markdown", "path": "final-report.md"}],
+  "acronymList": "final-report_acronyms.json",
+  "acronymOutput": "final-report_acronyms.json",
+  "export": {"descriptionPolicy": "definition", "separator": ": "},
+  "detection": {"ignore": ["ID", "SURROUND", "TOC", "A.1", "A.2", "A.3", "A.4", "A.5", "A.6", "DP407880", "SP83687", "GAP"]}
+}

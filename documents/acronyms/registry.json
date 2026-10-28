@@ -1,0 +1,517 @@
+{
+  "schemaVersion": "1.2",
+  "projects": [
+    {
+      "id": "3d-csdm-profile-wa"
+    }
+  ],
+  "domains": [],
+  "records": [
+    {
+      "id": "2d--two-dimensional",
+      "acronym": "2D",
+      "aliases": [],
+      "expansion": "Two-dimensional",
+      "definition": {
+        "text": "Having or representing extent in two spatial dimensions, such as easting and northing.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-23",
+          "note": "Added for the final report; first entered through a scratch list."
+        }
+      ]
+    },
+    {
+      "id": "3d--three-dimensional",
+      "acronym": "3D",
+      "aliases": [],
+      "expansion": "Three-dimensional",
+      "definition": {
+        "text": "Having or representing extent in three spatial dimensions, usually width, depth and height, or easting, northing and elevation.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-001",
+          "originalAcronym": "3D",
+          "originalDescription": "Three-dimensional.",
+          "digest": "sha256:cb7ecf3e5133cc82cd47e7910b2768cf0c8c0a88e78d49a5d198064d5ff7e1a9"
+        }
+      ]
+    },
+    {
+      "id": "3d-csdm--3d-cadastral-survey-data-model",
+      "acronym": "3D CSDM",
+      "aliases": [
+        "CSDM"
+      ],
+      "expansion": "3D Cadastral Survey Data Model",
+      "definition": {
+        "text": "A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-002",
+          "originalAcronym": "3D CSDM",
+          "originalDescription": "3D Cadastral Survey Data Model.",
+          "digest": "sha256:89ac6c0c85e032b7832650e5fd425a8462452c6416bf18e01921b54e8bb0e097"
+        }
+      ]
+    },
+    {
+      "id": "abs--australian-bureau-of-statistics",
+      "acronym": "ABS",
+      "aliases": [],
+      "expansion": "Australian Bureau of Statistics",
+      "definition": {
+        "text": "The Australian Government's national statistics agency, responsible for official statistics and statistical standards such as the ABS Data Quality Framework.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-003",
+          "originalAcronym": "ABS",
+          "originalDescription": "Australian Bureau of Statistics.",
+          "digest": "sha256:75141a506f284f03d9233f27b41d9ffc553b3d687a1d4a82008a520cdfdbb8a7"
+        }
+      ]
+    },
+    {
+      "id": "anz--australia-and-new-zealand",
+      "acronym": "ANZ",
+      "aliases": [],
+      "expansion": "Australia and New Zealand",
+      "definition": {
+        "text": "The two countries considered together, typically as a joint jurisdiction for standards, agreements or organisations.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "api--application-programming-interface",
+      "acronym": "API",
+      "aliases": [],
+      "expansion": "Application Programming Interface",
+      "definition": {
+        "text": "A defined set of operations and data formats through which software components or systems exchange requests and data.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-004",
+          "originalAcronym": "API",
+          "originalDescription": "Application Programming Interface.",
+          "digest": "sha256:f501ad3a4320c1920b1d21161835bb868b528217fe6e65cbdf2098f9647d9cd8"
+        }
+      ]
+    },
+    {
+      "id": "as-nzs--australian-new-zealand-standard",
+      "acronym": "AS/NZS",
+      "aliases": [],
+      "expansion": "Australian/New Zealand Standard",
+      "definition": {
+        "text": "A standard published jointly by Standards Australia and Standards New Zealand.",
+        "status": "proposed"
+      },
+      "status": "deprecated",
+      "supersededBy": "as-nzs--standards-australia-standards-new-zealand",
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "as-nzs--standards-australia-standards-new-zealand",
+      "acronym": "AS/NZS",
+      "aliases": [],
+      "expansion": "Standards Australia/Standards New Zealand",
+      "definition": {
+        "text": "A standard published jointly by Standards Australia and Standards New Zealand.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added for the final report; replaces as-nzs--australian-new-zealand-standard (wrong expansion)."
+        }
+      ]
+    },
+    {
+      "id": "csd--cadastral-survey-dataset",
+      "acronym": "CSD",
+      "aliases": [],
+      "expansion": "Cadastral Survey Dataset",
+      "definition": {
+        "text": "The digital record of a cadastral survey (its parcels, boundaries, marks, observations and metadata), lodged with or exchanged between land administration authorities.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-005",
+          "originalAcronym": "CSD",
+          "originalDescription": "Cadastral Survey Dataset.",
+          "digest": "sha256:bb64b50192fd5677f5177daced6d560b2b7c59152fac80f4f9c9c36d8abceac9"
+        }
+      ]
+    },
+    {
+      "id": "csdm--cadastral-survey-data-model",
+      "acronym": "CSDM",
+      "aliases": [],
+      "expansion": "Cadastral Survey Data Model",
+      "definition": {
+        "text": "A proposed standard for the exchange of digital cadastral survey information between the survey industry and government land administration agencies / land registries for Australian and New Zealand jurisdictions.",
+        "status": "approved"
+      },
+      "status": "deprecated",
+      "supersededBy": "3d-csdm--3d-cadastral-survey-data-model",
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-006",
+          "originalAcronym": "CSDM",
+          "originalDescription": "Cadastral Survey Data Model.",
+          "digest": "sha256:f4b5e70e545ce2997ede8edfdff5bd1c97d3f0546c8ab6edc5a01d35729af94e"
+        }
+      ]
+    },
+    {
+      "id": "csv--comma-separated-values",
+      "acronym": "CSV",
+      "aliases": [],
+      "expansion": "Comma-Separated Values",
+      "definition": {
+        "text": "A plain-text tabular data format in which each line is a record and fields are separated by commas.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "dqf--data-quality-framework",
+      "acronym": "DQF",
+      "aliases": [],
+      "expansion": "Data Quality Framework",
+      "definition": {
+        "text": "A structured set of dimensions and criteria for assessing and describing the quality of data or statistical information.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "gis--geographic-information-system",
+      "acronym": "GIS",
+      "aliases": [],
+      "expansion": "Geographic Information System",
+      "definition": {
+        "text": "A system for capturing, storing, analysing, managing and presenting spatially referenced data.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "html--hypertext-markup-language",
+      "acronym": "HTML",
+      "aliases": [],
+      "expansion": "HyperText Markup Language",
+      "definition": {
+        "text": "The standard markup language for documents displayed in web browsers.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "icsm--intergovernmental-committee-on-surveying-and-mapping",
+      "acronym": "ICSM",
+      "aliases": [],
+      "expansion": "Intergovernmental Committee on Surveying and Mapping",
+      "definition": {
+        "text": "The committee of Australian and New Zealand government agencies that coordinates national surveying, mapping, cadastral and geodetic standards.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-007",
+          "originalAcronym": "ICSM",
+          "originalDescription": "Intergovernmental Committee on Surveying and Mapping.",
+          "digest": "sha256:902a084bde2714f1e0f22ff8f532093d091075fd77e51eb6de4d73c370b29699"
+        }
+      ]
+    },
+    {
+      "id": "iso--international-organization-for-standardization",
+      "acronym": "ISO",
+      "aliases": [],
+      "expansion": "International Organization for Standardization",
+      "definition": {
+        "text": "An independent, non-governmental international body that develops and publishes standards through its national member bodies.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "json--javascript-object-notation",
+      "acronym": "JSON",
+      "aliases": [],
+      "expansion": "JavaScript Object Notation",
+      "definition": {
+        "text": "A lightweight, text-based format for structured data, built from name–value pairs and ordered lists.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-23",
+          "note": "Added for the final report; first entered through a scratch list."
+        }
+      ]
+    },
+    {
+      "id": "ladm--land-administration-domain-model",
+      "acronym": "LADM",
+      "aliases": [],
+      "expansion": "Land Administration Domain Model",
+      "definition": {
+        "text": "An international conceptual model (ISO 19152) of land administration information, covering parties, rights, restrictions and responsibilities, and spatial units. ISO 19152 Edition II includes land administration concepts relating to marine cadastre, valuation, and land use or spatial planning.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-25",
+          "note": "Added-for-the-final-report"
+        }
+      ]
+    },
+    {
+      "id": "ngsc--next-generation-spatial-cadastre",
+      "acronym": "NGSC",
+      "aliases": [],
+      "expansion": "Next Generation Spatial Cadastre",
+      "definition": {
+        "text": "Landgate's programme to replace Western Australia's cadastral systems with a spatially accurate, three-dimensional-capable digital cadastre.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-008",
+          "originalAcronym": "NGSC",
+          "originalDescription": "Next Generation Spatial Cadastre.",
+          "digest": "sha256:13338a0cbf0c11e3f09f08407a6a2f6635ecf9df83d2c6d8cdd9b6241ff4a256"
+        }
+      ]
+    },
+    {
+      "id": "ogc--open-geospatial-consortium",
+      "acronym": "OGC",
+      "aliases": [],
+      "expansion": "Open Geospatial Consortium",
+      "definition": {
+        "text": "An international not-for-profit consortium that develops open standards for geospatial content and services.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-009",
+          "originalAcronym": "OGC",
+          "originalDescription": "Open Geospatial Consortium.",
+          "digest": "sha256:5e3808292d7c2b522e22f62c8e135349f26140c714500c1c87ea514dff49b6b2"
+        }
+      ]
+    },
+    {
+      "id": "poc--proof-of-concept",
+      "acronym": "PoC",
+      "aliases": [],
+      "expansion": "Proof of Concept",
+      "definition": {
+        "text": "A small-scale, preliminary implementation built to show that an approach or design is feasible.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-23",
+          "note": "Added for the final report; first entered through a scratch list."
+        }
+      ]
+    },
+    {
+      "id": "wa--western-australia",
+      "acronym": "WA",
+      "aliases": [],
+      "expansion": "Western Australia",
+      "definition": {
+        "text": "The Australian state covering the western third of the continent.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "file": "documents/final-report_acronyms.json",
+          "sourceId": "acr-010",
+          "originalAcronym": "WA",
+          "originalDescription": "Western Australia.",
+          "digest": "sha256:eef9d39cbb3be191f3f3b78499c20bd1146b6776b30f4dc0dcd6b541738fe766"
+        }
+      ]
+    }
+  ]
+}

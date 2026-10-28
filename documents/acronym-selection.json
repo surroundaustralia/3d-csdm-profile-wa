@@ -1,0 +1,114 @@
+{
+  "selectionVersion": "1.0",
+  "project": "3d-csdm-profile-wa",
+  "descriptionPolicy": "definition",
+  "separator": ": ",
+  "entries": [
+    {
+      "acronym": "2D",
+      "record": "2d--two-dimensional",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "3D",
+      "record": "3d--three-dimensional",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "3D CSDM",
+      "record": "3d-csdm--3d-cadastral-survey-data-model",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "ABS",
+      "record": "abs--australian-bureau-of-statistics",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "ANZ",
+      "record": "anz--australia-and-new-zealand",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "API",
+      "record": "api--application-programming-interface",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "AS/NZS",
+      "record": "as-nzs--standards-australia-standards-new-zealand",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "CSD",
+      "record": "csd--cadastral-survey-dataset",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "CSDM",
+      "record": "3d-csdm--3d-cadastral-survey-data-model",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "CSV",
+      "record": "csv--comma-separated-values",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "DQF",
+      "record": "dqf--data-quality-framework",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "GIS",
+      "record": "gis--geographic-information-system",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "HTML",
+      "record": "html--hypertext-markup-language",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "ICSM",
+      "record": "icsm--intergovernmental-committee-on-surveying-and-mapping",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "ISO",
+      "record": "iso--international-organization-for-standardization",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "JSON",
+      "record": "json--javascript-object-notation",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "LADM",
+      "record": "ladm--land-administration-domain-model",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "NGSC",
+      "record": "ngsc--next-generation-spatial-cadastre",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "OGC",
+      "record": "ogc--open-geospatial-consortium",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "PoC",
+      "record": "poc--proof-of-concept",
+      "includedBecause": "used"
+    },
+    {
+      "acronym": "WA",
+      "record": "wa--western-australia",
+      "includedBecause": "used"
+    }
+  ],
+  "unresolved": []
+}
