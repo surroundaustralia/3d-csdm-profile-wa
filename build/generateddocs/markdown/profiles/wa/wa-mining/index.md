@@ -578,11 +578,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -603,10 +603,10 @@ Minimal example - with combined elements from each test case
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.190965e+02 -3.470982e+01 ) ] ;
     commonpatterns:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType wa-name-part-type:Source ],
-                [ rdfs:label "9540" ;
-                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] .
+            dcterms:hasPart [ rdfs:label "9540" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ] ] .
 
 <https://www.wa-example.com/features/17251503> a geojson:Feature ;
     surv:vectorPurpose wa-vector-purpose:boundary ;
