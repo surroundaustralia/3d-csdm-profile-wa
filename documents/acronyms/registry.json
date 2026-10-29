@@ -215,6 +215,27 @@
       ]
     },
     {
+      "id": "ci-ct-cd--continuous-integration-continuous-testing-and-continuous",
+      "acronym": "CI/CT/CD",
+      "aliases": [],
+      "expansion": "Continuous Integration, Continuous Testing and Continuous Deployment",
+      "definition": {
+        "text": "An automated practice in which changes to shared source files are merged often, then tested and published automatically each time they change.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-29"
+        }
+      ]
+    },
+    {
       "id": "csd--cadastral-survey-data",
       "acronym": "CSD",
       "aliases": [],

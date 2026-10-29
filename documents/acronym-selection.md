@@ -1,6 +1,6 @@
 # Acronym selection: 3d-csdm-profile-wa
 
-Policy: definition; separator `: `; 22 entries; 0 unresolved acronym(s) block export.
+Policy: definition; separator `: `; 23 entries; 0 unresolved acronym(s) block export.
 
 | Acronym | Record | Included because | Override |
 | :- | :- | :- | :- |
@@ -12,6 +12,7 @@ Policy: definition; separator `: `; 22 entries; 0 unresolved acronym(s) block ex
 | API | `api--application-programming-interface` | used |  |
 | APX-05 | `apx-05--wa-digital-data-format-specification` | used |  |
 | AS/NZS | `as-nzs--standards-australia-standards-new-zealand` | used |  |
+| CI/CT/CD | `ci-ct-cd--continuous-integration-continuous-testing-and-continuous` | used |  |
 | CSD | `csd--cadastral-survey-data` | used |  |
 | CSDM | `3d-csdm--3d-cadastral-survey-data-model` | used |  |
 | CSV | `csv--comma-separated-values` | used |  |

@@ -45,6 +45,11 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "CI/CT/CD",
+      "record": "ci-ct-cd--continuous-integration-continuous-testing-and-continuous",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "CSD",
       "record": "csd--cadastral-survey-data",
       "includedBecause": "used"
