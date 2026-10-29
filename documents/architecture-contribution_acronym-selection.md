@@ -1,6 +1,6 @@
 # Acronym selection: 3d-csdm-profile-wa
 
-Policy: definition; separator `: `; 16 entries; 0 unresolved acronym(s) block export.
+Policy: definition; separator `: `; 17 entries; 0 unresolved acronym(s) block export.
 
 | Acronym | Record | Included because | Override |
 | :- | :- | :- | :- |
@@ -17,6 +17,7 @@ Policy: definition; separator `: `; 16 entries; 0 unresolved acronym(s) block ex
 | PROV | `prov--provenance` | used |  |
 | RDF | `rdf--resource-description-framework` | description |  |
 | SHACL | `shacl--shapes-constraint-language` | used |  |
+| SKOS | `skos--simple-knowledge-organization-system` | used |  |
 | SOSA | `sosa--sensor-observation-sample-and-actuator` | used |  |
-| W3C | `w3c--world-wide-web-consortium` | description |  |
+| W3C | `w3c--world-wide-web-consortium` | used |  |
 | WA | `wa--western-australia` | used |  |

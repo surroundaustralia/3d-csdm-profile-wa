@@ -617,6 +617,28 @@
       ]
     },
     {
+      "id": "skos--simple-knowledge-organization-system",
+      "acronym": "SKOS",
+      "aliases": [],
+      "expansion": "Simple Knowledge Organization System",
+      "definition": {
+        "text": "A W3C data model for representing thesauri, classification schemes, taxonomies and other controlled vocabularies, so that their concepts, labels and relationships can be published and linked on the web.",
+        "status": "approved"
+      },
+      "status": "approved",
+      "supersededBy": null,
+      "domains": [],
+      "contexts": [],
+      "sources": [
+        {
+          "project": "3d-csdm-profile-wa",
+          "entry": "manual",
+          "date": "2026-10-29",
+          "note": "Used and defined in architecture-contribution.md; added at the owner's request."
+        }
+      ]
+    },
+    {
       "id": "sosa--sensor-observation-sample-and-actuator",
       "acronym": "SOSA",
       "aliases": [],

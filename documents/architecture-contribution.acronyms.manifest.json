@@ -6,5 +6,5 @@
   "acronymOutput": "architecture-contribution_acronyms.json",
   "selection": "architecture-contribution_acronym-selection.json",
   "export": {"descriptionPolicy": "definition", "separator": ": "},
-  "detection": {"ignore": ["ID", "SURROUND", "TOC", "SP83687"]}
+  "detection": {"ignore": ["ID", "SURROUND", "TOC", "SP83687", "DRAFT"]}
 }

@@ -67,16 +67,21 @@
     },
     {
       "id": "acr-014",
+      "acronym": "SKOS",
+      "description": "Simple Knowledge Organization System: A W3C data model for representing thesauri, classification schemes, taxonomies and other controlled vocabularies, so that their concepts, labels and relationships can be published and linked on the web."
+    },
+    {
+      "id": "acr-015",
       "acronym": "SOSA",
       "description": "Sensor, Observation, Sample, and Actuator: A lightweight W3C and OGC ontology for describing sensors, observations, sampling and actuation, and the procedures behind them."
     },
     {
-      "id": "acr-015",
+      "id": "acr-016",
       "acronym": "W3C",
       "description": "World Wide Web Consortium: An international standards organisation that develops open standards for the World Wide Web."
     },
     {
-      "id": "acr-016",
+      "id": "acr-017",
       "acronym": "WA",
       "description": "Western Australia: The Australian state covering the western third of the continent."
     }
