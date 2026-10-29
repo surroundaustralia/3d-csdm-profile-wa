@@ -8,7 +8,7 @@
 # Spatial WA – Next Generation Spatial Cadastre (NGSC)
 <div style="margin-top: 8rem;"></div>
 
-## End of project report
+## Engagement Outcomes and Recommendations
 
 <div style="margin-top: 10rem;"></div>
 
@@ -65,6 +65,9 @@ Do last
 
 SURROUND Australia Pty Ltd (SURROUND) was engaged by Accenture Australia Pty Ltd to provide specialist cadastral information modelling, standards development, and technical advice in support of Landgate's Next Generation Spatial Cadastre (NGSC) project.
 The engagement forms part of the broader Spatial WA programme, which aims to modernise cadastral information management, improve data quality and interoperability, and support the transition from 2D to 3D cadastral representations.
+
+This report summarises the outcomes of SURROUND's contractual engagement with Accenture, including technical contributions, findings, outstanding dependencies, and recommendations for subsequent NGSC development. 
+It does not represent completion or closure of the broader NGSC project.
 
 The engagement addressed **34 allocated requirements across five deliverables**, covering cadastral information standards, survey data exchange, geometry and topology, boundary management, metadata, validation, visualisation, workflows, and system interfaces.
 One requirement concerning Aboriginal naming and dual naming was subsequently moved out of scope.

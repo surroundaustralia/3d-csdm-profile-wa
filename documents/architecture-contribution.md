@@ -16,7 +16,7 @@
 
 Prepared by: Surround Australia Pty Ltd (SURROUND)
 
-**Date:** 2026-11-02
+**Date:** 2026-10-28 (**Draft**)
 
 <!-- TOC -->
 
@@ -35,9 +35,10 @@ Prepared by: Surround Australia Pty Ltd (SURROUND)
 
 ##### Revision history
 
-| Version | Status | Date       | Author        | Description    |
-|---------|--------|------------|---------------|----------------|
-| 0.1     | Draft  | 2026-10-26 | Andrew Hunter | Report created |
+| Version | Status | Date       | Author        | Description                               |
+|---------|--------|------------|---------------|-------------------------------------------|
+| 0.1     | Draft  | 2026-10-26 | Andrew Hunter | Report created                            |
+| 0.2     | Draft  | 2026-10-28 | Rob Atkinson  | Reviewd for release to Accenture as DRAFT |
 
 <!-- CONTENT -->
 
@@ -56,7 +57,7 @@ Accenture engaged SURROUND to provide specialist cadastral information modelling
 
 Schedule 1 of the subcontract [@accenture_ngsc_subcontract_2025;] identifies 34 allocated requirements, comprising 15 classified as SURROUND Responsible and 19 as SURROUND Supporting.
 The 34 requirements represent the original contractual allocation. 
-Requirement NN01.02.026 was subsequently moved out of scope but remains included in the End of Project Report [@hunter_deliverable_2026e] for traceability. 
+Requirement NN01.02.026 was subsequently moved out of scope but remains included in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e] for traceability. 
 This architecture contribution addresses the 15 requirements classified as SURROUND Responsible.
 For applicable Responsible requirements, Schedule 1 requires documentation of CSD, 3D CSDM, or metadata components in a Solution Architecture document, together with other specified technical deliverables.
 
@@ -94,7 +95,7 @@ The principal supporting materials are:
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Subcontract Schedule 1                                                                                                                                   | Contractual requirements and deliverable obligations.                                                                                                      |
 | Deliverables 1–5 [@hunter_deliverable_2025; @hunter_deliverable_2026a; @hunter_deliverable_2026b; @hunter_deliverable_2026c; @hunter_deliverable_2026d;] | Requirements analyses, 3D CSDM perspectives, proposed acceptance criteria, and dependencies.                                                               |
-| End of Project Report [@hunter_deliverable_2026e;]                                                                                                       | Consolidated technical findings, architectural decisions, and recommendations, including requirements traceability matrix and technical artefact register. |
+| Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;]                                                                              | Consolidated technical findings, architectural decisions, and recommendations, including requirements traceability matrix and technical artefact register. |
 | Technical repositories                                                                                                                                   | Machine-readable specifications, datasets, validation resources, and supporting implementations.                                                           |
 
 Requirement-specific details and outstanding decisions are cross-referenced to these sources rather than repeated here.
@@ -178,7 +179,8 @@ flowchart TB
     class LP,SOSA,TF,GEO,META external
 ```
 <figure class="fig fig-wide">
-    <figcaption id="figure-2-modular-composition-and-external-dependencies">Figure 2: Modular composition and external dependencies. <br>Solid arrows show conceptual composition; dashed arrows show reuse of external specifications. The relationships are explanatory, not a literal schema dependency graph.</figcaption>
+    <figcaption id="figure-2-modular-composition-and-external-dependencies">Figure 2: Modular composition and external dependencies</figcaption>
+    <p class="figure-note">Solid arrows show conceptual composition; dashed arrows show reuse of external specifications. The relationships are explanatory, not a literal schema dependency graph.</p>
 </figure>
 
 The principal external dependencies are:
@@ -272,7 +274,7 @@ These technologies do not prescribe NGSC's application framework or storage plat
 
 ## Requirement-specific architecture contributions
 
-This section maps the 15 SURROUND Responsible requirements to their principal CSD/3D CSDM or metadata components, supporting artefacts, and NGSC integration dependencies. Requirements are grouped by shared architecture concerns; detailed analyses and proposed acceptance criteria remain in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d;] and the End of Project Report [@hunter_deliverable_2026e;].
+This section maps the 15 SURROUND Responsible requirements to their principal CSD/3D CSDM or metadata components, supporting artefacts, and NGSC integration dependencies. Requirements are grouped by shared architecture concerns; detailed analyses and proposed acceptance criteria remain in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d;] and the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;].
 
 ### Cadastral information exchange and transformation
 
@@ -345,7 +347,7 @@ The NGSC platform is responsible for implementing the associated APIs, workflows
 
 The tables identify common information and validation components used by multiple requirements. 
 Supporting specifications should be maintained independently of individual application functions where practical. 
-Outstanding decisions, including supported products, metadata profiles, transformation rules, and service responsibilities, are consolidated in the End of Project Report [@hunter_deliverable_2026e] and require reconciliation with Accenture's NGSC architecture.
+Outstanding decisions, including supported products, metadata profiles, transformation rules, and service responsibilities, are consolidated in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e] and require reconciliation with Accenture's NGSC architecture.
 
 ## Specifications and verification
 <!--
@@ -413,7 +415,8 @@ flowchart TB
     class DATA,VALID,REPORT data
 ```
 <figure class="fig fig-wide">
-    <figcaption id="figure-4-schema-profile-validation-architecture">Figure 4: Schema, profile and validation architecture. <br>The dashed connections to geometry, topology, and WA cadastral rules are intentional. They indicate that these rules are associated with the applicable specifications but are not necessarily generated automatically by the OGC Building Blocks toolchain.</figcaption>
+    <figcaption id="figure-4-schema-profile-validation-architecture">Figure 4: Schema, profile and validation architecture</figcaption>
+     <p class="figure-note">The dashed connections to geometry, topology, and WA cadastral rules are intentional. They indicate that these rules are associated with the applicable specifications but are not necessarily generated automatically by the OGC Building Blocks toolchain.</p>
 </figure>
 
 The validation resources shown in [Figure 4](#figure-4-schema-profile-validation-architecture) are complementary: passing structural checks does not establish geometric validity, jurisdictional compliance, or authoritative acceptance. 
@@ -442,7 +445,7 @@ Integration testing, confirmed jurisdictional rules, and requirement-specific ac
 
 A consolidated validation and conformance test suite is recommended to support NGSC implementation and ongoing profile maintenance. 
 This should combine versioned specifications, representative cadastral datasets, applicable validation rules, expected outcomes, and automated reporting. 
-The scope and acceptance baseline require agreement with Accenture and Landgate, consistent with decision AD-08 in the End of Project Report [@hunter_deliverable_2026e;].
+The scope and acceptance baseline require agreement with Accenture and Landgate, consistent with decision AD-08 in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;].
 
 **Principal references:** [WA Implementation Profile](https://surroundaustralia.github.io/3d-csdm-profile-wa/), [3D CSDM Common Model](https://github.com/icsm-au/3d-csdm-common), and [Topo Functions](https://github.com/ogcincubator/topo-functions).
 
@@ -537,10 +540,10 @@ The functional dependencies are summarised in [Figure 2](#figure-2-modular-compo
 
 The NGSC architecture must confirm supported exchange formats and cadastral products; source transformation and preservation rules; mappings to operational records; validation responsibilities and acceptance criteria; metadata and workflow integration; and support for specialised 3D legal boundary representations.
 
-Requirement-level dependencies and decisions are recorded in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d] and the End of Project Report [@hunter_deliverable_2026e]. 
+Requirement-level dependencies and decisions are recorded in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d] and the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e]. 
 Their resolution will determine how the 3D CSDM capabilities are incorporated into NGSC without changing the exchange model's technology-independent role.
 
-The principal outstanding decisions are consolidated as AD-01 to AD-08 in the End of Project Report [@hunter_deliverable_2026e]. 
+The principal outstanding decisions are consolidated as AD-01 to AD-08 in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e]. 
 These address the 3D CSDM exchange architecture, profile and vocabulary governance, legacy transformation, geometry and cadastral validation, authoritative 3D boundaries, metadata governance, workflow integration, and technical acceptance.
 
 The decision register identifies recommended directions and responsible organisations. 
@@ -558,7 +561,7 @@ The 3D CSDM establishes a common exchange model but does not prescribe NGSC's op
 Integration therefore requires further decisions concerning source transformation, mapping to Esri Parcel Fabric, validation responsibilities, metadata management, and the treatment of specialised cadastral representations.
 
 The architecture contributions documented here provide a technical foundation for incorporation into Accenture's NGSC Solution Architecture. 
-Outstanding implementation decisions and acceptance requirements remain subject to confirmation by Accenture and Landgate, with supporting detail provided in the requirements deliverables [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d], technical repositories, and End of Project Report [@hunter_deliverable_2026e].
+Outstanding implementation decisions and acceptance requirements remain subject to confirmation by Accenture and Landgate, with supporting detail provided in the requirements deliverables [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d], technical repositories, and Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e].
 
 ## References
 
