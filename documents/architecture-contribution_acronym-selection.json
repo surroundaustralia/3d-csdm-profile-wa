@@ -70,6 +70,11 @@
       "includedBecause": "used"
     },
     {
+      "acronym": "SKOS",
+      "record": "skos--simple-knowledge-organization-system",
+      "includedBecause": "used"
+    },
+    {
       "acronym": "SOSA",
       "record": "sosa--sensor-observation-sample-and-actuator",
       "includedBecause": "used"
@@ -77,7 +82,7 @@
     {
       "acronym": "W3C",
       "record": "w3c--world-wide-web-consortium",
-      "includedBecause": "description"
+      "includedBecause": "used"
     },
     {
       "acronym": "WA",

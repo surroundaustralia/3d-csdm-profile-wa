@@ -65,12 +65,12 @@ Example appellation.
 @prefix wa-parcel-type: <https://linked.data.gov.au/def/csdm/wa-parcel-type/> .
 
 [] rdfs:label "L-3114-12345" ;
-    dcterms:hasPart [ rdfs:label "3114" ;
-            commonpatterns:namePartType wa-name-part-type:documentOrGrantReference ],
-        [ commonpatterns:namePartRef wa-parcel-type:freehold ;
+    dcterms:hasPart [ commonpatterns:namePartRef wa-parcel-type:freehold ;
             commonpatterns:namePartType wa-name-part-type:tenureClass ],
         [ rdfs:label "12345" ;
-            commonpatterns:namePartType wa-name-part-type:legalDescriptor ] .
+            commonpatterns:namePartType wa-name-part-type:legalDescriptor ],
+        [ rdfs:label "3114" ;
+            commonpatterns:namePartType wa-name-part-type:documentOrGrantReference ] .
 
 
 ```
@@ -93,7 +93,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.miscellaneousTenure
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-28'
+  dateOfLastChange: '2026-10-29'
 
 ```
 

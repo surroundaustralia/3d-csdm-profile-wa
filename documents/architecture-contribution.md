@@ -18,6 +18,12 @@ Prepared by: Surround Australia Pty Ltd (SURROUND)
 
 **Date:** 2026-11-02
 
+<!--
+Date: 2026-10-26
+Convert to PDF using `print_to_pdf`
+Organisation: Edge Geomatics Limited
+-->
+
 <!-- TOC -->
 
 ## Table of Contents
@@ -35,9 +41,10 @@ Prepared by: Surround Australia Pty Ltd (SURROUND)
 
 ##### Revision history
 
-| Version | Status | Date       | Author        | Description    |
-|---------|--------|------------|---------------|----------------|
-| 0.1     | Draft  | 2026-10-26 | Andrew Hunter | Report created |
+| Version | Status | Date       | Author        | Description                               |
+|---------|--------|------------|---------------|-------------------------------------------|
+| 0.1     | Draft  | 2026-10-26 | Andrew Hunter | Report created                            |
+| 0.2     | Draft  | 2026-10-28 | Rob Atkinson  | Reviewd for release to Accenture as DRAFT |
 
 <!-- CONTENT -->
 
@@ -56,7 +63,7 @@ Accenture engaged SURROUND to provide specialist cadastral information modelling
 
 Schedule 1 of the subcontract [@accenture_ngsc_subcontract_2025;] identifies 34 allocated requirements, comprising 15 classified as SURROUND Responsible and 19 as SURROUND Supporting.
 The 34 requirements represent the original contractual allocation. 
-Requirement NN01.02.026 was subsequently moved out of scope but remains included in the End of Project Report [@hunter_deliverable_2026e] for traceability. 
+Requirement NN01.02.026 was subsequently moved out of scope but remains included in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e] for traceability. 
 This architecture contribution addresses the 15 requirements classified as SURROUND Responsible.
 For applicable Responsible requirements, Schedule 1 requires documentation of CSD, 3D CSDM, or metadata components in a Solution Architecture document, together with other specified technical deliverables.
 
@@ -86,7 +93,7 @@ Referenced technical artefacts are at varying stages of development and do not, 
 
 This document is intended to complement Accenture's NGSC Solution Architecture.
 
-The principal supporting materials are:
+The principal supporting materials are listed in [Table 1](#tbl-1).
 
 #### Table 1: Supporting documentation
 
@@ -94,16 +101,12 @@ The principal supporting materials are:
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Subcontract Schedule 1                                                                                                                                   | Contractual requirements and deliverable obligations.                                                                                                      |
 | Deliverables 1–5 [@hunter_deliverable_2025; @hunter_deliverable_2026a; @hunter_deliverable_2026b; @hunter_deliverable_2026c; @hunter_deliverable_2026d;] | Requirements analyses, 3D CSDM perspectives, proposed acceptance criteria, and dependencies.                                                               |
-| End of Project Report [@hunter_deliverable_2026e;]                                                                                                       | Consolidated technical findings, architectural decisions, and recommendations, including requirements traceability matrix and technical artefact register. |
-| Technical repositories                                                                                                                                   | Machine-readable specifications, datasets, validation resources, and supporting implementations.                                                           |
+| Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;]                                                                              | Consolidated technical findings, architectural decisions, and recommendations, including requirements traceability matrix and technical artefact register. |
+| [Technical repositories](#specifications-and-verification)                                                                                               | Machine-readable specifications, datasets, validation resources, and supporting implementations.                                                           |
 
 Requirement-specific details and outstanding decisions are cross-referenced to these sources rather than repeated here.
 
 ## Architectural overview
-
-<!-- 
-Explain the role of 3D CSDM, WA profiles, source-format transformation and NGSC integration boundaries.
--->
 
 ### Architecture context and scope
 
@@ -178,7 +181,8 @@ flowchart TB
     class LP,SOSA,TF,GEO,META external
 ```
 <figure class="fig fig-wide">
-    <figcaption id="figure-2-modular-composition-and-external-dependencies">Figure 2: Modular composition and external dependencies. <br>Solid arrows show conceptual composition; dashed arrows show reuse of external specifications. The relationships are explanatory, not a literal schema dependency graph.</figcaption>
+    <figcaption id="figure-2-modular-composition-and-external-dependencies">Figure 2: Modular composition and external dependencies</figcaption>
+    <p class="figure-note">Solid arrows show conceptual composition; dashed arrows show reuse of external specifications. The relationships are explanatory, not a literal schema dependency graph.</p>
 </figure>
 
 The principal external dependencies are:
@@ -196,7 +200,7 @@ The published Building Block specifications record the actual dependency relatio
 ### NGSC information exchange boundary
 
 Within NGSC, the 3D CSDM provides an exchange and interpretation model, not an operational storage schema. 
-Legacy information, including WA APX-05, may require mapping and derivation; conforming 3D CSDM datasets may be ingested directly. 
+Legacy information, including WA APX-05 [@landgate_apx-05_2022;], may require mapping and derivation; conforming 3D CSDM datasets may be ingested directly. 
 Both pathways require source identification, appropriate validation, and provenance preservation.
 
 The exchanged information can support plan lodgement, cadastral maintenance, visualisation, metadata management, and downstream services. 
@@ -204,10 +208,6 @@ Mapping into authoritative cadastral records, workflows, and Esri Parcel Fabric 
 Exchange conformance does not establish legal authority or acceptance for lodgement.
 
 ## Architectural viewpoints
-
-<!--
-Summarise the Enterprise, Information, Computational, Engineering and Technology perspectives relevant to SURROUND's work.
--->
 
 The architecture is described through five complementary viewpoints: Enterprise, Information, Computational, Engineering, and Technology. 
 These viewpoints distinguish the information architecture contribution from the broader NGSC system design.
@@ -228,7 +228,7 @@ The model also distinguishes source observations from derived geometry and inter
 #### Controlled vocabularies and semantic bindings
 
 The 3D CSDM uses controlled vocabularies to provide consistent definitions and permitted values for cadastral information. 
-These vocabularies are expressed using the W3C Simple Knowledge Organization System (SKOS), supporting shared terminology, semantic interoperability, and machine-readable validation.
+These vocabularies are expressed using the [W3C Simple Knowledge Organization System (SKOS)](https://www.w3.org/2004/02/skos/), supporting shared terminology, semantic interoperability, and machine-readable validation.
 
 The WA Core profile defines vocabulary bindings that associate information properties and their expected value types with managed vocabularies. 
 As illustrated in [Figure 3](#figure-3-controlled-vocabularies), these bindings are maintained separately from the vocabulary definitions. 
@@ -272,7 +272,7 @@ These technologies do not prescribe NGSC's application framework or storage plat
 
 ## Requirement-specific architecture contributions
 
-This section maps the 15 SURROUND Responsible requirements to their principal CSD/3D CSDM or metadata components, supporting artefacts, and NGSC integration dependencies. Requirements are grouped by shared architecture concerns; detailed analyses and proposed acceptance criteria remain in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d;] and the End of Project Report [@hunter_deliverable_2026e;].
+This section maps the 15 SURROUND Responsible requirements ([Tables 2](#tbl-2)–[6](#tbl-6)) to their principal CSD/3D CSDM or metadata components, supporting artefacts, and NGSC integration dependencies. Requirements are grouped by shared architecture concerns; detailed analyses and proposed acceptance criteria remain in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d;] and the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;].
 
 ### Cadastral information exchange and transformation
 
@@ -281,12 +281,12 @@ Existing CSD formats may be transformed into this representation, subject to def
 
 #### Table 2: Cadastral information exchange and transformation architecture contributions
 
-| Requirement                                                      | Architectural contribution                                                                                                | Supporting artefacts                                                                | Integration considerations and dependencies                                                      |
-|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **NF02.03.047**: Manually import lodged surveys                  | CSD/3D CSDM exchange structures, parcel identifiers, survey observations, spatial representations and provenance.         | WA 3D CSDM profile; common components; Deliverable 3 [@hunter_deliverable_2026b].   | Source matching, manual exception handling, validation, and authoritative dataset updates.       |
-| **NF02.03.067**: Import 3D CSDM files to Mining Cadastre dataset | Common cadastral information structures with profile-specific constraints for mining cadastral information.               | 3D CSDM common components; WA profile; Deliverable 3 [@hunter_deliverable_2026b].   | Mining Cadastre product requirements, mapping, validation and record maintenance.                |
-| **NN01.02.016**: Support 3D CSDM exchange specification          | Machine-readable information structures, schemas, semantic definitions, controlled vocabularies and validation resources. | WA profile; common components; ICSM vocabularies; OGC Building Blocks.              | Profile versions, supported product types, conformance requirements and application integration. |
-| **NN01.02.017**: Support CSD format specification                | Legacy CSD information mappings, survey observation structures, identifiers and transformation provenance.                | APX-05 analysis; 3D CSDM specifications; Deliverable 3 [@hunter_deliverable_2026b]. | Transformation rules, incomplete records, information loss and conversion validation.            |
+| Requirement                                                      | Architectural contribution                                                                                                | Supporting artefacts                                                                                         | Integration considerations and dependencies                                                      |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **NF02.03.047**: Manually import lodged surveys                  | CSD/3D CSDM exchange structures, parcel identifiers, survey observations, spatial representations and provenance.         | WA 3D CSDM profile; common components; Deliverable 3 [@hunter_deliverable_2026b].                            | Source matching, manual exception handling, validation, and authoritative dataset updates.       |
+| **NF02.03.067**: Import 3D CSDM files to Mining Cadastre dataset | Common cadastral information structures with profile-specific constraints for mining cadastral information.               | 3D CSDM common components; WA profile; Deliverable 3 [@hunter_deliverable_2026b].                            | Mining Cadastre product requirements, mapping, validation and record maintenance.                |
+| **NN01.02.016**: Support 3D CSDM exchange specification          | Machine-readable information structures, schemas, semantic definitions, controlled vocabularies and validation resources. | WA profile; common components; ICSM vocabularies; OGC Building Blocks.                                       | Profile versions, supported product types, conformance requirements and application integration. |
+| **NN01.02.017**: Support CSD format specification                | Legacy CSD information mappings, survey observation structures, identifiers and transformation provenance.                | APX-05 [@landgate_apx-05_2022;] analysis; 3D CSDM specifications; Deliverable 3 [@hunter_deliverable_2026b]. | Transformation rules, incomplete records, information loss and conversion validation.            |
 
 ### Survey observations and control
 
@@ -295,12 +295,12 @@ Processing requirements must distinguish original observations from derived info
 
 #### Table 3: Survey observations and control architecture contributions
 
-| Requirement                                                         | Architectural contribution                                                                                        | Supporting artefacts                                                                     | Integration considerations and dependencies                                                            |
-|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| **NF02.03.059**: eField Records                                     | Survey observation structures, points, lines, angles, connections, and provenance information.                    | 3D CSDM common components; WA profile; Deliverable 3 [@hunter_deliverable_2026b].        | eField Records import, geographic placement, control-point creation and survey adjustment interfaces.  |
-| **NF02.03.071**: Accept angles and bearings when a plan is imported | Representation of observed angles and azimuths, derived bearings, calculation provenance and quality information. | *Angles and Directions*; APX-05 technical advice; `angles-to-bearings` proof of concept. | Bearing derivation, incomplete networks, conflicting observations, uncertainty and quality thresholds. |
-| **NF02.03.076**: Import non-geodetic control                        | Survey points, marks, observations, cadastral connections and associated identifiers.                             | 3D CSDM survey information structures; Deliverable 4 [@hunter_deliverable_2026c].        | Candidate identification, duplicate detection, Editor selection and authoritative record creation.     |
-| **NF04.01.010**: API eField Records                                 | Information exchange structures for survey records, observations and associated reference information.            | 3D CSDM survey information structures; Deliverable 3 [@hunter_deliverable_2026b].        | API specification, authentication, data mapping, processing states and error handling.                 |
+| Requirement                                                         | Architectural contribution                                                                                        | Supporting artefacts                                                                                              | Integration considerations and dependencies                                                            |
+|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| **NF02.03.059**: eField Records                                     | Survey observation structures, points, lines, angles, connections, and provenance information.                    | 3D CSDM common components; WA profile; Deliverable 3 [@hunter_deliverable_2026b].                                 | eField Records import, geographic placement, control-point creation and survey adjustment interfaces.  |
+| **NF02.03.071**: Accept angles and bearings when a plan is imported | Representation of observed angles and azimuths, derived bearings, calculation provenance and quality information. | *Angles and Directions*; APX-05 [@landgate_apx-05_2022;] technical advice; `angles-to-bearings` proof of concept. | Bearing derivation, incomplete networks, conflicting observations, uncertainty and quality thresholds. |
+| **NF02.03.076**: Import non-geodetic control                        | Survey points, marks, observations, cadastral connections and associated identifiers.                             | 3D CSDM survey information structures; Deliverable 4 [@hunter_deliverable_2026c].                                 | Candidate identification, duplicate detection, Editor selection and authoritative record creation.     |
+| **NF04.01.010**: API eField Records                                 | Information exchange structures for survey records, observations and associated reference information.            | 3D CSDM survey information structures; Deliverable 3 [@hunter_deliverable_2026b].                                 | API specification, authentication, data mapping, processing states and error handling.                 |
 
 ### 3D cadastral representation and visualisation
 
@@ -343,14 +343,12 @@ The NGSC platform is responsible for implementing the associated APIs, workflows
 
 ### Architectural dependencies and traceability
 
-The tables identify common information and validation components used by multiple requirements. 
+[Tables 2](#tbl-2)–[6](#tbl-6) identify common information and validation components used by multiple requirements. 
 Supporting specifications should be maintained independently of individual application functions where practical. 
-Outstanding decisions, including supported products, metadata profiles, transformation rules, and service responsibilities, are consolidated in the End of Project Report [@hunter_deliverable_2026e] and require reconciliation with Accenture's NGSC architecture.
+Outstanding decisions, including supported products, metadata profiles, transformation rules, and service responsibilities, are consolidated in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e] and require reconciliation with Accenture's NGSC architecture.
 
 ## Specifications and verification
-<!--
-Reference schemas, ontologies, example datasets, validation rules, transformation specifications, tests and acceptance criteria.
--->
+
 ### Machine-readable specifications
 
 OGC Building Blocks assemble common model components, ICSM and WA profile constraints, and vocabulary bindings into published schemas and semantic resources. 
@@ -413,7 +411,8 @@ flowchart TB
     class DATA,VALID,REPORT data
 ```
 <figure class="fig fig-wide">
-    <figcaption id="figure-4-schema-profile-validation-architecture">Figure 4: Schema, profile and validation architecture. <br>The dashed connections to geometry, topology, and WA cadastral rules are intentional. They indicate that these rules are associated with the applicable specifications but are not necessarily generated automatically by the OGC Building Blocks toolchain.</figcaption>
+    <figcaption id="figure-4-schema-profile-validation-architecture">Figure 4: Schema, profile and validation architecture</figcaption>
+     <p class="figure-note">The dashed connections to geometry, topology, and WA cadastral rules are intentional. They indicate that these rules are associated with the applicable specifications but are not necessarily generated automatically by the OGC Building Blocks toolchain.</p>
 </figure>
 
 The validation resources shown in [Figure 4](#figure-4-schema-profile-validation-architecture) are complementary: passing structural checks does not establish geometric validity, jurisdictional compliance, or authoritative acceptance. 
@@ -442,14 +441,12 @@ Integration testing, confirmed jurisdictional rules, and requirement-specific ac
 
 A consolidated validation and conformance test suite is recommended to support NGSC implementation and ongoing profile maintenance. 
 This should combine versioned specifications, representative cadastral datasets, applicable validation rules, expected outcomes, and automated reporting. 
-The scope and acceptance baseline require agreement with Accenture and Landgate, consistent with decision AD-08 in the End of Project Report [@hunter_deliverable_2026e;].
+The scope and acceptance baseline require agreement with Accenture and Landgate, consistent with decision AD-08 in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;].
 
 **Principal references:** [WA Implementation Profile](https://surroundaustralia.github.io/3d-csdm-profile-wa/), [3D CSDM Common Model](https://github.com/icsm-au/3d-csdm-common), and [Topo Functions](https://github.com/ogcincubator/topo-functions).
 
 ## Integration considerations and dependencies
-<!--
-Identify the decisions that must be addressed within Accenture's Esri/Parcel Fabric solution.
--->
+
 ### NGSC integration boundaries
 
 Integration requires explicit mapping between the 3D CSDM exchange representation and NGSC's authoritative information structures, including Esri Parcel Fabric. 
@@ -537,10 +534,10 @@ The functional dependencies are summarised in [Figure 2](#figure-2-modular-compo
 
 The NGSC architecture must confirm supported exchange formats and cadastral products; source transformation and preservation rules; mappings to operational records; validation responsibilities and acceptance criteria; metadata and workflow integration; and support for specialised 3D legal boundary representations.
 
-Requirement-level dependencies and decisions are recorded in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d] and the End of Project Report [@hunter_deliverable_2026e]. 
+Requirement-level dependencies and decisions are recorded in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d] and the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e]. 
 Their resolution will determine how the 3D CSDM capabilities are incorporated into NGSC without changing the exchange model's technology-independent role.
 
-The principal outstanding decisions are consolidated as AD-01 to AD-08 in the End of Project Report [@hunter_deliverable_2026e]. 
+The principal outstanding decisions are consolidated as AD-01 to AD-08 in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e]. 
 These address the 3D CSDM exchange architecture, profile and vocabulary governance, legacy transformation, geometry and cadastral validation, authoritative 3D boundaries, metadata governance, workflow integration, and technical acceptance.
 
 The decision register identifies recommended directions and responsible organisations. 
@@ -558,7 +555,7 @@ The 3D CSDM establishes a common exchange model but does not prescribe NGSC's op
 Integration therefore requires further decisions concerning source transformation, mapping to Esri Parcel Fabric, validation responsibilities, metadata management, and the treatment of specialised cadastral representations.
 
 The architecture contributions documented here provide a technical foundation for incorporation into Accenture's NGSC Solution Architecture. 
-Outstanding implementation decisions and acceptance requirements remain subject to confirmation by Accenture and Landgate, with supporting detail provided in the requirements deliverables [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d], technical repositories, and End of Project Report [@hunter_deliverable_2026e].
+Outstanding implementation decisions and acceptance requirements remain subject to confirmation by Accenture and Landgate, with supporting detail provided in the requirements deliverables [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d], technical repositories, and Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e].
 
 ## References
 
