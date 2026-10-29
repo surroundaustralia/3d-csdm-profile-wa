@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.dualName - Dual Name (Compound)",
   "bblockName": "Dual Name (Compound)",
   "bblockId": "icsm.profiles.wa.datatypes.dualName",
-  "generated": "2026-10-29T19:31:16.034052+00:00",
+  "generated": "2026-10-29T20:05:07.803000+00:00",
   "result": true,
   "items": [
     {
@@ -79,15 +79,15 @@
                 ":CompoundNameShape": {
                   "nodes": []
                 },
-                ":NamePartShape": {
+                ":MeasureShape": {
                   "nodes": []
                 },
-                ":MeasureShape": {
+                ":NamePartShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n - Shape :MeasureShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :MeasureShape: *none*\n - Shape :NamePartShape: *none*\n"
             }
           ]
         }
