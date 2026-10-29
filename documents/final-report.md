@@ -289,7 +289,7 @@ Supporting technical work produced specifications, example datasets, validation 
 
 ### Summary of the five deliverables
 
-The five deliverables were undertaken progressively, reflecting the NGSC programme schedule and SURROUND's allocated requirements.
+The five deliverables ([Table 1](#tbl-1)) were undertaken progressively, reflecting the NGSC programme schedule and SURROUND's allocated requirements.
 They covered foundational data standards and scalability through to cadastral information modelling, system interfaces, and 3D boundary management.
 
 #### Table 1: The five deliverables
@@ -304,8 +304,8 @@ They covered foundational data standards and scalability through to cadastral in
 
 > **Note**: Requirement [NN01.02.026](#nn01-02-026), concerning Aboriginal naming and dual naming of geographic features, was moved out of scope in December 2025.
 
-Deliverables 1 [@hunter_deliverable_2025;] and 2 [@ @hunter_deliverable_2026a;] concentrated on foundational capabilities, including 3D data growth, geometric integrity, data quality, and standards compliance.
-Deliverables 3 [@ @hunter_deliverable_2026b;] and 4 [@ @hunter_deliverable_2026c;] addressed operational requirements, particularly the exchange and management of survey information, boundary relationships, validation, and system interfaces.
+Deliverables 1 [@hunter_deliverable_2025;] and 2 [@hunter_deliverable_2026a;] concentrated on foundational capabilities, including 3D data growth, geometric integrity, data quality, and standards compliance.
+Deliverables 3 [@hunter_deliverable_2026b;] and 4 [@hunter_deliverable_2026c;] addressed operational requirements, particularly the exchange and management of survey information, boundary relationships, validation, and system interfaces.
 [Deliverable 5](#doc-05) [@hunter_deliverable_2026d;] clarified two requirements requiring additional definition: metadata feedback workflows and geometric constraints for 3D boundary alignment.
 
 Collectively, the deliverables described expected capabilities, identified applicable standards, and highlighted technical and business decisions required for implementation.
@@ -349,7 +349,7 @@ The work adopted the [OGC Building Blocks](https://ogcincubator.github.io/bblock
 The repositories contain developed and published specifications, supporting examples, and validation implementations at differing levels of maturity. 
 While automated tests and technical demonstrations provide evidence of their capabilities, a consolidated assessment of conformance, completeness, and suitability for NGSC implementation has not yet been undertaken.
 
-The GitHub repositories provide traceability to these developments:
+The GitHub repositories listed in [Table 2](#tbl-2) provide traceability to these developments:
 
 #### Table 2: Technical outputs and principal repositories
 | Technical output                                    | Principal repositories                 |
@@ -763,7 +763,7 @@ SURROUND is able to provide specialist input where required.
 
 The next phase would focus on converting existing technical work into components that can be reliably integrated, tested, and maintained within NGSC.
 
-The highest-value opportunities are those that address multiple requirements or reduce duplication across the solution.
+The highest-value opportunities, summarised in [Table 4](#tbl-4), are those that address multiple requirements or reduce duplication across the solution.
 
 #### Table 4: Potential development and expected benefit
 
@@ -894,6 +894,7 @@ This would support NGSC implementation, preserve the value of the technical inve
 ### Appendix A: Requirements traceability matrix {#appendix-a}
 
 This appendix provides consolidated traceability between the 34 NGSC requirements allocated across SURROUND's five deliverables, the supporting technical artefacts, and outstanding dependencies.
+[Tables A.1](#tbl-A.1)–[A.5](#tbl-A.5) cover one deliverable each, and [Table A.6](#tbl-A.6) summarises the matrix.
 
 The matrix identifies relevant development outputs and architectural decisions but does not establish formal completion or acceptance of individual NGSC system capabilities.
 References to technical repositories indicate relevant supporting work rather than confirmation that a complete implementation has been delivered.
@@ -988,7 +989,7 @@ Their inclusion identifies relevant supporting artefacts rather than confirming 
 
 ### Requirements analysis and contractual documentation
 
-The principal contractual documentation comprises five requirements analysis reports covering the 34 allocated requirements.
+The principal contractual documentation comprises five requirements analysis reports ([Table B.1](#tbl-B.1)) covering the 34 allocated requirements.
 These provide the requirement interpretation, applicable standards, technical constraints, 3D CSDM perspective, proposed acceptance criteria, and identified dependencies.
 
 #### Table B.1: Deliverables
@@ -1010,7 +1011,7 @@ For Deliverables 3–5 [@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hun
 
 ### CSD and 3D CSDM specifications and supporting development
 
-The following repositories contain the principal information specifications and reusable technical components relevant to the engagement.
+The repositories in [Table B.2](#tbl-B.2) contain the principal information specifications and reusable technical components relevant to the engagement.
 
 #### Table B.2: GitHub Repositories 
 
@@ -1040,7 +1041,7 @@ These publications provide access to the relevant specifications, examples, term
 
 ### WA profile extensions and representative cadastral information
 
-Development of the WA profile included work addressing 3D cadastral representations and reusable information structures.
+Development of the WA profile included work addressing 3D cadastral representations and reusable information structures ([Table B.3](#tbl-B.3)).
 
 #### Table B.3: Technical development  
 
@@ -1058,7 +1059,7 @@ The work also provides potential inputs to wider 3D CSDM development where the i
 
 ### Supporting proof-of-concept developments and investigations
 
-A number of PoC investigations and developments were undertaken to test technical feasibility, clarify implementation approaches, and demonstrate how structured cadastral information could support NGSC functionality.
+A number of PoC investigations and developments ([Table B.4](#tbl-B.4)) were undertaken to test technical feasibility, clarify implementation approaches, and demonstrate how structured cadastral information could support NGSC functionality.
 
 #### Table B.4: Supporting development  
 
@@ -1077,7 +1078,7 @@ Their integration into the Accenture/Esri solution would require separate assess
 
 ### Specialist technical advice and supporting reports
 
-Additional technical material was prepared to investigate particular cadastral requirements and assist the implementation team.
+Additional technical material ([Table B.5](#tbl-B.5)) was prepared to investigate particular cadastral requirements and assist the implementation team.
 
 #### Table B.5: Technical Advice  
 
@@ -1097,7 +1098,7 @@ Additional correspondence and working notes may be included in the handover pack
 
 The requirements reports, specifications, and supporting development provide material relevant to the CSD and 3D CSDM information architecture.
 
-Their relationship to the broader NGSC Solution Architecture can be summarised as follows:
+Their relationship to the broader NGSC Solution Architecture is summarised in [Table B.6](#tbl-B.6):
 
 #### Table B.6: Architectural contributions
 
