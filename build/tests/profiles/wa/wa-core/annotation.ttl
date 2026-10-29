@@ -24,10 +24,10 @@
         [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-local-government:shire-of-east-pilbara ] ;
-    container:annotations [ prof:hasRole wa-annotation:public-acquisition ],
-        [ prof:hasRole wa-annotation:total-area ],
-        [ prof:hasRole wa-annotation:unsurveyed-dimensions ],
+    container:annotations [ prof:hasRole wa-annotation:unsurveyed-dimensions ],
         [ prof:hasRole wa-annotation:parcel-derived ],
+        [ prof:hasRole wa-annotation:total-area ],
+        [ prof:hasRole wa-annotation:public-acquisition ],
         [ prof:hasRole wa-annotation:transfer-of-land-exempt ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:7850 ;
