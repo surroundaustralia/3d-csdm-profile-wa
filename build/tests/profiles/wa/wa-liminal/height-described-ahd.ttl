@@ -47,9 +47,9 @@
         [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
-    container:annotations [ prof:hasRole wa-annotation:r-4 ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget <file:///github/workspace/wa_leg:Transfer%20of%20Land%20(Surveys)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf> ],
-        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -83,12 +83,12 @@
             rdfs:label "Lot 800 on Plan DP 431276" ;
             dct:hasPart [ rdfs:label "800" ;
                     commonpatterns:namePartType wa-name-part-type:lotNumber ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType wa-name-part-type:lotPrefix ],
-                [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -99,14 +99,14 @@
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ rdfs:label "1" ;
-                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                [ rdfs:label "1" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -123,10 +123,10 @@
                     commonpatterns:namePartType wa-name-part-type:surveyType ],
                 [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
                     commonpatterns:namePartType wa-name-part-type:lotPrefix ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;

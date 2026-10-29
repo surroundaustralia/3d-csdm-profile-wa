@@ -54,10 +54,10 @@
                     commonpatterns:namePartType wa-name-part-type:planIdentifier ],
                 [ rdfs:label "DP" ;
                     commonpatterns:namePartType wa-name-part-type:PlanType ],
-                [ rdfs:label "Peg" ;
-                    commonpatterns:namePartType wa-name-part-type:MarkType ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType wa-name-part-type:MarkIdentifier ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:MarkIdentifier ],
+                [ rdfs:label "Peg" ;
+                    commonpatterns:namePartType wa-name-part-type:MarkType ] ] ;
     commonpatterns:qualityMeasure 1.3e-02 .
 
 <https://www.wa-example.com/features/18430386> a surv:CadastralMark,
@@ -70,10 +70,10 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:temporary-control-point ;
     commonpatterns:name [ rdfs:label "EFB157243/9533" ;
-            dcterms:hasPart [ rdfs:label "9533" ;
-                    commonpatterns:namePartType wa-name-part-type:Stamp ],
-                [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType wa-name-part-type:Source ] ] ;
+            dcterms:hasPart [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ],
+                [ rdfs:label "9533" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] ;
     commonpatterns:qualityMeasure 2.8e-02 .
 
 <https://www.wa-example.com/features/18430396> a surv:GeodeticReferenceMark,
