@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.miscellaneousTenure - Miscellaneous Tenure Appellation",
   "bblockName": "Miscellaneous Tenure Appellation",
   "bblockId": "icsm.profiles.wa.datatypes.miscellaneousTenure",
-  "generated": "2026-10-29T18:51:38.012037+00:00",
+  "generated": "2026-10-29T19:31:16.984151+00:00",
   "result": true,
   "items": [
     {
@@ -87,18 +87,18 @@
             {
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "focusNodes": {
-                "ex:NamedObjectShape": {
-                  "nodes": []
-                },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N6a6d6e6dcfa141dcaf66f1337d188403",
-                    "_:N0ad90d02ca45419c8e299404da94eab9"
+                    "_:Nbc41b15068bb4eab97aeb0eeaa24faf0",
+                    "_:Ne36279c30315411dbc87964fa7e8ee0f"
                   ]
+                },
+                "ex:NamedObjectShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N6a6d6e6dcfa141dcaf66f1337d188403,_:N0ad90d02ca45419c8e299404da94eab9\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:Nbc41b15068bb4eab97aeb0eeaa24faf0,_:Ne36279c30315411dbc87964fa7e8ee0f\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -209,19 +209,19 @@
             {
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "focusNodes": {
-                "ex:NamedObjectShape": {
-                  "nodes": []
-                },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N57ff3be9850e48d4bc3b2e220bfba3d0",
-                    "_:N1eb84ed0bb9848c2b042b353f48eedd6",
-                    "_:N64bc297767f345b8ba2c7c54c32c9b83"
+                    "_:N7ff043b70cd04c43ba54f68ecbdb836c",
+                    "_:Nb3d5df1f37a6475ab929c4a5a2d0484c",
+                    "_:Nb8d7a63f090949ef83713858946d8fa5"
                   ]
+                },
+                "ex:NamedObjectShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N57ff3be9850e48d4bc3b2e220bfba3d0,_:N1eb84ed0bb9848c2b042b353f48eedd6,_:N64bc297767f345b8ba2c7c54c32c9b83\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N7ff043b70cd04c43ba54f68ecbdb836c,_:Nb3d5df1f37a6475ab929c4a5a2d0484c,_:Nb8d7a63f090949ef83713858946d8fa5\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -321,19 +321,19 @@
             {
               "shaclFile": "_sources/datatypes/miscellaneousTenure/rules.shacl",
               "focusNodes": {
-                "ex:NamedObjectShape": {
-                  "nodes": []
-                },
                 "ex:NamePartShape": {
                   "nodes": [
-                    "_:N361fa80c569b4453904c1c8f4ac95e9d",
-                    "_:N3054a6177a034584b14ec8c78c10f31d",
-                    "_:N10f2b7baa87f4f07a3d114e1c09f1ffb"
+                    "_:N9d6324370713409f9b4ae9b9086ba1e1",
+                    "_:N475874b455b347708b8fade0080f180c",
+                    "_:Nc6a460f5d16d4479803bfe27568eff80"
                   ]
+                },
+                "ex:NamedObjectShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamedObjectShape: *none*\n - Shape ex:NamePartShape: _:N361fa80c569b4453904c1c8f4ac95e9d,_:N3054a6177a034584b14ec8c78c10f31d,_:N10f2b7baa87f4f07a3d114e1c09f1ffb\n"
+              "message": "Focus nodes for _sources/datatypes/miscellaneousTenure/rules.shacl:\n - Shape ex:NamePartShape: _:N9d6324370713409f9b4ae9b9086ba1e1,_:N475874b455b347708b8fade0080f180c,_:Nc6a460f5d16d4479803bfe27568eff80\n - Shape ex:NamedObjectShape: *none*\n"
             },
             {
               "op": "shacl-report",

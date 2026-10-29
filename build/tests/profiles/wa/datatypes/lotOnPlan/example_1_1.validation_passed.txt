@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation
-Generated 2026-10-29T18:51:37.341831+00:00
+Generated 2026-10-29T19:31:16.489999+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
