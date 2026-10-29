@@ -16,7 +16,13 @@
 
 Prepared by: Surround Australia Pty Ltd (SURROUND)
 
-**Date:** 2026-10-28 (**Draft**)
+**Date:** 2026-11-02
+
+<!--
+Date: 2026-10-26
+Convert to PDF using `print_to_pdf`
+Organisation: Edge Geomatics Limited
+-->
 
 <!-- TOC -->
 
@@ -87,7 +93,7 @@ Referenced technical artefacts are at varying stages of development and do not, 
 
 This document is intended to complement Accenture's NGSC Solution Architecture.
 
-The principal supporting materials are:
+The principal supporting materials are listed in [Table 1](#tbl-1).
 
 #### Table 1: Supporting documentation
 
@@ -101,10 +107,6 @@ The principal supporting materials are:
 Requirement-specific details and outstanding decisions are cross-referenced to these sources rather than repeated here.
 
 ## Architectural overview
-
-<!-- 
-Explain the role of 3D CSDM, WA profiles, source-format transformation and NGSC integration boundaries.
--->
 
 ### Architecture context and scope
 
@@ -207,10 +209,6 @@ Exchange conformance does not establish legal authority or acceptance for lodgem
 
 ## Architectural viewpoints
 
-<!--
-Summarise the Enterprise, Information, Computational, Engineering and Technology perspectives relevant to SURROUND's work.
--->
-
 The architecture is described through five complementary viewpoints: Enterprise, Information, Computational, Engineering, and Technology. 
 These viewpoints distinguish the information architecture contribution from the broader NGSC system design.
 
@@ -274,7 +272,7 @@ These technologies do not prescribe NGSC's application framework or storage plat
 
 ## Requirement-specific architecture contributions
 
-This section maps the 15 SURROUND Responsible requirements to their principal CSD/3D CSDM or metadata components, supporting artefacts, and NGSC integration dependencies. Requirements are grouped by shared architecture concerns; detailed analyses and proposed acceptance criteria remain in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d;] and the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;].
+This section maps the 15 SURROUND Responsible requirements ([Tables 2](#tbl-2)–[6](#tbl-6)) to their principal CSD/3D CSDM or metadata components, supporting artefacts, and NGSC integration dependencies. Requirements are grouped by shared architecture concerns; detailed analyses and proposed acceptance criteria remain in Deliverables 1–5 [@hunter_deliverable_2025;@hunter_deliverable_2026a;@hunter_deliverable_2026b;@hunter_deliverable_2026c;@hunter_deliverable_2026d;] and the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e;].
 
 ### Cadastral information exchange and transformation
 
@@ -345,14 +343,12 @@ The NGSC platform is responsible for implementing the associated APIs, workflows
 
 ### Architectural dependencies and traceability
 
-The tables identify common information and validation components used by multiple requirements. 
+[Tables 2](#tbl-2)–[6](#tbl-6) identify common information and validation components used by multiple requirements. 
 Supporting specifications should be maintained independently of individual application functions where practical. 
 Outstanding decisions, including supported products, metadata profiles, transformation rules, and service responsibilities, are consolidated in the Engagement Outcomes and Recommendations Report [@hunter_deliverable_2026e] and require reconciliation with Accenture's NGSC architecture.
 
 ## Specifications and verification
-<!--
-Reference schemas, ontologies, example datasets, validation rules, transformation specifications, tests and acceptance criteria.
--->
+
 ### Machine-readable specifications
 
 OGC Building Blocks assemble common model components, ICSM and WA profile constraints, and vocabulary bindings into published schemas and semantic resources. 
@@ -450,9 +446,7 @@ The scope and acceptance baseline require agreement with Accenture and Landgate,
 **Principal references:** [WA Implementation Profile](https://surroundaustralia.github.io/3d-csdm-profile-wa/), [3D CSDM Common Model](https://github.com/icsm-au/3d-csdm-common), and [Topo Functions](https://github.com/ogcincubator/topo-functions).
 
 ## Integration considerations and dependencies
-<!--
-Identify the decisions that must be addressed within Accenture's Esri/Parcel Fabric solution.
--->
+
 ### NGSC integration boundaries
 
 Integration requires explicit mapping between the 3D CSDM exchange representation and NGSC's authoritative information structures, including Esri Parcel Fabric. 
