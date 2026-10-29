@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation
-Generated 2026-10-29T18:29:42.074254+00:00
+Generated 2026-10-29T18:51:37.341831+00:00
 === Files ===
 Using examples/strings.json from examples
 JSON-LD context is present - uplifting
@@ -13,15 +13,15 @@ Validation passed
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
  - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
- - Shape :NamePartShape: *none*
  - Shape :CompoundNameShape: *none*
+ - Shape :NamePartShape: *none*
  - Shape :MeasureShape: *none*
 
 === End SHACL ===
