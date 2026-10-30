@@ -1,0 +1,22 @@
+{
+  "name": "WA Parcel Appellation Ontology",
+  "abstract": "Classes for the Landgate parcel identifier forms (Lot on Plan, Crown Allotment, Miscellaneous Tenure), as specialisations of the compound name model.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "group": "4. Datatypes",
+  "highlighted": false,
+  "ontology": "appellation.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/profiles/wa"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.bbr.utils.compoundName.ontology"
+  ],
+  "tags": [
+    "appellation",
+    "ontology"
+  ]
+}

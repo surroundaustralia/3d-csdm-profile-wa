@@ -1,5 +1,7 @@
 {
   "@context": {
+    "type": "@type",
+    "wa": "https://linked.data.gov.au/def/csdm/profiles/wa/",
     "vocabs": "https://linked.data.gov.au/def/csdm/",
     "wa-surveypoint-purpose": "https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/",
     "wa-survey-purpose": "https://linked.data.gov.au/def/csdm/wa-survey-purpose/",

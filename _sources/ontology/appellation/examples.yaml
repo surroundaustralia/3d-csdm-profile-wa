@@ -1,0 +1,28 @@
+prefixes:
+  com: https://w3id.org/ogc/utils/label/
+  dct: http://purl.org/dc/terms/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  wa: https://linked.data.gov.au/def/csdm/profiles/wa/
+  wa-name-part-type: https://linked.data.gov.au/def/csdm/wa-name-part-type/
+  wa-survey-type: https://linked.data.gov.au/def/csdm/wa-survey-type/
+examples:
+  - title: Lot on Plan appellation
+    content: |-
+      A Lot on Plan appellation is a compound name. Its parts are validated by the compound name rules, and the
+      part labels must appear in the appellation label.
+    base-output-filename: lot-on-plan
+    snippets:
+      - language: turtle
+        code: |
+          @prefix com: <https://w3id.org/ogc/utils/label/> .
+          @prefix dct: <http://purl.org/dc/terms/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+          @prefix wa: <https://linked.data.gov.au/def/csdm/profiles/wa/> .
+          @prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
+          @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
+
+          [] a wa:LotOnPlanAppellation ;
+            rdfs:label "Lot 4 on Plan 1234" ;
+            dct:hasPart [ com:namePartType wa-name-part-type:surveyType ; com:namePartRef wa-survey-type:deposited-plan ] ,
+                        [ com:namePartType wa-name-part-type:surveyNumber ; rdfs:label "1234" ] ,
+                        [ com:namePartType wa-name-part-type:lotNumber ; rdfs:label "4" ] .
