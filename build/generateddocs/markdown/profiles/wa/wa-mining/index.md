@@ -578,11 +578,11 @@ Minimal example - with combined elements from each test case
     rdfs:label "TBD" ;
     dcterms:time [ time:hasTime "2022-05-22"^^xsd:date ] ;
     container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
-            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
-            oa:hasTarget wa-locality:karlkurla ] ;
+            oa:hasTarget wa-locality:karlkurla ],
+        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
+            oa:hasTarget wa-local-government:city-of-kalgoorlie-boulder ] ;
     container:bearingRotation 0e+00 ;
     container:horizontalCRS epsg:8031 ;
     container:points <https://www.wa-example.com/features/WAMarks> ;
@@ -694,7 +694,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.wa-mining
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-29'
+  dateOfLastChange: '2026-10-30'
 
 ```
 

@@ -57,10 +57,10 @@ A name with a label, but also a set of parts with roles that can be validated ag
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 [] rdfs:label "Mammang Koort / King George Sound" ;
-    dcterms:hasPart [ rdfs:label "King George Sound" ;
-            commonpatterns:namePartType <wa:placeName> ],
-        [ rdfs:label "Mammang Koort" ;
-            commonpatterns:namePartType <wa:indigenousName> ] .
+    dcterms:hasPart [ rdfs:label "Mammang Koort" ;
+            commonpatterns:namePartType <wa:indigenousName> ],
+        [ rdfs:label "King George Sound" ;
+            commonpatterns:namePartType <wa:placeName> ] .
 
 
 ```
@@ -76,7 +76,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.dualName
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-29'
+  dateOfLastChange: '2026-10-30'
 
 ```
 

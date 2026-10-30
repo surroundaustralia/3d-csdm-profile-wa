@@ -1,0 +1,46 @@
+Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation
+Generated 2026-10-30T13:10:22.792383+00:00
+=== Files ===
+Using examples/strings.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
+
+** Validation error **
+Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: :CompoundName-partsInLabel
+  	Focus Node: [ dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ; commonpatterns:namePartType wa-name-part-type:crownAreaCode ], [ commonpatterns:namePartType wa-name-part-type:crownAllocationType ; rdfs:label Literal("wa-parcel-purpose:townsite-lot") ], [ commonpatterns:namePartType wa-name-part-type:number ; rdfs:label Literal("57") ] ; rdfs:label Literal("Albany Town Lot 57") ]
+  	Value Node: Literal("wa-parcel-purpose:townsite-lot")
+  	Result Path: rdfs:label
+  	Source Constraint: [ sh:message Literal("Name parts must exist in label if present") ; sh:prefixes :prefixes ; sh:select Literal("
+          SELECT $this (rdfs:label AS ?path) ?value
+          WHERE {
+            $this dct:hasPart ?p .
+            $this rdfs:label ?label .
+            ?p rdfs:label ?value
+            FILTER ( ! CONTAINS( LCASE(?label), LCASE(?value)) )
+          }
+          ") ]
+  	Message: Name parts must exist in label if present
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+ - Shape :NamePartShape: _:Nf88b91d41a1f46c2be0c5509be92d1e6,_:N6b8dc3a3449d496d8dfa2d243168e247,_:Nee0eb9d2bfcf467f871159803caca3ac
+ - Shape :CompoundNameShape: *none*
+
+=== End SHACL ===
+

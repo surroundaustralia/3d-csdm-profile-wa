@@ -73,14 +73,14 @@
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+            dct:hasPart [ rdfs:label "DP 431276" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
                 [ rdfs:label "800" ;
                     commonpatterns:namePartType wa-name-part-type:lotNumber ],
-                [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -91,14 +91,14 @@
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+            dct:hasPart [ rdfs:label "1" ;
+                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
                 [ rdfs:label "SP 28750" ;
                     commonpatterns:namePartType wa-name-part-type:surveyNumber ],
-                [ rdfs:label "1" ;
-                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;
@@ -111,14 +111,14 @@
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
     parcel:appellation [ a <wa:LotOnPlanAppellation> ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
-                [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
-                [ rdfs:label "2" ;
+            dct:hasPart [ rdfs:label "2" ;
                     commonpatterns:namePartType wa-name-part-type:lotNumber ],
+                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
+                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
                 [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ] ] ;
+                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+                [ rdfs:label "SP 28750" ;
+                    commonpatterns:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:strata-lot ;

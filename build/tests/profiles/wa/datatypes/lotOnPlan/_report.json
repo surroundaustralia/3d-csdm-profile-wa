@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.profiles.wa.datatypes.lotOnPlan - Lot On Plan Appelation",
   "bblockName": "Lot On Plan Appelation",
   "bblockId": "icsm.profiles.wa.datatypes.lotOnPlan",
-  "generated": "2026-10-29T23:22:07.462698+00:00",
+  "generated": "2026-10-30T13:10:23.851715+00:00",
   "result": true,
   "items": [
     {
@@ -76,18 +76,20 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                ":MeasureShape": {
-                  "nodes": []
+                ":NamePartShape": {
+                  "nodes": [
+                    "_:N3f1115f082f841a79a7c428b9afaa3a2",
+                    "_:N0f47d081e78b40d7907df2ebbbd2f466",
+                    "_:N2d97c31b6d4145119954970f4b0ed3eb",
+                    "_:N09d73f7f2b4040c6a11e6359bc45210b"
+                  ]
                 },
                 ":CompoundNameShape": {
-                  "nodes": []
-                },
-                ":NamePartShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :MeasureShape: *none*\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: _:N3f1115f082f841a79a7c428b9afaa3a2,_:N0f47d081e78b40d7907df2ebbbd2f466,_:N2d97c31b6d4145119954970f4b0ed3eb,_:N09d73f7f2b4040c6a11e6359bc45210b\n - Shape :CompoundNameShape: *none*\n"
             }
           ]
         }
