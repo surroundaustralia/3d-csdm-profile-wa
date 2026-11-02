@@ -78,10 +78,10 @@
             surv:state wa-monument-state:mark-found ] ;
     surv:purpose wa-surveypoint-purpose:permanent-survey-mark ;
     commonpatterns:name [ rdfs:label "EFB157243/9802" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType wa-name-part-type:Source ],
-                [ rdfs:label "9802" ;
-                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] ;
+            dcterms:hasPart [ rdfs:label "9802" ;
+                    commonpatterns:namePartType wa-name-part-type:Stamp ],
+                [ rdfs:label "EFB157243" ;
+                    commonpatterns:namePartType wa-name-part-type:Source ] ] ;
     commonpatterns:qualityMeasure 2.6e-02 .
 
 <https://www.wa-example.com/features/BoundaryMark> a geojson:FeatureCollection ;

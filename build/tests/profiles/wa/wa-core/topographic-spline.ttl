@@ -66,12 +66,12 @@
             rdfs:label "Lot 502 DP 404354" ;
             dcterms:hasPart [ rdfs:label "404354" ;
                     commonpatterns:namePartType wa-name-part-type:planIdentifier ],
-                [ rdfs:label "DP" ;
-                    commonpatterns:namePartType wa-name-part-type:PlanType ],
+                [ rdfs:label "502" ;
+                    commonpatterns:namePartType wa-name-part-type:ParcelIdentifier ],
                 [ rdfs:label "Lot" ;
                     commonpatterns:namePartType wa-name-part-type:ParcelType ],
-                [ rdfs:label "502" ;
-                    commonpatterns:namePartType wa-name-part-type:ParcelIdentifier ] ] ;
+                [ rdfs:label "DP" ;
+                    commonpatterns:namePartType wa-name-part-type:PlanType ] ] ;
     parcel:interest [ container:purpose wa-secondary-purpose:non-extinguisment-native-title ;
             parcel:burdened "1" ;
             parcel:interestLink <https://www.wa-example.com/features/147-852-369> ;
@@ -139,10 +139,9 @@
             sosa:hasResult [ surv:distance 4.455e+01 ] ;
             ns2:distanceType icsm-distance-type:ground ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v10> ;
-            sosa:hasResult [ surv:distance 8.67e+00 ] ;
-            sosa:resultTime "2014-12-12T00:00:00+00:00"^^xsd:dateTime ;
-            ns2:distanceType icsm-distance-type:ground ],
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
+            sosa:hasResult [ ] ;
+            ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v11> ;
             sosa:hasResult [ surv:distance 1.774e+01 ] ;
@@ -156,9 +155,10 @@
             sosa:hasResult [ ] ;
             ns2:angleType icsm-angle-type:angle ],
         [ a geojson:Feature ;
-            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/21> ;
-            sosa:hasResult [ ] ;
-            ns2:angleType icsm-angle-type:angle ] ;
+            sosa:hasFeatureOfInterest <https://www.wa-example.com/features/v10> ;
+            sosa:hasResult [ surv:distance 8.67e+00 ] ;
+            sosa:resultTime "2014-12-12T00:00:00+00:00"^^xsd:dateTime ;
+            ns2:distanceType icsm-distance-type:ground ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2014-12-12T00:00:00+00:00"^^xsd:dateTime ;
