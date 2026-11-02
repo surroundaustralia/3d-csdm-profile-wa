@@ -1,7 +1,7 @@
 {
   "name": "WA Ref Namespaces",
-    "highlighted": true,
-  "abstract": "Defines the namespaces for use in WA Compound Names",
+  "highlighted": true,
+  "abstract": "Defines the namespaces for use in WA Compound Names, including the wa: namespace of the WA appellation classes.",
   "status": "under-development",
   "group": "4. Datatypes",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
@@ -18,5 +18,10 @@
   ],
   "maturity": "development",
   "scope": "unstable",
-  "tags": ["appellation"]
+  "tags": [
+    "appellation"
+  ],
+  "dependsOn": [
+    "bblocks://icsm.profiles.wa.ontology.appellation"
+  ]
 }

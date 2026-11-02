@@ -282,7 +282,7 @@ The audit also found 16 example values in no vocabulary that this review did not
 | [`wa-parcel-purpose-supplement.ttl`](../../../profiles/wa-parcel-purpose-supplement.ttl) (1) | → `…/wa-parcel-purpose` | `strata-scheme` | Supplement | Landgate | **Incorporate (interim, definition fixed)** | `parcelPurpose` | Stopgap until `ParcelAggregate` is a legal `featureType` ([D6](#decision-d6)) | Medium |
 | `wa-purpose-supplement.ttl` (1) | → `…/wa-surveypoint-purpose` | `derived-boundary` | Supplement | Landgate | **Defer / relocate** to [`wa-surveypoint-method`](https://linked.data.gov.au/def/csdm/wa-surveypoint-method) | `points[].methodEstablished` | "Derived" is a creation method, not a purpose | Medium |
 | [`wa-survey-documentation-supplement.ttl`](../../../profiles/wa-survey-documentation-supplement.ttl) (9) | → `…/wa-survey-documentation-type` | Strata document types | Supplement | Landgate | **Mixed**: 6 incorporate, 3 reuse/map existing | `supportingDocuments[].role` | Two duplicate existing terms. Notation style must match the parent (kebab-case). | High |
-| [`wa-survey-purpose-supplement.ttl`](../../../profiles/wa-survey-purpose-supplement.ttl) (1) | → `…/wa-survey-purpose` | `subdivision-t-sts` | Supplement; marked "TEMPORARY" | Landgate | **Incorporate** | `container:purpose` (already bound) | Genuine WA statutory purpose | High |
+| `wa-survey-purpose-supplement.ttl` (1, removed) | → `…/wa-survey-purpose` | `subdivision-t-sts` | Supplement; marked "TEMPORARY" | Landgate | **Incorporated** (now published; supplement removed) | `container:purpose` (already bound) | Genuine WA statutory purpose | High |
 | `wa-survey-type-supplement.ttl` (1) | → `…/wa-survey-type` | `ct` | Supplement | — | **Relocate** → [`wa-survey-documentation-type:certificate-of-title`](../../../profiles/wa-survey-documentation-supplement.ttl) | `sourceAuthorityType` / `supportingDocuments[].role` | Category error: a title is not a survey type | High |
 
 ### 5.3.3 Proposed CSV vocabularies, 25 files
@@ -443,8 +443,8 @@ See [§5.5](#55-supplementary-term-integration-matrix-43-terms).
 Notation must be kebab-case to match the parent; the supplement uses camelCase for 6 terms.
 The supplement's `strataPlanEndorsementCertificate` (WAPC) conflicts with [`wa-annotation:strata-plan-endorsement`](../../../profiles/wa-annotation-supplement.ttl) (local government, s15(4)) and [`wa-approved-form:15c`](../../../profiles/wa-approved-form-supplement.ttl) (planning or local government), so [D9](#decision-d9) needs resolving.
 
-**[`wa-survey-purpose:subdivision-t-sts`](../../../profiles/wa-survey-purpose-supplement.ttl).**
-Incorporate.
+**[`wa-survey-purpose:subdivision-t-sts`](https://linked.data.gov.au/def/csdm/wa-survey-purpose/subdivision-t-sts).**
+Incorporated: now in the published vocabulary, so the supplement has been removed.
 Correct "Strata Title Act" to "[Strata Titles Act 1985](https://www.legislation.wa.gov.au/legislation/statutes.nsf/main_mrtitle_938_homepage.html)".
 
 **[`wa-survey-type:ct`](crosswalk/vocab-crosswalk.csv).**
