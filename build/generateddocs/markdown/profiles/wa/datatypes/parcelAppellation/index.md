@@ -21,7 +21,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.parcelAppellation
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-02'
 
 ```
 
@@ -52,9 +52,11 @@ Links to the schema:
       },
       "@id": "dct:hasPart"
     },
+    "type": "@type",
     "dct": "http://purl.org/dc/terms/",
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "wa": "vocabs:profiles/wa/",
     "vocabs": "https://linked.data.gov.au/def/csdm/",
     "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
     "wa-survey-purpose": "vocabs:wa-survey-purpose/",

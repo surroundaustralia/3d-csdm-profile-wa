@@ -58,19 +58,21 @@ Example appellation.
 @prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa: <https://linked.data.gov.au/def/csdm/profiles/wa/> .
 @prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
 @prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 @prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
 
-[] rdfs:label "Lot 4 on Plan 1234" ;
-    dcterms:hasPart [ rdfs:label "4" ;
-            commonpatterns:namePartType wa-name-part-type:lotNumber ],
-        [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-            commonpatterns:namePartType wa-name-part-type:surveyType ],
-        [ rdfs:label "1234" ;
+[] a wa:LotOnPlanAppellation ;
+    rdfs:label "Lot 4 on Plan 1234" ;
+    dcterms:hasPart [ rdfs:label "1234" ;
             commonpatterns:namePartType wa-name-part-type:surveyNumber ],
         [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-            commonpatterns:namePartType wa-name-part-type:lotPrefix ] .
+            commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+        [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
+            commonpatterns:namePartType wa-name-part-type:surveyType ],
+        [ rdfs:label "4" ;
+            commonpatterns:namePartType wa-name-part-type:lotNumber ] .
 
 
 ```
@@ -93,7 +95,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.lotOnPlan
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-02'
 
 ```
 
@@ -124,9 +126,11 @@ Links to the schema:
       },
       "@id": "dct:hasPart"
     },
+    "type": "@type",
     "dct": "http://purl.org/dc/terms/",
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "wa": "vocabs:profiles/wa/",
     "vocabs": "https://linked.data.gov.au/def/csdm/",
     "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
     "wa-survey-purpose": "vocabs:wa-survey-purpose/",

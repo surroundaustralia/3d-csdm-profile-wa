@@ -1,0 +1,26 @@
+Validation report for icsm.profiles.wa.ontology.appellation - WA Parcel Appellation Ontology
+Generated 2026-11-02T05:44:59.922753+00:00
+=== Files ===
+Using example_1_1.ttl from examples
+Output Turtle lot-on-plan.ttl created
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for com, dct, rdfs, wa, wa-name-part-type, wa-survey-type
+=== End Turtle ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+ - /github/workspace/_sources/ontology/appellation/appellation.ttl
+Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+ - Shape :NamePartShape: _:n7e392b0af3e44718b9bcdad37eebad7db3,_:n7e392b0af3e44718b9bcdad37eebad7db2,_:n7e392b0af3e44718b9bcdad37eebad7db4
+ - Shape :CompoundNameShape: *none*
+
+=== End SHACL ===
+

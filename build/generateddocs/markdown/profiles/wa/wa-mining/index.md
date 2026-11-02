@@ -541,7 +541,7 @@ Minimal example - with combined elements from each test case
 
 #### ttl
 ```ttl
-@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
+@prefix compoundname: <https://w3id.org/ogc/utils/label/> .
 @prefix container: <https://linked.data.gov.au/def/csdm/container/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
@@ -592,6 +592,42 @@ Minimal example - with combined elements from each test case
     topo:edges <https://www.wa-example.com/features/observedVectors> ;
     geojson:collectionFeatureType "CSD" .
 
+<https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.190935e+02 -3.471141e+01 ) ] ;
+    compoundname:name [ rdfs:label "" ] .
+
+<https://www.wa-example.com/features/14005400> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.190934e+02 -3.471152e+01 ) ] ;
+    compoundname:name [ rdfs:label "" ] .
+
+<https://www.wa-example.com/features/14005401> a surv:BoundaryMark,
+        geojson:Feature ;
+    dcterms:spatial [ a geojson:Point ;
+            geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:peg ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.190934e+02 -3.471154e+01 ) ] ;
+    compoundname:name [ rdfs:label "" ] .
+
 <https://www.wa-example.com/features/15432571> a surv:CadastralMark,
         geojson:Feature ;
     dcterms:spatial [ a geojson:Point ;
@@ -602,16 +638,14 @@ Minimal example - with combined elements from each test case
     surv:purpose wa-surveypoint-purpose:temporary-control-point ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( 1.190965e+02 -3.470982e+01 ) ] ;
-    commonpatterns:name [ rdfs:label "EFB157243/9540" ;
-            dcterms:hasPart [ rdfs:label "EFB157243" ;
-                    commonpatterns:namePartType wa-name-part-type:Source ],
-                [ rdfs:label "9540" ;
-                    commonpatterns:namePartType wa-name-part-type:Stamp ] ] .
+    compoundname:name [ rdfs:label "EFB157243/9540" ;
+            dcterms:hasPart [ rdfs:label "9540" ;
+                    compoundname:namePartType wa-name-part-type:Stamp ],
+                [ rdfs:label "EFB157243" ;
+                    compoundname:namePartType wa-name-part-type:Source ] ] .
 
 <https://www.wa-example.com/features/17251503> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:boundary ;
-    geojson:topology [ a geojson:LineString ;
-            topo:relatedFeatures ( <https://www.wa-example.com/features/14005400> <https://www.wa-example.com/features/14005401> ) ] .
+    surv:vectorPurpose wa-vector-purpose:boundary .
 
 <https://www.wa-example.com/features/WAMarks> a geojson:FeatureCollection ;
     geojson:collectionFeatureType "SurveyPoint" ;
@@ -629,7 +663,8 @@ Minimal example - with combined elements from each test case
         geojson:FeatureCollection ;
     sosa:hasMember [ a geojson:Feature ;
             sosa:hasFeatureOfInterest <https://www.wa-example.com/features/17251502> ;
-            sosa:hasResult [ surv:distance 1.2784e+01 ] ] ;
+            sosa:hasResult [ surv:angle 1.380331e+02 ;
+                    surv:distance 1.2784e+01 ] ] ;
     sosa:madeBySensor [ a icsm-equipment-type:t-edm ] ;
     sosa:observedProperty surveyable:VectorDetermination ;
     sosa:resultTime "2022-05-22T00:00:00+00:00"^^xsd:dateTime ;
@@ -637,46 +672,8 @@ Minimal example - with combined elements from each test case
     ns2:angleType icsm-angle-type:angle ;
     ns2:distanceType icsm-distance-type:grid .
 
-<https://www.wa-example.com/features/14005391> a surv:BoundaryMark,
-        geojson:Feature ;
-    dcterms:spatial [ a geojson:Point ;
-            geojson:coordinates ( 5.253456e+04 3.502394e+05 ) ] ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:peg ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190935e+02 -3.471141e+01 ) ] ;
-    commonpatterns:name [ rdfs:label "" ] .
-
-<https://www.wa-example.com/features/14005401> a surv:BoundaryMark,
-        geojson:Feature ;
-    dcterms:spatial [ a geojson:Point ;
-            geojson:coordinates ( 5.25199e+04 3.502301e+05 ) ] ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:peg ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190934e+02 -3.471154e+01 ) ] ;
-    commonpatterns:name [ rdfs:label "" ] .
-
 <https://www.wa-example.com/features/17251502> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:boundary ;
-    geojson:topology [ a geojson:LineString ;
-            topo:relatedFeatures ( <https://www.wa-example.com/features/14005391> <https://www.wa-example.com/features/14005400> ) ] .
-
-<https://www.wa-example.com/features/14005400> a surv:BoundaryMark,
-        geojson:Feature ;
-    dcterms:spatial [ a geojson:Point ;
-            geojson:coordinates ( 5.252255e+04 3.50235e+05 ) ] ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:peg ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.190934e+02 -3.471152e+01 ) ] ;
-    commonpatterns:name [ rdfs:label "" ] .
+    surv:vectorPurpose wa-vector-purpose:boundary .
 
 
 ```
@@ -694,7 +691,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.wa-mining
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-02'
 
 ```
 
@@ -754,16 +751,6 @@ Links to the schema:
             "references": {
               "@id": "topo:relatedFeatures",
               "@type": "@id",
-              "@container": "@list"
-            },
-            "directed_references": {
-              "@context": {
-                "ref": {
-                  "@type": "@id",
-                  "@id": "topo:ref"
-                }
-              },
-              "@id": "topo:directedReferences",
               "@container": "@list"
             },
             "relationships": {
@@ -915,7 +902,18 @@ Links to the schema:
     "CSD": "container:CSD",
     "address": "sdo:address",
     "locality": "csd:locality",
-    "edges": "topo:edges",
+    "edges": {
+      "@id": "topo:edges",
+      "@context": {
+        "features": {
+          "@id": "geojson:features",
+          "@context": {
+            "featureType": "@type"
+          }
+        }
+      }
+    },
+    "SubtendedAngle": "surv:SubtendedAngle",
     "PrimaryParcel": {
       "@id": "parcel:PrimaryParcel",
       "@type": "@id"
@@ -1070,16 +1068,6 @@ Links to the schema:
                   "@type": "@id",
                   "@container": "@list"
                 },
-                "directed_references": {
-                  "@context": {
-                    "ref": {
-                      "@type": "@id",
-                      "@id": "topo:ref"
-                    }
-                  },
-                  "@id": "topo:directedReferences",
-                  "@container": "@list"
-                },
                 "relationships": {
                   "@context": {
                     "href": {
@@ -1177,22 +1165,13 @@ Links to the schema:
       },
       "@id": "container:points"
     },
-    "observedVectors": {
-      "@context": {
-        "featureType": "@type"
-      },
-      "@id": "container:observedVectors"
-    },
-    "adoptedVectors": {
-      "@context": {
-        "featureType": "@type"
-      },
-      "@id": "container:adoptedVectors"
-    },
+    "observedVectors": "container:observedVectors",
+    "adoptedVectors": "container:adoptedVectors",
     "parcels": {
       "@context": {
         "features": {
           "@context": {
+            "featureType": "@type",
             "Prism": {
               "@id": "geojson:Prism",
               "@context": {
@@ -1212,16 +1191,6 @@ Links to the schema:
                 "references": {
                   "@id": "topo:relatedFeatures",
                   "@type": "@id",
-                  "@container": "@list"
-                },
-                "directed_references": {
-                  "@context": {
-                    "ref": {
-                      "@type": "@id",
-                      "@id": "topo:ref"
-                    }
-                  },
-                  "@id": "topo:directedReferences",
                   "@container": "@list"
                 },
                 "relationships": {
@@ -1271,20 +1240,6 @@ Links to the schema:
                 "circumference": "topo:circumference"
               },
               "@id": "topo:rings",
-              "@container": "@list"
-            },
-            "faces": {
-              "@context": {
-                "ref": "@id"
-              },
-              "@id": "topo:faces",
-              "@container": "@list"
-            },
-            "shells": {
-              "@context": {
-                "ref": "@id"
-              },
-              "@id": "topo:shells",
               "@container": "@list"
             },
             "solids": {
@@ -1378,8 +1333,7 @@ Links to the schema:
           },
           "@id": "geojson:features",
           "@container": "@set"
-        },
-        "featureType": "@type"
+        }
       },
       "@id": "container:parcels"
     },
@@ -1452,6 +1406,7 @@ Links to the schema:
                   },
                   "@id": "surv:pose"
                 },
+                "angle": "surv:angle",
                 "distance": "surv:distance"
               },
               "@id": "sosa:hasResult",
@@ -1530,6 +1485,154 @@ Links to the schema:
       },
       "@id": "container:vectorObservations"
     },
+    "adoptedObservations": {
+      "@context": {
+        "featureType": "@type",
+        "features": {
+          "@id": "sosa:hasMember",
+          "@type": "@id",
+          "@container": "@set",
+          "@context": {
+            "hasResultQuality": {
+              "@id": "sosa:hasResultQuality",
+              "@type": "@id",
+              "@context": {
+                "angleAccuracy": "csdm:surveyobs/angleAccuracyMeasure",
+                "distanceAccuracy": "csdm:surveyobs/distanceAccuracyMeasure",
+                "distanceAccuracyClass": {
+                  "@type": "@id",
+                  "@id": "csdm:surveyobs/distanceAccuracyClass"
+                },
+                "angleAccuracyClass": {
+                  "@type": "@id",
+                  "@id": "csdm:surveyobs/angleAccuracyClass"
+                }
+              }
+            },
+            "phenomenonTime": {
+              "@context": {
+                "hasBeginning": "owlTime:hasBeginning",
+                "hasEnd": "owlTime:hasEnd",
+                "inXSDDateTime": {
+                  "@id": "owlTime:inXSDDateTime",
+                  "@type": "xsd:dateTime"
+                },
+                "inXSDDateTimeStamp": {
+                  "@id": "owlTime:inXSDDateTimeStamp",
+                  "@type": "xsd:dateTimeStamp"
+                },
+                "inXSDDate": {
+                  "@id": "owlTime:inXSDDate",
+                  "@type": "xsd:date"
+                },
+                "Instant": "owlTime:Instant",
+                "Interval": "owlTime:Interval",
+                "ProperInterval": "owlTime:ProperInterval",
+                "hasDuration": "owlTime:hasDuration",
+                "hasXSDDuration": {
+                  "@id": "owlTime:hasXSDDuration",
+                  "@type": "xsd:duration"
+                },
+                "inTimePosition": "owlTime:inTimePosition",
+                "inXSDgYear": {
+                  "@id": "owlTime:inXSDgYear",
+                  "@type": "xsd:gYear"
+                },
+                "inXSDgYearMonth": {
+                  "@id": "owlTime:inXSDgYearMonth",
+                  "@type": "xsd:gYearMonth"
+                }
+              },
+              "@id": "sosa:phenomenonTime",
+              "@type": "xsd:dateTime"
+            },
+            "hasResult": {
+              "@context": {
+                "pose": {
+                  "@context": {
+                    "angles": "csdm:utils/geopose/angles"
+                  },
+                  "@id": "surv:pose"
+                },
+                "angle": "surv:angle",
+                "distance": "surv:distance"
+              },
+              "@id": "sosa:hasResult",
+              "@type": "@id"
+            }
+          }
+        },
+        "madeBySensor": {
+          "@id": "sosa:madeBySensor",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/sensors/Sensor",
+            "sensorType": "@type",
+            "baseSensor": "csdm:sensors/baseSensor",
+            "roverSensor": "csdm:sensors/roverSensor"
+          }
+        },
+        "observedProperty": {
+          "@id": "sosa:observedProperty",
+          "@type": "@id",
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/property/"
+          }
+        },
+        "phenomenonTime": {
+          "@context": {
+            "hasBeginning": "owlTime:hasBeginning",
+            "hasEnd": "owlTime:hasEnd",
+            "inXSDDateTime": {
+              "@id": "owlTime:inXSDDateTime",
+              "@type": "xsd:dateTime"
+            },
+            "inXSDDateTimeStamp": {
+              "@id": "owlTime:inXSDDateTimeStamp",
+              "@type": "xsd:dateTimeStamp"
+            },
+            "inXSDDate": {
+              "@id": "owlTime:inXSDDate",
+              "@type": "xsd:date"
+            },
+            "Instant": "owlTime:Instant",
+            "Interval": "owlTime:Interval",
+            "ProperInterval": "owlTime:ProperInterval",
+            "hasDuration": "owlTime:hasDuration",
+            "hasXSDDuration": {
+              "@id": "owlTime:hasXSDDuration",
+              "@type": "xsd:duration"
+            },
+            "inTimePosition": "owlTime:inTimePosition",
+            "inXSDgYear": {
+              "@id": "owlTime:inXSDgYear",
+              "@type": "xsd:gYear"
+            },
+            "inXSDgYearMonth": {
+              "@id": "owlTime:inXSDgYearMonth",
+              "@type": "xsd:gYearMonth"
+            }
+          },
+          "@id": "sosa:phenomenonTime",
+          "@type": "xsd:dateTime"
+        },
+        "angleType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/angletypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/angleType"
+        },
+        "distanceType": {
+          "@context": {
+            "@base": "https://linked.data.gov.au/def/csdm/defs/distancetypes/"
+          },
+          "@type": "@id",
+          "@id": "csdm:surveyobs/distanceType"
+        }
+      },
+      "@id": "container:adoptedObservations"
+    },
     "occupationObservations": {
       "@context": {
         "featureType": "@type",
@@ -1599,6 +1702,7 @@ Links to the schema:
                   },
                   "@id": "surv:pose"
                 },
+                "angle": "surv:angle",
                 "distance": "surv:distance"
               },
               "@id": "sosa:hasResult",
@@ -1697,7 +1801,10 @@ Links to the schema:
     "arcLength": "geojson:arcLength",
     "startTangentVector": "geojson:startTangentVector",
     "endTangentVector": "geojson:endTangentVector",
-    "ref": "topo:ref",
+    "ref": {
+      "@id": "topo:ref",
+      "@type": "@id"
+    },
     "orientation": "topo:orientation",
     "Edge": "topo:Edge",
     "Face": "topo:Face",
@@ -1705,6 +1812,7 @@ Links to the schema:
     "Shell": "topo:Shell",
     "Solid": "topo:Solid",
     "AggregateSolid": "topo:AggregateSolid",
+    "AggregatePolygon": "topo:AggregatePolygon",
     "rings": {
       "@id": "topo:rings",
       "@container": "@list"
@@ -2054,11 +2162,11 @@ Links to the schema:
       "@type": "@id"
     },
     "ptQuality": {
-      "@id": "commonpatterns:qualityClass",
+      "@id": "csdm:commonpatterns/qualityClass",
       "@type": "@id"
     },
     "ptQualityMeasure": {
-      "@id": "commonpatterns:qualityMeasure",
+      "@id": "csdm:commonpatterns/qualityMeasure",
       "@type": "@id"
     },
     "GeodeticReferenceMark": {
@@ -2070,7 +2178,23 @@ Links to the schema:
       "@type": "@id"
     },
     "AdoptedVector": {
+      "@id": "surv:AdoptedVector",
+      "@type": "@id"
+    },
+    "SurveyedVector": {
       "@id": "surv:SurveyedVector",
+      "@type": "@id"
+    },
+    "SurveyPoint": {
+      "@id": "surv:SurveyPoint",
+      "@type": "@id"
+    },
+    "SurveyMark": {
+      "@id": "surv:SurveyMark",
+      "@type": "@id"
+    },
+    "OccupationMark": {
+      "@id": "surv:OccupationMark",
       "@type": "@id"
     },
     "label": "rdfs:label",
@@ -2548,13 +2672,16 @@ Links to the schema:
       "@id": "sosa:usedProcedure",
       "@type": "@id"
     },
+    "yaw": "csdm:utils/geopose/yaw",
+    "pitch": "csdm:utils/geopose/pitch",
+    "roll": "csdm:utils/geopose/roll",
     "container": "csdm:container/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "sdo": "https://schema.org/",
     "csd": "csdm:csd/",
     "topo": "https://purl.org/geojson/topo#",
-    "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "surv": "csdm:surveyfeatures/",
+    "parcel": "https://w3id.org/ogc/ladm/parcels/",
     "geojson": "https://purl.org/geojson/vocab#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
@@ -2564,6 +2691,7 @@ Links to the schema:
     "prov": "http://www.w3.org/ns/prov#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
+    "compoundname": "https://w3id.org/ogc/utils/label/",
     "csdm": "https://linked.data.gov.au/def/csdm/",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "sr": "csdm:spatial-representation/",
@@ -2617,6 +2745,7 @@ Links to the schema:
     "wa-local-government": "csdm:wa-local-government/",
     "registered-surveyors": "https://wa.gov.au/surveyors/",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "wa": "csdm:profiles/wa/",
     "@version": 1.1
   }
 }

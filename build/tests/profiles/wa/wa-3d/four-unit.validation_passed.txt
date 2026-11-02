@@ -1,5 +1,5 @@
 Validation report for icsm.profiles.wa.wa-3d - WA- 3D profile
-Generated 2026-10-30T13:17:19.149387+00:00
+Generated 2026-11-02T06:03:18.847613+00:00
 === Files ===
 Using examples/4-unit-up-down.json from examples
 JSON-LD context is present - uplifting
@@ -14,56 +14,67 @@ Validation passed
 === SHACL ===
 Error processing closure source ../../examples/referenced-objects-closure.ttl: <urlopen error [Errno 2] No such file or directory: 'examples/referenced-objects-closure.ttl'> - SHACL validation will run against an incomplete closure graph
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/ontology.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/icsm-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-vhd.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-vector-purpose.ttl
- - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-land-district.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl
- - https://www.w3.org/ns/prov-o
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-distance-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/nz-condition.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-secondary-parcel-purpose.ttl
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/nz-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/icsm-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl
- - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-documentation-type.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-procedure-used.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/accuracy/nz-point-class.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-angle-type.ttl
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-compound-crs.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/nz-state.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/other/wa-surveypoint-method.ttl
- - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-territorial-authority.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/container/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-vector-purpose.ttl
+ - /github/workspace/_sources/ontology/appellation/appellation.ttl
+ - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-type.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-equipment-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/wa-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-purpose.ttl
+ - https://www.w3.org/ns/sosa/sosa.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/condition/wa-condition.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/icsm-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-vhd.ttl
+ - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/wa-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-secondary-parcel-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-compound-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-vhd.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyfeatures/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-local-government.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/parcelSpatialRepresentationDefinition/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-documentation-type.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/geometry/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-annotation.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/icsm-admin-unit-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-procedure-used.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-crs.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-state.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyprov/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/wa-purpose.ttl
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-crs.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-annotation.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-land-district.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/commonpatterns/ontology.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/geopose/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-documentation-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/wa-parcel-state.ttl
+ - https://www.w3.org/ns/prov-o
  - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/nz-monument-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/icsm-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/state/nz-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/accuracy/nz-point-class.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/purpose/nz-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/nz-survey-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyPoints/monument/wa-monument-type.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-locality.ttl
+ - https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyobs/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/icsm-parcel-state.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/Parcels/nz-parcel-type.ttl
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/SurveyObservations/nz-vector-purpose.ttl
+ - https://icsm-au.github.io/icsm-vocabs/vocabs/LandParcels/CSD-Header/wa-survey-type.ttl
 Validation result for profiles/wa-pointnames-shacl.ttl:
   Validation Report
   Conforms: True
@@ -71,13 +82,40 @@ Validation result for profiles/wa-pointnames-shacl.ttl:
 Focus nodes for profiles/wa-pointnames-shacl.ttl:
  - Shape wap:testLabelPartsPresent: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-parcelType: *none*
- - Shape jcl:testBoundVocab-parcelInterest: *none*
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-condition: uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy
+ - Shape jcl:testBoundVocab-surveypoint-purpose: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db
+ - Shape jcl:testBoundVocab-pt-quality-class: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db
+ - Shape jcl:testBoundVocab-vector-purpose: *none*
+ - Shape jcl:testBoundVocab-state: uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy
+ - Shape jcl:testBoundVocab-form: uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
+ - Shape :testCRS: uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33
+ - Shape :testDistanceType: *none*
+ - Shape :testAngleType: *none*
+ - Shape :testSurveyMetadata: uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33
+ - Shape :testVHD: *none*
+ - Shape :testCompoundCRS: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+ - Shape :testInCollectionOrMember-madeBySensor: *none*
+ - Shape :testInCollectionOrMember-procedure: *none*
+ - Shape :bindSurveyObservation-angle-and-distance-types: *none*
+ - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
+ - Shape :annotate-madeBySensor: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
   Validation Report
@@ -86,74 +124,50 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/p
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-references-shacl.ttl:
  - Shape :referencedCSDs-present: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-point-codetypes-shacl.ttl:
- - Shape jcl:testBoundVocab-condition: uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy
- - Shape jcl:testBoundVocab-form: uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy
- - Shape jcl:testBoundVocab-state: uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy
- - Shape jcl:testBoundVocab-surveypoint-purpose: uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:451e256a-6127-4e18-97f5-644093e9f9df
- - Shape jcl:testBoundVocab-pt-quality-class: uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:451e256a-6127-4e18-97f5-644093e9f9df
- - Shape jcl:testBoundVocab-vector-purpose: *none*
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-parcel-codetypes-shacl.ttl:
+ - Shape jcl:testBoundVocab-parcelInterest: *none*
+ - Shape jcl:testBoundVocab-parcelType: *none*
 
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
+Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/rules.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-observation-properties.shacl:
- - Shape :testInCollectionOrMember-madeBySensor: *none*
- - Shape :testInCollectionOrMember-madeBySensor-Dies-in-rdflib: *none*
- - Shape :testInCollectionOrMember-procedure: *none*
- - Shape :bindSurveyObservation-angle-and-distance-types: *none*
- - Shape :annotate-madeBySensor: *none*
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-profile-icsm/profiles/icsm-survey-metadata-shacl.ttl:
- - Shape :testCompoundCRS: *none*
- - Shape :testDistanceType: *none*
- - Shape :testVHD: *none*
- - Shape :testAngleType: *none*
- - Shape :testCRS: uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33
- - Shape :testSurveyMetadata: uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/parcel_module.shapes.ttl:
- - Shape :PurposeOfSpatialUnit: *none*
- - Shape :ParcelType: *none*
- - Shape :ParcelState: *none*
- - Shape :PropertyUnit: *none*
- - Shape :ParcelQualityClass: *none*
- - Shape :SecondaryParcel: *none*
- - Shape :ParcelAggregate: *none*
- - Shape :PrimaryParcel: *none*
- - Shape :Apellation: *none*
- - Shape :LandInterest: *none*
- - Shape :Parcel: *none*
- - Shape :EstateParcel: *none*
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/shapes/container.shapes.ttl:
- - Shape container:CSD: *none*
- - Shape container:CSD-seeAlso: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>: *none*
-
-Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/tests/obs-match-vectors.shacl:
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/CSD/rules.shacl:
  - Shape :testFOIexists: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/owl-consistency.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/owl-consistency.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/ns1:qualityMeasure
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*
+ - Shape _:nb2f54b0695d54d51ad1da90f1bf69d62b5: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*
+ - Shape _:nb2f54b0695d54d51ad1da90f1bf69d62b6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/shapes.shacl:
+ - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*
+ - Shape :NumericLiteral/sh:or/rdf:first: *none*
+ - Shape _:nf495e97e43784f79b94f15753b1172dcb3: *none*
+ - Shape :MeasureShape: *none*
+ - Shape :QualityClassShape: *none*
+ - Shape :NumericLiteral: *none*
+ - Shape _:nf495e97e43784f79b94f15753b1172dcb4: *none*
+ - Shape :QualityMeasureShape: uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/ns1:qualityMeasure
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
   Validation Report
@@ -163,107 +177,223 @@ Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compound
  - Shape :NamePartShape: *none*
  - Shape :CompoundNameShape: *none*
 
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/owl-consistency.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/owl-consistency.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/surv:monumentedBy,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/surv:monumentedBy,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/surv:monumentedBy,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/surv:monumentedBy,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/surv:monumentedBy,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/surv:monumentedBy,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/surv:monumentedBy,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/surv:monumentedBy,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/surv:monumentedBy,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/surv:monumentedBy,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/surv:monumentedBy,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/surv:monumentedBy,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/surv:monumentedBy,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/surv:monumentedBy,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/surv:monumentedBy,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/surv:monumentedBy,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/surv:monumentedBy,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/surv:monumentedBy,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/surv:monumentedBy,uuid:5228ad62-0730-416f-89b0-5042da216efb/surv:monumentedBy,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/surv:monumentedBy,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/surv:monumentedBy,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/surv:monumentedBy,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/surv:monumentedBy,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/surv:monumentedBy,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/surv:monumentedBy,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/surv:monumentedBy,uuid:fa551002-6466-46f1-a2f3-f433334447e6/surv:monumentedBy,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/surv:monumentedBy,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/surv:monumentedBy,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/surv:monumentedBy,uuid:451e256a-6127-4e18-97f5-644093e9f9df/surv:monumentedBy,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/surv:monumentedBy,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/surv:monumentedBy,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/surv:monumentedBy,uuid:754fd788-08c8-45b0-a591-e608a27f0948/surv:monumentedBy
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: wa-monument-condition:ok
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: wa-monument-form:cadastral-point-unmarked
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: wa-monument-state:unmarked
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: icsm-surveypoint-purpose:boundary
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: wa-vector-purpose:3D-Construct
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/survey_features.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/survey_features.shapes.ttl:
+ - Shape surv:Occupation: *none*
+ - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*
+ - Shape surv:AdoptedVector: *none*
+ - Shape surv:SurveyPointProvenance: *none*
+ - Shape _:n2f27b9614ac24c66abef52c8a9d3b115b24: *none*
+ - Shape surv:OccupationMark: *none*
+ - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n2f27b9614ac24c66abef52c8a9d3b115b8: *none*
+ - Shape surv:Distance: *none*
+ - Shape surv:Angle: *none*
+ - Shape surv:BoundaryMark: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db
+ - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*
+ - Shape surv:ObservedVector: *none*
+ - Shape _:n2f27b9614ac24c66abef52c8a9d3b115b15: *none*
+ - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:first: *none*
+ - Shape surv:SurveyMark: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db
+ - Shape surv:GeodeticReferenceMark: *none*
+ - Shape surv:Monument: *none*
+ - Shape surv:SurveyedLine: *none*
+ - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n2f27b9614ac24c66abef52c8a9d3b115b7: *none*
+ - Shape surv:NoOccupation: *none*
+ - Shape surv:AllowableCoordinateReferenceSystem: *none*
+ - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*
+ - Shape _:n2f27b9614ac24c66abef52c8a9d3b115b23: *none*
+ - Shape surv:SurveyPoint: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db
+ - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*
+ - Shape _:n2f27b9614ac24c66abef52c8a9d3b115b16: *none*
+ - Shape surv:CadastralMark: *none*
+ - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*
+ - Shape _:n10c09c48fd0e43169980542ca9b126d1b6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*
+ - Shape _:n10c09c48fd0e43169980542ca9b126d1b7: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/geometryprimitives.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/geometryprimitives.shapes.ttl:
+ - Shape geo:Feature/sh:not: *none*
+ - Shape geo:Feature: *none*
+ - Shape :ExtrudedGeometry: *none*
+ - Shape :ExtensionRule: *none*
+ - Shape :3DSpatialUnit: *none*
+ - Shape :ExtrudedCurve: *none*
+ - Shape :ExtrudedSurface: *none*
+ - Shape geo:Geometry: *none*
+ - Shape :AbstractSolidGeometry: *none*
+ - Shape :Face: *none*
+ - Shape geo:Geometry/sh:not: *none*
+ - Shape :BoundaryEdge: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
+ - Shape :OrientedReferenceShape: uuid:0523e3be-6777-40f9-9e14-523e128647c0/geojson:topology/topo:directedReferences/rdf:first,uuid:90f77d40-3e87-4627-993d-e0a9efef52d6/geojson:topology/topo:directedReferences/rdf:first,_:N90c3a2aff49a4bf5af3f0f993268bb43,uuid:4def3698-95e1-486f-9588-a69a73640e5c/geojson:topology/topo:directedReferences/rdf:first,uuid:10ebd12b-36b6-4db0-b43e-b742e05540ce/geojson:topology/topo:directedReferences/rdf:first,uuid:fbe45af6-b334-4500-97e3-3c4cd177db90/geojson:topology/topo:directedReferences/rdf:first,_:N1a4b939548de4ddcad439fca8ac61c73,_:Nef1b2320a2f74881a32551de4c3e9c62,uuid:6bb474bd-c5d6-4366-bc9e-d051dbf72a6e/geojson:topology/topo:directedReferences/rdf:first,uuid:5381559d-4537-4041-81e1-a0978e7f3c64/geojson:topology/topo:directedReferences/rdf:first,_:N5b52a0746bd44f54b158076648e17333,uuid:6642ea7b-0b5e-474c-95ef-fe5a15be551b/geojson:topology/topo:directedReferences/rdf:first,_:N898d2fe977bb460bad3d7c703e1198ce,uuid:bec0f9d8-0d77-46ba-8941-f884943ac3d8/geojson:topology/topo:directedReferences/rdf:first,_:N3e5cae1d3f9d47c3aa758dcf5ae8649a,uuid:f8c1f3d2-aeb6-4b33-b6f8-7d01a5e8ae59/geojson:topology/topo:directedReferences/rdf:first,_:N87a6de0287ab4e4e8d65e7c9a3f9f10b,_:N81cf6fe8cedb4c2993a49e9d6892d81a,_:N15ad4d84db6442b2b43f04e7e9b6b5aa,_:Nf90b4d43d6d84060af1bb12c5f6e1a8e,_:Na2876b67184744b9a6b80f4082f75dcc,_:Nccede34f0a054d979a298561e8aee5c4,_:Na597329d4e9743e0acf3266bcfdddc2b,_:Nab76766513b54ef6a4772e705fee4327,_:N1ff1ddfc3e12412a936cd6eac6e92891,_:N92272093fe9f4ebf8c14441a385f676f,_:Nb540b1adabcb41189d5dd61b4a3a6b4f,_:Nfb711bb6fbc3409182af4b4582ecab4c,_:Nde2f765545f9427bbb9bac64e146c152,_:N88a70caf5ce149d098830c0b04ac7ee9,_:N2959cd1200a04b5d8a6dc4a5cd845990,uuid:441f6a73-ea02-44a7-a04d-4fec5659d529/geojson:topology/topo:directedReferences/rdf:first,uuid:92f996ff-4259-4d40-96ec-65de71faa800/geojson:topology/topo:directedReferences/rdf:first,_:N14e3cf59b58045b3bccca9c48b0b85c2,uuid:bda4a01e-afca-41dd-b296-81cd3df3c070/geojson:topology/topo:directedReferences/rdf:first,_:Na1e3e6cb28ab40a7a851362a568512ee,uuid:48b5ada1-bbec-4aee-851d-6c1509e9d444/geojson:topology/topo:directedReferences/rdf:first,_:N823abb9b5d0340b38ed9081c2e9a5775,_:Nb5bf958d43034b668c31d284312494c3,uuid:98685c3a-fc3b-4490-b99f-5a4f9ef3aae4/geojson:topology/topo:directedReferences/rdf:first,_:N991d9af446fa47cd866517022afcc659,_:N2950a48e130d40c9a1f41631532021aa,_:N51a99a859d91455cbcaec0a082a0b644,_:Neac71759ad6c4f4dbe8901a48487eb51,_:N061177d713414120939a0a6017ad40b0,uuid:d4e4f6d3-3603-4da5-9d20-661ff9a38015/geojson:topology/topo:directedReferences/rdf:first,_:N971c16f0eb6f46ca80221c3771c63e49,_:Nf02d6f9f3d3b4f6fb2b0c1dd6b74881f,_:N3c048b2f24a8486fb411bcff7d34c0fe,_:Ned26e36d9c5845c7a5095d65ec1f4a63,uuid:d0ddc512-0c81-43bb-a000-bf5017ff64a7/geojson:topology/topo:directedReferences/rdf:first,uuid:fa7823a2-8ed7-43f0-9912-e7ade12c966a/geojson:topology/topo:directedReferences/rdf:first,_:Nafd6eda310e04edf85298f02ca6864e2,_:N57aeda4e27974ecbadba5882a8c906a3,_:Ncb19a83457e342b79c9c9ac4eb40aaf8,_:N71a118392c904d2ab5d37c6c1f8f8565,uuid:8efc4bcc-0265-4aba-82f9-4e9c5f818018/geojson:topology/topo:directedReferences/rdf:first,uuid:f3212f35-ba06-46b1-8822-fdfac0ec4bd1/geojson:topology/topo:directedReferences/rdf:first,_:Necf81f07328e4a57bae216385bc03879,uuid:2402e110-526c-49d6-82f2-5ecf689f64d3/geojson:topology/topo:directedReferences/rdf:first,uuid:46d1879a-0f3f-42ef-b68d-d813f684e3f9/geojson:topology/topo:directedReferences/rdf:first,uuid:64860b38-d1bf-4728-8f0d-6ced9451ce37/geojson:topology/topo:directedReferences/rdf:first,uuid:649a326e-bb1e-4492-943a-39aa35806c64/geojson:topology/topo:directedReferences/rdf:first,uuid:a63b48bc-c0d9-440d-9238-c093d3a6c40c/geojson:topology/topo:directedReferences/rdf:first,_:N94ffcc35364e4cb4b7e55504019f4256,_:N3cf56a7ecbaa4b4a96537c063b6bf68b,uuid:7472a7e9-efcf-49a8-a19f-4a14c3e6f86e/geojson:topology/topo:directedReferences/rdf:first,_:Nec94f109088e4586ae2bea7b672d22d7,_:N4faae556e0264fe99db2e9115556aa95,uuid:47967a8e-ab17-4db0-bbfa-7a6d797e6136/geojson:topology/topo:directedReferences/rdf:first,_:Nae1ccfc2b8a046e7a78f52923b9886fe,_:N8d5da3a1d53b424d9c3d1d201e9352cc,uuid:bac4ae02-1a53-4849-9e46-b3c0d67925b1/geojson:topology/topo:directedReferences/rdf:first,_:Nc99633e80fb444bfbcae2fa43e5caca2,uuid:a3e906eb-b583-4af2-a13b-fb6bb2d399a3/geojson:topology/topo:directedReferences/rdf:first,_:Nde8da15772724c178699127dbbcb8737,_:N4e5fc0d0f61748e2b0ef520090423ed7,_:Nd6a89dd503a146cd86726aa5d9c003d1,_:Ne107b93377664b6dbe0a6f0ac7badf9f,uuid:f45d1ba5-ecfe-4b0b-b315-2dc71cfe2b3b/geojson:topology/topo:directedReferences/rdf:first,_:N0c79d495b6ad4b6d97f642ae0ea4c300,_:Ne3d84ea1b823482e9c0fadd52116bc8f,uuid:8c5381e4-64ab-4b9d-bdd5-aea3de220330/geojson:topology/topo:directedReferences/rdf:first,_:Nc4b9df22432b40338a3e25480283be9d,uuid:815b8458-d756-45cc-8385-00314271e297/geojson:topology/topo:directedReferences/rdf:first,uuid:1d373111-f4b1-4627-92ab-14f0bbeb882b/geojson:topology/topo:directedReferences/rdf:first,_:N6237e89e11de4bccaa09d5fa5767a5db,_:N0fd55eb376af4d9a9ffd3ecf8ca60338,_:N85c8ff8367874994a5a6349b44672819,_:N8de881f4e4b648dbba5e25ae332f68ce,_:N2c540856a97b4a6a9d38623b51820322,_:Ncc6dadac72a64b1a8c0e396f1a9cfefb,_:N0f7131860d1d47bfb65a472ea0aefe87,_:N61f889efdd7d434999debd909a507755,uuid:c6d50260-a8fe-4fac-9279-2ac46d621e87/geojson:topology/topo:directedReferences/rdf:first,_:N1468d3aed02e4a2e925cc9e285630011,_:Nb659132143074e80b607952d77ea464c,_:N20c36a9f4c4e44aaa0f4e85313515920,_:Na7f6ec9ea6644740b46d14d7d36cfea1,_:Nd9898d7d4e4e4f1ab2b57755c7fcf83d,_:N88053e105de84b559a7ee00ee1810cf4,_:N10088b0247da401181c9b21525431789,_:N9629b54961554a3592edebec4b9b0200,_:Na0a0a6a97f4f46cba557d9e38270d654,_:N02a8370899f94b5e8b9a43b605401ce3,uuid:d8aca1d0-8d06-4520-9437-7479640802df/geojson:topology/topo:directedReferences/rdf:first,uuid:79e3d840-7da3-4380-8288-6c2db4ac8b06/geojson:topology/topo:directedReferences/rdf:first,uuid:26bd463c-0433-4510-8ba8-074f5cdd1e64/geojson:topology/topo:directedReferences/rdf:first,uuid:31dcf84a-98c6-48b1-8ba6-14d7a5ff6749/geojson:topology/topo:directedReferences/rdf:first,_:N7ac115fc659a494dbbe3904f3f72b856,uuid:69183851-6fbc-495b-aa59-eba99d14bf68/geojson:topology/topo:directedReferences/rdf:first,_:N2cd85043abb44688bb6b43b7c4f8dcff,_:Ncc25c9295a8246f088b7d74db9c36567,_:N7fbc6d3b26dc4a05ada4671f5033cb1d,_:N9ddca564103f418fa0e697bccdf985bf,uuid:6caff784-d847-4916-9360-03ab48f3a5df/geojson:topology/topo:directedReferences/rdf:first,uuid:72d54df4-b018-4897-a96d-7d62cb9d8c4a/geojson:topology/topo:directedReferences/rdf:first,_:N34c239012d4e4c3898475d4d44eae634,_:N3ddd074c38864d18aff7f078a766c663,uuid:8ca4710e-2abd-4152-912d-55c25793b4b7/geojson:topology/topo:directedReferences/rdf:first,_:N8dc29f0789f649cba20b5cf1d597c238,_:N0f61eaad56c648d6a65f78ed20211d9c,uuid:2d2a332b-7633-41ee-8f53-712fc6f2b877/geojson:topology/topo:directedReferences/rdf:first,_:N0ee0e9f5a0ba4e6db23c77b44252be56,_:N2f51d06cf9b04c368fbbc5f7597bf6b9,_:Ne096c1f049af49c3824130d389f40b42,_:N371125cb99d24f5195b264b387093a57,_:Nd336f1b598c442f0ab2205e517da5e2f,_:Nd0c55c735f7943f5aa61fa119ddf90d4,_:Ne37dd16211d24541a3124ee1881d1074,_:Na37becd4ca5b409bad5b0204414215fb,_:N66504d2b9f0f46d2a69d6a86b042a37d,_:N592a4a2919444de7939f5f9d7247e148,_:N71fb620f02a24bb18703cb2ee022abac,_:N7bbe479a8f4b4a8ab293b14571c21daf,_:N5235517304b84255ad37c559685b3014,uuid:64496114-d8c3-4643-9975-4ae0bb1af186/geojson:topology/topo:directedReferences/rdf:first,_:Nd2503c3d95094a10a96e57ad712fc1af,_:N3014159e615b4d2f9fd6aa5a785349e6,uuid:49b309d9-6d39-4c44-9a9e-ac2e73c3b58e/geojson:topology/topo:directedReferences/rdf:first,uuid:3f40fd91-3d85-404b-82cd-fd4bb7228ca5/geojson:topology/topo:directedReferences/rdf:first,uuid:429a8b49-b82a-4521-9388-6b0b87bccb06/geojson:topology/topo:directedReferences/rdf:first,uuid:d7b9eb80-93ca-4ee5-adcb-ab1cfda75d4f/geojson:topology/topo:directedReferences/rdf:first,_:Nf9fc8e10324c4610a932ce3ab9fe5337,_:N108e9ccdda5048cf8f4e1c045ab59cc8,_:Nacb1d284c7aa4e68aaa7188532bac43a,_:Ne1c951aae3454f189b0e5bdf2e870dd4,uuid:0e50d98b-eed1-41b7-aec0-35970c4c03df/geojson:topology/topo:directedReferences/rdf:first,_:Neb0159d424c048d5a16421e3616a6f13,_:N3359fc92c54f459aae6f0b866385ab7e,_:N9652b103cdf44313b1a43f206be8cd99,_:Ncb7d5cda237a410f9a10d184d93d98e0,uuid:29f3aa93-c4e5-4961-9fd5-c2261a0b9f3b/geojson:topology/topo:directedReferences/rdf:first,uuid:538c874f-36f0-4fe5-9bb1-fc37f0b14f0e/geojson:topology/topo:directedReferences/rdf:first,_:Nd21510ab89a442b68e3f2ad17a111902,_:Ndd0e5758d9324b0cb1989535cb7415cb,_:N6a58b88382fe44a7bea8de1f81fe063b,uuid:b17a9121-2cf2-427f-871d-78266deacddf/geojson:topology/topo:directedReferences/rdf:first,_:N47a9add8b9f945c6b498d110233ca3bd,_:N5597739f19ce4f9a9e7f37abc67a8d43,_:N7f0aed021ae340e0943ad154f4447ff8,_:N654fd43bacd5469380dc86fd351121b7,uuid:79e3d1de-56bc-47de-a18b-d29da6100eda/geojson:topology/topo:directedReferences/rdf:first,_:N8ee3f1be43c943c9bf8281d8bbbb8560,_:Nd80a509eb3e1490c8280f1640075e9af,_:N2e07b6ebc5ba4cd88c8a4b2efd419a58,_:Nafabc4464a504f98b2842d73c8b543a5,_:Ne76b6eab2db44082b8dc4d1e327eacce,_:N1f21e047b6d34347b01a73d80e9a73d8,_:N8ccc3de2bfcb45ef9e0c9d88b9ab326f,_:N6227a973afe449448e92b6cfa802ab77,_:N267185612a014b17b6b05df751e4ef50,_:Ndd62701013e142bfa7d958c9b66b1084,_:Nf02d60c04a09445188a570f39e65cf7a,_:N4e54526d64634d9fb183f90eea3499ce,_:N662cb7791cb8416c87b970912d1d1455,uuid:4fe850d8-d729-4851-b7d9-0f9e7ed39468/geojson:topology/topo:directedReferences/rdf:first,_:N7bc5f9c35c4e42b0a3f0cf70518e0102,_:N98531048a7d1482c89d6a187dd3536b7,_:N57ba2700e0e34b03b98643e4c5cc722c,_:N895689ebcd2c4dffbc934b6769fd26dd,_:Nbc8841c70206471f9daaa768b5e35422,_:Ne2a2f601721d4086bb09a21055602229,uuid:16b0e4ac-22b3-40f5-8510-7fefb1b1cc06/geojson:topology/topo:directedReferences/rdf:first,_:Na09075280b774072b321dad0fbf5e5bc,_:Nbcb94563e4a34b2ca28adb56e7470be2,uuid:3ff8d8c4-90fe-4782-9717-1e3f4110f5a0/geojson:topology/topo:directedReferences/rdf:first,uuid:d9c6f295-4449-4e1d-bb3a-0c4ddf57e8f0/geojson:topology/topo:directedReferences/rdf:first,uuid:0bdb8d8a-3d53-4a97-bee6-56bf509e6b69/geojson:topology/topo:directedReferences/rdf:first,_:N47669fff8655401ebfbad9cbacd0fd19,_:N43827d91ce6c4893874d9b6a08d55169,_:N81ae77d3456f4ecbb0d532d5d81fa77f,_:N63c34c03d0e041128839486fa21b2083,_:Na25cf44eb95d416688c61181fab26434,_:Na28a6853fe014102a21a999698091039,_:N15ef0ad793a042c085b8cc9b7b75299d,uuid:ec0516e9-68b2-4d3d-8ed9-4a59f8e018c8/geojson:topology/topo:directedReferences/rdf:first,_:Nd9d413e8597b42d58d1f5799419fb3de,_:N0cbb8d12683e420796d60494de877d74,_:N50a6aa808ee64673b6b9544a7ffa66e6,_:Na17760c2b28d412283321ffeafb2b834,uuid:83e6f887-a532-473f-8f09-536ef1943f33/geojson:topology/topo:directedReferences/rdf:first,uuid:029e7e2d-a650-4510-b861-ee68b46a2fff/geojson:topology/topo:directedReferences/rdf:first,_:N9dd2dbace2fe4418b2207bca8a0b1955,_:Nf6e7e8f84bfd47d296f32f38a77066c4,_:N7e361defbe644f0fbed51bcce1436535,_:Nbfd7ea4c605f48acaadcae0d6b5f2eb5,_:N7c84d75a8819474a8bce26a5129863ae,_:N157cad8b190046a2b0e4fefc78b08ed5,uuid:73155e38-87b0-4ded-9af7-dd354d36a728/geojson:topology/topo:directedReferences/rdf:first,_:N5ef336b430414a5fbcc6a404550ee760,_:N9fc6b7667849414ba100590a28f10240,_:N8a8f3678ec294808b03520c5c952859f,_:Naff3197b12c34403aa9bd1866b13bdca,uuid:f44d98c1-fc4e-45da-a233-6e63e58bd560/geojson:topology/topo:directedReferences/rdf:first,uuid:9d4e9985-3788-4e70-a2ec-a809aba7c7e8/geojson:topology/topo:directedReferences/rdf:first,_:N457e9454f41448f7b4379550bcaabdc2,_:N7b8dcaee473e4919be1eb2934bda9921,uuid:adb6be70-c29a-4dcc-9e4b-47970d9930dd/geojson:topology/topo:directedReferences/rdf:first,_:Nd17acf0307cc4e7cb969763d78975d61,_:N21abd656cdcc49028fe3e816b50b8767,_:Ncf9cea761cb54aa99b0ddfd26c26a2e8,uuid:4bd327dc-316a-4e1c-9b35-b377652e89d6/geojson:topology/topo:directedReferences/rdf:first,uuid:bba09dfa-33c6-4256-8f33-b802aec75bdb/geojson:topology/topo:directedReferences/rdf:first,uuid:5b1af58d-21f4-4582-96f8-14d356205491/geojson:topology/topo:directedReferences/rdf:first,uuid:424281c5-646a-48c3-b0f2-ac703d3a8d10/geojson:topology/topo:directedReferences/rdf:first,_:N447b00e7518c40739721e66111017c27,_:Nceb2a8badbe64ca1978165fd7be603b7,_:N1a23e156ea504f30a54e3612f8d1f548,_:N12cec276226f4475989eb584ced5af7f,uuid:1713550e-1504-45f6-a00e-7eeb436306eb/geojson:topology/topo:directedReferences/rdf:first,_:N272f603b976a429ebc7653a313ed9b7d,_:N1c4a832d153842dda105c4824e7bdc31,_:N1870d62aa1f848e39549bb047a12ae3f,uuid:ce452f84-97f5-43ad-83f8-1758fba42a49/geojson:topology/topo:directedReferences/rdf:first,_:N33e388f1d073409cb813ad2d4132cb57,_:N47d69812cc7340d0a2d35deb8dba87cb,uuid:6a58d678-e9cf-4466-b01f-76e8e7f1f4a4/geojson:topology/topo:directedReferences/rdf:first,_:Ne974926ab8d44fa88b1875735a33e9cf,_:N407c5602b8914070b9200ce4360d4fb8,uuid:1a7575a5-e039-4059-9fa8-b7e960c50c64/geojson:topology/topo:directedReferences/rdf:first,uuid:f4b518ed-e4d2-48cc-b2b9-997df7a49c29/geojson:topology/topo:directedReferences/rdf:first,uuid:3e5f9429-9bfb-498b-9624-e667f2e7b281/geojson:topology/topo:directedReferences/rdf:first,_:Neddc9eedce634b43a42cd6faf0a82cae
+ - Shape :RadiusRequiredShape: *none*
+ - Shape :DirectedReferencesShape: uuid:2402e110-526c-49d6-82f2-5ecf689f64d3/geojson:topology,uuid:92f996ff-4259-4d40-96ec-65de71faa800/geojson:topology,uuid:49b309d9-6d39-4c44-9a9e-ac2e73c3b58e/geojson:topology,uuid:90f77d40-3e87-4627-993d-e0a9efef52d6/geojson:topology,uuid:6bb474bd-c5d6-4366-bc9e-d051dbf72a6e/geojson:topology,uuid:4def3698-95e1-486f-9588-a69a73640e5c/geojson:topology,uuid:0523e3be-6777-40f9-9e14-523e128647c0/geojson:topology,uuid:c6d50260-a8fe-4fac-9279-2ac46d621e87/geojson:topology,uuid:029e7e2d-a650-4510-b861-ee68b46a2fff/geojson:topology,uuid:31dcf84a-98c6-48b1-8ba6-14d7a5ff6749/geojson:topology,uuid:bec0f9d8-0d77-46ba-8941-f884943ac3d8/geojson:topology,uuid:83e6f887-a532-473f-8f09-536ef1943f33/geojson:topology,uuid:a63b48bc-c0d9-440d-9238-c093d3a6c40c/geojson:topology,uuid:bac4ae02-1a53-4849-9e46-b3c0d67925b1/geojson:topology,uuid:0e50d98b-eed1-41b7-aec0-35970c4c03df/geojson:topology,uuid:79e3d840-7da3-4380-8288-6c2db4ac8b06/geojson:topology,uuid:f8c1f3d2-aeb6-4b33-b6f8-7d01a5e8ae59/geojson:topology,uuid:fa7823a2-8ed7-43f0-9912-e7ade12c966a/geojson:topology,uuid:4bd327dc-316a-4e1c-9b35-b377652e89d6/geojson:topology,uuid:2d2a332b-7633-41ee-8f53-712fc6f2b877/geojson:topology,uuid:a3e906eb-b583-4af2-a13b-fb6bb2d399a3/geojson:topology,uuid:bba09dfa-33c6-4256-8f33-b802aec75bdb/geojson:topology,uuid:b17a9121-2cf2-427f-871d-78266deacddf/geojson:topology,uuid:46d1879a-0f3f-42ef-b68d-d813f684e3f9/geojson:topology,uuid:f44d98c1-fc4e-45da-a233-6e63e58bd560/geojson:topology,uuid:3f40fd91-3d85-404b-82cd-fd4bb7228ca5/geojson:topology,uuid:d0ddc512-0c81-43bb-a000-bf5017ff64a7/geojson:topology,uuid:29f3aa93-c4e5-4961-9fd5-c2261a0b9f3b/geojson:topology,uuid:bda4a01e-afca-41dd-b296-81cd3df3c070/geojson:topology,uuid:6642ea7b-0b5e-474c-95ef-fe5a15be551b/geojson:topology,uuid:64496114-d8c3-4643-9975-4ae0bb1af186/geojson:topology,uuid:429a8b49-b82a-4521-9388-6b0b87bccb06/geojson:topology,uuid:64860b38-d1bf-4728-8f0d-6ced9451ce37/geojson:topology,uuid:16b0e4ac-22b3-40f5-8510-7fefb1b1cc06/geojson:topology,uuid:9d4e9985-3788-4e70-a2ec-a809aba7c7e8/geojson:topology,uuid:8efc4bcc-0265-4aba-82f9-4e9c5f818018/geojson:topology,uuid:441f6a73-ea02-44a7-a04d-4fec5659d529/geojson:topology,uuid:538c874f-36f0-4fe5-9bb1-fc37f0b14f0e/geojson:topology,uuid:fbe45af6-b334-4500-97e3-3c4cd177db90/geojson:topology,uuid:f45d1ba5-ecfe-4b0b-b315-2dc71cfe2b3b/geojson:topology,uuid:d9c6f295-4449-4e1d-bb3a-0c4ddf57e8f0/geojson:topology,uuid:3e5f9429-9bfb-498b-9624-e667f2e7b281/geojson:topology,uuid:79e3d1de-56bc-47de-a18b-d29da6100eda/geojson:topology,uuid:4fe850d8-d729-4851-b7d9-0f9e7ed39468/geojson:topology,uuid:3ff8d8c4-90fe-4782-9717-1e3f4110f5a0/geojson:topology,uuid:6caff784-d847-4916-9360-03ab48f3a5df/geojson:topology,uuid:73155e38-87b0-4ded-9af7-dd354d36a728/geojson:topology,uuid:649a326e-bb1e-4492-943a-39aa35806c64/geojson:topology,uuid:424281c5-646a-48c3-b0f2-ac703d3a8d10/geojson:topology,uuid:7472a7e9-efcf-49a8-a19f-4a14c3e6f86e/geojson:topology,uuid:adb6be70-c29a-4dcc-9e4b-47970d9930dd/geojson:topology,uuid:d8aca1d0-8d06-4520-9437-7479640802df/geojson:topology,uuid:d4e4f6d3-3603-4da5-9d20-661ff9a38015/geojson:topology,uuid:98685c3a-fc3b-4490-b99f-5a4f9ef3aae4/geojson:topology,uuid:5b1af58d-21f4-4582-96f8-14d356205491/geojson:topology,uuid:5381559d-4537-4041-81e1-a0978e7f3c64/geojson:topology,uuid:ec0516e9-68b2-4d3d-8ed9-4a59f8e018c8/geojson:topology,uuid:26bd463c-0433-4510-8ba8-074f5cdd1e64/geojson:topology,uuid:72d54df4-b018-4897-a96d-7d62cb9d8c4a/geojson:topology,uuid:ce452f84-97f5-43ad-83f8-1758fba42a49/geojson:topology,uuid:1713550e-1504-45f6-a00e-7eeb436306eb/geojson:topology,uuid:f4b518ed-e4d2-48cc-b2b9-997df7a49c29/geojson:topology,uuid:48b5ada1-bbec-4aee-851d-6c1509e9d444/geojson:topology,uuid:69183851-6fbc-495b-aa59-eba99d14bf68/geojson:topology,uuid:815b8458-d756-45cc-8385-00314271e297/geojson:topology,uuid:0bdb8d8a-3d53-4a97-bee6-56bf509e6b69/geojson:topology,uuid:8ca4710e-2abd-4152-912d-55c25793b4b7/geojson:topology,uuid:47967a8e-ab17-4db0-bbfa-7a6d797e6136/geojson:topology,uuid:6a58d678-e9cf-4466-b01f-76e8e7f1f4a4/geojson:topology,uuid:1a7575a5-e039-4059-9fa8-b7e960c50c64/geojson:topology,uuid:d7b9eb80-93ca-4ee5-adcb-ab1cfda75d4f/geojson:topology,uuid:1d373111-f4b1-4627-92ab-14f0bbeb882b/geojson:topology,uuid:8c5381e4-64ab-4b9d-bdd5-aea3de220330/geojson:topology,uuid:f3212f35-ba06-46b1-8822-fdfac0ec4bd1/geojson:topology,uuid:10ebd12b-36b6-4db0-b43e-b742e05540ce/geojson:topology
+ - Shape :OrientedArcShape: *none*
+
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
- - Shape geojson:FeatureShape: uuid:79e3d840-7da3-4380-8288-6c2db4ac8b06,uuid:8eb102da-ae40-45c1-9a30-8ca97c69bdf6,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:d4e4f6d3-3603-4da5-9d20-661ff9a38015,uuid:1a7575a5-e039-4059-9fa8-b7e960c50c64,uuid:6968cfbb-265a-48a5-8fac-91fbc7fe1a16,uuid:21935dcb-8634-4e57-abf4-4585eba35018,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:5b1af58d-21f4-4582-96f8-14d356205491,uuid:fbe45af6-b334-4500-97e3-3c4cd177db90,uuid:0bdb8d8a-3d53-4a97-bee6-56bf509e6b69,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:538c874f-36f0-4fe5-9bb1-fc37f0b14f0e,uuid:0795c157-5fcb-4d01-b0f0-fedf92b1d41f,uuid:51c0f9c6-7c13-4460-8636-2ed5ee228a6c,uuid:e4a49176-d47d-41f7-85c1-7d91bb836286,uuid:31dcf84a-98c6-48b1-8ba6-14d7a5ff6749,uuid:5f1fd4be-c4ba-4387-9d7d-6e26b8299dc9,uuid:d302b67e-99d1-4033-84c8-bec14b1a3a29,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:2413de82-7661-4536-8a05-58c4fadbd5fd,uuid:6c6ddd1e-2780-4758-bbe7-a4c77bba6118,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db,uuid:030a717f-c3d7-46c9-8e04-4a90a2de6971,uuid:8103a475-c12f-4664-ac95-50afbd4c782d,uuid:29f3aa93-c4e5-4961-9fd5-c2261a0b9f3b,uuid:580818ce-50f0-486c-85c9-91c35ab39509,uuid:78d47480-6451-451e-b35c-afbc40f27f93,uuid:46d1879a-0f3f-42ef-b68d-d813f684e3f9,uuid:0523e3be-6777-40f9-9e14-523e128647c0,uuid:8e931595-7a01-4678-a20e-5607229a0d01,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:90f77d40-3e87-4627-993d-e0a9efef52d6,uuid:615aed99-8ae9-4857-931c-90bdd126e8c8,uuid:4bd327dc-316a-4e1c-9b35-b377652e89d6,uuid:b42f27c9-d0e6-4cfb-9ea3-7e2517426428,uuid:26bd463c-0433-4510-8ba8-074f5cdd1e64,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:b179ed08-b3a8-492c-8642-b76fb67bdd64,uuid:ba83542a-054c-4671-ad1f-412f89783e0f,uuid:2402e110-526c-49d6-82f2-5ecf689f64d3,uuid:d9c6f295-4449-4e1d-bb3a-0c4ddf57e8f0,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:3ff8d8c4-90fe-4782-9717-1e3f4110f5a0,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:2fe7500a-344c-43c9-8a4a-42a4dc381958,uuid:649a326e-bb1e-4492-943a-39aa35806c64,uuid:0e50d98b-eed1-41b7-aec0-35970c4c03df,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:259ec3c3-5480-484c-8b6f-d081695a0a3f,uuid:49b309d9-6d39-4c44-9a9e-ac2e73c3b58e,uuid:64496114-d8c3-4643-9975-4ae0bb1af186,uuid:9e2b2cf4-db16-4c58-9cea-86b593995bdf,uuid:9d4e9985-3788-4e70-a2ec-a809aba7c7e8,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:3f40fd91-3d85-404b-82cd-fd4bb7228ca5,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:b745f3b0-caff-4c6a-8839-9c709893e1c2,uuid:6642ea7b-0b5e-474c-95ef-fe5a15be551b,uuid:73155e38-87b0-4ded-9af7-dd354d36a728,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:a3e906eb-b583-4af2-a13b-fb6bb2d399a3,uuid:99e2aa85-d004-4eed-8533-1313133f0809,uuid:bec0f9d8-0d77-46ba-8941-f884943ac3d8,uuid:d7b9eb80-93ca-4ee5-adcb-ab1cfda75d4f,uuid:05253350-3d88-4edc-b6cb-759a2234382f,uuid:f4b518ed-e4d2-48cc-b2b9-997df7a49c29,uuid:f60637f4-cdf9-4bf7-b969-72eabb91eb79,uuid:5367fe8d-79c0-4161-a4ce-3b7f42afad3e,uuid:fa7823a2-8ed7-43f0-9912-e7ade12c966a,uuid:47967a8e-ab17-4db0-bbfa-7a6d797e6136,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:725ebfd6-7c75-44fa-b917-94381bddef5f,uuid:4a32db28-5b1a-4b4c-8fd4-e94cfca8c03a,uuid:3bc984fd-e2fa-48de-9397-635b28834926,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:0cc9dbeb-9ae4-429b-80d5-a637d54f9bc4,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:8c5381e4-64ab-4b9d-bdd5-aea3de220330,uuid:17fa2c1e-5416-443b-b263-2f47cb514aa6,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:6caff784-d847-4916-9360-03ab48f3a5df,uuid:c6d50260-a8fe-4fac-9279-2ac46d621e87,uuid:aa458878-e72e-454e-9921-bfbf14315787,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:bda4a01e-afca-41dd-b296-81cd3df3c070,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:9a5a3eef-7ddb-40bf-ae2a-111b4623fb08,uuid:b17a9121-2cf2-427f-871d-78266deacddf,uuid:3e5f9429-9bfb-498b-9624-e667f2e7b281,uuid:2d2a332b-7633-41ee-8f53-712fc6f2b877,uuid:4def3698-95e1-486f-9588-a69a73640e5c,uuid:5381559d-4537-4041-81e1-a0978e7f3c64,uuid:f3212f35-ba06-46b1-8822-fdfac0ec4bd1,uuid:029e7e2d-a650-4510-b861-ee68b46a2fff,uuid:ab68b5c9-0626-4a27-b735-c591dfc47e0a,uuid:6bb474bd-c5d6-4366-bc9e-d051dbf72a6e,uuid:28922e7d-7683-40da-916c-241f473ee3bd,uuid:e3c87c26-8a6a-4889-923c-d87562d2dde9,uuid:6a58d678-e9cf-4466-b01f-76e8e7f1f4a4,uuid:d2e6c025-8dc2-45b0-896a-8cfbb94fd4e4,uuid:f45d1ba5-ecfe-4b0b-b315-2dc71cfe2b3b,uuid:f8c1f3d2-aeb6-4b33-b6f8-7d01a5e8ae59,uuid:d0ddc512-0c81-43bb-a000-bf5017ff64a7,uuid:c795e6d9-0f44-4b1c-bc01-686d5e2acaa3,uuid:eb0aaf70-bb65-4855-a35b-860b1c23c53f,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:bac4ae02-1a53-4849-9e46-b3c0d67925b1,uuid:8efc4bcc-0265-4aba-82f9-4e9c5f818018,uuid:441f6a73-ea02-44a7-a04d-4fec5659d529,uuid:c0a27c02-e38f-4648-b296-3ba0372f0e50,uuid:f0aa8d02-1aa3-4f44-be28-d135c94de497,uuid:791da2a3-ee19-44a1-b604-5f379ab00bb1,uuid:eb237aee-db71-4faf-8bb2-aeefc8515821,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:429a8b49-b82a-4521-9388-6b0b87bccb06,uuid:4bbdae51-6837-4cbb-974d-ab8987d4a018,uuid:06e882da-e914-4ff8-a279-13c1b16b7646,uuid:83e6f887-a532-473f-8f09-536ef1943f33,uuid:5698e261-6451-4ffe-90dd-05d5270c59a7,uuid:f44d98c1-fc4e-45da-a233-6e63e58bd560,uuid:424281c5-646a-48c3-b0f2-ac703d3a8d10,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:a51db565-6909-4151-ad98-9c7fbeb85c19,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:e47e1b0a-ecee-4d50-987e-d10ad397f597,uuid:98685c3a-fc3b-4490-b99f-5a4f9ef3aae4,uuid:cc9ce047-61a1-4bf9-a366-bfc5b43092c2,uuid:10ebd12b-36b6-4db0-b43e-b742e05540ce,uuid:d8aca1d0-8d06-4520-9437-7479640802df,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:23375f61-8d9d-407c-bc86-ff0a4a1a3030,uuid:0c7efeba-1fb3-49a1-aafd-3e38affa4a9c,uuid:92f996ff-4259-4d40-96ec-65de71faa800,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:79e3d1de-56bc-47de-a18b-d29da6100eda,uuid:4fe850d8-d729-4851-b7d9-0f9e7ed39468,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:7197ee0b-aa79-40dd-a8ec-9d4413777a19,uuid:1b26a418-ddc1-4e7d-8ff0-811102c413b5,uuid:a63b48bc-c0d9-440d-9238-c093d3a6c40c,uuid:9257083c-e11a-4914-a120-fbb11f0c10c8,uuid:1f8b2b5d-416a-4b6b-90da-9c672bc42d2c,uuid:8ca4710e-2abd-4152-912d-55c25793b4b7,uuid:929d7ecd-8ff2-4be6-af3e-929b8a3bdd52,uuid:72d54df4-b018-4897-a96d-7d62cb9d8c4a,uuid:ec0516e9-68b2-4d3d-8ed9-4a59f8e018c8,uuid:ce452f84-97f5-43ad-83f8-1758fba42a49,uuid:d27bfb1b-ffd5-4fb3-9594-6f04ad66aa81,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:f83f26bd-63dc-4a5e-959c-e90a7640d8a2,uuid:69183851-6fbc-495b-aa59-eba99d14bf68,uuid:1713550e-1504-45f6-a00e-7eeb436306eb,uuid:48b5ada1-bbec-4aee-851d-6c1509e9d444,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:8a34c9fb-e3d6-45d3-817e-93d0c58be464,uuid:a493ef53-2a0f-42f3-9523-23dea4dc19d6,uuid:adb6be70-c29a-4dcc-9e4b-47970d9930dd,uuid:6ac9e1bc-3c5f-468b-8646-ac85e38d3013,uuid:64860b38-d1bf-4728-8f0d-6ced9451ce37,uuid:e8b25b9d-346c-4cdf-985b-c742fd7c3a34,uuid:d6b33a71-4823-4c26-8ca1-ed929f278377,uuid:815b8458-d756-45cc-8385-00314271e297,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:16b0e4ac-22b3-40f5-8510-7fefb1b1cc06,uuid:bba09dfa-33c6-4256-8f33-b802aec75bdb,uuid:dbed95c2-94f5-4c01-ac9e-a71441efd65a,uuid:1d373111-f4b1-4627-92ab-14f0bbeb882b,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:7472a7e9-efcf-49a8-a19f-4a14c3e6f86e
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
  - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c,uuid:d9c6f295-4449-4e1d-bb3a-0c4ddf57e8f0,uuid:28922e7d-7683-40da-916c-241f473ee3bd,uuid:90f77d40-3e87-4627-993d-e0a9efef52d6,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603,uuid:791da2a3-ee19-44a1-b604-5f379ab00bb1,uuid:8103a475-c12f-4664-ac95-50afbd4c782d,uuid:f4b518ed-e4d2-48cc-b2b9-997df7a49c29,uuid:bac4ae02-1a53-4849-9e46-b3c0d67925b1,uuid:754fd788-08c8-45b0-a591-e608a27f0948,uuid:3ff8d8c4-90fe-4782-9717-1e3f4110f5a0,uuid:79e3d1de-56bc-47de-a18b-d29da6100eda,uuid:f60637f4-cdf9-4bf7-b969-72eabb91eb79,uuid:d27bfb1b-ffd5-4fb3-9594-6f04ad66aa81,uuid:72d54df4-b018-4897-a96d-7d62cb9d8c4a,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96,uuid:98685c3a-fc3b-4490-b99f-5a4f9ef3aae4,uuid:1f8b2b5d-416a-4b6b-90da-9c672bc42d2c,uuid:d8aca1d0-8d06-4520-9437-7479640802df,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa,uuid:e4a49176-d47d-41f7-85c1-7d91bb836286,uuid:1b26a418-ddc1-4e7d-8ff0-811102c413b5,uuid:aa458878-e72e-454e-9921-bfbf14315787,uuid:d7b9eb80-93ca-4ee5-adcb-ab1cfda75d4f,uuid:ec0516e9-68b2-4d3d-8ed9-4a59f8e018c8,uuid:bba09dfa-33c6-4256-8f33-b802aec75bdb,uuid:429a8b49-b82a-4521-9388-6b0b87bccb06,uuid:259ec3c3-5480-484c-8b6f-d081695a0a3f,uuid:26bd463c-0433-4510-8ba8-074f5cdd1e64,uuid:0523e3be-6777-40f9-9e14-523e128647c0,uuid:4bbdae51-6837-4cbb-974d-ab8987d4a018,uuid:e47e1b0a-ecee-4d50-987e-d10ad397f597,uuid:b179ed08-b3a8-492c-8642-b76fb67bdd64,uuid:adb6be70-c29a-4dcc-9e4b-47970d9930dd,uuid:b42f27c9-d0e6-4cfb-9ea3-7e2517426428,uuid:f3212f35-ba06-46b1-8822-fdfac0ec4bd1,uuid:d4e4f6d3-3603-4da5-9d20-661ff9a38015,uuid:f8c1f3d2-aeb6-4b33-b6f8-7d01a5e8ae59,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3,uuid:2413de82-7661-4536-8a05-58c4fadbd5fd,uuid:6642ea7b-0b5e-474c-95ef-fe5a15be551b,uuid:83e6f887-a532-473f-8f09-536ef1943f33,uuid:d0ddc512-0c81-43bb-a000-bf5017ff64a7,uuid:6ac9e1bc-3c5f-468b-8646-ac85e38d3013,uuid:eb237aee-db71-4faf-8bb2-aeefc8515821,uuid:580818ce-50f0-486c-85c9-91c35ab39509,uuid:06e882da-e914-4ff8-a279-13c1b16b7646,uuid:929d7ecd-8ff2-4be6-af3e-929b8a3bdd52,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3,uuid:029e7e2d-a650-4510-b861-ee68b46a2fff,uuid:a51db565-6909-4151-ad98-9c7fbeb85c19,uuid:d6b33a71-4823-4c26-8ca1-ed929f278377,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4,uuid:a63b48bc-c0d9-440d-9238-c093d3a6c40c,uuid:92f996ff-4259-4d40-96ec-65de71faa800,uuid:649a326e-bb1e-4492-943a-39aa35806c64,uuid:9e2b2cf4-db16-4c58-9cea-86b593995bdf,uuid:8efc4bcc-0265-4aba-82f9-4e9c5f818018,uuid:51c0f9c6-7c13-4460-8636-2ed5ee228a6c,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca,uuid:4def3698-95e1-486f-9588-a69a73640e5c,uuid:0bdb8d8a-3d53-4a97-bee6-56bf509e6b69,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97,uuid:2d2a332b-7633-41ee-8f53-712fc6f2b877,uuid:6a58d678-e9cf-4466-b01f-76e8e7f1f4a4,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e,uuid:a3e906eb-b583-4af2-a13b-fb6bb2d399a3,uuid:538c874f-36f0-4fe5-9bb1-fc37f0b14f0e,uuid:ab68b5c9-0626-4a27-b735-c591dfc47e0a,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e,uuid:17fa2c1e-5416-443b-b263-2f47cb514aa6,uuid:bec0f9d8-0d77-46ba-8941-f884943ac3d8,uuid:6c6ddd1e-2780-4758-bbe7-a4c77bba6118,uuid:424281c5-646a-48c3-b0f2-ac703d3a8d10,uuid:fa7823a2-8ed7-43f0-9912-e7ade12c966a,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4,uuid:8ca4710e-2abd-4152-912d-55c25793b4b7,uuid:9d4e9985-3788-4e70-a2ec-a809aba7c7e8,uuid:f83f26bd-63dc-4a5e-959c-e90a7640d8a2,uuid:16b0e4ac-22b3-40f5-8510-7fefb1b1cc06,uuid:9257083c-e11a-4914-a120-fbb11f0c10c8,uuid:c0a27c02-e38f-4648-b296-3ba0372f0e50,uuid:99e2aa85-d004-4eed-8533-1313133f0809,uuid:8eb102da-ae40-45c1-9a30-8ca97c69bdf6,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29,uuid:1a7575a5-e039-4059-9fa8-b7e960c50c64,uuid:7e2ed802-251e-48b6-b140-013cad070d9f,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db,uuid:23375f61-8d9d-407c-bc86-ff0a4a1a3030,uuid:cc9ce047-61a1-4bf9-a366-bfc5b43092c2,uuid:8c5381e4-64ab-4b9d-bdd5-aea3de220330,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd,uuid:bda4a01e-afca-41dd-b296-81cd3df3c070,uuid:7197ee0b-aa79-40dd-a8ec-9d4413777a19,uuid:79e3d840-7da3-4380-8288-6c2db4ac8b06,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8,uuid:725ebfd6-7c75-44fa-b917-94381bddef5f,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d,uuid:31dcf84a-98c6-48b1-8ba6-14d7a5ff6749,uuid:4fe850d8-d729-4851-b7d9-0f9e7ed39468,uuid:e8b25b9d-346c-4cdf-985b-c742fd7c3a34,uuid:78d47480-6451-451e-b35c-afbc40f27f93,uuid:6968cfbb-265a-48a5-8fac-91fbc7fe1a16,uuid:2402e110-526c-49d6-82f2-5ecf689f64d3,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198,uuid:7472a7e9-efcf-49a8-a19f-4a14c3e6f86e,uuid:d302b67e-99d1-4033-84c8-bec14b1a3a29,uuid:73155e38-87b0-4ded-9af7-dd354d36a728,uuid:0cc9dbeb-9ae4-429b-80d5-a637d54f9bc4,uuid:030a717f-c3d7-46c9-8e04-4a90a2de6971,uuid:441f6a73-ea02-44a7-a04d-4fec5659d529,uuid:5228ad62-0730-416f-89b0-5042da216efb,uuid:451e256a-6127-4e18-97f5-644093e9f9df,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f,uuid:21935dcb-8634-4e57-abf4-4585eba35018,uuid:b17a9121-2cf2-427f-871d-78266deacddf,uuid:0c7efeba-1fb3-49a1-aafd-3e38affa4a9c,uuid:64860b38-d1bf-4728-8f0d-6ced9451ce37,uuid:5381559d-4537-4041-81e1-a0978e7f3c64,uuid:48b5ada1-bbec-4aee-851d-6c1509e9d444,uuid:3f40fd91-3d85-404b-82cd-fd4bb7228ca5,uuid:815b8458-d756-45cc-8385-00314271e297,uuid:6bb474bd-c5d6-4366-bc9e-d051dbf72a6e,uuid:9a5a3eef-7ddb-40bf-ae2a-111b4623fb08,uuid:46d1879a-0f3f-42ef-b68d-d813f684e3f9,uuid:3e5f9429-9bfb-498b-9624-e667f2e7b281,uuid:5698e261-6451-4ffe-90dd-05d5270c59a7,uuid:ce452f84-97f5-43ad-83f8-1758fba42a49,uuid:3bc984fd-e2fa-48de-9397-635b28834926,uuid:1713550e-1504-45f6-a00e-7eeb436306eb,uuid:69183851-6fbc-495b-aa59-eba99d14bf68,uuid:d2e6c025-8dc2-45b0-896a-8cfbb94fd4e4,uuid:5b1af58d-21f4-4582-96f8-14d356205491,uuid:fa551002-6466-46f1-a2f3-f433334447e6,uuid:b745f3b0-caff-4c6a-8839-9c709893e1c2,uuid:29f3aa93-c4e5-4961-9fd5-c2261a0b9f3b,uuid:0795c157-5fcb-4d01-b0f0-fedf92b1d41f,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd,uuid:4a32db28-5b1a-4b4c-8fd4-e94cfca8c03a,uuid:1d373111-f4b1-4627-92ab-14f0bbeb882b,uuid:2fe7500a-344c-43c9-8a4a-42a4dc381958,uuid:05253350-3d88-4edc-b6cb-759a2234382f,uuid:10ebd12b-36b6-4db0-b43e-b742e05540ce,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010,uuid:dbed95c2-94f5-4c01-ac9e-a71441efd65a,uuid:6caff784-d847-4916-9360-03ab48f3a5df,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a,uuid:5f1fd4be-c4ba-4387-9d7d-6e26b8299dc9,uuid:c795e6d9-0f44-4b1c-bc01-686d5e2acaa3,uuid:64496114-d8c3-4643-9975-4ae0bb1af186,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9,uuid:8a34c9fb-e3d6-45d3-817e-93d0c58be464,uuid:49b309d9-6d39-4c44-9a9e-ac2e73c3b58e,uuid:f45d1ba5-ecfe-4b0b-b315-2dc71cfe2b3b,uuid:615aed99-8ae9-4857-931c-90bdd126e8c8,uuid:eb0aaf70-bb65-4855-a35b-860b1c23c53f,uuid:8e931595-7a01-4678-a20e-5607229a0d01,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8,uuid:4bd327dc-316a-4e1c-9b35-b377652e89d6,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2,uuid:a493ef53-2a0f-42f3-9523-23dea4dc19d6,uuid:ba83542a-054c-4671-ad1f-412f89783e0f,uuid:0e50d98b-eed1-41b7-aec0-35970c4c03df,uuid:e3c87c26-8a6a-4889-923c-d87562d2dde9,uuid:c6d50260-a8fe-4fac-9279-2ac46d621e87,uuid:f44d98c1-fc4e-45da-a233-6e63e58bd560,uuid:5367fe8d-79c0-4161-a4ce-3b7f42afad3e,uuid:fbe45af6-b334-4500-97e3-3c4cd177db90,uuid:47967a8e-ab17-4db0-bbfa-7a6d797e6136,uuid:f0aa8d02-1aa3-4f44-be28-d135c94de497
 
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
- - Shape toporules:testTopoReferencesExist: uuid:580818ce-50f0-486c-85c9-91c35ab39509/geojson:topology,uuid:8e931595-7a01-4678-a20e-5607229a0d01/geojson:topology,uuid:8a34c9fb-e3d6-45d3-817e-93d0c58be464/geojson:topology,uuid:78d47480-6451-451e-b35c-afbc40f27f93/geojson:topology,uuid:a51db565-6909-4151-ad98-9c7fbeb85c19/geojson:topology,uuid:99e2aa85-d004-4eed-8533-1313133f0809/geojson:topology,uuid:dbed95c2-94f5-4c01-ac9e-a71441efd65a/geojson:topology,uuid:06e882da-e914-4ff8-a279-13c1b16b7646/geojson:topology,uuid:6c6ddd1e-2780-4758-bbe7-a4c77bba6118/geojson:topology,uuid:d27bfb1b-ffd5-4fb3-9594-6f04ad66aa81/geojson:topology,uuid:c0a27c02-e38f-4648-b296-3ba0372f0e50/geojson:topology,uuid:0c7efeba-1fb3-49a1-aafd-3e38affa4a9c/geojson:topology,uuid:e4a49176-d47d-41f7-85c1-7d91bb836286/geojson:topology,uuid:f83f26bd-63dc-4a5e-959c-e90a7640d8a2/geojson:topology,uuid:eb237aee-db71-4faf-8bb2-aeefc8515821/geojson:topology,uuid:b179ed08-b3a8-492c-8642-b76fb67bdd64/geojson:topology,uuid:ba83542a-054c-4671-ad1f-412f89783e0f/geojson:topology,uuid:791da2a3-ee19-44a1-b604-5f379ab00bb1/geojson:topology,uuid:2fe7500a-344c-43c9-8a4a-42a4dc381958/geojson:topology,uuid:1f8b2b5d-416a-4b6b-90da-9c672bc42d2c/geojson:topology,uuid:4bbdae51-6837-4cbb-974d-ab8987d4a018/geojson:topology,uuid:5367fe8d-79c0-4161-a4ce-3b7f42afad3e/geojson:topology,uuid:6ac9e1bc-3c5f-468b-8646-ac85e38d3013/geojson:topology,uuid:aa458878-e72e-454e-9921-bfbf14315787/geojson:topology,uuid:f60637f4-cdf9-4bf7-b969-72eabb91eb79/geojson:topology,uuid:7197ee0b-aa79-40dd-a8ec-9d4413777a19/geojson:topology,uuid:5f1fd4be-c4ba-4387-9d7d-6e26b8299dc9/geojson:topology,uuid:0cc9dbeb-9ae4-429b-80d5-a637d54f9bc4/geojson:topology,uuid:e8b25b9d-346c-4cdf-985b-c742fd7c3a34/geojson:topology,uuid:259ec3c3-5480-484c-8b6f-d081695a0a3f/geojson:topology,uuid:23375f61-8d9d-407c-bc86-ff0a4a1a3030/geojson:topology,uuid:9e2b2cf4-db16-4c58-9cea-86b593995bdf/geojson:topology,uuid:8eb102da-ae40-45c1-9a30-8ca97c69bdf6/geojson:topology,uuid:a493ef53-2a0f-42f3-9523-23dea4dc19d6/geojson:topology,uuid:6968cfbb-265a-48a5-8fac-91fbc7fe1a16/geojson:topology,uuid:2413de82-7661-4536-8a05-58c4fadbd5fd/geojson:topology,uuid:030a717f-c3d7-46c9-8e04-4a90a2de6971/geojson:topology,uuid:5698e261-6451-4ffe-90dd-05d5270c59a7/geojson:topology,uuid:21935dcb-8634-4e57-abf4-4585eba35018/geojson:topology,uuid:51c0f9c6-7c13-4460-8636-2ed5ee228a6c/geojson:topology,uuid:9257083c-e11a-4914-a120-fbb11f0c10c8/geojson:topology,uuid:b42f27c9-d0e6-4cfb-9ea3-7e2517426428/geojson:topology,uuid:b745f3b0-caff-4c6a-8839-9c709893e1c2/geojson:topology,uuid:d2e6c025-8dc2-45b0-896a-8cfbb94fd4e4/geojson:topology,uuid:17fa2c1e-5416-443b-b263-2f47cb514aa6/geojson:topology,uuid:c795e6d9-0f44-4b1c-bc01-686d5e2acaa3/geojson:topology,uuid:1b26a418-ddc1-4e7d-8ff0-811102c413b5/geojson:topology,uuid:725ebfd6-7c75-44fa-b917-94381bddef5f/geojson:topology,uuid:9a5a3eef-7ddb-40bf-ae2a-111b4623fb08/geojson:topology,uuid:615aed99-8ae9-4857-931c-90bdd126e8c8/geojson:topology,uuid:e3c87c26-8a6a-4889-923c-d87562d2dde9/geojson:topology,uuid:05253350-3d88-4edc-b6cb-759a2234382f/geojson:topology,uuid:f0aa8d02-1aa3-4f44-be28-d135c94de497/geojson:topology,uuid:0795c157-5fcb-4d01-b0f0-fedf92b1d41f/geojson:topology,uuid:28922e7d-7683-40da-916c-241f473ee3bd/geojson:topology,uuid:8103a475-c12f-4664-ac95-50afbd4c782d/geojson:topology,uuid:cc9ce047-61a1-4bf9-a366-bfc5b43092c2/geojson:topology,uuid:d302b67e-99d1-4033-84c8-bec14b1a3a29/geojson:topology,uuid:d6b33a71-4823-4c26-8ca1-ed929f278377/geojson:topology,uuid:4a32db28-5b1a-4b4c-8fd4-e94cfca8c03a/geojson:topology,uuid:929d7ecd-8ff2-4be6-af3e-929b8a3bdd52/geojson:topology,uuid:e47e1b0a-ecee-4d50-987e-d10ad397f597/geojson:topology,uuid:eb0aaf70-bb65-4855-a35b-860b1c23c53f/geojson:topology,uuid:ab68b5c9-0626-4a27-b735-c591dfc47e0a/geojson:topology,uuid:3bc984fd-e2fa-48de-9397-635b28834926/geojson:topology
- - Shape toporules:testTopoDirectedReferencesExist: uuid:5b1af58d-21f4-4582-96f8-14d356205491/geojson:topology,uuid:1a7575a5-e039-4059-9fa8-b7e960c50c64/geojson:topology,uuid:6642ea7b-0b5e-474c-95ef-fe5a15be551b/geojson:topology,uuid:d4e4f6d3-3603-4da5-9d20-661ff9a38015/geojson:topology,uuid:ec0516e9-68b2-4d3d-8ed9-4a59f8e018c8/geojson:topology,uuid:92f996ff-4259-4d40-96ec-65de71faa800/geojson:topology,uuid:1713550e-1504-45f6-a00e-7eeb436306eb/geojson:topology,uuid:0e50d98b-eed1-41b7-aec0-35970c4c03df/geojson:topology,uuid:10ebd12b-36b6-4db0-b43e-b742e05540ce/geojson:topology,uuid:bda4a01e-afca-41dd-b296-81cd3df3c070/geojson:topology,uuid:815b8458-d756-45cc-8385-00314271e297/geojson:topology,uuid:6caff784-d847-4916-9360-03ab48f3a5df/geojson:topology,uuid:31dcf84a-98c6-48b1-8ba6-14d7a5ff6749/geojson:topology,uuid:29f3aa93-c4e5-4961-9fd5-c2261a0b9f3b/geojson:topology,uuid:90f77d40-3e87-4627-993d-e0a9efef52d6/geojson:topology,uuid:64860b38-d1bf-4728-8f0d-6ced9451ce37/geojson:topology,uuid:029e7e2d-a650-4510-b861-ee68b46a2fff/geojson:topology,uuid:3ff8d8c4-90fe-4782-9717-1e3f4110f5a0/geojson:topology,uuid:fbe45af6-b334-4500-97e3-3c4cd177db90/geojson:topology,uuid:f45d1ba5-ecfe-4b0b-b315-2dc71cfe2b3b/geojson:topology,uuid:0523e3be-6777-40f9-9e14-523e128647c0/geojson:topology,uuid:d9c6f295-4449-4e1d-bb3a-0c4ddf57e8f0/geojson:topology,uuid:4def3698-95e1-486f-9588-a69a73640e5c/geojson:topology,uuid:441f6a73-ea02-44a7-a04d-4fec5659d529/geojson:topology,uuid:f8c1f3d2-aeb6-4b33-b6f8-7d01a5e8ae59/geojson:topology,uuid:69183851-6fbc-495b-aa59-eba99d14bf68/geojson:topology,uuid:79e3d840-7da3-4380-8288-6c2db4ac8b06/geojson:topology,uuid:f3212f35-ba06-46b1-8822-fdfac0ec4bd1/geojson:topology,uuid:d8aca1d0-8d06-4520-9437-7479640802df/geojson:topology,uuid:72d54df4-b018-4897-a96d-7d62cb9d8c4a/geojson:topology,uuid:6bb474bd-c5d6-4366-bc9e-d051dbf72a6e/geojson:topology,uuid:4fe850d8-d729-4851-b7d9-0f9e7ed39468/geojson:topology,uuid:f4b518ed-e4d2-48cc-b2b9-997df7a49c29/geojson:topology,uuid:0bdb8d8a-3d53-4a97-bee6-56bf509e6b69/geojson:topology,uuid:6a58d678-e9cf-4466-b01f-76e8e7f1f4a4/geojson:topology,uuid:1d373111-f4b1-4627-92ab-14f0bbeb882b/geojson:topology,uuid:4bd327dc-316a-4e1c-9b35-b377652e89d6/geojson:topology,uuid:3f40fd91-3d85-404b-82cd-fd4bb7228ca5/geojson:topology,uuid:2d2a332b-7633-41ee-8f53-712fc6f2b877/geojson:topology,uuid:2402e110-526c-49d6-82f2-5ecf689f64d3/geojson:topology,uuid:8ca4710e-2abd-4152-912d-55c25793b4b7/geojson:topology,uuid:26bd463c-0433-4510-8ba8-074f5cdd1e64/geojson:topology,uuid:f44d98c1-fc4e-45da-a233-6e63e58bd560/geojson:topology,uuid:9d4e9985-3788-4e70-a2ec-a809aba7c7e8/geojson:topology,uuid:73155e38-87b0-4ded-9af7-dd354d36a728/geojson:topology,uuid:d7b9eb80-93ca-4ee5-adcb-ab1cfda75d4f/geojson:topology,uuid:3e5f9429-9bfb-498b-9624-e667f2e7b281/geojson:topology,uuid:d0ddc512-0c81-43bb-a000-bf5017ff64a7/geojson:topology,uuid:16b0e4ac-22b3-40f5-8510-7fefb1b1cc06/geojson:topology,uuid:bac4ae02-1a53-4849-9e46-b3c0d67925b1/geojson:topology,uuid:7472a7e9-efcf-49a8-a19f-4a14c3e6f86e/geojson:topology,uuid:46d1879a-0f3f-42ef-b68d-d813f684e3f9/geojson:topology,uuid:8efc4bcc-0265-4aba-82f9-4e9c5f818018/geojson:topology,uuid:429a8b49-b82a-4521-9388-6b0b87bccb06/geojson:topology,uuid:5381559d-4537-4041-81e1-a0978e7f3c64/geojson:topology,uuid:bec0f9d8-0d77-46ba-8941-f884943ac3d8/geojson:topology,uuid:98685c3a-fc3b-4490-b99f-5a4f9ef3aae4/geojson:topology,uuid:fa7823a2-8ed7-43f0-9912-e7ade12c966a/geojson:topology,uuid:a3e906eb-b583-4af2-a13b-fb6bb2d399a3/geojson:topology,uuid:adb6be70-c29a-4dcc-9e4b-47970d9930dd/geojson:topology,uuid:64496114-d8c3-4643-9975-4ae0bb1af186/geojson:topology,uuid:47967a8e-ab17-4db0-bbfa-7a6d797e6136/geojson:topology,uuid:649a326e-bb1e-4492-943a-39aa35806c64/geojson:topology,uuid:49b309d9-6d39-4c44-9a9e-ac2e73c3b58e/geojson:topology,uuid:c6d50260-a8fe-4fac-9279-2ac46d621e87/geojson:topology,uuid:a63b48bc-c0d9-440d-9238-c093d3a6c40c/geojson:topology,uuid:b17a9121-2cf2-427f-871d-78266deacddf/geojson:topology,uuid:48b5ada1-bbec-4aee-851d-6c1509e9d444/geojson:topology,uuid:79e3d1de-56bc-47de-a18b-d29da6100eda/geojson:topology,uuid:83e6f887-a532-473f-8f09-536ef1943f33/geojson:topology,uuid:ce452f84-97f5-43ad-83f8-1758fba42a49/geojson:topology,uuid:bba09dfa-33c6-4256-8f33-b802aec75bdb/geojson:topology,uuid:424281c5-646a-48c3-b0f2-ac703d3a8d10/geojson:topology,uuid:8c5381e4-64ab-4b9d-bdd5-aea3de220330/geojson:topology,uuid:538c874f-36f0-4fe5-9bb1-fc37f0b14f0e/geojson:topology
- - Shape toporules:testTopoLinesReferencePoints: *none*
  - Shape toporules:testTopoEdgesReferencePoints: *none*
+ - Shape toporules:testTopoDirectedReferencesExist: uuid:2402e110-526c-49d6-82f2-5ecf689f64d3/geojson:topology,uuid:92f996ff-4259-4d40-96ec-65de71faa800/geojson:topology,uuid:49b309d9-6d39-4c44-9a9e-ac2e73c3b58e/geojson:topology,uuid:90f77d40-3e87-4627-993d-e0a9efef52d6/geojson:topology,uuid:6bb474bd-c5d6-4366-bc9e-d051dbf72a6e/geojson:topology,uuid:4def3698-95e1-486f-9588-a69a73640e5c/geojson:topology,uuid:0523e3be-6777-40f9-9e14-523e128647c0/geojson:topology,uuid:c6d50260-a8fe-4fac-9279-2ac46d621e87/geojson:topology,uuid:029e7e2d-a650-4510-b861-ee68b46a2fff/geojson:topology,uuid:31dcf84a-98c6-48b1-8ba6-14d7a5ff6749/geojson:topology,uuid:bec0f9d8-0d77-46ba-8941-f884943ac3d8/geojson:topology,uuid:83e6f887-a532-473f-8f09-536ef1943f33/geojson:topology,uuid:a63b48bc-c0d9-440d-9238-c093d3a6c40c/geojson:topology,uuid:bac4ae02-1a53-4849-9e46-b3c0d67925b1/geojson:topology,uuid:0e50d98b-eed1-41b7-aec0-35970c4c03df/geojson:topology,uuid:79e3d840-7da3-4380-8288-6c2db4ac8b06/geojson:topology,uuid:f8c1f3d2-aeb6-4b33-b6f8-7d01a5e8ae59/geojson:topology,uuid:fa7823a2-8ed7-43f0-9912-e7ade12c966a/geojson:topology,uuid:4bd327dc-316a-4e1c-9b35-b377652e89d6/geojson:topology,uuid:2d2a332b-7633-41ee-8f53-712fc6f2b877/geojson:topology,uuid:a3e906eb-b583-4af2-a13b-fb6bb2d399a3/geojson:topology,uuid:bba09dfa-33c6-4256-8f33-b802aec75bdb/geojson:topology,uuid:b17a9121-2cf2-427f-871d-78266deacddf/geojson:topology,uuid:46d1879a-0f3f-42ef-b68d-d813f684e3f9/geojson:topology,uuid:f44d98c1-fc4e-45da-a233-6e63e58bd560/geojson:topology,uuid:3f40fd91-3d85-404b-82cd-fd4bb7228ca5/geojson:topology,uuid:d0ddc512-0c81-43bb-a000-bf5017ff64a7/geojson:topology,uuid:29f3aa93-c4e5-4961-9fd5-c2261a0b9f3b/geojson:topology,uuid:bda4a01e-afca-41dd-b296-81cd3df3c070/geojson:topology,uuid:6642ea7b-0b5e-474c-95ef-fe5a15be551b/geojson:topology,uuid:64496114-d8c3-4643-9975-4ae0bb1af186/geojson:topology,uuid:429a8b49-b82a-4521-9388-6b0b87bccb06/geojson:topology,uuid:64860b38-d1bf-4728-8f0d-6ced9451ce37/geojson:topology,uuid:16b0e4ac-22b3-40f5-8510-7fefb1b1cc06/geojson:topology,uuid:9d4e9985-3788-4e70-a2ec-a809aba7c7e8/geojson:topology,uuid:8efc4bcc-0265-4aba-82f9-4e9c5f818018/geojson:topology,uuid:441f6a73-ea02-44a7-a04d-4fec5659d529/geojson:topology,uuid:538c874f-36f0-4fe5-9bb1-fc37f0b14f0e/geojson:topology,uuid:fbe45af6-b334-4500-97e3-3c4cd177db90/geojson:topology,uuid:f45d1ba5-ecfe-4b0b-b315-2dc71cfe2b3b/geojson:topology,uuid:d9c6f295-4449-4e1d-bb3a-0c4ddf57e8f0/geojson:topology,uuid:3e5f9429-9bfb-498b-9624-e667f2e7b281/geojson:topology,uuid:79e3d1de-56bc-47de-a18b-d29da6100eda/geojson:topology,uuid:4fe850d8-d729-4851-b7d9-0f9e7ed39468/geojson:topology,uuid:3ff8d8c4-90fe-4782-9717-1e3f4110f5a0/geojson:topology,uuid:6caff784-d847-4916-9360-03ab48f3a5df/geojson:topology,uuid:73155e38-87b0-4ded-9af7-dd354d36a728/geojson:topology,uuid:649a326e-bb1e-4492-943a-39aa35806c64/geojson:topology,uuid:424281c5-646a-48c3-b0f2-ac703d3a8d10/geojson:topology,uuid:7472a7e9-efcf-49a8-a19f-4a14c3e6f86e/geojson:topology,uuid:adb6be70-c29a-4dcc-9e4b-47970d9930dd/geojson:topology,uuid:d8aca1d0-8d06-4520-9437-7479640802df/geojson:topology,uuid:d4e4f6d3-3603-4da5-9d20-661ff9a38015/geojson:topology,uuid:98685c3a-fc3b-4490-b99f-5a4f9ef3aae4/geojson:topology,uuid:5b1af58d-21f4-4582-96f8-14d356205491/geojson:topology,uuid:5381559d-4537-4041-81e1-a0978e7f3c64/geojson:topology,uuid:ec0516e9-68b2-4d3d-8ed9-4a59f8e018c8/geojson:topology,uuid:26bd463c-0433-4510-8ba8-074f5cdd1e64/geojson:topology,uuid:72d54df4-b018-4897-a96d-7d62cb9d8c4a/geojson:topology,uuid:ce452f84-97f5-43ad-83f8-1758fba42a49/geojson:topology,uuid:1713550e-1504-45f6-a00e-7eeb436306eb/geojson:topology,uuid:f4b518ed-e4d2-48cc-b2b9-997df7a49c29/geojson:topology,uuid:48b5ada1-bbec-4aee-851d-6c1509e9d444/geojson:topology,uuid:69183851-6fbc-495b-aa59-eba99d14bf68/geojson:topology,uuid:815b8458-d756-45cc-8385-00314271e297/geojson:topology,uuid:0bdb8d8a-3d53-4a97-bee6-56bf509e6b69/geojson:topology,uuid:8ca4710e-2abd-4152-912d-55c25793b4b7/geojson:topology,uuid:47967a8e-ab17-4db0-bbfa-7a6d797e6136/geojson:topology,uuid:6a58d678-e9cf-4466-b01f-76e8e7f1f4a4/geojson:topology,uuid:1a7575a5-e039-4059-9fa8-b7e960c50c64/geojson:topology,uuid:d7b9eb80-93ca-4ee5-adcb-ab1cfda75d4f/geojson:topology,uuid:1d373111-f4b1-4627-92ab-14f0bbeb882b/geojson:topology,uuid:8c5381e4-64ab-4b9d-bdd5-aea3de220330/geojson:topology,uuid:f3212f35-ba06-46b1-8822-fdfac0ec4bd1/geojson:topology,uuid:10ebd12b-36b6-4db0-b43e-b742e05540ce/geojson:topology
+ - Shape toporules:testTopoReferencesExist: *none*
+ - Shape toporules:testTopoLinesReferencePoints: *none*
 
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n6cca9d463cc440cb91d7ce1ffeb6611ab3: uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/geojson:geometry,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/geojson:geometry,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/geojson:geometry,uuid:fa551002-6466-46f1-a2f3-f433334447e6/geojson:geometry,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/geojson:geometry,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/geojson:geometry,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/geojson:geometry,uuid:451e256a-6127-4e18-97f5-644093e9f9df/geojson:geometry,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/geojson:geometry,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/geojson:geometry,uuid:754fd788-08c8-45b0-a591-e608a27f0948/geojson:geometry,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/geojson:geometry,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/geojson:geometry,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/geojson:geometry,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/geojson:geometry,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/geojson:geometry,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/geojson:geometry,uuid:5228ad62-0730-416f-89b0-5042da216efb/geojson:geometry,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/geojson:geometry,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/geojson:geometry,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/geojson:geometry,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/geojson:geometry,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/geojson:geometry,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/geojson:geometry,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/geojson:geometry,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/geojson:geometry,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/geojson:geometry,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/geojson:geometry,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/geojson:geometry,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/geojson:geometry,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/geojson:geometry,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/geojson:geometry,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/geojson:geometry,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/geojson:geometry,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/geojson:geometry,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/geojson:geometry
- - Shape _:n6cca9d463cc440cb91d7ce1ffeb6611ab1: uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/dct:spatial,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/dct:spatial,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/dct:spatial,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/geojson:geometry,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/dct:spatial,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/geojson:geometry,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/dct:spatial,uuid:754fd788-08c8-45b0-a591-e608a27f0948/geojson:geometry,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/geojson:geometry,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/geojson:geometry,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/dct:spatial,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/geojson:geometry,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/dct:spatial,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/geojson:geometry,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/dct:spatial,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/dct:spatial,uuid:5228ad62-0730-416f-89b0-5042da216efb/geojson:geometry,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/geojson:geometry,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/geojson:geometry,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/dct:spatial,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/dct:spatial,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/dct:spatial,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/geojson:geometry,uuid:fa551002-6466-46f1-a2f3-f433334447e6/dct:spatial,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/geojson:geometry,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/geojson:geometry,uuid:754fd788-08c8-45b0-a591-e608a27f0948/dct:spatial,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/geojson:geometry,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/geojson:geometry,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/dct:spatial,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/dct:spatial,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/geojson:geometry,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/dct:spatial,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/dct:spatial,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/geojson:geometry,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/geojson:geometry,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/geojson:geometry,uuid:fa551002-6466-46f1-a2f3-f433334447e6/geojson:geometry,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/geojson:geometry,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/dct:spatial,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/geojson:geometry,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/dct:spatial,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/geojson:geometry,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/dct:spatial,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/dct:spatial,uuid:451e256a-6127-4e18-97f5-644093e9f9df/geojson:geometry,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/dct:spatial,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/geojson:geometry,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/dct:spatial,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/dct:spatial,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/geojson:geometry,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/dct:spatial,uuid:451e256a-6127-4e18-97f5-644093e9f9df/dct:spatial,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/geojson:geometry,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/geojson:geometry,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/dct:spatial,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/geojson:geometry,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/geojson:geometry,uuid:5228ad62-0730-416f-89b0-5042da216efb/dct:spatial,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/geojson:geometry,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/dct:spatial,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/geojson:geometry,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/geojson:geometry,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/dct:spatial,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/geojson:geometry,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/dct:spatial,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/dct:spatial,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/geojson:geometry,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/dct:spatial,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/dct:spatial,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/dct:spatial,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/geojson:geometry
+ - Shape _:n463b0fbf309f4e9a9ac10dace102642eb1: uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/dct:spatial,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/geojson:geometry,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/geojson:geometry,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/dct:spatial,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/geojson:geometry,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/geojson:geometry,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/geojson:geometry,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/dct:spatial,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/geojson:geometry,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/dct:spatial,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/dct:spatial,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/dct:spatial,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/dct:spatial,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/geojson:geometry,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/dct:spatial,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/dct:spatial,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/geojson:geometry,uuid:5228ad62-0730-416f-89b0-5042da216efb/dct:spatial,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/geojson:geometry,uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/dct:spatial,uuid:fa551002-6466-46f1-a2f3-f433334447e6/geojson:geometry,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/dct:spatial,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/geojson:geometry,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/geojson:geometry,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/dct:spatial,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/dct:spatial,uuid:5228ad62-0730-416f-89b0-5042da216efb/geojson:geometry,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/dct:spatial,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/geojson:geometry,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/dct:spatial,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/dct:spatial,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/dct:spatial,uuid:451e256a-6127-4e18-97f5-644093e9f9df/dct:spatial,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/geojson:geometry,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/geojson:geometry,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/geojson:geometry,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/geojson:geometry,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/dct:spatial,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/geojson:geometry,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/dct:spatial,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/dct:spatial,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/geojson:geometry,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/dct:spatial,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/geojson:geometry,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/geojson:geometry,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/geojson:geometry,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/dct:spatial,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/geojson:geometry,uuid:754fd788-08c8-45b0-a591-e608a27f0948/geojson:geometry,uuid:754fd788-08c8-45b0-a591-e608a27f0948/dct:spatial,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/dct:spatial,uuid:451e256a-6127-4e18-97f5-644093e9f9df/geojson:geometry,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/dct:spatial,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/dct:spatial,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/dct:spatial,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/dct:spatial,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/geojson:geometry,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/dct:spatial,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/geojson:geometry,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/dct:spatial,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/dct:spatial,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/dct:spatial,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/geojson:geometry,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/geojson:geometry,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/geojson:geometry,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/geojson:geometry,uuid:fa551002-6466-46f1-a2f3-f433334447e6/dct:spatial,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/geojson:geometry,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/dct:spatial,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/geojson:geometry,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/geojson:geometry,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/geojson:geometry
+ - Shape _:n463b0fbf309f4e9a9ac10dace102642eb3: uuid:bce88da3-5cda-4af9-a494-4d4b319ed2c1/geojson:geometry,uuid:2f487e99-6ee5-422b-8f39-81f1365a4b29/geojson:geometry,uuid:1ae0c24d-f346-4314-9bf2-8c74d0007198/geojson:geometry,uuid:fa94e00a-24f0-4133-bd78-8a6d28be410d/geojson:geometry,uuid:d75d9704-aeb3-4dc7-b2f0-a3fb62f44dd4/geojson:geometry,uuid:48b7ec92-e7ff-468f-8dff-d03483468e97/geojson:geometry,uuid:e0d36194-78e8-4255-b6b7-4f59b79544db/geojson:geometry,uuid:9c9dcda2-4713-4ea4-9a1c-8cc1bb05f7c8/geojson:geometry,uuid:016ea44a-df91-462a-9a7e-5b8e2e950fd8/geojson:geometry,uuid:b6352026-0d61-48d5-ab7d-e62eb34139e2/geojson:geometry,uuid:4a09ba87-445c-4146-b687-97ab6e9f4bca/geojson:geometry,uuid:754fd788-08c8-45b0-a591-e608a27f0948/geojson:geometry,uuid:318227cb-4e3d-4ce1-b480-9cf4b709e28d/geojson:geometry,uuid:451e256a-6127-4e18-97f5-644093e9f9df/geojson:geometry,uuid:987e2a90-2ce3-4836-9a36-04d08031c7bd/geojson:geometry,uuid:f84d09ba-e7af-48a7-bd47-30ca9265214c/geojson:geometry,uuid:3e40bf74-9619-426b-8b5e-58ebe480a92b/geojson:geometry,uuid:fa551002-6466-46f1-a2f3-f433334447e6/geojson:geometry,uuid:1bb5fd50-9be1-4456-8ce6-ddc6f8d0a1cd/geojson:geometry,uuid:77b273d5-f113-41f4-867a-1d3f93c67ef6/geojson:geometry,uuid:2f1070ed-9bae-47f5-a856-7f4db788c010/geojson:geometry,uuid:d7c2a2a6-8580-4bcf-bfeb-b5c08f7d3bc3/geojson:geometry,uuid:5228ad62-0730-416f-89b0-5042da216efb/geojson:geometry,uuid:b25fa8ee-bbe6-4fad-a662-4fea8a7b5e7f/geojson:geometry,uuid:06bd85c9-c7ae-42b1-9cde-efd91489c35a/geojson:geometry,uuid:52e158fb-6ec0-489c-8592-db1d6e180c8e/geojson:geometry,uuid:7e2ed802-251e-48b6-b140-013cad070d9f/geojson:geometry,uuid:83d45b42-d9bb-48cb-9777-fbb2525083f9/geojson:geometry,uuid:0efa4062-5cc0-42d0-a69c-6472b91bffaa/geojson:geometry,uuid:32acfb36-f3d3-47fe-9400-eec9b06d781e/geojson:geometry,uuid:9ccc8672-7244-42a9-8d65-1b40a637a603/geojson:geometry,uuid:c92366e3-4649-413d-a9f1-04ccfc2377d4/geojson:geometry,uuid:e7478b99-0d1e-4a1f-b958-c6a4b1719e96/geojson:geometry,uuid:9d786d21-169c-459e-a354-4eeee65bf8a3/geojson:geometry,uuid:073f2f24-c85a-455d-9807-c24f75ea50f5/geojson:geometry,uuid:9943c35d-49e3-47b5-b8b5-020d2cc70b0e/geojson:geometry
 
 Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
- - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
- - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: uuid:e473c559-9182-4bde-98af-669971f814d1,uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b,uuid:c6ad4aa1-ed7a-4636-b80a-df7a673f74de,uuid:cc0799d5-a994-464b-8200-35566358138f,uuid:d1d9c298-e00e-47e4-94b8-d9aa5ab0b854
  - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
- - Shape geojson:LinkShape: *none*
- - Shape geojson:FeatureCollectionShape: uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b,uuid:c6ad4aa1-ed7a-4636-b80a-df7a673f74de,uuid:cc0799d5-a994-464b-8200-35566358138f,uuid:e473c559-9182-4bde-98af-669971f814d1,uuid:d1d9c298-e00e-47e4-94b8-d9aa5ab0b854
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape geojson:GeometryShape: *none*
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: *none*
 
 Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
- - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*
- - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*
  - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*
 
 Validation result for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
   Validation Report
@@ -272,16 +402,111 @@ Validation result for https://surroundaustralia.github.io/3d-csdm-common/_source
 Focus nodes for https://surroundaustralia.github.io/3d-csdm-common/_sources/csdm/features/SurveyObservations/rules.shacl:
  - Shape :testRequiredProperties: *none*
 
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl:
+ - Shape surv:Occupation: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b26: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b18: *none*
+ - Shape surv:OccupationMark: *none*
+ - Shape surveyobs:OccupationObservation: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b8: *none*
+ - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b27: *none*
+ - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b9: *none*
+ - Shape surveyobs:QualifiedVector: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b28: *none*
+ - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b10: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b17: *none*
+ - Shape surveyobs:DesignModel: *none*
+ - Shape _:n30200b6be6094d28b99d073a69d66e17b19: *none*
+ - Shape surveyobs:IFCRef: *none*
+ - Shape surveyobs:ParcelBoundaryOccupation: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorRole-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQuality-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#DirectPositionObservation-hasResult-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQuality-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#horizontalDistance-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalAngle-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#pose-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQualityMeasure-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorType-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#baseSensor-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-verticalAngle-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalDistance-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyMeasure-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#lastCalibrated-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleType-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyMeasure-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#SurveyVectorObservation-hasResult-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQualityMeasure-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#roverSensor-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceType-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyClass-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-distance-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyClass-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#occupation-resource>: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b4: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b19: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b27: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b11: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b12: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b3: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b20: *none*
+ - Shape _:n87042931aa3e46e1ad25bf623baeb1d0b28: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*
+
+Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+
 Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
 
 Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
@@ -289,9 +514,68 @@ Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/prop
   Conforms: True
   
 Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: *none*
  - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
- - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/owl-consistency.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/owl-consistency.shapes.ttl:
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#locality-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#vectorObservations-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#annotations-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#bearingRotation-literal>: uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33/container:bearingRotation
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adminUnit-resource>: uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33/container:adminUnit,uuid:a4df5a33-fc85-40a0-9fe6-b749d8170a33/container:adminUnit
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#horizontalCRS-resource>: epsg:7850
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#compoundCRS-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedVectors-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationObservations-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#purpose-resource>: wa-survey-purpose:subdivision
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyProvenance-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyType-resource>: wa-survey-type:SSA
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedObservations-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#supportingDocuments-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#observedVectors-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#points-resource>: uuid:9a3a584a-38b4-49ec-84a2-15512d31db5b
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#parcels-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationFeatures-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#verticalDatum-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescriptors-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#referencedCSD-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>: *none*
+
+Validation result for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/container.shapes.ttl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/container.shapes.ttl:
+ - Shape container:CSD-points/sh:or/rdf:first: *none*
+ - Shape container:CSD-parcels/sh:or/rdf:rest/rdf:first: *none*
+ - Shape container:CSD-occupationFeatures/sh:or/rdf:rest/rdf:first: *none*
+ - Shape container:CSD-parcels/sh:or/rdf:first: *none*
+ - Shape container:CSD-occupationFeatures/sh:or/rdf:first: *none*
+ - Shape container:CSD-points/sh:or/rdf:rest/rdf:first: *none*
+ - Shape container:CSD: *none*
+ - Shape _:n2a8eda2d03a440b2bd27149e6af4ad4cb3: *none*
+ - Shape _:n2a8eda2d03a440b2bd27149e6af4ad4cb4: *none*
+
+Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:
+ - Shape :relatedDisjointWithBroaderTransitive: *none*
+
+Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:
+ - Shape :singlePrefLabel: *none*
 
 Validation result for _sources/datatypes/miscellaneousTenure/rules.shacl:
   Validation Report

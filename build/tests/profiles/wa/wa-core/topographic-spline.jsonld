@@ -854,7 +854,9 @@
               "12"
             ]
           },
-          "properties": {}
+          "properties": {
+            "vectorPurpose": "wa-vector-purpose:MHWM-Boundary"
+          }
         }
       ]
     },

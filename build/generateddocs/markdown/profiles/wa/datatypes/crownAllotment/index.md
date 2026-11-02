@@ -23,7 +23,7 @@ Example appellation.
     },
     {
       "type": "wa-name-part-type:crownAllocationType",
-      "label": "wa-parcel-purpose:townsite-lot"
+      "ref": "wa-parcel-purpose:townsite-lot"
     },
     {
       "type": "wa-name-part-type:number",
@@ -46,7 +46,7 @@ Example appellation.
     },
     {
       "type": "wa-name-part-type:crownAllocationType",
-      "label": "wa-parcel-purpose:townsite-lot"
+      "ref": "wa-parcel-purpose:townsite-lot"
     },
     {
       "type": "wa-name-part-type:number",
@@ -61,13 +61,16 @@ Example appellation.
 @prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa: <https://linked.data.gov.au/def/csdm/profiles/wa/> .
 @prefix wa-locality: <https://linked.data.gov.au/def/csdm/wa-locality/> .
 @prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
+@prefix wa-parcel-purpose: <https://linked.data.gov.au/def/csdm/wa-parcel-purpose/> .
 
-[] rdfs:label "Albany Town Lot 57" ;
+[] a wa:CrownAllotmentAppellation ;
+    rdfs:label "Albany Town Lot 57" ;
     dcterms:hasPart [ commonpatterns:namePartRef wa-locality:albany ;
             commonpatterns:namePartType wa-name-part-type:crownAreaCode ],
-        [ rdfs:label "wa-parcel-purpose:townsite-lot" ;
+        [ commonpatterns:namePartRef wa-parcel-purpose:townsite-lot ;
             commonpatterns:namePartType wa-name-part-type:crownAllocationType ],
         [ rdfs:label "57" ;
             commonpatterns:namePartType wa-name-part-type:number ] .
@@ -93,7 +96,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.crownAllotment
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-02'
 
 ```
 
@@ -124,9 +127,11 @@ Links to the schema:
       },
       "@id": "dct:hasPart"
     },
+    "type": "@type",
     "dct": "http://purl.org/dc/terms/",
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "wa": "vocabs:profiles/wa/",
     "vocabs": "https://linked.data.gov.au/def/csdm/",
     "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
     "wa-survey-purpose": "vocabs:wa-survey-purpose/",

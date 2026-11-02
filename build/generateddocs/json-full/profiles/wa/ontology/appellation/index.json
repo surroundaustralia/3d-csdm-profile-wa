@@ -1,0 +1,71 @@
+
+
+{
+  "itemIdentifier": "icsm.profiles.wa.ontology.appellation",
+  "name": "WA Parcel Appellation Ontology",
+  "abstract": "Classes for the Landgate parcel identifier forms (Lot on Plan, Crown Allotment, Miscellaneous Tenure), as specialisations of the compound name model.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "register": "icsm-csdm",
+  "version": "0.1",
+  "group": "4. Datatypes",
+  "highlighted": false,
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/profiles/wa"
+  ],
+  "dependsOn": [
+    "ogc.bbr.utils.compoundName.ontology"
+  ],
+  "tags": [
+    "appellation",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "ogc.bbr.utils.compoundName.ontology": [
+      "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/LICENSE"
+  },
+  "dateOfLastChange": "2026-11-02",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/annotated/profiles/wa/ontology/appellation/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-profile-wa/_sources/ontology/appellation/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-profile-wa/blob/main/build/tests/profiles/wa/ontology/appellation/",
+  "examples": [
+    {
+      "title": "Lot on Plan appellation",
+      "content": "A Lot on Plan appellation is a compound name. Its parts are validated by the compound name rules, and the\npart labels must appear in the appellation label.",
+      "base-output-filename": "lot-on-plan",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://surroundaustralia.github.io/3d-csdm-profile-wa/build/tests/profiles/wa/ontology/appellation/lot-on-plan.ttl",
+          "sizeBytes": 733,
+          "code": "@prefix com: <https://w3id.org/ogc/utils/label/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix wa: <https://linked.data.gov.au/def/csdm/profiles/wa/> .\n@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .\n@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .\n\n[] a wa:LotOnPlanAppellation ;\n  rdfs:label \"Lot 4 on Plan 1234\" ;\n  dct:hasPart [ com:namePartType wa-name-part-type:surveyType ; com:namePartRef wa-survey-type:deposited-plan ] ,\n              [ com:namePartType wa-name-part-type:surveyNumber ; rdfs:label \"1234\" ] ,\n              [ com:namePartType wa-name-part-type:lotNumber ; rdfs:label \"4\" ] .\n"
+        }
+      ],
+      "prefixes": {
+        "com": "https://w3id.org/ogc/utils/label/",
+        "dct": "http://purl.org/dc/terms/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "wa": "https://linked.data.gov.au/def/csdm/profiles/wa/",
+        "wa-name-part-type": "https://linked.data.gov.au/def/csdm/wa-name-part-type/",
+        "wa-survey-type": "https://linked.data.gov.au/def/csdm/wa-survey-type/"
+      }
+    }
+  ],
+  "examplePrefixes": {
+    "com": "https://w3id.org/ogc/utils/label/",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "wa": "https://linked.data.gov.au/def/csdm/profiles/wa/",
+    "wa-name-part-type": "https://linked.data.gov.au/def/csdm/wa-name-part-type/",
+    "wa-survey-type": "https://linked.data.gov.au/def/csdm/wa-survey-type/"
+  },
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-profile-wa",
+  "gitPath": "_sources/ontology/appellation"
+}

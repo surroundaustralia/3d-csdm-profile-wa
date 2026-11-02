@@ -1,0 +1,28 @@
+Validation report for icsm.profiles.wa.datatypes.crownAllotment - Crown Allotment Appellation
+Generated 2026-11-02T05:45:00.690083+00:00
+=== Files ===
+Using examples/strings.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+ - /github/workspace/_sources/ontology/appellation/appellation.ttl
+Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
+ - Shape :NamePartShape: _:N735cf7e8d7854831bf96011333adeddb,_:N4c89ffb9feab4cff94134e9c8b027884,_:N59c2e8c62e99482aaab1159bc9841137
+ - Shape :CompoundNameShape: *none*
+
+=== End SHACL ===
+

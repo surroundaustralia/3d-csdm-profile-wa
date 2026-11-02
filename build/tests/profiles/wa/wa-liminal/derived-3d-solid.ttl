@@ -1,4 +1,4 @@
-@prefix commonpatterns: <https://w3id.org/ogc/utils/label/> .
+@prefix compoundname: <https://w3id.org/ogc/utils/label/> .
 @prefix container: <https://linked.data.gov.au/def/csdm/container/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
@@ -8,8 +8,9 @@
 @prefix icsm-distance-type: <https://linked.data.gov.au/def/csdm/icsm-distance-type/> .
 @prefix icsm-equipment-type: <https://linked.data.gov.au/def/csdm/icsm-equipment-type/> .
 @prefix icsm-procedure-used: <https://linked.data.gov.au/def/csdm/icsm-procedure-used/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns1: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix ns2: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ns3: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix parcel: <https://w3id.org/ogc/ladm/parcels/> .
@@ -21,6 +22,7 @@
 @prefix surveyable: <https://linked.data.gov.au/def/csdm/defs/surveyableproperties/> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 @prefix uuid: <urn:uuid:> .
+@prefix wa: <https://linked.data.gov.au/def/csdm/profiles/wa/> .
 @prefix wa-annotation: <https://linked.data.gov.au/def/csdm/wa-annotation/> .
 @prefix wa-interest-type: <https://linked.data.gov.au/def/csdm/wa-interest-type/> .
 @prefix wa-leg: <https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/$FILE/> .
@@ -42,15 +44,15 @@
 <file:///github/workspace/07-derived-3d-solid> a geojson:FeatureCollection ;
     rdfs:label "Derived 3D solid parcel" ;
     dct:time [ owlTime:hasTime "2026-01-02"^^xsd:date ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:localGovernmentArea ;
             oa:hasTarget wa-locality:stirling ],
-        [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+        [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
-    container:annotations [ prof:hasRole wa-annotation:r-4 ;
+    container:annotations [ prof:hasRole wa-annotation:sp ],
+        [ prof:hasRole wa-annotation:r-4 ;
             oa:hasTarget wa-leg:Transfer%20of%20Land%20\(Surveys\)%20Regulations%201955%20-%20%5B01-b0-09%5D.pdf ],
-        [ prof:hasRole wa-annotation:sp ],
         <file:///github/workspace/source-height-description-dp431276-lot800> ;
     container:bearingRotation 2.595435e-01 ;
     container:horizontalCRS epsg:8031 ;
@@ -60,14 +62,14 @@
     container:purpose wa-survey-purpose:subdivision-t-sts ;
     container:referencedCSD uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc,
         uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 ;
-    container:supportingDocuments [ rdfs:label "DP 431276" ;
-            ns1:relation <http://www.iana.org/assignments/relation/related> ;
-            prof:hasRole wa-survey-documentation-type:2d-plan ;
-            oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ],
-        [ rdfs:label "CSD for DP 431276" ;
-            ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:supportingDocuments [ rdfs:label "CSD for DP 431276" ;
+            ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole wa-survey-documentation-type:csd ;
-            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ] ;
+            oa:hasTarget <https://wa.gov.au/csd/CSD_DP431276.csd> ],
+        [ rdfs:label "DP 431276" ;
+            ns3:relation <http://www.iana.org/assignments/relation/related> ;
+            prof:hasRole wa-survey-documentation-type:2d-plan ;
+            oa:hasTarget <https://wa.gov.au/deposited-plans/DP431276.pdf> ] ;
     container:surveyType wa-survey-type:compiled ;
     container:vectorObservations uuid:0e582a81-b517-4012-a3bb-7605853e0159 ;
     topo:edges uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2,
@@ -81,16 +83,16 @@
 <file:///github/workspace/parcel-1> a geojson:Feature ;
     geojson:topology [ a geojson:Polygon ;
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
-    parcel:appellation [ a <wa:LotOnPlanAppellation> ;
+    parcel:appellation [ a wa:LotOnPlanAppellation ;
             rdfs:label "Lot 800 on Plan DP 431276" ;
-            dct:hasPart [ rdfs:label "DP 431276" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
+            dct:hasPart [ compoundname:namePartRef wa-survey-type:deposited-plan ;
+                    compoundname:namePartType wa-name-part-type:surveyType ],
                 [ rdfs:label "800" ;
-                    commonpatterns:namePartType wa-name-part-type:lotNumber ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType wa-name-part-type:lotPrefix ] ] ;
+                    compoundname:namePartType wa-name-part-type:lotNumber ],
+                [ compoundname:namePartRef wa-parcel-purpose:lot ;
+                    compoundname:namePartType wa-name-part-type:lotPrefix ],
+                [ rdfs:label "DP 431276" ;
+                    compoundname:namePartType wa-name-part-type:surveyNumber ] ] ;
     parcel:purpose wa-parcel-purpose:lot ;
     parcel:state wa-parcel-state:created ;
     parcel:surfaceArea 809 ;
@@ -99,16 +101,16 @@
 <file:///github/workspace/parcel-2> a geojson:Feature ;
     geojson:topology [ a geojson:Polygon ;
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
-    parcel:appellation [ a <wa:LotOnPlanAppellation> ;
+    parcel:appellation [ a wa:LotOnPlanAppellation ;
             rdfs:label "Lot 1 on Plan SP 28750" ;
-            dct:hasPart [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+            dct:hasPart [ compoundname:namePartRef wa-survey-type:deposited-plan ;
+                    compoundname:namePartType wa-name-part-type:surveyType ],
+                [ compoundname:namePartRef wa-parcel-purpose:lot ;
+                    compoundname:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
+                    compoundname:namePartType wa-name-part-type:surveyNumber ],
                 [ rdfs:label "1" ;
-                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
+                    compoundname:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-584> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -119,16 +121,16 @@
 <file:///github/workspace/parcel-3> a geojson:Feature ;
     geojson:topology [ a geojson:Polygon ;
             topo:relatedFeatures ( ( <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ) ] ;
-    parcel:appellation [ a <wa:LotOnPlanAppellation> ;
+    parcel:appellation [ a wa:LotOnPlanAppellation ;
             rdfs:label "Lot 2 on Plan SP 28750" ;
             dct:hasPart [ rdfs:label "SP 28750" ;
-                    commonpatterns:namePartType wa-name-part-type:surveyNumber ],
-                [ commonpatterns:namePartRef wa-survey-type:deposited-plan ;
-                    commonpatterns:namePartType wa-name-part-type:surveyType ],
-                [ commonpatterns:namePartRef wa-parcel-purpose:lot ;
-                    commonpatterns:namePartType wa-name-part-type:lotPrefix ],
+                    compoundname:namePartType wa-name-part-type:surveyNumber ],
+                [ compoundname:namePartRef wa-survey-type:deposited-plan ;
+                    compoundname:namePartType wa-name-part-type:surveyType ],
+                [ compoundname:namePartRef wa-parcel-purpose:lot ;
+                    compoundname:namePartType wa-name-part-type:lotPrefix ],
                 [ rdfs:label "2" ;
-                    commonpatterns:namePartType wa-name-part-type:lotNumber ] ] ;
+                    compoundname:namePartType wa-name-part-type:lotNumber ] ] ;
     parcel:interest [ parcel:interestLink <file:///github/workspace/2500-585> ;
             parcel:interestType wa-interest-type:ct ] ;
     parcel:purpose wa-parcel-purpose:lot ;
@@ -136,31 +138,83 @@
     parcel:surfaceArea 809 ;
     parcel:type wa-parcel-type:freehold .
 
+<file:///github/workspace/point-2> a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.813698e+04 3.699431e+05 1.95e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 5e-02 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:other ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] .
+
+<file:///github/workspace/point-3> a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.815709e+04 3.69943e+05 1.99e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 5e-02 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:other ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] .
+
+<file:///github/workspace/point-4> a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.813716e+04 3.699833e+05 2.06e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 5e-02 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:other ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] .
+
+<file:///github/workspace/point-5> a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.815727e+04 3.699833e+05 2.09e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 5e-02 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:other ;
+            surv:state wa-monument-state:mark-found ] ;
+    surv:purpose wa-surveypoint-purpose:monument ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] .
+
 <file:///github/workspace/source-height-description-dp431276-lot800> prof:hasRole wa-annotation:height-limit-description .
 
 <file:///github/workspace/subtended-angle-1> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-1> ;
-    sosa:hasResult [ ] ;
+    sosa:hasResult [ surv:angle 9e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:angleType icsm-angle-type:angle .
+    ns1:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-2> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-2> ;
-    sosa:hasResult [ ] ;
+    sosa:hasResult [ surv:angle 9e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:angleType icsm-angle-type:angle .
+    ns1:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-3> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-3> ;
-    sosa:hasResult [ ] ;
+    sosa:hasResult [ surv:angle 9e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:angleType icsm-angle-type:angle .
+    ns1:angleType icsm-angle-type:angle .
 
 <file:///github/workspace/subtended-angle-4> a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/angle-4> ;
-    sosa:hasResult [ ] ;
+    sosa:hasResult [ surv:angle 9e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:angleType icsm-angle-type:angle .
+    ns1:angleType icsm-angle-type:angle .
 
 <https://linked.data.gov.au/def/csdm/sensors/ts-16> a icsm-equipment-type:ts ;
     sosa:hasSubSystem <sensordesc:123456>,
@@ -170,6 +224,19 @@
 <sensordesc:123456> a icsm-equipment-type:ts .
 
 <sensordesc:789012> a icsm-equipment-type:p .
+
+uuid:03b1846e-dcda-49ad-b349-b64561b7344e a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.815727e+04 3.699833e+05 3.29e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.157972e+02 -3.189329e+01 1.1e-02 ) ] .
 
 uuid:0e582a81-b517-4012-a3bb-7605853e0159 a sosa:ObservationCollection,
         geojson:FeatureCollection ;
@@ -192,6 +259,19 @@ uuid:218921de-c36d-4bc9-9116-5045538412be a geojson:FeatureCollection ;
         uuid:82b3d84c-b6eb-400e-bb86-83f67d9c7a45,
         uuid:ca9c4381-9422-4bbb-8f05-c8a835831933,
         uuid:de0e7541-5584-42c2-998e-0f8b32ffeb74 .
+
+uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.815727e+04 3.699833e+05 1.89e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.3989e+01 ) ] .
 
 uuid:55d0e62e-04a9-479c-a98a-1d6e5549a4e2 a geojson:FeatureCollection ;
     geojson:collectionFeatureType "SubtendedAngle" ;
@@ -219,24 +299,63 @@ uuid:636cb711-83c2-42dc-95c0-8aa62961bcf5 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-4> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns1:distanceType icsm-distance-type:ground .
 
-uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection,
-        parcel:PrimaryParcel ;
+uuid:63c654cd-0c9a-496a-aebf-b6cb4a784525 a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "PrimaryParcel" ;
     geojson:features <file:///github/workspace/parcel-1> .
 
 uuid:6865b3a4-8fe1-47a2-a6c6-0e2b64f81a8e a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-1> ;
     sosa:hasResult [ surv:distance 2.0116e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns1:distanceType icsm-distance-type:ground .
+
+uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.813716e+04 3.699833e+05 3.26e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.15797e+02 -3.189329e+01 -2.9e-01 ) ] .
+
+uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.815709e+04 3.69943e+05 3.19e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.157972e+02 -3.189365e+01 -9.89e-01 ) ] .
 
 uuid:7cae767b-5c27-41e1-9a46-b4d1d09401fc rdfs:label "SP 28750" ;
     dct:time [ ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 2.595435e-01 .
+
+uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.813716e+04 3.699833e+05 1.86e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.429e+01 ) ] .
 
 uuid:9f44c5df-1724-46c9-a898-137df3e83b08 a geojson:FeatureCollection ;
     geojson:collectionFeatureType "Face" ;
@@ -254,6 +373,19 @@ uuid:9f44c5df-1724-46c9-a898-137df3e83b08 a geojson:FeatureCollection ;
         uuid:db75fa76-3e57-48de-9c80-2b39ba998580,
         uuid:ebac9eaa-c0d6-4283-9a6f-49cffbcba162,
         uuid:fbeeff8c-a0b9-44bb-99ff-539c1ae4d822 .
+
+uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.813698e+04 3.699431e+05 1.75e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.539e+01 ) ] .
 
 uuid:a358dcd1-5013-40a0-96b6-e04e70cd2f40 a geojson:FeatureCollection ;
     geojson:collectionFeatureType "ObservedVector" ;
@@ -310,8 +442,8 @@ uuid:b4ab3483-688b-4b11-9d5b-5624939ef7a5 a geojson:FeatureCollection ;
         uuid:d84f4fdf-a206-421a-9e65-307a683fab3c,
         uuid:e308ae3a-43c0-4a2d-baa3-66fbf39e30fa .
 
-uuid:c627546f-1b7e-44d2-ba45-36d7dc1293e6 a geojson:FeatureCollection,
-        parcel:PrimaryParcel ;
+uuid:c627546f-1b7e-44d2-ba45-36d7dc1293e6 a geojson:FeatureCollection ;
+    geojson:collectionFeatureType "PrimaryParcel" ;
     geojson:features <file:///github/workspace/parcel-2>,
         <file:///github/workspace/parcel-3> .
 
@@ -320,6 +452,19 @@ uuid:ca9c4381-9422-4bbb-8f05-c8a835831933 a geojson:Feature ;
             topo:directedReferences ( [ topo:orientation "+" ;
                         topo:ref uuid:785fe569-93c7-4a5a-b8dc-1ed6a4964029 ] [ topo:orientation "+" ;
                         topo:ref uuid:b631b943-8681-4ba7-baba-cbf90555d550 ] ) ] .
+
+uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.813698e+04 3.699431e+05 3.15e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.39e+00 ) ] .
 
 uuid:de0e7541-5584-42c2-998e-0f8b32ffeb74 a geojson:Feature ;
     geojson:topology [ a topo:Shell ;
@@ -337,38 +482,43 @@ uuid:de0e7541-5584-42c2-998e-0f8b32ffeb74 a geojson:Feature ;
 
 uuid:df8ccb77-c666-41b3-87a5-0c6a950ca806 rdfs:label "D36053" ;
     dct:time [ ] ;
-    container:adminUnit [ ns1:relation <http://www.iana.org/assignments/relation/related> ;
+    container:adminUnit [ ns3:relation <http://www.iana.org/assignments/relation/related> ;
             prof:hasRole icsm-admin-unit-type:locality ;
             oa:hasTarget wa-locality:innaloo ] ;
     container:bearingRotation 2.595435e-01 .
+
+uuid:e742b56c-50e4-4036-a654-2b95f76fe40d a surv:BoundaryMark,
+        geojson:Feature ;
+    dct:spatial [ a geojson:Point ;
+            geojson:coordinates ( 4.815709e+04 3.69943e+05 1.79e+01 ) ] ;
+    dct:time "2026-07-20T20:55:51.833265+00:00" ;
+    ns2:qualityMeasure 1e-01 ;
+    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
+            surv:form wa-monument-form:cadastral-point-unmarked ;
+            surv:state wa-monument-state:unmarked ] ;
+    surv:purpose wa-surveypoint-purpose:internal-boundary ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.4989e+01 ) ] .
 
 uuid:ee3bf46c-d29f-4133-8d65-584bb86e03f2 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-3> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns1:distanceType icsm-distance-type:ground .
 
 uuid:f46cd560-f1fe-4dfc-9bc3-fcf2615ac157 a geojson:Feature ;
     sosa:hasFeatureOfInterest <file:///github/workspace/line-geometry-2> ;
     sosa:hasResult [ surv:distance 4.0234e+01 ] ;
     sosa:resultTime "2026-01-02T00:00:00+00:00"^^xsd:dateTime ;
-    ns2:distanceType icsm-distance-type:ground .
+    ns1:distanceType icsm-distance-type:ground .
 
-<file:///github/workspace/angle-1> a geojson:Feature ;
-    geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
-            topo:relatedFeatures ( <file:///github/workspace/point-5> <file:///github/workspace/line-geometry-3> <file:///github/workspace/line-geometry-4> ) ] .
+<file:///github/workspace/angle-1> a geojson:Feature .
 
-<file:///github/workspace/angle-2> a geojson:Feature ;
-    geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
-            topo:relatedFeatures ( <file:///github/workspace/point-3> <file:///github/workspace/line-geometry-1> <file:///github/workspace/line-geometry-3> ) ] .
+<file:///github/workspace/angle-2> a geojson:Feature .
 
-<file:///github/workspace/angle-3> a geojson:Feature ;
-    geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
-            topo:relatedFeatures ( <file:///github/workspace/point-2> <file:///github/workspace/line-geometry-2> <file:///github/workspace/line-geometry-1> ) ] .
+<file:///github/workspace/angle-3> a geojson:Feature .
 
-<file:///github/workspace/angle-4> a geojson:Feature ;
-    geojson:topology [ a <file:///github/workspace/SubtendedAngle> ;
-            topo:relatedFeatures ( <file:///github/workspace/point-4> <file:///github/workspace/line-geometry-4> <file:///github/workspace/line-geometry-2> ) ] .
+<file:///github/workspace/angle-4> a geojson:Feature .
 
 uuid:0108c7f2-75d9-4a14-8028-b7044816eeec a geojson:Feature ;
     geojson:topology [ a topo:Ring ;
@@ -559,273 +709,71 @@ uuid:fbeeff8c-a0b9-44bb-99ff-539c1ae4d822 a geojson:Feature ;
                         topo:ref uuid:5593b0c9-b5d4-41f5-967b-beb1464945cf ] ) ] .
 
 uuid:13bf7136-40e5-4784-a777-f1ed13b34a6d a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:1799195d-764e-4e58-846d-b2647967c3bb a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 <file:///github/workspace/point-4> ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:2e908330-4c81-4831-8529-07465857050a a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 uuid:03b1846e-dcda-49ad-b349-b64561b7344e ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:3a222c05-e29b-406f-95e0-2cba7c10ebdf a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:03b1846e-dcda-49ad-b349-b64561b7344e uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:3afc1a42-42bf-4aac-a9ea-807795cf190f a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 <file:///github/workspace/point-5> ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:412069d1-fbd1-4b81-b171-4411b850c3cc a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-5> <file:///github/workspace/point-2> ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:65bd5b5d-91ce-46b1-88de-05e8a063b809 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-3> uuid:e742b56c-50e4-4036-a654-2b95f76fe40d ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:687075e8-c7d2-45cf-a5f5-fdfe28703296 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:6c80bfdb-de55-4323-99b1-3498124814bb a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 uuid:e742b56c-50e4-4036-a654-2b95f76fe40d ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:73284aae-82f5-4b44-926f-2a5621c9fb96 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:e742b56c-50e4-4036-a654-2b95f76fe40d uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:7b883ed5-23fa-4d22-a2a5-284455428e22 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae uuid:03b1846e-dcda-49ad-b349-b64561b7344e ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:83a05eaa-87aa-475a-9e72-1ee7e1cb7cc1 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:85909562-8fc7-4821-a934-e36065034def a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 <file:///github/workspace/point-2> ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:887efbee-c87a-4930-915d-e14ebabfb307 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-5> uuid:03b1846e-dcda-49ad-b349-b64561b7344e ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:a4cae936-fe6b-449f-91cf-ea2aa23e3939 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 <file:///github/workspace/point-2> ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:b07b052c-2a40-4bbf-bad3-5c9a1cc85d94 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-4> uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:b9987701-85ff-4ab1-b7a3-e0e9425d55e4 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:bb733467-ab52-4eaf-a19a-3947fb482770 a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae <file:///github/workspace/point-3> ) ] .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 uuid:f4899f15-b9a5-4d67-8fe9-6a59c32c93bb a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:3D-Construct ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae ) ] .
-
-uuid:6c8b3807-6c8b-4e8a-96a4-ba2d65a970c1 a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.813716e+04 3.699833e+05 3.26e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.15797e+02 -3.189329e+01 -2.9e-01 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:6e4001d3-e4cb-4484-9ab4-d85f7ae81eae a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.815709e+04 3.69943e+05 3.19e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.157972e+02 -3.189365e+01 -9.89e-01 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:7f12e007-8f04-4f5e-ac81-7aaef7d222e6 a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.813716e+04 3.699833e+05 1.86e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.429e+01 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:e742b56c-50e4-4036-a654-2b95f76fe40d a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.815709e+04 3.69943e+05 1.79e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.4989e+01 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:03b1846e-dcda-49ad-b349-b64561b7344e a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.815727e+04 3.699833e+05 3.29e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.157972e+02 -3.189329e+01 1.1e-02 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:3bdefe6d-45d7-4d4a-9aa5-94ba71f5a451 a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.815727e+04 3.699833e+05 1.89e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.3989e+01 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:a1f6f3b4-22b9-435d-b50d-db97b5bb1c30 a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.813698e+04 3.699431e+05 1.75e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.539e+01 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-uuid:cab3729d-e2ca-4ce7-9aca-66c9c9a374a1 a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.813698e+04 3.699431e+05 3.15e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:cadastral-point-unmarked ;
-            surv:state wa-monument-state:unmarked ] ;
-    surv:purpose wa-surveypoint-purpose:internal-boundary ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.39e+00 ) ] ;
-    commonpatterns:qualityMeasure 1e-01 .
-
-<file:///github/workspace/point-3> a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.815709e+04 3.69943e+05 1.99e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:other ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.157972e+02 -3.189365e+01 -1.2989e+01 ) ] ;
-    commonpatterns:qualityMeasure 5e-02 .
-
-<file:///github/workspace/point-4> a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.813716e+04 3.699833e+05 2.06e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:other ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.15797e+02 -3.189329e+01 -1.229e+01 ) ] ;
-    commonpatterns:qualityMeasure 5e-02 .
-
-<file:///github/workspace/point-2> a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.813698e+04 3.699431e+05 1.95e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:other ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.15797e+02 -3.189365e+01 -1.339e+01 ) ] ;
-    commonpatterns:qualityMeasure 5e-02 .
-
-<file:///github/workspace/point-5> a surv:BoundaryMark,
-        geojson:Feature ;
-    dct:spatial [ a geojson:Point ;
-            geojson:coordinates ( 4.815727e+04 3.699833e+05 2.09e+01 ) ] ;
-    dct:time "2026-07-20T20:55:51.833265+00:00" ;
-    surv:monumentedBy [ surv:condition wa-monument-condition:ok ;
-            surv:form wa-monument-form:other ;
-            surv:state wa-monument-state:mark-found ] ;
-    surv:purpose wa-surveypoint-purpose:monument ;
-    geojson:geometry [ a geojson:Point ;
-            geojson:coordinates ( 1.157972e+02 -3.189329e+01 -1.1989e+01 ) ] ;
-    commonpatterns:qualityMeasure 5e-02 .
+    surv:vectorPurpose wa-vector-purpose:3D-Construct .
 
 <file:///github/workspace/line-geometry-1> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:road-boundary ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-2> <file:///github/workspace/point-3> ) ] .
+    surv:vectorPurpose wa-vector-purpose:road-boundary .
 
 <file:///github/workspace/line-geometry-2> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:boundary ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-2> <file:///github/workspace/point-4> ) ] .
+    surv:vectorPurpose wa-vector-purpose:boundary .
 
 <file:///github/workspace/line-geometry-3> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:boundary ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-3> <file:///github/workspace/point-5> ) ] .
+    surv:vectorPurpose wa-vector-purpose:boundary .
 
 <file:///github/workspace/line-geometry-4> a geojson:Feature ;
-    surv:vectorPurpose wa-vector-purpose:boundary ;
-    geojson:topology [ a topo:Edge ;
-            topo:relatedFeatures ( <file:///github/workspace/point-4> <file:///github/workspace/point-5> ) ] .
+    surv:vectorPurpose wa-vector-purpose:boundary .
 

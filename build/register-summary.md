@@ -19,11 +19,17 @@ Profiles are defined in a consistent, machine-readable and validatable way using
 
 ## Building Blocks
 
+### `icsm.profiles.wa.ontology.appellation` — WA Parcel Appellation Ontology
+
+**Type:** model
+
+Classes for the Landgate parcel identifier forms (Lot on Plan, Crown Allotment, Miscellaneous Tenure), as specialisations of the compound name model.
+
 ### `icsm.profiles.wa.datatypes.waAppellationNamespaces` — WA Ref Namespaces
 
 **Type:** schema
 
-Defines the namespaces for use in WA Compound Names
+Defines the namespaces for use in WA Compound Names, including the wa: namespace of the WA appellation classes.
 
 ### `icsm.profiles.wa.datatypes.crownAllotment` — Crown Allotment Appellation
 

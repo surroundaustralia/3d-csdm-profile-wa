@@ -778,7 +778,9 @@
           ]
         ]
       },
-      "properties": {},
+      "properties": {
+        "vectorPurpose": "wa-vector-purpose:MHWM-Boundary"
+      },
       "id": "26538"
     },
     {

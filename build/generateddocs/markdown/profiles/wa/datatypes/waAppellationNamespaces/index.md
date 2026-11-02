@@ -3,7 +3,7 @@
 
 `icsm.profiles.wa.datatypes.waAppellationNamespaces` *v0.1*
 
-Defines the namespaces for use in WA Compound Names
+Defines the namespaces for use in WA Compound Names, including the wa: namespace of the WA appellation classes.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
@@ -13,7 +13,10 @@ Defines the namespaces for use in WA Compound Names
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Parcel Appellation Options
 $ref: https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema/schema.yaml
+x-jsonld-extra-terms:
+  type: '@type'
 x-jsonld-prefixes:
+  wa: https://linked.data.gov.au/def/csdm/profiles/wa/
   vocabs: https://linked.data.gov.au/def/csdm/
   wa-surveypoint-purpose: https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/
   wa-survey-purpose: https://linked.data.gov.au/def/csdm/wa-survey-purpose/
@@ -38,7 +41,7 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.waAppellationNamespaces
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-02'
 
 ```
 
@@ -69,9 +72,11 @@ Links to the schema:
       },
       "@id": "dct:hasPart"
     },
+    "type": "@type",
     "dct": "http://purl.org/dc/terms/",
     "commonpatterns": "https://w3id.org/ogc/utils/label/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "wa": "vocabs:profiles/wa/",
     "vocabs": "https://linked.data.gov.au/def/csdm/",
     "wa-surveypoint-purpose": "vocabs:wa-surveypoint-purpose/",
     "wa-survey-purpose": "vocabs:wa-survey-purpose/",

@@ -1,7 +1,10 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Parcel Appellation Options
 $ref: https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema/schema.yaml
+x-jsonld-extra-terms:
+  type: '@type'
 x-jsonld-prefixes:
+  wa: https://linked.data.gov.au/def/csdm/profiles/wa/
   vocabs: https://linked.data.gov.au/def/csdm/
   wa-surveypoint-purpose: https://linked.data.gov.au/def/csdm/wa-surveypoint-purpose/
   wa-survey-purpose: https://linked.data.gov.au/def/csdm/wa-survey-purpose/
@@ -26,4 +29,4 @@ x-bblocks-metadata:
   itemIdentifier: icsm.profiles.wa.datatypes.waAppellationNamespaces
   register: https://surroundaustralia.github.io/3d-csdm-profile-wa/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-02'

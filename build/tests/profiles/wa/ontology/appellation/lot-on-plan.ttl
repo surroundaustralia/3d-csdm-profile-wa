@@ -1,0 +1,16 @@
+@prefix com: <https://w3id.org/ogc/utils/label/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wa: <https://linked.data.gov.au/def/csdm/profiles/wa/> .
+@prefix wa-name-part-type: <https://linked.data.gov.au/def/csdm/wa-name-part-type/> .
+@prefix wa-survey-type: <https://linked.data.gov.au/def/csdm/wa-survey-type/> .
+
+[] a wa:LotOnPlanAppellation ;
+    rdfs:label "Lot 4 on Plan 1234" ;
+    dct:hasPart [ com:namePartRef wa-survey-type:deposited-plan ;
+            com:namePartType wa-name-part-type:surveyType ],
+        [ rdfs:label "1234" ;
+            com:namePartType wa-name-part-type:surveyNumber ],
+        [ rdfs:label "4" ;
+            com:namePartType wa-name-part-type:lotNumber ] .
+
